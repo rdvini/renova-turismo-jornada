@@ -1,5 +1,5 @@
-import { Instagram, Facebook, Phone, Mail, MessageCircle } from "lucide-react";
-import logoRenova from "@/assets/logo-renova.png";
+import { Instagram, Facebook, Phone, Mail, Youtube } from "lucide-react";
+import logoRenova from "@/assets/logo-renova.svg";
 
 const Footer = () => {
   return (
