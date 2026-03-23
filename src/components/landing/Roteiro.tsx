@@ -58,7 +58,7 @@ const Roteiro = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                 <div className="absolute bottom-4 left-5">
-                  <span className="font-heading text-xs uppercase tracking-widest text-[#0b9ad6]">
+                  <span className="text-xs uppercase tracking-widest text-[#0b9ad6]" style={{ fontFamily: "'Poppins', sans-serif", fontWeight: 600 }}>
                     {city.nameEn}
                   </span>
                   <h3 className="font-heading text-2xl font-bold text-white">
