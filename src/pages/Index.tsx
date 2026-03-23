@@ -1,6 +1,7 @@
 import Navbar from "@/components/landing/Navbar";
 import Hero from "@/components/landing/Hero";
 import SobreViagem from "@/components/landing/SobreViagem";
+import Inclusos from "@/components/landing/Inclusos";
 import Roteiro from "@/components/landing/Roteiro";
 import PorQueRenova from "@/components/landing/PorQueRenova";
 import Depoimentos from "@/components/landing/Depoimentos";
@@ -13,6 +14,7 @@ const Index = () => {
       <Navbar />
       <Hero />
       <SobreViagem />
+      <Inclusos />
       <Roteiro />
       <PorQueRenova />
       <Depoimentos />
