@@ -48,7 +48,7 @@ const Roteiro = () => {
           {cities.map((city) => (
             <div
               key={city.namePt}
-              className="group bg-card rounded-xl overflow-hidden shadow-xl transition-all duration-300"
+              className="group bg-card rounded-xl overflow-hidden shadow-xl hover:shadow-2xl hover:scale-[1.02] transition-all duration-300"
             >
               <div className="relative overflow-hidden h-64">
                 <img
