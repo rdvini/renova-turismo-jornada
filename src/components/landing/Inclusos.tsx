@@ -68,10 +68,10 @@ const Inclusos = () => {
           ))}
         </div>
         <div className="flex justify-center mt-6 max-w-5xl mx-auto">
-          {items.map((item) => (
+          {items.slice(6).map((item) => (
             <div
               key={item.title}
-              className="bg-card rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow text-center"
+              className="bg-card rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow text-center w-full sm:max-w-sm"
             >
               <div className="mx-auto mb-4 w-14 h-14 rounded-full bg-secondary/10 flex items-center justify-center">
                 <item.icon className="text-secondary" size={28} />
