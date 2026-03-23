@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logoRenova from "@/assets/logo-renova.png";
+import logoRenova from "@/assets/logo-renova.svg";
 
 const navLinks = [
   { label: "Início", href: "#inicio" },

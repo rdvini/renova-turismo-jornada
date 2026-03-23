@@ -1,5 +1,5 @@
-import { Instagram, Facebook, Phone, Mail, MessageCircle } from "lucide-react";
-import logoRenova from "@/assets/logo-renova.png";
+import { Instagram, Facebook, Phone, Mail, Youtube } from "lucide-react";
+import logoRenova from "@/assets/logo-renova.svg";
 
 const Footer = () => {
   return (
@@ -15,14 +15,14 @@ const Footer = () => {
 
           <div className="flex flex-col items-center gap-3">
             <div className="flex items-center gap-4">
-              <a href="#" aria-label="Instagram" className="text-primary-foreground/60 hover:text-secondary transition-colors">
+              <a href="https://instagram.com/renovaturismo" aria-label="Instagram" className="text-primary-foreground/60 hover:text-secondary transition-colors">
                 <Instagram size={22} />
               </a>
-              <a href="#" aria-label="Facebook" className="text-primary-foreground/60 hover:text-secondary transition-colors">
+              <a href="https://facebook.com/renovaturismo" aria-label="Facebook" className="text-primary-foreground/60 hover:text-secondary transition-colors">
                 <Facebook size={22} />
               </a>
-              <a href="#" aria-label="WhatsApp" className="text-primary-foreground/60 hover:text-secondary transition-colors">
-                <MessageCircle size={22} />
+              <a href="https://youtube.com/@renovaturismo" aria-label="YouTube" className="text-primary-foreground/60 hover:text-secondary transition-colors">
+                <Youtube size={22} />
               </a>
             </div>
           </div>
@@ -30,7 +30,7 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-end gap-2">
             <div className="flex items-center gap-2 text-primary-foreground/60 text-sm">
               <Phone size={14} />
-              <span className="font-body">(00) 00000-0000</span>
+              <span className="font-body">+55 19 3241-2424</span>
             </div>
             <div className="flex items-center gap-2 text-primary-foreground/60 text-sm">
               <Mail size={14} />
