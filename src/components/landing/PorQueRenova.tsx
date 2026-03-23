@@ -1,0 +1,39 @@
+import { Shield, Heart, Users, Star, Compass } from "lucide-react";
+
+const reasons = [
+  { icon: Heart, title: "Missão Espiritual", text: "Cada roteiro é pensado para nutrir a alma e fortalecer a fé." },
+  { icon: Compass, title: "Guias Especializados", text: "Acompanhamento de guias com conhecimento bíblico e histórico." },
+  { icon: Shield, title: "Segurança Total", text: "Cuidamos de cada detalhe para você viajar com tranquilidade." },
+  { icon: Users, title: "Cuidado com o Grupo", text: "Grupos pequenos e acolhedores, com atenção personalizada." },
+  { icon: Star, title: "Experiência Comprovada", text: "Anos de tradição em viagens que transformam vidas." },
+];
+
+const PorQueRenova = () => {
+  return (
+    <section className="py-20 md:py-28 bg-primary">
+      <div className="container mx-auto px-4">
+        <p className="font-accent text-lg italic text-secondary text-center mb-2">
+          Viaje com quem entende de fé
+        </p>
+        <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary-foreground text-center mb-14">
+          Por Que Renova Turismo
+        </h2>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {reasons.map((r) => (
+            <div
+              key={r.title}
+              className="bg-primary-foreground/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-primary-foreground/15 transition-colors"
+            >
+              <r.icon className="mx-auto mb-4 text-secondary" size={32} />
+              <h3 className="font-heading font-semibold text-primary-foreground mb-2">{r.title}</h3>
+              <p className="font-body text-primary-foreground/70 text-sm">{r.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default PorQueRenova;
