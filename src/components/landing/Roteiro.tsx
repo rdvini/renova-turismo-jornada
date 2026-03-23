@@ -5,31 +5,34 @@ import capadociaImg from "@/assets/capadocia.jpg";
 
 const cities = [
   {
-    name: "Istambul",
+    nameEn: "Istanbul",
+    namePt: "Istambul",
     image: istanbulImg,
     description:
       "Portal entre Oriente e Ocidente, Istambul guarda séculos de história cristã e islâmica. Da majestosa Hagia Sophia à icônica Mesquita Azul, cada esquina revela camadas de civilização e espiritualidade.",
   },
   {
-    name: "Éfeso",
+    nameEn: "Ephesus",
+    namePt: "Éfeso",
     image: efesoImg,
     description:
       "Cidade de profunda importância bíblica, lar do Templo de Ártemis e das primeiras comunidades cristãs. Aqui, o apóstolo Paulo pregou e a tradição aponta como último refúgio de Maria, mãe de Jesus.",
   },
   {
-    name: "Pamukkale",
+    nameEn: "Pamukkale",
+    namePt: "Pamukkale",
     image: pamukkaleImg,
     description:
       "Maravilha natural de terraços brancos e águas termais turquesas, vizinha à antiga Hierápolis — cidade mencionada nas escrituras e local de martírio do apóstolo Filipe.",
   },
   {
-    name: "Capadócia",
+    nameEn: "Cappadocia",
+    namePt: "Capadócia",
     image: capadociaImg,
     description:
       "Paisagem surreal de chaminés de fadas e igrejas rupestres esculpidas na rocha. Refúgio dos primeiros cristãos, a Capadócia é um testemunho vivo da perseverança da fé.",
   },
 ];
-
 const Roteiro = () => {
   return (
     <section id="roteiro" className="py-20 md:py-28 bg-background">
