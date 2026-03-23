@@ -14,7 +14,7 @@ const Hero = () => {
       />
       <div className="absolute inset-0 bg-primary/60" />
 
-      <div className="relative z-10 container mx-auto px-4 <div className="relative z-10 container mx-auto px-4 pt-[6.75rem] pb-16 text-center"> text-center">
+      <div className="relative z-10 container mx-auto px-4 pt-[6.75rem] pb-16 text-center">
         <p className="font-accent text-lg md:text-xl italic text-primary-foreground/80 mb-4 animate-fade-in-up">
           Uma jornada de fé, cultura e descobertas
         </p>
