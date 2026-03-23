@@ -53,7 +53,21 @@ const Inclusos = () => {
           para que você viva uma experiência de fé com total conforto e tranquilidade.
         </p>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto justify-items-center">
+          {items.slice(0, 6).map((item) => (
+            <div
+              key={item.title}
+              className="bg-card rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow text-center"
+            >
+              <div className="mx-auto mb-4 w-14 h-14 rounded-full bg-secondary/10 flex items-center justify-center">
+                <item.icon className="text-secondary" size={28} />
+              </div>
+              <h3 className="font-heading font-semibold text-primary mb-2">{item.title}</h3>
+              <p className="font-body text-muted-foreground text-sm leading-relaxed">{item.text}</p>
+            </div>
+          ))}
+        </div>
+        <div className="flex justify-center mt-6 max-w-5xl mx-auto">
           {items.map((item) => (
             <div
               key={item.title}
