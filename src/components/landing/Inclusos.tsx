@@ -46,7 +46,7 @@ const Inclusos = () => {
           Tudo pensado para você
         </p>
         <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary text-center mb-4">
-          O Que Está Incluído
+          O Que Está Incluso
         </h2>
         <p className="font-body text-muted-foreground text-center max-w-2xl mx-auto mb-14 leading-relaxed">
           Cada detalhe da sua peregrinação foi planejado com carinho e profissionalismo,
