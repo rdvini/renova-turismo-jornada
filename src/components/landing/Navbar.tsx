@@ -14,8 +14,8 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-sm">
-      <div className="container mx-auto flex items-center justify-between py-3 px-4">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-sm shadow-lg shadow-primary/20">
+      <div className="container mx-auto flex items-center justify-between py-4 px-4">
         <a href="#inicio">
           <img src={logoRenova} alt="Renova Turismo" className="h-10 md:h-12" />
         </a>
