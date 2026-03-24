@@ -11,9 +11,27 @@ const navLinks = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
+
+  useEffect(() => {
+    const footer = document.querySelector("footer");
+    if (!footer) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setHidden(entry.isIntersecting),
+      { threshold: 0 }
+    );
+
+    observer.observe(footer);
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-sm shadow-lg shadow-primary/20">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-sm shadow-lg shadow-primary/20 transition-all duration-[350ms] ease-in-out ${
+        hidden ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"
+      }`}
+    >
       <div className="max-w-7xl mx-auto flex items-center justify-between py-3 px-4 md:px-8">
         <a href="#inicio">
           <img src={logoRenova} alt="Renova Turismo" className="h-10 md:h-12" />
