@@ -6,7 +6,6 @@ const navLinks = [
   { label: "Início", href: "#inicio" },
   { label: "Sobre A Viagem", href: "#sobre" },
   { label: "Destinos", href: "#roteiro" },
-  { label: "O Que Inclui", href: "#inclusos" },
   { label: "Contato", href: "#contato" },
 ];
 
