@@ -50,7 +50,9 @@ const Navbar = () => {
             ))}
           </ul>
           <a
-            href="#contato"
+            href="https://api.whatsapp.com/send/?phone=5519994718930&text=Ol%C3%A1%21+Encontrei+voc%C3%AAs+pelo+Google+e+gostaria+de+receber+mais+informa%C3%A7%C3%B5es.+Aguardo+retorno&type=phone_number&app_absent=0"
+            target="_blank"
+            rel="noopener noreferrer"
             className="ml-2 inline-block rounded-full bg-secondary px-6 py-2.5 font-heading text-sm font-semibold text-secondary-foreground hover:bg-secondary/90 transition-colors"
           >
             Quero Participar
