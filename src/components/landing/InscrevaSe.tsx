@@ -14,9 +14,9 @@ const InscrevaSe = () => {
         </p>
         <a
           href="#contato"
-          className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-heading font-bold text-lg px-12 py-4 rounded-lg transition-all hover:scale-105 shadow-lg"
+          className="inline-block bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-bold text-lg px-12 py-4 rounded-full transition-all hover:scale-105 shadow-lg"
         >
-          Quero Participar
+          Garanta sua vaga
         </a>
       </div>
     </section>
