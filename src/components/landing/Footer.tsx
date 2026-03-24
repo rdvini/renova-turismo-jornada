@@ -51,7 +51,7 @@ const Footer = () => {
               aria-label="Facebook"
               className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
             >
-              <Facebook size={24} />
+              <FacebookFilled size={24} />
             </a>
             <a
               href="https://youtube.com/@renovaturismo"
