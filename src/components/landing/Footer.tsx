@@ -42,7 +42,7 @@ const Footer = () => {
               aria-label="Instagram"
               className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
             >
-              <Instagram size={24} />
+              <InstagramFilled size={24} />
             </a>
             <a
               href="https://facebook.com/renovaturismo"
