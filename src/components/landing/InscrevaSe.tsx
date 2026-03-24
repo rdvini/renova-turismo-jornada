@@ -1,6 +1,6 @@
 const InscrevaSe = () => {
   return (
-    <section id="contato" className="py-20 md:py-28 bg-muted">
+    <section id="contato" className="py-12 md:py-16 bg-muted">
       <div className="container mx-auto px-4 text-center">
         <p className="font-accent text-lg italic text-secondary mb-2">
           Garanta sua vaga
