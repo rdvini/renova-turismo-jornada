@@ -60,7 +60,7 @@ const Footer = () => {
               aria-label="YouTube"
               className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
             >
-              <Youtube size={24} />
+              <YoutubeFilled size={24} />
             </a>
           </div>
 
