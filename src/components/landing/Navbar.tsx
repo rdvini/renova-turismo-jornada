@@ -4,10 +4,10 @@ import logoRenova from "@/assets/logo-renova.svg";
 
 const navLinks = [
   { label: "Início", href: "#inicio" },
-  { label: "A Viagem", href: "#sobre" },
-  { label: "Roteiro", href: "#roteiro" },
-  { label: "Depoimentos", href: "#depoimentos" },
-  { label: "Inscreva-se", href: "#contato" },
+  { label: "Sobre A Viagem", href: "#sobre" },
+  { label: "Destinos", href: "#roteiro" },
+  { label: "O Que Inclui", href: "#inclusos" },
+  { label: "Contato", href: "#contato" },
 ];
 
 const Navbar = () => {
