@@ -15,22 +15,30 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-sm shadow-lg shadow-primary/20">
-      <div className="container mx-auto flex items-center justify-between py-4 px-4">
+      <div className="container mx-auto flex items-center justify-between py-5 px-4">
         <a href="#inicio">
           <img src={logoRenova} alt="Renova Turismo" className="h-10 md:h-12" />
         </a>
-        <ul className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                className="font-heading text-sm font-medium text-primary-foreground/80 hover:text-primary-foreground transition-colors"
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <div className="hidden md:flex items-center gap-8">
+          <ul className="flex items-center gap-8">
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  className="font-heading text-sm font-medium text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <a
+            href="#contato"
+            className="ml-2 inline-block rounded-full bg-secondary px-6 py-2.5 font-heading text-sm font-semibold text-secondary-foreground hover:bg-secondary/90 transition-colors"
+          >
+            Quero Participar
+          </a>
+        </div>
         <button
           className="md:hidden text-primary-foreground"
           onClick={() => setOpen(!open)}
@@ -51,6 +59,13 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
+          <a
+            href="#contato"
+            onClick={() => setOpen(false)}
+            className="block mx-6 mt-3 text-center rounded-full bg-secondary px-6 py-2.5 font-heading text-sm font-semibold text-secondary-foreground hover:bg-secondary/90 transition-colors"
+          >
+            Quero Participar
+          </a>
         </div>
       )}
     </nav>
