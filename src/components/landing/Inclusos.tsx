@@ -4,17 +4,17 @@ const items = [
   {
     icon: Users,
     title: "Guias Especializados",
-    text: "Acompanhamento por guias que falam português, com profundo conhecimento bíblico e histórico para enriquecer cada momento da peregrinação.",
+    text: "Acompanhamento por guias que falam português, com profundo conhecimento cultural e histórico para enriquecer cada momento da viagem.",
   },
   {
     icon: Heart,
     title: "Ritmo Tranquilo",
-    text: "Roteiro cuidadosamente planejado com tempo para oração, reflexão e descanso — porque cada etapa da jornada espiritual merece ser vivida com calma.",
+    text: "Roteiro cuidadosamente planejado com tempo para explorar, contemplar e descansar — porque cada etapa da jornada merece ser vivida com calma.",
   },
   {
     icon: Coffee,
     title: "Refeições Incluídas",
-    text: "Café da manhã e jantar todos os dias, para que você se preocupe apenas com o que realmente importa: a experiência da fé.",
+    text: "Café da manhã e jantar todos os dias, para que você se preocupe apenas com o que realmente importa: a experiência da viagem.",
   },
   {
     icon: Plane,
@@ -49,8 +49,8 @@ const Inclusos = () => {
           O Que Está Incluso
         </h2>
         <p className="font-body text-muted-foreground text-center max-w-2xl mx-auto mb-14 leading-relaxed">
-          Cada detalhe da sua peregrinação foi planejado com carinho e profissionalismo,
-          para que você viva uma experiência de fé com total conforto e tranquilidade.
+          Cada detalhe da sua viagem foi planejado com carinho e profissionalismo,
+          para que você viva uma experiência única com total conforto e tranquilidade.
         </p>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto justify-items-center">

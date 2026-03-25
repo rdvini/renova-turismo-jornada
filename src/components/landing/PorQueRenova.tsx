@@ -1,8 +1,8 @@
 import { Shield, Heart, Users, Star, Compass } from "lucide-react";
 
 const reasons = [
-  { icon: Heart, title: "Missão Espiritual", text: "Cada roteiro é pensado para nutrir a alma e fortalecer a fé." },
-  { icon: Compass, title: "Guias Especializados", text: "Acompanhamento de guias com conhecimento bíblico e histórico." },
+  { icon: Heart, title: "Experiências Únicas", text: "Cada roteiro é pensado para proporcionar momentos memoráveis e enriquecedores." },
+  { icon: Compass, title: "Guias Especializados", text: "Acompanhamento de guias com conhecimento cultural e histórico." },
   { icon: Shield, title: "Segurança Total", text: "Cuidamos de cada detalhe para você viajar com tranquilidade." },
   { icon: Users, title: "Cuidado com o Grupo", text: "Grupos pequenos e acolhedores, com atenção personalizada." },
   { icon: Star, title: "Experiência Comprovada", text: "Anos de tradição em viagens que transformam vidas." },
@@ -13,7 +13,7 @@ const PorQueRenova = () => {
     <section className="py-20 md:py-28 bg-primary">
       <div className="container mx-auto px-4">
         <p className="font-accent text-lg italic text-secondary text-center mb-2">
-          Viaje com quem entende de fé
+          Viaje com quem entende de turismo
         </p>
         <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary-foreground text-center mb-14">
           Por Que Renova Turismo
