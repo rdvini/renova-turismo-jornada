@@ -76,7 +76,7 @@ const Roteiro = () => {
           ))}
         </div>
 
-        <p className="text-center text-muted-foreground text-sm mt-8">
+        <p className="text-center text-muted-foreground/60 text-sm italic mt-8">
           + de 3 opções de roteiro para você conhecer
         </p>
       </div>
