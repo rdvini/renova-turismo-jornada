@@ -42,7 +42,7 @@ const Roteiro = () => {
           Cidades que contam histórias
         </p>
         <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary text-center mb-14">
-          Roteiro — Cidades
+          Cidades que você irá conhecer
         </h2>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
