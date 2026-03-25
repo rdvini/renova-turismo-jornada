@@ -39,7 +39,7 @@ const Roteiro = () => {
     <section id="roteiro" className="py-20 md:py-28 bg-background">
       <div className="container mx-auto px-4">
         <p className="font-accent text-lg italic text-secondary text-center mb-2">
-          Cidades que contam histórias
+          Principais
         </p>
         <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary text-center mb-14">
           Cidades que você irá conhecer
