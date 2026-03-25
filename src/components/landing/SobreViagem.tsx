@@ -14,9 +14,9 @@ const SobreViagem = () => {
         <div className="max-w-3xl mx-auto text-center mb-14">
           <p className="font-body text-muted-foreground text-lg leading-relaxed">
             A Turquia é um dos destinos mais fascinantes do mundo — terra de civilizações milenares,
-            berço de comunidades cristãs primitivas e palco de episódios bíblicos marcantes. Nesta
-            viagem exclusiva, a Renova Turismo convida você a percorrer cidades sagradas, ruínas
-            históricas e paisagens que inspiram a alma, unindo fé e cultura em uma experiência
+            berço de impérios lendários e palco de episódios históricos marcantes. Nesta
+            viagem exclusiva, a Renova Turismo convida você a percorrer cidades icônicas, ruínas
+            históricas e paisagens deslumbrantes, unindo cultura e aventura em uma experiência
             inesquecível.
           </p>
         </div>
@@ -40,7 +40,7 @@ const SobreViagem = () => {
             <BookOpen className="mx-auto mb-4 text-secondary" size={36} />
             <h3 className="font-heading font-semibold text-primary mb-2">Significado</h3>
             <p className="font-body text-muted-foreground text-sm">
-              Caminhe por terras bíblicas e viva a história da fé cristã de perto.
+              Explore terras milenares e viva a história de grandes civilizações de perto.
             </p>
           </div>
         </div>

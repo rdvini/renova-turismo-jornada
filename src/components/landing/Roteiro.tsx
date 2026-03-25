@@ -9,30 +9,31 @@ const cities = [
     namePt: "Istambul",
     image: istanbulImg,
     description:
-      "Portal entre Oriente e Ocidente, Istambul guarda séculos de história cristã e islâmica. Da majestosa Hagia Sophia à icônica Mesquita Azul, cada esquina revela camadas de civilização e espiritualidade.",
+      "Portal entre Oriente e Ocidente, Istambul guarda séculos de história fascinante. Da majestosa Hagia Sophia à icônica Mesquita Azul, cada esquina revela camadas de civilização e cultura.",
   },
   {
     nameEn: "Ephesus",
     namePt: "Éfeso",
     image: efesoImg,
     description:
-      "Cidade de profunda importância bíblica, lar do Templo de Ártemis e das primeiras comunidades cristãs. Aqui, o apóstolo Paulo pregou e a tradição aponta como último refúgio de Maria, mãe de Jesus.",
+      "Uma das cidades antigas mais bem preservadas do mundo, lar do lendário Templo de Ártemis e de ruínas monumentais. Caminhe por ruas milenares e sinta a grandeza do Império Romano.",
   },
   {
     nameEn: "Pamukkale",
     namePt: "Pamukkale",
     image: pamukkaleImg,
     description:
-      "Maravilha natural de terraços brancos e águas termais turquesas, vizinha à antiga Hierápolis — cidade mencionada nas escrituras e local de martírio do apóstolo Filipe.",
+      "Maravilha natural de terraços brancos e águas termais turquesas, vizinha à antiga Hierápolis — cidade histórica com ruínas impressionantes e paisagens de tirar o fôlego.",
   },
   {
     nameEn: "Cappadocia",
     namePt: "Capadócia",
     image: capadociaImg,
     description:
-      "Paisagem surreal de chaminés de fadas e igrejas rupestres esculpidas na rocha. Refúgio dos primeiros cristãos, a Capadócia é um testemunho vivo da perseverança da fé.",
+      "Paisagem surreal de chaminés de fadas e habitações esculpidas na rocha. A Capadócia é um cenário único no mundo, famosa pelos voos de balão e cidades subterrâneas milenares.",
   },
 ];
+
 const Roteiro = () => {
   return (
     <section id="roteiro" className="py-20 md:py-28 bg-background">

@@ -9,8 +9,8 @@ const InscrevaSe = () => {
           Inscreva-se Agora
         </h2>
         <p className="font-body text-muted-foreground max-w-xl mx-auto mb-10 text-lg">
-          Vagas limitadas! Entre em contato conosco e reserve seu lugar nesta jornada
-          transformadora pela Turquia.
+          Vagas limitadas! Entre em contato conosco e reserve seu lugar nesta viagem
+          inesquecível pela Turquia.
         </p>
         <a
           href="https://api.whatsapp.com/send/?phone=5519994718930&text=Ol%C3%A1%21+Encontrei+voc%C3%AAs+pelo+Google+e+gostaria+de+receber+mais+informa%C3%A7%C3%B5es.+Aguardo+retorno&type=phone_number&app_absent=0"

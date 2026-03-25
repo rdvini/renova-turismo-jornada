@@ -4,12 +4,12 @@ const testimonials = [
   {
     name: "Maria Helena",
     age: 62,
-    quote: "Foi a viagem mais significativa da minha vida. Pisar nas terras onde os apóstolos caminharam renovou minha fé de uma forma que eu jamais imaginei.",
+    quote: "Foi a viagem mais significativa da minha vida. Conhecer a Turquia e suas paisagens incríveis superou todas as minhas expectativas.",
   },
   {
     name: "Carlos Eduardo",
     age: 55,
-    quote: "Não sou religioso, mas a riqueza cultural e histórica da Turquia me deixou sem palavras. A Renova cuidou de tudo com excelência.",
+    quote: "A riqueza cultural e histórica da Turquia me deixou sem palavras. A Renova cuidou de tudo com excelência.",
   },
   {
     name: "Dona Lúcia",
