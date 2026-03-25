@@ -75,6 +75,10 @@ const Roteiro = () => {
             </div>
           ))}
         </div>
+
+        <p className="text-center text-muted-foreground text-sm mt-8">
+          + de 3 opções de roteiro para você conhecer
+        </p>
       </div>
     </section>
   );
