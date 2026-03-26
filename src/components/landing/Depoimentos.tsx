@@ -1,22 +1,33 @@
-import { Quote } from "lucide-react";
+import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Maria Helena",
-    age: 62,
-    quote: "Foi a viagem mais significativa da minha vida. Conhecer a Turquia e suas paisagens incríveis superou todas as minhas expectativas.",
+    name: "Dr. Felipe Silva",
+    location: "Campinas/SP",
+    quote:
+      "Excelente empresa. Excelente tratamento. Excelentes produtos. Excelente pós-venda. É o tipo de empresa que entende que uma viagem pode significar muito mais do que apenas uma viagem e se dedica para que seja um sonho inesquecível.",
   },
   {
-    name: "Carlos Eduardo",
-    age: 55,
-    quote: "A riqueza cultural e histórica da Turquia me deixou sem palavras. A Renova cuidou de tudo com excelência.",
+    name: "Ilda Costa",
+    location: "Itu/SP",
+    quote:
+      "Da viagem que fiz só tenho pontos positivos... Amei.... A equipe da Renova esteve presente nos dando toda assistência desde o momento em que saímos de Salto até o momento em que voltamos pra cá. Sempre estavam a disposição quando alguém do grupo precisava e acho que essa atenção para com o cliente foi o que me fez ter o desejo de fazer novas viagens com a Renova... O fato de colocarem no pacote todos os gastos incluindo alimentação mesmo nos lugares onde estávamos passando é um ponto positivo também porque ficamos despreocupados. Pros meus amigos quando falam em viajar não tenho dúvidas... É a Renova que eu indico... Que vocês possam continuar tratando o cliente com esse carinho que pude experimentar.. Parabéns e sucesso é o que desejo a Renova Turismo.",
   },
   {
-    name: "Dona Lúcia",
-    age: 70,
-    quote: "Me senti acolhida do início ao fim. Os guias eram extraordinários e cada cidade era mais impressionante que a anterior. Voltarei com certeza.",
+    name: "Luciano Martins",
+    location: "São Paulo/SP",
+    quote:
+      "Uma Empresa Responsável, Dedicada a proporcionar o máximo de bem estar aos Clientes. Eu sou Cliente da Renova Turismo, e estou muito Satisfeito com o empenho e organização, que é uma Marca Registrada desta Empresa, que tem como objetivo auxiliar no máximo a realização dos Sonhos de quem deseja viajar, tanto em nosso País, quanto em outros. PARABÉNS RENOVA TURISMO.",
   },
 ];
+
+const Stars = () => (
+  <div className="flex gap-0.5 mb-3">
+    {[...Array(5)].map((_, i) => (
+      <Star key={i} className="text-yellow-500 fill-yellow-500" size={16} />
+    ))}
+  </div>
+);
 
 const Depoimentos = () => {
   return (
@@ -33,16 +44,14 @@ const Depoimentos = () => {
           {testimonials.map((t) => (
             <div
               key={t.name}
-              className="bg-card rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow relative"
+              className="bg-card rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow"
             >
-              <Quote className="text-secondary/30 absolute top-4 right-4" size={32} />
-              <p className="font-accent italic text-muted-foreground leading-relaxed mb-6">
-                "{t.quote}"
+              <p className="font-heading font-semibold text-primary">{t.name}</p>
+              <p className="font-body text-muted-foreground text-sm mb-3">{t.location}</p>
+              <Stars />
+              <p className="font-body text-muted-foreground text-sm leading-relaxed">
+                {t.quote}
               </p>
-              <div>
-                <p className="font-heading font-semibold text-primary text-sm">{t.name}</p>
-                <p className="font-body text-muted-foreground text-xs">{t.age} anos</p>
-              </div>
             </div>
           ))}
         </div>
