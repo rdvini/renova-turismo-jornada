@@ -12,7 +12,7 @@ const Index = () => {
       <HubHero />
       <CampaignHub />
       <PorQueRenova />
-      <Depoimentos />
+      
       <Footer />
     </div>
   );
