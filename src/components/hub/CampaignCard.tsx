@@ -18,6 +18,7 @@ const CampaignCard = ({ campaign }: CampaignCardProps) => {
           alt={campaign.title}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
+        <div className="absolute inset-0 bg-black/40" />
         <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/20 to-transparent" />
         {campaign.badge && (
           <span className="absolute top-4 left-4 bg-secondary text-secondary-foreground text-xs font-heading font-bold px-3 py-1 rounded-full">
