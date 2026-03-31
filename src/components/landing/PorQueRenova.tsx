@@ -16,7 +16,7 @@ const PorQueRenova = () => {
           Viaje com quem entende de turismo
         </p>
         <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary-foreground text-center mb-14">
-          Por Que Renova Turismo
+          Por Que a Renova Turismo
         </h2>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
