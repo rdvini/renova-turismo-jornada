@@ -17,7 +17,7 @@ const Hero = () => {
         </p>
         <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-extrabold text-primary-foreground leading-tight mb-6 animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
           {/* EDITAR: Título principal */}
-          Viagem a [Destino]
+          Viagem a África do Sul
         </h1>
         <p className="font-body text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
           {/* EDITAR: Descrição do hero */}
