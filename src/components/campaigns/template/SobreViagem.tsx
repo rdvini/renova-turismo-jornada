@@ -34,7 +34,7 @@ const SobreViagem = () => {
             <h3 className="font-heading font-semibold text-primary mb-2">Destinos</h3>
             <p className="font-body text-muted-foreground text-sm">
               {/* EDITAR: Cidades */}
-              [Cidade 1], [Cidade 2], [Cidade 3] e [Cidade 4] — [X] cidades icônicas.
+              Cidade do Cabo, Chapman's Peak, Simon's Town e Franschhoek — 4 destinos icônicos.
             </p>
           </div>
           <div className="bg-card rounded-lg p-8 text-center shadow-sm hover:shadow-md transition-shadow">
