@@ -1,21 +1,23 @@
 import { Star } from "lucide-react";
 
-/* EDITAR: Substitua os depoimentos abaixo pelos reais */
 const testimonials = [
   {
-    name: "[Nome do Cliente 1]",
-    location: "[Cidade/Estado]",
-    quote: "[Depoimento do cliente aqui]",
+    name: "Dr. Felipe Silva",
+    location: "Campinas/SP",
+    quote:
+      "Excelente empresa. Excelente tratamento. Excelentes produtos. Excelente pós-venda. É o tipo de empresa que entende que uma viagem pode significar muito mais do que apenas uma viagem e se dedica para que seja um sonho inesquecível.",
   },
   {
-    name: "[Nome do Cliente 2]",
-    location: "[Cidade/Estado]",
-    quote: "[Depoimento do cliente aqui]",
+    name: "Ilda Costa",
+    location: "Itu/SP",
+    quote:
+      "Da viagem que fiz só tenho pontos positivos... Amei.... A equipe da Renova esteve presente nos dando toda assistência desde o momento em que saímos de Salto até o momento em que voltamos pra cá. Sempre estavam a disposição quando alguém do grupo precisava e acho que essa atenção para com o cliente foi o que me fez ter o desejo de fazer novas viagens com a Renova... O fato de colocarem no pacote todos os gastos incluindo alimentação mesmo nos lugares onde estávamos passando é um ponto positivo também porque ficamos despreocupados. Pros meus amigos quando falam em viajar não tenho dúvidas... É a Renova que eu indico... Que vocês possam continuar tratando o cliente com esse carinho que pude experimentar.. Parabéns e sucesso é o que desejo a Renova Turismo.",
   },
   {
-    name: "[Nome do Cliente 3]",
-    location: "[Cidade/Estado]",
-    quote: "[Depoimento do cliente aqui]",
+    name: "Luciano Martins",
+    location: "São Paulo/SP",
+    quote:
+      "Uma Empresa Responsável, Dedicada a proporcionar o máximo de bem estar aos Clientes. Eu sou Cliente da Renova Turismo, e estou muito Satisfeito com o empenho e organização, que é uma Marca Registrada desta Empresa, que tem como objetivo auxiliar no máximo a realização dos Sonhos de quem deseja viajar, tanto em nosso País, quanto em outros. PARABÉNS RENOVA TURISMO.",
   },
 ];
 
