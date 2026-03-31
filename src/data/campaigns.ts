@@ -24,14 +24,14 @@ export const campaigns: Campaign[] = [
     badge: "Peregrinação",
   },
   {
-    id: "template",
-    slug: "/template",
-    title: "[Nova Campanha] — Template",
-    subtitle: "Modelo editável",
+    id: "africa-do-sul",
+    slug: "/africa-do-sul",
+    title: "África do Sul",
+    subtitle: "RENOVA APRESENTA",
     description:
-      "Template pronto para criar uma nova campanha. Duplique e edite os campos marcados com [Destino], [Data], [Líder], etc.",
+      "Explore a beleza selvagem e a cultura vibrante da África do Sul em uma jornada inesquecível.",
     image: "",
-    date: "[Data a definir]",
-    badge: "Template",
+    date: "Confira as datas para 2027 e 2028",
+    badge: "Experências",
   },
 ];
