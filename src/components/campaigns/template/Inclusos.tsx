@@ -1,41 +1,40 @@
 import { Users, Heart, Coffee, Plane, Hotel, ShieldCheck, HeadphonesIcon } from "lucide-react";
 
-/* EDITAR: Modifique os itens abaixo conforme o pacote da viagem */
 const items = [
   {
     icon: Users,
-    title: "[Benefício 1]",
-    text: "[Descreva o benefício aqui]",
+    title: "Guias Especializados",
+    text: "Acompanhamento por guias que falam português, com profundo conhecimento cultural e histórico para enriquecer cada momento da viagem.",
   },
   {
     icon: Heart,
-    title: "[Benefício 2]",
-    text: "[Descreva o benefício aqui]",
+    title: "Ritmo Tranquilo",
+    text: "Roteiro cuidadosamente planejado com tempo para explorar, contemplar e descansar — porque cada etapa da jornada merece ser vivida com calma.",
   },
   {
     icon: Coffee,
-    title: "[Benefício 3]",
-    text: "[Descreva o benefício aqui]",
+    title: "Refeições Incluídas",
+    text: "Café da manhã e jantar todos os dias, para que você se preocupe apenas com o que realmente importa: a experiência da viagem.",
   },
   {
     icon: Plane,
-    title: "[Benefício 4]",
-    text: "[Descreva o benefício aqui]",
+    title: "Voos e Transfers",
+    text: "Toda a logística de transporte está incluída — dos voos internacionais aos transfers entre cidades e hotéis, sem preocupações.",
   },
   {
     icon: Hotel,
-    title: "[Benefício 5]",
-    text: "[Descreva o benefício aqui]",
+    title: "Hotéis de Alto Padrão",
+    text: "Hospedagem selecionada pelo conforto e localização privilegiada, garantindo descanso e praticidade após cada dia de descobertas.",
   },
   {
     icon: ShieldCheck,
-    title: "[Benefício 6]",
-    text: "[Descreva o benefício aqui]",
+    title: "Seguro Viagem Completo",
+    text: "Cobertura total para que você viaje com a tranquilidade de estar protegido em todos os momentos.",
   },
   {
     icon: HeadphonesIcon,
-    title: "[Benefício 7]",
-    text: "[Descreva o benefício aqui]",
+    title: "Assistência 24 Horas",
+    text: "Suporte e segurança durante toda a viagem, com uma equipe dedicada pronta para atender você a qualquer momento.",
   },
 ];
 
@@ -50,7 +49,6 @@ const Inclusos = () => {
           O Que Está Incluso
         </h2>
         <p className="font-body text-muted-foreground text-center max-w-2xl mx-auto mb-14 leading-relaxed">
-          {/* EDITAR: Descrição geral dos inclusos */}
           Cada detalhe da sua viagem foi planejado com carinho e profissionalismo,
           para que você viva uma experiência única com total conforto e tranquilidade.
         </p>
