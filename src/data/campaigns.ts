@@ -9,6 +9,7 @@ export interface Campaign {
   image: string;
   date: string;
   badge?: string;
+  published?: boolean;
 }
 
 import heroTurkiye from "@/assets/padre-leudo/hero-turkiye.jpg";
