@@ -65,7 +65,7 @@ const Navbar = () => {
           </a>
         </div>
         <button
-          className="md:hidden text-primary-foreground"
+          className="md:hidden text-turkey-white"
           onClick={() => setOpen(!open)}
           aria-label="Menu"
         >
