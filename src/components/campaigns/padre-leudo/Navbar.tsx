@@ -73,7 +73,7 @@ const Navbar = () => {
         </button>
       </div>
       {open && (
-        <div className="md:hidden bg-primary border-t border-primary-foreground/10 pb-4">
+        <div className="md:hidden bg-turkey-red-dark border-t border-turkey-white/10 pb-4">
           {navLinks.map((link) => (
             <a
               key={link.href}
