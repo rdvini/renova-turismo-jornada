@@ -1,3 +1,5 @@
+import cardAfricaDoSul from "@/assets/africa-do-sul/card-cover.jpg";
+
 export interface Campaign {
   id: string;
   slug: string;
@@ -30,7 +32,7 @@ export const campaigns: Campaign[] = [
     subtitle: "RENOVA APRESENTA",
     description:
       "Explore a beleza selvagem e a cultura vibrante da África do Sul em uma jornada inesquecível.",
-    image: "",
+    image: cardAfricaDoSul,
     date: "Confira as datas para 2027 e 2028",
     badge: "Experências",
   },

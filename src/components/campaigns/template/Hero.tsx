@@ -1,4 +1,5 @@
 import { Play } from "lucide-react";
+import heroImage from "@/assets/africa-do-sul/hero.jpg";
 
 const Hero = () => {
   return (
@@ -7,8 +8,8 @@ const Hero = () => {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
       {/* EDITAR: Substituir por imagem do destino */}
-      <div className="absolute inset-0 w-full h-full bg-primary/60" />
-      <div className="absolute inset-0 bg-black/30" />
+      <img src={heroImage} alt="África do Sul" className="absolute inset-0 w-full h-full object-cover" />
+      <div className="absolute inset-0 bg-black/40" />
 
       <div className="relative z-10 container mx-auto px-4 pt-[6.75rem] pb-16 text-center">
         <p className="font-accent text-lg md:text-xl italic text-primary-foreground/80 mb-4 animate-fade-in-up">
