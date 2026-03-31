@@ -25,6 +25,7 @@ export const campaigns: Campaign[] = [
     image: heroTurkiye,
     date: "06 a 17 de Setembro de 2027",
     badge: "Peregrinação",
+    published: true,
   },
   {
     id: "africa-do-sul",
