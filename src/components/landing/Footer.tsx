@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-start">
             <img src={logoRenova} alt="Renova Turismo" className="h-16 object-contain mb-4" />
             <p className="font-body text-sm text-primary-foreground/60 text-center md:text-left">
-              Transformando vidas através de viagens culturais e históricas.
+              Aqui nós gostamos de pessoas.
             </p>
           </div>
 

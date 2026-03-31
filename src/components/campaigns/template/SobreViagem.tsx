@@ -15,7 +15,7 @@ const SobreViagem = () => {
         <div className="max-w-3xl mx-auto text-center mb-14">
           <p className="font-body text-muted-foreground text-lg leading-relaxed">
             {/* EDITAR: Descrição do destino */}
-            [Destino] é um dos destinos mais fascinantes do mundo — descreva aqui a
+            A África do Sul é um dos destinos mais fascinantes do mundo — descreva aqui a
             experiência, o diferencial cultural e o que torna esta viagem única.
           </p>
         </div>

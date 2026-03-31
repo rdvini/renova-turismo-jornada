@@ -33,7 +33,7 @@ const InscrevaSe = () => {
             <p className="font-body text-muted-foreground text-lg mb-8">
               {/* EDITAR: Descrição do CTA */}
               Vagas limitadas! Entre em contato conosco e reserve seu lugar nesta viagem
-              inesquecível por [Destino].
+              inesquecível pela África do Sul.
             </p>
             <a
               href="#contato"
