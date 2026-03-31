@@ -17,9 +17,11 @@ const CampaignHub = () => {
         </p>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {campaigns.map((campaign) => (
-            <CampaignCard key={campaign.id} campaign={campaign} />
-          ))}
+          {campaigns
+            .filter((campaign) => campaign.published !== false)
+            .map((campaign) => (
+              <CampaignCard key={campaign.id} campaign={campaign} />
+            ))}
         </div>
       </div>
     </section>
