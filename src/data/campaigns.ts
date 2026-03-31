@@ -23,4 +23,15 @@ export const campaigns: Campaign[] = [
     date: "06 a 17 de Setembro de 2027",
     badge: "Peregrinação",
   },
+  {
+    id: "template",
+    slug: "/template",
+    title: "[Nova Campanha] — Template",
+    subtitle: "Modelo editável",
+    description:
+      "Template pronto para criar uma nova campanha. Duplique e edite os campos marcados com [Destino], [Data], [Líder], etc.",
+    image: "",
+    date: "[Data a definir]",
+    badge: "Template",
+  },
 ];
