@@ -29,7 +29,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-sm shadow-lg shadow-primary/20 transition-all duration-[350ms] ease-in-out ${
+      className={`fixed top-0 left-0 right-0 z-50 bg-turkey-red/95 backdrop-blur-sm shadow-lg shadow-turkey-red-dark/20 transition-all duration-[350ms] ease-in-out ${
         hidden ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"
       }`}
     >
