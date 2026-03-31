@@ -19,7 +19,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/turquia-padre-leudo" element={<TurquiaPadreLeudo />} />
-          <Route path="/template" element={<CampaignTemplate />} />
+          <Route path="/africa-do-sul" element={<CampaignTemplate />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
