@@ -9,6 +9,7 @@ export interface Campaign {
   image: string;
   date: string;
   badge?: string;
+  published?: boolean;
 }
 
 import heroTurkiye from "@/assets/padre-leudo/hero-turkiye.jpg";
@@ -24,6 +25,7 @@ export const campaigns: Campaign[] = [
     image: heroTurkiye,
     date: "06 a 17 de Setembro de 2027",
     badge: "Peregrinação",
+    published: true,
   },
   {
     id: "africa-do-sul",
@@ -35,5 +37,6 @@ export const campaigns: Campaign[] = [
     image: cardAfricaDoSul,
     date: "Confira as datas para 2027 e 2028",
     badge: "Experências",
+    published: false,
   },
 ];
