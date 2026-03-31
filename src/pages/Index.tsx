@@ -2,7 +2,7 @@ import HubNavbar from "@/components/hub/HubNavbar";
 import HubHero from "@/components/hub/HubHero";
 import CampaignHub from "@/components/hub/CampaignHub";
 import PorQueRenova from "@/components/landing/PorQueRenova";
-import Depoimentos from "@/components/landing/Depoimentos";
+
 import Footer from "@/components/landing/Footer";
 
 const Index = () => {
