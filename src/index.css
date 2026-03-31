@@ -36,6 +36,10 @@
 
     --radius: 0.5rem;
 
+    --turkey-red: 0 85% 40%;
+    --turkey-red-dark: 0 85% 30%;
+    --turkey-white: 0 0% 100%;
+
     --font-heading: 'Montserrat', sans-serif;
     --font-body: 'Poppins', sans-serif;
     --font-accent: 'Times New Roman', Georgia, serif;
