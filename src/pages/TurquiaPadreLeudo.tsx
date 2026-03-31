@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Navbar from "@/components/campaigns/padre-leudo/Navbar";
 import Hero from "@/components/campaigns/padre-leudo/Hero";
 import SobreViagem from "@/components/campaigns/padre-leudo/SobreViagem";
@@ -9,6 +10,9 @@ import InscrevaSe from "@/components/campaigns/padre-leudo/InscrevaSe";
 import Footer from "@/components/landing/Footer";
 
 const TurquiaPadreLeudo = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
