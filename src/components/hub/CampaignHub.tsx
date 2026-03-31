@@ -3,7 +3,7 @@ import CampaignCard from "./CampaignCard";
 
 const CampaignHub = () => {
   return (
-    <section className="py-20 md:py-28 bg-muted">
+    <section id="viagens" className="py-20 md:py-28 bg-muted">
       <div className="container mx-auto px-4">
         <p className="font-accent text-lg italic text-secondary text-center mb-2">
           Escolha sua próxima aventura
