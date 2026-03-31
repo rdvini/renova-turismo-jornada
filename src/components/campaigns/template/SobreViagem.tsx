@@ -26,7 +26,7 @@ const SobreViagem = () => {
             <h3 className="font-heading font-semibold text-primary mb-2">Data</h3>
             <p className="font-body text-muted-foreground text-sm">
               {/* EDITAR: Datas da viagem */}
-              [DD] a [DD] de [Mês] de [Ano]
+              Entre em contato para datas em 2027 e 2028.
             </p>
           </div>
           <div className="bg-card rounded-lg p-8 text-center shadow-sm hover:shadow-md transition-shadow">
