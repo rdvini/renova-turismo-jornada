@@ -21,7 +21,7 @@ const Hero = () => {
         </h1>
         <p className="font-body text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
           {/* EDITAR: Descrição do hero */}
-          Explore a riqueza cultural e histórica de [Destino] com a Renova Turismo e [Nome do Líder] — uma experiência inesquecível.
+          Explore a riqueza cultural e histórica da África do Sul com a Renova Turismo — uma experiência inesquecível.
         </p>
 
         <div className="max-w-xl mx-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.45s" }}>
