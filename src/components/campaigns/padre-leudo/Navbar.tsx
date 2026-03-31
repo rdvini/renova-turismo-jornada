@@ -89,7 +89,7 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setOpen(false)}
-            className="block mx-6 mt-3 text-center rounded-full bg-secondary px-6 py-2.5 font-heading text-sm font-semibold text-secondary-foreground hover:bg-secondary/90 transition-colors"
+            className="block mx-6 mt-3 text-center rounded-full bg-turkey-white px-6 py-2.5 font-heading text-sm font-semibold text-turkey-red hover:bg-turkey-white/90 transition-colors"
           >
             Quero Participar
           </a>
