@@ -62,6 +62,13 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        turkey: {
+          red: {
+            DEFAULT: "hsl(var(--turkey-red))",
+            dark: "hsl(var(--turkey-red-dark))",
+          },
+          white: "hsl(var(--turkey-white))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",

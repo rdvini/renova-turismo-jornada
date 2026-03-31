@@ -29,13 +29,13 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-sm shadow-lg shadow-primary/20 transition-all duration-[350ms] ease-in-out ${
+      className={`fixed top-0 left-0 right-0 z-50 bg-turkey-red/95 backdrop-blur-sm shadow-lg shadow-turkey-red-dark/20 transition-all duration-[350ms] ease-in-out ${
         hidden ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"
       }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between py-3 px-4 md:px-8">
         <div className="flex items-center gap-3">
-          <Link to="/" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors" aria-label="Voltar ao hub">
+          <Link to="/" className="text-turkey-white/70 hover:text-turkey-white transition-colors" aria-label="Voltar ao hub">
             <ArrowLeft size={20} />
           </Link>
           <a href="#inicio">
@@ -48,7 +48,7 @@ const Navbar = () => {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="font-body text-xs font-medium text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                  className="font-body text-xs font-medium text-turkey-white/80 hover:text-turkey-white transition-colors"
                 >
                   {link.label}
                 </a>
@@ -59,13 +59,13 @@ const Navbar = () => {
             href="https://api.whatsapp.com/send/?phone=5519994718930&text=Ol%C3%A1%21+Encontrei+voc%C3%AAs+pelo+Google+e+gostaria+de+receber+mais+informa%C3%A7%C3%B5es.+Aguardo+retorno&type=phone_number&app_absent=0"
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-2 inline-block rounded-full bg-secondary px-6 py-2.5 font-heading text-sm font-semibold text-secondary-foreground hover:bg-secondary/90 transition-colors"
+            className="ml-2 inline-block rounded-full bg-turkey-white px-6 py-2.5 font-heading text-sm font-semibold text-turkey-red hover:bg-turkey-white/90 transition-colors"
           >
             Quero Participar
           </a>
         </div>
         <button
-          className="md:hidden text-primary-foreground"
+          className="md:hidden text-turkey-white"
           onClick={() => setOpen(!open)}
           aria-label="Menu"
         >
@@ -73,13 +73,13 @@ const Navbar = () => {
         </button>
       </div>
       {open && (
-        <div className="md:hidden bg-primary border-t border-primary-foreground/10 pb-4">
+        <div className="md:hidden bg-turkey-red-dark border-t border-turkey-white/10 pb-4">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="block px-6 py-3 font-heading text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+              className="block px-6 py-3 font-heading text-sm text-turkey-white/80 hover:text-turkey-white transition-colors"
             >
               {link.label}
             </a>
@@ -89,7 +89,7 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setOpen(false)}
-            className="block mx-6 mt-3 text-center rounded-full bg-secondary px-6 py-2.5 font-heading text-sm font-semibold text-secondary-foreground hover:bg-secondary/90 transition-colors"
+            className="block mx-6 mt-3 text-center rounded-full bg-turkey-white px-6 py-2.5 font-heading text-sm font-semibold text-turkey-red hover:bg-turkey-white/90 transition-colors"
           >
             Quero Participar
           </a>
