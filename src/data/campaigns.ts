@@ -18,13 +18,13 @@ export const campaigns: Campaign[] = [
   {
     id: "turquia-padre-leudo",
     slug: "/turquia-padre-leudo",
-    title: "Turquia — Pe. Leudo Santos",
-    subtitle: "de Manaus para o Mundo",
+    title: "Turquia",
+    subtitle: "Renova Turismo apresenta",
     description:
-      "11 dias de peregrinação pelas terras bíblicas da Turquia, visitando igrejas do Apocalipse, a Casa da Virgem Maria e locais sagrados da fé cristã.",
+      "11 dias explorando alguns dos cenários mais marcantes da Turquia, com cidades históricas, paisagens icônicas e experiências culturais inesquecíveis.",
     image: heroTurkiye,
     date: "06 a 17 de Setembro de 2027",
-    badge: "Peregrinação",
+    badge: "Experiência",
     published: true,
   },
   {
