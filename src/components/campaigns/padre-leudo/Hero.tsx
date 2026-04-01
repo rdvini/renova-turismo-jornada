@@ -16,13 +16,13 @@ const Hero = () => {
 
       <div className="relative z-10 container mx-auto px-4 pt-[6.75rem] pb-16 text-center">
         <p className="font-accent text-lg md:text-xl italic text-primary-foreground/80 mb-4 animate-fade-in-up">
-          Renova Turismo apresenta
+          de Manaus para o Mundo
         </p>
         <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-extrabold text-primary-foreground leading-tight mb-6 animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
           Viagem à Turquia
         </h1>
         <p className="font-body text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-          Explore a riqueza cultural e histórica da Turquia com a Renova Turismo em uma experiência inesquecível.
+          Explore a riqueza cultural e histórica da Turquia com a Renova Turismo e o Pe Leudo Santos — uma experiência inesquecível.
         </p>
 
         <div className="max-w-xl mx-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.45s" }}>

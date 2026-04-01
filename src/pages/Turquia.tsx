@@ -1,15 +1,15 @@
 import { useEffect } from "react";
-import Navbar from "@/components/campaigns/padre-leudo/Navbar";
-import Hero from "@/components/campaigns/padre-leudo/Hero";
-import SobreViagem from "@/components/campaigns/padre-leudo/SobreViagem";
-import Inclusos from "@/components/campaigns/padre-leudo/Inclusos";
-import Roteiro from "@/components/campaigns/padre-leudo/Roteiro";
-import PorQueRenova from "@/components/campaigns/padre-leudo/PorQueRenova";
-import Depoimentos from "@/components/campaigns/padre-leudo/Depoimentos";
-import InscrevaSe from "@/components/campaigns/padre-leudo/InscrevaSe";
+import Navbar from "@/components/campaigns/turquia/Navbar";
+import Hero from "@/components/campaigns/turquia/Hero";
+import SobreViagem from "@/components/campaigns/turquia/SobreViagem";
+import Inclusos from "@/components/campaigns/turquia/Inclusos";
+import Roteiro from "@/components/campaigns/turquia/Roteiro";
+import PorQueRenova from "@/components/campaigns/turquia/PorQueRenova";
+import Depoimentos from "@/components/campaigns/turquia/Depoimentos";
+import InscrevaSe from "@/components/campaigns/turquia/InscrevaSe";
 import Footer from "@/components/landing/Footer";
 
-const TurquiaPadreLeudo = () => {
+const Turquia = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -28,4 +28,4 @@ const TurquiaPadreLeudo = () => {
   );
 };
 
-export default TurquiaPadreLeudo;
+export default Turquia;

@@ -38,9 +38,9 @@ const SobreViagem = () => {
           </div>
           <div className="bg-card rounded-lg p-8 text-center shadow-sm hover:shadow-md transition-shadow">
             <BookOpen className="mx-auto mb-4 text-secondary" size={36} />
-            <h3 className="font-heading font-semibold text-primary mb-2">Destaque</h3>
+            <h3 className="font-heading font-semibold text-primary mb-2">Significado</h3>
             <p className="font-body text-muted-foreground text-sm">
-              Descubra marcos históricos, paisagens surpreendentes e a diversidade cultural de um dos destinos mais fascinantes do mundo.
+              Caminhe por terras sagradas, visite santuários milenares e fortaleça sua fé nos lugares onde a história da Igreja se fez presente.
             </p>
           </div>
         </div>
