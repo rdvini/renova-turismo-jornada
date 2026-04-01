@@ -9,7 +9,7 @@ const InscrevaSe = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const { nome, email, telefone } = formData;
-    const message = `Olá! Meu nome é ${nome}, meu e-mail é ${email} e meu telefone é ${telefone}. Gostaria de mais informações sobre a viagem à Turquia com o Pe Leudo Santos.`;
+    const message = `Olá! Meu nome é ${nome}, meu e-mail é ${email} e meu telefone é ${telefone}. Gostaria de mais informações sobre a viagem à Turquia.`;
     window.open(
       `https://api.whatsapp.com/send/?phone=5519994718930&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`,
       "_blank"
