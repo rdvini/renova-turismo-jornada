@@ -20,7 +20,7 @@ interface DayCard {
   day: string;
   title: string;
   description: string;
-  spiritual?: string;
+  highlight?: string;
 }
 
 interface Slide {
@@ -41,16 +41,16 @@ const slides: Slide[] = [
         title: "MANAUS / ISTAMBUL",
         description:
           "Apresentação no Aeroporto Internacional de Manaus para embarque com destino a Istambul, fazendo as devidas conexões. Noite e jantar a bordo.",
-        spiritual:
-          "O início de uma jornada de fé — como Abraão, partimos em obediência ao chamado de Deus rumo a terras sagradas.",
+        highlight:
+          "O início de uma jornada internacional repleta de descobertas culturais, paisagens marcantes e experiências memoráveis.",
       },
       {
         day: "2° Dia",
         title: "ISTAMBUL",
         description:
           "Chegada a Istambul, traslado ao hotel para jantar e hospedagem.",
-        spiritual:
-          "Chegamos à antiga Constantinopla, berço do Cristianismo oriental e sede do Império que moldou a fé cristã.",
+        highlight:
+          "Chegada à vibrante Istambul, cidade onde tradição e modernidade se encontram entre dois continentes.",
       },
     ],
   },
@@ -64,16 +64,16 @@ const slides: Slide[] = [
         title: "ISTAMBUL",
         description:
           "Após café da manhã, visitaremos a Praça do Hipódromo, construída na época romana. Seguiremos para a Mesquita Azul, a obra mais famosa da arquitetura otomana. Na parte da tarde, visitaremos o Palácio de Topkapi, antiga residência dos Sultões Otomanos. Nossa última parada será no Bazar de Especiarias.",
-        spiritual:
-          "A Mesquita Azul e o Hipódromo nos recordam como diferentes expressões de fé moldaram esta cidade milenar.",
+        highlight:
+          "Um dia para mergulhar na grandiosidade da arquitetura otomana e no ritmo vibrante dos mercados históricos de Istambul.",
       },
       {
         day: "4° Dia",
         title: "ISTAMBUL",
         description:
           "Passeio de barco pelo Bósforo com vista dos palácios de Dolmabahce, Ciragan, Beylerbeyi e a Fortaleza de Rumeli Hisari. Visita ao Palácio Dolmabahce e à Santa Sofia — Igreja durante 916 anos, Mesquita durante 477 anos, museu em 1936 e novamente Mesquita em 2020. Visita ao Gran Bazar.",
-        spiritual:
-          "A Hagia Sophia (Santa Sabedoria) foi o maior templo da Cristandade por quase um milênio — um testemunho da grandeza da fé.",
+        highlight:
+          "Entre o Bósforo e os palácios históricos, este roteiro revela algumas das paisagens urbanas mais icônicas da Turquia.",
       },
     ],
   },
@@ -87,16 +87,16 @@ const slides: Slide[] = [
         title: "ISTAMBUL / CAPADÓCIA",
         description:
           "Voo para a Capadócia. Visitaremos o Museu Aberto de Göreme, complexo monástico bizantino com igrejas ricamente ornadas com afrescos, quartos e refeitórios escavados na rocha. Parada em cooperativa de tapetes turcos.",
-        spiritual:
-          "Em Göreme, monges cristãos encontraram refúgio nas rochas e criaram igrejas subterrâneas que preservam afrescos bíblicos por mais de mil anos.",
+        highlight:
+          "A Capadócia encanta com formações rochosas únicas, herança histórica e uma atmosfera visualmente inesquecível.",
       },
       {
         day: "6° Dia",
         title: "CAPADÓCIA",
         description:
           "Visita aos Vales da Capadócia com Chaminés de Fadas (possibilidade de passeio de balão). Exploração da cidade subterrânea de Ozkonak, com 40 metros de profundidade e 10 andares, capaz de abrigar 60 mil pessoas. Visita à Vila de Uchisar e ao Vale dos Pombos.",
-        spiritual:
-          "As cidades subterrâneas serviram de refúgio aos primeiros cristãos durante as perseguições — testemunho da perseverança na fé.",
+        highlight:
+          "Dos vales aos cenários subterrâneos, este é um dos trechos mais surpreendentes de toda a viagem.",
       },
     ],
   },
@@ -110,8 +110,8 @@ const slides: Slide[] = [
         title: "CAPADÓCIA / KONYA / PAMUKKALE",
         description:
           "Saída para Konya para visitar o museu do antigo Monastério dos Derviches Dançarinos, fundado por Mevlana no século XIII. Almoço. Continuação a Pamukkale, famosa por suas águas termais e cascatas de cálcio petrificado formando montanhas brancas de algodão.",
-        spiritual:
-          "Em Konya contemplamos como a busca pela transcendência é universal — os Derviches buscam Deus através da dança contemplativa.",
+        highlight:
+          "Entre tradição cultural e paisagens naturais, este percurso combina história, arte e beleza cênica.",
       },
     ],
   },
@@ -125,23 +125,23 @@ const slides: Slide[] = [
         title: "PAMUKKALE / LAODICEIA",
         description:
           "Visita a Hierápolis, Patrimônio Mundial da UNESCO, com nascentes de água quentes e ruínas da antiga capital Frígia. Visita à Igreja de Laodiceia, uma das Sete Igrejas do Apocalipse de São João. Retorno ao hotel para aproveitar as águas termais.",
-        spiritual:
-          "\"Ao anjo da igreja em Laodiceia escreve...\" (Ap 3,14) — Pisamos em solo mencionado nas Escrituras, onde a Palavra de Deus ecoou através dos séculos.",
+        highlight:
+          "Pamukkale reúne águas termais, ruínas históricas e um dos cenários naturais mais impressionantes do país.",
       },
     ],
   },
   {
     image: efesoImg,
     imageAlt: "Ruínas da antiga cidade de Éfeso",
-    region: "Éfeso & Casa da Virgem Maria",
+    region: "Éfeso & Kusadasi",
     days: [
       {
         day: "9° Dia",
-        title: "ÉFESO / CASA DA VIRGEM MARIA / KUSADASI",
+        title: "ÉFESO / KUSADASI",
         description:
-          "Visita ao maior sítio arqueológico do mundo em Éfeso, cidade importante na Bíblia na época do apóstolo Paulo. Visitaremos as ruínas da Basílica de São João, o túmulo de São João, e a Casa da Virgem Maria — local onde ela residia quando se mudou de Jerusalém com São João. Almoço. Continuação para Kusadasi.",
-        spiritual:
-          "\"Eis aí a tua mãe\" (Jo 19,27) — São João trouxe a Virgem Maria para Éfeso, onde ela viveu seus últimos anos. Peregrinamos ao lar da Mãe de Deus.",
+          "Visita a Éfeso, um dos mais impressionantes sítios arqueológicos do mundo, com ruínas monumentais que revelam a grandiosidade da Antiguidade. Almoço. Continuação para Kusadasi.",
+        highlight:
+          "Um mergulho na herança clássica da região, com arquitetura monumental e muita história a céu aberto.",
       },
     ],
   },
@@ -155,16 +155,16 @@ const slides: Slide[] = [
         title: "KUSADASI / BURSA / ISTAMBUL",
         description:
           "Saída com destino a Istambul. Parada em Bursa para visitar o mercado da seda, a Mesquita Verde e o Mausoléu Verde, construídos a pedido do Sultão Mehmet I, com interior decorado por azulejos Iznik de cores verde e turquesa. Chegada a Istambul.",
-        spiritual:
-          "Em Bursa, a beleza artística dos azulejos nos lembra que toda arte verdadeira é uma forma de oração e louvor ao Criador.",
+        highlight:
+          "Bursa encanta pela tradição artesanal, pelos mercados históricos e pelos detalhes marcantes de sua arquitetura.",
       },
       {
         day: "11° Dia",
         title: "ISTAMBUL / MANAUS",
         description:
           "Após café da manhã, traslado ao aeroporto internacional de Istambul para embarque em voo com destino a Manaus, fazendo as devidas conexões. Chegada ao aeroporto internacional de Manaus. Fim dos nossos serviços.",
-        spiritual:
-          "Voltamos para casa renovados na fé, levando no coração as memórias desta peregrinação às terras onde a Palavra se fez história.",
+        highlight:
+          "Retorno para casa com bagagem cheia de memórias, experiências e paisagens inesquecíveis da Turquia.",
       },
     ],
   },
@@ -192,13 +192,13 @@ const Roteiro = () => {
     <section id="roteiro" className="pt-20 md:pt-28 pb-8 md:pb-10 bg-background">
       <div className="container mx-auto px-4">
         <p className="font-accent text-lg italic text-secondary text-center mb-2">
-          Sua jornada de fé, dia a dia
+          Sua viagem pela Turquia, dia a dia
         </p>
         <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary text-center mb-4">
           Roteiro — Cidades
         </h2>
         <p className="font-body text-muted-foreground text-center max-w-2xl mx-auto mb-12 text-sm">
-          11 dias de peregrinação pelas terras bíblicas da Turquia, visitando igrejas do Apocalipse, a Casa da Virgem Maria e locais sagrados da fé cristã.
+          11 dias explorando cidades históricas, paisagens icônicas e alguns dos cenários mais marcantes da Turquia.
         </p>
 
         <div className="max-w-5xl mx-auto">
@@ -253,9 +253,9 @@ const Roteiro = () => {
                           <p className="font-body text-muted-foreground text-sm leading-relaxed mb-3">
                             {day.description}
                           </p>
-                          {day.spiritual && (
+                          {day.highlight && (
                             <p className="font-accent text-xs italic text-secondary/80 border-l-2 border-secondary/30 pl-3">
-                              ✝ {day.spiritual}
+                              Destaque: {day.highlight}
                             </p>
                           )}
                         </div>
@@ -293,7 +293,7 @@ const Roteiro = () => {
             rel="noopener noreferrer"
             className="inline-block bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-bold text-lg px-12 py-4 rounded-full transition-all hover:scale-105 shadow-lg"
           >
-            Garanta Sua Vaga na Peregrinação
+            Garanta Sua Vaga na Viagem
           </a>
         </div>
       </div>
