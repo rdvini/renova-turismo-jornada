@@ -1,20 +1,42 @@
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 
 const InscrevaSe = () => {
   const [formData, setFormData] = useState({ nome: "", email: "", telefone: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const { nome, email, telefone } = formData;
-    const message = `Olá! Meu nome é ${nome}, meu e-mail é ${email} e meu telefone é ${telefone}. Gostaria de mais informações sobre a viagem à Turquia.`;
-    window.open(
-      `https://api.whatsapp.com/send/?phone=5519994718930&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`,
-      "_blank"
-    );
-    setSubmitted(true);
+    setLoading(true);
+
+    try {
+      const { nome, email, telefone } = formData;
+
+      const { error } = await supabase.functions.invoke("send-contact-email", {
+        body: { nome, email, telefone },
+      });
+
+      if (error) throw error;
+
+      setSubmitted(true);
+      toast.success("Dados enviados com sucesso!");
+
+      // Also open WhatsApp
+      const message = `Olá! Meu nome é ${nome}, meu e-mail é ${email} e meu telefone é ${telefone}. Gostaria de mais informações sobre a viagem à Turquia.`;
+      window.open(
+        `https://api.whatsapp.com/send/?phone=5519994718930&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`,
+        "_blank"
+      );
+    } catch (err) {
+      console.error("Form submission error:", err);
+      toast.error("Erro ao enviar. Tente novamente.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -94,9 +116,10 @@ const InscrevaSe = () => {
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-bold text-lg px-8 py-4 rounded-full transition-all hover:scale-105 shadow-lg"
+                  disabled={loading}
+                  className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-bold text-lg px-8 py-4 rounded-full transition-all hover:scale-105 shadow-lg disabled:opacity-50 disabled:hover:scale-100"
                 >
-                  Enviar
+                  {loading ? "Enviando..." : "Enviar"}
                 </button>
               </form>
             )}
