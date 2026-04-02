@@ -74,7 +74,7 @@ const slides: Slide[] = [
   {
     image: pergamoImg,
     imageAlt: "Ruínas do Asclepion em Pérgamo",
-    region: "Pérgamo / Tiatira / Izmir",
+    region: "Pérgamo →  Tiatira →  Izmir",
     days: [
       {
         day: "4° Dia",
