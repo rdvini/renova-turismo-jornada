@@ -12,15 +12,14 @@ const InscrevaSe = () => {
 
     const { nome, email, telefone } = formData;
 
-    const subject = encodeURIComponent("Solicitação de informações – Viagem à Turquia");
-    const body = encodeURIComponent(
-      `Olá, equipe Renova Turismo!\n\nMeu nome é ${nome}, gostaria de receber mais informações sobre a viagem à Turquia.\n\nDados para contato:\n- Nome: ${nome}\n- E-mail: ${email}\n- Telefone: ${telefone}\n\nAguardo retorno. Obrigado(a)!`
+    const message = `Olá! Meu nome é ${nome}, meu e-mail é ${email} e meu telefone é ${telefone}. Gostaria de mais informações sobre a viagem à Turquia.`;
+    window.open(
+      `https://api.whatsapp.com/send/?phone=5519989542633&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`,
+      "_blank"
     );
 
-    window.location.href = `mailto:contato@renovaturismo.com.br?subject=${subject}&body=${body}`;
-
     setSubmitted(true);
-    toast.success("Seu app de e-mail será aberto para enviar a mensagem.");
+    toast.success("Você será redirecionado ao WhatsApp para finalizar o contato.");
   };
 
   return (
@@ -39,7 +38,9 @@ const InscrevaSe = () => {
               inesquecível pela Turquia.
             </p>
             <a
-              href="mailto:contato@renovaturismo.com.br?subject=Solicita%C3%A7%C3%A3o%20de%20informa%C3%A7%C3%B5es%20%E2%80%93%20Viagem%20%C3%A0%20Turquia"
+              href="https://api.whatsapp.com/send/?phone=5519989542633&text=Ol%C3%A1%21+Gostaria+de+mais+informa%C3%A7%C3%B5es+sobre+a+viagem+%C3%A0+Turquia.&type=phone_number&app_absent=0"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-bold text-lg px-12 py-4 rounded-full transition-all hover:scale-105 shadow-lg"
             >
               Garanta sua vaga
@@ -56,7 +57,7 @@ const InscrevaSe = () => {
                   Obrigado pelo interesse!
                 </p>
                 <p className="text-muted-foreground">
-                  Seu app de e-mail será aberto para enviar a mensagem.
+                  Você será redirecionado ao WhatsApp para finalizar o contato.
                 </p>
               </div>
             ) : (
