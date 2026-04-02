@@ -116,9 +116,10 @@ const InscrevaSe = () => {
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-bold text-lg px-8 py-4 rounded-full transition-all hover:scale-105 shadow-lg"
+                  disabled={loading}
+                  className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-bold text-lg px-8 py-4 rounded-full transition-all hover:scale-105 shadow-lg disabled:opacity-50 disabled:hover:scale-100"
                 >
-                  Enviar
+                  {loading ? "Enviando..." : "Enviar"}
                 </button>
               </form>
             )}
