@@ -34,13 +34,13 @@ const slides: Slide[] = [
   {
     image: manausImg,
     imageAlt: "Partida de Manaus ao pôr do sol",
-    region: "Manaus → Istambul",
+    region: "Guarulhos – São Paulo → Istambul",
     days: [
       {
         day: "1° Dia",
-        title: "MANAUS / ISTAMBUL",
+        title: "GUARULHOS – SÃO PAULO / ISTAMBUL",
         description:
-          "Apresentação no Aeroporto Internacional de Manaus para embarque com destino a Istambul, fazendo as devidas conexões. Noite e jantar a bordo.",
+          "Apresentação no Aeroporto Internacional de Guarulhos – São Paulo para embarque com destino a Istambul, fazendo as devidas conexões. Noite e jantar a bordo.",
         highlight:
           "O início de uma jornada internacional repleta de descobertas culturais, paisagens marcantes e experiências memoráveis.",
       },
@@ -148,7 +148,7 @@ const slides: Slide[] = [
   {
     image: bursaImg,
     imageAlt: "Mesquita Verde em Bursa",
-    region: "Bursa → Istambul → Manaus",
+    region: "Bursa → Istambul → Guarulhos – São Paulo",
     days: [
       {
         day: "10° Dia",
@@ -160,9 +160,9 @@ const slides: Slide[] = [
       },
       {
         day: "11° Dia",
-        title: "ISTAMBUL / MANAUS",
+        title: "ISTAMBUL / GUARULHOS – SÃO PAULO",
         description:
-          "Após café da manhã, traslado ao aeroporto internacional de Istambul para embarque em voo com destino a Manaus, fazendo as devidas conexões. Chegada ao aeroporto internacional de Manaus. Fim dos nossos serviços.",
+          "Após café da manhã, traslado ao aeroporto internacional de Istambul para embarque em voo com destino a Guarulhos – São Paulo, fazendo as devidas conexões. Chegada ao aeroporto internacional de Guarulhos – São Paulo. Fim dos nossos serviços.",
         highlight:
           "Retorno para casa com bagagem cheia de memórias, experiências e paisagens inesquecíveis da Turquia.",
       },

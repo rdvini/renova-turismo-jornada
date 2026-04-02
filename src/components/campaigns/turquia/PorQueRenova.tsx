@@ -16,8 +16,8 @@ const reasons = [
   { icon: Heart, title: "Experiências Únicas", text: "Cada roteiro é pensado para proporcionar momentos memoráveis e enriquecedores." },
   { icon: Compass, title: "Guias Especializados", text: "Acompanhamento de guias com conhecimento cultural e histórico." },
   { icon: Shield, title: "Segurança Total", text: "Cuidamos de cada detalhe para você viajar com tranquilidade." },
-  { icon: Users, title: "Cuidado com o Grupo", text: "Grupos pequenos e acolhedores, com atenção personalizada." },
-  { icon: Star, title: "Experiência Comprovada", text: "Anos de tradição em viagens que transformam vidas." },
+  { icon: Users, title: "Cuidado com o Grupo", text: "Independente da sua idade, você poderá desfrutar de todo o roteiro e passeios." },
+  { icon: Star, title: "Experiência Comprovada", text: "Líder no segmento de Turismo religioso e em grupos, com mais de 20 anos no mercado." },
 ];
 
 const photos = [
