@@ -104,7 +104,7 @@ const slides: Slide[] = [
   {
     image: sardesImg,
     imageAlt: "Ruínas do Templo de Ártemis em Sardes",
-    region: "Sardes → Filadélfia → Pamukkale",
+    region: "Sardes →  Filadélfia →  Pamukkale\n",
     days: [
       {
         day: "6° Dia",
