@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import googleReviewsImg from "@/assets/google-reviews.png";
 
 const testimonials = [
   {
