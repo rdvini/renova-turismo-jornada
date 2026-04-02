@@ -35,7 +35,7 @@ export const campaigns: Campaign[] = [
     description:
       "Uma jornada explorando alguns dos cenários mais marcantes da Turquia, com cidades históricas, paisagens icônicas e experiências culturais inesquecíveis.",
     image: heroTurkiye,
-    date: "06 a 17 de Setembro de 2027",
+    date: "Outubro de 2026 e 2027",
     badge: "Experiência",
     published: true,
   },
