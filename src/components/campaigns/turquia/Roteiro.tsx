@@ -8,13 +8,15 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 
-import manausImg from "@/assets/padre-leudo/manaus-departure.jpg";
+import guarulhosImg from "@/assets/padre-leudo/manaus-departure.jpg";
 import istanbulImg from "@/assets/padre-leudo/istanbul-skyline.jpg";
 import capadociaImg from "@/assets/padre-leudo/capadocia.jpg";
-import konyaImg from "@/assets/padre-leudo/pamukkale-thermal-pools.jpg";
-import pamukkaleImg from "@/assets/padre-leudo/laodiceia.jpg";
+import pamukkaleImg from "@/assets/padre-leudo/pamukkale-thermal-pools.jpg";
+import laoduceiaImg from "@/assets/padre-leudo/laodiceia.jpg";
 import efesoImg from "@/assets/padre-leudo/efeso-ruins.jpg";
-import bursaImg from "@/assets/padre-leudo/bursa.jpg";
+import pergamoImg from "@/assets/turquia/pergamo-asclepion.jpg";
+import sardesImg from "@/assets/turquia/sardes-templo.jpg";
+import bosforoImg from "@/assets/turquia/bosforo-cruzeiro.jpg";
 
 interface DayCard {
   day: string;
@@ -32,23 +34,23 @@ interface Slide {
 
 const slides: Slide[] = [
   {
-    image: manausImg,
-    imageAlt: "Partida de Manaus ao pôr do sol",
-    region: "Guarulhos – São Paulo → Istambul",
+    image: guarulhosImg,
+    imageAlt: "Aeroporto de Guarulhos – partida para a Turquia",
+    region: "São Paulo → Istambul",
     days: [
       {
         day: "1° Dia",
-        title: "GUARULHOS – SÃO PAULO / ISTAMBUL",
+        title: "SÃO PAULO / ISTAMBUL",
         description:
-          "Apresentação no Aeroporto Internacional de Guarulhos – São Paulo para embarque com destino a Istambul, fazendo as devidas conexões. Noite e jantar a bordo.",
+          "Apresentação no aeroporto de Guarulhos para embarque com destino à Turquia, fazendo as devidas conexões.",
         highlight:
-          "O início de uma jornada internacional repleta de descobertas culturais, paisagens marcantes e experiências memoráveis.",
+          "O início de uma jornada internacional repleta de descobertas culturais e experiências memoráveis.",
       },
       {
         day: "2° Dia",
         title: "ISTAMBUL",
         description:
-          "Chegada a Istambul, traslado ao hotel para jantar e hospedagem.",
+          "Chegada a Istambul, recepção e traslado ao hotel. Jantar e hospedagem.",
         highlight:
           "Chegada à vibrante Istambul, cidade onde tradição e modernidade se encontram entre dois continentes.",
       },
@@ -56,24 +58,76 @@ const slides: Slide[] = [
   },
   {
     image: istanbulImg,
-    imageAlt: "Mesquita Azul e Hagia Sophia ao entardecer",
+    imageAlt: "Mesquita Azul e Santa Sofia ao entardecer",
     region: "Istambul",
     days: [
       {
         day: "3° Dia",
         title: "ISTAMBUL",
         description:
-          "Após café da manhã, visitaremos a Praça do Hipódromo, construída na época romana. Seguiremos para a Mesquita Azul, a obra mais famosa da arquitetura otomana. Na parte da tarde, visitaremos o Palácio de Topkapi, antiga residência dos Sultões Otomanos. Nossa última parada será no Bazar de Especiarias.",
+          "Após o café da manhã, visitaremos Istambul, a única cidade no mundo situada em dois continentes. Visitaremos St. Sophia, a Mesquita Azul e o Hipódromo Romano, onde as revoltas bizantinas aconteceram. Visita ao famoso Grande Bazar, um mercado coberto do século XV, composto por 5 mil lojas, e considerado um dos primeiros centros comerciais do mundo. Retorno ao hotel para hospedagem e jantar.",
         highlight:
-          "Um dia para mergulhar na grandiosidade da arquitetura otomana e no ritmo vibrante dos mercados históricos de Istambul.",
+          "Um dia para mergulhar na grandiosidade da arquitetura otomana e no ritmo vibrante dos mercados históricos.",
       },
+    ],
+  },
+  {
+    image: pergamoImg,
+    imageAlt: "Ruínas do Asclepion em Pérgamo",
+    region: "Pérgamo / Tiatira / Izmir",
+    days: [
       {
         day: "4° Dia",
-        title: "ISTAMBUL",
+        title: "ISTAMBUL / PÉRGAMO / TIATIRA / IZMIR",
         description:
-          "Passeio de barco pelo Bósforo com vista dos palácios de Dolmabahce, Ciragan, Beylerbeyi e a Fortaleza de Rumeli Hisari. Visita ao Palácio Dolmabahce e à Santa Sofia — Igreja durante 916 anos, Mesquita durante 477 anos, museu em 1936 e novamente Mesquita em 2020. Visita ao Gran Bazar.",
+          "Café da manhã. Viagem terrestre para a região de Izmir. Chegada em Pérgamo, onde visitaremos o centro de cura de Asclepion. À tarde, prosseguiremos para Tiatira, outra das Sete Igrejas. Visitaremos os restos de uma Basílica e outras ruínas do período romano. Continuação a Izmir. Traslado ao hotel para jantar e hospedagem.",
         highlight:
-          "Entre o Bósforo e os palácios históricos, este roteiro revela algumas das paisagens urbanas mais icônicas da Turquia.",
+          "Duas das Sete Igrejas do Apocalipse em um único dia: Pérgamo e Tiatira revelam camadas da história cristã primitiva.",
+      },
+    ],
+  },
+  {
+    image: efesoImg,
+    imageAlt: "Ruínas da antiga cidade de Éfeso",
+    region: "Éfeso",
+    days: [
+      {
+        day: "5° Dia",
+        title: "IZMIR / ÉFESO / IZMIR",
+        description:
+          "Após café da manhã, visita a Éfeso, cidade greco-romana bem preservada na Ásia Menor, que chegou a ter uma população de 250.000 habitantes e monopolizou a riqueza do Oriente Médio. Ela guarda tesouros como o impressionante Teatro Romano, que abrigava mais de 25.000 espectadores, a magnífica Biblioteca de Celso (terceira maior biblioteca do mundo antigo), o Templo de Adriano e a Rua de Mármore. Visita à casa da Virgem Maria. Visita à Basílica de São João. Chegada ao hotel para jantar e hospedagem.",
+        highlight:
+          "Éfeso é um dos sítios arqueológicos mais impressionantes do mundo, com ruínas que revelam a grandiosidade da Antiguidade.",
+      },
+    ],
+  },
+  {
+    image: sardesImg,
+    imageAlt: "Ruínas do Templo de Ártemis em Sardes",
+    region: "Sardes / Filadélfia / Pamukkale",
+    days: [
+      {
+        day: "6° Dia",
+        title: "IZMIR / SARDES / FILADÉLFIA / PAMUKKALE",
+        description:
+          "Café da manhã e partida para Sardes, outra das Sete Igrejas mencionadas pelo apóstolo João. Prosseguindo, visitaremos Filadélfia, outro centro das congregações Cristãs, visitando as ruínas de uma cidade construída em II a.C. pelo Rei Eumenos. Depois de Filadélfia continuaremos até Pamukkale, onde visitaremos a antiga Hierápolis e o \"Castelo de Algodão\", verdadeira maravilha natural com sua cachoeira gigante, estalactites e piscinas naturais formadas ao longo dos séculos pela passagem de águas termais carregadas de sais calcários. Traslado ao hotel para jantar e hospedagem.",
+        highlight:
+          "Três das Sete Igrejas em um dia, culminando no espetáculo natural de Pamukkale.",
+      },
+    ],
+  },
+  {
+    image: laoduceiaImg,
+    imageAlt: "Sítio arqueológico de Laodiceia",
+    region: "Laodiceia → Capadócia",
+    days: [
+      {
+        day: "7° Dia",
+        title: "PAMUKKALE / LAODICEIA / CAPADÓCIA",
+        description:
+          "Após o café da manhã, visitaremos o sítio arqueológico de Laodiceia. Viagem para a Capadócia. No caminho, visita a um Kervansaray do século XIII, que é uma fortificação usada como dormitório para os vendedores do antigo caminho da seda. Chegada ao final da tarde na Capadócia. Traslado ao hotel para jantar e hospedagem.",
+        highlight:
+          "Laodiceia completa o circuito das Sete Igrejas antes da travessia rumo à surpreendente Capadócia.",
       },
     ],
   },
@@ -83,88 +137,43 @@ const slides: Slide[] = [
     region: "Capadócia",
     days: [
       {
-        day: "5° Dia",
-        title: "ISTAMBUL / CAPADÓCIA",
-        description:
-          "Voo para a Capadócia. Visitaremos o Museu Aberto de Göreme, complexo monástico bizantino com igrejas ricamente ornadas com afrescos, quartos e refeitórios escavados na rocha. Parada em cooperativa de tapetes turcos.",
-        highlight:
-          "A Capadócia encanta com formações rochosas únicas, herança histórica e uma atmosfera visualmente inesquecível.",
-      },
-      {
-        day: "6° Dia",
+        day: "8° Dia",
         title: "CAPADÓCIA",
         description:
-          "Visita aos Vales da Capadócia com Chaminés de Fadas (possibilidade de passeio de balão). Exploração da cidade subterrânea de Ozkonak, com 40 metros de profundidade e 10 andares, capaz de abrigar 60 mil pessoas. Visita à Vila de Uchisar e ao Vale dos Pombos.",
+          "Após café da manhã, ao que desejarem iremos fazer o inesquecível voo de balão (passeio opcional e conforme condições climáticas). Visita à cidade subterrânea de Ozkonak. Em Avcilar e Guvercinlik, apreciação da paisagem fantástica das \"Chaminés de Fadas\". Visita aos Vales da Capadócia. A região apresenta uma paisagem fascinante e única, formada há 3 milhões de anos pela lava dos vulcões extintos Erciyes e Hasan. Retorno ao hotel para jantar e hospedagem.",
         highlight:
-          "Dos vales aos cenários subterrâneos, este é um dos trechos mais surpreendentes de toda a viagem.",
+          "Dos vales às cidades subterrâneas, com a possibilidade do inesquecível voo de balão ao amanhecer.",
       },
-    ],
-  },
-  {
-    image: konyaImg,
-    imageAlt: "Monastério dos Derviches em Konya",
-    region: "Konya → Pamukkale",
-    days: [
-      {
-        day: "7° Dia",
-        title: "CAPADÓCIA / KONYA / PAMUKKALE",
-        description:
-          "Saída para Konya para visitar o museu do antigo Monastério dos Derviches Dançarinos, fundado por Mevlana no século XIII. Almoço. Continuação a Pamukkale, famosa por suas águas termais e cascatas de cálcio petrificado formando montanhas brancas de algodão.",
-        highlight:
-          "Entre tradição cultural e paisagens naturais, este percurso combina história, arte e beleza cênica.",
-      },
-    ],
-  },
-  {
-    image: pamukkaleImg,
-    imageAlt: "Terraços brancos de Pamukkale",
-    region: "Pamukkale & Laodiceia",
-    days: [
-      {
-        day: "8° Dia",
-        title: "PAMUKKALE / LAODICEIA",
-        description:
-          "Visita a Hierápolis, Patrimônio Mundial da UNESCO, com nascentes de água quentes e ruínas da antiga capital Frígia. Visita à Igreja de Laodiceia, uma das Sete Igrejas do Apocalipse de São João. Retorno ao hotel para aproveitar as águas termais.",
-        highlight:
-          "Pamukkale reúne águas termais, ruínas históricas e um dos cenários naturais mais impressionantes do país.",
-      },
-    ],
-  },
-  {
-    image: efesoImg,
-    imageAlt: "Ruínas da antiga cidade de Éfeso",
-    region: "Éfeso & Kusadasi",
-    days: [
       {
         day: "9° Dia",
-        title: "ÉFESO / KUSADASI",
+        title: "CAPADÓCIA / ISTAMBUL",
         description:
-          "Visita a Éfeso, um dos mais impressionantes sítios arqueológicos do mundo, com ruínas monumentais que revelam a grandiosidade da Antiguidade. Almoço. Continuação para Kusadasi.",
+          "Após café da manhã, visita à Vila de Uçhisar, aldeia troglodita, no ponto mais alto da Capadócia. Visita ao vale de Göreme, para conhecer os mosteiros e as igrejas escavados na rocha vulcânica, decoradas com afrescos do século X e XI que mostram cenas bíblicas e imagens de São Jorge. Traslado ao aeroporto da Capadócia para embarque em voo com destino a Istambul. Traslado ao hotel para jantar e hospedagem.",
         highlight:
-          "Um mergulho na herança clássica da região, com arquitetura monumental e muita história a céu aberto.",
+          "Göreme revela uma herança bizantina impressionante esculpida na rocha vulcânica.",
       },
     ],
   },
   {
-    image: bursaImg,
-    imageAlt: "Mesquita Verde em Bursa",
-    region: "Bursa → Istambul → Guarulhos – São Paulo",
+    image: bosforoImg,
+    imageAlt: "Passeio de barco pelo Bósforo em Istambul",
+    region: "Istambul → São Paulo",
     days: [
       {
         day: "10° Dia",
-        title: "KUSADASI / BURSA / ISTAMBUL",
+        title: "ISTAMBUL",
         description:
-          "Saída com destino a Istambul. Parada em Bursa para visitar o mercado da seda, a Mesquita Verde e o Mausoléu Verde, construídos a pedido do Sultão Mehmet I, com interior decorado por azulejos Iznik de cores verde e turquesa. Chegada a Istambul.",
+          "Café da manhã. Passeio de barco pelo Bósforo. Nesse cruzeiro pelo Estreito de Bósforo teremos uma ótima vista dos palácios de Dolmabahce, Ciragan, Beylerbeyi e a Fortaleza de Rumeli Hisari. Na parte da tarde, visita ao Palácio de Topkapi, antiga residência dos Sultões Otomanos. Conheceremos o Bazar de Especiarias. No final da tarde retorno ao hotel para jantar e hospedagem.",
         highlight:
-          "Bursa encanta pela tradição artesanal, pelos mercados históricos e pelos detalhes marcantes de sua arquitetura.",
+          "Entre o Bósforo e os palácios históricos, um roteiro que revela as paisagens urbanas mais icônicas da Turquia.",
       },
       {
         day: "11° Dia",
-        title: "ISTAMBUL / GUARULHOS – SÃO PAULO",
+        title: "ISTAMBUL / SÃO PAULO",
         description:
-          "Após café da manhã, traslado ao aeroporto internacional de Istambul para embarque em voo com destino a Guarulhos – São Paulo, fazendo as devidas conexões. Chegada ao aeroporto internacional de Guarulhos – São Paulo. Fim dos nossos serviços.",
+          "Em horário combinado, traslado ao aeroporto de Istambul para embarque em voo com destino a São Paulo, fazendo as devidas conexões. Fim dos nossos serviços.",
         highlight:
-          "Retorno para casa com bagagem cheia de memórias, experiências e paisagens inesquecíveis da Turquia.",
+          "Retorno para casa com bagagem cheia de memórias e experiências inesquecíveis da Turquia.",
       },
     ],
   },
