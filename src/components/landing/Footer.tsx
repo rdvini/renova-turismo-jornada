@@ -12,7 +12,7 @@ const Footer = () => {
       script.src = "https://s3.amazonaws.com/raichu-beta/ra-verified/bundle.js";
       script.setAttribute("data-id", "MWx4aGlLQUxFcVNjNG83eTpyZW5vdmEtdmlhZ2Vucy1lLXR1cmlzbW8=");
       script.setAttribute("data-target", "ra-verified-seal");
-      script.setAttribute("data-model", "horizontal_3");
+      script.setAttribute("data-model", "horizontal_1");
       container.appendChild(script);
     }
   }, []);
