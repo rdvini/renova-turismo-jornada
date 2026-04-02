@@ -57,7 +57,7 @@ const Depoimentos = () => {
           ))}
         </div>
 
-        <div className="max-w-5xl mx-auto mt-10 flex justify-center md:justify-start">
+        <div className="max-w-5xl mx-auto mt-8 flex justify-center md:justify-start">
           <img
             src={googleReviewsImg}
             alt="Renova Turismo - 5,0 estrelas no Google com mais de 1.034 avaliações"
