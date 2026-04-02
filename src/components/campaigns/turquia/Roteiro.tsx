@@ -134,7 +134,7 @@ const slides: Slide[] = [
   {
     image: capadociaImg,
     imageAlt: "Paisagem surreal da Capadócia com chaminés de fadas",
-    region: "Capadócia",
+    region: "Capadócia → Istambul",
     days: [
       {
         day: "8° Dia",
