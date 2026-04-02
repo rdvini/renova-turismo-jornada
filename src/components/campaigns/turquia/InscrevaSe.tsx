@@ -1,42 +1,26 @@
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 
 const InscrevaSe = () => {
   const [formData, setFormData] = useState({ nome: "", email: "", telefone: "" });
   const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);
 
-    try {
-      const { nome, email, telefone } = formData;
+    const { nome, email, telefone } = formData;
 
-      const { error } = await supabase.functions.invoke("send-contact-email", {
-        body: { nome, email, telefone },
-      });
+    const subject = encodeURIComponent("Solicitação de informações – Viagem à Turquia");
+    const body = encodeURIComponent(
+      `Olá, equipe Renova Turismo!\n\nMeu nome é ${nome}, gostaria de receber mais informações sobre a viagem à Turquia.\n\nDados para contato:\n- Nome: ${nome}\n- E-mail: ${email}\n- Telefone: ${telefone}\n\nAguardo retorno. Obrigado(a)!`
+    );
 
-      if (error) throw error;
+    window.location.href = `mailto:contato@renovaturismo.com.br?subject=${subject}&body=${body}`;
 
-      setSubmitted(true);
-      toast.success("Dados enviados com sucesso!");
-
-      // Also open WhatsApp
-      const message = `Olá! Meu nome é ${nome}, meu e-mail é ${email} e meu telefone é ${telefone}. Gostaria de mais informações sobre a viagem à Turquia.`;
-      window.open(
-        `https://api.whatsapp.com/send/?phone=5519994718930&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`,
-        "_blank"
-      );
-    } catch (err) {
-      console.error("Form submission error:", err);
-      toast.error("Erro ao enviar. Tente novamente.");
-    } finally {
-      setLoading(false);
-    }
+    setSubmitted(true);
+    toast.success("Seu app de e-mail será aberto para enviar a mensagem.");
   };
 
   return (
@@ -55,9 +39,7 @@ const InscrevaSe = () => {
               inesquecível pela Turquia.
             </p>
             <a
-              href="https://api.whatsapp.com/send/?phone=5519994718930&text=Ol%C3%A1%21+Encontrei+voc%C3%AAs+pelo+Google+e+gostaria+de+receber+mais+informa%C3%A7%C3%B5es.+Aguardo+retorno&type=phone_number&app_absent=0"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:contato@renovaturismo.com.br?subject=Solicita%C3%A7%C3%A3o%20de%20informa%C3%A7%C3%B5es%20%E2%80%93%20Viagem%20%C3%A0%20Turquia"
               className="inline-block bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-bold text-lg px-12 py-4 rounded-full transition-all hover:scale-105 shadow-lg"
             >
               Garanta sua vaga
@@ -74,7 +56,7 @@ const InscrevaSe = () => {
                   Obrigado pelo interesse!
                 </p>
                 <p className="text-muted-foreground">
-                  Você será redirecionado ao WhatsApp para finalizar o contato.
+                  Seu app de e-mail será aberto para enviar a mensagem.
                 </p>
               </div>
             ) : (
@@ -116,10 +98,9 @@ const InscrevaSe = () => {
                 </div>
                 <button
                   type="submit"
-                  disabled={loading}
-                  className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-bold text-lg px-8 py-4 rounded-full transition-all hover:scale-105 shadow-lg disabled:opacity-50 disabled:hover:scale-100"
+                  className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-bold text-lg px-8 py-4 rounded-full transition-all hover:scale-105 shadow-lg"
                 >
-                  {loading ? "Enviando..." : "Enviar"}
+                  Enviar
                 </button>
               </form>
             )}
