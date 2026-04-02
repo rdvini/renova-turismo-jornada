@@ -148,7 +148,7 @@ const slides: Slide[] = [
   {
     image: bursaImg,
     imageAlt: "Mesquita Verde em Bursa",
-    region: "Bursa → Istambul → Manaus",
+    region: "Bursa → Istambul → Guarulhos – São Paulo",
     days: [
       {
         day: "10° Dia",
@@ -160,9 +160,9 @@ const slides: Slide[] = [
       },
       {
         day: "11° Dia",
-        title: "ISTAMBUL / MANAUS",
+        title: "ISTAMBUL / GUARULHOS – SÃO PAULO",
         description:
-          "Após café da manhã, traslado ao aeroporto internacional de Istambul para embarque em voo com destino a Manaus, fazendo as devidas conexões. Chegada ao aeroporto internacional de Manaus. Fim dos nossos serviços.",
+          "Após café da manhã, traslado ao aeroporto internacional de Istambul para embarque em voo com destino a Guarulhos – São Paulo, fazendo as devidas conexões. Chegada ao aeroporto internacional de Guarulhos – São Paulo. Fim dos nossos serviços.",
         highlight:
           "Retorno para casa com bagagem cheia de memórias, experiências e paisagens inesquecíveis da Turquia.",
       },
