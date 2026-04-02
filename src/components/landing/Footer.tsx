@@ -1,7 +1,22 @@
 import { Instagram, Facebook, Phone, Mail, Youtube } from "lucide-react";
+import { useEffect } from "react";
 import logoRenova from "@/assets/logo-renova.svg";
 
 const Footer = () => {
+  useEffect(() => {
+    const container = document.getElementById("ra-verified-seal");
+    if (container && !container.querySelector("script")) {
+      const script = document.createElement("script");
+      script.type = "text/javascript";
+      script.id = "ra-embed-verified-seal";
+      script.src = "https://s3.amazonaws.com/raichu-beta/ra-verified/bundle.js";
+      script.setAttribute("data-id", "MWx4aGlLQUxFcVNjNG83eTpyZW5vdmEtdmlhZ2Vucy1lLXR1cmlzbW8=");
+      script.setAttribute("data-target", "ra-verified-seal");
+      script.setAttribute("data-model", "horizontal_3");
+      container.appendChild(script);
+    }
+  }, []);
+
   return (
     <footer className="bg-primary px-6 md:px-8 pt-12 pb-6">
       <div className="max-w-7xl mx-auto">
@@ -34,6 +49,7 @@ const Footer = () => {
               <Mail size={14} />
               <span>contato@renovaturismo.com.br</span>
             </a>
+            <div id="ra-verified-seal" className="mt-2 max-w-[200px]" />
           </div>
         </div>
 
