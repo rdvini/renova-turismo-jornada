@@ -57,7 +57,7 @@ const InscrevaSe = () => {
                   Obrigado pelo interesse!
                 </p>
                 <p className="text-muted-foreground">
-                  Seu app de e-mail será aberto para enviar a mensagem.
+                  Você será redirecionado ao WhatsApp para finalizar o contato.
                 </p>
               </div>
             ) : (
