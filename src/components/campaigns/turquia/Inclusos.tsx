@@ -4,12 +4,7 @@ const items = [
   {
     icon: Users,
     title: "Guias Especializados",
-    text: "Acompanhamento por guias que falam português, com profundo conhecimento cultural e histórico para enriquecer cada momento da viagem.",
-  },
-  {
-    icon: Heart,
-    title: "Ritmo Tranquilo",
-    text: "Roteiro cuidadosamente planejado com tempo para explorar, contemplar e descansar — porque cada etapa da jornada merece ser vivida com calma.",
+    text: "Guias locais falando Português, com profundo conhecimento cultural e histórico, para enriquecer cada momento da viagem.",
   },
   {
     icon: Coffee,
@@ -23,7 +18,7 @@ const items = [
   },
   {
     icon: Hotel,
-    title: "Hotéis de Alto Padrão",
+    title: "Hotéis Categoria Turística Superior",
     text: "Hospedagem selecionada pelo conforto e localização privilegiada, garantindo descanso e praticidade após cada dia de descobertas.",
   },
   {
@@ -34,7 +29,7 @@ const items = [
   {
     icon: HeadphonesIcon,
     title: "Assistência 24 Horas",
-    text: "Suporte e segurança durante toda a viagem, com uma equipe dedicada pronta para atender você a qualquer momento.",
+    text: "Acompanhamento de um profissional da Renova Turismo durante toda a viagem, pronto para atender você a qualquer momento.",
   },
 ];
 
