@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import googleReviewsImg from "@/assets/google-reviews.png";
 
 const testimonials = [
   {
@@ -54,6 +55,14 @@ const Depoimentos = () => {
               </p>
             </div>
           ))}
+        </div>
+
+        <div className="max-w-5xl mx-auto mt-10 flex justify-center md:justify-start">
+          <img
+            src={googleReviewsImg}
+            alt="Renova Turismo - 5,0 estrelas no Google com mais de 1.034 avaliações"
+            className="h-16 object-contain"
+          />
         </div>
       </div>
     </section>
