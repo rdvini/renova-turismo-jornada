@@ -89,7 +89,7 @@ const slides: Slide[] = [
   {
     image: efesoImg,
     imageAlt: "Ruínas da antiga cidade de Éfeso",
-    region: "Izmir Éfeso Izmir",
+    region: "Izmir → Éfeso → Izmir",
     days: [
       {
         day: "5° Dia",
