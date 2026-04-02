@@ -8,7 +8,7 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 
-import guarulhosImg from "@/assets/padre-leudo/manaus-departure.jpg";
+import guarulhosImg from "@/assets/airport-family.jpg";
 import istanbulImg from "@/assets/padre-leudo/istanbul-skyline.jpg";
 import capadociaImg from "@/assets/padre-leudo/capadocia.jpg";
 import pamukkaleImg from "@/assets/padre-leudo/pamukkale-thermal-pools.jpg";
