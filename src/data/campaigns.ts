@@ -52,4 +52,16 @@ export const campaigns: Campaign[] = [
     badge: "Experências",
     published: false,
   },
+  {
+    id: "portugal",
+    slug: "/portugal",
+    title: "Portugal",
+    subtitle: "RENOVA APRESENTA",
+    description:
+      "Descubra a história, a gastronomia e as paisagens deslumbrantes de Portugal — de Lisboa ao Vale do Douro.",
+    image: cardPortugal,
+    date: "Confira as datas para 2027 e 2028",
+    badge: "Experiência",
+    published: false,
+  },
 ];
