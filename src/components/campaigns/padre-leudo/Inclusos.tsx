@@ -1,15 +1,10 @@
-import { Users, Heart, Coffee, Plane, Hotel, ShieldCheck, HeadphonesIcon } from "lucide-react";
+import { Users, Coffee, Plane, Hotel, ShieldCheck, HeadphonesIcon } from "lucide-react";
 
 const items = [
   {
     icon: Users,
     title: "Guias Especializados",
     text: "Acompanhamento por guias que falam português, com profundo conhecimento cultural e histórico para enriquecer cada momento da viagem.",
-  },
-  {
-    icon: Heart,
-    title: "Ritmo Tranquilo",
-    text: "Roteiro cuidadosamente planejado com tempo para explorar, contemplar e descansar — porque cada etapa da jornada merece ser vivida com calma.",
   },
   {
     icon: Coffee,
