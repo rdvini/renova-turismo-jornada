@@ -29,7 +29,7 @@ const items = [
   {
     icon: HeadphonesIcon,
     title: "Assistência 24 Horas",
-    text: "Suporte e segurança durante toda a viagem, com uma equipe dedicada pronta para atender você a qualquer momento.",
+    text: "Acompanhamento de um profissional da Renova Turismo durante toda a viagem, pronto para atender você a qualquer momento.",
   },
 ];
 
