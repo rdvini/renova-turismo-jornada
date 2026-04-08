@@ -1,20 +1,35 @@
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 
 const InscrevaSe = () => {
   const [formData, setFormData] = useState({ nome: "", email: "", telefone: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const { nome, email, telefone } = formData;
-    const message = `Olá! Meu nome é ${nome}, meu e-mail é ${email} e meu telefone é ${telefone}. Gostaria de mais informações sobre a viagem à Turquia com o Pe Leudo Santos.`;
-    window.open(
-      `https://api.whatsapp.com/send/?phone=5519994718930&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`,
-      "_blank"
-    );
-    setSubmitted(true);
+    setLoading(true);
+    try {
+      const { nome, email, telefone } = formData;
+
+      // Save to database
+      await supabase.from("contact_submissions").insert({ nome, email, telefone });
+
+      // Send email notification
+      await supabase.functions.invoke("send-contact-email", {
+        body: { nome, email, telefone, campaign: "turquia-padre-leudo", destinatario: "nayara@renovaturismo.com.br" },
+      });
+
+      setSubmitted(true);
+      toast.success("Dados enviados com sucesso!");
+    } catch {
+      toast.error("Erro ao enviar. Tente novamente.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -52,7 +67,7 @@ const InscrevaSe = () => {
                   Obrigado pelo interesse!
                 </p>
                 <p className="text-muted-foreground">
-                  Você será redirecionado ao WhatsApp para finalizar o contato.
+                  Seus dados foram enviados com sucesso. Em breve entraremos em contato.
                 </p>
               </div>
             ) : (
@@ -94,9 +109,10 @@ const InscrevaSe = () => {
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-bold text-lg px-8 py-4 rounded-full transition-all hover:scale-105 shadow-lg"
+                  disabled={loading}
+                  className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-bold text-lg px-8 py-4 rounded-full transition-all hover:scale-105 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Enviar
+                  {loading ? "Enviando..." : "Enviar"}
                 </button>
               </form>
             )}

@@ -9,7 +9,8 @@ Deno.serve(async (req) => {
   }
 
   try {
-    const { nome, email, telefone } = await req.json();
+    const { nome, email, telefone, campaign, destinatario } = await req.json();
+    const toEmail = destinatario || NOTIFICATION_EMAIL;
 
     if (!nome || !email || !telefone) {
       return new Response(
@@ -46,8 +47,8 @@ Deno.serve(async (req) => {
         },
         body: JSON.stringify({
           from: "Renova Turismo <noreply@renovaturismo.com.br>",
-          to: [NOTIFICATION_EMAIL],
-          subject: `Novo contato - Viagem Turquia: ${nome}`,
+          to: [toEmail],
+          subject: `Novo contato - ${campaign || "Viagem Turquia"}: ${nome}`,
           html: `
             <h2>Novo contato pelo site - Viagem Turquia</h2>
             <p><strong>Nome:</strong> ${nome}</p>
