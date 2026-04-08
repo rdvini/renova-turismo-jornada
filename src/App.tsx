@@ -7,6 +7,7 @@ import Index from "./pages/Index.tsx";
 import TurquiaPadreLeudo from "./pages/TurquiaPadreLeudo.tsx";
 import Turquia from "./pages/Turquia.tsx";
 import CampaignTemplate from "./pages/CampaignTemplate.tsx";
+import Portugal from "./pages/Portugal.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/turquia-padre-leudo" element={<TurquiaPadreLeudo />} />
           <Route path="/turquia" element={<Turquia />} />
           <Route path="/africa-do-sul" element={<CampaignTemplate />} />
+          <Route path="/portugal" element={<Portugal />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
