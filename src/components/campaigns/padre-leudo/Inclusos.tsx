@@ -18,7 +18,7 @@ const items = [
   },
   {
     icon: Hotel,
-    title: "Hotéis de Alto Padrão",
+    title: "Hotéis Categoria Turística Superior",
     text: "Hospedagem selecionada pelo conforto e localização privilegiada, garantindo descanso e praticidade após cada dia de descobertas.",
   },
   {
