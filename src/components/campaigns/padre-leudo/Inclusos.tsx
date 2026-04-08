@@ -4,7 +4,7 @@ const items = [
   {
     icon: Users,
     title: "Guias Especializados",
-    text: "Acompanhamento por guias que falam português, com profundo conhecimento cultural e histórico para enriquecer cada momento da viagem.",
+    text: "Guias locais falando Português, com profundo conhecimento cultural e histórico, para enriquecer cada momento da viagem.",
   },
   {
     icon: Coffee,
