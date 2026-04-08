@@ -9,7 +9,8 @@ Deno.serve(async (req) => {
   }
 
   try {
-    const { nome, email, telefone } = await req.json();
+    const { nome, email, telefone, campaign, destinatario } = await req.json();
+    const toEmail = destinatario || NOTIFICATION_EMAIL;
 
     if (!nome || !email || !telefone) {
       return new Response(
