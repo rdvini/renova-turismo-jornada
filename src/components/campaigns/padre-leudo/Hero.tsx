@@ -1,4 +1,3 @@
-
 import heroImage from "@/assets/padre-leudo/hero-turkiye.jpg";
 
 const Hero = () => {
