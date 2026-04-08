@@ -1,4 +1,5 @@
 import cardAfricaDoSul from "@/assets/africa-do-sul/card-cover.jpg";
+import cardPortugal from "@/assets/portugal/card-cover.jpg";
 
 export interface Campaign {
   id: string;
