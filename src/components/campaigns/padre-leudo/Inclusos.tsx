@@ -1,4 +1,4 @@
-import { Users, Heart, Coffee, Plane, Hotel, ShieldCheck, HeadphonesIcon } from "lucide-react";
+import { Users, Coffee, Plane, Hotel, ShieldCheck, HeadphonesIcon } from "lucide-react";
 
 const items = [
   {
