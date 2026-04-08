@@ -7,11 +7,6 @@ const items = [
     text: "Acompanhamento por guias que falam português, com profundo conhecimento cultural e histórico para enriquecer cada momento da viagem.",
   },
   {
-    icon: Heart,
-    title: "Ritmo Tranquilo",
-    text: "Roteiro cuidadosamente planejado com tempo para explorar, contemplar e descansar — porque cada etapa da jornada merece ser vivida com calma.",
-  },
-  {
     icon: Coffee,
     title: "Refeições Incluídas",
     text: "Café da manhã e jantar todos os dias, para que você se preocupe apenas com o que realmente importa: a experiência da viagem.",
