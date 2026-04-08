@@ -1,4 +1,4 @@
-import { Play } from "lucide-react";
+
 import heroImage from "@/assets/padre-leudo/hero-turkiye.jpg";
 
 const Hero = () => {
