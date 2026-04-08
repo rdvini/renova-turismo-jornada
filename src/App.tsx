@@ -7,6 +7,7 @@ import Index from "./pages/Index.tsx";
 import TurquiaPadreLeudo from "./pages/TurquiaPadreLeudo.tsx";
 import Turquia from "./pages/Turquia.tsx";
 import CampaignTemplate from "./pages/CampaignTemplate.tsx";
+import Portugal from "./pages/Portugal.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
