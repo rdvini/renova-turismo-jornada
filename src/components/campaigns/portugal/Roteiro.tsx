@@ -25,6 +25,7 @@ interface DayCard {
 interface Slide {
   image: string;
   imageAlt: string;
+  imagePosition?: string;
   region: string;
   days: DayCard[];
 }
@@ -71,6 +72,7 @@ const slides: Slide[] = [
   {
     image: batalhaImg,
     imageAlt: "Mosteiro da Batalha, Portugal",
+    imagePosition: "center 30%",
     region: "Fátima → Nazaré → Batalha",
     days: [
       {
@@ -195,6 +197,7 @@ const Roteiro = () => {
                         src={slide.image}
                         alt={slide.imageAlt}
                         className="w-full h-full object-cover"
+                        style={slide.imagePosition ? { objectPosition: slide.imagePosition } : undefined}
                         loading="lazy"
                         width={960}
                         height={640}
