@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import googleReviewsImg from "@/assets/google-reviews.png";
 
 const testimonials = [
   {
@@ -31,7 +32,7 @@ const Stars = () => (
 
 const Depoimentos = () => {
   return (
-    <section id="depoimentos" className="py-20 md:py-28 bg-muted">
+    <section id="depoimentos" className="py-20 md:py-28 pb-12 md:pb-16 bg-muted">
       <div className="container mx-auto px-4">
         <p className="font-accent text-lg italic text-secondary text-center mb-2">
           O que dizem nossos viajantes
@@ -49,6 +50,14 @@ const Depoimentos = () => {
               <p className="font-body text-muted-foreground text-sm leading-relaxed">{t.quote}</p>
             </div>
           ))}
+        </div>
+
+        <div className="max-w-5xl mx-auto mt-8 flex justify-center md:justify-start">
+          <img
+            src={googleReviewsImg}
+            alt="Renova Turismo - 5,0 estrelas no Google com mais de 1.034 avaliações"
+            className="h-16 object-contain"
+          />
         </div>
       </div>
     </section>
