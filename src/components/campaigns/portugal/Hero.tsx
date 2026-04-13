@@ -1,4 +1,4 @@
-import { Play } from "lucide-react";
+
 import heroImage from "@/assets/portugal/hero.jpg";
 
 const Hero = () => {
@@ -19,15 +19,14 @@ const Hero = () => {
         </p>
 
         <div className="max-w-xl mx-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.45s" }}>
-          <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-primary-foreground/20 bg-primary/40 backdrop-blur-sm flex items-center justify-center cursor-pointer group hover:border-secondary transition-colors">
-            <div className="flex flex-col items-center gap-3">
-              <div className="w-16 h-16 rounded-full bg-secondary flex items-center justify-center group-hover:scale-110 transition-transform">
-                <Play className="text-secondary-foreground ml-1" size={28} />
-              </div>
-              <span className="font-body text-sm text-primary-foreground/80">
-                Assista ao vídeo da viagem
-              </span>
-            </div>
+          <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-primary-foreground/20 shadow-lg">
+            <iframe
+              src="https://www.youtube.com/embed/lEItPUovjLo"
+              title="Vídeo da Peregrinação para Portugal"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full"
+            />
           </div>
         </div>
 
