@@ -1,13 +1,32 @@
 import { Shield, Heart, Users, Star, Compass } from "lucide-react";
+import Autoplay from "embla-carousel-autoplay";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
 
-/* EDITAR: Modifique os motivos e adicione fotos do grupo se tiver */
+/* EDITAR: Importe as fotos do grupo e adicione ao array `photos` abaixo.
+   Exemplo:
+   import renovaGroup1 from "@/assets/[destino]/renova-group-1.jpeg";
+*/
+
 const reasons = [
   { icon: Heart, title: "Experiências Únicas", text: "Cada roteiro é pensado para proporcionar momentos memoráveis e enriquecedores." },
   { icon: Compass, title: "Guias Especializados", text: "Acompanhamento de guias com conhecimento cultural e histórico." },
   { icon: Shield, title: "Segurança Total", text: "Cuidamos de cada detalhe para você viajar com tranquilidade." },
   { icon: Users, title: "Cuidado com o Grupo", text: "Grupos pequenos e acolhedores, com atenção personalizada." },
-  { icon: Star, title: "Experiência Comprovada", text: "Anos de tradição em viagens que transformam vidas." },
+  { icon: Star, title: "Experiência Comprovada", text: "Líder no segmento de Turismo religioso e em grupos, com mais de 20 anos no mercado." },
 ];
+
+/* EDITAR: Adicione fotos reais do grupo aqui.
+   Exemplo:
+   const photos = [
+     { src: renovaGroup1, position: "center 60%" },
+     { src: renovaGroup2, position: "center 60%" },
+   ];
+*/
+const photos: { src: string; position: string }[] = [];
 
 const PorQueRenova = () => {
   return (
@@ -22,10 +41,7 @@ const PorQueRenova = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {reasons.slice(0, 3).map((r) => (
-            <div
-              key={r.title}
-              className="bg-primary-foreground/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-primary-foreground/15 transition-colors"
-            >
+            <div key={r.title} className="bg-primary-foreground/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-primary-foreground/15 transition-colors">
               <r.icon className="mx-auto mb-4 text-secondary" size={32} />
               <h3 className="font-heading font-semibold text-primary-foreground mb-2">{r.title}</h3>
               <p className="font-body text-primary-foreground/70 text-sm">{r.text}</p>
@@ -35,10 +51,7 @@ const PorQueRenova = () => {
 
         <div className="flex flex-col sm:flex-row gap-6 justify-center max-w-5xl mx-auto mt-6">
           {reasons.slice(3).map((r) => (
-            <div
-              key={r.title}
-              className="bg-primary-foreground/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-primary-foreground/15 transition-colors sm:w-[calc(33.333%-0.5rem)]"
-            >
+            <div key={r.title} className="bg-primary-foreground/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-primary-foreground/15 transition-colors sm:w-[calc(33.333%-0.5rem)]">
               <r.icon className="mx-auto mb-4 text-secondary" size={32} />
               <h3 className="font-heading font-semibold text-primary-foreground mb-2">{r.title}</h3>
               <p className="font-body text-primary-foreground/70 text-sm">{r.text}</p>
@@ -46,8 +59,30 @@ const PorQueRenova = () => {
           ))}
         </div>
 
-        {/* EDITAR: Adicione um carousel de fotos do grupo aqui se desejar.
-            Veja o exemplo em src/components/campaigns/padre-leudo/PorQueRenova.tsx */}
+        {photos.length > 0 && (
+          <div className="max-w-4xl mx-auto mt-14">
+            <Carousel
+              opts={{ loop: true }}
+              plugins={[Autoplay({ delay: 5000, stopOnInteraction: false })]}
+              className="w-full"
+            >
+              <CarouselContent>
+                {photos.map((photo, i) => (
+                  <CarouselItem key={i}>
+                    <div className="overflow-hidden rounded-xl">
+                      <img
+                        src={photo.src}
+                        alt={`Grupo Renova Turismo - Foto ${i + 1}`}
+                        className="w-full h-64 md:h-96 object-cover"
+                        style={{ objectPosition: photo.position }}
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
+          </div>
+        )}
       </div>
     </section>
   );

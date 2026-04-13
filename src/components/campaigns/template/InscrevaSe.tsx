@@ -9,11 +9,11 @@ const InscrevaSe = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const { nome, email, telefone } = formData;
-    /* EDITAR: Substitua [Destino] e [Nome do Líder] */
-    const message = `Olá! Meu nome é ${nome}, meu e-mail é ${email} e meu telefone é ${telefone}. Gostaria de mais informações sobre a viagem a [Destino] com [Nome do Líder].`;
+    /* EDITAR: Substitua [Destino] na mensagem */
+    const message = `Olá! Meu nome é ${nome}, meu e-mail é ${email} e meu telefone é ${telefone}. Gostaria de mais informações sobre a viagem a [Destino].`;
     /* EDITAR: Substitua o número de WhatsApp */
     window.open(
-      `https://api.whatsapp.com/send/?phone=5519994718930&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`,
+      `https://api.whatsapp.com/send/?phone=5519989542633&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`,
       "_blank"
     );
     setSubmitted(true);
@@ -31,9 +31,9 @@ const InscrevaSe = () => {
               Inscreva-se Agora
             </h2>
             <p className="font-body text-muted-foreground text-lg mb-8">
-              {/* EDITAR: Descrição do CTA */}
+              {/* EDITAR: Substitua [Destino] */}
               Vagas limitadas! Entre em contato conosco e reserve seu lugar nesta viagem
-              inesquecível pela África do Sul.
+              inesquecível por [Destino].
             </p>
             <a
               href="#contato"
@@ -60,43 +60,17 @@ const InscrevaSe = () => {
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="space-y-2">
                   <Label htmlFor="tpl-nome" className="font-body text-foreground">Nome completo</Label>
-                  <Input
-                    id="tpl-nome"
-                    placeholder="Seu nome"
-                    required
-                    maxLength={100}
-                    value={formData.nome}
-                    onChange={(e) => setFormData((prev) => ({ ...prev, nome: e.target.value }))}
-                  />
+                  <Input id="tpl-nome" placeholder="Seu nome" required maxLength={100} value={formData.nome} onChange={(e) => setFormData((prev) => ({ ...prev, nome: e.target.value }))} />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="tpl-email" className="font-body text-foreground">E-mail</Label>
-                  <Input
-                    id="tpl-email"
-                    type="email"
-                    placeholder="seu@email.com"
-                    required
-                    maxLength={255}
-                    value={formData.email}
-                    onChange={(e) => setFormData((prev) => ({ ...prev, email: e.target.value }))}
-                  />
+                  <Input id="tpl-email" type="email" placeholder="seu@email.com" required maxLength={255} value={formData.email} onChange={(e) => setFormData((prev) => ({ ...prev, email: e.target.value }))} />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="tpl-telefone" className="font-body text-foreground">Telefone / WhatsApp</Label>
-                  <Input
-                    id="tpl-telefone"
-                    type="tel"
-                    placeholder="(00) 00000-0000"
-                    required
-                    maxLength={20}
-                    value={formData.telefone}
-                    onChange={(e) => setFormData((prev) => ({ ...prev, telefone: e.target.value }))}
-                  />
+                  <Input id="tpl-telefone" type="tel" placeholder="(00) 00000-0000" required maxLength={20} value={formData.telefone} onChange={(e) => setFormData((prev) => ({ ...prev, telefone: e.target.value }))} />
                 </div>
-                <button
-                  type="submit"
-                  className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-bold text-lg px-8 py-4 rounded-full transition-all hover:scale-105 shadow-lg"
-                >
+                <button type="submit" className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-bold text-lg px-8 py-4 rounded-full transition-all hover:scale-105 shadow-lg">
                   Enviar
                 </button>
               </form>
