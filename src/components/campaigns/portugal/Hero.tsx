@@ -14,7 +14,7 @@ const Hero = () => {
           Peregrinação para Portugal
         </h1>
         <p className="font-body text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-          Descubra a história, a gastronomia e as paisagens deslumbrantes de Portugal com a Renova Turismo — uma experiência inesquecível.
+          Descubra a fé, os milagres e as heranças sagradas de Portugal com a Renova Turismo — uma peregrinação inesquecível.
         </p>
 
         <div className="max-w-xl mx-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.45s" }}>
