@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import googleReviewsImg from "@/assets/google-reviews.png";
 
 const testimonials = [
   {
@@ -11,13 +12,13 @@ const testimonials = [
     name: "Ilda Costa",
     location: "Itu/SP",
     quote:
-      "Da viagem que fiz só tenho pontos positivos... Amei.... A equipe da Renova esteve presente nos dando toda assistência desde o momento em que saímos de Salto até o momento em que voltamos pra cá. Sempre estavam a disposição quando alguém do grupo precisava e acho que essa atenção para com o cliente foi o que me fez ter o desejo de fazer novas viagens com a Renova... O fato de colocarem no pacote todos os gastos incluindo alimentação mesmo nos lugares onde estávamos passando é um ponto positivo também porque ficamos despreocupados. Pros meus amigos quando falam em viajar não tenho dúvidas... É a Renova que eu indico... Que vocês possam continuar tratando o cliente com esse carinho que pude experimentar.. Parabéns e sucesso é o que desejo a Renova Turismo.",
+      "Da viagem que fiz só tenho pontos positivos... Amei.... A equipe da Renova esteve presente nos dando toda assistência desde o momento em que saímos de Salto até o momento em que voltamos pra cá. Sempre estavam a disposição quando alguém do grupo precisava e acho que essa atenção para com o cliente foi o que me fez ter o desejo de fazer novas viagens com a Renova...",
   },
   {
     name: "Luciano Martins",
     location: "São Paulo/SP",
     quote:
-      "Uma Empresa Responsável, Dedicada a proporcionar o máximo de bem estar aos Clientes. Eu sou Cliente da Renova Turismo, e estou muito Satisfeito com o empenho e organização, que é uma Marca Registrada desta Empresa, que tem como objetivo auxiliar no máximo a realização dos Sonhos de quem deseja viajar, tanto em nosso País, quanto em outros. PARABÉNS RENOVA TURISMO.",
+      "Uma Empresa Responsável, Dedicada a proporcionar o máximo de bem estar aos Clientes. Eu sou Cliente da Renova Turismo, e estou muito Satisfeito com o empenho e organização, que é uma Marca Registrada desta Empresa.",
   },
 ];
 
@@ -31,7 +32,7 @@ const Stars = () => (
 
 const Depoimentos = () => {
   return (
-    <section id="depoimentos" className="py-20 md:py-28 bg-muted">
+    <section id="depoimentos" className="py-20 md:py-28 pb-12 md:pb-16 bg-muted">
       <div className="container mx-auto px-4">
         <p className="font-accent text-lg italic text-secondary text-center mb-2">
           O que dizem nossos viajantes
@@ -42,18 +43,21 @@ const Depoimentos = () => {
 
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {testimonials.map((t) => (
-            <div
-              key={t.name}
-              className="bg-card rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow"
-            >
+            <div key={t.name} className="bg-card rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow">
               <p className="font-heading font-semibold text-primary">{t.name}</p>
               <p className="font-body text-muted-foreground text-sm mb-3">{t.location}</p>
               <Stars />
-              <p className="font-body text-muted-foreground text-sm leading-relaxed">
-                {t.quote}
-              </p>
+              <p className="font-body text-muted-foreground text-sm leading-relaxed">{t.quote}</p>
             </div>
           ))}
+        </div>
+
+        <div className="max-w-5xl mx-auto mt-8 flex justify-center md:justify-start">
+          <img
+            src={googleReviewsImg}
+            alt="Renova Turismo - 5,0 estrelas no Google com mais de 1.034 avaliações"
+            className="h-16 object-contain"
+          />
         </div>
       </div>
     </section>

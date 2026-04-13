@@ -12,18 +12,20 @@ interface DayCard {
   day: string;
   title: string;
   description: string;
-  spiritual?: string;
+  highlight?: string;
 }
 
 interface Slide {
   image: string;
   imageAlt: string;
+  imagePosition?: string;
   region: string;
   days: DayCard[];
 }
 
 /* EDITAR: Substitua os slides abaixo com os dados reais do roteiro.
-   Para cada slide, forneça: imagem, alt, região e os dias com descrições. */
+   Para cada slide, forneça: imagem, alt, região e os dias com descrições.
+   Use `highlight` para frases de destaque (ex: significado cultural/espiritual). */
 const slides: Slide[] = [
   {
     image: "", // EDITAR: import da imagem
@@ -34,13 +36,13 @@ const slides: Slide[] = [
         day: "1° Dia",
         title: "[ORIGEM] / [DESTINO]",
         description: "[Descreva as atividades do dia aqui]",
-        spiritual: "[Opcional: significado espiritual/cultural do dia]",
+        highlight: "[Opcional: significado ou destaque do dia]",
       },
       {
         day: "2° Dia",
         title: "[DESTINO]",
         description: "[Descreva as atividades do dia aqui]",
-        spiritual: "[Opcional: significado espiritual/cultural do dia]",
+        highlight: "[Opcional: significado ou destaque do dia]",
       },
     ],
   },
@@ -53,7 +55,7 @@ const slides: Slide[] = [
         day: "3° Dia",
         title: "[CIDADE]",
         description: "[Descreva as atividades do dia aqui]",
-        spiritual: "[Opcional: significado espiritual/cultural do dia]",
+        highlight: "[Opcional: significado ou destaque do dia]",
       },
       {
         day: "4° Dia",
@@ -71,7 +73,7 @@ const slides: Slide[] = [
         day: "5° Dia",
         title: "[CIDADE] / [ORIGEM]",
         description: "[Descreva as atividades do último dia aqui]",
-        spiritual: "[Opcional: reflexão de encerramento]",
+        highlight: "[Opcional: reflexão de encerramento]",
       },
     ],
   },
@@ -126,6 +128,7 @@ const Roteiro = () => {
                           src={slide.image}
                           alt={slide.imageAlt}
                           className="w-full h-full object-cover"
+                          style={slide.imagePosition ? { objectPosition: slide.imagePosition } : undefined}
                           loading="lazy"
                           width={960}
                           height={640}
@@ -168,9 +171,9 @@ const Roteiro = () => {
                           <p className="font-body text-muted-foreground text-sm leading-relaxed mb-3">
                             {day.description}
                           </p>
-                          {day.spiritual && (
+                          {day.highlight && (
                             <p className="font-accent text-xs italic text-secondary/80 border-l-2 border-secondary/30 pl-3">
-                              ✝ {day.spiritual}
+                              ✝ {day.highlight}
                             </p>
                           )}
                         </div>

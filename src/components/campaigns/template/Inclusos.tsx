@@ -1,15 +1,10 @@
-import { Users, Heart, Coffee, Plane, Hotel, ShieldCheck, HeadphonesIcon } from "lucide-react";
+import { Users, Coffee, Plane, Hotel, ShieldCheck, HeadphonesIcon } from "lucide-react";
 
 const items = [
   {
     icon: Users,
     title: "Guias Especializados",
-    text: "Acompanhamento por guias que falam português, com profundo conhecimento cultural e histórico para enriquecer cada momento da viagem.",
-  },
-  {
-    icon: Heart,
-    title: "Ritmo Tranquilo",
-    text: "Roteiro cuidadosamente planejado com tempo para explorar, contemplar e descansar — porque cada etapa da jornada merece ser vivida com calma.",
+    text: "Guias locais falando Português, com profundo conhecimento cultural e histórico, para enriquecer cada momento da viagem.",
   },
   {
     icon: Coffee,
@@ -23,7 +18,7 @@ const items = [
   },
   {
     icon: Hotel,
-    title: "Hotéis de Alto Padrão",
+    title: "Hotéis Categoria Turística Superior",
     text: "Hospedagem selecionada pelo conforto e localização privilegiada, garantindo descanso e praticidade após cada dia de descobertas.",
   },
   {
@@ -34,7 +29,7 @@ const items = [
   {
     icon: HeadphonesIcon,
     title: "Assistência 24 Horas",
-    text: "Suporte e segurança durante toda a viagem, com uma equipe dedicada pronta para atender você a qualquer momento.",
+    text: "Acompanhamento de um profissional da Renova Turismo durante toda a viagem, pronto para atender você a qualquer momento.",
   },
 ];
 
@@ -53,26 +48,9 @@ const Inclusos = () => {
           para que você viva uma experiência única com total conforto e tranquilidade.
         </p>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto justify-items-center">
-          {items.slice(0, 6).map((item) => (
-            <div
-              key={item.title}
-              className="bg-card rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow text-center"
-            >
-              <div className="mx-auto mb-4 w-14 h-14 rounded-full bg-secondary/10 flex items-center justify-center">
-                <item.icon className="text-secondary" size={28} />
-              </div>
-              <h3 className="font-heading font-semibold text-primary mb-2">{item.title}</h3>
-              <p className="font-body text-muted-foreground text-sm leading-relaxed">{item.text}</p>
-            </div>
-          ))}
-        </div>
-        <div className="flex justify-center mt-6 max-w-5xl mx-auto">
-          {items.slice(6).map((item) => (
-            <div
-              key={item.title}
-              className="bg-card rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow text-center w-full sm:max-w-sm"
-            >
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {items.map((item) => (
+            <div key={item.title} className="bg-card rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow text-center">
               <div className="mx-auto mb-4 w-14 h-14 rounded-full bg-secondary/10 flex items-center justify-center">
                 <item.icon className="text-secondary" size={28} />
               </div>
