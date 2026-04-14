@@ -1,20 +1,31 @@
 import { useEffect, useRef, useState } from "react";
 import heroImage from "@/assets/portugal/hero.jpg";
 
-const Hero = () => {
+interface HeroProps {
+  solidSectionRef?: React.RefObject<HTMLDivElement>;
+}
+
+const Hero = ({ solidSectionRef }: HeroProps) => {
   const sectionRef = useRef<HTMLElement>(null);
   const [isPastHero, setIsPastHero] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (!sectionRef.current) return;
-      const rect = sectionRef.current.getBoundingClientRect();
-      setIsPastHero(rect.bottom <= 0);
+      // Use the solid section (Inclusos wrapper) as the trigger:
+      // keep image fixed until that section reaches the top of the viewport
+      const sentinel = solidSectionRef?.current;
+      if (sentinel) {
+        const rect = sentinel.getBoundingClientRect();
+        setIsPastHero(rect.top <= 0);
+      } else if (sectionRef.current) {
+        const rect = sectionRef.current.getBoundingClientRect();
+        setIsPastHero(rect.bottom <= 0);
+      }
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [solidSectionRef]);
 
   return (
     <section
