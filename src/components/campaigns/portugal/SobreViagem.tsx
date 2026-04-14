@@ -4,15 +4,15 @@ const SobreViagem = () => {
   return (
     <section id="sobre" className="py-20 md:py-28 bg-transparent">
       <div className="container mx-auto px-4">
-        <p className="font-accent text-lg italic text-secondary text-center mb-2">
+        <p className="font-accent text-lg italic text-primary-foreground/80 text-center mb-2">
           Descubra o que nos espera
         </p>
-        <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary text-center mb-12">
+        <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary-foreground text-center mb-12">
           Sobre a Viagem
         </h2>
 
         <div className="max-w-3xl mx-auto text-center mb-14">
-          <p className="font-body text-muted-foreground text-lg leading-relaxed">
+          <p className="font-body text-primary-foreground/90 text-lg leading-relaxed">
             Portugal encanta por sua rica história, arquitetura centenária, gastronomia
             incomparável e paisagens que vão do litoral atlântico às vinhas do Douro.
             Uma viagem que conecta tradição, fé e cultura em cada esquina.
