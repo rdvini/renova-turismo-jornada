@@ -20,21 +20,21 @@ const SobreViagem = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          <div className="bg-card rounded-lg p-8 text-center shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-card/80 backdrop-blur-sm rounded-lg p-8 text-center shadow-sm hover:shadow-md transition-shadow">
             <Calendar className="mx-auto mb-4 text-secondary" size={36} />
             <h3 className="font-heading font-semibold text-primary mb-2">Data</h3>
             <p className="font-body text-muted-foreground text-sm">
               Outubro de 2026.
             </p>
           </div>
-          <div className="bg-card rounded-lg p-8 text-center shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-card/80 backdrop-blur-sm rounded-lg p-8 text-center shadow-sm hover:shadow-md transition-shadow">
             <MapPin className="mx-auto mb-4 text-secondary" size={36} />
             <h3 className="font-heading font-semibold text-primary mb-2">Destinos</h3>
             <p className="font-body text-muted-foreground text-sm">
               Lisboa, Sintra, Porto, Vale do Douro e Fátima — 5 destinos icônicos.
             </p>
           </div>
-          <div className="bg-card rounded-lg p-8 text-center shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-card/80 backdrop-blur-sm rounded-lg p-8 text-center shadow-sm hover:shadow-md transition-shadow">
             <BookOpen className="mx-auto mb-4 text-secondary" size={36} />
             <h3 className="font-heading font-semibold text-primary mb-2">Significado</h3>
             <p className="font-body text-muted-foreground text-sm">
