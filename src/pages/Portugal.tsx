@@ -18,9 +18,12 @@ const Portugal = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       <Hero />
-      {/* Sections above fixed hero image */}
+      {/* Sobre a Viagem floats over the hero image (no background) */}
       <div className="relative z-10">
         <SobreViagem />
+      </div>
+      {/* Remaining sections scroll up with solid background */}
+      <div className="relative z-10 bg-background">
         <Inclusos />
         <Roteiro />
         <PorQueRenova />
