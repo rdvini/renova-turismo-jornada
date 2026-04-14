@@ -18,13 +18,16 @@ const Portugal = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       <Hero />
-      <SobreViagem />
-      <Inclusos />
-      <Roteiro />
-      <PorQueRenova />
-      <Depoimentos />
-      <InscrevaSe />
-      <Footer />
+      {/* Sections above fixed hero image */}
+      <div className="relative z-10">
+        <SobreViagem />
+        <Inclusos />
+        <Roteiro />
+        <PorQueRenova />
+        <Depoimentos />
+        <InscrevaSe />
+        <Footer />
+      </div>
     </div>
   );
 };
