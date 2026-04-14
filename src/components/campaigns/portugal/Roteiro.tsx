@@ -13,7 +13,7 @@ import fatimaImg from "@/assets/portugal/fatima-santuario.jpg";
 import batalhaImg from "@/assets/portugal/batalha-mosteiro.jpg";
 import portoImg from "@/assets/portugal/porto-douro.jpg";
 import obidosImg from "@/assets/portugal/obidos-medieval.jpg";
-import lisboaImg from "@/assets/portugal/lisboa-belem.jpg";
+import lisboaImg from "@/assets/portugal/lisboa-praca-comercio.jpg";
 
 interface DayCard {
   day: string;
