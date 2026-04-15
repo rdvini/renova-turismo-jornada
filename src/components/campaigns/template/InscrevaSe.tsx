@@ -12,7 +12,24 @@ const InscrevaSe = () => {
     /* EDITAR: Substitua África do Sul na mensagem */
     const message = `Olá! Meu nome é ${nome}, meu e-mail é ${email} e meu telefone é ${telefone}. Gostaria de mais informações sobre a viagem à África do Sul.`;
     /* EDITAR: Substitua o número de WhatsApp */
-...
+    window.open(
+      `https://api.whatsapp.com/send/?phone=5519989542633&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`,
+      "_blank"
+    );
+    setSubmitted(true);
+  };
+
+  return (
+    <section id="contato" className="py-12 md:py-16 bg-muted">
+      <div className="container mx-auto px-4">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center max-w-5xl mx-auto">
+          <div className="text-center md:text-left">
+            <p className="font-accent text-lg italic text-secondary mb-2">
+              Garanta sua vaga
+            </p>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-6">
+              Inscreva-se Agora
+            </h2>
             <p className="font-body text-muted-foreground text-lg mb-8">
               Vagas limitadas! Entre em contato conosco e reserve seu lugar nesta viagem
               inesquecível pela África do Sul.
