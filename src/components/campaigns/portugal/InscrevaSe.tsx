@@ -11,7 +11,7 @@ const InscrevaSe = () => {
     const { nome, email, telefone } = formData;
     const message = `Olá! Meu nome é ${nome}, meu e-mail é ${email} e meu telefone é ${telefone}. Gostaria de mais informações sobre a viagem a Portugal.`;
     window.open(
-      `https://api.whatsapp.com/send/?phone=5519989542633&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`,
+      `https://api.whatsapp.com/send/?phone=5519936186395&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`,
       "_blank"
     );
     setSubmitted(true);
