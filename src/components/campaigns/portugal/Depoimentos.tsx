@@ -3,22 +3,22 @@ import googleReviewsImg from "@/assets/google-reviews.png";
 
 const testimonials = [
   {
-    name: "Dr. Felipe Silva",
-    location: "Campinas/SP",
+    name: "Elisangela Vasconcelos",
+    location: "",
     quote:
-      "Excelente empresa. Excelente tratamento. Excelentes produtos. Excelente pós-venda. É o tipo de empresa que entende que uma viagem pode significar muito mais do que apenas uma viagem e se dedica para que seja um sonho inesquecível.",
+      "Peregrinação maravilhosa à Itália, Roma, Medjugorje e a Portugal, com passagem por Fátima. Toda a logística pensada com excelência pela Renova, permitindo que estivéssemos apenas presentes e abertos a viver cada experiência. Destaque especial para a Viviane, que nos acompanhou desde o Brasil, with muita energia e cuidado. Lugares sagrados, uma imersão profunda na história da Igreja. Foi magnânimo, surreal, divino. Gratidão!",
   },
   {
-    name: "Ilda Costa",
-    location: "Itu/SP",
+    name: "Luciane Cidade",
+    location: "",
     quote:
-      "Da viagem que fiz só tenho pontos positivos... Amei.... A equipe da Renova esteve presente nos dando toda assistência desde o momento em que saímos de Salto até o momento em que voltamos pra cá. Sempre estavam a disposição quando alguém do grupo precisava e acho que essa atenção para com o cliente foi o que me fez ter o desejo de fazer novas viagens com a Renova...",
+      "Minha experiência com Renova Turismo, foi magnífico todo cuidado deste do operacional a logística feita com todo cuidado para nosso grupo de peregrinos iniciamos na Itália e finalizando em Portugal. Chegamos todos com coração cheios de gratidão, por essa equipe maravilhosa foram 18 dias de muito crescimento espiritual aquilo que vimos nos livros, podemos ver e presenciar com nossos olhos, Nossos guias maravilhosos Vivi que cuidou de cada um de nós como m olhar de Deus, tinhamos dona Maria cadeirante, uma grávida com seu filho, idosos, éramos 23 cada uma com suas limitações e Vivi foi uma mulher cheio de alegria que conduziu o grupo muito bem fica minha gratidão em especial para ela, não posso deixar de falar da Flor e do Vasco guias de Roma espetaculares informações passadas com excelência e claro muito carinho.\n\nObrigada Renovar Turismo. Até a próxima!",
   },
   {
-    name: "Luciano Martins",
-    location: "São Paulo/SP",
+    name: "Kelly Cristina",
+    location: "",
     quote:
-      "Uma Empresa Responsável, Dedicada a proporcionar o máximo de bem estar aos Clientes. Eu sou Cliente da Renova Turismo, e estou muito Satisfeito com o empenho e organização, que é uma Marca Registrada desta Empresa.",
+      "Minha experiência com a Renova Turismo foi simplesmente maravilhosa! A viagem foi muito bem organizada, com todo o cuidado e atenção aos detalhes. A equipe é acolhedora, prestativa e faz de tudo para que cada momento seja especial. 💙\n\nFoi uma viagem inesquecível, cheia de boas companhias, alegria e ótimos momentos. Recomendo de coração a todos que desejam viajar com segurança, conforto e carinho. ✈️✨",
   },
 ];
 
