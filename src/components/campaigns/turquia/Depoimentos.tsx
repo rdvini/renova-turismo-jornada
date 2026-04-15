@@ -3,22 +3,32 @@ import googleReviewsImg from "@/assets/google-reviews.png";
 
 const testimonials = [
   {
-    name: "Dr. Felipe Silva",
-    location: "Campinas/SP",
-    quote:
-      "Excelente empresa. Excelente tratamento. Excelentes produtos. Excelente pós-venda. É o tipo de empresa que entende que uma viagem pode significar muito mais do que apenas uma viagem e se dedica para que seja um sonho inesquecível.",
+    name: "Gabrielle Souza",
+    location: "",
+    quote: `Amamos nossa viagem para a Turquia!
+Fomos em outubro com a Renova Viagens e foi simplesmente incrível. O grupo era diverso, com pessoas de várias partes do Brasil. Era minha primeira viagem em grupo e amei a experiência — tudo foi muito tranquilo e fizemos amigos para a vida toda.
+
+Os guias cuidaram de cada detalhe, então não precisávamos nos preocupar com nada: era só admirar as paisagens, aproveitar os hotéis, saborear a culinária local e não perder o horário! Tivemos o privilégio de ter o Mustafa como guia local, que explicou com muita riqueza de detalhes cada cantinho do país. Visitamos Istambul, Capadócia, Pamukkale e as 7 Igrejas do Apocalipse — uma experiência inesquecível.
+
+O ônibus era superconfortável, com Wi-Fi, carregador e um motorista excelente, o Ibo, que dirigia com segurança o tempo todo. Os hotéis selecionados eram ótimos — chegávamos e o check-in já estava feito! Nos pontos turísticos, o guia explicava tudo e depois tínhamos um tempo livre para fotos e passeio.
+
+Sobre a Renova, só elogios! Nota 10 em tudo: comunicação clara, forma de pagamento transparente, grupo criado com antecedência para repassar todas as informações e equipe sempre disponível para ajudar.`,
   },
   {
-    name: "Ilda Costa",
-    location: "Itu/SP",
-    quote:
-      "Da viagem que fiz só tenho pontos positivos... Amei.... A equipe da Renova esteve presente nos dando toda assistência desde o momento em que saímos de Salto até o momento em que voltamos pra cá. Sempre estavam a disposição quando alguém do grupo precisava e acho que essa atenção para com o cliente foi o que me fez ter o desejo de fazer novas viagens com a Renova... O fato de colocarem no pacote todos os gastos incluindo alimentação mesmo nos lugares onde estávamos passando é um ponto positivo também porque ficamos despreocupados. Pros meus amigos quando falam em viajar não tenho dúvidas... É a Renova que eu indico... Que vocês possam continuar tratando o cliente com esse carinho que pude experimentar.. Parabéns e sucesso é o que desejo a Renova Turismo.",
+    name: "Erica Antunes",
+    location: "",
+    quote: `A viagem a Turquia e Grécia foi incrível, uma experiência inesquecível. Os passeios superaram minhas expectativas.
+Só tenho a agradecer a Equipe Renova Turismo pelo excelente trabalho , pela organização impecável , tudo bem planejado , roteiro perfeito, ótimos hotéis, guias locais qualificados .
+Não poderia deixar de falar do Tour Leader, Alexandre , foi extremamente profissional, educado , simpático, gentil , sempre atento com cada um do grupo ( e olha , demos trabalho , kkkk) .
+Enfim , agradeço a todos pelo cuidado em cada detalhe . Até a próxima viagem .
+Abraço fraterno`,
   },
   {
-    name: "Luciano Martins",
-    location: "São Paulo/SP",
-    quote:
-      "Uma Empresa Responsável, Dedicada a proporcionar o máximo de bem estar aos Clientes. Eu sou Cliente da Renova Turismo, e estou muito Satisfeito com o empenho e organização, que é uma Marca Registrada desta Empresa, que tem como objetivo auxiliar no máximo a realização dos Sonhos de quem deseja viajar, tanto em nosso País, quanto em outros. PARABÉNS RENOVA TURISMO.",
+    name: "Maria Aparecida Tasseli Nunes",
+    location: "",
+    quote: `Minha primeira viagem para o exterior foi fantástica Turquia 🇹🇷 é sensacional só tenho de agradecer a Renova Turismo pelo roteiro maravilhoso, amei cada detalhe.
+📍Quero também deixar aqui meus agradecimentos ao Elton que é nota 1000 estava sempre preocupado e atencioso com o grupo e principalmente quando perdi meu passaporte dentro do aeroporto em Londres, ele ficou comigo e fez tudo que pode para me ajudar na imigração, vi seu desespero hora que disseram que não podia mais ficar comigo, foi momentos de desespero, mas senti muita confiança nele e na equipe da Renova, minha gratidão eterna.
+Por isso vá com quem te dá apoio nos momentos difíceis 😉`,
   },
 ];
 
@@ -50,7 +60,7 @@ const Depoimentos = () => {
               <p className="font-heading font-semibold text-primary">{t.name}</p>
               <p className="font-body text-muted-foreground text-sm mb-3">{t.location}</p>
               <Stars />
-              <p className="font-body text-muted-foreground text-sm leading-relaxed">
+              <p className="font-body text-muted-foreground text-sm leading-relaxed whitespace-pre-line">
                 {t.quote}
               </p>
             </div>
