@@ -9,8 +9,8 @@ const InscrevaSe = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const { nome, email, telefone } = formData;
-    /* EDITAR: Substitua [Destino] na mensagem */
-    const message = `Olá! Meu nome é ${nome}, meu e-mail é ${email} e meu telefone é ${telefone}. Gostaria de mais informações sobre a viagem a [Destino].`;
+    /* EDITAR: Substitua África do Sul na mensagem */
+    const message = `Olá! Meu nome é ${nome}, meu e-mail é ${email} e meu telefone é ${telefone}. Gostaria de mais informações sobre a viagem à África do Sul.`;
     /* EDITAR: Substitua o número de WhatsApp */
     window.open(
       `https://api.whatsapp.com/send/?phone=5519989542633&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`,
@@ -31,9 +31,8 @@ const InscrevaSe = () => {
               Inscreva-se Agora
             </h2>
             <p className="font-body text-muted-foreground text-lg mb-8">
-              {/* EDITAR: Substitua [Destino] */}
               Vagas limitadas! Entre em contato conosco e reserve seu lugar nesta viagem
-              inesquecível por [Destino].
+              inesquecível pela África do Sul.
             </p>
             <a
               href="#contato"
