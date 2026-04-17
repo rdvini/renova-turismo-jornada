@@ -48,7 +48,7 @@ export const campaigns: Campaign[] = [
     description:
       "Explore a beleza selvagem e a cultura vibrante da África do Sul em uma jornada inesquecível.",
     image: cardAfricaDoSul,
-    date: "Confira as datas para 2027 e 2028",
+    date: "Outubro de 2026",
     badge: "Experências",
     published: false,
   },
