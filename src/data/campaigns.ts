@@ -60,7 +60,7 @@ export const campaigns: Campaign[] = [
     description:
       "Uma peregrinação a Portugal é um mergulho profundo na devoção mariana, onde o silêncio do Santuário de Fátima convida à conversão e à oração pela paz mundial.",
     image: cardPortugal,
-    date: "Confira as datas para 2027 e 2028",
+    date: "Outubro de 2026",
     badge: "Peregrinação",
     published: true,
   },
