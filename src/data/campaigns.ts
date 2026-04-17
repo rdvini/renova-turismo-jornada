@@ -58,10 +58,10 @@ export const campaigns: Campaign[] = [
     title: "Portugal",
     subtitle: "RENOVA APRESENTA",
     description:
-      "Descubra a história, a gastronomia e as paisagens deslumbrantes de Portugal — de Lisboa ao Vale do Douro.",
+      "Uma peregrinação a Portugal é um mergulho profundo na devoção mariana, onde o silêncio do Santuário de Fátima convida à conversão e à oração pela paz mundial.",
     image: cardPortugal,
     date: "Confira as datas para 2027 e 2028",
-    badge: "Experiência",
+    badge: "Peregrinação",
     published: true,
   },
 ];
