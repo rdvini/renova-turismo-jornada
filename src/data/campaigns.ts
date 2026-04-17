@@ -62,6 +62,6 @@ export const campaigns: Campaign[] = [
     image: cardPortugal,
     date: "Confira as datas para 2027 e 2028",
     badge: "Experiência",
-    published: false,
+    published: true,
   },
 ];
