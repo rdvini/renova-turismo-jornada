@@ -223,7 +223,7 @@ const Roteiro = () => {
                       <div className="border border-border rounded-lg p-5 bg-background hover:shadow-md transition-shadow">
                         <div className="flex items-center gap-3 mb-3 flex-wrap">
                           <span className="bg-secondary text-secondary-foreground text-xs font-heading font-bold px-3 py-1 rounded-full">
-                            {slide.day.day} · {slide.day.date}
+                            {slide.day.day}
                           </span>
                           <h4 className="font-heading text-sm md:text-base font-bold text-primary">
                             {slide.day.title}
