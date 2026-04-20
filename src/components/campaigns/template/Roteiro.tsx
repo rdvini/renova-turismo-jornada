@@ -206,8 +206,8 @@ const Roteiro = () => {
                       <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/30 to-transparent" />
                       <div className="absolute bottom-4 left-5 right-5 flex items-end justify-between">
                         <div>
-                          <span className="text-xs uppercase tracking-widest text-secondary font-body font-semibold">
-                            {slide.day.day} — {slide.day.date}
+                          <span className="text-xs uppercase tracking-widest text-secondary font-body font-semibold block">
+                            {slide.day.day}
                           </span>
                           <h3 className="font-heading text-xl md:text-2xl font-bold text-primary-foreground mt-1">
                             {slide.region}
