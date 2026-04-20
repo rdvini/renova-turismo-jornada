@@ -79,7 +79,8 @@ const Depoimentos = () => {
           </div>
         </div>
       </div>
-    </section>
+      </section>
+    </>
   );
 };
 
