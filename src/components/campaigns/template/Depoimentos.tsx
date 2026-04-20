@@ -32,7 +32,18 @@ const Stars = () => (
 
 const Depoimentos = () => {
   return (
-    <section id="depoimentos" className="py-20 md:py-28 pb-12 md:pb-16 bg-muted">
+    <>
+      <section className="py-12 md:py-16 bg-primary">
+        <div className="container mx-auto px-4 text-center">
+          <p className="font-accent text-base md:text-lg italic text-primary-foreground/80 mb-2">
+            Condições especiais de pagamento
+          </p>
+          <p className="font-heading text-3xl md:text-5xl font-bold text-primary-foreground">
+            Parcelas a partir de <span className="text-secondary">R$000,00</span>
+          </p>
+        </div>
+      </section>
+      <section id="depoimentos" className="py-20 md:py-28 pb-12 md:pb-16 bg-muted">
       <div className="container mx-auto px-4">
         <p className="font-accent text-lg italic text-secondary text-center mb-2">
           O que dizem nossos viajantes
