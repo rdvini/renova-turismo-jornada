@@ -52,12 +52,20 @@ const Depoimentos = () => {
           ))}
         </div>
 
-        <div className="max-w-5xl mx-auto mt-8 flex justify-center md:justify-start">
+        <div className="max-w-5xl mx-auto mt-10 flex flex-col md:flex-row items-center md:items-center gap-5 md:gap-8 text-center md:text-left">
           <img
             src={googleReviewsImg}
             alt="Renova Turismo - 5,0 estrelas no Google com mais de 1.034 avaliações"
-            className="h-16 object-contain"
+            className="h-16 object-contain shrink-0"
           />
+          <div>
+            <p className="font-heading text-lg md:text-xl font-bold text-primary leading-snug">
+              Mais de 1.000 viajantes já avaliaram a Renova Turismo com nota máxima no Google.
+            </p>
+            <p className="font-body text-sm md:text-base text-muted-foreground mt-1">
+              5,0 estrelas — uma reputação construída viagem após viagem, com cuidado, confiança e experiências inesquecíveis.
+            </p>
+          </div>
         </div>
       </div>
     </section>
