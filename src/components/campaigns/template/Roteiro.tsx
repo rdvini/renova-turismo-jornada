@@ -219,7 +219,7 @@ const Roteiro = () => {
                       </div>
                     </div>
 
-                    <div className="p-5 md:p-8">
+                    <div className="px-5 md:px-8 pt-3 md:pt-4 pb-5 md:pb-8">
                       <div className="border border-border rounded-lg p-5 bg-background hover:shadow-md transition-shadow">
                         <div className="flex items-center gap-3 mb-3 flex-wrap">
                           <span className="bg-secondary text-secondary-foreground text-xs font-heading font-bold px-3 py-1 rounded-full">
