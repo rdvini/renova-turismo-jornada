@@ -60,7 +60,7 @@ const Depoimentos = () => {
           />
           <div>
             <p className="font-heading text-lg md:text-xl font-bold text-primary leading-snug">
-              Mais de 1.000 viajantes já avaliaram a Renova Turismo com nota máxima no Google.
+              A mais bem avaliada do Brasil.
             </p>
             <p className="font-body text-sm md:text-base text-muted-foreground mt-1">
               5,0 estrelas — uma reputação construída viagem após viagem, com cuidado, confiança e experiências inesquecíveis.
