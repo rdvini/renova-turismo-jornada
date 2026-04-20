@@ -248,7 +248,7 @@ const Roteiro = () => {
             <CarouselNext className="-right-4 md:-right-12 bg-primary text-primary-foreground border-none hover:bg-primary/90" />
           </Carousel>
 
-          <div className="flex justify-center gap-2 mt-3 flex-wrap mb-2">
+          <div className="justify-center mt-3 flex-wrap mb-2 flex flex-row gap-[8px]">
             {slides.map((_, idx) => (
               <button
                 key={idx}
