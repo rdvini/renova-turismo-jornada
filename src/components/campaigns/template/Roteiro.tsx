@@ -16,7 +16,7 @@ import leoesKrugerImg from "@/assets/africa-do-sul/leoes-kruger.jpg";
 import capeTownImg from "@/assets/africa-do-sul/cape-town.jpg";
 import pretoriaImg from "@/assets/africa-do-sul/pretoria-union-buildings.jpg";
 import caboBoaEsperancaImg from "@/assets/africa-do-sul/cabo-boa-esperanca.jpg";
-import winelandsImg from "@/assets/africa-do-sul/winelands.jpg";
+import winelandsImg from "@/assets/africa-do-sul/stellenbosch-vinhedos.jpg";
 
 interface DayCard {
   day: string;
