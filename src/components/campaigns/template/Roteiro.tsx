@@ -130,7 +130,7 @@ const slides: Slide[] = [
   {
     image: winelandsImg,
     imageAlt: "Vinhedos de Stellenbosch com montanhas ao fundo na luz dourada",
-    imagePosition: "center 35%",
+    imagePosition: "center",
     region: "Cape Town → Winelands → Cape Town",
     day: {
       day: "8° Dia",
