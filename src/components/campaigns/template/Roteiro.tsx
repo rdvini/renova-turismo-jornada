@@ -8,7 +8,7 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 import embarqueImg from "@/assets/africa-do-sul/embarque.jpg";
-import johannesburgoImg from "@/assets/africa-do-sul/johannesburgo.jpg";
+import johannesburgoImg from "@/assets/africa-do-sul/johannesburgo-skyline.jpg";
 import blydeCanyonImg from "@/assets/africa-do-sul/blyde-canyon.jpg";
 import safariKrugerImg from "@/assets/africa-do-sul/safari-kruger.jpg";
 import elefantesKrugerImg from "@/assets/africa-do-sul/elefantes-kruger.jpg";
@@ -50,7 +50,7 @@ const slides: Slide[] = [
   },
   {
     image: johannesburgoImg,
-    imageAlt: "Vista panorâmica de Johannesburgo ao entardecer",
+    imageAlt: "Skyline de Johannesburgo com a Hillbrow Tower em destaque",
     region: "Johannesburgo",
     day: {
       day: "2° Dia",
