@@ -14,6 +14,7 @@ import safariKrugerImg from "@/assets/africa-do-sul/safari-kruger.jpg";
 import elefantesKrugerImg from "@/assets/africa-do-sul/elefantes-kruger.jpg";
 import leoesKrugerImg from "@/assets/africa-do-sul/leoes-kruger.jpg";
 import capeTownImg from "@/assets/africa-do-sul/cape-town.jpg";
+import pretoriaImg from "@/assets/africa-do-sul/pretoria-union-buildings.jpg";
 import caboBoaEsperancaImg from "@/assets/africa-do-sul/cabo-boa-esperanca.jpg";
 import winelandsImg from "@/assets/africa-do-sul/winelands.jpg";
 
@@ -87,8 +88,8 @@ const slides: Slide[] = [
     },
   },
   {
-    image: capeTownImg,
-    imageAlt: "Cape Town com Table Mountain ao fundo e casas coloridas do Bo-Kaap",
+    image: pretoriaImg,
+    imageAlt: "Union Buildings em Pretória ao entardecer com luz dourada",
     region: "Kruger → Pretória → Cape Town",
     day: {
       day: "5° Dia",
