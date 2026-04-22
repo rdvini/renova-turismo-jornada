@@ -63,19 +63,30 @@ const Depoimentos = () => {
           ))}
         </div>
 
-        <div className="max-w-5xl mx-auto mt-10 flex flex-col md:flex-row items-center md:items-center gap-5 md:gap-8 text-center md:text-left">
-          <img
-            src={googleReviewsImg}
-            alt="Renova Turismo - 5,0 estrelas no Google com mais de 1.034 avaliações"
-            className="h-16 object-contain shrink-0"
-          />
-          <div>
-            <p className="font-heading text-lg md:text-xl font-bold text-primary leading-snug">
-              A mais bem avaliada do Brasil.
-            </p>
-            <p className="font-body text-sm md:text-base text-muted-foreground mt-1">
-              5,0 estrelas — uma reputação construída viagem após viagem, com cuidado, confiança e experiências inesquecíveis.
-            </p>
+        <div className="max-w-4xl mx-auto mt-14 relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-secondary/10 via-primary/5 to-secondary/10 rounded-2xl blur-xl" aria-hidden="true" />
+          <div className="relative bg-card border border-border/60 rounded-2xl px-6 py-7 md:px-10 md:py-8 shadow-lg flex flex-col md:flex-row items-center gap-6 md:gap-10 text-center md:text-left">
+            <div className="flex items-center gap-4 shrink-0">
+              <img
+                src={googleReviewsImg}
+                alt="Renova Turismo - 5,0 estrelas no Google com mais de 1.034 avaliações"
+                className="h-16 md:h-20 object-contain"
+              />
+              <div className="hidden md:block w-px h-16 bg-border" aria-hidden="true" />
+            </div>
+            <div className="flex-1">
+              <div className="flex items-center justify-center md:justify-start gap-1 mb-2">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="text-yellow-500 fill-yellow-500" size={18} />
+                ))}
+              </div>
+              <p className="font-heading text-xl md:text-2xl font-bold text-primary leading-tight">
+                A mais bem avaliada do Brasil.
+              </p>
+              <p className="font-body text-sm md:text-base text-muted-foreground mt-2 leading-relaxed">
+                5,0 estrelas — uma reputação construída viagem após viagem, com cuidado, confiança e experiências inesquecíveis.
+              </p>
+            </div>
           </div>
         </div>
       </div>
