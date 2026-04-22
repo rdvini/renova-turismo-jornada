@@ -11,6 +11,8 @@ import embarqueImg from "@/assets/africa-do-sul/embarque.jpg";
 import johannesburgoImg from "@/assets/africa-do-sul/johannesburgo.jpg";
 import blydeCanyonImg from "@/assets/africa-do-sul/blyde-canyon.jpg";
 import safariKrugerImg from "@/assets/africa-do-sul/safari-kruger.jpg";
+import elefantesKrugerImg from "@/assets/africa-do-sul/elefantes-kruger.jpg";
+import leoesKrugerImg from "@/assets/africa-do-sul/leoes-kruger.jpg";
 import capeTownImg from "@/assets/africa-do-sul/cape-town.jpg";
 import caboBoaEsperancaImg from "@/assets/africa-do-sul/cabo-boa-esperanca.jpg";
 import winelandsImg from "@/assets/africa-do-sul/winelands.jpg";
@@ -59,8 +61,8 @@ const slides: Slide[] = [
     },
   },
   {
-    image: blydeCanyonImg,
-    imageAlt: "Cânion do Rio Blyde com vegetação exuberante",
+    image: elefantesKrugerImg,
+    imageAlt: "Família de elefantes na savana do Kruger Park com céu azul",
     region: "Johannesburgo → Reserva Privada / Kruger",
     day: {
       day: "3° Dia",
@@ -72,8 +74,8 @@ const slides: Slide[] = [
     },
   },
   {
-    image: safariKrugerImg,
-    imageAlt: "Elefantes na savana africana ao pôr do sol durante safári",
+    image: leoesKrugerImg,
+    imageAlt: "Família de leões descansando na savana do Kruger Park",
     region: "Reserva Privada / Kruger Park",
     day: {
       day: "4° Dia",
