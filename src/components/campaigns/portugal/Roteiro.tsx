@@ -188,9 +188,9 @@ const Roteiro = () => {
 
         <div className="max-w-5xl mx-auto">
           <Carousel setApi={handleApi} opts={{ loop: false }} className="w-full">
-            <CarouselContent>
+            <CarouselContent className="items-start">
               {slides.map((slide, idx) => (
-                <CarouselItem key={idx}>
+                <CarouselItem key={idx} className="h-auto">
                   <div className="relative rounded-xl overflow-hidden bg-card">
                     <div className="relative h-56 md:h-72 overflow-hidden">
                       <img
