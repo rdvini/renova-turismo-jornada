@@ -94,7 +94,7 @@ const Depoimentos = () => {
               </p>
             </div>
           </div>
-        </div>
+        </a>
       </div>
       </section>
     </>

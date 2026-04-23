@@ -68,11 +68,19 @@ const Depoimentos = () => {
         </div>
 
         <div className="max-w-5xl mx-auto mt-8 flex justify-center md:justify-start">
-          <img
-            src={googleReviewsImg}
-            alt="Renova Turismo - 5,0 estrelas no Google com mais de 1.034 avaliações"
-            className="h-16 object-contain"
-          />
+          <a
+            href="https://share.google/tya2Kpj6NJlNQ4yTi"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Ver as avaliações da Renova Turismo no Google"
+            className="inline-block transition-transform hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded"
+          >
+            <img
+              src={googleReviewsImg}
+              alt="Renova Turismo - 5,0 estrelas no Google com mais de 1.034 avaliações"
+              className="h-16 object-contain"
+            />
+          </a>
         </div>
       </div>
     </section>
