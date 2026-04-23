@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import GoogleReviewsCard from "@/components/shared/GoogleReviewsCard";
 
 const testimonials = [
   {
@@ -55,6 +56,8 @@ const Depoimentos = () => {
             </div>
           ))}
         </div>
+
+        <GoogleReviewsCard />
       </div>
     </section>
   );
