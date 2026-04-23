@@ -36,7 +36,7 @@ const cities = [
 
 const Roteiro = () => {
   return (
-    <section id="roteiro" className="pt-20 md:pt-28 pb-12 md:pb-16 bg-background">
+    <section id="roteiro" className="pt-12 md:pt-28 pb-8 md:pb-16 bg-background">
       <div className="container mx-auto px-4">
         <p className="font-accent text-lg italic text-secondary text-center mb-2">
           Saiba as principais

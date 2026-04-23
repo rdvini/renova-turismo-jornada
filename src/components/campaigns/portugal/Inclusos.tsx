@@ -35,7 +35,7 @@ const items = [
 
 const Inclusos = () => {
   return (
-    <section className="pt-12 md:pt-16 pb-20 md:pb-28 bg-background">
+    <section className="pt-12 md:pt-16 pb-12 md:pb-28 bg-background">
       <div className="container mx-auto px-4">
         <p className="font-accent text-lg italic text-secondary text-center mb-2">
           Tudo pensado para você

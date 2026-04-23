@@ -198,7 +198,7 @@ const Roteiro = () => {
   };
 
   return (
-    <section id="roteiro" className="pt-20 md:pt-28 pb-8 md:pb-10 bg-background">
+    <section id="roteiro" className="pt-12 md:pt-28 pb-6 md:pb-10 bg-background">
       <div className="container mx-auto px-4">
         <p className="font-accent text-lg italic text-secondary text-center mb-2">
           Sua viagem pela Turquia, dia a dia
@@ -275,8 +275,8 @@ const Roteiro = () => {
               ))}
             </CarouselContent>
 
-            <CarouselPrevious className="-left-4 md:-left-12 bg-primary text-primary-foreground border-none hover:bg-primary/90" />
-            <CarouselNext className="-right-4 md:-right-12 bg-primary text-primary-foreground border-none hover:bg-primary/90" />
+            <CarouselPrevious className="hidden md:flex -left-4 md:-left-12 bg-primary text-primary-foreground border-none hover:bg-primary/90" />
+            <CarouselNext className="hidden md:flex -right-4 md:-right-12 bg-primary text-primary-foreground border-none hover:bg-primary/90" />
           </Carousel>
 
           <div className="flex justify-center gap-2 mt-3">

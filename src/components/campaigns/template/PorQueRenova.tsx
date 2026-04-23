@@ -30,7 +30,7 @@ const photos: { src: string; position: string }[] = [];
 
 const PorQueRenova = () => {
   return (
-    <section className="py-20 md:py-28 bg-primary">
+    <section className="py-12 md:py-28 bg-primary">
       <div className="container mx-auto px-4">
         <p className="font-accent text-lg italic text-secondary text-center mb-2">
           Viaje com quem entende de turismo
