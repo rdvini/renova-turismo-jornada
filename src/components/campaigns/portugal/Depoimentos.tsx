@@ -1,5 +1,5 @@
 import { Star } from "lucide-react";
-import googleReviewsImg from "@/assets/google-reviews.png";
+import GoogleReviewsCard from "@/components/shared/GoogleReviewsCard";
 
 const Stars = () => (
   <div className="flex gap-0.5 mb-3">
@@ -45,21 +45,7 @@ const Depoimentos = () => {
           </div>
         </div>
 
-        <div className="max-w-5xl mx-auto mt-8 flex justify-center md:justify-start">
-          <a
-            href="https://www.google.com/search?kgmid=/g/11b746bhvy&hl=pt-BR&q=Renova+Turismo&shndl=30&source=sh/x/loc/osrp/m5/1&kgs=6bfd58b95fd5825d&utm_source=sh/x/loc/osrp/m5/1#lrd=0x94c8c6187fb4abcb:0x11b1a0b81404195,1,,,,"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Ver as avaliações da Renova Turismo no Google"
-            className="inline-block transition-transform hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded"
-          >
-            <img
-              src={googleReviewsImg}
-              alt="Renova Turismo - 5,0 estrelas no Google com mais de 1.034 avaliações"
-              className="h-16 object-contain"
-            />
-          </a>
-        </div>
+        <GoogleReviewsCard />
       </div>
     </section>
   );
