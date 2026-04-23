@@ -63,9 +63,15 @@ const Depoimentos = () => {
           ))}
         </div>
 
-        <div className="max-w-4xl mx-auto mt-14 relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-secondary/10 via-primary/5 to-secondary/10 rounded-2xl blur-xl" aria-hidden="true" />
-          <div className="relative bg-card border border-border/60 rounded-2xl px-6 py-7 md:px-10 md:py-8 shadow-sm hover:shadow-md transition-shadow duration-500 ease-out flex flex-col md:flex-row items-center gap-6 md:gap-10 text-center md:text-left">
+        <a
+          href="https://share.google/tya2Kpj6NJlNQ4yTi"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Ver as avaliações da Renova Turismo no Google"
+          className="block max-w-4xl mx-auto mt-14 relative group focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-2xl"
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-secondary/10 via-primary/5 to-secondary/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" aria-hidden="true" />
+          <div className="relative bg-card border border-border/60 rounded-2xl px-6 py-7 md:px-10 md:py-8 shadow-sm group-hover:shadow-md group-hover:-translate-y-0.5 transition-all duration-500 ease-out flex flex-col md:flex-row items-center gap-6 md:gap-10 text-center md:text-left cursor-pointer">
             <div className="flex items-center gap-4 shrink-0">
               <img
                 src={googleReviewsImg}
@@ -88,7 +94,7 @@ const Depoimentos = () => {
               </p>
             </div>
           </div>
-        </div>
+        </a>
       </div>
       </section>
     </>
