@@ -47,7 +47,7 @@ const Depoimentos = () => {
 
         <div className="max-w-5xl mx-auto mt-8 flex justify-center md:justify-start">
           <a
-            href="https://share.google/tya2Kpj6NJlNQ4yTi"
+            href="https://www.google.com/search?kgmid=/g/11b746bhvy&hl=pt-BR&q=Renova+Turismo&shndl=30&source=sh/x/loc/osrp/m5/1&kgs=6bfd58b95fd5825d&utm_source=sh/x/loc/osrp/m5/1#lrd=0x94c8c6187fb4abcb:0x11b1a0b81404195,1,,,,"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Ver as avaliações da Renova Turismo no Google"
