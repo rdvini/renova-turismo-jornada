@@ -2,7 +2,7 @@ import { MapPin, Calendar, BookOpen } from "lucide-react";
 
 const SobreViagem = () => {
   return (
-    <section id="sobre" className="py-20 md:py-28 bg-muted">
+    <section id="sobre" className="py-12 md:py-28 bg-muted">
       <div className="container mx-auto px-4">
         <p className="font-accent text-lg italic text-secondary text-center mb-2">
           {/* EDITAR: Subtítulo */}

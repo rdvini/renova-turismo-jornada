@@ -40,7 +40,7 @@ const items = [
 
 const Inclusos = () => {
   return (
-    <section className="py-20 md:py-28 bg-background">
+    <section className="py-12 md:py-28 bg-background">
       <div className="container mx-auto px-4">
         <p className="font-accent text-lg italic text-secondary text-center mb-2">
           Tudo pensado para você

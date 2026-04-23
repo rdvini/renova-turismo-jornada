@@ -11,7 +11,7 @@ const Stars = () => (
 
 const Depoimentos = () => {
   return (
-    <section id="depoimentos" className="py-20 md:py-28 pb-12 md:pb-16 bg-muted">
+    <section id="depoimentos" className="py-12 md:py-28 pb-12 md:pb-16 bg-muted">
       <div className="container mx-auto px-4">
         <p className="font-accent text-lg italic text-secondary text-center mb-2">
           O que dizem nossos viajantes
