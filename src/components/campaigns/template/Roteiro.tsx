@@ -270,7 +270,9 @@ const Roteiro = () => {
 
         <div className="text-center mt-4">
           <a
-            href="#contato"
+            href="https://api.whatsapp.com/send/?phone=5519994718930&text=Ol%C3%A1+Nayara%21+Tenho+interesse+na+viagem+para+a+%C3%81frica+do+Sul+e+gostaria+de+receber+mais+informa%C3%A7%C3%B5es.&type=phone_number&app_absent=0"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-bold text-lg px-12 py-4 rounded-full transition-all hover:scale-105 shadow-lg"
           >
             Garanta Sua Vaga
