@@ -1,19 +1,35 @@
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { supabase } from "@/integrations/supabase/client";
+
+const NAYARA_WHATSAPP = "5519994718930";
+const NAYARA_EMAIL = "nayara@renovaturismo.com.br";
 
 const InscrevaSe = () => {
   const [formData, setFormData] = useState({ nome: "", email: "", telefone: "" });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const { nome, email, telefone } = formData;
-    /* EDITAR: Substitua África do Sul na mensagem */
-    const message = `Olá! Meu nome é ${nome}, meu e-mail é ${email} e meu telefone é ${telefone}. Gostaria de mais informações sobre a viagem à África do Sul.`;
-    /* EDITAR: Substitua o número de WhatsApp */
+
+    // Envia lead por e-mail para a Nayara (best-effort, não bloqueia)
+    supabase.functions
+      .invoke("send-contact-email", {
+        body: {
+          nome,
+          email,
+          telefone,
+          campaign: "Viagem África do Sul",
+          destinatario: NAYARA_EMAIL,
+        },
+      })
+      .catch((err) => console.error("send-contact-email error:", err));
+
+    const message = `Olá Nayara! Meu nome é ${nome}, meu e-mail é ${email} e meu telefone é ${telefone}. Gostaria de mais informações sobre a viagem à África do Sul.`;
     window.open(
-      `https://api.whatsapp.com/send/?phone=5519989542633&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`,
+      `https://api.whatsapp.com/send/?phone=${NAYARA_WHATSAPP}&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`,
       "_blank"
     );
     setSubmitted(true);
@@ -35,7 +51,11 @@ const InscrevaSe = () => {
               inesquecível pela África do Sul.
             </p>
             <a
-              href="#contato"
+              href={`https://api.whatsapp.com/send/?phone=${NAYARA_WHATSAPP}&text=${encodeURIComponent(
+                "Olá Nayara! Gostaria de mais informações sobre a viagem à África do Sul."
+              )}&type=phone_number&app_absent=0`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-bold text-lg px-12 py-4 rounded-full transition-all hover:scale-105 shadow-lg"
             >
               Garanta sua vaga
