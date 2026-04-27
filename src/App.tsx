@@ -7,6 +7,7 @@ import Index from "./pages/Index.tsx";
 import TurquiaPadreLeudo from "./pages/TurquiaPadreLeudo.tsx";
 import Turquia from "./pages/Turquia.tsx";
 import CampaignTemplate from "./pages/CampaignTemplate.tsx";
+import AfricaDoSul2 from "./pages/AfricaDoSul2.tsx";
 import Portugal from "./pages/Portugal.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
