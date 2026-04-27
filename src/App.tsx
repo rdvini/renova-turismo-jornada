@@ -7,6 +7,7 @@ import Index from "./pages/Index.tsx";
 import TurquiaPadreLeudo from "./pages/TurquiaPadreLeudo.tsx";
 import Turquia from "./pages/Turquia.tsx";
 import CampaignTemplate from "./pages/CampaignTemplate.tsx";
+import AfricaDoSul2 from "./pages/AfricaDoSul2.tsx";
 import Portugal from "./pages/Portugal.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/turquia-padre-leudo" element={<TurquiaPadreLeudo />} />
           <Route path="/turquia" element={<Turquia />} />
           <Route path="/africa-do-sul" element={<CampaignTemplate />} />
+          <Route path="/africa-do-sul-2" element={<AfricaDoSul2 />} />
           <Route path="/portugal" element={<Portugal />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
