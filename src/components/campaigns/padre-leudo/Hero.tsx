@@ -28,7 +28,7 @@ const Hero = () => {
           <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-primary-foreground/20 bg-primary/40 backdrop-blur-sm hover:border-secondary transition-colors shadow-lg">
             <iframe
               className="h-full w-full"
-              src="https://www.youtube.com/embed/h-fdwgCLbyI?rel=0"
+              src="https://www.youtube.com/embed/AER3yXbe8YY?rel=0"
               title="Vídeo da viagem para a Turquia"
               loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
