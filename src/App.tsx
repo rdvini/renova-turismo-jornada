@@ -24,6 +24,7 @@ const App = () => (
           <Route path="/turquia-padre-leudo" element={<TurquiaPadreLeudo />} />
           <Route path="/turquia" element={<Turquia />} />
           <Route path="/africa-do-sul" element={<CampaignTemplate />} />
+          <Route path="/africa-do-sul-2" element={<AfricaDoSul2 />} />
           <Route path="/portugal" element={<Portugal />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
