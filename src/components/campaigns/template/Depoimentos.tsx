@@ -39,7 +39,7 @@ const Depoimentos = () => {
             Condições especiais de pagamento
           </p>
           <p className="font-heading text-3xl md:text-5xl font-bold text-primary-foreground">
-            Parcelas a partir de <span className="text-secondary">R$552,15</span>
+            Valor total da viagem <span className="text-secondary">US$ 3.990</span>
           </p>
         </div>
       </section>
