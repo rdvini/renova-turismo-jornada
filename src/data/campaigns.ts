@@ -50,7 +50,7 @@ export const campaigns: Campaign[] = [
     image: cardAfricaDoSul,
     date: "Outubro de 2026",
     badge: "Experências",
-    published: false,
+    published: true,
   },
   {
     id: "portugal",
