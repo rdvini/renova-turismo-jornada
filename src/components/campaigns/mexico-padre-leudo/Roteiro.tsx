@@ -7,7 +7,13 @@ import {
   CarouselNext,
   type CarouselApi,
 } from "@/components/ui/carousel";
+
 import aeroportoManaus from "@/assets/mexico-padre-leudo/aeroporto-manaus.webp";
+import guadalupeImg from "@/assets/mexico-padre-leudo/guadalupe.jpg";
+import teotihuacanImg from "@/assets/mexico-padre-leudo/teotihuacan.jpg";
+import pueblaImg from "@/assets/mexico-padre-leudo/puebla.jpg";
+import cancunImg from "@/assets/mexico-padre-leudo/cancun.jpg";
+import chichenItzaImg from "@/assets/mexico-padre-leudo/chichen-itza.jpg";
 
 interface DayCard {
   day: string;
@@ -17,15 +23,17 @@ interface DayCard {
 }
 
 interface Slide {
+  image: string;
+  imageAlt: string;
   region: string;
   days: DayCard[];
-  image?: string;
 }
 
 const slides: Slide[] = [
   {
-    region: "Manaus → Bogotá → Cidade do México",
     image: aeroportoManaus,
+    imageAlt: "Aeroporto de Manaus — partida da peregrinação",
+    region: "Manaus → Bogotá → Cidade do México",
     days: [
       {
         day: "1° Dia",
@@ -38,6 +46,8 @@ const slides: Slide[] = [
     ],
   },
   {
+    image: guadalupeImg,
+    imageAlt: "Basílica de Nossa Senhora de Guadalupe na Cidade do México",
     region: "Cidade do México & Teotihuacán",
     days: [
       {
@@ -59,6 +69,8 @@ const slides: Slide[] = [
     ],
   },
   {
+    image: pueblaImg,
+    imageAlt: "Capela do Rosário de Puebla — joia do barroco mexicano",
     region: "Centro Histórico & Tlaxcala / Puebla",
     days: [
       {
@@ -80,6 +92,8 @@ const slides: Slide[] = [
     ],
   },
   {
+    image: cancunImg,
+    imageAlt: "Praias paradisíacas de Cancún no Caribe Mexicano",
     region: "Cancún — Caribe Mexicano",
     days: [
       {
@@ -101,6 +115,8 @@ const slides: Slide[] = [
     ],
   },
   {
+    image: chichenItzaImg,
+    imageAlt: "Pirâmide de Chichén Itzá — uma das Sete Maravilhas do Mundo Moderno",
     region: "Cancún → Bogotá → Manaus",
     days: [
       {
@@ -122,8 +138,9 @@ const slides: Slide[] = [
     ],
   },
   {
-    region: "Manaus",
     image: aeroportoManaus,
+    imageAlt: "Aeroporto de Manaus — chegada da peregrinação",
+    region: "Manaus",
     days: [
       {
         day: "10° Dia",
@@ -178,15 +195,15 @@ const Roteiro = () => {
               {slides.map((slide, idx) => (
                 <CarouselItem key={idx} className="h-auto">
                   <div className="relative rounded-xl overflow-hidden bg-card">
-                    <div className="relative h-32 md:h-40 overflow-hidden bg-gradient-to-br from-primary via-primary/80 to-secondary/60">
-                      {slide.image && (
-                        <img
-                          src={slide.image}
-                          alt={slide.region}
-                          className="absolute inset-0 w-full h-full object-cover"
-                          loading="lazy"
-                        />
-                      )}
+                    <div className="relative h-56 md:h-72 overflow-hidden">
+                      <img
+                        src={slide.image}
+                        alt={slide.imageAlt}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                        width={960}
+                        height={640}
+                      />
                       <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/30 to-transparent" />
                       <div className="absolute bottom-4 left-5 right-5 flex items-end justify-between">
                         <div>
