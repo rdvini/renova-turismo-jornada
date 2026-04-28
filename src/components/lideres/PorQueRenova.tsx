@@ -25,7 +25,7 @@ const PorQueRenova = () => {
           {icons.map((src, i) => (
             <div
               key={i}
-              className="flex items-center justify-center p-4 rounded-xl bg-primary-foreground/5 hover:bg-primary-foreground/10 transition-colors"
+              className="flex items-center justify-center p-6 rounded-2xl bg-primary-foreground/10 border border-primary-foreground/15 hover:bg-primary-foreground/15 hover:border-primary-foreground/25 hover:-translate-y-1 transition-all duration-300 shadow-lg"
             >
               <img
                 src={src}
