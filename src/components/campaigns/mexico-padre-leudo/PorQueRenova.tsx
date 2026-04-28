@@ -6,11 +6,10 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 
-import renovaGroup1 from "@/assets/padre-leudo/renova-group-1.jpeg";
-import renovaGroup2 from "@/assets/padre-leudo/renova-group-2.jpeg";
-import renovaGroup3 from "@/assets/padre-leudo/renova-group-3.jpeg";
-import renovaGroup4 from "@/assets/padre-leudo/renova-group-4.jpeg";
-import renovaGroup5 from "@/assets/padre-leudo/renova-group-5.jpeg";
+import renovaGroup1 from "@/assets/mexico-padre-leudo/grupo-1.jpg";
+import renovaGroup2 from "@/assets/mexico-padre-leudo/grupo-2.jpg";
+import renovaGroup3 from "@/assets/mexico-padre-leudo/grupo-3.jpg";
+import renovaGroup4 from "@/assets/mexico-padre-leudo/grupo-4.jpg";
 
 const reasons = [
   { icon: Heart, title: "Experiências Únicas", text: "Cada roteiro é pensado para proporcionar momentos memoráveis e enriquecedores." },
@@ -21,11 +20,10 @@ const reasons = [
 ];
 
 const photos = [
-  { src: renovaGroup1, position: "center 60%" },
-  { src: renovaGroup2, position: "center 60%" },
-  { src: renovaGroup3, position: "center 75%" },
-  { src: renovaGroup4, position: "center 60%" },
-  { src: renovaGroup5, position: "center 60%" },
+  { src: renovaGroup1, position: "center 40%" },
+  { src: renovaGroup2, position: "center 50%" },
+  { src: renovaGroup3, position: "center 50%" },
+  { src: renovaGroup4, position: "center 40%" },
 ];
 
 const PorQueRenova = () => {
