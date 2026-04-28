@@ -13,6 +13,7 @@ const DEFAULT_NOTIFICATION_EMAIL = "contato@renovaturismo.com.br";
 // Never trust a client-supplied destination address.
 const CAMPAIGN_RECIPIENTS: Record<string, string> = {
   "turquia-padre-leudo": "nayara@renovaturismo.com.br",
+  "mexico-padre-leudo": "nayara@renovaturismo.com.br",
   "viagem áfrica do sul": "nayara@renovaturismo.com.br",
   "viagem turquia": "contato@renovaturismo.com.br",
   "viagem portugal": "contato@renovaturismo.com.br",
