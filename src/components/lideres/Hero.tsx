@@ -12,26 +12,26 @@ const Hero = () => {
         alt="Vista de Jerusalém — Terra Santa"
         className="absolute inset-0 w-full h-full object-cover"
       />
-      <div className="absolute inset-0 bg-primary/70" />
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/85 via-primary/80 to-primary/90" />
 
       <div className="relative z-10 container mx-auto px-4 py-20 text-center max-w-4xl">
         <img
           src={logoRenova}
           alt="Renova Turismo"
-          className="h-14 md:h-16 mx-auto mb-8 animate-fade-in-up"
+          className="h-14 md:h-16 mx-auto mb-8 animate-fade-in-up drop-shadow-lg"
         />
         <h1
-          className="font-heading text-3xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-tight mb-6 animate-fade-in-up"
+          className="font-heading text-3xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-tight mb-6 animate-fade-in-up [text-shadow:_0_2px_12px_rgb(0_0_0_/_40%)]"
           style={{ animationDelay: "0.15s" }}
         >
           Pastores e Padres:{" "}
-          <span className="font-light">
+          <span className="font-normal">
             Leve sua comunidade para uma
           </span>{" "}
           jornada espiritual na Terra Santa
         </h1>
         <p
-          className="font-body text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto mb-10 animate-fade-in-up"
+          className="font-body text-lg md:text-xl text-primary-foreground max-w-2xl mx-auto mb-10 animate-fade-in-up [text-shadow:_0_1px_6px_rgb(0_0_0_/_35%)]"
           style={{ animationDelay: "0.3s" }}
         >
           Com a Renova, você leva o seu grupo para lugares sagrados com

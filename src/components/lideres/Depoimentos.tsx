@@ -8,9 +8,9 @@ const Depoimentos = () => {
   return (
     <section className="py-20 md:py-28 bg-background">
       <div className="container mx-auto px-4 max-w-5xl">
-        <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-center mb-14">
+        <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-center mb-14 tracking-tight leading-tight">
           A confiança de quem já{" "}
-          <span className="text-primary">viajou conosco</span>
+          <span className="text-secondary">viajou conosco</span>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-14">

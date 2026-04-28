@@ -14,20 +14,18 @@ const PorQueRenova = () => {
   return (
     <section className="py-20 md:py-28 bg-primary text-primary-foreground">
       <div className="container mx-auto px-4">
-        <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-6">
-          POR QUE ESCOLHER A RENOVA?
+        <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-6 tracking-tight">
+          Por que escolher a <span className="text-secondary">Renova</span>?
         </h2>
-        <p className="font-body text-base md:text-lg text-primary-foreground/85 text-center max-w-3xl mx-auto mb-14">
-          Sabemos da complexidade e da responsabilidade de guiar uma comunidade
-          em uma jornada internacional. Por isso, nosso pacote 100% completo
-          inclui:
+        <p className="font-body text-base md:text-lg text-primary-foreground/90 text-center max-w-3xl mx-auto mb-14 leading-relaxed">
+          Sabemos da complexidade e da responsabilidade de guiar uma comunidade em uma jornada internacional. Por isso, nosso pacote 100% completo inclui:
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto mb-14">
           {icons.map((src, i) => (
             <div
               key={i}
-              className="flex items-center justify-center p-4 rounded-xl bg-primary-foreground/5 hover:bg-primary-foreground/10 transition-colors"
+              className="flex items-center justify-center p-6 rounded-2xl bg-primary-foreground/10 border border-primary-foreground/15 hover:bg-primary-foreground/15 hover:border-primary-foreground/25 hover:-translate-y-1 transition-all duration-300 shadow-lg"
             >
               <img
                 src={src}
