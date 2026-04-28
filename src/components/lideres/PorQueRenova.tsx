@@ -17,10 +17,8 @@ const PorQueRenova = () => {
         <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-6">
           POR QUE ESCOLHER A RENOVA?
         </h2>
-        <p className="font-body text-base md:text-lg text-primary-foreground/85 text-center max-w-3xl mx-auto mb-14">
-          Sabemos da complexidade e da responsabilidade de guiar uma comunidade
-          em uma jornada internacional. Por isso, nosso pacote 100% completo
-          inclui:
+        <p className="font-body text-base md:text-lg text-primary-foreground/90 text-center max-w-3xl mx-auto mb-14 leading-relaxed">
+          Sabemos da complexidade e da responsabilidade de guiar uma comunidade em uma jornada internacional. Por isso, nosso pacote 100% completo inclui:
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto mb-14">
