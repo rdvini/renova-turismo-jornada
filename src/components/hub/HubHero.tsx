@@ -1,5 +1,5 @@
 import { ChevronDown } from "lucide-react";
-import heroImage from "@/assets/hero-turkiye.jpg";
+import heroImage from "@/assets/hero-turkiye.webp";
 
 const HubHero = () => {
   return (

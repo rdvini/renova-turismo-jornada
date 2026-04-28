@@ -1,4 +1,4 @@
-import cardAfricaDoSul from "@/assets/africa-do-sul/card-cover.jpg";
+import cardAfricaDoSul from "@/assets/africa-do-sul/card-cover.webp";
 import cardPortugal from "@/assets/portugal/card-cover.jpg";
 import cardLideres from "@/assets/lideres/hero-bg.jpg";
 
@@ -14,7 +14,7 @@ export interface Campaign {
   published?: boolean;
 }
 
-import heroTurkiye from "@/assets/padre-leudo/hero-turkiye.jpg";
+import heroTurkiye from "@/assets/padre-leudo/hero-turkiye.webp";
 
 export const campaigns: Campaign[] = [
   {

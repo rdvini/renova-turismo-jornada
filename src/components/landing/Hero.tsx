@@ -1,5 +1,5 @@
 import { Play } from "lucide-react";
-import heroImage from "@/assets/hero-turkiye.jpg";
+import heroImage from "@/assets/hero-turkiye.webp";
 
 const Hero = () => {
   return (
