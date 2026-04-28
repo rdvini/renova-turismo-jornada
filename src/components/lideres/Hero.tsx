@@ -42,7 +42,7 @@ const Hero = () => {
           href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-[#25D366] hover:bg-[#20bd5a] text-white font-heading font-bold text-base md:text-lg uppercase tracking-wide px-10 py-4 rounded-md transition-all hover:scale-105 shadow-lg animate-fade-in-up"
+          className="inline-block bg-[#25D366] hover:bg-[#20bd5a] text-white font-heading font-bold text-base md:text-lg uppercase tracking-wide px-10 py-4 transition-all hover:scale-105 shadow-lg animate-fade-in-up rounded-full"
           style={{ animationDelay: "0.45s" }}
         >
           Conversar no WhatsApp
