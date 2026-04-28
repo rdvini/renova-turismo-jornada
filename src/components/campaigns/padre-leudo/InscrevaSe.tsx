@@ -15,13 +15,11 @@ const InscrevaSe = () => {
     try {
       const { nome, email, telefone } = formData;
 
-      // Save to database
-      await supabase.from("contact_submissions").insert({ nome, email, telefone });
-
-      // Send email notification
-      await supabase.functions.invoke("send-contact-email", {
+      // Send to edge function (validates + stores + emails)
+      const { error } = await supabase.functions.invoke("send-contact-email", {
         body: { nome, email, telefone, campaign: "turquia-padre-leudo", destinatario: "nayara@renovaturismo.com.br" },
       });
+      if (error) throw error;
 
       setSubmitted(true);
       toast.success("Dados enviados com sucesso!");
