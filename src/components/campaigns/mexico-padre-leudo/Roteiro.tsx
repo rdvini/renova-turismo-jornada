@@ -49,6 +49,7 @@ const slides: Slide[] = [
   {
     image: guadalupeImg,
     imageAlt: "Igreja colonial de San Jacinto, no bairro de San Ángel — Cidade do México",
+    imageFit: "contain",
     region: "Cidade do México & Teotihuacán",
     days: [
       {
