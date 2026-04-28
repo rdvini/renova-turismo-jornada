@@ -93,7 +93,7 @@ const slides: Slide[] = [
   },
   {
     image: cancunImg,
-    imageAlt: "Praias paradisíacas de Cancún no Caribe Mexicano",
+    imageAlt: "Vista aérea da costa de Cancún ao entardecer — Caribe Mexicano",
     region: "Cancún — Caribe Mexicano",
     days: [
       {
