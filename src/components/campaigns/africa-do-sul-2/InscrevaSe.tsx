@@ -4,7 +4,6 @@ import { Label } from "@/components/ui/label";
 import { supabase } from "@/integrations/supabase/client";
 
 const NAYARA_WHATSAPP = "5519994718930";
-const NAYARA_EMAIL = "nayara@renovaturismo.com.br";
 
 const InscrevaSe = () => {
   const [formData, setFormData] = useState({ nome: "", email: "", telefone: "" });
