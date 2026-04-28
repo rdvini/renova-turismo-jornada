@@ -197,11 +197,11 @@ const Roteiro = () => {
               {slides.map((slide, idx) => (
                 <CarouselItem key={idx} className="h-auto">
                   <div className="relative rounded-xl overflow-hidden bg-card">
-                    <div className="relative h-56 md:h-72 overflow-hidden">
+                    <div className="relative h-56 md:h-72 overflow-hidden bg-primary">
                       <img
                         src={slide.image}
                         alt={slide.imageAlt}
-                        className="w-full h-full object-cover"
+                        className={`w-full h-full ${slide.imageFit === "contain" ? "object-contain" : "object-cover"}`}
                         loading="lazy"
                         width={960}
                         height={640}
