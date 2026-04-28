@@ -75,6 +75,6 @@ export const campaigns: Campaign[] = [
     image: cardLideres,
     date: "Datas sob consulta",
     badge: "Líderes",
-    published: true,
+    published: false,
   },
 ];
