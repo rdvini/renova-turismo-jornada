@@ -7,6 +7,7 @@ import {
   CarouselNext,
   type CarouselApi,
 } from "@/components/ui/carousel";
+import aeroportoManaus from "@/assets/mexico-padre-leudo/aeroporto-manaus.webp";
 
 interface DayCard {
   day: string;
@@ -18,11 +19,13 @@ interface DayCard {
 interface Slide {
   region: string;
   days: DayCard[];
+  image?: string;
 }
 
 const slides: Slide[] = [
   {
     region: "Manaus → Bogotá → Cidade do México",
+    image: aeroportoManaus,
     days: [
       {
         day: "1° Dia",
@@ -120,6 +123,7 @@ const slides: Slide[] = [
   },
   {
     region: "Manaus",
+    image: aeroportoManaus,
     days: [
       {
         day: "10° Dia",
@@ -175,6 +179,14 @@ const Roteiro = () => {
                 <CarouselItem key={idx} className="h-auto">
                   <div className="relative rounded-xl overflow-hidden bg-card">
                     <div className="relative h-32 md:h-40 overflow-hidden bg-gradient-to-br from-primary via-primary/80 to-secondary/60">
+                      {slide.image && (
+                        <img
+                          src={slide.image}
+                          alt={slide.region}
+                          className="absolute inset-0 w-full h-full object-cover"
+                          loading="lazy"
+                        />
+                      )}
                       <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/30 to-transparent" />
                       <div className="absolute bottom-4 left-5 right-5 flex items-end justify-between">
                         <div>
