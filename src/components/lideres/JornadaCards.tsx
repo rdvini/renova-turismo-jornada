@@ -61,7 +61,7 @@ const JornadaCards = () => {
                 </div>
 
                 <div className="relative p-6 pt-12 flex-1 flex flex-col">
-                  <div className="absolute -top-8 left-6 w-16 h-16 rounded-full bg-secondary flex items-center justify-center shadow-xl z-10">
+                  <div className="absolute -top-8 left-6 w-16 h-16 rounded-full bg-secondary flex items-center justify-center shadow-xl ring-4 ring-card z-10">
                     <Icon className="w-8 h-8 text-secondary-foreground" strokeWidth={2} />
                   </div>
                   <h3 className="font-heading text-xl md:text-2xl font-bold text-primary uppercase mb-3 tracking-tight">
