@@ -123,6 +123,7 @@ const slides: Slide[] = [
   },
   {
     region: "Manaus",
+    image: aeroportoManaus,
     days: [
       {
         day: "10° Dia",
