@@ -70,7 +70,7 @@ const slides: Slide[] = [
   },
   {
     image: pueblaImg,
-    imageAlt: "Capela do Rosário de Puebla — joia do barroco mexicano",
+    imageAlt: "Vista aérea da Basílica de Nossa Senhora de Guadalupe — Cidade do México",
     region: "Centro Histórico & Tlaxcala / Puebla",
     days: [
       {
