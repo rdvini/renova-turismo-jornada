@@ -44,7 +44,7 @@ export const campaigns: Campaign[] = [
     id: "africa-do-sul",
     slug: "/africa-do-sul",
     title: "África do Sul",
-    subtitle: "RENOVA APRESENTA",
+    subtitle: "RENOVA TURISMO APRESENTA",
     description:
       "Explore a beleza selvagem e a cultura vibrante da África do Sul em uma jornada inesquecível.",
     image: cardAfricaDoSul,
@@ -56,7 +56,7 @@ export const campaigns: Campaign[] = [
     id: "portugal",
     slug: "/portugal",
     title: "Portugal",
-    subtitle: "RENOVA APRESENTA",
+    subtitle: "RENOVA TURISMO APRESENTA",
     description:
       "Uma peregrinação a Portugal é um mergulho profundo na devoção mariana, onde o silêncio do Santuário de Fátima convida à conversão e à oração pela paz mundial.",
     image: cardPortugal,
