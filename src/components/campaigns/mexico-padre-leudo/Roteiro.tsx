@@ -13,7 +13,7 @@ import guadalupeImg from "@/assets/mexico-padre-leudo/san-jacinto.jpg";
 import teotihuacanImg from "@/assets/mexico-padre-leudo/teotihuacan.jpg";
 import pueblaImg from "@/assets/mexico-padre-leudo/basilica-guadalupe-aerea.jpg";
 import cancunImg from "@/assets/mexico-padre-leudo/cancun-aerea.jpg";
-import chichenItzaImg from "@/assets/mexico-padre-leudo/chichen-itza.jpg";
+import chichenItzaImg from "@/assets/mexico-padre-leudo/cancun-zona-hoteleira.jpg";
 
 interface DayCard {
   day: string;
@@ -116,7 +116,7 @@ const slides: Slide[] = [
   },
   {
     image: chichenItzaImg,
-    imageAlt: "Pirâmide de Chichén Itzá — uma das Sete Maravilhas do Mundo Moderno",
+    imageAlt: "Vista aérea da zona hoteleira de Cancún — Caribe Mexicano",
     region: "Cancún → Bogotá → Manaus",
     days: [
       {
