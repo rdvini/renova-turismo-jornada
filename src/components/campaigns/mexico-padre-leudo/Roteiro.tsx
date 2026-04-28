@@ -25,6 +25,7 @@ interface DayCard {
 interface Slide {
   image: string;
   imageAlt: string;
+  imageFit?: "cover" | "contain";
   region: string;
   days: DayCard[];
 }
