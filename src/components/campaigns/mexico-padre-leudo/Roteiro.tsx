@@ -25,6 +25,7 @@ interface Slide {
 const slides: Slide[] = [
   {
     region: "Manaus → Bogotá → Cidade do México",
+    image: aeroportoManaus,
     days: [
       {
         day: "1° Dia",
