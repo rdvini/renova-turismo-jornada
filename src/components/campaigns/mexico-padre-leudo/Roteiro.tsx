@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/carousel";
 
 import aeroportoManaus from "@/assets/mexico-padre-leudo/aeroporto-manaus.webp";
-import guadalupeImg from "@/assets/mexico-padre-leudo/guadalupe.jpg";
+import guadalupeImg from "@/assets/mexico-padre-leudo/san-jacinto.jpg";
 import teotihuacanImg from "@/assets/mexico-padre-leudo/teotihuacan.jpg";
 import pueblaImg from "@/assets/mexico-padre-leudo/puebla.jpg";
 import cancunImg from "@/assets/mexico-padre-leudo/cancun.jpg";
