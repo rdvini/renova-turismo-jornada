@@ -17,7 +17,7 @@ const InscrevaSe = () => {
 
       // Send to edge function (validates + stores + emails)
       const { error } = await supabase.functions.invoke("send-contact-email", {
-        body: { nome, email, telefone, campaign: "turquia-padre-leudo", destinatario: "nayara@renovaturismo.com.br" },
+        body: { nome, email, telefone, campaign: "turquia-padre-leudo" },
       });
       if (error) throw error;
 

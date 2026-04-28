@@ -14,7 +14,7 @@ const InscrevaSe = () => {
     e.preventDefault();
     const { nome, email, telefone } = formData;
 
-    // Envia lead por e-mail para o Guilherme (best-effort, não bloqueia)
+    // Envia lead por e-mail (best-effort, não bloqueia). Destinatário é definido server-side por campanha.
     supabase.functions
       .invoke("send-contact-email", {
         body: {
@@ -22,7 +22,6 @@ const InscrevaSe = () => {
           email,
           telefone,
           campaign: "Viagem África do Sul",
-          destinatario: NAYARA_EMAIL,
         },
       })
       .catch((err) => console.error("send-contact-email error:", err));
