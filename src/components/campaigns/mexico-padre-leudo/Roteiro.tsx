@@ -47,7 +47,7 @@ const slides: Slide[] = [
   },
   {
     image: guadalupeImg,
-    imageAlt: "Basílica de Nossa Senhora de Guadalupe na Cidade do México",
+    imageAlt: "Igreja colonial de San Jacinto, no bairro de San Ángel — Cidade do México",
     region: "Cidade do México & Teotihuacán",
     days: [
       {
