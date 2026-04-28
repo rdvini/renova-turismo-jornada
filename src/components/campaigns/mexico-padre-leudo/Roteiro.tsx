@@ -32,6 +32,11 @@ const slides: Slide[] = [
         spiritual:
           "O início de uma jornada de fé — partimos em peregrinação rumo à terra de Nossa Senhora de Guadalupe.",
       },
+    ],
+  },
+  {
+    region: "Cidade do México & Teotihuacán",
+    days: [
       {
         day: "2° Dia",
         title: "CIDADE DO MÉXICO / GUADALUPE",
@@ -40,11 +45,6 @@ const slides: Slide[] = [
         spiritual:
           '"Não estou eu aqui, que sou tua Mãe?" — palavras de Nossa Senhora a São Juan Diego, ecoam neste santuário onde milhões peregrinam.',
       },
-    ],
-  },
-  {
-    region: "Teotihuacán & Centro Histórico",
-    days: [
       {
         day: "3° Dia",
         title: "TEOTIHUACÁN / XOCHIMILCO",
@@ -53,6 +53,11 @@ const slides: Slide[] = [
         spiritual:
           "Diante das antigas pirâmides, contemplamos a busca humana pelo sagrado — busca plenamente respondida em Cristo.",
       },
+    ],
+  },
+  {
+    region: "Centro Histórico & Tlaxcala / Puebla",
+    days: [
       {
         day: "4° Dia",
         title: "CIDADE DO MÉXICO / GUADALUPE",
@@ -61,11 +66,6 @@ const slides: Slide[] = [
         spiritual:
           "Voltamos aos pés da Morenita do Tepeyac — a tilma de São Juan Diego permanece intacta há quase 500 anos como sinal do amor materno de Maria.",
       },
-    ],
-  },
-  {
-    region: "Tlaxcala, Puebla & Cancún",
-    days: [
       {
         day: "5° Dia",
         title: "TLAXCALA / PUEBLA / PARIAN",
@@ -74,6 +74,11 @@ const slides: Slide[] = [
         spiritual:
           "A Capela do Rosário de Puebla, considerada a 'Oitava Maravilha do Mundo', é um cântico de louvor em ouro e azulejos a Nossa Senhora.",
       },
+    ],
+  },
+  {
+    region: "Cancún — Caribe Mexicano",
+    days: [
       {
         day: "6° Dia",
         title: "CIDADE DO MÉXICO / CANCÚN",
@@ -82,11 +87,6 @@ const slides: Slide[] = [
         spiritual:
           "Após dias intensos de peregrinação, um tempo de descanso — também um presente de Deus para renovar corpo e alma.",
       },
-    ],
-  },
-  {
-    region: "Cancún — Caribe Mexicano",
-    days: [
       {
         day: "7° Dia",
         title: "CANCÚN — ISLA MUJERES",
@@ -95,6 +95,11 @@ const slides: Slide[] = [
         spiritual:
           "Diante da imensidão do mar do Caribe, contemplamos a grandeza do Criador refletida na beleza da criação.",
       },
+    ],
+  },
+  {
+    region: "Cancún → Bogotá → Manaus",
+    days: [
       {
         day: "8° Dia",
         title: "CANCÚN — CHICHÉN ITZÁ",
@@ -103,11 +108,6 @@ const slides: Slide[] = [
         spiritual:
           "As ruínas maias nos lembram que toda civilização passa — somente o Reino de Deus permanece para sempre.",
       },
-    ],
-  },
-  {
-    region: "Cancún → Bogotá → Manaus",
-    days: [
       {
         day: "9° Dia",
         title: "CANCÚN / BOGOTÁ / MANAUS",
@@ -116,6 +116,11 @@ const slides: Slide[] = [
         spiritual:
           "Iniciamos o caminho de volta com o coração transbordando de gratidão pelas graças recebidas.",
       },
+    ],
+  },
+  {
+    region: "Manaus",
+    days: [
       {
         day: "10° Dia",
         title: "MANAUS",
