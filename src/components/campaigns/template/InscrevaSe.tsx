@@ -14,7 +14,7 @@ const InscrevaSe = () => {
     e.preventDefault();
     const { nome, email, telefone } = formData;
 
-    // Envia lead por e-mail para a Nayara (best-effort, não bloqueia)
+    // Envia lead por e-mail para o Guilherme (best-effort, não bloqueia)
     supabase.functions
       .invoke("send-contact-email", {
         body: {
@@ -27,7 +27,7 @@ const InscrevaSe = () => {
       })
       .catch((err) => console.error("send-contact-email error:", err));
 
-    const message = `Olá Nayara! Meu nome é ${nome}, meu e-mail é ${email} e meu telefone é ${telefone}. Gostaria de mais informações sobre a viagem à África do Sul.`;
+    const message = `Olá Guilherme! Meu nome é ${nome}, meu e-mail é ${email} e meu telefone é ${telefone}. Gostaria de mais informações sobre a viagem à África do Sul.`;
     window.open(
       `https://api.whatsapp.com/send/?phone=${NAYARA_WHATSAPP}&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`,
       "_blank"
@@ -52,7 +52,7 @@ const InscrevaSe = () => {
             </p>
             <a
               href={`https://api.whatsapp.com/send/?phone=${NAYARA_WHATSAPP}&text=${encodeURIComponent(
-                "Olá Nayara! Gostaria de mais informações sobre a viagem à África do Sul."
+                "Olá Guilherme! Gostaria de mais informações sobre a viagem à África do Sul."
               )}&type=phone_number&app_absent=0`}
               target="_blank"
               rel="noopener noreferrer"
