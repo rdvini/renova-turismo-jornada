@@ -1,5 +1,6 @@
 import cardAfricaDoSul from "@/assets/africa-do-sul/card-cover.jpg";
 import cardPortugal from "@/assets/portugal/card-cover.jpg";
+import cardLideres from "@/assets/lideres/hero-bg.jpg";
 
 export interface Campaign {
   id: string;
@@ -62,6 +63,18 @@ export const campaigns: Campaign[] = [
     image: cardPortugal,
     date: "Outubro de 2026",
     badge: "Peregrinação",
+    published: true,
+  },
+  {
+    id: "lideres",
+    slug: "/lideres",
+    title: "Terra Santa para Líderes",
+    subtitle: "PASTORES E PADRES",
+    description:
+      "Leve sua comunidade para uma jornada espiritual na Terra Santa com segurança, tradição e confiança. Pacote 100% completo para líderes religiosos.",
+    image: cardLideres,
+    date: "Datas sob consulta",
+    badge: "Líderes",
     published: true,
   },
 ];

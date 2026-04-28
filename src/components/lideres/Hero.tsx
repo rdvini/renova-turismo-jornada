@@ -1,0 +1,55 @@
+import heroBg from "@/assets/lideres/hero-bg.jpg";
+import logoRenova from "@/assets/logo-renova.svg";
+
+const WHATSAPP_URL =
+  "https://wa.me/5519998947307?text=Ol%C3%A1!%20Vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.";
+
+const Hero = () => {
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <img
+        src={heroBg}
+        alt="Vista de Jerusalém — Terra Santa"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-primary/70" />
+
+      <div className="relative z-10 container mx-auto px-4 py-20 text-center max-w-4xl">
+        <img
+          src={logoRenova}
+          alt="Renova Turismo"
+          className="h-14 md:h-16 mx-auto mb-8 animate-fade-in-up"
+        />
+        <h1
+          className="font-heading text-3xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-tight mb-6 animate-fade-in-up"
+          style={{ animationDelay: "0.15s" }}
+        >
+          Pastores e Padres:{" "}
+          <span className="font-light">
+            Leve sua comunidade para uma
+          </span>{" "}
+          jornada espiritual na Terra Santa
+        </h1>
+        <p
+          className="font-body text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto mb-10 animate-fade-in-up"
+          style={{ animationDelay: "0.3s" }}
+        >
+          Com a Renova, você leva o seu grupo para lugares sagrados com
+          segurança, tradição e confiança.
+        </p>
+
+        <a
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-[#25D366] hover:bg-[#20bd5a] text-white font-heading font-bold text-base md:text-lg uppercase tracking-wide px-10 py-4 rounded-md transition-all hover:scale-105 shadow-lg animate-fade-in-up"
+          style={{ animationDelay: "0.45s" }}
+        >
+          Conversar no WhatsApp
+        </a>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
