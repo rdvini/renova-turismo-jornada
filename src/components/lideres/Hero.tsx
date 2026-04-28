@@ -12,7 +12,7 @@ const Hero = () => {
         alt="Vista de Jerusalém — Terra Santa"
         className="absolute inset-0 w-full h-full object-cover"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/85 via-primary/80 to-primary/90" />
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/85 via-primary/80 to-primary/90 backdrop-blur-sm" />
 
       <div className="relative z-10 container mx-auto px-4 py-20 text-center max-w-4xl">
         <img
