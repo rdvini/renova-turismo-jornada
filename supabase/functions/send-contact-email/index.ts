@@ -1,7 +1,21 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.49.4";
-import { corsHeaders } from "https://esm.sh/@supabase/supabase-js@2.95.0/cors";
+import { z } from "https://esm.sh/zod@3.23.8";
+
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers":
+    "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
+};
 
 const NOTIFICATION_EMAIL = "contato@renovaturismo.com.br";
+
+const BodySchema = z.object({
+  nome: z.string().trim().min(1).max(100),
+  email: z.string().trim().email().max(255),
+  telefone: z.string().trim().min(5).max(20),
+  campaign: z.string().trim().max(100).optional(),
+  destinatario: z.string().trim().email().max(255).optional(),
+});
 
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") {
@@ -9,21 +23,24 @@ Deno.serve(async (req) => {
   }
 
   try {
-    const { nome, email, telefone, campaign, destinatario } = await req.json();
-    const toEmail = destinatario || NOTIFICATION_EMAIL;
+    const raw = await req.json().catch(() => null);
+    const parsed = BodySchema.safeParse(raw);
 
-    if (!nome || !email || !telefone) {
+    if (!parsed.success) {
       return new Response(
-        JSON.stringify({ error: "Todos os campos são obrigatórios." }),
+        JSON.stringify({ error: "Dados inválidos.", details: parsed.error.flatten().fieldErrors }),
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
+
+    const { nome, email, telefone, campaign, destinatario } = parsed.data;
+    const toEmail = destinatario || NOTIFICATION_EMAIL;
 
     const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
     const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
-    // Store submission in database
+    // Store submission in database (service role bypasses RLS)
     const { error: dbError } = await supabase
       .from("contact_submissions")
       .insert({ nome, email, telefone });
@@ -48,9 +65,10 @@ Deno.serve(async (req) => {
         body: JSON.stringify({
           from: "Renova Turismo <noreply@renovaturismo.com.br>",
           to: [toEmail],
-          subject: `Novo contato - ${campaign || "Viagem Turquia"}: ${nome}`,
+          subject: `Novo contato - ${campaign || "Viagem"}: ${nome}`,
           html: `
-            <h2>Novo contato pelo site - Viagem Turquia</h2>
+            <h2>Novo contato pelo site</h2>
+            <p><strong>Campanha:</strong> ${campaign || "—"}</p>
             <p><strong>Nome:</strong> ${nome}</p>
             <p><strong>E-mail:</strong> ${email}</p>
             <p><strong>Telefone:</strong> ${telefone}</p>
@@ -64,7 +82,6 @@ Deno.serve(async (req) => {
       }
     } else {
       console.log("RESEND_API_KEY not configured. Submission stored in database only.");
-      console.log(`New contact: ${nome} - ${email} - ${telefone}`);
     }
 
     return new Response(
