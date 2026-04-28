@@ -13,7 +13,7 @@ import guadalupeImg from "@/assets/mexico-padre-leudo/san-jacinto.jpg";
 import teotihuacanImg from "@/assets/mexico-padre-leudo/teotihuacan.jpg";
 import pueblaImg from "@/assets/mexico-padre-leudo/basilica-guadalupe-aerea.jpg";
 import cancunImg from "@/assets/mexico-padre-leudo/cancun-aerea.jpg";
-import chichenItzaImg from "@/assets/mexico-padre-leudo/chichen-itza.jpg";
+import chichenItzaImg from "@/assets/mexico-padre-leudo/cancun-zona-hoteleira.jpg";
 
 interface DayCard {
   day: string;
