@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import TurquiaPadreLeudo from "./pages/TurquiaPadreLeudo.tsx";
+import MexicoPadreLeudo from "./pages/MexicoPadreLeudo.tsx";
 import Turquia from "./pages/Turquia.tsx";
 import CampaignTemplate from "./pages/CampaignTemplate.tsx";
 import AfricaDoSul2 from "./pages/AfricaDoSul2.tsx";
@@ -23,6 +24,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/turquia-padre-leudo" element={<TurquiaPadreLeudo />} />
+          <Route path="/mexico-padre-leudo" element={<MexicoPadreLeudo />} />
           <Route path="/turquia" element={<Turquia />} />
           <Route path="/africa-do-sul" element={<CampaignTemplate />} />
           <Route path="/africa-do-sul-2" element={<AfricaDoSul2 />} />
