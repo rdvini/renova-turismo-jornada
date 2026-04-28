@@ -4,7 +4,6 @@ import { Label } from "@/components/ui/label";
 import { supabase } from "@/integrations/supabase/client";
 
 const NAYARA_WHATSAPP = "5519992016125";
-const NAYARA_EMAIL = "nayara@renovaturismo.com.br";
 
 const InscrevaSe = () => {
   const [formData, setFormData] = useState({ nome: "", email: "", telefone: "" });
@@ -14,7 +13,7 @@ const InscrevaSe = () => {
     e.preventDefault();
     const { nome, email, telefone } = formData;
 
-    // Envia lead por e-mail para o Guilherme (best-effort, não bloqueia)
+    // Envia lead por e-mail (best-effort, não bloqueia). Destinatário é definido server-side por campanha.
     supabase.functions
       .invoke("send-contact-email", {
         body: {
@@ -22,7 +21,6 @@ const InscrevaSe = () => {
           email,
           telefone,
           campaign: "Viagem África do Sul",
-          destinatario: NAYARA_EMAIL,
         },
       })
       .catch((err) => console.error("send-contact-email error:", err));

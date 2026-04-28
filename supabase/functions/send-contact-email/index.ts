@@ -7,14 +7,22 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
-const NOTIFICATION_EMAIL = "contato@renovaturismo.com.br";
+const DEFAULT_NOTIFICATION_EMAIL = "contato@renovaturismo.com.br";
+
+// Server-side allowlist: maps campaign identifier -> destination email.
+// Never trust a client-supplied destination address.
+const CAMPAIGN_RECIPIENTS: Record<string, string> = {
+  "turquia-padre-leudo": "nayara@renovaturismo.com.br",
+  "viagem áfrica do sul": "nayara@renovaturismo.com.br",
+  "viagem turquia": "contato@renovaturismo.com.br",
+  "viagem portugal": "contato@renovaturismo.com.br",
+};
 
 const BodySchema = z.object({
   nome: z.string().trim().min(1).max(100),
   email: z.string().trim().email().max(255),
   telefone: z.string().trim().min(5).max(20),
   campaign: z.string().trim().max(100).optional(),
-  destinatario: z.string().trim().email().max(255).optional(),
 });
 
 Deno.serve(async (req) => {
@@ -33,8 +41,9 @@ Deno.serve(async (req) => {
       );
     }
 
-    const { nome, email, telefone, campaign, destinatario } = parsed.data;
-    const toEmail = destinatario || NOTIFICATION_EMAIL;
+    const { nome, email, telefone, campaign } = parsed.data;
+    const campaignKey = campaign?.toLowerCase().trim() ?? "";
+    const toEmail = CAMPAIGN_RECIPIENTS[campaignKey] ?? DEFAULT_NOTIFICATION_EMAIL;
 
     const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
     const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
