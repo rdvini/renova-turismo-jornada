@@ -116,7 +116,7 @@ const slides: Slide[] = [
   },
   {
     image: chichenItzaImg,
-    imageAlt: "Pirâmide de Chichén Itzá — uma das Sete Maravilhas do Mundo Moderno",
+    imageAlt: "Vista aérea da zona hoteleira de Cancún — Caribe Mexicano",
     region: "Cancún → Bogotá → Manaus",
     days: [
       {
