@@ -32,14 +32,9 @@ const slides: Slide[] = [
         spiritual:
           "O início de uma jornada de fé — partimos em peregrinação rumo à terra de Nossa Senhora de Guadalupe.",
       },
-    ],
-  },
-  {
-    region: "Cidade do México & Guadalupe",
-    days: [
       {
         day: "2° Dia",
-        title: "CIDADE DO MÉXICO / GUADALUPE / CIDADE DO MÉXICO",
+        title: "CIDADE DO MÉXICO / GUADALUPE",
         description:
           "Café da manhã. Saída para o sul da cidade, bairro colonial Parish Chimalistac. Continuação ao Bairro de San Angel, entre ruas de paralelepípedos, até a Igreja de San Jacinto. Seguimos a Coyoacán, onde admiraremos o templo de San Juan Batista. À tarde, visita à Basílica de Guadalupe, o mais importante centro mariano na América Latina, com Celebração da Santa Missa. Retorno ao hotel para jantar e hospedagem.",
         spiritual:
@@ -48,21 +43,16 @@ const slides: Slide[] = [
     ],
   },
   {
-    region: "Teotihuacán & Xochimilco",
+    region: "Teotihuacán & Centro Histórico",
     days: [
       {
         day: "3° Dia",
-        title: "CIDADE DO MÉXICO / TEOTIHUACAN / XOCHIMILCO",
+        title: "TEOTIHUACÁN / XOCHIMILCO",
         description:
           "Café da manhã. Visita ao Museu de Antropologia e em seguida a um dos maiores sítios arqueológicos da Mesoamérica: Teotihuacán, a 'Cidade dos Deuses'. Visita ao templo de Quetzalcoatl, Calzada de los Muertos, Pirâmide do Sol e da Lua e templo Quetzal-Papalotl. Encerramos o dia com um passeio em uma trajinera tradicional em Xochimilco e tour no antigo convento de San Bernardino. Celebração da Santa Missa. Retorno ao hotel para jantar.",
         spiritual:
           "Diante das antigas pirâmides, contemplamos a busca humana pelo sagrado — busca plenamente respondida em Cristo.",
       },
-    ],
-  },
-  {
-    region: "Centro Histórico & Guadalupe",
-    days: [
       {
         day: "4° Dia",
         title: "CIDADE DO MÉXICO / GUADALUPE",
@@ -74,7 +64,7 @@ const slides: Slide[] = [
     ],
   },
   {
-    region: "Tlaxcala & Puebla",
+    region: "Tlaxcala, Puebla & Cancún",
     days: [
       {
         day: "5° Dia",
@@ -84,11 +74,6 @@ const slides: Slide[] = [
         spiritual:
           "A Capela do Rosário de Puebla, considerada a 'Oitava Maravilha do Mundo', é um cântico de louvor em ouro e azulejos a Nossa Senhora.",
       },
-    ],
-  },
-  {
-    region: "Cancún",
-    days: [
       {
         day: "6° Dia",
         title: "CIDADE DO MÉXICO / CANCÚN",
@@ -97,6 +82,11 @@ const slides: Slide[] = [
         spiritual:
           "Após dias intensos de peregrinação, um tempo de descanso — também um presente de Deus para renovar corpo e alma.",
       },
+    ],
+  },
+  {
+    region: "Cancún — Caribe Mexicano",
+    days: [
       {
         day: "7° Dia",
         title: "CANCÚN — ISLA MUJERES",
@@ -105,11 +95,6 @@ const slides: Slide[] = [
         spiritual:
           "Diante da imensidão do mar do Caribe, contemplamos a grandeza do Criador refletida na beleza da criação.",
       },
-    ],
-  },
-  {
-    region: "Cancún → Manaus",
-    days: [
       {
         day: "8° Dia",
         title: "CANCÚN — CHICHÉN ITZÁ",
@@ -118,6 +103,11 @@ const slides: Slide[] = [
         spiritual:
           "As ruínas maias nos lembram que toda civilização passa — somente o Reino de Deus permanece para sempre.",
       },
+    ],
+  },
+  {
+    region: "Cancún → Bogotá → Manaus",
+    days: [
       {
         day: "9° Dia",
         title: "CANCÚN / BOGOTÁ / MANAUS",
