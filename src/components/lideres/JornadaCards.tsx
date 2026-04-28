@@ -1,11 +1,37 @@
-import card01 from "@/assets/lideres/card-01.svg";
-import card02 from "@/assets/lideres/card-02.svg";
-import card03 from "@/assets/lideres/card-03.svg";
+import { BookOpen, Heart, Users } from "lucide-react";
+import cardBg01 from "@/assets/lideres/card-bg-01.jpg";
+import cardBg02 from "@/assets/lideres/card-bg-02.jpg";
+import cardBg03 from "@/assets/lideres/card-bg-03.jpg";
 
 const WHATSAPP_URL =
   "https://wa.me/5519998947307?text=Ol%C3%A1!%20Vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.";
 
-const cards = [card01, card02, card03];
+const cards = [
+  {
+    image: cardBg01,
+    icon: BookOpen,
+    title: "A Bíblia ganha vida",
+    description:
+      "Ler as Escrituras é poderoso. Mas ler o Sermão da Montanha no Monte das Oliveiras ou renovar o batismo no Rio Jordão transforma a compreensão da Palavra. A Bíblia deixa de ser imaginada e passa a ser vivida.",
+    alt: "Vista panorâmica de Jerusalém com a Cúpula da Rocha",
+  },
+  {
+    image: cardBg02,
+    icon: Heart,
+    title: "Renovação espiritual",
+    description:
+      "É o momento de desconectar do mundo e conectar com o sagrado. Peregrinações são momentos de avivamento, onde os irmãos retornam com um propósito renovado e uma fé inabalável.",
+    alt: "Cúpula da Rocha em Jerusalém",
+  },
+  {
+    image: cardBg03,
+    icon: Users,
+    title: "União e comunhão",
+    description:
+      "A experiência compartilhada de caminhar pelos lugares sagrados cria laços eternos entre os membros do grupo. Sua comunidade volta mais unida, mais forte e com histórias que serão contadas por gerações.",
+    alt: "Peregrinos em oração no Muro das Lamentações",
+  },
+];
 
 const JornadaCards = () => {
   return (
@@ -17,14 +43,37 @@ const JornadaCards = () => {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto mb-12">
-          {cards.map((src, i) => (
-            <img
-              key={i}
-              src={src}
-              alt={`Destaque ${i + 1} da jornada`}
-              className="w-full h-auto rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
-            />
-          ))}
+          {cards.map((card, i) => {
+            const Icon = card.icon;
+            return (
+              <article
+                key={i}
+                className="group relative bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+              >
+                <div className="relative h-64 overflow-hidden">
+                  <img
+                    src={card.image}
+                    alt={card.alt}
+                    loading="lazy"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-b from-primary/30 via-transparent to-primary/40" />
+                  <div className="absolute -bottom-6 left-6 w-12 h-12 rounded-full bg-secondary flex items-center justify-center shadow-lg">
+                    <Icon className="w-6 h-6 text-secondary-foreground" strokeWidth={2} />
+                  </div>
+                </div>
+
+                <div className="p-6 pt-10 flex-1 flex flex-col">
+                  <h3 className="font-heading text-xl md:text-2xl font-bold text-primary uppercase mb-3 tracking-tight">
+                    {card.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {card.description}
+                  </p>
+                </div>
+              </article>
+            );
+          })}
         </div>
 
         <div className="text-center">
