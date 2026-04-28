@@ -9,7 +9,7 @@ const Hero = () => {
       <img
         src={heroImage}
         alt="Vista panorâmica da Turquia"
-        className="absolute inset-0 w-full h-full object-cover backdrop-blur-sm"
+        className="absolute inset-0 w-full h-full object-cover"
       />
       <div className="absolute inset-0 bg-black/30" />
 
