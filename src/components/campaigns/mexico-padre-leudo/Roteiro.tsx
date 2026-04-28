@@ -7,6 +7,7 @@ import {
   CarouselNext,
   type CarouselApi,
 } from "@/components/ui/carousel";
+import aeroportoManaus from "@/assets/mexico-padre-leudo/aeroporto-manaus.webp";
 
 interface DayCard {
   day: string;
@@ -18,6 +19,7 @@ interface DayCard {
 interface Slide {
   region: string;
   days: DayCard[];
+  image?: string;
 }
 
 const slides: Slide[] = [
