@@ -11,7 +11,7 @@ import {
 import aeroportoManaus from "@/assets/mexico-padre-leudo/aeroporto-manaus.webp";
 import guadalupeImg from "@/assets/mexico-padre-leudo/san-jacinto.jpg";
 import teotihuacanImg from "@/assets/mexico-padre-leudo/teotihuacan.jpg";
-import pueblaImg from "@/assets/mexico-padre-leudo/puebla.jpg";
+import pueblaImg from "@/assets/mexico-padre-leudo/basilica-guadalupe-aerea.jpg";
 import cancunImg from "@/assets/mexico-padre-leudo/cancun.jpg";
 import chichenItzaImg from "@/assets/mexico-padre-leudo/chichen-itza.jpg";
 
@@ -70,7 +70,7 @@ const slides: Slide[] = [
   },
   {
     image: pueblaImg,
-    imageAlt: "Capela do Rosário de Puebla — joia do barroco mexicano",
+    imageAlt: "Vista aérea da Basílica de Nossa Senhora de Guadalupe — Cidade do México",
     region: "Centro Histórico & Tlaxcala / Puebla",
     days: [
       {
