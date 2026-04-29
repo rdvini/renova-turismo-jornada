@@ -13,7 +13,7 @@ const cards = [
     title: "A fé ganha vida",
     description:
       "Ler as Escrituras e conhecer a história da Igreja é poderoso. Mas caminhar pelos lugares sagrados, visitar santuários e percorrer rotas de fé transforma a vivência espiritual. A tradição deixa de ser apenas estudada e passa a ser experimentada.",
-    alt: "Peregrinos caminhando por um lugar sagrado",
+    alt: "Cúpula da Rocha e Muro das Lamentações em Jerusalém",
   },
   {
     image: cardBg02,
