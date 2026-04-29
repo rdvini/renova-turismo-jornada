@@ -1,4 +1,4 @@
-import heroImage from "@/assets/padre-leudo/hero-turkiye.webp";
+import heroImage from "@/assets/mexico-padre-leudo/hero-basilica-guadalupe.jpg";
 
 const Hero = () => {
   return (
@@ -8,7 +8,7 @@ const Hero = () => {
     >
       <img
         src={heroImage}
-        alt="Vista panorâmica do México"
+        alt="Basílica de Nossa Senhora de Guadalupe — Cidade do México"
         className="absolute inset-0 w-full h-full object-cover"
       />
       <div className="absolute inset-0 bg-black/30" />
