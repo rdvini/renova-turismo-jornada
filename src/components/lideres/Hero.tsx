@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import heroSlide2 from "@/assets/lideres/hero-slide-02.jpg";
-import heroSlide3 from "@/assets/lideres/hero-slide-03.jpg";
-import heroSlide4 from "@/assets/lideres/hero-slide-04.jpg";
-import heroSlide5 from "@/assets/lideres/hero-slide-05.jpg";
+import heroSlide2 from "@/assets/lideres/hero-slide-02.webp";
+import heroSlide3 from "@/assets/lideres/hero-slide-03.webp";
+import heroSlide4 from "@/assets/lideres/hero-slide-04.webp";
+import heroSlide5 from "@/assets/lideres/hero-slide-05.webp";
 import logoRenova from "@/assets/logo-renova.svg";
 
 const WHATSAPP_URL =

@@ -1,5 +1,5 @@
-import depo01 from "@/assets/lideres/depo-01.png";
-import depo02 from "@/assets/lideres/depo-02.png";
+import depo01 from "@/assets/lideres/depo-01.webp";
+import depo02 from "@/assets/lideres/depo-02.webp";
 
 const WHATSAPP_URL =
   "https://wa.me/5519998947307?text=Ol%C3%A1!%20Vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.";

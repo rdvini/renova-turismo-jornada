@@ -1,6 +1,6 @@
 import cardAfricaDoSul from "@/assets/africa-do-sul/card-cover.webp";
 import cardPortugal from "@/assets/portugal/card-cover.jpg";
-import cardLideres from "@/assets/lideres/hero-bg.jpg";
+import cardLideres from "@/assets/lideres/hero-bg.webp";
 
 export interface Campaign {
   id: string;
