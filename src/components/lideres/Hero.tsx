@@ -26,9 +26,8 @@ const Hero = () => {
         >
           Pastores e Padres:{" "}
           <span className="font-normal">
-            Leve sua comunidade para uma
-          </span>{" "}
-          jornada espiritual na Terra Santa
+            Leve sua comunidade para uma jornada espiritual em grupo
+          </span>
         </h1>
         <p
           className="font-body text-lg md:text-xl text-primary-foreground max-w-2xl mx-auto mb-10 animate-fade-in-up [text-shadow:_0_1px_6px_rgb(0_0_0_/_35%)]"
