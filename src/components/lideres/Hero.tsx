@@ -59,7 +59,7 @@ const Hero = () => {
           ))}
         </div>
       </div>
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/85 via-primary/80 to-primary/90" />
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/50 via-primary/45 to-primary/55" />
 
       <div className="relative z-10 container mx-auto px-4 py-20 text-center max-w-4xl">
         <img
