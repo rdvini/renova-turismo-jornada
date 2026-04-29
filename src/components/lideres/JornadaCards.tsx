@@ -21,7 +21,7 @@ const cards = [
     title: "Renovação espiritual",
     description:
       "É o momento de desconectar do mundo e conectar com o sagrado. Peregrinações são momentos de avivamento, onde os irmãos retornam com um propósito renovado e uma fé inabalável.",
-    alt: "Momento de oração e contemplação durante uma peregrinação",
+    alt: "Santuário de Fátima em Portugal",
   },
   {
     image: cardBg03,
@@ -29,7 +29,7 @@ const cards = [
     title: "União e comunhão",
     description:
       "A experiência compartilhada de viajar e orar juntos cria laços eternos entre os membros do grupo. Sua comunidade volta mais unida, mais forte e com histórias que serão contadas por gerações.",
-    alt: "Grupo de peregrinos reunidos em comunhão",
+    alt: "Basílica de São Pedro no Vaticano",
   },
 ];
 
