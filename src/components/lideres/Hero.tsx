@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import heroSlide2 from "@/assets/lideres/hero-slide-02.jpg";
 import heroSlide3 from "@/assets/lideres/hero-slide-03.jpg";
+import heroSlide4 from "@/assets/lideres/hero-slide-04.jpg";
 import logoRenova from "@/assets/logo-renova.svg";
 
 const WHATSAPP_URL =
@@ -9,6 +10,7 @@ const WHATSAPP_URL =
 const SLIDES = [
   { src: heroSlide2, alt: "Cúpula da Rocha e Muro das Lamentações em Jerusalém" },
   { src: heroSlide3, alt: "Basílica de Nossa Senhora de Guadalupe, México" },
+  { src: heroSlide4, alt: "Basílica de São Pedro no Vaticano ao entardecer" },
 ];
 
 const Hero = () => {
