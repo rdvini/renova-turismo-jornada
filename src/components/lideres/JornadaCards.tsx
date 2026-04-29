@@ -10,10 +10,10 @@ const cards = [
   {
     image: cardBg01,
     icon: BookOpen,
-    title: "A Bíblia ganha vida",
+    title: "A fé ganha vida",
     description:
-      "Ler as Escrituras é poderoso. Mas ler o Sermão da Montanha no Monte das Oliveiras ou renovar o batismo no Rio Jordão transforma a compreensão da Palavra. A Bíblia deixa de ser imaginada e passa a ser vivida.",
-    alt: "Vista panorâmica de Jerusalém com a Cúpula da Rocha",
+      "Ler as Escrituras e conhecer a história da Igreja é poderoso. Mas caminhar pelos lugares sagrados, visitar santuários e percorrer rotas de fé transforma a vivência espiritual. A tradição deixa de ser apenas estudada e passa a ser experimentada.",
+    alt: "Peregrinos caminhando por um lugar sagrado",
   },
   {
     image: cardBg02,
@@ -21,15 +21,15 @@ const cards = [
     title: "Renovação espiritual",
     description:
       "É o momento de desconectar do mundo e conectar com o sagrado. Peregrinações são momentos de avivamento, onde os irmãos retornam com um propósito renovado e uma fé inabalável.",
-    alt: "Cúpula da Rocha em Jerusalém",
+    alt: "Momento de oração e contemplação durante uma peregrinação",
   },
   {
     image: cardBg03,
     icon: Users,
     title: "União e comunhão",
     description:
-      "A experiência compartilhada de caminhar pelos lugares sagrados cria laços eternos entre os membros do grupo. Sua comunidade volta mais unida, mais forte e com histórias que serão contadas por gerações.",
-    alt: "Peregrinos em oração no Muro das Lamentações",
+      "A experiência compartilhada de viajar e orar juntos cria laços eternos entre os membros do grupo. Sua comunidade volta mais unida, mais forte e com histórias que serão contadas por gerações.",
+    alt: "Grupo de peregrinos reunidos em comunhão",
   },
 ];
 
