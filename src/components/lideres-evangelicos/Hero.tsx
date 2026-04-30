@@ -100,7 +100,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <
+        <a
           href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
