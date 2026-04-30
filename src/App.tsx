@@ -11,6 +11,7 @@ import CampaignTemplate from "./pages/CampaignTemplate.tsx";
 import AfricaDoSul2 from "./pages/AfricaDoSul2.tsx";
 import Portugal from "./pages/Portugal.tsx";
 import Lideres from "./pages/Lideres.tsx";
+import LideresEvangelicos from "./pages/LideresEvangelicos.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
