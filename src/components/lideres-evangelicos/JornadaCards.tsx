@@ -10,26 +10,26 @@ const cards = [
   {
     image: cardBg01,
     icon: BookOpen,
-    title: "A fé ganha vida",
+    title: "A Palavra ganha vida",
     description:
-      "Ler as Escrituras e conhecer a história da Igreja é poderoso. Mas caminhar pelos lugares sagrados, visitar santuários e percorrer rotas de fé transforma a vivência espiritual. A tradição deixa de ser apenas estudada e passa a ser experimentada.",
-    alt: "Cúpula da Rocha e Muro das Lamentações em Jerusalém",
+      "Estudar a Bíblia é transformador. Mas pisar nos lugares onde Jesus caminhou, navegar pelo Mar da Galileia e visitar os cenários do Antigo e Novo Testamento muda a forma de pregar e de viver a Palavra para sempre.",
+    alt: "Mar da Galileia e a Terra Santa",
   },
   {
     image: cardBg02,
     icon: Heart,
-    title: "Renovação espiritual",
+    title: "Avivamento espiritual",
     description:
-      "É o momento de desconectar do mundo e conectar com o sagrado. Peregrinações são momentos de avivamento, onde os irmãos retornam com um propósito renovado e uma fé inabalável.",
-    alt: "Santuário de Fátima em Portugal",
+      "É o momento de desconectar do mundo e renovar a fé na fonte. Peregrinações bíblicas são tempos de avivamento, em que os irmãos voltam com propósito renovado e fome pela Palavra.",
+    alt: "Lugares bíblicos da Terra Santa",
   },
   {
     image: cardBg03,
     icon: Users,
-    title: "União e comunhão",
+    title: "Unidade e comunhão",
     description:
-      "A experiência compartilhada de viajar e orar juntos cria laços eternos entre os membros do grupo. Sua comunidade volta mais unida, mais forte e com histórias que serão contadas por gerações.",
-    alt: "Basílica de São Pedro no Vaticano",
+      "Viajar, orar e estudar juntos cria laços eternos entre os membros da igreja. Sua comunidade volta mais unida, mais forte e com testemunhos que serão contados por gerações.",
+    alt: "Grupo em viagem pela Terra Santa",
   },
 ];
 
