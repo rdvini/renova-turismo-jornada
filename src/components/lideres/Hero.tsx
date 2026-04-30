@@ -71,9 +71,9 @@ const Hero = () => {
           className="font-heading text-3xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-tight mb-6 animate-fade-in-up [text-shadow:_0_2px_12px_rgb(0_0_0_/_40%)]"
           style={{ animationDelay: "0.15s" }}
         >
-          Pastores e Padres:{" "}
+          Padres:{" "}
           <span className="font-normal">
-            Leve sua comunidade para uma jornada espiritual em grupo
+            Leve sua paróquia para uma peregrinação inesquecível
           </span>
         </h1>
         <p
