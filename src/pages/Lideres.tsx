@@ -9,7 +9,7 @@ import Footer from "@/components/landing/Footer";
 const Lideres = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Pastores e Padres na Terra Santa | Renova Turismo";
+    document.title = "Padres na Terra Santa | Renova Turismo";
   }, []);
 
   return (
