@@ -26,6 +26,20 @@ const Depoimentos = () => {
           />
         </div>
 
+        <div className="max-w-3xl mx-auto mb-14">
+          <div className="relative aspect-video rounded-2xl overflow-hidden shadow-lg border border-border">
+            <iframe
+              src="https://www.youtube.com/embed/Hg_qGXItNHY?rel=0&modestbranding=1"
+              title="Depoimento de cliente Renova Turismo"
+              loading="lazy"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full"
+            />
+          </div>
+        </div>
+
         <div className="text-center">
           <a
             href={WHATSAPP_URL}
