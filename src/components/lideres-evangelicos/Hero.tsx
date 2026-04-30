@@ -71,17 +71,17 @@ const Hero = () => {
           className="font-heading text-3xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-tight mb-6 animate-fade-in-up [text-shadow:_0_2px_12px_rgb(0_0_0_/_40%)]"
           style={{ animationDelay: "0.15s" }}
         >
-          Pastores e Padres:{" "}
+          Pastores:{" "}
           <span className="font-normal">
-            Leve sua comunidade para uma jornada espiritual em grupo
+            Leve sua igreja para uma jornada bíblica em grupo
           </span>
         </h1>
         <p
           className="font-body text-lg md:text-xl text-primary-foreground max-w-2xl mx-auto mb-10 animate-fade-in-up [text-shadow:_0_1px_6px_rgb(0_0_0_/_35%)]"
           style={{ animationDelay: "0.3s" }}
         >
-          Com a Renova, você leva o seu grupo para lugares sagrados com
-          segurança, tradição e confiança.
+          Com a Renova, você conduz seu rebanho pelos lugares onde a Palavra
+          aconteceu, com segurança, organização e propósito.
         </p>
 
         <a
