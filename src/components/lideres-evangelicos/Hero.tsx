@@ -77,12 +77,28 @@ const Hero = () => {
           </span>
         </h1>
         <p
-          className="font-body text-lg md:text-xl text-primary-foreground max-w-2xl mx-auto mb-10 animate-fade-in-up [text-shadow:_0_1px_6px_rgb(0_0_0_/_35%)]"
+          className="font-body text-lg md:text-xl text-primary-foreground max-w-2xl mx-auto mb-8 animate-fade-in-up [text-shadow:_0_1px_6px_rgb(0_0_0_/_35%)]"
           style={{ animationDelay: "0.3s" }}
         >
           Com a Renova, você conduz seu rebanho pelos lugares onde a Palavra
           aconteceu, com segurança, organização e propósito.
         </p>
+
+        <div
+          className="max-w-xl mx-auto mb-10 animate-fade-in-up"
+          style={{ animationDelay: "0.4s" }}
+        >
+          <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-primary-foreground/20 shadow-lg">
+            <iframe
+              src="https://www.youtube.com/embed/D_aMS7SnGkI?autoplay=1&mute=1&playsinline=1&rel=0&modestbranding=1"
+              title="Pastores na Terra Santa - Renova Turismo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full"
+            />
+          </div>
+        </div>
 
         <a
           href={WHATSAPP_URL}
