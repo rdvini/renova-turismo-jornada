@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import heroSlide2 from "@/assets/lideres/hero-slide-02.webp";
-import heroSlide3 from "@/assets/lideres/hero-slide-03.webp";
-import heroSlide4 from "@/assets/lideres/hero-slide-04.webp";
-import heroSlide5 from "@/assets/lideres/hero-slide-05.webp";
+import heroJerusalem from "@/assets/lideres-evangelicos/hero-jerusalem.jpeg";
 import logoRenova from "@/assets/logo-renova.svg";
 
 const WHATSAPP_URL =
@@ -10,9 +8,7 @@ const WHATSAPP_URL =
 
 const SLIDES = [
   { src: heroSlide2, alt: "Muro das Lamentações em Jerusalém, Terra Santa" },
-  { src: heroSlide3, alt: "Lugares sagrados visitados em peregrinação" },
-  { src: heroSlide4, alt: "Pontos bíblicos da Terra Santa ao entardecer" },
-  { src: heroSlide5, alt: "Paisagem de destinos da fé cristã" },
+  { src: heroJerusalem, alt: "Cidade Antiga de Jerusalém ao entardecer, Israel" },
 ];
 
 // Clona o primeiro slide ao final para permitir avanço contínuo sem retorno visual
