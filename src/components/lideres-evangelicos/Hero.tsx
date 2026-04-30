@@ -9,10 +9,10 @@ const WHATSAPP_URL =
   "https://wa.me/5519998947307?text=Ol%C3%A1!%20Vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.";
 
 const SLIDES = [
-  { src: heroSlide2, alt: "Cúpula da Rocha e Muro das Lamentações em Jerusalém" },
-  { src: heroSlide3, alt: "Basílica de Nossa Senhora de Guadalupe, México" },
-  { src: heroSlide4, alt: "Basílica de São Pedro no Vaticano ao entardecer" },
-  { src: heroSlide5, alt: "Santuário de Nossa Senhora de Lourdes, França" },
+  { src: heroSlide2, alt: "Muro das Lamentações em Jerusalém, Terra Santa" },
+  { src: heroSlide3, alt: "Lugares sagrados visitados em peregrinação" },
+  { src: heroSlide4, alt: "Pontos bíblicos da Terra Santa ao entardecer" },
+  { src: heroSlide5, alt: "Paisagem de destinos da fé cristã" },
 ];
 
 // Clona o primeiro slide ao final para permitir avanço contínuo sem retorno visual
