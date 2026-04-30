@@ -9,10 +9,10 @@ const WHATSAPP_URL =
   "https://wa.me/5519998947307?text=Ol%C3%A1!%20Vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.";
 
 const SLIDES = [
-  { src: heroSlide2, alt: "Cúpula da Rocha e Muro das Lamentações em Jerusalém" },
-  { src: heroSlide3, alt: "Basílica de Nossa Senhora de Guadalupe, México" },
-  { src: heroSlide4, alt: "Basílica de São Pedro no Vaticano ao entardecer" },
-  { src: heroSlide5, alt: "Santuário de Nossa Senhora de Lourdes, França" },
+  { src: heroSlide2, alt: "Muro das Lamentações em Jerusalém, Terra Santa" },
+  { src: heroSlide3, alt: "Lugares sagrados visitados em peregrinação" },
+  { src: heroSlide4, alt: "Pontos bíblicos da Terra Santa ao entardecer" },
+  { src: heroSlide5, alt: "Paisagem de destinos da fé cristã" },
 ];
 
 // Clona o primeiro slide ao final para permitir avanço contínuo sem retorno visual
@@ -71,17 +71,17 @@ const Hero = () => {
           className="font-heading text-3xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-tight mb-6 animate-fade-in-up [text-shadow:_0_2px_12px_rgb(0_0_0_/_40%)]"
           style={{ animationDelay: "0.15s" }}
         >
-          Padres:{" "}
+          Pastores:{" "}
           <span className="font-normal">
-            Leve sua paróquia para uma peregrinação inesquecível
+            Leve sua igreja para uma jornada bíblica em grupo
           </span>
         </h1>
         <p
           className="font-body text-lg md:text-xl text-primary-foreground max-w-2xl mx-auto mb-10 animate-fade-in-up [text-shadow:_0_1px_6px_rgb(0_0_0_/_35%)]"
           style={{ animationDelay: "0.3s" }}
         >
-          Com a Renova, você leva o seu grupo para lugares sagrados com
-          segurança, tradição e confiança.
+          Com a Renova, você conduz seu rebanho pelos lugares onde a Palavra
+          aconteceu, com segurança, organização e propósito.
         </p>
 
         <a
