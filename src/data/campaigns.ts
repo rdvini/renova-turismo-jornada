@@ -15,6 +15,7 @@ export interface Campaign {
 }
 
 import heroTurkiye from "@/assets/padre-leudo/hero-turkiye.webp";
+import cardMexico from "@/assets/mexico-padre-leudo/card-cover.jpeg";
 
 export const campaigns: Campaign[] = [
   {
@@ -24,7 +25,7 @@ export const campaigns: Campaign[] = [
     subtitle: "de Manaus para o Mundo",
     description:
       "Peregrinação pelo México visitando o Santuário de Nossa Senhora de Guadalupe e os principais locais da fé católica mexicana.",
-    image: heroTurkiye,
+    image: cardMexico,
     date: "Datas sob consulta",
     badge: "Peregrinação",
     published: true,
