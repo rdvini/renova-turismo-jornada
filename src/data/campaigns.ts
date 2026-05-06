@@ -18,6 +18,18 @@ import heroTurkiye from "@/assets/padre-leudo/hero-turkiye.webp";
 
 export const campaigns: Campaign[] = [
   {
+    id: "mexico-padre-leudo",
+    slug: "/mexico-padre-leudo",
+    title: "México — Pe. Leudo Santos",
+    subtitle: "de Manaus para o Mundo",
+    description:
+      "Peregrinação pelo México visitando o Santuário de Nossa Senhora de Guadalupe e os principais locais da fé católica mexicana.",
+    image: heroTurkiye,
+    date: "Datas sob consulta",
+    badge: "Peregrinação",
+    published: true,
+  },
+  {
     id: "turquia-padre-leudo",
     slug: "/turquia-padre-leudo",
     title: "Turquia — Pe. Leudo Santos",
@@ -27,7 +39,7 @@ export const campaigns: Campaign[] = [
     image: heroTurkiye,
     date: "06 a 17 de Setembro de 2027",
     badge: "Peregrinação",
-    published: true,
+    published: false,
   },
   {
     id: "turquia",
