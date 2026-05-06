@@ -27,19 +27,7 @@ export const campaigns: Campaign[] = [
     image: heroTurkiye,
     date: "06 a 17 de Setembro de 2027",
     badge: "Peregrinação",
-    published: false,
-  },
-  {
-    id: "mexico-padre-leudo",
-    slug: "/mexico-padre-leudo",
-    title: "México — Pe. Leudo Santos",
-    subtitle: "de Manaus para o Mundo",
-    description:
-      "Peregrinação pelo México visitando o Santuário de Nossa Senhora de Guadalupe e os principais locais da fé católica mexicana.",
-    image: heroTurkiye,
-    date: "Datas sob consulta",
-    badge: "Peregrinação",
-    published: false,
+    published: true,
   },
   {
     id: "turquia",
