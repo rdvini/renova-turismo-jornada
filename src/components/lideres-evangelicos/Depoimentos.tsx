@@ -1,8 +1,22 @@
-import depo01 from "@/assets/lideres/depo-01.webp";
-import depo02 from "@/assets/lideres/depo-02.webp";
+import { Star, Quote } from "lucide-react";
 
 const WHATSAPP_URL =
   "https://wa.me/5519998947307?text=Ol%C3%A1!%20Vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.";
+
+const TESTIMONIALS = [
+  {
+    name: "Pastor Ricardo Almeida",
+    role: "Igreja Batista Renovada",
+    quote:
+      "A Renova Turismo organizou nossa viagem à Terra Santa com excelência. Cada detalhe foi planejado para que nosso grupo pudesse vivenciar momentos inesquecíveis de fé e comunhão.",
+  },
+  {
+    name: "Pastora Fernanda Lima",
+    role: "Igreja Presbiteriana Central",
+    quote:
+      "Levei nossa congregação e voltamos transformados. A equipe cuidou de tudo com dedicação e profissionalismo. Recomendo a todos os líderes que desejam uma experiência única.",
+  },
+];
 
 const Depoimentos = () => {
   return (
@@ -14,16 +28,26 @@ const Depoimentos = () => {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-14">
-          <img
-            src={depo01}
-            alt="Depoimento de cliente"
-            className="w-full h-auto rounded-2xl shadow-lg"
-          />
-          <img
-            src={depo02}
-            alt="Depoimento de cliente"
-            className="w-full h-auto rounded-2xl shadow-lg"
-          />
+          {TESTIMONIALS.map((t) => (
+            <div
+              key={t.name}
+              className="relative bg-card rounded-2xl shadow-lg border border-border p-8 flex flex-col"
+            >
+              <Quote className="text-secondary/30 mb-4" size={36} />
+              <p className="font-body text-base md:text-lg text-foreground/90 leading-relaxed mb-6 flex-1">
+                "{t.quote}"
+              </p>
+              <div className="flex gap-0.5 mb-3">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="text-yellow-500 fill-yellow-500" size={16} />
+                ))}
+              </div>
+              <div>
+                <p className="font-heading font-semibold text-primary">{t.name}</p>
+                <p className="font-body text-sm text-muted-foreground">{t.role}</p>
+              </div>
+            </div>
+          ))}
         </div>
 
         <div className="max-w-3xl mx-auto mb-14">
