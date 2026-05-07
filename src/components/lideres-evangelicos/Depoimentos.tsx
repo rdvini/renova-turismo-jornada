@@ -31,7 +31,7 @@ const Depoimentos = () => {
           {TESTIMONIALS.map((t) => (
             <div
               key={t.name}
-              className="relative bg-card rounded-2xl shadow-lg border border-border p-8 flex flex-col"
+              className="relative bg-card rounded-2xl shadow-lg border border-border p-8 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
               <Quote className="text-secondary/30 mb-4" size={36} />
               <p className="font-body text-base md:text-lg text-foreground/90 leading-relaxed mb-6 flex-1">
