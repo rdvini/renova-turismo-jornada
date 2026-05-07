@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import heroSlide2 from "@/assets/lideres/hero-slide-02.webp";
 import heroJerusalem from "@/assets/lideres-evangelicos/hero-jerusalem.jpeg";
 import heroPiramides from "@/assets/lideres-evangelicos/hero-piramides-egito.jpeg";
+import heroEsfinge from "@/assets/lideres-evangelicos/hero-esfinge-piramide.jpeg";
 import logoRenova from "@/assets/logo-renova.svg";
 
 const WHATSAPP_URL =
@@ -10,6 +11,7 @@ const WHATSAPP_URL =
 const SLIDES = [
   { src: heroSlide2, alt: "Muro das Lamentações em Jerusalém, Terra Santa" },
   { src: heroPiramides, alt: "Pirâmides de Gizé com caravana de camelos, Egito" },
+  { src: heroEsfinge, alt: "Esfinge de Gizé com a Pirâmide de Quéfren ao fundo, Egito" },
   { src: heroJerusalem, alt: "Cidade Antiga de Jerusalém ao entardecer, Israel" },
 ];
 
