@@ -80,7 +80,7 @@ export const campaigns: Campaign[] = [
   },
   {
     id: "lideres",
-    slug: "/lideres",
+    slug: "/lideres-catolicos",
     title: "Terra Santa para Líderes",
     subtitle: "PASTORES E PADRES",
     description:
