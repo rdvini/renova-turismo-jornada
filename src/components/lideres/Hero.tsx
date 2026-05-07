@@ -65,10 +65,10 @@ const Hero = () => {
         <img
           src={logoRenova}
           alt="Renova Turismo"
-          className="h-14 md:h-16 mx-auto mb-8 animate-fade-in-up drop-shadow-lg"
+          className="h-14 md:h-16 mx-auto mb-8 animate-fade-in-up"
         />
         <h1
-          className="font-heading text-3xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-tight mb-6 animate-fade-in-up [text-shadow:_0_2px_12px_rgb(0_0_0_/_40%)]"
+          className="font-heading text-3xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-tight mb-6 animate-fade-in-up"
           style={{ animationDelay: "0.15s" }}
         >
           Padres:{" "}
@@ -77,7 +77,7 @@ const Hero = () => {
           </span>
         </h1>
         <p
-          className="font-body text-lg md:text-xl text-primary-foreground max-w-2xl mx-auto mb-8 animate-fade-in-up [text-shadow:_0_1px_6px_rgb(0_0_0_/_35%)]"
+          className="font-body text-lg md:text-xl text-primary-foreground max-w-2xl mx-auto mb-8 animate-fade-in-up"
           style={{ animationDelay: "0.3s" }}
         >
           Com a Renova, você leva o seu grupo para lugares sagrados com
