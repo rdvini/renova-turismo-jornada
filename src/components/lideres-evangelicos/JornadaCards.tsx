@@ -1,6 +1,6 @@
 import { BookOpen, Heart, Users } from "lucide-react";
 import cardBg01 from "@/assets/lideres/card-bg-01.webp";
-import cardBg02 from "@/assets/lideres/card-bg-02.webp";
+import cardBg02 from "@/assets/lideres-evangelicos/avivamento-espiritual.jpeg";
 import cardBg03 from "@/assets/lideres/card-bg-03.webp";
 
 const WHATSAPP_URL =
