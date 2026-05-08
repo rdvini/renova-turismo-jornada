@@ -27,16 +27,22 @@ const PorQueRenova = () => {
           {items.map(({ icon: Icon, title, text }) => (
             <div
               key={title}
-              className="flex items-start gap-4 p-6 rounded-2xl bg-primary-foreground/5 border border-primary-foreground/15 hover:bg-primary-foreground/10 hover:border-primary-foreground/30 hover:-translate-y-1 transition-all duration-300"
+              className="group relative flex items-start gap-4 p-6 rounded-2xl overflow-hidden backdrop-blur-xl bg-gradient-to-br from-primary-foreground/15 via-primary-foreground/5 to-primary-foreground/10 border border-primary-foreground/20 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.25),0_8px_32px_-8px_rgba(0,0,0,0.4)] hover:-translate-y-1 hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.4),0_20px_40px_-12px_rgba(0,0,0,0.5)] hover:border-primary-foreground/40 transition-all duration-500"
             >
-              <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-secondary/20 border border-secondary/30 flex items-center justify-center">
-                <Icon className="text-secondary" size={24} />
+              {/* Liquid glass highlights */}
+              <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-b from-primary-foreground/20 via-transparent to-transparent opacity-60" />
+              <div className="pointer-events-none absolute -top-20 -left-10 w-40 h-40 rounded-full bg-primary-foreground/20 blur-2xl opacity-70 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="pointer-events-none absolute -bottom-16 -right-10 w-40 h-40 rounded-full bg-secondary/20 blur-3xl opacity-50 group-hover:opacity-80 transition-opacity duration-500" />
+              <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary-foreground/60 to-transparent" />
+
+              <div className="relative flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-secondary/30 to-secondary/10 backdrop-blur-md border border-secondary/40 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.3)] flex items-center justify-center">
+                <Icon className="text-secondary drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]" size={24} />
               </div>
-              <div>
+              <div className="relative">
                 <h3 className="font-heading text-lg md:text-xl font-bold text-primary-foreground mb-1">
                   {title}
                 </h3>
-                <p className="font-body text-sm md:text-base text-primary-foreground/80 leading-relaxed">
+                <p className="font-body text-sm md:text-base text-primary-foreground/85 leading-relaxed">
                   {text}
                 </p>
               </div>
