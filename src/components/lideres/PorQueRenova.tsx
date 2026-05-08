@@ -35,8 +35,8 @@ const PorQueRenova = () => {
               <div className="pointer-events-none absolute -bottom-16 -right-10 w-40 h-40 rounded-full bg-secondary/20 blur-3xl opacity-50 group-hover:opacity-80 transition-opacity duration-500" />
               <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary-foreground/60 to-transparent" />
 
-              <div className="relative flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-secondary/30 to-secondary/10 backdrop-blur-md border border-secondary/40 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.3)] flex items-center justify-center">
-                <Icon className="text-secondary drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]" size={24} />
+              <div className="relative flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-primary-foreground/30 to-primary-foreground/10 backdrop-blur-md border border-primary-foreground/40 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.4)] flex items-center justify-center">
+                <Icon className="text-primary-foreground drop-shadow-[0_0_8px_rgba(0,0,0,0.4)]" size={24} strokeWidth={2.25} />
               </div>
               <div className="relative">
                 <h3 className="font-heading text-lg md:text-xl font-bold text-primary-foreground mb-1">
