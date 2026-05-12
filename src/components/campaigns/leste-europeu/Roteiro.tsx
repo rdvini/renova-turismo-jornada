@@ -7,16 +7,14 @@ import {
   CarouselNext,
   type CarouselApi,
 } from "@/components/ui/carousel";
-import embarqueImg from "@/assets/africa-do-sul/embarque.jpg";
-import johannesburgoImg from "@/assets/africa-do-sul/johannesburgo-skyline.jpg";
-import blydeCanyonImg from "@/assets/africa-do-sul/blyde-canyon.jpg";
-import safariKrugerImg from "@/assets/africa-do-sul/safari-kruger.jpg";
-import elefantesKrugerImg from "@/assets/africa-do-sul/elefantes-kruger.jpg";
-import leoesKrugerImg from "@/assets/africa-do-sul/leoes-kruger.jpg";
-import capeTownImg from "@/assets/africa-do-sul/cape-town.jpg";
-import pretoriaImg from "@/assets/africa-do-sul/pretoria-union-buildings.jpg";
-import caboBoaEsperancaImg from "@/assets/africa-do-sul/cabo-boa-esperanca.jpg";
-import winelandsImg from "@/assets/africa-do-sul/stellenbosch-vinhedos.jpg";
+import embarqueImg from "@/assets/leste-europeu/embarque.jpg";
+import budapesteImg from "@/assets/leste-europeu/budapeste.jpg";
+import budapesteBastiaoImg from "@/assets/leste-europeu/budapeste-bastiao.jpg";
+import bratislavaImg from "@/assets/leste-europeu/bratislava.jpg";
+import vienaImg from "@/assets/leste-europeu/viena.jpg";
+import vienaCentroImg from "@/assets/leste-europeu/viena-centro.jpg";
+import pragaImg from "@/assets/leste-europeu/praga.jpg";
+import pragaVelhaImg from "@/assets/leste-europeu/praga-velha.jpg";
 
 interface DayCard {
   day: string;
@@ -37,120 +35,157 @@ interface Slide {
 const slides: Slide[] = [
   {
     image: embarqueImg,
-    imageAlt: "Voo intercontinental ao pôr do sol rumo à África do Sul",
-    region: "São Paulo → Johannesburgo",
+    imageAlt: "Voo intercontinental ao pôr do sol rumo ao Leste Europeu",
+    region: "São Paulo → Budapeste",
     day: {
       day: "1° Dia",
-      date: "09 Set",
-      title: "SÃO PAULO / JOHANNESBURGO",
+      date: "",
+      title: "SÃO PAULO / BUDAPESTE",
       description:
-        "Encontro no Aeroporto Internacional de Guarulhos para embarque com destino a Johannesburgo, realizando as devidas conexões. Noite a bordo.",
-      highlight: "O início da grande jornada africana.",
+        "Encontro no aeroporto internacional de Guarulhos para embarque em voo com destino a Budapeste, fazendo as devidas conexões. Noite e jantar a bordo.",
+      highlight: "O início da grande jornada europeia.",
     },
   },
   {
-    image: johannesburgoImg,
-    imageAlt: "Skyline de Johannesburgo com a Hillbrow Tower em destaque",
-    region: "Johannesburgo",
+    image: budapesteImg,
+    imageAlt: "Vista panorâmica de Budapeste com o Parlamento e o Danúbio",
+    region: "Budapeste",
     day: {
       day: "2° Dia",
-      date: "10 Set",
-      title: "JOHANNESBURGO",
+      date: "",
+      title: "BUDAPESTE",
       description:
-        "Chegada ao Aeroporto Internacional de Johannesburgo, recepção pelo guia local especializado e traslado ao hotel, com visita panorâmica de Soweto e entrada na Mandela House no caminho do hotel. Jantar e hospedagem.",
-      highlight: "Soweto e Mandela House: história viva da África do Sul.",
+        "Chegada em Budapeste e traslado para o hotel. Pela tarde, tour panorâmico pela cidade. A cidade fica as margens do Danúbio e está dividida em duas partes: \"Buda\", onde se encontra o lado antigo da cidade, as residências da alta sociedade e as embaixadas, e \"Pest\", onde se encontra o centro comercial com todos os hotéis e restaurantes. Visitaremos a Igreja de Matias e também o monumento do Bastião dos Pescadores. Jantar e Hospedagem.",
+      highlight: "Buda e Pest às margens do Danúbio.",
     },
   },
   {
-    image: elefantesKrugerImg,
-    imageAlt: "Família de elefantes na savana do Kruger Park com céu azul",
-    region: "Johannesburgo → Reserva Privada / Kruger",
+    image: budapesteBastiaoImg,
+    imageAlt: "Bastião dos Pescadores e Igreja de Matias em Budapeste",
+    region: "Budapeste",
     day: {
       day: "3° Dia",
-      date: "11 Set",
-      title: "JOHANNESBURGO / RESERVA PRIVADA — KRUGER PARK",
+      date: "",
+      title: "BUDAPESTE",
       description:
-        "Após o café da manhã, saída com destino à Reserva Privada na região do Kruger Park, atravessando a província de Mpumalanga. Durante o percurso, visita a locais de impressionante beleza natural, como o Cânion do Rio Blyde. Chegada à reserva, jantar e hospedagem.",
-      highlight: "Cânion do Rio Blyde — um dos maiores cânions verdes do mundo.",
+        "Após café da manhã, caminhada pela rua de pedestres ao edifício do Grande Mercado, que oferece a maior e mais rica seleção tanto de verduras e frutas frescas como de artesanato típico e produtos famosos da Hungria, como as pimentas, o vinho Tokaji, aguardentes e especiarias. Visitaremos a Catedral de Santo Estevão, a Opera, o Parlamento e a Cidadela. Retorno ao hotel para jantar e hospedagem.",
+      highlight: "Sabores e tradições húngaras no Grande Mercado.",
     },
   },
   {
-    image: leoesKrugerImg,
-    imageAlt: "Família de leões descansando na savana do Kruger Park",
-    region: "Reserva Privada / Kruger Park",
+    image: bratislavaImg,
+    imageAlt: "Castelo de Bratislava ao pôr do sol sobre o Danúbio",
+    region: "Budapeste → Bratislava → Viena",
     day: {
       day: "4° Dia",
-      date: "12 Set",
-      title: "RESERVA PRIVADA — KRUGER PARK",
+      date: "",
+      title: "BUDAPESTE / BRATISLAVA / VIENA",
       description:
-        "Pela manhã, saída para um safári de dia completo em veículos 4x4, acompanhado por um ranger e um tracker, especialistas em rastrear e localizar os animais na savana. A aventura oferece a oportunidade de observar os famosos \"Big Five\" — elefante, búfalo, rinoceronte, leão e leopardo — além de inúmeras outras espécies. Retorno ao hotel para jantar e hospedagem.",
-      highlight: "Safári completo em busca dos lendários Big Five.",
+        "Após café da manhã, saída para a bela e romântica Viena passando por Bratislava, capital da Eslováquia, onde conheceremos o imponente Castelo (visita externa) com sua linda vista para o Danúbio, o Palácio Presidencial e o centro histórico com seus típicos restaurantes e cafés. Finalizada a visita, continuaremos em direção a Viena. Jantar de boas-vindas no exclusivo restaurante Marchfelderhof com bebidas incluídas.",
+      highlight: "Jantar de boas-vindas no Marchfelderhof, com bebidas inclusas.",
     },
   },
   {
-    image: pretoriaImg,
-    imageAlt: "Union Buildings em Pretória ao entardecer com luz dourada",
-    region: "Kruger → Pretória → Cape Town",
+    image: vienaCentroImg,
+    imageAlt: "Ringstrasse e Hofburg em Viena com arquitetura imperial",
+    region: "Viena — City Tour",
     day: {
       day: "5° Dia",
-      date: "13 Set",
-      title: "RESERVA PRIVADA / CAPE TOWN",
+      date: "",
+      title: "VIENA",
       description:
-        "Após o café da manhã, saída com destino ao aeroporto de Johannesburgo. Durante o trajeto, faremos uma visita panorâmica pela cidade de Pretória, capital administrativa da África do Sul, passando por seus principais pontos de interesse, como a Union Buildings, sede do governo, e os belos jardins que cercam o local. Em seguida, embarque em voo com destino a Cape Town, uma das cidades mais belas do país. Chegada, recepção e traslado ao hotel para acomodação. Jantar e hospedagem.",
-      highlight: "Pretória administrativa e a chegada à deslumbrante Cape Town.",
+        "Após café da manhã, passeio panorâmico pela cidade percorrendo a 'Ringstrasse', os Museus de Belas Artes e Ciências Naturais, o monumento a Maria Teresa, o Parlamento, a Prefeitura, o Teatro Nacional, o Palácio Imperial 'Hofburg' (Ingresso incluso). Visita igualmente aos Jardins do Belvedere, palácio de veraneio do Príncipe Eugenio de Saboya, com uma magnífica vista da cidade. Em seguida, passeio pelo centro antigo de Viena passando pelo Relógio Anker, Bairro Judeu, Praca Freyung, com seus palácios e a Praça dos Heróis. O passeio termina com a visita ao interior da Catedral de Santo Estevão. Retorno ao hotel. Jantar e hospedagem.",
+      highlight: "Ingresso ao Palácio Imperial Hofburg incluso.",
     },
   },
   {
-    image: capeTownImg,
-    imageAlt: "Bairro Bo-Kaap colorido em Cape Town com Table Mountain",
-    imagePosition: "center",
-    region: "Cape Town — City Tour",
+    image: vienaImg,
+    imageAlt: "Palácio de Schönbrunn em Viena ao entardecer",
+    region: "Viena",
     day: {
       day: "6° Dia",
-      date: "14 Set",
-      title: "CAPE TOWN",
+      date: "",
+      title: "VIENA",
       description:
-        "Após o café da manhã, início do city tour pela charmosa Cape Town, conhecida como a \"Cidade Mãe\". Visita à estação do teleférico da Table Mountain*, de onde se tem uma vista panorâmica da cidade e da baía. Continuação do passeio pelo pitoresco bairro Bo Kaap, Catedral de St. George, Company Gardens, Grand Parade, antiga Prefeitura e Castelo da Boa Esperança. Retorno ao hotel. Jantar e hospedagem.",
-      highlight: "*Subida à Table Mountain sujeita às condições climáticas.",
+        "Após café da manhã, visitaremos Palácio de Schönbrun e seus jardins (Ingressos inclusos), considerado Patrimônio da Humanidade pela Unesco, é sem dúvida um dos maiores tesouros da cidade. Em seguida, faremos uma excursão de barco ao famoso Vale do Danúbio e teremos tempo livre para caminhar pela movimentada rua de pedestres Kartntner Strasse. A noite iremos participar de um maravilhoso concerto. Viena é também conhecida internacionalmente como a cidade da música e de compositores como Straus, Mozart, Beethoven e Haydn, que nela deixaram a sua marca. Hospedagem e jantar.",
+      highlight: "Schönbrunn, Vale do Danúbio e concerto vienense à noite.",
     },
   },
   {
-    image: caboBoaEsperancaImg,
-    imageAlt: "Falésias do Cabo da Boa Esperança com farol e oceano azul",
-    region: "Península do Cabo",
+    image: pragaImg,
+    imageAlt: "Skyline de Praga com a Ponte Carlos e o Castelo ao entardecer",
+    region: "Viena → Praga",
     day: {
       day: "7° Dia",
-      date: "15 Set",
-      title: "CAPE TOWN — PENÍNSULA DO CABO",
+      date: "",
+      title: "VIENA / PRAGA",
       description:
-        "Após o café da manhã, saída para uma espetacular excursão à Península do Cabo, percorrendo um dos trajetos mais belos da África do Sul. O percurso segue pela costa, revelando paisagens deslumbrantes, rica flora e fauna marinha. Primeira parada em Hout Bay, onde faremos um minicruzeiro até a ilha habitada por uma colônia de focas do Cabo. Em seguida, seguiremos pela estrada Chapman's Peak Drive até a Reserva Natural do Cabo da Boa Esperança, onde poderemos subir de funicular ao antigo farol e admirar a vista da False Bay (almoço incluído). Visita a Simon's Town, sede da Marinha Sul-Africana, para conhecer a famosa colônia de pinguins africanos. No retorno, parada para uma caminhada pelos Jardins Botânicos de Kirstenbosch. Retorno ao hotel. Jantar e hospedagem.",
-      highlight: "Almoço incluído. *Roteiro sujeito às condições climáticas.",
+        "Após café da manhã, saída em ônibus para Praga. A noite, inesquecível passeio percorrendo o caminho que nos tempos medievais os reis faziam após a coroação na Catedral de São Vito. Oportunidade para apreciar as mais belas vistas da cidade iluminada e conhecer os 4 núcleos mais antigos de Praga. Hospedagem e jantar.",
+      highlight: "Praga iluminada pelos passos dos antigos reis.",
     },
   },
   {
-    image: winelandsImg,
-    imageAlt: "Vinhedos de Stellenbosch com montanhas ao fundo na luz dourada",
-    imagePosition: "center",
-    region: "Cape Town → Winelands → Cape Town",
+    image: pragaVelhaImg,
+    imageAlt: "Praça Velha de Praga com o relógio astronômico no crepúsculo",
+    region: "Praga — City Tour",
     day: {
       day: "8° Dia",
-      date: "16 Set",
-      title: "CAPE TOWN / WINELANDS / CAPE TOWN",
+      date: "",
+      title: "PRAGA",
       description:
-        "Após o café da manhã, passeio pela encantadora Região das Vinícolas. Visita à cidade de Stellenbosch, a segunda mais antiga do Cabo e berço da uva Pinotage. Degustação de vinhos em vinícola local e tempo livre para passear por suas ruas arborizadas e admirar as casas em estilo Cape-Dutch. Continuação até o vale de Franschhoek (\"o canto francês\"), onde se instalaram os primeiros huguenotes franceses há mais de 300 anos. Segunda degustação em vinícola da região. Franschhoek encanta por suas montanhas majestosas, lojas de antiguidades, galerias de arte e confeitarias charmosas. Retorno ao hotel. Jantar e hospedagem.",
-      highlight: "Almoço incluído + duas degustações de vinhos.",
+        "Após café da manhã, dia completo de city tour em Praga. Durante este passeio, você vai adquirir uma imagem geral sobre a cidade de Praga, considerada uma das mais belas capitais da Europa. Vai apreciar o tesouro histórico e arquitetônico da cidade de cem torres. Conhecerá o Castelo de Praga (ingresso incluso), considerado o maior castelo do mundo, com a magnífica Catedral de São Vito, Cidade Pequena, com seus palácios barrocos e a famosa Igreja da Nossa Senhora da Vitória com o milagroso Menino Jesus de Praga. A caminhada irá continuar ao longo da Ponte Carlos, a Cidade Velha, onde, na sua Praça Velha, fica o badalado relógio astronômico. Hospedagem e jantar.",
+      highlight: "Castelo de Praga incluso — o maior do mundo.",
+    },
+  },
+  {
+    image: pragaImg,
+    imageAlt: "Praga ao pôr do sol vista do rio Vltava",
+    region: "Praga",
+    day: {
+      day: "9° Dia",
+      date: "",
+      title: "PRAGA",
+      description:
+        "Após café da manhã, conheceremos o Bairro Judeu de Praga, onde tem a mais antiga sinagoga da Europa, que foi construída em torno de 1270. A seguir visitaremos a Igreja de Nossa Senhora do Loreto, um dos santuários mais visitados de toda a Boemia, que abriga em seu interior a Câmara do Tesouro, cuja maior jóia é o Sol de Praga, uma obra de ourivesaria de valor incalculável. Prosseguiremos para a Igreja de São Nicolau, considerado um dos templos barrocos mais belos de toda Europa. Regresso ao hotel para jantar e hospedagem.",
+      highlight: "Bairro Judeu, Loreto e o esplendor barroco de São Nicolau.",
+    },
+  },
+  {
+    image: pragaVelhaImg,
+    imageAlt: "Ponte Carlos em Praga com estátuas e luzes douradas",
+    region: "Praga",
+    day: {
+      day: "10° Dia",
+      date: "",
+      title: "PRAGA",
+      description:
+        "Após café da manhã, faremos um passeio pelo misterioso bairro do Castelo (cujos arcos abrigam charmosos restaurantes), teremos tempo livre no bairro central de Mala Strana, com a possibilidade de comprar os finíssimos cristais tchecos ou assistir o pôr-do-sol caminhando pela Ponte CARLOS (famosa pelas dezenas de estátuas que ladeiam). Jantar e pernoite no hotel.",
+      highlight: "Pôr do sol sobre a lendária Ponte Carlos.",
     },
   },
   {
     image: embarqueImg,
     imageAlt: "Asa de avião sobre nuvens ao pôr do sol no voo de retorno",
-    region: "Cape Town → Johannesburgo → São Paulo",
+    region: "Praga → São Paulo",
     day: {
-      day: "9° Dia",
-      date: "17 Set",
-      title: "CAPE TOWN / JOHANNESBURGO / SÃO PAULO",
+      day: "11° Dia",
+      date: "",
+      title: "PRAGA / SÃO PAULO",
       description:
-        "Após o café da manhã, em horário determinado, traslado ao aeroporto para embarque em voo de retorno a São Paulo, realizando as devidas conexões. Chegada no aeroporto de São Paulo-Guarulhos, trâmites de desembarque e fim dos nossos serviços.",
+        "Café da manhã. Em horário combinado, traslado ao aeroporto de Praga para embarque em voo com destino a São Paulo, fazendo as devidas conexões.",
+      highlight: "Voo de retorno após uma jornada inesquecível.",
+    },
+  },
+  {
+    image: embarqueImg,
+    imageAlt: "Vista do céu pela janela do avião na chegada ao Brasil",
+    region: "São Paulo",
+    day: {
+      day: "12° Dia",
+      date: "",
+      title: "SÃO PAULO",
+      description:
+        "Chegada em São Paulo. Fim de nossos serviços.",
       highlight: "Memórias inesquecíveis para a vida toda.",
     },
   },
@@ -184,7 +219,7 @@ const Roteiro = () => {
           Roteiro — Leste Europeu
         </h2>
         <p className="font-body text-muted-foreground text-center max-w-2xl mx-auto mb-12 text-sm">
-          9 dias inesquecíveis pelo Leste Europeu: Johannesburgo, Soweto, Kruger Park, Pretória, Cape Town, Cabo da Boa Esperança e a Região das Vinícolas.
+          12 dias inesquecíveis pelo Leste Europeu: Budapeste, Bratislava, Viena e Praga — capitais imperiais, castelos medievais e o melhor da cultura europeia.
         </p>
 
         <div className="max-w-5xl mx-auto">
