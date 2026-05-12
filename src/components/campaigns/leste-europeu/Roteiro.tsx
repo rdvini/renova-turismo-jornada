@@ -101,14 +101,27 @@ const slides: Slide[] = [
   {
     image: vienaImg,
     imageAlt: "Palácio de Schönbrunn em Viena ao entardecer",
+    region: "Viena",
+    day: {
+      day: "6° Dia",
+      date: "",
+      title: "VIENA",
+      description:
+        "Após café da manhã, visitaremos Palácio de Schönbrun e seus jardins (Ingressos inclusos), considerado Patrimônio da Humanidade pela Unesco, é sem dúvida um dos maiores tesouros da cidade. Em seguida, faremos uma excursão de barco ao famoso Vale do Danúbio e teremos tempo livre para caminhar pela movimentada rua de pedestres Kartntner Strasse. A noite iremos participar de um maravilhoso concerto. Viena é também conhecida internacionalmente como a cidade da música e de compositores como Straus, Mozart, Beethoven e Haydn, que nela deixaram a sua marca. Hospedagem e jantar.",
+      highlight: "Schönbrunn, Vale do Danúbio e concerto vienense à noite.",
+    },
+  },
+  {
+    image: pragaImg,
+    imageAlt: "Skyline de Praga com a Ponte Carlos e o Castelo ao entardecer",
     region: "Viena → Praga",
     day: {
-      day: "6° e 7° Dia",
+      day: "7° Dia",
       date: "",
       title: "VIENA / PRAGA",
       description:
-        "6° Dia — Após café da manhã, visitaremos Palácio de Schönbrun e seus jardins (Ingressos inclusos), considerado Patrimônio da Humanidade pela Unesco, é sem dúvida um dos maiores tesouros da cidade. Em seguida, faremos uma excursão de barco ao famoso Vale do Danúbio e teremos tempo livre para caminhar pela movimentada rua de pedestres Kartntner Strasse. À noite iremos participar de um maravilhoso concerto. Viena é também conhecida internacionalmente como a cidade da música e de compositores como Strauss, Mozart, Beethoven e Haydn, que nela deixaram a sua marca. Hospedagem e jantar. \n\n7° Dia — Após café da manhã, saída em ônibus para Praga. À noite, inesquecível passeio percorrendo o caminho que nos tempos medievais os reis faziam após a coroação na Catedral de São Vito. Oportunidade para apreciar as mais belas vistas da cidade iluminada e conhecer os 4 núcleos mais antigos de Praga. Hospedagem e jantar.",
-      highlight: "Schönbrunn, concerto em Viena e Praga iluminada à noite.",
+        "Após café da manhã, saída em ônibus para Praga. A noite, inesquecível passeio percorrendo o caminho que nos tempos medievais os reis faziam após a coroação na Catedral de São Vito. Oportunidade para apreciar as mais belas vistas da cidade iluminada e conhecer os 4 núcleos mais antigos de Praga. Hospedagem e jantar.",
+      highlight: "Praga iluminada pelos passos dos antigos reis.",
     },
   },
   {
