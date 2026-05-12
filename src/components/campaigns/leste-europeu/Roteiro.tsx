@@ -11,8 +11,8 @@ import embarqueImg from "@/assets/leste-europeu/embarque.jpg";
 import budapesteImg from "@/assets/leste-europeu/budapeste.webp";
 import budapesteBastiaoImg from "@/assets/leste-europeu/budapeste-bastiao.webp";
 import bratislavaImg from "@/assets/leste-europeu/bratislava.jpg";
-import vienaImg from "@/assets/leste-europeu/viena.webp";
 import vienaCentroImg from "@/assets/leste-europeu/viena-centro.jpg";
+import vienaImg from "@/assets/leste-europeu/viena.webp";
 import pragaImg from "@/assets/leste-europeu/praga.jpg";
 import pragaVelhaImg from "@/assets/leste-europeu/praga-velha.jpg";
 
@@ -29,7 +29,7 @@ interface Slide {
   imageAlt: string;
   imagePosition?: string;
   region: string;
-  day: DayCard;
+  days: DayCard[];
 }
 
 const slides: Slide[] = [
@@ -37,157 +37,173 @@ const slides: Slide[] = [
     image: embarqueImg,
     imageAlt: "Voo intercontinental ao pôr do sol rumo ao Leste Europeu",
     region: "São Paulo → Budapeste",
-    day: {
-      day: "1° Dia",
-      date: "",
-      title: "SÃO PAULO / BUDAPESTE",
-      description:
-        "Encontro no aeroporto internacional de Guarulhos para embarque em voo com destino a Budapeste, fazendo as devidas conexões. Noite e jantar a bordo.",
-      highlight: "O início da grande jornada europeia.",
-    },
+    days: [
+      {
+        day: "1° Dia",
+        date: "",
+        title: "SÃO PAULO / BUDAPESTE",
+        description:
+          "Encontro no aeroporto internacional de Guarulhos para embarque em voo com destino a Budapeste, fazendo as devidas conexões. Noite e jantar a bordo.",
+        highlight: "O início da grande jornada europeia.",
+      },
+    ],
   },
   {
     image: budapesteImg,
     imageAlt: "Vista panorâmica de Budapeste com o Parlamento e o Danúbio",
     region: "Budapeste",
-    day: {
-      day: "2° Dia",
-      date: "",
-      title: "BUDAPESTE",
-      description:
-        "Chegada em Budapeste e traslado para o hotel. Pela tarde, tour panorâmico pela cidade. A cidade fica as margens do Danúbio e está dividida em duas partes: \"Buda\", onde se encontra o lado antigo da cidade, as residências da alta sociedade e as embaixadas, e \"Pest\", onde se encontra o centro comercial com todos os hotéis e restaurantes. Visitaremos a Igreja de Matias e também o monumento do Bastião dos Pescadores. Jantar e Hospedagem.",
-      highlight: "Buda e Pest às margens do Danúbio.",
-    },
+    days: [
+      {
+        day: "2° Dia",
+        date: "",
+        title: "BUDAPESTE",
+        description:
+          'Chegada em Budapeste e traslado para o hotel. Pela tarde, tour panorâmico pela cidade. A cidade fica as margens do Danúbio e está dividida em duas partes: "Buda", onde se encontra o lado antigo da cidade, as residências da alta sociedade e as embaixadas, e "Pest", onde se encontra o centro comercial com todos os hotéis e restaurantes. Visitaremos a Igreja de Matias e também o monumento do Bastião dos Pescadores. Jantar e Hospedagem.',
+        highlight: "Buda e Pest às margens do Danúbio.",
+      },
+    ],
   },
   {
     image: budapesteBastiaoImg,
     imageAlt: "Bastião dos Pescadores e Igreja de Matias em Budapeste",
     region: "Budapeste",
-    day: {
-      day: "3° Dia",
-      date: "",
-      title: "BUDAPESTE",
-      description:
-        "Após café da manhã, caminhada pela rua de pedestres ao edifício do Grande Mercado, que oferece a maior e mais rica seleção tanto de verduras e frutas frescas como de artesanato típico e produtos famosos da Hungria, como as pimentas, o vinho Tokaji, aguardentes e especiarias. Visitaremos a Catedral de Santo Estevão, a Opera, o Parlamento e a Cidadela. Retorno ao hotel para jantar e hospedagem.",
-      highlight: "Sabores e tradições húngaras no Grande Mercado.",
-    },
+    days: [
+      {
+        day: "3° Dia",
+        date: "",
+        title: "BUDAPESTE",
+        description:
+          "Após café da manhã, caminhada pela rua de pedestres ao edifício do Grande Mercado, que oferece a maior e mais rica seleção tanto de verduras e frutas frescas como de artesanato típico e produtos famosos da Hungria, como as pimentas, o vinho Tokaji, aguardentes e especiarias. Visitaremos a Catedral de Santo Estevão, a Opera, o Parlamento e a Cidadela. Retorno ao hotel para jantar e hospedagem.",
+        highlight: "Sabores e tradições húngaras no Grande Mercado.",
+      },
+    ],
   },
   {
     image: bratislavaImg,
     imageAlt: "Castelo de Bratislava ao pôr do sol sobre o Danúbio",
     region: "Budapeste → Bratislava → Viena",
-    day: {
-      day: "4° Dia",
-      date: "",
-      title: "BUDAPESTE / BRATISLAVA / VIENA",
-      description:
-        "Após café da manhã, saída para a bela e romântica Viena passando por Bratislava, capital da Eslováquia, onde conheceremos o imponente Castelo (visita externa) com sua linda vista para o Danúbio, o Palácio Presidencial e o centro histórico com seus típicos restaurantes e cafés. Finalizada a visita, continuaremos em direção a Viena. Jantar de boas-vindas no exclusivo restaurante Marchfelderhof com bebidas incluídas.",
-      highlight: "Jantar de boas-vindas no Marchfelderhof, com bebidas inclusas.",
-    },
+    days: [
+      {
+        day: "4° Dia",
+        date: "",
+        title: "BUDAPESTE / BRATISLAVA / VIENA",
+        description:
+          "Após café da manhã, saída para a bela e romântica Viena passando por Bratislava, capital da Eslováquia, onde conheceremos o imponente Castelo (visita externa) com sua linda vista para o Danúbio, o Palácio Presidencial e o centro histórico com seus típicos restaurantes e cafés. Finalizada a visita, continuaremos em direção a Viena. Jantar de boas-vindas no exclusivo restaurante Marchfelderhof com bebidas incluídas.",
+        highlight: "Jantar de boas-vindas no Marchfelderhof, com bebidas inclusas.",
+      },
+    ],
   },
   {
     image: vienaCentroImg,
     imageAlt: "Ringstrasse e Hofburg em Viena com arquitetura imperial",
     region: "Viena — City Tour",
-    day: {
-      day: "5° Dia",
-      date: "",
-      title: "VIENA",
-      description:
-        "Após café da manhã, passeio panorâmico pela cidade percorrendo a 'Ringstrasse', os Museus de Belas Artes e Ciências Naturais, o monumento a Maria Teresa, o Parlamento, a Prefeitura, o Teatro Nacional, o Palácio Imperial 'Hofburg' (Ingresso incluso). Visita igualmente aos Jardins do Belvedere, palácio de veraneio do Príncipe Eugenio de Saboya, com uma magnífica vista da cidade. Em seguida, passeio pelo centro antigo de Viena passando pelo Relógio Anker, Bairro Judeu, Praca Freyung, com seus palácios e a Praça dos Heróis. O passeio termina com a visita ao interior da Catedral de Santo Estevão. Retorno ao hotel. Jantar e hospedagem.",
-      highlight: "Ingresso ao Palácio Imperial Hofburg incluso.",
-    },
+    days: [
+      {
+        day: "5° Dia",
+        date: "",
+        title: "VIENA",
+        description:
+          "Após café da manhã, passeio panorâmico pela cidade percorrendo a 'Ringstrasse', os Museus de Belas Artes e Ciências Naturais, o monumento a Maria Teresa, o Parlamento, a Prefeitura, o Teatro Nacional, o Palácio Imperial 'Hofburg' (Ingresso incluso). Visita igualmente aos Jardins do Belvedere, palácio de veraneio do Príncipe Eugenio de Saboya, com uma magnífica vista da cidade. Em seguida, passeio pelo centro antigo de Viena passando pelo Relógio Anker, Bairro Judeu, Praca Freyung, com seus palácios e a Praça dos Heróis. O passeio termina com a visita ao interior da Catedral de Santo Estevão. Retorno ao hotel. Jantar e hospedagem.",
+        highlight: "Ingresso ao Palácio Imperial Hofburg incluso.",
+      },
+    ],
   },
   {
     image: vienaImg,
     imageAlt: "Palácio de Schönbrunn em Viena ao entardecer",
-    region: "Viena",
-    day: {
-      day: "6° Dia",
-      date: "",
-      title: "VIENA",
-      description:
-        "Após café da manhã, visitaremos Palácio de Schönbrun e seus jardins (Ingressos inclusos), considerado Patrimônio da Humanidade pela Unesco, é sem dúvida um dos maiores tesouros da cidade. Em seguida, faremos uma excursão de barco ao famoso Vale do Danúbio e teremos tempo livre para caminhar pela movimentada rua de pedestres Kartntner Strasse. A noite iremos participar de um maravilhoso concerto. Viena é também conhecida internacionalmente como a cidade da música e de compositores como Straus, Mozart, Beethoven e Haydn, que nela deixaram a sua marca. Hospedagem e jantar.",
-      highlight: "Schönbrunn, Vale do Danúbio e concerto vienense à noite.",
-    },
+    region: "Viena → Praga",
+    days: [
+      {
+        day: "6° Dia",
+        date: "",
+        title: "VIENA",
+        description:
+          "Após café da manhã, visitaremos Palácio de Schönbrun e seus jardins (Ingressos inclusos), considerado Patrimônio da Humanidade pela Unesco, é sem dúvida um dos maiores tesouros da cidade. Em seguida, faremos uma excursão de barco ao famoso Vale do Danúbio e teremos tempo livre para caminhar pela movimentada rua de pedestres Kartntner Strasse. A noite iremos participar de um maravilhoso concerto. Viena é também conhecida internacionalmente como a cidade da música e de compositores como Straus, Mozart, Beethoven e Haydn, que nela deixaram a sua marca. Hospedagem e jantar.",
+        highlight: "Schönbrunn, Vale do Danúbio e concerto vienense à noite.",
+      },
+      {
+        day: "7° Dia",
+        date: "",
+        title: "VIENA / PRAGA",
+        description:
+          "Após café da manhã, saída em ônibus para Praga. A noite, inesquecível passeio percorrendo o caminho que nos tempos medievais os reis faziam após a coroação na Catedral de São Vito. Oportunidade para apreciar as mais belas vistas da cidade iluminada e conhecer os 4 núcleos mais antigos de Praga. Hospedagem e jantar.",
+        highlight: "Praga iluminada pelos passos dos antigos reis.",
+      },
+    ],
   },
   {
     image: pragaImg,
     imageAlt: "Skyline de Praga com a Ponte Carlos e o Castelo ao entardecer",
-    region: "Viena → Praga",
-    day: {
-      day: "7° Dia",
-      date: "",
-      title: "VIENA / PRAGA",
-      description:
-        "Após café da manhã, saída em ônibus para Praga. A noite, inesquecível passeio percorrendo o caminho que nos tempos medievais os reis faziam após a coroação na Catedral de São Vito. Oportunidade para apreciar as mais belas vistas da cidade iluminada e conhecer os 4 núcleos mais antigos de Praga. Hospedagem e jantar.",
-      highlight: "Praga iluminada pelos passos dos antigos reis.",
-    },
+    region: "Praga — City Tour",
+    days: [
+      {
+        day: "8° Dia",
+        date: "",
+        title: "PRAGA",
+        description:
+          "Após café da manhã, dia completo de city tour em Praga. Durante este passeio, você vai adquirir uma imagem geral sobre a cidade de Praga, considerada uma das mais belas capitais da Europa. Vai apreciar o tesouro histórico e arquitetônico da cidade de cem torres. Conhecerá o Castelo de Praga (ingresso incluso), considerado o maior castelo do mundo, com a magnífica Catedral de São Vito, Cidade Pequena, com seus palácios barrocos e a famosa Igreja da Nossa Senhora da Vitória com o milagroso Menino Jesus de Praga. A caminhada irá continuar ao longo da Ponte Carlos, a Cidade Velha, onde, na sua Praça Velha, fica o badalado relógio astronômico. Hospedagem e jantar.",
+        highlight: "Castelo de Praga incluso — o maior do mundo.",
+      },
+    ],
   },
   {
     image: pragaVelhaImg,
     imageAlt: "Praça Velha de Praga com o relógio astronômico no crepúsculo",
-    region: "Praga — City Tour",
-    day: {
-      day: "8° Dia",
-      date: "",
-      title: "PRAGA",
-      description:
-        "Após café da manhã, dia completo de city tour em Praga. Durante este passeio, você vai adquirir uma imagem geral sobre a cidade de Praga, considerada uma das mais belas capitais da Europa. Vai apreciar o tesouro histórico e arquitetônico da cidade de cem torres. Conhecerá o Castelo de Praga (ingresso incluso), considerado o maior castelo do mundo, com a magnífica Catedral de São Vito, Cidade Pequena, com seus palácios barrocos e a famosa Igreja da Nossa Senhora da Vitória com o milagroso Menino Jesus de Praga. A caminhada irá continuar ao longo da Ponte Carlos, a Cidade Velha, onde, na sua Praça Velha, fica o badalado relógio astronômico. Hospedagem e jantar.",
-      highlight: "Castelo de Praga incluso — o maior do mundo.",
-    },
+    region: "Praga",
+    days: [
+      {
+        day: "9° Dia",
+        date: "",
+        title: "PRAGA",
+        description:
+          "Após café da manhã, conheceremos o Bairro Judeu de Praga, onde tem a mais antiga sinagoga da Europa, que foi construída em torno de 1270. A seguir visitaremos a Igreja de Nossa Senhora do Loreto, um dos santuários mais visitados de toda a Boemia, que abriga em seu interior a Câmara do Tesouro, cuja maior jóia é o Sol de Praga, uma obra de ourivesaria de valor incalculável. Prosseguiremos para a Igreja de São Nicolau, considerado um dos templos barrocos mais belos de toda Europa. Regresso ao hotel para jantar e hospedagem.",
+        highlight: "Bairro Judeu, Loreto e o esplendor barroco de São Nicolau.",
+      },
+    ],
   },
   {
     image: pragaImg,
     imageAlt: "Praga ao pôr do sol vista do rio Vltava",
     region: "Praga",
-    day: {
-      day: "9° Dia",
-      date: "",
-      title: "PRAGA",
-      description:
-        "Após café da manhã, conheceremos o Bairro Judeu de Praga, onde tem a mais antiga sinagoga da Europa, que foi construída em torno de 1270. A seguir visitaremos a Igreja de Nossa Senhora do Loreto, um dos santuários mais visitados de toda a Boemia, que abriga em seu interior a Câmara do Tesouro, cuja maior jóia é o Sol de Praga, uma obra de ourivesaria de valor incalculável. Prosseguiremos para a Igreja de São Nicolau, considerado um dos templos barrocos mais belos de toda Europa. Regresso ao hotel para jantar e hospedagem.",
-      highlight: "Bairro Judeu, Loreto e o esplendor barroco de São Nicolau.",
-    },
-  },
-  {
-    image: pragaVelhaImg,
-    imageAlt: "Ponte Carlos em Praga com estátuas e luzes douradas",
-    region: "Praga",
-    day: {
-      day: "10° Dia",
-      date: "",
-      title: "PRAGA",
-      description:
-        "Após café da manhã, faremos um passeio pelo misterioso bairro do Castelo (cujos arcos abrigam charmosos restaurantes), teremos tempo livre no bairro central de Mala Strana, com a possibilidade de comprar os finíssimos cristais tchecos ou assistir o pôr-do-sol caminhando pela Ponte CARLOS (famosa pelas dezenas de estátuas que ladeiam). Jantar e pernoite no hotel.",
-      highlight: "Pôr do sol sobre a lendária Ponte Carlos.",
-    },
+    days: [
+      {
+        day: "10° Dia",
+        date: "",
+        title: "PRAGA",
+        description:
+          "Após café da manhã, faremos um passeio pelo misterioso bairro do Castelo (cujos arcos abrigam charmosos restaurantes), teremos tempo livre no bairro central de Mala Strana, com a possibilidade de comprar os finíssimos cristais tchecos ou assistir o pôr-do-sol caminhando pela Ponte CARLOS (famosa pelas dezenas de estátuas que ladeiam). Jantar e pernoite no hotel.",
+        highlight: "Pôr do sol sobre a lendária Ponte Carlos.",
+      },
+    ],
   },
   {
     image: embarqueImg,
     imageAlt: "Asa de avião sobre nuvens ao pôr do sol no voo de retorno",
     region: "Praga → São Paulo",
-    day: {
-      day: "11° Dia",
-      date: "",
-      title: "PRAGA / SÃO PAULO",
-      description:
-        "Café da manhã. Em horário combinado, traslado ao aeroporto de Praga para embarque em voo com destino a São Paulo, fazendo as devidas conexões.",
-      highlight: "Voo de retorno após uma jornada inesquecível.",
-    },
+    days: [
+      {
+        day: "11° Dia",
+        date: "",
+        title: "PRAGA / SÃO PAULO",
+        description:
+          "Café da manhã. Em horário combinado, traslado ao aeroporto de Praga para embarque em voo com destino a São Paulo, fazendo as devidas conexões.",
+        highlight: "Voo de retorno após uma jornada inesquecível.",
+      },
+    ],
   },
   {
     image: embarqueImg,
     imageAlt: "Vista do céu pela janela do avião na chegada ao Brasil",
     region: "São Paulo",
-    day: {
-      day: "12° Dia",
-      date: "",
-      title: "SÃO PAULO",
-      description:
-        "Chegada em São Paulo. Fim de nossos serviços.",
-      highlight: "Memórias inesquecíveis para a vida toda.",
-    },
+    days: [
+      {
+        day: "12° Dia",
+        date: "",
+        title: "SÃO PAULO",
+        description: "Chegada em São Paulo. Fim de nossos serviços.",
+        highlight: "Memórias inesquecíveis para a vida toda.",
+      },
+    ],
   },
 ];
 
@@ -246,7 +262,9 @@ const Roteiro = () => {
                       <div className="absolute bottom-4 left-5 right-5 flex items-end justify-between">
                         <div>
                           <span className="text-xs uppercase tracking-widest text-secondary font-body font-semibold block">
-                            {slide.day.day}
+                            {slide.days.length > 1
+                              ? `${slide.days[0].day} + ${slide.days[1].day}`
+                              : slide.days[0].day}
                           </span>
                           <h3 className="font-heading text-xl md:text-2xl font-bold text-primary-foreground mt-1">
                             {slide.region}
@@ -259,23 +277,36 @@ const Roteiro = () => {
                     </div>
 
                     <div className="px-5 md:px-8 pt-3 md:pt-4 pb-5 md:pb-8">
-                      <div className="border border-border rounded-lg p-5 bg-background hover:shadow-md transition-shadow">
-                        <div className="flex items-center gap-3 mb-3 flex-wrap">
-                          <span className="bg-secondary text-secondary-foreground text-xs font-heading font-bold px-3 py-1 rounded-full">
-                            {slide.day.day}
-                          </span>
-                          <h4 className="font-heading text-sm md:text-base font-bold text-primary">
-                            {slide.day.title}
-                          </h4>
-                        </div>
-                        <p className="font-body text-muted-foreground text-sm leading-relaxed mb-3">
-                          {slide.day.description}
-                        </p>
-                        {slide.day.highlight && (
-                          <p className="font-accent text-xs italic text-secondary/90 border-l-2 border-secondary/40 pl-3">
-                            ✦ {slide.day.highlight}
-                          </p>
-                        )}
+                      <div
+                        className={`grid gap-4 ${
+                          slide.days.length > 1
+                            ? "grid-cols-1 md:grid-cols-2"
+                            : "grid-cols-1"
+                        }`}
+                      >
+                        {slide.days.map((day, dIdx) => (
+                          <div
+                            key={dIdx}
+                            className="border border-border rounded-lg p-5 bg-background hover:shadow-md transition-shadow"
+                          >
+                            <div className="flex items-center gap-3 mb-3 flex-wrap">
+                              <span className="bg-secondary text-secondary-foreground text-xs font-heading font-bold px-3 py-1 rounded-full">
+                                {day.day}
+                              </span>
+                              <h4 className="font-heading text-sm md:text-base font-bold text-primary">
+                                {day.title}
+                              </h4>
+                            </div>
+                            <p className="font-body text-muted-foreground text-sm leading-relaxed mb-3">
+                              {day.description}
+                            </p>
+                            {day.highlight && (
+                              <p className="font-accent text-xs italic text-secondary/90 border-l-2 border-secondary/40 pl-3">
+                                ✦ {day.highlight}
+                              </p>
+                            )}
+                          </div>
+                        ))}
                       </div>
                     </div>
                   </div>
