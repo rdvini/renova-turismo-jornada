@@ -26,7 +26,7 @@ const SobreViagem = () => {
             <h3 className="font-heading font-semibold text-primary mb-2">Data</h3>
             <p className="font-body text-muted-foreground text-sm">
               {/* EDITAR: Datas da viagem */}
-              Setembro de 2026, 2027 e 2028.
+              Datas sob consulta.
             </p>
           </div>
           <div className="bg-card rounded-lg p-8 text-center shadow-sm hover:shadow-md transition-shadow">
@@ -34,7 +34,7 @@ const SobreViagem = () => {
             <h3 className="font-heading font-semibold text-primary mb-2">Destinos</h3>
             <p className="font-body text-muted-foreground text-sm">
               {/* EDITAR: Cidades */}
-              Cidade do Cabo, Chapman's Peak, Simon's Town e Kruger Park — 4 destinos icônicos.
+              Roteiro pelas principais capitais do Leste Europeu.
             </p>
           </div>
           <div className="bg-card rounded-lg p-8 text-center shadow-sm hover:shadow-md transition-shadow">
