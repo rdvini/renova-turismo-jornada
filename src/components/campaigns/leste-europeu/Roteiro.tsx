@@ -10,14 +10,14 @@ import {
 import embarqueImg from "@/assets/leste-europeu/embarque.jpg";
 import budapesteImg from "@/assets/leste-europeu/budapeste.webp";
 import budapesteBastiaoImg from "@/assets/leste-europeu/budapeste-bastiao.webp";
-import bratislavaImg from "@/assets/leste-europeu/bratislava.jpg";
-import vienaCentroImg from "@/assets/leste-europeu/viena-centro.jpg";
+import bratislavaImg from "@/assets/leste-europeu/bratislava.webp";
+import vienaCentroImg from "@/assets/leste-europeu/viena-centro.webp";
 import vienaImg from "@/assets/leste-europeu/viena.webp";
 import pragaImg from "@/assets/leste-europeu/praga.jpg";
 import pragaVelhaImg from "@/assets/leste-europeu/praga-velha.jpg";
-import pragaCasteloImg from "@/assets/leste-europeu/praga-castelo.jpeg";
-import pragaPonteImg from "@/assets/leste-europeu/praga-ponte.jpg";
-import pragaCarlosImg from "@/assets/leste-europeu/praga-carlos.jpg";
+import pragaCasteloImg from "@/assets/leste-europeu/praga-castelo.webp";
+import pragaPonteImg from "@/assets/leste-europeu/praga-ponte.webp";
+import pragaCarlosImg from "@/assets/leste-europeu/praga-carlos.webp";
 
 interface DayCard {
   day: string;
