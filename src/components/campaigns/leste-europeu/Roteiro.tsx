@@ -135,8 +135,8 @@ const slides: Slide[] = [
     ],
   },
   {
-    image: pragaImg,
-    imageAlt: "Skyline de Praga com a Ponte Carlos e o Castelo ao entardecer",
+    image: pragaCasteloImg,
+    imageAlt: "Castelo de Praga e Catedral de São Vito iluminados ao entardecer",
     region: "Praga — City Tour",
     days: [
       {
@@ -150,8 +150,8 @@ const slides: Slide[] = [
     ],
   },
   {
-    image: pragaVelhaImg,
-    imageAlt: "Praça Velha de Praga com o relógio astronômico no crepúsculo",
+    image: pragaPonteImg,
+    imageAlt: "Vista panorâmica de Praga com a Ponte Carlos e o Castelo ao entardecer",
     region: "Praga",
     days: [
       {
@@ -165,8 +165,8 @@ const slides: Slide[] = [
     ],
   },
   {
-    image: pragaImg,
-    imageAlt: "Praga ao pôr do sol vista do rio Vltava",
+    image: pragaCarlosImg,
+    imageAlt: "Ponte Carlos sobre o rio Vltava com a Cidade Velha de Praga ao fundo",
     region: "Praga",
     days: [
       {
