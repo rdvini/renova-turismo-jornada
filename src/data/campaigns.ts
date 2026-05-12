@@ -16,6 +16,7 @@ export interface Campaign {
 
 import heroTurkiye from "@/assets/padre-leudo/hero-turkiye.webp";
 import cardMexico from "@/assets/mexico-padre-leudo/card-cover.jpeg";
+import cardLesteEuropeu from "@/assets/leste-europeu/hero.jpg";
 
 export const campaigns: Campaign[] = [
   {
@@ -77,6 +78,18 @@ export const campaigns: Campaign[] = [
     date: "Outubro de 2026",
     badge: "Peregrinação",
     published: true,
+  },
+  {
+    id: "leste-europeu",
+    slug: "/leste-europeu",
+    title: "Leste Europeu",
+    subtitle: "RENOVA TURISMO APRESENTA",
+    description:
+      "Uma jornada cultural pelas capitais imperiais e cidades históricas do Leste Europeu, com castelos, catedrais e paisagens encantadoras.",
+    image: cardLesteEuropeu,
+    date: "Datas sob consulta",
+    badge: "Experiência",
+    published: false,
   },
   {
     id: "lideres",
