@@ -181,7 +181,7 @@ const Roteiro = () => {
           Sua jornada, dia a dia
         </p>
         <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary text-center mb-4">
-          Roteiro — África do Sul
+          Roteiro — Leste Europeu
         </h2>
         <p className="font-body text-muted-foreground text-center max-w-2xl mx-auto mb-12 text-sm">
           9 dias inesquecíveis pelo Leste Europeu: Johannesburgo, Soweto, Kruger Park, Pretória, Cape Town, Cabo da Boa Esperança e a Região das Vinícolas.
