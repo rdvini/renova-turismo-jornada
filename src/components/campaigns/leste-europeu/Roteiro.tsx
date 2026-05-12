@@ -11,7 +11,7 @@ import embarqueImg from "@/assets/leste-europeu/embarque.jpg";
 import budapesteImg from "@/assets/leste-europeu/budapeste.webp";
 import budapesteBastiaoImg from "@/assets/leste-europeu/budapeste-bastiao.webp";
 import bratislavaImg from "@/assets/leste-europeu/bratislava.jpg";
-import vienaImg from "@/assets/leste-europeu/viena.jpg";
+import vienaImg from "@/assets/leste-europeu/viena.webp";
 import vienaCentroImg from "@/assets/leste-europeu/viena-centro.jpg";
 import pragaImg from "@/assets/leste-europeu/praga.jpg";
 import pragaVelhaImg from "@/assets/leste-europeu/praga-velha.jpg";
