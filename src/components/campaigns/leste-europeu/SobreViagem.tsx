@@ -15,8 +15,8 @@ const SobreViagem = () => {
         <div className="max-w-3xl mx-auto text-center mb-14">
           <p className="font-body text-muted-foreground text-lg leading-relaxed">
             {/* EDITAR: Descrição do destino */}
-            A África do Sul é um dos destinos mais fascinantes do mundo — descreva aqui a
-            experiência, o diferencial cultural e o que torna esta viagem única.
+            O Leste Europeu reúne alguns dos cenários mais ricos da história e cultura do velho continente.
+            Praças centenárias, castelos imponentes e ruas charmosas formam um roteiro repleto de descobertas — uma experiência única para quem busca tradição, beleza e bons momentos.
           </p>
         </div>
 
