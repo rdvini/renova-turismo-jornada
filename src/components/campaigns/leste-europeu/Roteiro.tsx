@@ -184,7 +184,7 @@ const Roteiro = () => {
           Roteiro — África do Sul
         </h2>
         <p className="font-body text-muted-foreground text-center max-w-2xl mx-auto mb-12 text-sm">
-          9 dias inesquecíveis pela África do Sul: Johannesburgo, Soweto, Kruger Park, Pretória, Cape Town, Cabo da Boa Esperança e a Região das Vinícolas.
+          9 dias inesquecíveis pelo Leste Europeu: Johannesburgo, Soweto, Kruger Park, Pretória, Cape Town, Cabo da Boa Esperança e a Região das Vinícolas.
         </p>
 
         <div className="max-w-5xl mx-auto">
@@ -270,7 +270,7 @@ const Roteiro = () => {
 
         <div className="text-center mt-4">
           <a
-            href="https://api.whatsapp.com/send/?phone=5519992016125&text=Ol%C3%A1+Guilherme%21+Tenho+interesse+na+viagem+para+a+%C3%81frica+do+Sul+e+gostaria+de+receber+mais+informa%C3%A7%C3%B5es.&type=phone_number&app_absent=0"
+            href="https://api.whatsapp.com/send/?phone=5519992016125&text=Ol%C3%A1+Guilherme%21+Tenho+interesse+na+viagem+para+o+Leste+Europeu+e+gostaria+de+receber+mais+informa%C3%A7%C3%B5es.&type=phone_number&app_absent=0"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-bold text-lg px-12 py-4 rounded-full transition-all hover:scale-105 shadow-lg"

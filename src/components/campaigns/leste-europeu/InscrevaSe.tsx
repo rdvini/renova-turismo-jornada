@@ -20,12 +20,12 @@ const InscrevaSe = () => {
           nome,
           email,
           telefone,
-          campaign: "Viagem África do Sul",
+          campaign: "Viagem Leste Europeu",
         },
       })
       .catch((err) => console.error("send-contact-email error:", err));
 
-    const message = `Olá Guilherme! Meu nome é ${nome}, meu e-mail é ${email} e meu telefone é ${telefone}. Gostaria de mais informações sobre a viagem à África do Sul.`;
+    const message = `Olá Guilherme! Meu nome é ${nome}, meu e-mail é ${email} e meu telefone é ${telefone}. Gostaria de mais informações sobre a viagem ao Leste Europeu.`;
     window.open(
       `https://api.whatsapp.com/send/?phone=${NAYARA_WHATSAPP}&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`,
       "_blank"
@@ -46,11 +46,11 @@ const InscrevaSe = () => {
             </h2>
             <p className="font-body text-muted-foreground text-lg mb-8">
               Vagas limitadas! Entre em contato conosco e reserve seu lugar nesta viagem
-              inesquecível pela África do Sul.
+              inesquecível pelo Leste Europeu.
             </p>
             <a
               href={`https://api.whatsapp.com/send/?phone=${NAYARA_WHATSAPP}&text=${encodeURIComponent(
-                "Olá Guilherme! Gostaria de mais informações sobre a viagem à África do Sul."
+                "Olá Guilherme! Gostaria de mais informações sobre a viagem ao Leste Europeu."
               )}&type=phone_number&app_absent=0`}
               target="_blank"
               rel="noopener noreferrer"
