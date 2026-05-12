@@ -12,6 +12,7 @@ import AfricaDoSul2 from "./pages/AfricaDoSul2.tsx";
 import Portugal from "./pages/Portugal.tsx";
 import Lideres from "./pages/Lideres.tsx";
 import LideresEvangelicos from "./pages/LideresEvangelicos.tsx";
+import LesteEuropeu from "./pages/LesteEuropeu.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/portugal" element={<Portugal />} />
           <Route path="/lideres-catolicos" element={<Lideres />} />
           <Route path="/lideres-evangelicos" element={<LideresEvangelicos />} />
+          <Route path="/leste-europeu" element={<LesteEuropeu />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
