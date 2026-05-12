@@ -15,6 +15,9 @@ import vienaCentroImg from "@/assets/leste-europeu/viena-centro.jpg";
 import vienaImg from "@/assets/leste-europeu/viena.webp";
 import pragaImg from "@/assets/leste-europeu/praga.jpg";
 import pragaVelhaImg from "@/assets/leste-europeu/praga-velha.jpg";
+import pragaCasteloImg from "@/assets/leste-europeu/praga-castelo.jpeg";
+import pragaPonteImg from "@/assets/leste-europeu/praga-ponte.jpg";
+import pragaCarlosImg from "@/assets/leste-europeu/praga-carlos.jpg";
 
 interface DayCard {
   day: string;
