@@ -8,8 +8,8 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 import embarqueImg from "@/assets/leste-europeu/embarque.jpg";
-import budapesteImg from "@/assets/leste-europeu/budapeste.jpg";
-import budapesteBastiaoImg from "@/assets/leste-europeu/budapeste-bastiao.jpg";
+import budapesteImg from "@/assets/leste-europeu/budapeste.webp";
+import budapesteBastiaoImg from "@/assets/leste-europeu/budapeste-bastiao.webp";
 import bratislavaImg from "@/assets/leste-europeu/bratislava.jpg";
 import vienaImg from "@/assets/leste-europeu/viena.jpg";
 import vienaCentroImg from "@/assets/leste-europeu/viena-centro.jpg";
