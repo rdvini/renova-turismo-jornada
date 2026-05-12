@@ -39,7 +39,7 @@ const Depoimentos = () => {
             Pagamento
           </p>
           <p className="font-heading text-3xl md:text-5xl font-bold text-primary-foreground">
-            Valor total da viagem <span className="text-secondary">US$ 3.990</span>
+            Valor total da viagem <span className="text-secondary">US$ 0.00-</span>
           </p>
         </div>
       </section>
