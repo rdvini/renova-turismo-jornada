@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Seo from "@/components/seo/Seo";
 import HubNavbar from "@/components/hub/HubNavbar";
 import HubHero from "@/components/hub/HubHero";
 import CampaignHub from "@/components/hub/CampaignHub";
@@ -11,6 +12,11 @@ const Index = () => {
   }, []);
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="Renova Turismo — Roteiros Culturais e Peregrinações"
+        description="Conheça as viagens da Renova Turismo: roteiros culturais e peregrinações com guias em português, hotéis selecionados e experiências inesquecíveis."
+        path="/"
+      />
       <HubNavbar />
       <HubHero />
       <CampaignHub />
