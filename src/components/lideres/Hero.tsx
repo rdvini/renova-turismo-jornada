@@ -54,6 +54,10 @@ const Hero = () => {
               src={slide.src}
               alt={slide.alt}
               loading={i === 0 ? "eager" : "lazy"}
+              fetchPriority={i === 0 ? "high" : "auto"}
+              decoding="async"
+              width={1600}
+              height={900}
               className="w-full h-full object-cover flex-shrink-0"
             />
           ))}
