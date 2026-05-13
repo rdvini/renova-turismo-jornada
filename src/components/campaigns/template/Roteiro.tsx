@@ -8,15 +8,15 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 import embarqueImg from "@/assets/africa-do-sul/embarque.jpg";
-import johannesburgoImg from "@/assets/africa-do-sul/johannesburgo-skyline.jpg";
+import johannesburgoImg from "@/assets/africa-do-sul/johannesburgo-skyline.webp";
 import blydeCanyonImg from "@/assets/africa-do-sul/blyde-canyon.jpg";
 import safariKrugerImg from "@/assets/africa-do-sul/safari-kruger.jpg";
-import elefantesKrugerImg from "@/assets/africa-do-sul/elefantes-kruger.jpg";
-import leoesKrugerImg from "@/assets/africa-do-sul/leoes-kruger.jpg";
+import elefantesKrugerImg from "@/assets/africa-do-sul/elefantes-kruger.webp";
+import leoesKrugerImg from "@/assets/africa-do-sul/leoes-kruger.webp";
 import capeTownImg from "@/assets/africa-do-sul/cape-town.jpg";
-import pretoriaImg from "@/assets/africa-do-sul/pretoria-union-buildings.jpg";
+import pretoriaImg from "@/assets/africa-do-sul/pretoria-union-buildings.webp";
 import caboBoaEsperancaImg from "@/assets/africa-do-sul/cabo-boa-esperanca.jpg";
-import winelandsImg from "@/assets/africa-do-sul/stellenbosch-vinhedos.jpg";
+import winelandsImg from "@/assets/africa-do-sul/stellenbosch-vinhedos.webp";
 
 interface DayCard {
   day: string;

@@ -1,4 +1,4 @@
-import heroImage from "@/assets/africa-do-sul/hero.jpg";
+import heroImage from "@/assets/africa-do-sul/hero.webp";
 
 const Hero = () => {
   return (

@@ -1,5 +1,5 @@
-import istanbulImg from "@/assets/istanbul.jpg";
-import efesoImg from "@/assets/efeso.jpg";
+import istanbulImg from "@/assets/istanbul.webp";
+import efesoImg from "@/assets/efeso.webp";
 import pamukkaleImg from "@/assets/pamukkale.jpg";
 import capadociaImg from "@/assets/capadocia.jpg";
 

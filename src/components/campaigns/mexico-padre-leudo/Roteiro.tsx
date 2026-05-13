@@ -9,11 +9,11 @@ import {
 } from "@/components/ui/carousel";
 
 import aeroportoManaus from "@/assets/mexico-padre-leudo/aeroporto-manaus.webp";
-import guadalupeImg from "@/assets/mexico-padre-leudo/san-jacinto.jpg";
+import guadalupeImg from "@/assets/mexico-padre-leudo/san-jacinto.webp";
 import teotihuacanImg from "@/assets/mexico-padre-leudo/teotihuacan.jpg";
-import pueblaImg from "@/assets/mexico-padre-leudo/basilica-guadalupe-aerea.jpg";
-import cancunImg from "@/assets/mexico-padre-leudo/cancun-aerea.jpg";
-import chichenItzaImg from "@/assets/mexico-padre-leudo/cancun-zona-hoteleira.jpg";
+import pueblaImg from "@/assets/mexico-padre-leudo/basilica-guadalupe-aerea.webp";
+import cancunImg from "@/assets/mexico-padre-leudo/cancun-aerea.webp";
+import chichenItzaImg from "@/assets/mexico-padre-leudo/cancun-zona-hoteleira.webp";
 
 interface DayCard {
   day: string;

@@ -8,11 +8,11 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 
-import guarulhosImg from "@/assets/airport-family.jpg";
+import guarulhosImg from "@/assets/airport-family.webp";
 import istanbulImg from "@/assets/padre-leudo/istanbul-skyline.jpg";
 import capadociaImg from "@/assets/padre-leudo/capadocia.jpg";
 import pamukkaleImg from "@/assets/padre-leudo/pamukkale-thermal-pools.jpg";
-import laoduceiaImg from "@/assets/padre-leudo/laodiceia.jpg";
+import laoduceiaImg from "@/assets/padre-leudo/laodiceia.webp";
 import efesoImg from "@/assets/padre-leudo/efeso-ruins.jpg";
 import pergamoImg from "@/assets/turquia/pergamo-asclepion.jpg";
 import sardesImg from "@/assets/turquia/sardes-templo.jpg";

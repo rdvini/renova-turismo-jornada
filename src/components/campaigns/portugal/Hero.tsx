@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import heroImage from "@/assets/portugal/hero.jpg";
+import heroImage from "@/assets/portugal/hero.webp";
 
 interface HeroProps {
   solidSectionRef?: React.RefObject<HTMLDivElement>;
