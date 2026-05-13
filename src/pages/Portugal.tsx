@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import Seo from "@/components/seo/Seo";
 import Navbar from "@/components/campaigns/portugal/Navbar";
 import Hero from "@/components/campaigns/portugal/Hero";
 import SobreViagem from "@/components/campaigns/portugal/SobreViagem";
@@ -18,6 +19,18 @@ const Portugal = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="Viagem para Portugal | Renova Turismo"
+        description="Roteiro cultural por Portugal com a Renova Turismo: Lisboa, Porto, Fátima e mais, com guias em português e hospedagem selecionada."
+        path="/portugal"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "TouristTrip",
+          name: "Viagem para Portugal",
+          touristType: "Cultural",
+          provider: { "@type": "TravelAgency", name: "Renova Turismo" },
+        }}
+      />
       <Navbar />
       <Hero solidSectionRef={solidSectionRef} />
       {/* Sobre a Viagem floats over the hero image (no background) */}

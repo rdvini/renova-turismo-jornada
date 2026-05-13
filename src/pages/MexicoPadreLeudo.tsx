@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Seo from "@/components/seo/Seo";
 import Navbar from "@/components/campaigns/mexico-padre-leudo/Navbar";
 import Hero from "@/components/campaigns/mexico-padre-leudo/Hero";
 import SobreViagem from "@/components/campaigns/mexico-padre-leudo/SobreViagem";
@@ -15,6 +16,18 @@ const MexicoPadreLeudo = () => {
   }, []);
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="Peregrinação ao México com Pe Leudo Santos | Renova Turismo"
+        description="Peregrinação à Basílica de Guadalupe e roteiro cultural pelo México com o Pe Leudo Santos e a Renova Turismo. Guias em português e hospedagem selecionada."
+        path="/mexico-padre-leudo"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "TouristTrip",
+          name: "Peregrinação ao México com Pe Leudo Santos",
+          touristType: "Religioso",
+          provider: { "@type": "TravelAgency", name: "Renova Turismo" },
+        }}
+      />
       <Navbar />
       <Hero />
       <SobreViagem />

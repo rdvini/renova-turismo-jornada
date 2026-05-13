@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Seo from "@/components/seo/Seo";
 import Navbar from "@/components/campaigns/leste-europeu/Navbar";
 import Hero from "@/components/campaigns/leste-europeu/Hero";
 import SobreViagem from "@/components/campaigns/leste-europeu/SobreViagem";
@@ -16,6 +17,19 @@ const LesteEuropeu = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="Viagem ao Leste Europeu | Renova Turismo"
+        description="Roteiro pelo Leste Europeu: Budapeste, Viena, Bratislava e Praga com a Renova Turismo. Guias em português, hotéis selecionados e total conforto."
+        path="/leste-europeu"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "TouristTrip",
+          name: "Viagem ao Leste Europeu",
+          touristType: "Cultural",
+          provider: { "@type": "TravelAgency", name: "Renova Turismo" },
+          itinerary: { "@type": "ItemList", name: "Budapeste, Viena, Bratislava e Praga" },
+        }}
+      />
       <Navbar />
       <Hero />
       <SobreViagem />

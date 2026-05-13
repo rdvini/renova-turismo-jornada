@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Seo from "@/components/seo/Seo";
 import Hero from "@/components/lideres-evangelicos/Hero";
 import JornadaCards from "@/components/lideres-evangelicos/JornadaCards";
 import PorQueRenova from "@/components/lideres-evangelicos/PorQueRenova";
@@ -14,6 +15,11 @@ const LideresEvangelicos = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="Pastores na Terra Santa | Renova Turismo"
+        description="Programa exclusivo da Renova Turismo para pastores líderes na Terra Santa: roteiros, formação e suporte completo para sua peregrinação."
+        path="/lideres-evangelicos"
+      />
       <Hero />
       <JornadaCards />
       <PorQueRenova />

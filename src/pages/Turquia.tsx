@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Seo from "@/components/seo/Seo";
 import Navbar from "@/components/campaigns/turquia/Navbar";
 import Hero from "@/components/campaigns/turquia/Hero";
 import SobreViagem from "@/components/campaigns/turquia/SobreViagem";
@@ -33,6 +34,19 @@ const Turquia = () => {
   }, []);
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="Viagem para a Turquia | Renova Turismo"
+        description="Roteiro cultural e histórico pela Turquia com a Renova Turismo: Istambul, Capadócia e mais, com guias em português e hospedagem selecionada."
+        path="/turquia"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "TouristTrip",
+          name: "Viagem para a Turquia",
+          touristType: "Cultural",
+          provider: { "@type": "TravelAgency", name: "Renova Turismo" },
+          itinerary: { "@type": "ItemList", name: "Istambul, Capadócia e Pamukkale" },
+        }}
+      />
       <Navbar />
       <Hero />
       <SobreViagem />
