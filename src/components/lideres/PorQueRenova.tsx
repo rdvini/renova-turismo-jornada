@@ -27,15 +27,15 @@ const PorQueRenova = () => {
           {items.map(({ icon: Icon, title, text }) => (
             <div
               key={title}
-              className="group relative flex items-start gap-4 p-6 rounded-2xl overflow-hidden backdrop-blur-xl bg-gradient-to-br from-primary-foreground/8 via-primary-foreground/3 to-primary-foreground/5 border border-primary-foreground/12 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_8px_32px_-8px_rgba(0,0,0,0.4)] hover:-translate-y-1 hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.15),0_20px_40px_-12px_rgba(0,0,0,0.5)] hover:border-primary-foreground/25 transition-all duration-500"
+              className="group relative flex items-start gap-4 p-6 rounded-2xl overflow-hidden backdrop-blur-xl bg-gradient-to-br from-primary-foreground/8 via-primary-foreground/3 to-primary-foreground/5 border border-primary-foreground/[0.07] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.08),0_8px_32px_-8px_rgba(0,0,0,0.35)] hover:-translate-y-1 hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.12),0_20px_40px_-12px_rgba(0,0,0,0.45)] hover:border-primary-foreground/[0.14] transition-all duration-500"
             >
               {/* Liquid glass highlights */}
-              <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-b from-primary-foreground/8 via-transparent to-transparent opacity-60" />
-              <div className="pointer-events-none absolute -top-20 -left-10 w-40 h-40 rounded-full bg-primary-foreground/10 blur-2xl opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
+              <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-b from-primary-foreground/6 via-transparent to-transparent opacity-60" />
+              <div className="pointer-events-none absolute -top-20 -left-10 w-40 h-40 rounded-full bg-primary-foreground/8 blur-2xl opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
               <div className="pointer-events-none absolute -bottom-16 -right-10 w-40 h-40 rounded-full bg-secondary/20 blur-3xl opacity-50 group-hover:opacity-80 transition-opacity duration-500" />
-              <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary-foreground/30 to-transparent" />
+              <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary-foreground/20 to-transparent" />
 
-              <div className="relative flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-primary-foreground/15 to-primary-foreground/5 backdrop-blur-md border border-primary-foreground/25 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.15)] flex items-center justify-center">
+              <div className="relative flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-primary-foreground/12 to-primary-foreground/4 backdrop-blur-md border border-primary-foreground/[0.10] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.08)] flex items-center justify-center">
                 <Icon className="text-primary-foreground drop-shadow-[0_0_8px_rgba(0,0,0,0.4)]" size={24} strokeWidth={2.25} />
               </div>
               <div className="relative">
