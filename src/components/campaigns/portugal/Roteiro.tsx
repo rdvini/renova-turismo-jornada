@@ -139,7 +139,7 @@ const slides: Slide[] = [
         day: "8° Dia",
         title: "LISBOA / SÃO PAULO",
         description:
-          "Após café da manhã, em horário a determinar, translado para aeroporto de Lisboa, para embarque com destino à São Paulo, voos com conexões.",
+          "Após o café da manhã, em horário a determinar, traslado para o aeroporto de Lisboa, para embarque com destino a São Paulo, com as devidas conexões.",
         highlight:
           "Despedida de Portugal com bagagem cheia de memórias, fé e experiências inesquecíveis.",
       },
