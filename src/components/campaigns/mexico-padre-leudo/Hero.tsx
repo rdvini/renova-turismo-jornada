@@ -1,4 +1,4 @@
-import heroImage from "@/assets/mexico-padre-leudo/hero-basilica-guadalupe.jpg";
+import heroImage from "@/assets/mexico-padre-leudo/hero-basilica-guadalupe.webp";
 
 const Hero = () => {
   return (

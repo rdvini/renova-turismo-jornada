@@ -8,12 +8,12 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 
-import guarulhosImg from "@/assets/portugal/guarulhos-departure.jpg";
-import fatimaImg from "@/assets/portugal/fatima-santuario.jpg";
-import batalhaImg from "@/assets/portugal/batalha-mosteiro.jpg";
-import portoImg from "@/assets/portugal/porto-douro.jpg";
+import guarulhosImg from "@/assets/portugal/guarulhos-departure.webp";
+import fatimaImg from "@/assets/portugal/fatima-santuario.webp";
+import batalhaImg from "@/assets/portugal/batalha-mosteiro.webp";
+import portoImg from "@/assets/portugal/porto-douro.webp";
 import obidosImg from "@/assets/portugal/obidos-medieval.jpg";
-import lisboaImg from "@/assets/portugal/lisboa-praca-comercio.jpg";
+import lisboaImg from "@/assets/portugal/lisboa-praca-comercio.webp";
 
 interface DayCard {
   day: string;

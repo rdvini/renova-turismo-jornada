@@ -12,7 +12,7 @@ import manausImg from "@/assets/padre-leudo/manaus-departure.jpg";
 import istanbulImg from "@/assets/padre-leudo/istanbul-skyline.jpg";
 import capadociaImg from "@/assets/padre-leudo/capadocia.jpg";
 import konyaImg from "@/assets/padre-leudo/pamukkale-thermal-pools.jpg";
-import pamukkaleImg from "@/assets/padre-leudo/laodiceia.jpg";
+import pamukkaleImg from "@/assets/padre-leudo/laodiceia.webp";
 import efesoImg from "@/assets/padre-leudo/efeso-ruins.jpg";
 import bursaImg from "@/assets/padre-leudo/bursa.jpg";
 

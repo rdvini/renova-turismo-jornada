@@ -1,7 +1,7 @@
 import { BookOpen, Heart, Users } from "lucide-react";
 import cardBg01 from "@/assets/lideres/card-bg-01.webp";
-import cardBg02 from "@/assets/lideres-evangelicos/avivamento-espiritual.jpeg";
-import cardBg03 from "@/assets/lideres-evangelicos/unidade-comunhao.jpeg";
+import cardBg02 from "@/assets/lideres-evangelicos/avivamento-espiritual.webp";
+import cardBg03 from "@/assets/lideres-evangelicos/unidade-comunhao.webp";
 
 const WHATSAPP_URL =
   "https://wa.me/5519998947307?text=Ol%C3%A1!%20Vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.";

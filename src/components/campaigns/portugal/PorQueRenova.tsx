@@ -9,7 +9,7 @@ import {
 import renovaGroup1 from "@/assets/portugal/renova-group-portugal-1.jpeg";
 import renovaGroup2 from "@/assets/portugal/renova-group-portugal-2.jpeg";
 import renovaGroup3 from "@/assets/portugal/renova-group-portugal-3.jpeg";
-import renovaGroup4 from "@/assets/portugal/renova-group-portugal-4.jpeg";
+import renovaGroup4 from "@/assets/portugal/renova-group-portugal-4.webp";
 
 const reasons = [
   { icon: Heart, title: "Experiências Únicas", text: "Cada roteiro é pensado para proporcionar momentos memoráveis e enriquecedores." },
