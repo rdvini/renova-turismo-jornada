@@ -54,7 +54,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-primary-foreground/15 pt-6 text-center">
-          <p className="font-body text-xs text-primary-foreground/40">
+          <p className="font-body text-xs text-primary-foreground/70">
             © 2026 Renova Turismo. Todos os direitos reservados.
           </p>
         </div>
