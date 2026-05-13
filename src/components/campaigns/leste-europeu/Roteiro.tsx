@@ -61,7 +61,7 @@ const slides: Slide[] = [
         date: "",
         title: "BUDAPESTE",
         description:
-          'Chegada em Budapeste e traslado para o hotel. Pela tarde, tour panorâmico pela cidade. A cidade fica as margens do Danúbio e está dividida em duas partes: "Buda", onde se encontra o lado antigo da cidade, as residências da alta sociedade e as embaixadas, e "Pest", onde se encontra o centro comercial com todos os hotéis e restaurantes. Visitaremos a Igreja de Matias e também o monumento do Bastião dos Pescadores. Jantar e Hospedagem.',
+          'Chegada a Budapeste e traslado para o hotel. À tarde, tour panorâmico pela cidade. A cidade fica às margens do Danúbio e está dividida em duas partes: "Buda", onde se encontra o lado antigo da cidade, as residências da alta sociedade e as embaixadas, e "Pest", onde se encontra o centro comercial com todos os hotéis e restaurantes. Visitaremos a Igreja de Matias e também o monumento do Bastião dos Pescadores. Jantar e hospedagem.',
         highlight: "Buda e Pest às margens do Danúbio.",
       },
     ],
@@ -106,7 +106,7 @@ const slides: Slide[] = [
         date: "",
         title: "VIENA",
         description:
-          "Após café da manhã, passeio panorâmico pela cidade percorrendo a 'Ringstrasse', os Museus de Belas Artes e Ciências Naturais, o monumento a Maria Teresa, o Parlamento, a Prefeitura, o Teatro Nacional, o Palácio Imperial 'Hofburg' (Ingresso incluso). Visita igualmente aos Jardins do Belvedere, palácio de veraneio do Príncipe Eugenio de Saboya, com uma magnífica vista da cidade. Em seguida, passeio pelo centro antigo de Viena passando pelo Relógio Anker, Bairro Judeu, Praca Freyung, com seus palácios e a Praça dos Heróis. O passeio termina com a visita ao interior da Catedral de Santo Estevão. Retorno ao hotel. Jantar e hospedagem.",
+          "Após o café da manhã, passeio panorâmico pela cidade percorrendo a 'Ringstrasse', os Museus de Belas Artes e Ciências Naturais, o monumento a Maria Teresa, o Parlamento, a Prefeitura, o Teatro Nacional e o Palácio Imperial 'Hofburg' (ingresso incluso). Visita igualmente aos Jardins do Belvedere, palácio de veraneio do Príncipe Eugênio de Saboia, com uma magnífica vista da cidade. Em seguida, passeio pelo centro antigo de Viena passando pelo Relógio Anker, Bairro Judeu, Praça Freyung, com seus palácios, e a Praça dos Heróis. O passeio termina com a visita ao interior da Catedral de Santo Estêvão. Retorno ao hotel. Jantar e hospedagem.",
         highlight: "Ingresso ao Palácio Imperial Hofburg incluso.",
       },
     ],
@@ -121,7 +121,7 @@ const slides: Slide[] = [
         date: "",
         title: "VIENA",
         description:
-          "Após café da manhã, visitaremos Palácio de Schönbrun e seus jardins (Ingressos inclusos), considerado Patrimônio da Humanidade pela Unesco, é sem dúvida um dos maiores tesouros da cidade. Em seguida, faremos uma excursão de barco ao famoso Vale do Danúbio e teremos tempo livre para caminhar pela movimentada rua de pedestres Kartntner Strasse. A noite iremos participar de um maravilhoso concerto. Viena é também conhecida internacionalmente como a cidade da música e de compositores como Straus, Mozart, Beethoven e Haydn, que nela deixaram a sua marca. Hospedagem e jantar.",
+          "Após o café da manhã, visitaremos o Palácio de Schönbrunn e seus jardins (ingressos inclusos), considerado Patrimônio da Humanidade pela Unesco e, sem dúvida, um dos maiores tesouros da cidade. Em seguida, faremos uma excursão de barco ao famoso Vale do Danúbio e teremos tempo livre para caminhar pela movimentada rua de pedestres Kärntner Strasse. À noite, iremos participar de um maravilhoso concerto. Viena é também conhecida internacionalmente como a cidade da música e de compositores como Strauss, Mozart, Beethoven e Haydn, que nela deixaram a sua marca. Hospedagem e jantar.",
         highlight: "Schönbrunn, Vale do Danúbio e concerto vienense à noite.",
       },
       {
@@ -129,7 +129,7 @@ const slides: Slide[] = [
         date: "",
         title: "VIENA / PRAGA",
         description:
-          "Após café da manhã, saída em ônibus para Praga. A noite, inesquecível passeio percorrendo o caminho que nos tempos medievais os reis faziam após a coroação na Catedral de São Vito. Oportunidade para apreciar as mais belas vistas da cidade iluminada e conhecer os 4 núcleos mais antigos de Praga. Hospedagem e jantar.",
+          "Após o café da manhã, saída de ônibus para Praga. À noite, inesquecível passeio percorrendo o caminho que, nos tempos medievais, os reis faziam após a coroação na Catedral de São Vito. Oportunidade para apreciar as mais belas vistas da cidade iluminada e conhecer os 4 núcleos mais antigos de Praga. Hospedagem e jantar.",
         highlight: "Praga iluminada pelos passos dos antigos reis.",
       },
     ],
