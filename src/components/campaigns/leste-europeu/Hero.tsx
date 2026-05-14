@@ -2,18 +2,20 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import budapesteImg from "@/assets/leste-europeu/budapeste-ponte.webp";
 import bratislavaImg from "@/assets/leste-europeu/bratislava.webp";
 import vienaImg from "@/assets/leste-europeu/viena.webp";
 import pragaImg from "@/assets/leste-europeu/praga.webp";
 
 const slides = [
+  { src: budapesteImg, alt: "Ponte das Correntes e Basílica de Santo Estêvão, Budapeste, Hungria" },
   { src: bratislavaImg, alt: "Castelo de Bratislava sobre o rio Danúbio, Eslováquia" },
   { src: vienaImg, alt: "Hofburg, palácio imperial em Viena, Áustria" },
   { src: pragaImg, alt: "Castelo de Praga e Catedral de São Vito, República Tcheca" },
 ];
 
 const Hero = () => {
-  const autoplay = useRef(Autoplay({ delay: 5500, stopOnInteraction: false, stopOnMouseEnter: true }));
+  const autoplay = useRef(Autoplay({ delay: 3800, stopOnInteraction: false, stopOnMouseEnter: true }));
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, duration: 35 }, [autoplay.current]);
   const [selected, setSelected] = useState(0);
 
