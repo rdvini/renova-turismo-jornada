@@ -16,7 +16,7 @@ export interface Campaign {
 
 import heroTurkiye from "@/assets/padre-leudo/hero-turkiye.webp";
 import cardMexico from "@/assets/mexico-padre-leudo/card-cover.webp";
-import cardLesteEuropeu from "@/assets/leste-europeu/hero.jpg";
+import cardLesteEuropeu from "@/assets/leste-europeu/hero.webp";
 
 export const campaigns: Campaign[] = [
   {
