@@ -67,7 +67,7 @@ const Hero = ({ solidSectionRef }: HeroProps) => {
         <div className="max-w-xl mx-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.45s" }}>
           <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-primary-foreground/20 shadow-lg">
             <iframe
-              src="https://www.youtube.com/embed/lEItPUovjLo"
+              src="https://www.youtube.com/embed/lEItPUovjLo?autoplay=1&mute=1&playsinline=1&rel=0"
               title="Vídeo da Peregrinação para Portugal"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
