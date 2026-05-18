@@ -51,7 +51,7 @@ const Navbar = () => {
             ))}
           </ul>
           <a href="#contato" className="ml-2 inline-block rounded-full bg-secondary px-6 py-2.5 font-heading text-sm font-semibold text-secondary-foreground hover:bg-secondary/90 transition-colors">
-            Quero Participar
+            Saiba Mais
           </a>
         </div>
         <button className="md:hidden text-primary-foreground" onClick={() => setOpen(!open)} aria-label="Menu">
@@ -66,7 +66,7 @@ const Navbar = () => {
             </a>
           ))}
           <a href="#contato" onClick={() => setOpen(false)} className="block mx-6 mt-3 text-center rounded-full bg-secondary px-6 py-2.5 font-heading text-sm font-semibold text-secondary-foreground hover:bg-secondary/90 transition-colors">
-            Quero Participar
+            Saiba Mais
           </a>
         </div>
       )}

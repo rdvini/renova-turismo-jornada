@@ -46,7 +46,7 @@ const Hero = () => {
           className="inline-block bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-bold text-lg px-10 py-4 rounded-full transition-all hover:scale-105 shadow-lg animate-fade-in-up"
           style={{ animationDelay: "0.6s" }}
         >
-          Quero Participar
+          Saiba Mais
         </a>
       </div>
     </section>
