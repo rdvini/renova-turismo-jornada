@@ -61,7 +61,7 @@ const Navbar = () => {
             rel="noopener noreferrer"
             className="ml-2 inline-block rounded-full bg-primary-foreground px-6 py-2.5 font-heading text-sm font-semibold text-primary hover:bg-primary-foreground/90 transition-colors"
           >
-            Quero Participar
+            Saiba Mais
           </a>
         </div>
         <button
@@ -91,7 +91,7 @@ const Navbar = () => {
             onClick={() => setOpen(false)}
             className="block mx-6 mt-3 text-center rounded-full bg-primary-foreground px-6 py-2.5 font-heading text-sm font-semibold text-primary hover:bg-primary-foreground/90 transition-colors"
           >
-            Quero Participar
+            Saiba Mais
           </a>
         </div>
       )}
