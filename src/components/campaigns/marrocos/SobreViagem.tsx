@@ -32,7 +32,7 @@ const SobreViagem = () => {
             <MapPin className="mx-auto mb-4 text-secondary" size={36} />
             <h3 className="font-heading font-semibold text-primary mb-2">Destinos</h3>
             <p className="font-body text-muted-foreground text-sm">
-              Casablanca, Rabat, Fez, Marrakech, Chefchaouen e o Deserto do Saara.
+              Casablanca, Meknes, Fez, Marrakech e o Deserto do Saara.
             </p>
           </div>
           <div className="bg-card rounded-lg p-8 text-center shadow-sm hover:shadow-md transition-shadow">
