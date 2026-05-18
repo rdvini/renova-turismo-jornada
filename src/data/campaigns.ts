@@ -17,6 +17,7 @@ export interface Campaign {
 import heroTurkiye from "@/assets/padre-leudo/hero-turkiye.webp";
 import cardMexico from "@/assets/mexico-padre-leudo/card-cover.webp";
 import cardLesteEuropeu from "@/assets/leste-europeu/hero.webp";
+import cardMarrocos from "@/assets/marrocos/hero.jpg";
 
 export const campaigns: Campaign[] = [
   {
@@ -87,6 +88,18 @@ export const campaigns: Campaign[] = [
     description:
       "Uma jornada cultural pelas capitais imperiais e cidades históricas do Leste Europeu, com castelos, catedrais e paisagens encantadoras.",
     image: cardLesteEuropeu,
+    date: "Datas sob consulta",
+    badge: "Experiência",
+    published: false,
+  },
+  {
+    id: "marrocos",
+    slug: "/marrocos",
+    title: "Marrocos",
+    subtitle: "RENOVA TURISMO APRESENTA",
+    description:
+      "Uma imersão por cidades imperiais, medinas vibrantes, montanhas do Atlas e a magia do deserto do Saara.",
+    image: cardMarrocos,
     date: "Datas sob consulta",
     badge: "Experiência",
     published: false,
