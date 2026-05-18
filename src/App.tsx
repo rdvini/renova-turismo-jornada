@@ -15,6 +15,7 @@ const Portugal = lazy(() => import("./pages/Portugal.tsx"));
 const Lideres = lazy(() => import("./pages/Lideres.tsx"));
 const LideresEvangelicos = lazy(() => import("./pages/LideresEvangelicos.tsx"));
 const LesteEuropeu = lazy(() => import("./pages/LesteEuropeu.tsx"));
+const Marrocos = lazy(() => import("./pages/Marrocos.tsx"));
 const NotFound = lazy(() => import("./pages/NotFound.tsx"));
 
 const queryClient = new QueryClient();
@@ -41,6 +42,7 @@ const App = () => (
             <Route path="/lideres-catolicos" element={<Lideres />} />
             <Route path="/lideres-evangelicos" element={<LideresEvangelicos />} />
             <Route path="/leste-europeu" element={<LesteEuropeu />} />
+            <Route path="/marrocos" element={<Marrocos />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
