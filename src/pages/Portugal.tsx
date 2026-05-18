@@ -33,6 +33,7 @@ const Portugal = () => {
         }}
       />
       <Navbar />
+      <WhatsAppFloat />
       <Hero solidSectionRef={solidSectionRef} />
       {/* Sobre a Viagem floats over the hero image (no background) */}
       <div className="relative z-10">
