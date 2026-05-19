@@ -25,7 +25,7 @@ const SobreViagem = () => {
             <Calendar className="mx-auto mb-4 text-secondary" size={36} />
             <h3 className="font-heading font-semibold text-primary mb-2">Data</h3>
             <p className="font-body text-muted-foreground text-sm">
-              <span className="text-[#0ba0e0] font-semibold">17 a 26 de novembro de 2026</span>
+              <span className="text-[#0ba0e0] font-semibold">17 a 26 de Novembro de 2026</span>
             </p>
           </div>
           <div className="bg-card rounded-lg p-8 text-center shadow-sm hover:shadow-md transition-shadow">
