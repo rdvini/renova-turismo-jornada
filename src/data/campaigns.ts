@@ -100,7 +100,7 @@ export const campaigns: Campaign[] = [
     description:
       "Uma imersão por cidades imperiais, medinas vibrantes, montanhas do Atlas e a magia do deserto do Saara.",
     image: cardMarrocos,
-    date: "Datas sob consulta",
+    date: "17 a 26 de novembro de 2026",
     badge: "Experiência",
     published: false,
   },
