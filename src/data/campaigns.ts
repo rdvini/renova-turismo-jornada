@@ -110,7 +110,7 @@ export const campaigns: Campaign[] = [
     title: "Líderes Católicos",
     subtitle: "PADRES E LÍDERES",
     description:
-      "Leve sua comunidade para uma jornada espiritual na Terra Santa com segurança, tradição e confiança. Pacote 100% completo para líderes religiosos.",
+      "Leve sua comunidade para uma jornada espiritual na Terra Santa com segurança, tradição e confiança. Pacote 100% completo para líderes católicos.",
     image: cardLideres,
     date: "Datas sob consulta",
     badge: "Líderes",
