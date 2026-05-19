@@ -108,7 +108,7 @@ export const campaigns: Campaign[] = [
     id: "lideres",
     slug: "/lideres-catolicos",
     title: "Líderes Católicos",
-    subtitle: "PASTORES E PADRES",
+    subtitle: "PADRES E LÍDERES",
     description:
       "Leve sua comunidade para uma jornada espiritual na Terra Santa com segurança, tradição e confiança. Pacote 100% completo para líderes religiosos.",
     image: cardLideres,
