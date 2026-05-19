@@ -114,6 +114,18 @@ export const campaigns: Campaign[] = [
     image: cardLideres,
     date: "Datas sob consulta",
     badge: "Líderes",
-    published: false,
+    published: true,
+  },
+  {
+    id: "lideres-evangelicos",
+    slug: "/lideres-evangelicos",
+    title: "Terra Santa para Líderes Evangélicos",
+    subtitle: "PASTORES E LÍDERES",
+    description:
+      "Conduza sua igreja em uma peregrinação transformadora pela Terra Santa, com roteiro completo e suporte total para líderes evangélicos.",
+    image: cardLideres,
+    date: "Datas sob consulta",
+    badge: "Líderes",
+    published: true,
   },
 ];
