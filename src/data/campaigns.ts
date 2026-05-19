@@ -119,7 +119,7 @@ export const campaigns: Campaign[] = [
   {
     id: "lideres-evangelicos",
     slug: "/lideres-evangelicos",
-    title: "Terra Santa para Líderes Evangélicos",
+    title: "Líderes Evangélicos",
     subtitle: "PASTORES E LÍDERES",
     description:
       "Conduza sua igreja em uma peregrinação transformadora pela Terra Santa, com roteiro completo e suporte total para líderes evangélicos.",
