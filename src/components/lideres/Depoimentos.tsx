@@ -30,7 +30,7 @@ const TESTIMONIALS = [
 const VIDEOS = [
   {
     id: "video-1",
-    youtubeId: "cw0kfbkVcqA",
+    youtubeId: "rOrUkwVaq2A",
     title: "Depoimento de cliente Renova Turismo - 1",
   },
   {
@@ -40,7 +40,7 @@ const VIDEOS = [
   },
   {
     id: "video-3",
-    youtubeId: "z_kPlHY6PXU",
+    youtubeId: "58PAtRmP2wA",
     title: "Depoimento de cliente Renova Turismo - 3",
   },
 ];
