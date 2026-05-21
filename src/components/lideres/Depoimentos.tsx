@@ -21,54 +21,46 @@ const TESTIMONIALS = [
 const Depoimentos = () => {
   return (
     <section className="py-20 md:py-28 bg-background">
-      <div className="container mx-auto px-4 max-w-6xl">
+      <div className="container mx-auto px-4 max-w-5xl">
         <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-center mb-14 tracking-tight leading-tight">
           A confiança de quem já{" "}
           <span className="text-secondary">viajou conosco</span>
         </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 lg:gap-10 items-stretch mb-14">
-          {/* Cards column */}
-          <div className="flex flex-col gap-6">
-            {TESTIMONIALS.map((t) => (
-              <div
-                key={t.name}
-                className="relative bg-card rounded-2xl shadow-lg border border-border p-6 md:p-7 flex flex-col flex-1"
-              >
-                <Quote className="text-secondary/30 mb-3" size={28} />
-                <p className="font-body text-sm md:text-base text-foreground/90 leading-relaxed mb-5 flex-1">
-                  "{t.quote}"
-                </p>
-                <div className="flex gap-0.5 mb-2">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="text-yellow-500 fill-yellow-500" size={14} />
-                  ))}
-                </div>
-                <div>
-                  <p className="font-heading font-semibold text-primary text-sm md:text-base">
-                    {t.name}
-                  </p>
-                  <p className="font-body text-xs md:text-sm text-muted-foreground">
-                    {t.role}
-                  </p>
-                </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-14">
+          {TESTIMONIALS.map((t) => (
+            <div
+              key={t.name}
+              className="relative bg-card rounded-2xl shadow-lg border border-border p-8 flex flex-col"
+            >
+              <Quote className="text-secondary/30 mb-4" size={36} />
+              <p className="font-body text-base md:text-lg text-foreground/90 leading-relaxed mb-6 flex-1">
+                "{t.quote}"
+              </p>
+              <div className="flex gap-0.5 mb-3">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="text-yellow-500 fill-yellow-500" size={16} />
+                ))}
               </div>
-            ))}
-          </div>
-
-          {/* Shorts video column */}
-          <div className="w-full lg:w-[300px] mx-auto">
-            <div className="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-lg border border-border max-w-[320px] mx-auto lg:max-w-none h-full">
-              <iframe
-                src="https://www.youtube.com/embed/cw0kfbkVcqA?rel=0&modestbranding=1"
-                title="Depoimento de cliente Renova Turismo"
-                loading="lazy"
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-                className="absolute inset-0 w-full h-full"
-              />
+              <div>
+                <p className="font-heading font-semibold text-primary">{t.name}</p>
+                <p className="font-body text-sm text-muted-foreground">{t.role}</p>
+              </div>
             </div>
+          ))}
+        </div>
+
+        <div className="max-w-3xl mx-auto mb-14">
+          <div className="relative aspect-video rounded-2xl overflow-hidden shadow-lg border border-border">
+            <iframe
+              src="https://www.youtube.com/embed/cw0kfbkVcqA?rel=0&modestbranding=1"
+              title="Depoimento de cliente Renova Turismo"
+              loading="lazy"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full"
+            />
           </div>
         </div>
 
