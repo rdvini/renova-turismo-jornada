@@ -90,7 +90,7 @@ const Hero = () => {
         >
           <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-primary-foreground/20 shadow-lg">
             <iframe
-              src="https://www.youtube.com/embed/e3JY2NnXlWY?autoplay=1&mute=1&playsinline=1&rel=0&modestbranding=1"
+              src="https://www.youtube.com/embed/e3JY2NnXlWY?autoplay=1&mute=1&playsinline=1&rel=0&modestbranding=1&loop=1&playlist=e3JY2NnXlWY"
               title="Viagem para a Terra Santa com Renova Turismo"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
