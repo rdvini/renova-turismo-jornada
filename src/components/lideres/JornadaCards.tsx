@@ -32,6 +32,14 @@ const cards = [
       "A experiência compartilhada de viajar e orar juntos cria laços eternos entre os membros do grupo. Sua comunidade volta mais unida, mais forte e com histórias que serão contadas por gerações.",
     alt: "Basílica de São Pedro no Vaticano",
   },
+  {
+    image: cardBgJmj,
+    icon: Globe,
+    title: "JMJ 2027 — Seul",
+    description:
+      "Leve sua juventude à Jornada Mundial da Juventude em Seul, Coreia do Sul. Uma experiência única de fé, cultura e encontro com o Papa. Pacotes especiais para grupos paroquiais com acompanhamento completo.",
+    alt: "Seoul cityscape with JMJ 2027 pilgrimage",
+  },
 ];
 
 const JornadaCards = () => {
