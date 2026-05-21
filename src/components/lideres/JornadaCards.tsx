@@ -1,7 +1,8 @@
-import { BookOpen, Heart, Users } from "lucide-react";
+import { BookOpen, Heart, Users, Globe } from "lucide-react";
 import cardBg01 from "@/assets/lideres/card-bg-01.webp";
 import cardBg02 from "@/assets/lideres/card-bg-02.webp";
 import cardBg03 from "@/assets/lideres/card-bg-03.webp";
+import cardBgJmj from "@/assets/lideres/jmj-seul-2027.jpg";
 
 const WHATSAPP_URL =
   "https://wa.me/5519998947307?text=Ol%C3%A1!%20Vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.";
