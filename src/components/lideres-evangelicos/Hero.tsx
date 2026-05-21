@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import heroSlide2 from "@/assets/lideres/hero-slide-02.webp";
-import heroJerusalem from "@/assets/lideres-evangelicos/hero-jerusalem.webp";
 import heroPiramides from "@/assets/lideres-evangelicos/hero-piramides-egito.webp";
-import heroEsfinge from "@/assets/lideres-evangelicos/hero-esfinge-piramide.webp";
+import heroMesquitaAzul from "@/assets/lideres-evangelicos/hero-mesquita-azul.jpg";
+import heroAtenas from "@/assets/lideres-evangelicos/hero-atenas.avif";
 import logoRenova from "@/assets/logo-renova.svg";
 
 const WHATSAPP_URL =
@@ -11,8 +11,8 @@ const WHATSAPP_URL =
 const SLIDES = [
   { src: heroSlide2, alt: "Muro das Lamentações em Jerusalém, Terra Santa" },
   { src: heroPiramides, alt: "Pirâmides de Gizé com caravana de camelos, Egito" },
-  { src: heroEsfinge, alt: "Esfinge de Gizé com a Pirâmide de Quéfren ao fundo, Egito" },
-  { src: heroJerusalem, alt: "Cidade Antiga de Jerusalém ao entardecer, Israel" },
+  { src: heroAtenas, alt: "Acrópole de Atenas, Grécia" },
+  { src: heroMesquitaAzul, alt: "Mesquita Azul (Sultan Ahmed) em Istambul, Turquia" },
 ];
 
 // Clona o primeiro slide ao final para permitir avanço contínuo sem retorno visual
