@@ -1,7 +1,8 @@
-import { BookOpen, Heart, Users } from "lucide-react";
+import { BookOpen, Heart, Users, Globe } from "lucide-react";
 import cardBg01 from "@/assets/lideres/card-bg-01.webp";
 import cardBg02 from "@/assets/lideres/card-bg-02.webp";
 import cardBg03 from "@/assets/lideres/card-bg-03.webp";
+import cardBgJmj from "@/assets/lideres/jmj-seul-2027.jpg";
 
 const WHATSAPP_URL =
   "https://wa.me/5519998947307?text=Ol%C3%A1!%20Vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.";
@@ -31,6 +32,14 @@ const cards = [
       "A experiência compartilhada de viajar e orar juntos cria laços eternos entre os membros do grupo. Sua comunidade volta mais unida, mais forte e com histórias que serão contadas por gerações.",
     alt: "Basílica de São Pedro no Vaticano",
   },
+  {
+    image: cardBgJmj,
+    icon: Globe,
+    title: "JMJ 2027 — Seul",
+    description:
+      "Leve sua juventude à Jornada Mundial da Juventude em Seul, Coreia do Sul. Uma experiência única de fé, cultura e encontro com o Papa. Pacotes especiais para grupos paroquiais com acompanhamento completo.",
+    alt: "Seoul cityscape with JMJ 2027 pilgrimage",
+  },
 ];
 
 const JornadaCards = () => {
@@ -42,7 +51,7 @@ const JornadaCards = () => {
           <span className="text-secondary">vida espiritual da sua igreja</span>
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-7xl mx-auto mb-12">
           {cards.map((card, i) => {
             const Icon = card.icon;
             return (
