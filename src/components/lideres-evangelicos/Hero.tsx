@@ -4,6 +4,7 @@ import heroPiramides from "@/assets/lideres-evangelicos/hero-piramides-egito.web
 import heroMesquitaAzul from "@/assets/lideres-evangelicos/hero-mesquita-azul.jpg";
 import heroAtenas from "@/assets/lideres-evangelicos/hero-atenas.avif";
 import logoRenova from "@/assets/logo-renova.svg";
+import { useYouTubeVolume } from "@/hooks/useYouTubeVolume";
 
 const WHATSAPP_URL =
   "https://wa.me/5519998947307?text=Ol%C3%A1!%20Vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.";
@@ -19,6 +20,7 @@ const SLIDES = [
 const SLIDES_LOOP = [...SLIDES, SLIDES[0]];
 
 const Hero = () => {
+  const iframeRef = useYouTubeVolume(50);
   const [current, setCurrent] = useState(0);
   const [animate, setAnimate] = useState(true);
 
@@ -90,7 +92,8 @@ const Hero = () => {
         >
           <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-primary-foreground/20 shadow-lg">
             <iframe
-              src="https://www.youtube.com/embed/e3JY2NnXlWY?autoplay=1&mute=1&playsinline=1&rel=0&modestbranding=1&loop=1&playlist=e3JY2NnXlWY"
+              ref={iframeRef}
+              src="https://www.youtube.com/embed/e3JY2NnXlWY?autoplay=1&mute=1&playsinline=1&rel=0&modestbranding=1&loop=1&playlist=e3JY2NnXlWY&enablejsapi=1"
               title="Viagem para a Terra Santa com Renova Turismo"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"

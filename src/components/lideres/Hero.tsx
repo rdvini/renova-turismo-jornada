@@ -4,6 +4,7 @@ import heroSlide3 from "@/assets/lideres/hero-slide-03.webp";
 import heroSlide4 from "@/assets/lideres/hero-slide-04.webp";
 import heroSlide5 from "@/assets/lideres/hero-slide-05.webp";
 import logoRenova from "@/assets/logo-renova.svg";
+import { useYouTubeVolume } from "@/hooks/useYouTubeVolume";
 
 const WHATSAPP_URL =
   "https://wa.me/5519998947307?text=Ol%C3%A1!%20Vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.";
@@ -19,6 +20,7 @@ const SLIDES = [
 const SLIDES_LOOP = [...SLIDES, SLIDES[0]];
 
 const Hero = () => {
+  const iframeRef = useYouTubeVolume(50);
   const [current, setCurrent] = useState(0);
   const [animate, setAnimate] = useState(true);
 
@@ -94,7 +96,8 @@ const Hero = () => {
         >
           <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-primary-foreground/20 shadow-lg">
             <iframe
-              src="https://www.youtube.com/embed/lmWUiBtep3I?autoplay=1&mute=1&playsinline=1&rel=0&modestbranding=1&loop=1&playlist=lmWUiBtep3I"
+              ref={iframeRef}
+              src="https://www.youtube.com/embed/lmWUiBtep3I?autoplay=1&mute=1&playsinline=1&rel=0&modestbranding=1&loop=1&playlist=lmWUiBtep3I&enablejsapi=1"
               title="Peregrinação para Padres na Terra Santa - Renova Turismo"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import heroImage from "@/assets/portugal/hero.webp";
+import { useYouTubeVolume } from "@/hooks/useYouTubeVolume";
 
 interface HeroProps {
   solidSectionRef?: React.RefObject<HTMLDivElement>;
@@ -8,6 +9,7 @@ interface HeroProps {
 const Hero = ({ solidSectionRef }: HeroProps) => {
   const sectionRef = useRef<HTMLElement>(null);
   const [isPastHero, setIsPastHero] = useState(false);
+  const iframeRef = useYouTubeVolume(50);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,7 +69,8 @@ const Hero = ({ solidSectionRef }: HeroProps) => {
         <div className="max-w-xl mx-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.45s" }}>
           <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-primary-foreground/20 shadow-lg">
             <iframe
-              src="https://www.youtube.com/embed/lEItPUovjLo?autoplay=1&mute=1&playsinline=1&rel=0"
+              ref={iframeRef}
+              src="https://www.youtube.com/embed/lEItPUovjLo?autoplay=1&mute=1&playsinline=1&rel=1&enablejsapi=1"
               title="Vídeo da Peregrinação para Portugal"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
