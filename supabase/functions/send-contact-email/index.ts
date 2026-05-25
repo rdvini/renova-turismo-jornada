@@ -19,6 +19,15 @@ const CAMPAIGN_RECIPIENTS: Record<string, string> = {
   "viagem portugal": "contato@renovaturismo.com.br",
 };
 
+function escapeHtml(str: string): string {
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
 const BodySchema = z.object({
   nome: z.string().trim().min(1).max(100),
   email: z.string().trim().email().max(255),
