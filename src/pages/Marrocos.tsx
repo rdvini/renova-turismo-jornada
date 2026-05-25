@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Seo from "@/components/seo/Seo";
 import Navbar from "@/components/campaigns/marrocos/Navbar";
 import Hero from "@/components/campaigns/marrocos/Hero";
 import SobreViagem from "@/components/campaigns/marrocos/SobreViagem";
