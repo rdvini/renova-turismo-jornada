@@ -3,16 +3,16 @@ import GoogleReviewsCard from "@/components/shared/GoogleReviewsCard";
 
 const testimonials = [
   {
-    name: "Dr. Felipe Silva",
-    location: "Campinas/SP",
+    name: "Marcia Storani Silva",
+    location: "",
     quote:
-      "Excelente empresa. Excelente tratamento. Excelentes produtos. Excelente pós-venda. É o tipo de empresa que entende que uma viagem pode significar muito mais do que apenas uma viagem e se dedica para que seja um sonho inesquecível.",
+      "Nossa viagem ao leste europeu foi maravilhosa, os roteiros, hotéis, guias, a assistência dada pela Renova na pessoa do Rafael tbm foi espetacular.\nVisitamos lugares surpreendentes, muita história, cultura , costumes, hábitos alimentares e curiosidades fizeram parte dessa viagem. As guias super profissionais, com muita desenvoltura nos levaram para ver muita coisa interessante. Passeio noturno pelo Rio Danúbio, paisagens mágicas, o concerto em Viena muito lindo!!\nOs hotéis tbm muito bons, café da manhã excelente e os jantares temáticos tbm muito animados e gostosos. Sempre com alguma surpresa a Renova nos deixava satisfeitos e felizes, nos divertimos muito. Só uma ressalva: o jantar da despedida pode ser com um cardápio mais leve , menos comida e consequentemente menos desperdício.\nNada a reclamar, só agradecer por esse passeio que jamais esqueceremos.",
   },
   {
-    name: "Ilda Costa",
-    location: "Itu/SP",
+    name: "Rafaela Tordin",
+    location: "",
     quote:
-      "Da viagem que fiz só tenho pontos positivos... Amei.... A equipe da Renova esteve presente nos dando toda assistência desde o momento em que saímos de Salto até o momento em que voltamos pra cá. Sempre estavam a disposição quando alguém do grupo precisava e acho que essa atenção para com o cliente foi o que me fez ter o desejo de fazer novas viagens com a Renova...",
+      "Fiz uma viagem inesquecível para o Leste Europeu com a Renova. O roteiro foi muito bem pensado e organizado, os guias eram preparados e atenciosos, e a assistência em todo o processo foi excelente. Não precisei me preocupar com nada, pois a equipe cuidou de tudo com muito profissionalismo. Agradeço pela experiência maravilhosa que me proporcionaram.",
   },
   {
     name: "Luciano Martins",
