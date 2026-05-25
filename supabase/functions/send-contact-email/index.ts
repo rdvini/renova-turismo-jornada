@@ -19,6 +19,15 @@ const CAMPAIGN_RECIPIENTS: Record<string, string> = {
   "viagem portugal": "contato@renovaturismo.com.br",
 };
 
+function escapeHtml(str: string): string {
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
 const BodySchema = z.object({
   nome: z.string().trim().min(1).max(100),
   email: z.string().trim().email().max(255),
@@ -75,13 +84,13 @@ Deno.serve(async (req) => {
         body: JSON.stringify({
           from: "Renova Turismo <noreply@renovaturismo.com.br>",
           to: [toEmail],
-          subject: `Novo contato - ${campaign || "Viagem"}: ${nome}`,
+          subject: `Novo contato - ${escapeHtml(campaign || "Viagem")}: ${escapeHtml(nome)}`,
           html: `
             <h2>Novo contato pelo site</h2>
-            <p><strong>Campanha:</strong> ${campaign || "—"}</p>
-            <p><strong>Nome:</strong> ${nome}</p>
-            <p><strong>E-mail:</strong> ${email}</p>
-            <p><strong>Telefone:</strong> ${telefone}</p>
+            <p><strong>Campanha:</strong> ${escapeHtml(campaign || "—")}</p>
+            <p><strong>Nome:</strong> ${escapeHtml(nome)}</p>
+            <p><strong>E-mail:</strong> ${escapeHtml(email)}</p>
+            <p><strong>Telefone:</strong> ${escapeHtml(telefone)}</p>
             <p><em>Enviado em ${new Date().toLocaleString("pt-BR", { timeZone: "America/Sao_Paulo" })}</em></p>
           `,
         }),
