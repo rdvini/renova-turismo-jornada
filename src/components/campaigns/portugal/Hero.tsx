@@ -70,7 +70,7 @@ const Hero = ({ solidSectionRef }: HeroProps) => {
           <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-primary-foreground/20 shadow-lg">
             <iframe
               ref={iframeRef}
-              src="https://www.youtube.com/embed/lEItPUovjLo?autoplay=1&mute=1&playsinline=1&rel=1&enablejsapi=1"
+              src="https://www.youtube.com/embed/lEItPUovjLo?autoplay=1&mute=1&playsinline=1&rel=0&enablejsapi=1"
               title="Vídeo da Peregrinação para Portugal"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
