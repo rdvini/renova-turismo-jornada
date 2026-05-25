@@ -16,7 +16,7 @@ const testimonials = [
   },
   {
     name: "Luciano Martins",
-    location: "São Paulo/SP",
+    location: "",
     quote:
       "Uma Empresa Responsável, Dedicada a proporcionar o máximo de bem estar aos Clientes. Eu sou Cliente da Renova Turismo, e estou muito Satisfeito com o empenho e organização, que é uma Marca Registrada desta Empresa.",
   },
