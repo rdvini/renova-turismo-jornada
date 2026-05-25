@@ -42,7 +42,7 @@ const SobreViagem = () => {
             <h3 className="font-heading font-semibold text-primary mb-2">Significado</h3>
             <p className="font-body text-muted-foreground text-sm">
               {/* EDITAR: Significado espiritual/cultural */}
-              Descreva aqui o significado especial desta viagem para os participantes.
+              Descubra marcos históricos, paisagens surpreendentes e a diversidade cultural de um dos destinos mais fascinantes do mundo.
             </p>
           </div>
         </div>
