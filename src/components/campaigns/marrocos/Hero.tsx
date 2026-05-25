@@ -1,4 +1,5 @@
 import heroImage from "@/assets/marrocos/hero.jpg";
+import { useYouTubeVolume } from "@/hooks/useYouTubeVolume";
 
 const WHATSAPP_URL =
   "https://api.whatsapp.com/send/?phone=5519992016125&text=Ol%C3%A1+Guilherme%21+Tenho+interesse+na+viagem+para+o+Marrocos+e+gostaria+de+receber+mais+informa%C3%A7%C3%B5es.&type=phone_number&app_absent=0";
@@ -22,13 +23,7 @@ const Hero = () => {
 
         <div className="max-w-xl mx-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.45s" }}>
           <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-primary-foreground/20 shadow-lg">
-            <iframe
-              src="https://www.youtube.com/embed/1pSKio3cLOM?autoplay=1&mute=1&playsinline=1&rel=0&modestbranding=1&loop=1&playlist=1pSKio3cLOM"
-              title="Viagem ao Marrocos - Renova Turismo"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="absolute inset-0 w-full h-full"
-            />
+            <YouTubeVideo />
           </div>
         </div>
 
