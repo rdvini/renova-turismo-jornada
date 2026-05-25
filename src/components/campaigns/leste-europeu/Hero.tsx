@@ -90,6 +90,18 @@ const Hero = () => {
           Castelos medievais, capitais imperiais e paisagens encantadoras — viva uma jornada cultural inesquecível pelo Leste Europeu com a Renova Turismo.
         </p>
 
+        <div className="max-w-xl mx-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.45s" }}>
+          <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-primary-foreground/20 shadow-lg">
+            <iframe
+              src="https://www.youtube.com/embed/TxLc7qjdNNg?autoplay=1&mute=1&playsinline=1&rel=0&modestbranding=1&loop=1&playlist=TxLc7qjdNNg"
+              title="Viagem ao Leste Europeu - Renova Turismo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full"
+            />
+          </div>
+        </div>
+
         <a
           href="https://api.whatsapp.com/send/?phone=5519992016125&text=Ol%C3%A1+Guilherme%21+Tenho+interesse+na+viagem+para+o+Leste+Europeu+e+gostaria+de+receber+mais+informa%C3%A7%C3%B5es.&type=phone_number&app_absent=0"
           target="_blank"
