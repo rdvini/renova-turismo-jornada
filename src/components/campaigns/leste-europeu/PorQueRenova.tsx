@@ -6,10 +6,12 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 
-/* EDITAR: Importe as fotos do grupo e adicione ao array `photos` abaixo.
-   Exemplo:
-   import renovaGroup1 from "@/assets/[destino]/renova-group-1.jpeg";
-*/
+import renovaGroup1 from "@/assets/leste-europeu/renova-group-1.jpeg";
+import renovaGroup2 from "@/assets/leste-europeu/renova-group-2.jpeg";
+import renovaGroup3 from "@/assets/leste-europeu/renova-group-3.jpeg";
+import renovaGroup4 from "@/assets/leste-europeu/renova-group-4.jpeg";
+import renovaGroup5 from "@/assets/leste-europeu/renova-group-5.jpeg";
+import renovaGroup6 from "@/assets/leste-europeu/renova-group-6.jpeg";
 
 const reasons = [
   { icon: Heart, title: "Experiências Únicas", text: "Cada roteiro é pensado para proporcionar momentos memoráveis e enriquecedores." },
@@ -19,14 +21,14 @@ const reasons = [
   { icon: Star, title: "Experiência Comprovada", text: "Líder no segmento de Turismo religioso e em grupos, com mais de 20 anos no mercado." },
 ];
 
-/* EDITAR: Adicione fotos reais do grupo aqui.
-   Exemplo:
-   const photos = [
-     { src: renovaGroup1, position: "center 60%" },
-     { src: renovaGroup2, position: "center 60%" },
-   ];
-*/
-const photos: { src: string; position: string }[] = [];
+const photos: { src: string; position: string }[] = [
+  { src: renovaGroup1, position: "center 60%" },
+  { src: renovaGroup2, position: "center 60%" },
+  { src: renovaGroup3, position: "center 60%" },
+  { src: renovaGroup4, position: "center 60%" },
+  { src: renovaGroup5, position: "center 60%" },
+  { src: renovaGroup6, position: "center 60%" },
+];
 
 const PorQueRenova = () => {
   return (
