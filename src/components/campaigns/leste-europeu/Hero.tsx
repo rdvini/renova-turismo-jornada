@@ -118,7 +118,7 @@ const Hero = () => {
         type="button"
         onClick={scrollPrev}
         aria-label="Slide anterior"
-        className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-20 h-11 w-11 md:h-12 md:w-12 rounded-full bg-black/30 hover:bg-black/55 text-white backdrop-blur-sm border border-white/20 flex items-center justify-center transition-all hover:scale-105"
+        className="hidden md:flex absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-20 h-11 w-11 md:h-12 md:w-12 rounded-full bg-black/30 hover:bg-black/55 text-white backdrop-blur-sm border border-white/20 items-center justify-center transition-all hover:scale-105"
       >
         <ChevronLeft className="h-6 w-6" />
       </button>
@@ -126,7 +126,7 @@ const Hero = () => {
         type="button"
         onClick={scrollNext}
         aria-label="Próximo slide"
-        className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-20 h-11 w-11 md:h-12 md:w-12 rounded-full bg-black/30 hover:bg-black/55 text-white backdrop-blur-sm border border-white/20 flex items-center justify-center transition-all hover:scale-105"
+        className="hidden md:flex absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-20 h-11 w-11 md:h-12 md:w-12 rounded-full bg-black/30 hover:bg-black/55 text-white backdrop-blur-sm border border-white/20 items-center justify-center transition-all hover:scale-105"
       >
         <ChevronRight className="h-6 w-6" />
       </button>
