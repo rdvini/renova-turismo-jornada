@@ -32,18 +32,7 @@ const Stars = () => (
 
 const Depoimentos = () => {
   return (
-    <>
-      <section className="py-12 md:py-16 bg-primary">
-        <div className="container mx-auto px-4 text-center">
-          <p className="font-accent text-base md:text-lg italic text-primary-foreground/80 mb-2">
-            Pagamento
-          </p>
-          <p className="font-heading text-3xl md:text-5xl font-bold text-primary-foreground">
-            Valor total da viagem <span className="text-secondary">US$ 0.00-</span>
-          </p>
-        </div>
-      </section>
-      <section id="depoimentos" className="py-12 md:py-28 pb-12 md:pb-16 bg-muted">
+    <section id="depoimentos" className="py-12 md:py-28 pb-12 md:pb-16 bg-muted">
       <div className="container mx-auto px-4">
         <p className="font-accent text-lg italic text-secondary text-center mb-2">
           O que dizem nossos viajantes
@@ -65,8 +54,7 @@ const Depoimentos = () => {
 
         <GoogleReviewsCard />
       </div>
-      </section>
-    </>
+    </section>
   );
 };
 
