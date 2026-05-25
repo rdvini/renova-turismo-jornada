@@ -6,6 +6,7 @@ import budapesteImg from "@/assets/leste-europeu/budapeste-ponte.webp";
 import bratislavaImg from "@/assets/leste-europeu/bratislava.webp";
 import vienaImg from "@/assets/leste-europeu/viena.webp";
 import pragaImg from "@/assets/leste-europeu/praga.webp";
+import { useYouTubeVolume } from "@/hooks/useYouTubeVolume";
 
 const slides = [
   { src: budapesteImg, alt: "Ponte das Correntes e Basílica de Santo Estêvão, Budapeste, Hungria" },
@@ -15,9 +16,10 @@ const slides = [
 ];
 
 const Hero = () => {
+  const iframeRef = useYouTubeVolume(50);
   const autoplay = useRef(Autoplay({ delay: 3800, stopOnInteraction: false, stopOnMouseEnter: true }));
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, duration: 35 }, [autoplay.current]);
-  const [selected, setSelected] = useState(0);
+  const [selected, setSelected] = useState( 0);
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
@@ -93,7 +95,8 @@ const Hero = () => {
         <div className="max-w-xl mx-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.45s" }}>
           <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-primary-foreground/20 shadow-lg">
             <iframe
-              src="https://www.youtube.com/embed/TxLc7qjdNNg?autoplay=1&mute=1&playsinline=1&rel=0&modestbranding=1&loop=1&playlist=TxLc7qjdNNg"
+              ref={iframeRef}
+              src="https://www.youtube.com/embed/TxLc7qjdNNg?autoplay=1&mute=1&playsinline=1&rel=0&modestbranding=1&loop=1&playlist=TxLc7qjdNNg&enablejsapi=1"
               title="Viagem ao Leste Europeu - Renova Turismo"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
