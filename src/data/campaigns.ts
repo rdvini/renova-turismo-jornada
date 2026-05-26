@@ -88,7 +88,7 @@ export const campaigns: Campaign[] = [
     description:
       "Uma jornada cultural pelas capitais imperiais e cidades históricas do Leste Europeu, com castelos, catedrais e paisagens encantadoras.",
     image: cardLesteEuropeu,
-    date: "Datas sob consulta",
+    date: "Agosto de 2026 e 2027",
     badge: "Experiência",
     published: true,
   },
