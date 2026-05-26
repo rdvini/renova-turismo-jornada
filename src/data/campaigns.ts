@@ -90,7 +90,7 @@ export const campaigns: Campaign[] = [
     image: cardLesteEuropeu,
     date: "Datas sob consulta",
     badge: "Experiência",
-    published: false,
+    published: true,
   },
   {
     id: "marrocos",
