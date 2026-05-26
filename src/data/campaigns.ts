@@ -102,7 +102,7 @@ export const campaigns: Campaign[] = [
     image: cardMarrocos,
     date: "17 a 26 de Novembro de 2026",
     badge: "Experiência",
-    published: false,
+    published: true,
   },
   {
     id: "lideres",
