@@ -49,8 +49,8 @@ const InscrevaSe = () => {
               inesquecível pelo Leste Europeu.
             </p>
             <a
-              href={`https://api.whatsapp.com/send/?phone=${NAYARA_WHATSAPP}&text=${encodeURIComponent(
-                "Olá Guilherme! Gostaria de mais informações sobre a viagem ao Leste Europeu."
+              href={`https://api.whatsapp.com/send/?phone=${RENATA_WHATSAPP}&text=${encodeURIComponent(
+                "Olá Renata! Gostaria de mais informações sobre a viagem ao Leste Europeu."
               )}&type=phone_number&app_absent=0`}
               target="_blank"
               rel="noopener noreferrer"
