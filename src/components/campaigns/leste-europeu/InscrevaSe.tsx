@@ -25,9 +25,9 @@ const InscrevaSe = () => {
       })
       .catch((err) => console.error("send-contact-email error:", err));
 
-    const message = `Olá Guilherme! Meu nome é ${nome}, meu e-mail é ${email} e meu telefone é ${telefone}. Gostaria de mais informações sobre a viagem ao Leste Europeu.`;
+    const message = `Olá Renata! Meu nome é ${nome}, meu e-mail é ${email} e meu telefone é ${telefone}. Gostaria de mais informações sobre a viagem ao Leste Europeu.`;
     window.open(
-      `https://api.whatsapp.com/send/?phone=${NAYARA_WHATSAPP}&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`,
+      `https://api.whatsapp.com/send/?phone=${RENATA_WHATSAPP}&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`,
       "_blank"
     );
     setSubmitted(true);
