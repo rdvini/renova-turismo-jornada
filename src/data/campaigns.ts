@@ -106,6 +106,18 @@ export const campaigns: Campaign[] = [
     published: true,
   },
   {
+    id: "jmj-seul-2027",
+    slug: "/jmj-seul-2027",
+    title: "JMJ Seul 2027",
+    subtitle: "JORNADA MUNDIAL DA JUVENTUDE",
+    description:
+      "Viva a Jornada Mundial da Juventude em Seul, na Coreia do Sul, ao lado do Papa e de milhões de jovens católicos do mundo todo.",
+    image: cardJmjSeul,
+    date: "Agosto de 2027",
+    badge: "JMJ",
+    published: false,
+  },
+  {
     id: "lideres",
     slug: "/lideres-catolicos",
     title: "Líderes Católicos",
