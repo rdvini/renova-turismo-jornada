@@ -18,6 +18,7 @@ import heroTurkiye from "@/assets/padre-leudo/hero-turkiye.webp";
 import cardMexico from "@/assets/mexico-padre-leudo/card-cover.webp";
 import cardLesteEuropeu from "@/assets/leste-europeu/hero.webp";
 import cardMarrocos from "@/assets/marrocos/hero.jpg";
+import cardJmjSeul from "@/assets/jmj-seul/card-cover.jpg";
 
 export const campaigns: Campaign[] = [
   {
@@ -103,6 +104,18 @@ export const campaigns: Campaign[] = [
     date: "17 a 26 de Novembro de 2026",
     badge: "Experiência",
     published: true,
+  },
+  {
+    id: "jmj-seul-2027",
+    slug: "/jmj-seul-2027",
+    title: "JMJ Seul 2027",
+    subtitle: "JORNADA MUNDIAL DA JUVENTUDE",
+    description:
+      "Viva a Jornada Mundial da Juventude em Seul, na Coreia do Sul, ao lado do Papa e de milhões de jovens católicos do mundo todo.",
+    image: cardJmjSeul,
+    date: "Agosto de 2027",
+    badge: "JMJ",
+    published: false,
   },
   {
     id: "lideres",
