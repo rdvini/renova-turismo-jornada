@@ -48,8 +48,8 @@ const InscrevaSe = () => {
               inesquecível pelo Marrocos.
             </p>
             <a
-              href={`https://api.whatsapp.com/send/?phone=${NAYARA_WHATSAPP}&text=${encodeURIComponent(
-                "Olá Guilherme! Gostaria de mais informações sobre a viagem ao Marrocos."
+              href={`https://api.whatsapp.com/send/?phone=${RENATA_WHATSAPP}&text=${encodeURIComponent(
+                "Olá Renata! Gostaria de mais informações sobre a viagem ao Marrocos."
               )}&type=phone_number&app_absent=0`}
               target="_blank"
               rel="noopener noreferrer"
