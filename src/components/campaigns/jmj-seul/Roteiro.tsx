@@ -37,119 +37,91 @@ const slides: Slide[] = [
   {
     image: guarulhosImg,
     imageAlt: "Aeroporto de Guarulhos – partida para Seul",
-    region: "São Paulo → Seul",
+    region: "São Paulo → Coreia",
     days: [
       {
         day: "1º Dia",
-        title: "SÃO PAULO / SEUL",
+        title: "SÃO PAULO / COREIA-SEUL",
         description:
-          "Encontro no aeroporto internacional de Guarulhos para embarque em voo com destino a Seul, fazendo as devidas conexões.",
+          "Apresentação no aeroporto internacional de São Paulo, em Guarulhos, para embarque com destino à Coreia — Seul. Voos com as devidas conexões.",
         highlight: "O início de uma jornada de fé até a JMJ na Coreia do Sul.",
       },
       {
         day: "2º Dia",
-        title: "CHEGADA A SEUL",
+        title: "DIA DE VOO",
         description:
-          "Chegada ao aeroporto internacional de Incheon. Recepção pela equipe local e traslado ao hotel. Jantar e pernoite.",
-        highlight: "Boas-vindas à capital da Coreia do Sul, sede da JMJ 2027.",
+          "Dia de trâmites aéreos e conexões em direção a Seul, Coreia do Sul.",
+        highlight: "Caminhando em direção a uma experiência de fé inesquecível.",
       },
     ],
   },
   {
     image: heroSeoul,
     imageAlt: "Skyline de Seul, Coreia do Sul",
-    region: "Seul — Ambientação",
+    region: "Chegada em Seul",
     days: [
       {
         day: "3º Dia",
-        title: "SEUL — ORIENTAÇÃO E ABERTURA",
+        title: "CHEGADA A SEUL",
         description:
-          "Após café da manhã, momento de ambientação e orientações sobre a programação oficial da Jornada Mundial da Juventude. Tarde dedicada ao credenciamento dos peregrinos e participação na Missa de Abertura da JMJ. Jantar e pernoite.",
-        highlight: "Sua chegada oficial à JMJ Seul 2027 com o credenciamento e a Missa de Abertura.",
-      },
-    ],
-  },
-  {
-    image: myeongdongImg,
-    imageAlt: "Catedral de Myeongdong, Seul",
-    region: "Seul Católica",
-    days: [
-      {
-        day: "4º Dia",
-        title: "CATEDRAL DE MYEONGDONG E SANTUÁRIOS",
-        description:
-          "Visita à Catedral de Myeongdong, principal igreja católica da Coreia do Sul, e ao Santuário dos Mártires Coreanos de Jeoldusan, em memória dos santos que deram a vida pela fé. Participação nas catequeses oficiais da JMJ. Jantar e pernoite.",
-        highlight: "Conheça a história da Igreja na Coreia, marcada pelo testemunho dos mártires.",
+          "Chegada ao moderno Aeroporto Internacional de Incheon, porta de entrada da Coreia do Sul. Após os trâmites de imigração e retirada de bagagens, recepção pelo guia local. Traslado ao hotel em Seul, cidade que combina tradição milenar com tecnologia de ponta. Jantar e hospedagem.",
+        highlight: "Boas-vindas à Coreia do Sul, sede da JMJ 2027.",
       },
     ],
   },
   {
     image: gyeongbokgungImg,
     imageAlt: "Palácio Gyeongbokgung, Seul",
-    region: "Seul Histórica",
+    region: "Seul — City Tour",
     days: [
       {
-        day: "5º Dia",
-        title: "GYEONGBOKGUNG E CULTURA COREANA",
+        day: "4º Dia",
+        title: "SEUL — CITY TOUR",
         description:
-          "Visita ao Palácio Gyeongbokgung, símbolo da dinastia Joseon, com a tradicional troca da guarda real. Tarde livre para participar das atividades culturais da JMJ e festivais de jovens pela cidade. Jantar e pernoite.",
-        highlight: "Imersão na cultura milenar da Coreia em meio à energia da Jornada.",
+          "Após o café da manhã, saída para um passeio encantador até a famosa Ilha de Nami, um dos destinos mais românticos da Coreia, conhecida por suas alamedas arborizadas e paisagens cinematográficas. Caminhada tranquila em meio à natureza. À tarde, visita à icônica N'Seoul Tower, no topo do Monte Namsan, com vista panorâmica espetacular e os tradicionais 'cadeados do amor'. Retorno ao hotel. Jantar e hospedagem. Retirada do Kit JMJ (contempla alojamento durante JMJ + transporte + alimentação).",
+        highlight: "Ilha de Nami e N'Seoul Tower: natureza e cultura coreana em um único dia.",
       },
+    ],
+  },
+  {
+    image: myeongdongImg,
+    imageAlt: "Catedral de Myeongdong, Seul",
+    region: "JMJ Seul 2027",
+    days: [
       {
-        day: "6º Dia",
-        title: "BUKCHON E VIA-SACRA COM O PAPA",
+        day: "5º ao 8º Dia",
+        title: "SEUL — JMJ",
         description:
-          "Manhã pela vila tradicional de Bukchon Hanok, com suas casas centenárias. À noite, participação na Via-Sacra presidida pelo Santo Padre, um dos momentos mais marcantes da JMJ. Pernoite.",
-        highlight: "Um dos momentos mais emocionantes da Jornada: a Via-Sacra com o Papa.",
+          "Café da manhã no hotel. Dias dedicados à programação oficial da Jornada Mundial da Juventude Seul 2027. Refeições e transporte por conta da JMJ. Retorno ao hotel para hospedagem.",
+        highlight: "Viva intensamente os dias centrais da JMJ com jovens de todo o mundo.",
       },
     ],
   },
   {
     image: jmjImg,
     imageAlt: "Peregrinos com bandeiras na Jornada Mundial da Juventude",
-    region: "Vigília e Missa de Encerramento",
-    days: [
-      {
-        day: "7º Dia",
-        title: "PEREGRINAÇÃO E VIGÍLIA COM O PAPA",
-        description:
-          "Peregrinação até o local da Vigília oficial da JMJ. Participação da grande Vigília com o Santo Padre, em comunhão com milhões de jovens do mundo inteiro. Pernoite no local da Vigília (formato camping, conforme programação oficial).",
-        highlight: "A noite mais marcante da Jornada — milhões de jovens reunidos em oração.",
-      },
-      {
-        day: "8º Dia",
-        title: "MISSA DE ENVIO COM O PAPA",
-        description:
-          "Pela manhã, participação na Missa de Envio presidida pelo Santo Padre, encerrando oficialmente a JMJ Seul 2027. Retorno ao hotel, jantar e pernoite.",
-        highlight: "O envio missionário do Papa para uma juventude renovada.",
-      },
-    ],
-  },
-  {
-    image: busanImg,
-    imageAlt: "Busan, Coreia do Sul",
-    region: "Seul → Busan",
+    region: "JMJ e Missa com o Papa",
     days: [
       {
         day: "9º Dia",
-        title: "DIA EM BUSAN",
+        title: "JMJ E MISSA COM O PAPA",
         description:
-          "Após o café da manhã, traslado de trem-bala (KTX) até Busan, segunda maior cidade da Coreia. Visita à praia de Haeundae, ao vilarejo cultural de Gamcheon e ao templo Haedong Yonggungsa, à beira-mar. Retorno a Seul à noite. Jantar e pernoite.",
-        highlight: "Uma experiência única em Busan, mesclando cultura, mar e tradição.",
+          "Café da manhã no hotel. Dia dedicado à JMJ (refeições e transporte por conta da JMJ). Participação na Santa Missa com o Santo Padre, um dos momentos mais marcantes da Jornada. Retorno ao hotel para hospedagem.",
+        highlight: "O encontro mais esperado: a Missa com o Papa Francisco.",
       },
     ],
   },
   {
     image: bukchonImg,
     imageAlt: "Vila tradicional Bukchon Hanok",
-    region: "Seul — Dia Livre",
+    region: "JMJ — Caminho Neocatecumenal",
     days: [
       {
         day: "10º Dia",
-        title: "DIA LIVRE EM SEUL",
+        title: "JMJ",
         description:
-          "Café da manhã. Dia livre para compras, passeios pessoais ou para participar das celebrações pós-JMJ na cidade. Jantar de despedida com o grupo.",
-        highlight: "Tempo para descansar, agradecer e levar Seul no coração.",
+          "Café da manhã no hotel. Dia livre para atividades pessoais. Como sugestão, participação no encontro vocacional e nas atividades do Caminho Neocatecumenal, com a presença de Kiko Argüello, proporcionando um momento profundo de espiritualidade e discernimento vocacional. Jantar e hospedagem.",
+        highlight: "Um momento profundo de espiritualidade com Kiko Argüello e o Caminho Neocatecumenal.",
       },
     ],
   },
@@ -162,13 +134,14 @@ const slides: Slide[] = [
         day: "11º Dia",
         title: "SEUL / SÃO PAULO",
         description:
-          "Café da manhã. Em horário combinado, traslado para o aeroporto internacional de Incheon, com destino a São Paulo.",
+          "Café da manhã no hotel. Em horário determinado, traslado ao aeroporto Internacional de Incheon para embarque com destino a São Paulo.",
         highlight: "Despedida da Coreia com a alma renovada pela experiência da JMJ.",
       },
       {
         day: "12º Dia",
         title: "SÃO PAULO",
-        description: "Chegada em São Paulo. Fim dos nossos serviços!",
+        description:
+          "Chegada ao aeroporto internacional de São Paulo, em Guarulhos. Trâmites de desembarque e fim dos serviços.",
         highlight: "Retorno ao Brasil após uma jornada de fé inesquecível.",
       },
     ],
@@ -203,7 +176,7 @@ const Roteiro = () => {
           Roteiro — JMJ Seul 2027
         </h2>
         <p className="font-body text-muted-foreground text-center max-w-2xl mx-auto mb-12 text-sm">
-          12 dias percorrendo Seul, os principais momentos oficiais da Jornada Mundial da Juventude e Busan.
+          12 dias percorrendo Seul, os principais momentos oficiais da Jornada Mundial da Juventude e experiências únicas na Coreia do Sul.
         </p>
 
         <div className="max-w-5xl mx-auto">
