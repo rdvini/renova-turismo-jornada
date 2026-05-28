@@ -33,7 +33,8 @@ const SobreViagem = () => {
             <MapPin className="mx-auto mb-4 text-secondary" size={36} />
             <h3 className="font-heading font-semibold text-primary mb-2">Destinos</h3>
             <p className="font-body text-muted-foreground text-sm">
-              Seul, Busan e principais santuários e marcos católicos da Coreia do Sul.
+              Seul: o cenário da Jornada Mundial da Juventude 2027 e berço
+              de uma fé viva e profunda na Coreia do Sul.
             </p>
           </div>
           <div className="bg-card rounded-lg p-8 text-center shadow-sm hover:shadow-md transition-shadow">
