@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { supabase } from "@/integrations/supabase/client";
 
-const RENATA_WHATSAPP = "5519936186395";
+const RAFAEL_WHATSAPP = "5519989542633";
 
 const InscrevaSe = () => {
   const [formData, setFormData] = useState({ nome: "", email: "", telefone: "" });
@@ -25,9 +25,9 @@ const InscrevaSe = () => {
       })
       .catch((err) => console.error("send-contact-email error:", err));
 
-    const message = `Olá Renata! Meu nome é ${nome}, meu e-mail é ${email} e meu telefone é ${telefone}. Gostaria de mais informações sobre a viagem ao Leste Europeu.`;
+    const message = `Olá, Rafael! Meu nome é ${nome}, meu e-mail é ${email} e meu telefone é ${telefone}. Gostaria de mais informações sobre a viagem ao Leste Europeu.`;
     window.open(
-      `https://api.whatsapp.com/send/?phone=${RENATA_WHATSAPP}&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`,
+      `https://api.whatsapp.com/send/?phone=${RAFAEL_WHATSAPP}&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`,
       "_blank"
     );
     setSubmitted(true);
@@ -49,8 +49,8 @@ const InscrevaSe = () => {
               inesquecível pelo Leste Europeu.
             </p>
             <a
-              href={`https://api.whatsapp.com/send/?phone=${RENATA_WHATSAPP}&text=${encodeURIComponent(
-                "Olá Renata! Gostaria de mais informações sobre a viagem ao Leste Europeu."
+              href={`https://api.whatsapp.com/send/?phone=${RAFAEL_WHATSAPP}&text=${encodeURIComponent(
+                "Olá, Rafael! Gostaria de mais informações sobre a viagem ao Leste Europeu."
               )}&type=phone_number&app_absent=0`}
               target="_blank"
               rel="noopener noreferrer"
