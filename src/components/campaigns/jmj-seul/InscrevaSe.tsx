@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { supabase } from "@/integrations/supabase/client";
 
-const GUILHERME_WHATSAPP = "5519992016125";
+const FABIOLA_WHATSAPP = "5519998974721";
 
 const InscrevaSe = () => {
   const [formData, setFormData] = useState({ nome: "", email: "", telefone: "" });
@@ -24,9 +24,9 @@ const InscrevaSe = () => {
       })
       .catch((err) => console.error("send-contact-email error:", err));
 
-    const message = `Olá Guilherme! Meu nome é ${nome}, meu e-mail é ${email} e meu telefone é ${telefone}. Gostaria de mais informações sobre a viagem para a JMJ Seul 2027.`;
+    const message = `Olá Fabiola! Meu nome é ${nome}, meu e-mail é ${email} e meu telefone é ${telefone}. Gostaria de mais informações sobre a viagem para a JMJ Seul 2027.`;
     window.open(
-      `https://api.whatsapp.com/send/?phone=${GUILHERME_WHATSAPP}&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`,
+      `https://api.whatsapp.com/send/?phone=${FABIOLA_WHATSAPP}&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`,
       "_blank"
     );
     setSubmitted(true);
@@ -48,8 +48,8 @@ const InscrevaSe = () => {
               Mundial da Juventude em Seul — uma experiência única ao lado do Papa.
             </p>
             <a
-              href={`https://api.whatsapp.com/send/?phone=${GUILHERME_WHATSAPP}&text=${encodeURIComponent(
-                "Olá Guilherme! Gostaria de mais informações sobre a viagem para a JMJ Seul 2027."
+              href={`https://api.whatsapp.com/send/?phone=${FABIOLA_WHATSAPP}&text=${encodeURIComponent(
+                "Olá Fabiola! Gostaria de mais informações sobre a viagem para a JMJ Seul 2027."
               )}&type=phone_number&app_absent=0`}
               target="_blank"
               rel="noopener noreferrer"
