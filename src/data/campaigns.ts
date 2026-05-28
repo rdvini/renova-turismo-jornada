@@ -70,6 +70,18 @@ export const campaigns: Campaign[] = [
     published: true,
   },
   {
+    id: "africa-do-sul-2",
+    slug: "/africa-do-sul-2",
+    title: "África do Sul 2",
+    subtitle: "RENOVA TURISMO APRESENTA",
+    description:
+      "Explore a beleza selvagem e a cultura vibrante da África do Sul em uma jornada inesquecível.",
+    image: cardAfricaDoSul,
+    date: "Setembro de 2026, 2027 e 2028",
+    badge: "Experiência",
+    published: true,
+  },
+  {
     id: "portugal",
     slug: "/portugal",
     title: "Portugal",
