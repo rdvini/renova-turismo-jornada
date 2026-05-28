@@ -51,7 +51,7 @@ const Navbar = () => {
             ))}
           </ul>
           <a
-            href="https://api.whatsapp.com/send/?phone=5519936186395&text=Ol%C3%A1+Renata%21+Tenho+interesse+na+viagem+para+o+Leste+Europeu+e+gostaria+de+receber+mais+informa%C3%A7%C3%B5es.&type=phone_number&app_absent=0"
+            href="https://api.whatsapp.com/send/?phone=5519989542633&text=Ol%C3%A1%2C+Rafael%21+Tenho+interesse+na+viagem+para+o+Leste+Europeu+e+gostaria+de+receber+mais+informa%C3%A7%C3%B5es.&type=phone_number&app_absent=0"
             target="_blank"
             rel="noopener noreferrer"
             className="ml-2 inline-block rounded-full bg-secondary px-6 py-2.5 font-heading text-sm font-semibold text-secondary-foreground hover:bg-secondary/90 transition-colors"
@@ -71,7 +71,7 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="https://api.whatsapp.com/send/?phone=5519936186395&text=Ol%C3%A1+Renata%21+Tenho+interesse+na+viagem+para+o+Leste+Europeu+e+gostaria+de+receber+mais+informa%C3%A7%C3%B5es.&type=phone_number&app_absent=0"
+            href="https://api.whatsapp.com/send/?phone=5519989542633&text=Ol%C3%A1%2C+Rafael%21+Tenho+interesse+na+viagem+para+o+Leste+Europeu+e+gostaria+de+receber+mais+informa%C3%A7%C3%B5es.&type=phone_number&app_absent=0"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setOpen(false)}
