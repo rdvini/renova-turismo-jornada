@@ -48,8 +48,8 @@ const InscrevaSe = () => {
               Mundial da Juventude em Seul — uma experiência única ao lado do Papa.
             </p>
             <a
-              href={`https://api.whatsapp.com/send/?phone=${GUILHERME_WHATSAPP}&text=${encodeURIComponent(
-              "Olá Fabiola! Gostaria de mais informações sobre a viagem para a JMJ Seul 2027."
+              href={`https://api.whatsapp.com/send/?phone=${FABIOLA_WHATSAPP}&text=${encodeURIComponent(
+                "Olá Fabiola! Gostaria de mais informações sobre a viagem para a JMJ Seul 2027."
               )}&type=phone_number&app_absent=0`}
               target="_blank"
               rel="noopener noreferrer"
