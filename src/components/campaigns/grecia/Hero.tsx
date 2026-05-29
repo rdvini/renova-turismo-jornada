@@ -137,9 +137,10 @@ const Hero = () => {
                     />
                   </div>
                   <div className="p-4 md:p-5 flex-1 flex flex-col">
-                    <h3 className="font-heading text-sm md:text-base text-primary leading-tight mb-2 uppercase">
+                    <h3 className="font-heading text-sm md:text-base text-primary leading-tight mb-2 uppercase min-h-[2.6em] flex items-start">
                       {c.title}
                     </h3>
+
                     <p className="font-body text-xs text-muted-foreground leading-relaxed flex-1">
                       {c.description}
                     </p>
