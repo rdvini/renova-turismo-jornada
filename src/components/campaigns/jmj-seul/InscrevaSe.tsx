@@ -38,7 +38,7 @@ const InscrevaSe = () => {
         <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center max-w-5xl mx-auto">
           <div className="text-center md:text-left">
             <p className="font-accent text-lg italic text-secondary mb-2">
-              Mais Informações
+              Vagas Limitadas!
             </p>
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-6">
               Inscreva-se Agora
@@ -55,7 +55,7 @@ const InscrevaSe = () => {
               rel="noopener noreferrer"
               className="inline-block bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-bold text-lg px-12 py-4 rounded-full transition-all hover:scale-105 shadow-lg"
             >
-              Mais Informações
+              Vagas Limitadas!
             </a>
           </div>
 
