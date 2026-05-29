@@ -19,6 +19,7 @@ import cardMexico from "@/assets/mexico-padre-leudo/card-cover.webp";
 import cardLesteEuropeu from "@/assets/leste-europeu/hero.webp";
 import cardMarrocos from "@/assets/marrocos/hero.jpg";
 import cardJmjSeul from "@/assets/jmj-seul/card-cover.jpg";
+import cardGrecia from "@/assets/grecia/hero-santorini.jpg";
 
 export const campaigns: Campaign[] = [
   {
@@ -127,6 +128,18 @@ export const campaigns: Campaign[] = [
     image: cardJmjSeul,
     date: "31 de julho até 11 Agosto de 2027",
     badge: "JMJ",
+    published: false,
+  },
+  {
+    id: "grecia",
+    slug: "/grecia",
+    title: "Grécia",
+    subtitle: "RENOVA TURISMO APRESENTA",
+    description:
+      "Uma jornada entre deuses, ilhas e o azul mais profundo do Mediterrâneo — do esplendor de Atenas à magia das Cíclades.",
+    image: cardGrecia,
+    date: "Datas sob consulta — 2026 / 2027",
+    badge: "Experiência",
     published: false,
   },
   {
