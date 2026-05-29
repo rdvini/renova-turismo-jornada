@@ -167,7 +167,7 @@ const Hero = () => {
                 const rotate = offset * 9;
                 const scale = isActive ? 1 : 0.78;
                 const blur = isActive ? 0 : 3;
-                const opacity = isActive ? 1 : 0.55;
+                const opacity = isActive ? 1 : 0.82;
                 const z = 30 - abs * 10;
                 const translateY = isActive ? 0 : 28;
 
