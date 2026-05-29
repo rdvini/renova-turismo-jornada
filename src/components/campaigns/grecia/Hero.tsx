@@ -1,4 +1,6 @@
+import { useState, useEffect } from "react";
 import { Instagram, Facebook, Youtube, ChevronLeft } from "lucide-react";
+
 import heroImg from "@/assets/grecia/hero-santorini.jpg";
 import egeuImg from "@/assets/grecia/egeu.jpg";
 import atenasImg from "@/assets/grecia/atenas.jpg";
@@ -26,6 +28,23 @@ const floatingCards = [
 ];
 
 const Hero = () => {
+  const [active, setActive] = useState(1);
+  const total = floatingCards.length;
+
+  useEffect(() => {
+    const id = setInterval(() => setActive((p) => (p + 1) % total), 5000);
+    return () => clearInterval(id);
+  }, [total]);
+
+  const getOffset = (i: number) => {
+    const diff = i - active;
+    // wrap so |offset| <= floor(total/2)
+    if (diff > total / 2) return diff - total;
+    if (diff < -total / 2) return diff + total;
+    return diff;
+  };
+
+
   return (
     <section
       id="inicio"
@@ -113,46 +132,96 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right: floating cards — carousel on mobile, grid on desktop */}
-          <div className="-mx-5 md:mx-0 sm:px-0 min-w-0">
-            <div className="flex sm:grid sm:grid-cols-3 gap-4 md:gap-5 lg:translate-y-8 overflow-x-auto sm:overflow-visible snap-x snap-mandatory scroll-px-5 px-5 sm:px-0 pb-2 sm:pb-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-              {floatingCards.map((c, i) => (
-                <div
+          {/* Right: floating cards — fan carousel on sm+, snap scroll on mobile */}
+          <div className="-mx-5 md:mx-0 min-w-0">
+            {/* Mobile: horizontal snap scroll */}
+            <div className="sm:hidden flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-px-5 px-5 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+              {floatingCards.map((c) => (
+                <article
                   key={c.title}
-                  className="bg-background/95 backdrop-blur-xl rounded-2xl overflow-hidden flex flex-col shrink-0 w-[75%] sm:w-auto snap-start border border-white/40 shadow-[0_20px_50px_-15px_hsl(var(--primary)/0.5)]"
-                  style={{
-                    transform: `translateY(${i === 1 ? "20px" : "0"})`,
-                  }}
+                  className="bg-background/95 backdrop-blur-xl rounded-2xl overflow-hidden flex flex-col shrink-0 w-[78%] snap-start border border-white/40 shadow-[0_20px_50px_-15px_hsl(var(--primary)/0.5)]"
                 >
-
-
                   <div className="aspect-[4/3] overflow-hidden">
-                    <img
-                      src={c.image}
-                      alt={c.title}
-                      loading="lazy"
-                      width={400}
-                      height={300}
-                      className="w-full h-full object-cover"
-                    />
+                    <img src={c.image} alt={c.title} loading="lazy" width={400} height={300} className="w-full h-full object-cover" />
                   </div>
-                  <div className="p-4 md:p-5 flex-1 flex flex-col">
-                    <h3 className="font-heading text-sm md:text-base text-primary leading-tight mb-2 uppercase min-h-[2.6em] flex items-start">
-                      {c.title}
-                    </h3>
-
-                    <p className="font-body text-xs text-muted-foreground leading-relaxed flex-1">
-                      {c.description}
-                    </p>
-                    <a
-                      href="#sobre"
-                      className="mt-4 inline-block self-start bg-secondary hover:bg-secondary/90 text-secondary-foreground font-body uppercase tracking-widest text-[10px] font-semibold px-4 py-2 rounded-full transition-colors"
-                    >
-                      Saiba mais
-                    </a>
+                  <div className="p-4 flex-1 flex flex-col">
+                    <h3 className="font-heading text-sm text-primary leading-tight mb-2 uppercase min-h-[2.6em] flex items-start">{c.title}</h3>
+                    <p className="font-body text-xs text-muted-foreground leading-relaxed flex-1">{c.description}</p>
+                    <a href="#sobre" className="mt-4 inline-block self-start bg-secondary hover:bg-secondary/90 text-secondary-foreground font-body uppercase tracking-widest text-[10px] font-semibold px-4 py-2 rounded-full transition-colors">Saiba mais</a>
                   </div>
-                </div>
+                </article>
               ))}
+            </div>
+
+            {/* Desktop+: interactive fan carousel */}
+            <div
+              className="hidden sm:block relative mx-auto"
+              style={{ height: "560px", perspective: "1400px" }}
+              aria-label="Destaques da viagem"
+            >
+              {floatingCards.map((c, i) => {
+                const offset = getOffset(i);
+                const isActive = offset === 0;
+                const abs = Math.abs(offset);
+                const translateX = offset * 38; // % of card width
+                const rotate = offset * 9;
+                const scale = isActive ? 1 : 0.78;
+                const blur = isActive ? 0 : 3;
+                const opacity = isActive ? 1 : 0.55;
+                const z = 30 - abs * 10;
+                const translateY = isActive ? 0 : 28;
+
+                return (
+                  <article
+                    key={c.title}
+                    onClick={() => setActive(i)}
+                    className={`absolute left-1/2 top-1/2 w-[78%] sm:w-[300px] md:w-[320px] lg:w-[340px] bg-background/95 backdrop-blur-xl rounded-2xl overflow-hidden flex flex-col border border-white/40 shadow-[0_30px_60px_-20px_hsl(var(--primary)/0.55)] cursor-pointer ${
+                      isActive ? "" : "hover:opacity-80"
+                    }`}
+                    style={{
+                      transform: `translate(-50%, -50%) translateX(${translateX}%) translateY(${translateY}px) rotate(${rotate}deg) scale(${scale})`,
+                      filter: `blur(${blur}px)`,
+                      opacity,
+                      zIndex: z,
+                      transformOrigin: "center bottom",
+                      transition:
+                        "transform 800ms cubic-bezier(0.22, 1, 0.36, 1), filter 600ms ease, opacity 600ms ease",
+                      willChange: "transform, filter, opacity",
+                    }}
+                    aria-hidden={!isActive}
+                  >
+                    <div className="aspect-[4/3] overflow-hidden">
+                      <img src={c.image} alt={c.title} loading="lazy" width={400} height={300} className="w-full h-full object-cover" />
+                    </div>
+                    <div className="p-5 flex-1 flex flex-col">
+                      <h3 className="font-heading text-base text-primary leading-tight mb-2 uppercase min-h-[2.6em] flex items-start">{c.title}</h3>
+                      <p className="font-body text-xs text-muted-foreground leading-relaxed flex-1">{c.description}</p>
+                      <a
+                        href="#sobre"
+                        onClick={(e) => !isActive && e.preventDefault()}
+                        tabIndex={isActive ? 0 : -1}
+                        className="mt-4 inline-block self-start bg-secondary hover:bg-secondary/90 text-secondary-foreground font-body uppercase tracking-widest text-[10px] font-semibold px-4 py-2 rounded-full transition-colors"
+                      >
+                        Saiba mais
+                      </a>
+                    </div>
+                  </article>
+                );
+              })}
+
+              {/* Dots */}
+              <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2 z-40">
+                {floatingCards.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setActive(i)}
+                    aria-label={`Ir para card ${i + 1}`}
+                    className={`h-1.5 rounded-full transition-all ${
+                      i === active ? "bg-secondary w-8" : "bg-primary-foreground/40 hover:bg-primary-foreground/60 w-4"
+                    }`}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -170,3 +239,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
