@@ -94,42 +94,44 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right: floating cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-5 lg:translate-y-8">
-            {floatingCards.map((c, i) => (
-              <div
-                key={c.title}
-                className="bg-background/95 backdrop-blur-sm rounded-xl overflow-hidden shadow-2xl flex flex-col"
-                style={{
-                  transform: `translateY(${i === 1 ? "20px" : "0"})`,
-                }}
-              >
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img
-                    src={c.image}
-                    alt={c.title}
-                    loading="lazy"
-                    width={400}
-                    height={300}
-                    className="w-full h-full object-cover"
-                  />
+          {/* Right: floating cards — carousel on mobile, grid on desktop */}
+          <div className="-mx-5 md:mx-0 sm:px-0">
+            <div className="flex sm:grid sm:grid-cols-3 gap-4 md:gap-5 lg:translate-y-8 overflow-x-auto sm:overflow-visible snap-x snap-mandatory scroll-px-5 px-5 sm:px-0 pb-2 sm:pb-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+              {floatingCards.map((c, i) => (
+                <div
+                  key={c.title}
+                  className="bg-background/95 backdrop-blur-sm rounded-xl overflow-hidden shadow-2xl flex flex-col shrink-0 w-[75%] sm:w-auto snap-start"
+                  style={{
+                    transform: `translateY(${i === 1 ? "20px" : "0"})`,
+                  }}
+                >
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img
+                      src={c.image}
+                      alt={c.title}
+                      loading="lazy"
+                      width={400}
+                      height={300}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="p-4 md:p-5 flex-1 flex flex-col">
+                    <h3 className="font-heading text-sm md:text-base text-primary leading-tight mb-2 uppercase">
+                      {c.title}
+                    </h3>
+                    <p className="font-body text-xs text-muted-foreground leading-relaxed flex-1">
+                      {c.description}
+                    </p>
+                    <a
+                      href="#sobre"
+                      className="mt-4 inline-block self-start bg-secondary hover:bg-secondary/90 text-secondary-foreground font-body uppercase tracking-widest text-[10px] font-semibold px-4 py-2 rounded-full transition-colors"
+                    >
+                      Saiba mais
+                    </a>
+                  </div>
                 </div>
-                <div className="p-4 md:p-5 flex-1 flex flex-col">
-                  <h3 className="font-heading text-sm md:text-base text-primary leading-tight mb-2 uppercase">
-                    {c.title}
-                  </h3>
-                  <p className="font-body text-xs text-muted-foreground leading-relaxed flex-1">
-                    {c.description}
-                  </p>
-                  <a
-                    href="#sobre"
-                    className="mt-4 inline-block self-start bg-secondary hover:bg-secondary/90 text-secondary-foreground font-body uppercase tracking-widest text-[10px] font-semibold px-4 py-2 rounded-full transition-colors"
-                  >
-                    Saiba mais
-                  </a>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
 
