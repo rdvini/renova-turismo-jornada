@@ -41,6 +41,11 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--grecia-deep))]/85 via-[hsl(var(--grecia-deep))]/55 to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--grecia-deep))]/70 via-transparent to-transparent" />
 
+      {/* Ambient aurora blobs */}
+      <div className="aurora-blob w-[420px] h-[420px] bg-secondary/50 -top-20 -left-20" aria-hidden="true" />
+      <div className="aurora-blob w-[520px] h-[520px] bg-[hsl(199_90%_60%)]/30 bottom-[-160px] right-[-120px]" style={{ animationDelay: "-6s" }} aria-hidden="true" />
+
+
       {/* Social rail */}
       <div className="hidden md:flex absolute left-6 lg:left-10 top-1/2 -translate-y-1/2 flex-col gap-5 z-20">
         {[Instagram, Facebook, Youtube].map((Icon, i) => (
