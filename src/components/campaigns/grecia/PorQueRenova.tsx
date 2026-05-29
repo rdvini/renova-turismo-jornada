@@ -50,7 +50,7 @@ const PorQueRenova = () => {
           {reasons.slice(3).map((r) => (
             <div
               key={r.title}
-              className="bg-primary-foreground/8 backdrop-blur-sm rounded-xl p-7 border border-primary-foreground/10 hover:bg-primary-foreground/15 transition-colors sm:w-[calc(33.333%-0.5rem)]"
+              className="liquid-glass-dark rounded-2xl p-7 hover:-translate-y-1 transition-transform sm:w-[calc(33.333%-0.5rem)]"
             >
               <r.icon className="text-secondary mb-5" size={26} strokeWidth={1.5} />
               <h3 className="font-heading uppercase text-base text-primary-foreground mb-3 leading-tight">
