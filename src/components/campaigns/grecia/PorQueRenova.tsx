@@ -10,11 +10,14 @@ const reasons = [
 
 const PorQueRenova = () => {
   return (
-    <section className="py-16 md:py-28 bg-primary relative overflow-hidden">
+    <section className="py-16 md:py-28 bg-primary relative overflow-hidden noise-overlay">
+      <div className="aurora-blob w-[460px] h-[460px] bg-secondary/40 -top-32 -left-24" aria-hidden="true" />
+      <div className="aurora-blob w-[420px] h-[420px] bg-[hsl(199_90%_60%)]/30 bottom-[-160px] right-[-100px]" style={{ animationDelay: "-7s" }} aria-hidden="true" />
       <div
         className="absolute top-10 right-10 w-40 h-40 dot-grid opacity-30 hidden md:block"
         aria-hidden="true"
       />
+
       <div className="container mx-auto px-5 md:px-8 relative">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <p className="font-accent italic text-lg text-secondary mb-3">
