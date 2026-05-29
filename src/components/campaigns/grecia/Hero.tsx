@@ -62,9 +62,9 @@ const Hero = () => {
       />
 
       <div className="relative z-10 container mx-auto px-5 md:px-12 lg:px-20 pt-32 md:pt-40 pb-20">
-        <div className="grid lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-12 items-center">
+        <div className="grid lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-12 items-center min-w-0">
           {/* Left: headline */}
-          <div className="text-primary-foreground max-w-xl">
+          <div className="text-primary-foreground max-w-xl min-w-0">
             <p className="font-accent italic text-lg md:text-xl text-secondary mb-4 md:mb-6">
               Renova Turismo apresenta
             </p>
@@ -92,44 +92,60 @@ const Hero = () => {
                 Ver Roteiro
               </a>
             </div>
+
+            {/* Mobile social rail — inline */}
+            <div className="md:hidden flex items-center gap-5 mt-8">
+              {[Instagram, Facebook, Youtube].map((Icon, i) => (
+                <a
+                  key={i}
+                  href="#"
+                  className="text-primary-foreground/70 hover:text-secondary transition-colors"
+                  aria-label="social"
+                >
+                  <Icon size={18} strokeWidth={1.5} />
+                </a>
+              ))}
+            </div>
           </div>
 
-          {/* Right: floating cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-5 lg:translate-y-8">
-            {floatingCards.map((c, i) => (
-              <div
-                key={c.title}
-                className="bg-background/95 backdrop-blur-sm rounded-xl overflow-hidden shadow-2xl flex flex-col"
-                style={{
-                  transform: `translateY(${i === 1 ? "20px" : "0"})`,
-                }}
-              >
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img
-                    src={c.image}
-                    alt={c.title}
-                    loading="lazy"
-                    width={400}
-                    height={300}
-                    className="w-full h-full object-cover"
-                  />
+          {/* Right: floating cards — carousel on mobile, grid on desktop */}
+          <div className="-mx-5 md:mx-0 sm:px-0 min-w-0">
+            <div className="flex sm:grid sm:grid-cols-3 gap-4 md:gap-5 lg:translate-y-8 overflow-x-auto sm:overflow-visible snap-x snap-mandatory scroll-px-5 px-5 sm:px-0 pb-2 sm:pb-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+              {floatingCards.map((c, i) => (
+                <div
+                  key={c.title}
+                  className="bg-background/95 backdrop-blur-sm rounded-xl overflow-hidden shadow-2xl flex flex-col shrink-0 w-[75%] sm:w-auto snap-start"
+                  style={{
+                    transform: `translateY(${i === 1 ? "20px" : "0"})`,
+                  }}
+                >
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img
+                      src={c.image}
+                      alt={c.title}
+                      loading="lazy"
+                      width={400}
+                      height={300}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="p-4 md:p-5 flex-1 flex flex-col">
+                    <h3 className="font-heading text-sm md:text-base text-primary leading-tight mb-2 uppercase">
+                      {c.title}
+                    </h3>
+                    <p className="font-body text-xs text-muted-foreground leading-relaxed flex-1">
+                      {c.description}
+                    </p>
+                    <a
+                      href="#sobre"
+                      className="mt-4 inline-block self-start bg-secondary hover:bg-secondary/90 text-secondary-foreground font-body uppercase tracking-widest text-[10px] font-semibold px-4 py-2 rounded-full transition-colors"
+                    >
+                      Saiba mais
+                    </a>
+                  </div>
                 </div>
-                <div className="p-4 md:p-5 flex-1 flex flex-col">
-                  <h3 className="font-heading text-sm md:text-base text-primary leading-tight mb-2 uppercase">
-                    {c.title}
-                  </h3>
-                  <p className="font-body text-xs text-muted-foreground leading-relaxed flex-1">
-                    {c.description}
-                  </p>
-                  <a
-                    href="#sobre"
-                    className="mt-4 inline-block self-start bg-secondary hover:bg-secondary/90 text-secondary-foreground font-body uppercase tracking-widest text-[10px] font-semibold px-4 py-2 rounded-full transition-colors"
-                  >
-                    Saiba mais
-                  </a>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
 
