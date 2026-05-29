@@ -92,6 +92,20 @@ const Hero = () => {
                 Ver Roteiro
               </a>
             </div>
+
+            {/* Mobile social rail — inline */}
+            <div className="md:hidden flex items-center gap-5 mt-8">
+              {[Instagram, Facebook, Youtube].map((Icon, i) => (
+                <a
+                  key={i}
+                  href="#"
+                  className="text-primary-foreground/70 hover:text-secondary transition-colors"
+                  aria-label="social"
+                >
+                  <Icon size={18} strokeWidth={1.5} />
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Right: floating cards — carousel on mobile, grid on desktop */}
