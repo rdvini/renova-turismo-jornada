@@ -62,9 +62,9 @@ const Hero = () => {
       />
 
       <div className="relative z-10 container mx-auto px-5 md:px-12 lg:px-20 pt-32 md:pt-40 pb-20">
-        <div className="grid lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-12 items-center">
+        <div className="grid lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-12 items-center min-w-0">
           {/* Left: headline */}
-          <div className="text-primary-foreground max-w-xl">
+          <div className="text-primary-foreground max-w-xl min-w-0">
             <p className="font-accent italic text-lg md:text-xl text-secondary mb-4 md:mb-6">
               Renova Turismo apresenta
             </p>
