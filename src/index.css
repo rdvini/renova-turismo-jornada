@@ -107,33 +107,33 @@
 /* ============= GRÉCIA campaign theme ============= */
 /* Scoped overrides — only apply within .theme-grecia wrapper */
 .theme-grecia {
-  --background: 36 38% 97%;
-  --foreground: 190 70% 14%;
+  --background: 0 0% 100%;
+  --foreground: 213 90% 23%;
 
   --card: 0 0% 100%;
-  --card-foreground: 190 70% 14%;
+  --card-foreground: 213 90% 23%;
 
   --popover: 0 0% 100%;
-  --popover-foreground: 190 70% 14%;
+  --popover-foreground: 213 90% 23%;
 
-  --primary: 188 70% 22%;
-  --primary-foreground: 36 40% 97%;
+  --primary: 213 90% 23%;
+  --primary-foreground: 0 0% 100%;
 
-  --secondary: 16 75% 68%;
+  --secondary: 199 90% 44%;
   --secondary-foreground: 0 0% 100%;
 
-  --muted: 36 35% 93%;
-  --muted-foreground: 190 25% 32%;
+  --muted: 210 30% 96%;
+  --muted-foreground: 213 20% 40%;
 
-  --accent: 16 75% 68%;
+  --accent: 199 90% 44%;
   --accent-foreground: 0 0% 100%;
 
-  --border: 190 25% 85%;
-  --input: 190 25% 85%;
-  --ring: 16 75% 68%;
+  --border: 213 30% 88%;
+  --input: 213 30% 88%;
+  --ring: 199 90% 44%;
 
-  --grecia-deep: 192 80% 12%;
-  --grecia-sand: 36 45% 90%;
+  --grecia-deep: 213 90% 15%;
+  --grecia-sand: 210 30% 96%;
 
   --font-heading: 'Archivo Black', 'Montserrat', sans-serif;
   --font-body: 'Inter', 'Poppins', sans-serif;
