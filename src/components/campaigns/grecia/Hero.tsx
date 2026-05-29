@@ -109,7 +109,7 @@ const Hero = () => {
           </div>
 
           {/* Right: floating cards — carousel on mobile, grid on desktop */}
-          <div className="-mx-5 md:mx-0 sm:px-0">
+          <div className="-mx-5 md:mx-0 sm:px-0 min-w-0">
             <div className="flex sm:grid sm:grid-cols-3 gap-4 md:gap-5 lg:translate-y-8 overflow-x-auto sm:overflow-visible snap-x snap-mandatory scroll-px-5 px-5 sm:px-0 pb-2 sm:pb-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
               {floatingCards.map((c, i) => (
                 <div
