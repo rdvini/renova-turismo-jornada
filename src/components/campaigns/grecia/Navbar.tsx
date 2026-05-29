@@ -43,12 +43,12 @@ const Navbar = () => {
       } ${hidden ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"}`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-5 md:px-10">
-        <div className="flex items-center gap-3">
-          <Link to="/" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors" aria-label="Voltar ao hub">
+        <div className="flex items-center gap-5 md:gap-6">
+          <Link to="/" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors shrink-0" aria-label="Voltar ao hub">
             <ArrowLeft size={20} />
           </Link>
-          <a href="#inicio">
-            <img src={logoRenova} alt="Renova Turismo" className="h-10 md:h-12 brightness-0 invert" />
+          <a href="#inicio" className="shrink-0">
+            <img src={logoRenova} alt="Renova Turismo" className="h-9 md:h-12 brightness-0 invert" />
           </a>
         </div>
         <div className="hidden md:flex items-center gap-10">
