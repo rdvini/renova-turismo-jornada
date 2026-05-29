@@ -28,6 +28,23 @@ const floatingCards = [
 ];
 
 const Hero = () => {
+  const [active, setActive] = useState(1);
+  const total = floatingCards.length;
+
+  useEffect(() => {
+    const id = setInterval(() => setActive((p) => (p + 1) % total), 5000);
+    return () => clearInterval(id);
+  }, [total]);
+
+  const getOffset = (i: number) => {
+    const diff = i - active;
+    // wrap so |offset| <= floor(total/2)
+    if (diff > total / 2) return diff - total;
+    if (diff < -total / 2) return diff + total;
+    return diff;
+  };
+
+
   return (
     <section
       id="inicio"
