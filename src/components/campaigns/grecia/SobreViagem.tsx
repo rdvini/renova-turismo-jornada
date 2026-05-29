@@ -2,8 +2,10 @@ import { Calendar, MapPin, Plane } from "lucide-react";
 
 const SobreViagem = () => {
   return (
-    <section id="sobre" className="py-16 md:py-32 bg-background relative overflow-hidden">
+    <section id="sobre" className="py-16 md:py-32 bg-background relative overflow-hidden noise-overlay">
+      <div className="aurora-blob w-[380px] h-[380px] bg-secondary/15 -top-32 right-[-100px]" aria-hidden="true" />
       <div className="container mx-auto px-5 md:px-8 relative">
+
         <div className="max-w-6xl mx-auto grid lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-20 items-center">
           <div>
             <p className="font-accent italic text-lg text-secondary mb-3">
@@ -47,8 +49,9 @@ const SobreViagem = () => {
             ].map((item) => (
               <div
                 key={item.label}
-                className="bg-muted rounded-xl p-6 md:p-7 flex flex-col gap-3 hover:shadow-lg transition-shadow"
+                className="liquid-glass rounded-2xl p-6 md:p-7 flex flex-col gap-3 hover:-translate-y-1 transition-transform"
               >
+
                 <item.icon className="text-secondary" size={26} strokeWidth={1.5} />
                 <p className="font-body uppercase tracking-[0.18em] text-[10px] text-muted-foreground font-semibold">
                   {item.label}
