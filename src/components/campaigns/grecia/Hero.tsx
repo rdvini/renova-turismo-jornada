@@ -1,4 +1,6 @@
+import { useState, useEffect } from "react";
 import { Instagram, Facebook, Youtube, ChevronLeft } from "lucide-react";
+
 import heroImg from "@/assets/grecia/hero-santorini.jpg";
 import egeuImg from "@/assets/grecia/egeu.jpg";
 import atenasImg from "@/assets/grecia/atenas.jpg";
