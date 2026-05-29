@@ -119,11 +119,12 @@ const Hero = () => {
               {floatingCards.map((c, i) => (
                 <div
                   key={c.title}
-                  className="liquid-glass rounded-2xl overflow-hidden flex flex-col shrink-0 w-[75%] sm:w-auto snap-start"
+                  className="bg-background/95 backdrop-blur-xl rounded-2xl overflow-hidden flex flex-col shrink-0 w-[75%] sm:w-auto snap-start border border-white/40 shadow-[0_20px_50px_-15px_hsl(var(--primary)/0.5)]"
                   style={{
                     transform: `translateY(${i === 1 ? "20px" : "0"})`,
                   }}
                 >
+
 
                   <div className="aspect-[4/3] overflow-hidden">
                     <img
