@@ -49,8 +49,9 @@ const SobreViagem = () => {
             ].map((item) => (
               <div
                 key={item.label}
-                className="bg-muted rounded-xl p-6 md:p-7 flex flex-col gap-3 hover:shadow-lg transition-shadow"
+                className="liquid-glass rounded-2xl p-6 md:p-7 flex flex-col gap-3 hover:-translate-y-1 transition-transform"
               >
+
                 <item.icon className="text-secondary" size={26} strokeWidth={1.5} />
                 <p className="font-body uppercase tracking-[0.18em] text-[10px] text-muted-foreground font-semibold">
                   {item.label}
