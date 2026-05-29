@@ -41,7 +41,9 @@ const Depoimentos = () => {
           Depoimentos
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <GoogleReviewsCard />
+
+        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mt-14">
           {testimonials.map((t) => (
             <div key={t.name} className="bg-card rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow">
               <p className="font-heading font-semibold text-primary">{t.name}</p>
@@ -51,8 +53,6 @@ const Depoimentos = () => {
             </div>
           ))}
         </div>
-
-        <GoogleReviewsCard />
       </div>
     </section>
   );
