@@ -267,7 +267,7 @@ const Roteiro = () => {
             rel="noopener noreferrer"
             className="inline-block bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-bold text-lg px-12 py-4 rounded-full transition-all hover:scale-105 shadow-lg"
           >
-            Conheça mais sobre o roteiro
+            Receber Proposta
           </a>
         </div>
       </div>

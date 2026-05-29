@@ -87,7 +87,7 @@ const InscrevaSe = () => {
                   <Input id="jmj-telefone" type="tel" placeholder="(00) 00000-0000" required maxLength={20} value={formData.telefone} onChange={(e) => setFormData((prev) => ({ ...prev, telefone: e.target.value }))} />
                 </div>
                 <button type="submit" className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-bold text-lg px-8 py-4 rounded-full transition-all hover:scale-105 shadow-lg">
-                  Enviar
+                  Garantir Meu Lugar
                 </button>
               </form>
             )}
