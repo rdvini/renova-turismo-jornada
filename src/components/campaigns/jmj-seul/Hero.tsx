@@ -1,12 +1,39 @@
-import heroImage from "@/assets/jmj-seul/namsan-autumn.jpg.asset.json";
+import { useEffect, useState } from "react";
+import heroImage1 from "@/assets/jmj-seul/namsan-autumn.jpg.asset.json";
+import heroImage2 from "@/assets/jmj-seul/nami-autumn.jpg.asset.json";
 
 const WHATSAPP_URL =
   "https://api.whatsapp.com/send/?phone=5519998974721&text=Ol%C3%A1+Fabiola%21+Tenho+interesse+na+viagem+para+a+JMJ+Seul+2027+e+gostaria+de+receber+mais+informa%C3%A7%C3%B5es.&type=phone_number&app_absent=0";
 
+const SLIDES = [
+  { url: heroImage1.url, alt: "Torre Namsan em Seul durante o outono — sede da JMJ 2027" },
+  { url: heroImage2.url, alt: "Ilha de Nami no outono, Coreia do Sul" },
+];
+
 const Hero = () => {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setCurrent((c) => (c + 1) % SLIDES.length);
+    }, 5000);
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <img src={heroImage.url} alt="Torre Namsan em Seul durante o outono — sede da JMJ 2027" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
+      {SLIDES.map((slide, i) => (
+        <img
+          key={slide.url}
+          src={slide.url}
+          alt={slide.alt}
+          width={1920}
+          height={1080}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out ${
+            i === current ? "opacity-100" : "opacity-0"
+          }`}
+        />
+      ))}
       <div className="absolute inset-0 bg-black/55" />
 
       <div className="relative z-10 container mx-auto px-4 pt-[6.75rem] pb-16 text-center">
