@@ -24,18 +24,19 @@ const Hero = () => {
 
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {SLIDES.map((slide, i) => (
-        <img
-          key={slide.url}
-          src={slide.url}
-          alt={slide.alt}
-          width={1920}
-          height={1080}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out ${
-            i === current ? "opacity-100" : "opacity-0"
-          }`}
-        />
-      ))}
+      <div className="absolute inset-0 flex h-full w-full transition-transform duration-[1200ms] ease-in-out" style={{ width: `${SLIDES.length * 100}%`, transform: `translateX(-${current * (100 / SLIDES.length)}%)` }}>
+        {SLIDES.map((slide) => (
+          <img
+            key={slide.url}
+            src={slide.url}
+            alt={slide.alt}
+            width={1920}
+            height={1080}
+            className="h-full w-full object-cover flex-shrink-0"
+            style={{ width: `${100 / SLIDES.length}%` }}
+          />
+        ))}
+      </div>
       <div className="absolute inset-0 bg-black/55" />
 
       <div className="relative z-10 container mx-auto px-4 pt-[6.75rem] pb-16 text-center">
