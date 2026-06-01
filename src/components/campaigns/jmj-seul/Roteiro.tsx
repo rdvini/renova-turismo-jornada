@@ -197,7 +197,7 @@ const Roteiro = () => {
                       <img
                         src={slide.image}
                         alt={slide.imageAlt}
-                        className={`relative w-full h-full ${idx === 4 ? "object-contain" : "object-cover"} ${idx === 4 ? "scale-x-[-1]" : ""}`}
+                        className={`relative w-full h-full ${idx === 4 ? "object-contain" : "object-cover"}`}
                         loading="lazy"
                         width={1280}
                         height={768}
