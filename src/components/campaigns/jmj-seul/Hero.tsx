@@ -24,7 +24,7 @@ const Hero = () => {
 
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 flex h-full w-full bg-black transition-transform duration-[1200ms] ease-in-out" style={{ width: `${SLIDES.length * 100}%`, transform: `translateX(-${current * (100 / SLIDES.length)}%)` }}>
+      <div className="absolute inset-0 flex h-full w-full transition-transform duration-[1200ms] ease-in-out" style={{ width: `${SLIDES.length * 100}%`, transform: `translateX(-${current * (100 / SLIDES.length)}%)` }}>
         {SLIDES.map((slide) => (
           <img
             key={slide.url}
@@ -32,7 +32,7 @@ const Hero = () => {
             alt={slide.alt}
             width={1920}
             height={1080}
-            className="h-full w-full object-contain flex-shrink-0"
+            className="h-full w-full object-cover flex-shrink-0"
             style={{ width: `${100 / SLIDES.length}%` }}
           />
         ))}
