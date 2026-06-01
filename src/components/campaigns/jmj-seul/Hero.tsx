@@ -11,7 +11,7 @@ const SLIDES = [
   { url: heroImage1.url, alt: "Torre Namsan em Seul durante o outono — sede da JMJ 2027" },
   { url: heroImage2.url, alt: "Ilha de Nami no outono, Coreia do Sul" },
   { url: heroImage3.url, alt: "Palácio Gyeongbokgung em Seul com cerejeiras em flor" },
-  { url: heroImage4.url, alt: "Papa acenando para fiéis no papamóvel durante a JMJ" },
+  { url: heroImage4.url, alt: "Papa acenando para fiéis no papamóvel durante a JMJ", flip: true },
 ];
 
 
@@ -35,7 +35,7 @@ const Hero = () => {
             alt={slide.alt}
             width={1920}
             height={1080}
-            className="h-full w-full object-cover flex-shrink-0"
+            className={`h-full w-full object-cover flex-shrink-0 ${slide.flip ? "scale-x-[-1]" : ""}`}
             style={{ width: `${100 / SLIDES.length}%` }}
           />
         ))}
