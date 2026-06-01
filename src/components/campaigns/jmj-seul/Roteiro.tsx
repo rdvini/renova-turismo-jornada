@@ -98,7 +98,7 @@ const slides: Slide[] = [
     ],
   },
   {
-    image: jmjImg,
+    image: jmjImg.url,
     imageAlt: "Peregrinos com bandeiras na Jornada Mundial da Juventude",
     region: "JMJ e Missa com o Papa",
     days: [
