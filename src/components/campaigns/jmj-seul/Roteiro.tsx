@@ -186,14 +186,23 @@ const Roteiro = () => {
                 <CarouselItem key={idx} className="h-auto">
                   <div className="relative rounded-xl overflow-hidden bg-card">
                     <div className="relative h-56 md:h-72 overflow-hidden">
+                      {idx === 4 && (
+                        <img
+                          src={slide.image}
+                          alt=""
+                          aria-hidden="true"
+                          className="absolute inset-0 w-full h-full object-cover scale-110 blur-xl"
+                        />
+                      )}
                       <img
                         src={slide.image}
                         alt={slide.imageAlt}
-                        className="w-full h-full object-cover"
+                        className={`relative w-full h-full ${idx === 4 ? "object-contain" : "object-cover"}`}
                         loading="lazy"
                         width={1280}
                         height={768}
                       />
+
                       <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/30 to-transparent" />
                       <div className="absolute bottom-4 left-5 right-5 flex items-end justify-between">
                         <div>
