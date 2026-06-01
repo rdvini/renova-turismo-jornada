@@ -35,7 +35,7 @@ const Hero = () => {
             alt={slide.alt}
             width={1920}
             height={1080}
-            className={`h-full w-full object-cover flex-shrink-0 ${slide.flip ? "scale-x-[-1]" : ""}`}
+            className={`h-full w-full object-cover flex-shrink-0`}
             style={{ width: `${100 / SLIDES.length}%` }}
           />
         ))}
