@@ -1,4 +1,4 @@
-import heroImage from "@/assets/jmj-seul/hero.jpg";
+import heroImage from "@/assets/jmj-seul/namsan-autumn.jpg.asset.json";
 
 const WHATSAPP_URL =
   "https://api.whatsapp.com/send/?phone=5519998974721&text=Ol%C3%A1+Fabiola%21+Tenho+interesse+na+viagem+para+a+JMJ+Seul+2027+e+gostaria+de+receber+mais+informa%C3%A7%C3%B5es.&type=phone_number&app_absent=0";
@@ -6,7 +6,7 @@ const WHATSAPP_URL =
 const Hero = () => {
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <img src={heroImage} alt="Seul, Coreia do Sul — sede da JMJ 2027" className="absolute inset-0 w-full h-full object-cover" width={1600} height={900} />
+      <img src={heroImage.url} alt="Torre Namsan em Seul durante o outono — sede da JMJ 2027" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
       <div className="absolute inset-0 bg-black/55" />
 
       <div className="relative z-10 container mx-auto px-4 pt-[6.75rem] pb-16 text-center">
