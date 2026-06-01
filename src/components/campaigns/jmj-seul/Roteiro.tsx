@@ -14,7 +14,7 @@ import gyeongbokgungImg from "@/assets/jmj-seul/gyeongbokgung.jpg";
 import myeongdongImg from "@/assets/jmj-seul/myeongdong-cathedral.jpg";
 import bukchonImg from "@/assets/jmj-seul/bukchon.jpg";
 import busanImg from "@/assets/jmj-seul/busan.jpg";
-import jmjImg from "@/assets/jmj-seul/card-cover.jpg";
+import jmjImg from "@/assets/jmj-seul/papa-bandeira-coreia.webp.asset.json";
 
 const WHATSAPP_URL =
   "https://api.whatsapp.com/send/?phone=5519998974721&text=Ol%C3%A1+Fabiola%21+Tenho+interesse+na+viagem+para+a+JMJ+Seul+2027+e+gostaria+de+receber+mais+informa%C3%A7%C3%B5es.&type=phone_number&app_absent=0";
