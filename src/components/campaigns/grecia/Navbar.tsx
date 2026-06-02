@@ -11,7 +11,7 @@ const navLinks = [
 ];
 
 const WHATSAPP =
-  "https://api.whatsapp.com/send/?phone=5519992016125&text=Ol%C3%A1%21+Tenho+interesse+na+viagem+para+a+Gr%C3%A9cia+e+gostaria+de+receber+mais+informa%C3%A7%C3%B5es.&type=phone_number&app_absent=0";
+  "https://api.whatsapp.com/send/?phone=5519988216863&text=Ol%C3%A1%21+Tenho+interesse+na+viagem+para+a+Gr%C3%A9cia+e+gostaria+de+receber+mais+informa%C3%A7%C3%B5es.&type=phone_number&app_absent=0";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
