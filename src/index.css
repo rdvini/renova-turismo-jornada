@@ -227,3 +227,113 @@
 
 
 
+
+
+/* ============= JMJ SEUL — Tema Mariano (Azul + Dourado) ============= */
+.theme-jmj {
+  --background: 36 38% 96%;          /* ivory #f5f0e0 */
+  --foreground: 218 70% 14%;         /* deep navy #0b1d3a */
+
+  --card: 0 0% 100%;
+  --card-foreground: 218 70% 14%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 218 70% 14%;
+
+  --primary: 218 70% 14%;            /* #0b1d3a azul profundo */
+  --primary-foreground: 36 38% 96%;
+
+  --secondary: 43 53% 54%;           /* #c9a84c dourado litúrgico */
+  --secondary-foreground: 218 70% 14%;
+
+  --muted: 36 30% 92%;
+  --muted-foreground: 218 25% 32%;
+
+  --accent: 43 53% 54%;
+  --accent-foreground: 218 70% 14%;
+
+  --border: 36 25% 84%;
+  --input: 36 25% 84%;
+  --ring: 43 53% 54%;
+
+  --jmj-navy-deep: 218 70% 14%;
+  --jmj-navy-mid: 217 60% 26%;       /* #1a3a6b */
+  --jmj-gold: 43 53% 54%;
+  --jmj-gold-soft: 43 60% 78%;
+  --jmj-ivory: 36 38% 96%;
+
+  --font-heading: 'Lora', Georgia, serif;
+  --font-body: 'Nunito Sans', system-ui, sans-serif;
+  --font-accent: 'Lora', Georgia, serif;
+}
+
+.theme-jmj h1,
+.theme-jmj h2,
+.theme-jmj h3,
+.theme-jmj h4,
+.theme-jmj h5,
+.theme-jmj h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.01em;
+}
+
+.theme-jmj .font-accent {
+  font-family: var(--font-accent);
+  font-style: italic;
+}
+
+/* Dourado sutil em pequenas cruzes decorativas */
+.theme-jmj .jmj-cross {
+  color: hsl(var(--jmj-gold));
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ornamento de cabeçalho: cruz central com filetes dourados */
+.theme-jmj .jmj-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 0 auto 0.75rem auto;
+  color: hsl(var(--jmj-gold));
+}
+.theme-jmj .jmj-ornament::before,
+.theme-jmj .jmj-ornament::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, hsl(var(--jmj-gold) / 0.6), transparent);
+}
+
+/* Citação bíblica em destaque (filete dourado à esquerda) */
+.theme-jmj .jmj-scripture {
+  position: relative;
+  font-family: var(--font-accent);
+  font-style: italic;
+  color: hsl(var(--jmj-navy-mid));
+  padding: 1rem 1.25rem 1rem 1.5rem;
+  border-left: 2px solid hsl(var(--jmj-gold));
+  background: hsl(var(--jmj-gold) / 0.06);
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+.theme-jmj .jmj-scripture cite {
+  display: block;
+  margin-top: 0.5rem;
+  font-style: normal;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: hsl(var(--jmj-gold));
+  font-weight: 700;
+}
+
+/* Padrão sutil de vitral (faixas oblíquas) para faixas escuras */
+.theme-jmj .jmj-stained {
+  background-image:
+    linear-gradient(135deg, hsl(var(--jmj-gold) / 0.08) 0%, transparent 30%),
+    radial-gradient(ellipse at top, hsl(var(--jmj-gold) / 0.12), transparent 60%);
+}
