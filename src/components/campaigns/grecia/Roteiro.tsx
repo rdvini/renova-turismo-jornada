@@ -19,7 +19,6 @@ interface Slide {
   imageAlt: string;
   region: string;
   regionEn: string;
-  day: string;
   title: string;
   description: string;
   highlight?: string;
@@ -31,7 +30,6 @@ const slides: Slide[] = [
     imageAlt: "Vista aérea do voo sobre o Mediterrâneo",
     region: "Piracicaba → São Paulo → Atenas",
     regionEn: "Departure",
-    day: "1º Dia — 09 Set (Qui)",
     title: "PIRACICABA / SÃO PAULO / ATENAS",
     description:
       "Traslado de Piracicaba para o Aeroporto Internacional de Guarulhos (GRU) para embarque com destino a Atenas, com as devidas conexões.",
@@ -42,7 +40,6 @@ const slides: Slide[] = [
     imageAlt: "Vista panorâmica de Atenas",
     region: "Atenas",
     regionEn: "Athens",
-    day: "2º Dia — 10 Set (Sex)",
     title: "CHEGADA EM ATENAS",
     description:
       "Chegada à capital grega, recepção pelo guia local e traslado ao hotel. Jantar e hospedagem.",
@@ -53,7 +50,6 @@ const slides: Slide[] = [
     imageAlt: "Acrópole de Atenas com o Partenon",
     region: "Atenas",
     regionEn: "Athens",
-    day: "3º Dia — 11 Set (Sáb)",
     title: "CITY TOUR EM ATENAS",
     description:
       "City tour panorâmico: Praça da Constituição (Sintagma), Túmulo do Soldado Desconhecido, Templo de Zeus, Arco de Adriano e o Estádio Panatenaico, palco dos primeiros Jogos Olímpicos modernos em 1896. Passagem pela Catedral e subida à Acrópole, com o Partenon e os templos da Rocha Sagrada. Visita ao Areópago (Mars Hill), onde o apóstolo Paulo pregou aos atenienses sobre o \"Deus desconhecido\" (Atos 17:22).",
@@ -64,7 +60,6 @@ const slides: Slide[] = [
     imageAlt: "Paisagem montanhosa rumo a Tessalônica",
     region: "Atenas → Tessalônica",
     regionEn: "Thessaloniki",
-    day: "4º Dia — 12 Set (Dom)",
     title: "ATENAS / TESSALÔNICA",
     description:
       "Partida para a capital da Macedônia, Tessalônica, importante cidade mencionada nas cartas de Paulo. Passeio panorâmico pela cidade e suas muralhas. Jantar e hospedagem em Tessalônica.",
@@ -75,7 +70,6 @@ const slides: Slide[] = [
     imageAlt: "Ruínas arqueológicas gregas",
     region: "Filipos, Anfípolis e Kavala",
     regionEn: "Philippi & Kavala",
-    day: "5º Dia — 13 Set (Seg)",
     title: "TESSALÔNICA / FILIPOS / ANFÍPOLIS / KAVALA",
     description:
       "Saída para Filipos, onde Paulo pregou seu primeiro sermão em solo europeu, batizou Lídia — a primeira convertida na Europa — e esteve preso (Atos 16). Visita às ruínas do fórum, ao teatro e à prisão atribuída a Paulo. Seguimos até Kavala (antiga Neápolis), porto onde Paulo desembarcou vindo de Trôade. Breve passagem por Anfípolis, também citada em Atos. Retorno a Tessalônica.",
@@ -86,7 +80,6 @@ const slides: Slide[] = [
     imageAlt: "Cidade histórica grega de Bereia",
     region: "Bereia → Atenas",
     regionEn: "Berea",
-    day: "6º Dia — 14 Set (Ter)",
     title: "TESSALÔNICA / BEREIA / ATENAS",
     description:
       "Saída para Bereia, conhecida como Véria, cidade elogiada nas Escrituras porque seus habitantes examinavam diariamente as Escrituras para ver se o que Paulo dizia era verdade (Atos 17:11). Visita ao monumento dedicado ao apóstolo Paulo. Retorno a Atenas para jantar e hospedagem.",
@@ -97,7 +90,6 @@ const slides: Slide[] = [
     imageAlt: "Ilhas gregas do Golfo Sarônico",
     region: "Cruzeiro pelas Ilhas",
     regionEn: "Saronic Islands",
-    day: "7º Dia — 15 Set (Qua)",
     title: "CRUZEIRO ÀS ILHAS GREGAS",
     description:
       "Saída para o Porto de Pireus para embarque em um cruzeiro de 1 dia pelas ilhas do Golfo Sarônico: Hydra — ilha pitoresca onde não circulam carros, preservando seu charme único; Poros — pequena e acolhedora, com belas vistas e a torre do relógio; e Egina — ilha ligada ao ministério de São Nectários, muito visitada por cristãos ortodoxos. Almoço a bordo.",
@@ -108,7 +100,6 @@ const slides: Slide[] = [
     imageAlt: "Sítio arqueológico de Corinto",
     region: "Corinto",
     regionEn: "Corinth",
-    day: "8º Dia — 16 Set (Qui)",
     title: "ATENAS / CORINTO / ATENAS",
     description:
       "Saída para Corinto, onde Paulo viveu por dezoito meses e trabalhou como fabricante de tendas, anunciando o Evangelho (Atos 18). Visitas ao Canal de Corinto e ao sítio arqueológico, incluindo o tribunal (Bema) onde Paulo foi julgado. Retorno a Atenas para tempo livre. Jantar e hospedagem.",
@@ -119,7 +110,6 @@ const slides: Slide[] = [
     imageAlt: "Voo de retorno sobre o Mediterrâneo",
     region: "Atenas → São Paulo → Piracicaba",
     regionEn: "Return",
-    day: "9º Dia — 17 Set (Sex)",
     title: "ATENAS / SÃO PAULO / PIRACICABA",
     description:
       "Saída para o aeroporto de Atenas para embarque em voo de retorno ao Brasil, com as devidas conexões. Chegada em São Paulo e traslado para Piracicaba. Fim dos nossos serviços!",
@@ -176,9 +166,6 @@ const Roteiro = () => {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent md:bg-gradient-to-r md:from-transparent md:to-muted/30" />
                       <div className="absolute top-4 left-4 right-4 flex items-center justify-between text-primary-foreground">
-                        <span className="font-body uppercase tracking-[0.2em] text-[10px] bg-secondary/95 px-3 py-1.5 rounded-full">
-                          {slide.day}
-                        </span>
                         <span className="font-body text-xs opacity-80">
                           {String(idx + 1).padStart(2, "0")} / {String(count).padStart(2, "0")}
                         </span>
