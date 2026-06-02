@@ -27,6 +27,7 @@ interface Slide {
 
 const slides: Slide[] = [
   {
+    day: "1º Dia",
     image: egeuImg,
     imageAlt: "Vista aérea do voo sobre o Mediterrâneo",
     region: "Piracicaba → São Paulo → Atenas",
@@ -37,6 +38,7 @@ const slides: Slide[] = [
     highlight: "O início de uma jornada pelos passos do apóstolo Paulo.",
   },
   {
+    day: "2º Dia",
     image: atenasImg,
     imageAlt: "Vista panorâmica de Atenas",
     region: "Atenas",
@@ -47,6 +49,7 @@ const slides: Slide[] = [
     highlight: "Bem-vindos ao berço da civilização ocidental.",
   },
   {
+    day: "3º Dia",
     image: atenasImg,
     imageAlt: "Acrópole de Atenas com o Partenon",
     region: "Atenas",
@@ -57,6 +60,7 @@ const slides: Slide[] = [
     highlight: "No Areópago, sob as pedras onde Paulo anunciou o Evangelho.",
   },
   {
+    day: "4º Dia",
     image: meteoraImg,
     imageAlt: "Paisagem montanhosa rumo a Tessalônica",
     region: "Atenas → Tessalônica",
@@ -67,6 +71,7 @@ const slides: Slide[] = [
     highlight: "Tessalônica — destinatária das epístolas paulinas.",
   },
   {
+    day: "5º Dia",
     image: delfosImg,
     imageAlt: "Ruínas arqueológicas gregas",
     region: "Filipos, Anfípolis e Kavala",
@@ -77,6 +82,7 @@ const slides: Slide[] = [
     highlight: "Filipos: o primeiro batismo cristão em solo europeu.",
   },
   {
+    day: "6º Dia",
     image: meteoraImg,
     imageAlt: "Cidade histórica grega de Bereia",
     region: "Bereia → Atenas",
@@ -87,6 +93,7 @@ const slides: Slide[] = [
     highlight: "Bereia: \"examinavam as Escrituras todos os dias\" (At 17:11).",
   },
   {
+    day: "7º Dia",
     image: santoriniImg,
     imageAlt: "Ilhas gregas do Golfo Sarônico",
     region: "Cruzeiro pelas Ilhas",
@@ -97,6 +104,7 @@ const slides: Slide[] = [
     highlight: "Hydra, Poros e Egina em um único dia inesquecível.",
   },
   {
+    day: "8º Dia",
     image: delfosImg,
     imageAlt: "Sítio arqueológico de Corinto",
     region: "Corinto",
@@ -107,6 +115,7 @@ const slides: Slide[] = [
     highlight: "No Bema de Corinto — onde Paulo foi julgado.",
   },
   {
+    day: "9º Dia",
     image: egeuImg,
     imageAlt: "Voo de retorno sobre o Mediterrâneo",
     region: "Atenas → São Paulo → Piracicaba",
