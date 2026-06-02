@@ -50,7 +50,7 @@ const InscrevaSe = () => {
             </p>
             <a
               href={`https://api.whatsapp.com/send/?phone=${WHATSAPP_PHONE}&text=${encodeURIComponent(
-                "Olá! Gostaria de mais informações sobre a viagem à Grécia."
+                "Olá! Vim pelo site da Renova Turismo e tenho interesse na peregrinação pela Grécia — nos passos do apóstolo Paulo. Gostaria de receber mais informações sobre datas, valores e disponibilidade. Aguardo retorno!"
               )}&type=phone_number&app_absent=0`}
               target="_blank"
               rel="noopener noreferrer"
