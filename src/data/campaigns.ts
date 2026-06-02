@@ -125,7 +125,7 @@ export const campaigns: Campaign[] = [
     subtitle: "JORNADA MUNDIAL DA JUVENTUDE",
     description:
       "Viva a Jornada Mundial da Juventude em Seul, na Coreia do Sul, ao lado do Papa e de milhões de jovens católicos do mundo todo.",
-    image: cardJmjSeul,
+    image: cardJmjSeul.url,
     date: "31 de julho até 11 Agosto de 2027",
     badge: "JMJ",
     published: true,
