@@ -1,25 +1,36 @@
 import { MapPin, Calendar, BookOpen } from "lucide-react";
+import Ornament from "./Ornament";
+import Scripture from "./Scripture";
 
 const SobreViagem = () => {
   return (
     <section id="sobre" className="py-12 md:py-28 bg-muted">
       <div className="container mx-auto px-4">
+        <Ornament />
         <p className="font-accent text-lg italic text-secondary text-center mb-2">
-          Uma geração se encontra na Coreia
+          Uma geração se encontra com Cristo na Coreia
         </p>
-        <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary text-center mb-12">
-          Sobre a Viagem
+        <h2 className="font-heading text-3xl md:text-4xl font-semibold text-primary text-center mb-10">
+          Sobre a Peregrinação
         </h2>
 
-        <div className="max-w-3xl mx-auto text-center mb-14">
+        <div className="max-w-3xl mx-auto text-center mb-10">
           <p className="font-body text-muted-foreground text-lg leading-relaxed">
             A Jornada Mundial da Juventude de 2027 acontecerá em Seul, na Coreia do Sul —
             um encontro histórico que reunirá milhões de jovens católicos de todo o mundo
-            ao lado do Santo Padre. Com a Renova Turismo, você vive esta experiência com
-            segurança, acompanhamento espiritual e um roteiro pensado para unir fé, cultura
-            e os principais cenários da Coreia.
+            ao lado do Santo Padre. Com a Renova Turismo, você peregrina com
+            segurança, acompanhamento espiritual e um roteiro pensado para unir oração,
+            fraternidade e os principais cenários da Igreja na Coreia.
           </p>
         </div>
+
+        <div className="mb-14">
+          <Scripture
+            text="Ide por todo o mundo e pregai o Evangelho a toda criatura."
+            ref="Marcos 16, 15"
+          />
+        </div>
+
 
         <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           <div className="bg-card rounded-lg p-8 text-center shadow-sm hover:shadow-md transition-shadow">
