@@ -9,7 +9,7 @@ const Hero = () => {
 
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <img src={heroImage} alt="Marrocos — paisagem cultural com cidades coloridas e montanhas do Atlas" className="absolute inset-0 w-full h-full object-cover" />
+      <img src={heroImage} alt="Marrocos — paisagem cultural com cidades coloridas e montanhas do Atlas" fetchPriority="high" decoding="async" className="absolute inset-0 w-full h-full object-cover" />
       <div className="absolute inset-0 bg-black/50" />
 
       <div className="relative z-10 container mx-auto px-4 pt-[6.75rem] pb-16 text-center">

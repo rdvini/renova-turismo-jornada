@@ -56,7 +56,7 @@ const Hero = () => {
       <img
         src={heroImg}
         alt="Vista aérea de Santorini com mar Egeu turquesa"
-        className="absolute inset-0 w-full h-full object-cover opacity-90"
+        fetchPriority="high" decoding="async" className="absolute inset-0 w-full h-full object-cover opacity-90"
         width={1920}
         height={1080}
       />

@@ -9,7 +9,7 @@ const Hero = () => {
       <img
         src={heroImage}
         alt="Basílica de Nossa Senhora de Guadalupe — Cidade do México"
-        className="absolute inset-0 w-full h-full object-cover"
+        fetchPriority="high" decoding="async" className="absolute inset-0 w-full h-full object-cover"
       />
       <div className="absolute inset-0 bg-black/30" />
 

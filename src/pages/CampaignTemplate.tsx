@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Seo from "@/components/seo/Seo";
 import Navbar from "@/components/campaigns/template/Navbar";
 import Hero from "@/components/campaigns/template/Hero";
 import SobreViagem from "@/components/campaigns/template/SobreViagem";
@@ -39,6 +40,22 @@ const CampaignTemplate = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="África do Sul | Renova Turismo"
+        description="Safári em Kruger Park, Cape Town, Cabo da Boa Esperança e Região das Vinícolas — 9 dias com guias em português e roteiro completo pela África do Sul."
+        path="/africa-do-sul"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "TouristTrip",
+          name: "Viagem para a África do Sul",
+          touristType: ["Cultural", "Safári", "Natureza"],
+          provider: { "@type": "TravelAgency", name: "Renova Turismo" },
+          itinerary: {
+            "@type": "ItemList",
+            name: "Johannesburgo, Soweto, Kruger Park, Pretória, Cape Town, Cabo da Boa Esperança, Região das Vinícolas",
+          },
+        }}
+      />
       <Navbar />
       <Hero />
       <SobreViagem />
