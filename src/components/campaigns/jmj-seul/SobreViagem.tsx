@@ -27,7 +27,7 @@ const SobreViagem = () => {
         <div className="mb-14">
           <Scripture
             text="Ide por todo o mundo e pregai o Evangelho a toda criatura."
-            ref="Marcos 16, 15"
+            reference="Marcos 16, 15"
           />
         </div>
 
