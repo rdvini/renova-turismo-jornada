@@ -15,7 +15,7 @@ const CampaignCard = ({ campaign }: CampaignCardProps) => {
       <div className="relative h-56 md:h-64 overflow-hidden">
         <img
           src={campaign.image}
-          alt={campaign.title}
+          alt={`Viagem para ${campaign.title}`}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
         <div className="absolute inset-0 bg-black/40" />
