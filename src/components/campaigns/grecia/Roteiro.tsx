@@ -15,6 +15,7 @@ import mykonosImg from "@/assets/grecia/mykonos.jpg";
 import egeuImg from "@/assets/grecia/egeu.jpg";
 
 interface Slide {
+  day: string;
   image: string;
   imageAlt: string;
   region: string;
@@ -168,6 +169,9 @@ const Roteiro = () => {
                       <div className="absolute top-4 left-4 right-4 flex items-center justify-between text-primary-foreground">
                         <span className="font-body text-xs opacity-80">
                           {String(idx + 1).padStart(2, "0")} / {String(count).padStart(2, "0")}
+                        </span>
+                        <span className="font-accent italic text-sm bg-secondary/95 text-secondary-foreground px-3 py-1 rounded-full">
+                          {slide.day}
                         </span>
                       </div>
                     </div>
