@@ -19,13 +19,15 @@ const SobreViagem = () => {
             </h2>
             <div className="w-16 h-px bg-secondary mb-8" />
             <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed">
-              A Grécia é o ponto de encontro entre mito e mar. Esta jornada conduz você
-              do mármore eterno do Partenon aos penhascos brancos de Santorini, passando
-              pelo silêncio sagrado de Delfos e pelas torres rochosas de Meteora.
+              Uma peregrinação de 9 dias pelos passos do apóstolo Paulo na Grécia —
+              do Areópago de Atenas ao Bema de Corinto, passando por Tessalônica,
+              Filipos, Kavala e Bereia, terras que receberam o primeiro sermão
+              cristão em solo europeu.
             </p>
             <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed mt-5">
-              Pequenos grupos, guias em português e hospedagem cuidadosamente selecionada —
-              uma experiência projetada para quem viaja em busca de beleza, história e contemplação.
+              Pequenos grupos, guias em português e um cruzeiro de um dia pelas ilhas
+              do Golfo Sarônico (Hydra, Poros e Egina) — fé, história e o azul do
+              Egeu em uma única jornada.
             </p>
           </div>
 
@@ -34,17 +36,17 @@ const SobreViagem = () => {
               {
                 icon: Calendar,
                 label: "Quando",
-                value: "Datas sob consulta — 2026 / 2027",
+                value: "09 a 17 de Setembro — 9 dias",
               },
               {
                 icon: MapPin,
                 label: "Destinos",
-                value: "Atenas, Delfos, Meteora, Santorini e Mykonos",
+                value: "Atenas, Tessalônica, Filipos, Kavala, Bereia, Corinto e Ilhas do Golfo Sarônico",
               },
               {
                 icon: Plane,
                 label: "Partida",
-                value: "São Paulo — Aeroporto de Guarulhos (GRU)",
+                value: "Piracicaba → São Paulo (GRU)",
               },
             ].map((item) => (
               <div
@@ -69,3 +71,4 @@ const SobreViagem = () => {
 };
 
 export default SobreViagem;
+

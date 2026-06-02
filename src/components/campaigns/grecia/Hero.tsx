@@ -8,24 +8,25 @@ import mykonosImg from "@/assets/grecia/mykonos.jpg";
 
 const floatingCards = [
   {
-    image: egeuImg,
-    title: "Ilhas Escondidas",
-    description:
-      "Enseadas de água cristalina e vilarejos preservados que poucos viajantes brasileiros conhecem.",
-  },
-  {
     image: atenasImg,
-    title: "Cultura Milenar",
+    title: "Nos Passos de Paulo",
     description:
-      "Da Acrópole aos oráculos de Delfos — caminhe pelos berços da filosofia, da democracia e da mitologia.",
+      "Do Areópago de Atenas ao Bema de Corinto — pise as terras onde o apóstolo Paulo pregou o Evangelho na Europa.",
   },
   {
-    image: mykonosImg,
-    title: "Mediterrâneo Vivo",
+    image: meteoraImg => meteoraImg,
+    title: "Macedônia Bíblica",
     description:
-      "Pôr do sol em Santorini, moinhos de Mykonos e a culinária grega autêntica em cada parada.",
+      "Tessalônica, Filipos, Anfípolis e Bereia — cidades vivas nas cartas paulinas e na história do cristianismo.",
+  },
+  {
+    image: egeuImg,
+    title: "Cruzeiro pelas Ilhas",
+    description:
+      "Um dia pelo Golfo Sarônico: Hydra, Poros e Egina — fé ortodoxa, charme insular e o azul do Egeu.",
   },
 ];
+
 
 const Hero = () => {
   const [active, setActive] = useState(1);

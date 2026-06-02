@@ -28,80 +28,102 @@ interface Slide {
 const slides: Slide[] = [
   {
     image: egeuImg,
-    imageAlt: "Vista aérea de enseada grega com mar turquesa",
-    region: "São Paulo → Atenas",
+    imageAlt: "Vista aérea do voo sobre o Mediterrâneo",
+    region: "Piracicaba → São Paulo → Atenas",
     regionEn: "Departure",
-    day: "1º — 2º Dia",
-    title: "GUARULHOS → ATENAS",
+    day: "1º Dia — 09 Set (Qui)",
+    title: "PIRACICABA / SÃO PAULO / ATENAS",
     description:
-      "Apresentação no aeroporto internacional de Guarulhos (GRU) para embarque com destino a Atenas. Voos com as devidas conexões. Chegada à capital grega, recepção pelo guia local e traslado ao hotel.",
-    highlight: "O início de uma jornada pelo berço da civilização ocidental.",
+      "Traslado de Piracicaba para o Aeroporto Internacional de Guarulhos (GRU) para embarque com destino a Atenas, com as devidas conexões.",
+    highlight: "O início de uma jornada pelos passos do apóstolo Paulo.",
   },
   {
     image: atenasImg,
-    imageAlt: "Partenon na Acrópole de Atenas ao entardecer",
+    imageAlt: "Vista panorâmica de Atenas",
     region: "Atenas",
     regionEn: "Athens",
-    day: "3º Dia",
-    title: "ATENAS — CITY TOUR",
+    day: "2º Dia — 10 Set (Sex)",
+    title: "CHEGADA EM ATENAS",
     description:
-      "Visita à Acrópole e ao Partenon, símbolos máximos da Grécia Antiga. Caminhada pelo bairro histórico de Plaka, Ágora Romana, Templo de Zeus Olímpico e Praça Syntagma. À tarde, tempo livre para explorar os cafés e tavernas locais.",
-    highlight: "Acrópole, Partenon e o coração histórico de Atenas.",
+      "Chegada à capital grega, recepção pelo guia local e traslado ao hotel. Jantar e hospedagem.",
+    highlight: "Bem-vindos ao berço da civilização ocidental.",
   },
   {
-    image: delfosImg,
-    imageAlt: "Ruínas de Delfos com colunas e ciprestes",
-    region: "Delfos",
-    regionEn: "Delphi",
-    day: "4º Dia",
-    title: "ATENAS → DELFOS",
+    image: atenasImg,
+    imageAlt: "Acrópole de Atenas com o Partenon",
+    region: "Atenas",
+    regionEn: "Athens",
+    day: "3º Dia — 11 Set (Sáb)",
+    title: "CITY TOUR EM ATENAS",
     description:
-      "Saída rumo a Delfos, considerada na Antiguidade o \"umbigo do mundo\". Visita ao sítio arqueológico, ao Templo de Apolo e ao museu local. Paisagens deslumbrantes do Monte Parnaso ao longo do caminho.",
-    highlight: "O oráculo mais sagrado da Grécia Antiga.",
+      "City tour panorâmico: Praça da Constituição (Sintagma), Túmulo do Soldado Desconhecido, Templo de Zeus, Arco de Adriano e o Estádio Panatenaico, palco dos primeiros Jogos Olímpicos modernos em 1896. Passagem pela Catedral e subida à Acrópole, com o Partenon e os templos da Rocha Sagrada. Visita ao Areópago (Mars Hill), onde o apóstolo Paulo pregou aos atenienses sobre o \"Deus desconhecido\" (Atos 17:22).",
+    highlight: "No Areópago, sob as pedras onde Paulo anunciou o Evangelho.",
   },
   {
     image: meteoraImg,
-    imageAlt: "Mosteiros de Meteora sobre rochas com neblina",
-    region: "Meteora",
-    regionEn: "Meteora",
-    day: "5º Dia",
-    title: "DELFOS → METEORA",
+    imageAlt: "Paisagem montanhosa rumo a Tessalônica",
+    region: "Atenas → Tessalônica",
+    regionEn: "Thessaloniki",
+    day: "4º Dia — 12 Set (Dom)",
+    title: "ATENAS / TESSALÔNICA",
     description:
-      "Continuação até Kalambaka, base para visitar os impressionantes mosteiros de Meteora — construções ortodoxas suspensas sobre torres rochosas que parecem flutuar no céu. Patrimônio Mundial da UNESCO.",
-    highlight: "Mosteiros suspensos entre o céu e a terra.",
+      "Partida para a capital da Macedônia, Tessalônica, importante cidade mencionada nas cartas de Paulo. Passeio panorâmico pela cidade e suas muralhas. Jantar e hospedagem em Tessalônica.",
+    highlight: "Tessalônica — destinatária das epístolas paulinas.",
+  },
+  {
+    image: delfosImg,
+    imageAlt: "Ruínas arqueológicas gregas",
+    region: "Filipos, Anfípolis e Kavala",
+    regionEn: "Philippi & Kavala",
+    day: "5º Dia — 13 Set (Seg)",
+    title: "TESSALÔNICA / FILIPOS / ANFÍPOLIS / KAVALA",
+    description:
+      "Saída para Filipos, onde Paulo pregou seu primeiro sermão em solo europeu, batizou Lídia — a primeira convertida na Europa — e esteve preso (Atos 16). Visita às ruínas do fórum, ao teatro e à prisão atribuída a Paulo. Seguimos até Kavala (antiga Neápolis), porto onde Paulo desembarcou vindo de Trôade. Breve passagem por Anfípolis, também citada em Atos. Retorno a Tessalônica.",
+    highlight: "Filipos: o primeiro batismo cristão em solo europeu.",
+  },
+  {
+    image: meteoraImg,
+    imageAlt: "Cidade histórica grega de Bereia",
+    region: "Bereia → Atenas",
+    regionEn: "Berea",
+    day: "6º Dia — 14 Set (Ter)",
+    title: "TESSALÔNICA / BEREIA / ATENAS",
+    description:
+      "Saída para Bereia, conhecida como Véria, cidade elogiada nas Escrituras porque seus habitantes examinavam diariamente as Escrituras para ver se o que Paulo dizia era verdade (Atos 17:11). Visita ao monumento dedicado ao apóstolo Paulo. Retorno a Atenas para jantar e hospedagem.",
+    highlight: "Bereia: \"examinavam as Escrituras todos os dias\" (At 17:11).",
   },
   {
     image: santoriniImg,
-    imageAlt: "Casas brancas e cúpulas azuis de Santorini",
-    region: "Santorini",
-    regionEn: "Santorini",
-    day: "6º — 7º Dia",
-    title: "ATENAS → SANTORINI",
+    imageAlt: "Ilhas gregas do Golfo Sarônico",
+    region: "Cruzeiro pelas Ilhas",
+    regionEn: "Saronic Islands",
+    day: "7º Dia — 15 Set (Qua)",
+    title: "CRUZEIRO ÀS ILHAS GREGAS",
     description:
-      "Voo doméstico até Santorini, a ilha mais icônica do Mar Egeu. Dias dedicados às vilas de Oia e Fira, vinícolas locais, praias vulcânicas e ao mundialmente famoso pôr do sol na caldeira.",
-    highlight: "Pôr do sol em Oia — uma das vistas mais belas do mundo.",
+      "Saída para o Porto de Pireus para embarque em um cruzeiro de 1 dia pelas ilhas do Golfo Sarônico: Hydra — ilha pitoresca onde não circulam carros, preservando seu charme único; Poros — pequena e acolhedora, com belas vistas e a torre do relógio; e Egina — ilha ligada ao ministério de São Nectários, muito visitada por cristãos ortodoxos. Almoço a bordo.",
+    highlight: "Hydra, Poros e Egina em um único dia inesquecível.",
   },
   {
-    image: mykonosImg,
-    imageAlt: "Moinhos de vento de Mykonos ao pôr do sol",
-    region: "Mykonos",
-    regionEn: "Mykonos",
-    day: "8º — 9º Dia",
-    title: "SANTORINI → MYKONOS",
+    image: delfosImg,
+    imageAlt: "Sítio arqueológico de Corinto",
+    region: "Corinto",
+    regionEn: "Corinth",
+    day: "8º Dia — 16 Set (Qui)",
+    title: "ATENAS / CORINTO / ATENAS",
     description:
-      "Travessia em ferry até Mykonos. Exploração da Chora com seus moinhos, ruelas labirínticas e a Little Venice. Tempo livre para praias e a vibrante gastronomia mediterrânea.",
-    highlight: "Os moinhos brancos e a alma cosmopolita do Egeu.",
+      "Saída para Corinto, onde Paulo viveu por dezoito meses e trabalhou como fabricante de tendas, anunciando o Evangelho (Atos 18). Visitas ao Canal de Corinto e ao sítio arqueológico, incluindo o tribunal (Bema) onde Paulo foi julgado. Retorno a Atenas para tempo livre. Jantar e hospedagem.",
+    highlight: "No Bema de Corinto — onde Paulo foi julgado.",
   },
   {
     image: egeuImg,
-    imageAlt: "Mar Egeu visto do alto, voo de retorno",
-    region: "Mykonos → São Paulo",
+    imageAlt: "Voo de retorno sobre o Mediterrâneo",
+    region: "Atenas → São Paulo → Piracicaba",
     regionEn: "Return",
-    day: "10º — 11º Dia",
-    title: "MYKONOS → ATENAS → SÃO PAULO",
+    day: "9º Dia — 17 Set (Sex)",
+    title: "ATENAS / SÃO PAULO / PIRACICABA",
     description:
-      "Em horário determinado, traslado ao aeroporto e voo de retorno com conexão em Atenas. Chegada a São Paulo-Guarulhos com memórias de uma vida.",
-    highlight: "Memórias da Grécia eterna para levar pelo resto da vida.",
+      "Saída para o aeroporto de Atenas para embarque em voo de retorno ao Brasil, com as devidas conexões. Chegada em São Paulo e traslado para Piracicaba. Fim dos nossos serviços!",
+    highlight: "Memórias eternas dos passos de Paulo na Grécia.",
   },
 ];
 
@@ -133,7 +155,7 @@ const Roteiro = () => {
           </h2>
           <div className="w-16 h-px bg-secondary mx-auto mt-6" />
           <p className="font-body text-muted-foreground text-sm md:text-base mt-6 leading-relaxed">
-            11 dias inesquecíveis: Atenas, Delfos, Meteora, Santorini e Mykonos.
+            9 dias nos passos do apóstolo Paulo: Atenas, Tessalônica, Filipos, Kavala, Bereia, Corinto e cruzeiro pelas ilhas gregas.
           </p>
         </div>
 
