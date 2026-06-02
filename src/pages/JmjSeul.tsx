@@ -16,7 +16,7 @@ const JmjSeul = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="theme-jmj min-h-screen bg-background">
       <Seo
         title="JMJ Seul 2027 | Jornada Mundial da Juventude — Renova Turismo"
         description="Viva a JMJ Seul 2027 na Coreia do Sul com a Renova Turismo: roteiro completo, voos, hotéis, guias em português e acompanhamento espiritual."

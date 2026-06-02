@@ -169,15 +169,25 @@ const Roteiro = () => {
   return (
     <section id="roteiro" className="pt-12 md:pt-28 pb-6 md:pb-10 bg-background">
       <div className="container mx-auto px-4">
+        <div className="jmj-ornament mb-2" aria-hidden="true">
+          <span className="text-secondary">✦ ✝ ✦</span>
+        </div>
         <p className="font-accent text-lg italic text-secondary text-center mb-2">
-          Sua jornada, dia a dia
+          Sua peregrinação, dia a dia
         </p>
-        <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary text-center mb-4">
+        <h2 className="font-heading text-3xl md:text-4xl font-semibold text-primary text-center mb-4">
           Roteiro — JMJ Seul 2027
         </h2>
-        <p className="font-body text-muted-foreground text-center max-w-2xl mx-auto mb-12 text-sm">
+        <p className="font-body text-muted-foreground text-center max-w-2xl mx-auto mb-8 text-sm">
           12 dias percorrendo Seul, os principais momentos oficiais da Jornada Mundial da Juventude e experiências únicas na Coreia do Sul.
         </p>
+
+        <div className="mb-12">
+          <blockquote className="jmj-scripture max-w-2xl mx-auto">
+            <p className="text-base md:text-lg leading-relaxed">"Como são belos, sobre os montes, os pés do mensageiro que anuncia a paz."</p>
+            <cite>Isaías 52, 7</cite>
+          </blockquote>
+        </div>
 
         <div className="max-w-5xl mx-auto">
           <Carousel setApi={handleApi} opts={{ loop: false }} className="w-full">

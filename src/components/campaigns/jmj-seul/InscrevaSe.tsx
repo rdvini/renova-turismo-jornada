@@ -37,15 +37,22 @@ const InscrevaSe = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center max-w-5xl mx-auto">
           <div className="text-center md:text-left">
+            <div className="jmj-ornament mx-0 mb-2 !justify-start" aria-hidden="true">
+              <span className="text-secondary">✦ ✝ ✦</span>
+            </div>
             <p className="font-accent text-lg italic text-secondary mb-2">
-              Vagas Limitadas!
+              Vagas limitadas
             </p>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-6">
+            <h2 className="font-heading text-3xl md:text-4xl font-semibold text-primary mb-4">
               Inscreva-se Agora
             </h2>
+            <blockquote className="font-accent italic text-muted-foreground border-l-2 border-secondary pl-4 mb-6 text-base">
+              "Eis-me aqui, Senhor: envia-me!"
+              <span className="block not-italic font-body text-[10px] tracking-[0.22em] uppercase mt-1 text-secondary font-bold">Isaías 6, 8</span>
+            </blockquote>
             <p className="font-body text-muted-foreground text-lg mb-8">
-              Vagas limitadas! Entre em contato conosco e garanta seu lugar na Jornada
-              Mundial da Juventude em Seul — uma experiência única ao lado do Papa.
+              Garanta seu lugar na Jornada Mundial da Juventude em Seul —
+              uma peregrinação única ao encontro do Santo Padre e de milhões de jovens católicos do mundo todo.
             </p>
             <a
               href={`https://api.whatsapp.com/send/?phone=${FABIOLA_WHATSAPP}&text=${encodeURIComponent(

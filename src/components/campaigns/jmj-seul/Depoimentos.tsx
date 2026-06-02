@@ -34,10 +34,13 @@ const Depoimentos = () => {
   return (
     <section id="depoimentos" className="py-12 md:py-28 pb-12 md:pb-16 bg-muted">
       <div className="container mx-auto px-4">
+        <div className="jmj-ornament mb-2" aria-hidden="true">
+          <span className="text-secondary">✦ ✝ ✦</span>
+        </div>
         <p className="font-accent text-lg italic text-secondary text-center mb-2">
-          O que dizem nossos viajantes
+          O que dizem nossos peregrinos
         </p>
-        <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary text-center mb-14">
+        <h2 className="font-heading text-3xl md:text-4xl font-semibold text-primary text-center mb-14">
           Depoimentos
         </h2>
 

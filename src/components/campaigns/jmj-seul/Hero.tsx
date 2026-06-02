@@ -43,15 +43,19 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black/55" />
 
       <div className="relative z-10 container mx-auto px-4 pt-[6.75rem] pb-16 text-center">
-        <p className="font-accent text-lg md:text-xl italic text-primary-foreground/80 mb-4 animate-fade-in-up">
-          Renova Turismo apresenta
+        <p className="font-accent text-lg md:text-xl italic text-secondary mb-4 animate-fade-in-up">
+          ✦ Renova Turismo apresenta ✦
         </p>
-        <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-tight mb-6 animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
+        <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-semibold text-primary-foreground leading-[1.05] mb-6 animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
           JMJ Seul 2027
         </h1>
-        <p className="font-body text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-          Viva a Jornada Mundial da Juventude na Coreia do Sul com a Renova Turismo —
-          fé, encontro com o Papa e uma experiência transformadora ao lado de jovens do mundo todo.
+        <p className="font-accent italic text-primary-foreground/90 text-base md:text-xl max-w-2xl mx-auto mb-4 animate-fade-in-up" style={{ animationDelay: "0.22s" }}>
+          "Tomai coragem: eu venci o mundo!"
+          <span className="block not-italic font-body text-xs tracking-[0.22em] uppercase mt-2 text-secondary">João 16, 33 — Tema oficial da JMJ</span>
+        </p>
+        <p className="font-body text-base md:text-lg text-primary-foreground/85 max-w-2xl mx-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+          Peregrinação católica à Jornada Mundial da Juventude na Coreia do Sul —
+          fé, comunhão com o Santo Padre e uma experiência transformadora ao lado de jovens do mundo todo.
         </p>
 
         <a
