@@ -128,7 +128,7 @@ export const campaigns: Campaign[] = [
     image: cardJmjSeul,
     date: "31 de julho até 11 Agosto de 2027",
     badge: "JMJ",
-    published: false,
+    published: true,
   },
   {
     id: "grecia",
@@ -140,7 +140,7 @@ export const campaigns: Campaign[] = [
     image: cardGrecia,
     date: "Datas sob consulta — 2026 / 2027",
     badge: "Experiência",
-    published: false,
+    published: true,
   },
   {
     id: "lideres",
