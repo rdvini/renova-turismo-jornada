@@ -18,7 +18,7 @@ import heroTurkiye from "@/assets/padre-leudo/hero-turkiye.webp";
 import cardMexico from "@/assets/mexico-padre-leudo/card-cover.webp";
 import cardLesteEuropeu from "@/assets/leste-europeu/hero.webp";
 import cardMarrocos from "@/assets/marrocos/hero.jpg";
-import cardJmjSeul from "@/assets/jmj-seul/card-cover.jpg";
+import cardJmjSeul from "@/assets/jmj-seul/jmj-card-cover.jpg.asset.json";
 import cardGrecia from "@/assets/grecia/hero-santorini.jpg";
 
 export const campaigns: Campaign[] = [
