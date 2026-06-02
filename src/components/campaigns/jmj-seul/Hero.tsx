@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import heroImage1 from "@/assets/jmj-seul/namsan-autumn.jpg.asset.json";
 import heroImage2 from "@/assets/jmj-seul/nami-autumn.jpg.asset.json";
 import heroImage3 from "@/assets/jmj-seul/gyeongbokgung-blossom.jpg.asset.json";
-import heroImage4 from "@/assets/jmj-seul/papa-bandeira-coreia.webp.asset.json";
+import heroImage4 from "@/assets/jmj-seul/papa-leao-xiv.png.asset.json";
 
 const WHATSAPP_URL =
   "https://api.whatsapp.com/send/?phone=5519998974721&text=Ol%C3%A1+Fabiola%21+Tenho+interesse+na+viagem+para+a+JMJ+Seul+2027+e+gostaria+de+receber+mais+informa%C3%A7%C3%B5es.&type=phone_number&app_absent=0";
@@ -11,7 +11,7 @@ const SLIDES = [
   { url: heroImage1.url, alt: "Torre Namsan em Seul durante o outono — sede da JMJ 2027" },
   { url: heroImage2.url, alt: "Ilha de Nami no outono, Coreia do Sul" },
   { url: heroImage3.url, alt: "Palácio Gyeongbokgung em Seul com cerejeiras em flor" },
-  { url: heroImage4.url, alt: "Peregrinos com bandeiras na Jornada Mundial da Juventude" },
+  { url: heroImage4.url, alt: "Papa saudando os fiéis na Basílica de São Pedro" },
 ];
 
 
