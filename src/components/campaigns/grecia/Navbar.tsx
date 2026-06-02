@@ -11,7 +11,7 @@ const navLinks = [
 ];
 
 const WHATSAPP =
-  "https://api.whatsapp.com/send/?phone=5519988216863&text=Ol%C3%A1%21+Tenho+interesse+na+viagem+para+a+Gr%C3%A9cia+e+gostaria+de+receber+mais+informa%C3%A7%C3%B5es.&type=phone_number&app_absent=0";
+  "https://api.whatsapp.com/send/?phone=5519988216863&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Renova%20Turismo%20e%20tenho%20interesse%20na%20peregrina%C3%A7%C3%A3o%20pela%20Gr%C3%A9cia%20%E2%80%94%20nos%20passos%20do%20ap%C3%B3stolo%20Paulo.%20Gostaria%20de%20receber%20mais%20informa%C3%A7%C3%B5es%20sobre%20datas%2C%20valores%20e%20disponibilidade.%20Aguardo%20retorno!&type=phone_number&app_absent=0";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
