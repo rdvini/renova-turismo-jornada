@@ -19,7 +19,7 @@ const InscrevaSe = () => {
       })
       .catch((err) => console.error("send-contact-email error:", err));
 
-    const message = `Olá! Meu nome é ${nome}, meu e-mail é ${email} e meu telefone é ${telefone}. Vim pelo site da Renova Turismo e gostaria de mais informações sobre a peregrinação pela Grécia (nos passos do apóstolo Paulo). Poderia me enviar detalhes sobre datas, valores e disponibilidade? Obrigado!`;
+    const message = `Olá! Meu nome é ${nome}, meu e-mail é ${email} e meu telefone é ${telefone}. Vim pela landing page da Renova Turismo e tenho interesse no roteiro da Grécia. Gostaria de receber mais informações sobre datas, valores e disponibilidade. Aguardo retorno!`;
     window.open(
       `https://api.whatsapp.com/send/?phone=${WHATSAPP_PHONE}&text=${encodeURIComponent(
         message
@@ -50,7 +50,7 @@ const InscrevaSe = () => {
             </p>
             <a
               href={`https://api.whatsapp.com/send/?phone=${WHATSAPP_PHONE}&text=${encodeURIComponent(
-                "Olá! Vim pelo site da Renova Turismo e tenho interesse na peregrinação pela Grécia — nos passos do apóstolo Paulo. Gostaria de receber mais informações sobre datas, valores e disponibilidade. Aguardo retorno!"
+                "Olá! Vim pela landing page da Renova Turismo e tenho interesse no roteiro da Grécia. Gostaria de receber mais informações sobre datas, valores e disponibilidade. Aguardo retorno!"
               )}&type=phone_number&app_absent=0`}
               target="_blank"
               rel="noopener noreferrer"
