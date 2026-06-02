@@ -19,7 +19,6 @@ interface Slide {
   imageAlt: string;
   region: string;
   regionEn: string;
-  day: string;
   title: string;
   description: string;
   highlight?: string;
