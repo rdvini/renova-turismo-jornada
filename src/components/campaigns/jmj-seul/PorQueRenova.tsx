@@ -10,14 +10,22 @@ const reasons = [
 
 const PorQueRenova = () => {
   return (
-    <section className="py-12 md:py-28 bg-primary">
-      <div className="container mx-auto px-4">
+    <section className="py-12 md:py-28 bg-primary jmj-stained relative">
+      <div className="container mx-auto px-4 relative">
+        <div className="jmj-ornament mb-2" aria-hidden="true">
+          <span className="text-secondary">✦ ✝ ✦</span>
+        </div>
         <p className="font-accent text-lg italic text-secondary text-center mb-2">
-          Viaje com quem entende de peregrinações
+          Peregrine com quem entende de fé
         </p>
-        <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary-foreground text-center mb-14">
+        <h2 className="font-heading text-3xl md:text-4xl font-semibold text-primary-foreground text-center mb-10">
           Por Que a Renova Turismo
         </h2>
+
+        <blockquote className="max-w-2xl mx-auto mb-12 text-center font-accent italic text-primary-foreground/85 text-base md:text-lg border-y border-secondary/40 py-4">
+          "Onde estão dois ou três reunidos em meu nome, eu estou no meio deles."
+          <span className="block not-italic font-body text-[10px] tracking-[0.22em] uppercase mt-2 text-secondary">Mateus 18, 20</span>
+        </blockquote>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {reasons.slice(0, 3).map((r) => (

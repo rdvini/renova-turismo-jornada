@@ -1,4 +1,5 @@
 import { Users, Coffee, Plane, Hotel, ShieldCheck, HeadphonesIcon } from "lucide-react";
+import Ornament from "./Ornament";
 
 const items = [
   {
@@ -37,14 +38,15 @@ const Inclusos = () => {
   return (
     <section className="pt-12 md:pt-16 pb-12 md:pb-28 bg-background">
       <div className="container mx-auto px-4">
+        <Ornament />
         <p className="font-accent text-lg italic text-secondary text-center mb-2">
-          Tudo pensado para você
+          Tudo pensado para o peregrino
         </p>
-        <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary text-center mb-4">
+        <h2 className="font-heading text-3xl md:text-4xl font-semibold text-primary text-center mb-4">
           O Que Está Incluso
         </h2>
         <p className="font-body text-muted-foreground text-center max-w-2xl mx-auto mb-14 leading-relaxed">
-          Cada detalhe da sua participação na JMJ Seul 2027 foi planejado com carinho e
+          Cada detalhe da sua peregrinação à JMJ Seul 2027 foi planejado com cuidado e
           profissionalismo, para que você viva uma experiência única com total conforto e
           tranquilidade.
         </p>
