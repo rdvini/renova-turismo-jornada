@@ -4,7 +4,8 @@ import { Instagram, Facebook, Youtube, ChevronLeft } from "lucide-react";
 import heroImg from "@/assets/grecia/hero-santorini.jpg";
 import egeuImg from "@/assets/grecia/egeu.jpg";
 import atenasImg from "@/assets/grecia/atenas.jpg";
-import mykonosImg from "@/assets/grecia/mykonos.jpg";
+import meteoraImg from "@/assets/grecia/meteora.jpg";
+
 
 const floatingCards = [
   {
@@ -14,11 +15,12 @@ const floatingCards = [
       "Do Areópago de Atenas ao Bema de Corinto — pise as terras onde o apóstolo Paulo pregou o Evangelho na Europa.",
   },
   {
-    image: meteoraImg => meteoraImg,
+    image: meteoraImg,
     title: "Macedônia Bíblica",
     description:
       "Tessalônica, Filipos, Anfípolis e Bereia — cidades vivas nas cartas paulinas e na história do cristianismo.",
   },
+
   {
     image: egeuImg,
     title: "Cruzeiro pelas Ilhas",
