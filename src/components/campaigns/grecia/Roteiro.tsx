@@ -166,9 +166,6 @@ const Roteiro = () => {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent md:bg-gradient-to-r md:from-transparent md:to-muted/30" />
                       <div className="absolute top-4 left-4 right-4 flex items-center justify-between text-primary-foreground">
-                        <span className="font-body uppercase tracking-[0.2em] text-[10px] bg-secondary/95 px-3 py-1.5 rounded-full">
-                          {slide.day}
-                        </span>
                         <span className="font-body text-xs opacity-80">
                           {String(idx + 1).padStart(2, "0")} / {String(count).padStart(2, "0")}
                         </span>
