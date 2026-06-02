@@ -11,7 +11,7 @@ const SLIDES = [
   { url: heroImage1.url, alt: "Torre Namsan em Seul durante o outono — sede da JMJ 2027" },
   { url: heroImage2.url, alt: "Ilha de Nami no outono, Coreia do Sul" },
   { url: heroImage3.url, alt: "Palácio Gyeongbokgung em Seul com cerejeiras em flor" },
-  { url: heroImage4.url, alt: "Peregrinos com bandeiras na Jornada Mundial da Juventude" },
+  { url: heroImage4.url, alt: "Papa saudando os fiéis na Basílica de São Pedro" },
 ];
 
 
