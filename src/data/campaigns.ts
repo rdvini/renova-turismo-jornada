@@ -138,7 +138,7 @@ export const campaigns: Campaign[] = [
     description:
       "Uma jornada entre deuses, ilhas e o azul mais profundo do Mediterrâneo — do esplendor de Atenas à magia das Cíclades.",
     image: cardGrecia,
-    date: "Datas sob consulta — 2026 / 2027",
+    date: "Datas sob consulta",
     badge: "Experiência",
     published: true,
   },
