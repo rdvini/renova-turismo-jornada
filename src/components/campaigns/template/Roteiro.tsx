@@ -275,7 +275,7 @@ const Roteiro = () => {
             rel="noopener noreferrer"
             className="inline-block bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-bold text-lg px-12 py-4 rounded-full transition-all hover:scale-105 shadow-lg"
           >
-            Garanta Sua Vaga
+            Saiba mais sobre o roteiro!
           </a>
         </div>
       </div>
