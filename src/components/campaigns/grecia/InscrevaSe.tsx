@@ -38,10 +38,10 @@ const InscrevaSe = () => {
               Vagas limitadas
             </p>
             <h2 className="font-heading uppercase text-4xl md:text-5xl lg:text-6xl text-primary leading-[0.95] mb-2">
-              Garanta seu
+              Conheça o nosso
             </h2>
             <h2 className="font-heading uppercase text-4xl md:text-5xl lg:text-6xl leading-[0.95] display-outline-dark mb-8">
-              Lugar
+              Roteiro
             </h2>
             <div className="w-16 h-px bg-secondary mb-8" />
             <p className="font-body text-muted-foreground text-base md:text-lg leading-relaxed mb-8">
@@ -120,7 +120,7 @@ const InscrevaSe = () => {
                   type="submit"
                   className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-body uppercase tracking-[0.18em] text-xs font-semibold px-8 py-4 rounded-full transition-all hover:scale-[1.02] shadow-lg"
                 >
-                  Garantir Meu Lugar
+                  Saiba mais sobre o roteiro!
                 </button>
               </form>
             )}
