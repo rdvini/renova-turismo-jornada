@@ -19,15 +19,14 @@ const SobreViagem = () => {
             </h2>
             <div className="w-16 h-px bg-secondary mb-8" />
             <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed">
-              Uma peregrinação de 9 dias pelos passos do apóstolo Paulo na Grécia —
-              do Areópago de Atenas ao Bema de Corinto, passando por Tessalônica,
-              Filipos, Kavala e Bereia, terras que receberam o primeiro sermão
-              cristão em solo europeu.
+              Uma viagem turística de 9 dias pela Grécia — do esplendor de Atenas
+              e da Acrópole às ruínas de Corinto e Micenas, passando por Delfos,
+              Meteora e um cruzeiro inesquecível pelas Ilhas Gregas.
             </p>
             <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed mt-5">
-              Pequenos grupos, guias em português e um cruzeiro de um dia pelas ilhas
-              do Golfo Sarônico (Hydra, Poros e Egina) — fé, história e o azul do
-              Egeu em uma única jornada.
+              Pequenos grupos, guias em português, hospedagem selecionada e roteiro
+              completo: cultura milenar, paisagens deslumbrantes e o azul do
+              Mar Egeu em uma única jornada.
             </p>
           </div>
 
@@ -41,12 +40,12 @@ const SobreViagem = () => {
               {
                 icon: MapPin,
                 label: "Destinos",
-                value: "Atenas, Tessalônica, Filipos, Kavala, Bereia, Corinto e Ilhas do Golfo Sarônico",
+                value: "Atenas, Corinto, Micenas, Delfos, Meteora e Ilhas Gregas",
               },
               {
                 icon: Plane,
                 label: "Partida",
-                value: "Piracicaba → São Paulo (GRU)",
+                value: "São Paulo (GRU)",
               },
             ].map((item) => (
               <div
