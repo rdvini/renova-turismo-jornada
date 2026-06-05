@@ -10,22 +10,22 @@ import meteoraImg from "@/assets/grecia/meteora.jpg";
 const floatingCards = [
   {
     image: atenasImg,
-    title: "Nos Passos de Paulo",
+    title: "Atenas Eterna",
     description:
-      "Do Areópago de Atenas ao Bema de Corinto — pise as terras onde o apóstolo Paulo pregou o Evangelho na Europa.",
+      "Da Acrópole ao Partenon, passando pela Praça Sintagma e pelo Estádio Panatenaico — o coração da civilização ocidental.",
   },
   {
     image: meteoraImg,
-    title: "Macedônia Bíblica",
+    title: "Delfos e Meteora",
     description:
-      "Tessalônica, Filipos, Anfípolis e Bereia — cidades vivas nas cartas paulinas e na história do cristianismo.",
+      "Do antigo centro do mundo às monumentais rochas da Tessália — paisagens e história que impressionam.",
   },
 
   {
     image: egeuImg,
     title: "Cruzeiro pelas Ilhas",
     description:
-      "Um dia pelo Golfo Sarônico: Hydra, Poros e Egina — fé ortodoxa, charme insular e o azul do Egeu.",
+      "Um dia pelo Mar Egeu a partir do Porto de Pireus — charme insular e o azul mais profundo do Mediterrâneo.",
   },
 ];
 
