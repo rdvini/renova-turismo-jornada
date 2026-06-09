@@ -146,13 +146,13 @@ const Hero = () => {
           </div>
 
           {/* Right: floating cards */}
-          <div className="-mx-5 md:mx-0 min-w-0">
-            {/* Mobile: snap scroll */}
-            <div className="sm:hidden flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-px-5 px-5 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <div className="-mx-5 lg:mx-0 min-w-0">
+            {/* Mobile + tablet: snap scroll */}
+            <div className="lg:hidden flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-px-5 px-5 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
               {floatingCards.map((c) => (
                 <article
                   key={c.title}
-                  className="glam-card rounded-2xl overflow-hidden flex flex-col shrink-0 w-[78%] snap-start"
+                  className="glam-card rounded-2xl overflow-hidden flex flex-col shrink-0 w-[78%] sm:w-[55%] md:w-[40%] snap-start"
                 >
                   <div className="aspect-[4/3] overflow-hidden">
                     <img src={c.image} alt={c.title} loading="lazy" width={400} height={300} className="w-full h-full object-cover" />
@@ -166,9 +166,9 @@ const Hero = () => {
               ))}
             </div>
 
-            {/* Desktop+: fan carousel */}
+            {/* Desktop: fan carousel */}
             <div
-              className="hidden sm:block relative mx-auto"
+              className="hidden lg:block relative mx-auto"
               style={{ height: "560px", perspective: "1400px" }}
               aria-label="Destaques da peregrinação"
             >
