@@ -5,58 +5,64 @@ import logoRenova from "@/assets/logo-renova.svg";
 
 const navLinks = [
   { label: "Início", href: "#inicio" },
-  { label: "Sobre A Viagem", href: "#sobre" },
-  { label: "Destinos", href: "#roteiro" },
+  { label: "Sobre", href: "#sobre" },
+  { label: "Roteiro", href: "#roteiro" },
   { label: "Contato", href: "#contato" },
 ];
 
+const WHATSAPP =
+  "https://api.whatsapp.com/send/?phone=5519994718930&text=Ol%C3%A1%21+Tenho+interesse+na+Peregrina%C3%A7%C3%A3o+ao+M%C3%A9xico+com+Padre+Ant%C3%B4nio+Maria.+Aguardo+retorno&type=phone_number&app_absent=0";
+
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const [hidden, setHidden] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 80);
+    window.addEventListener("scroll", onScroll);
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   useEffect(() => {
     const footer = document.querySelector("footer");
     if (!footer) return;
-
     const observer = new IntersectionObserver(
       ([entry]) => setHidden(entry.isIntersecting),
       { threshold: 0 }
     );
-
     observer.observe(footer);
     return () => observer.disconnect();
   }, []);
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md shadow-lg transition-all duration-[350ms] ease-in-out border-b border-secondary/20 ${
-        hidden ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"
-      }`}
-      style={{
-        background:
-          "linear-gradient(180deg, hsl(var(--pam-wine-deep) / 0.96), hsl(var(--pam-wine) / 0.92))",
-      }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-[350ms] ease-in-out ${
+        scrolled ? "backdrop-blur-xl backdrop-saturate-150 shadow-lg border-b border-secondary/20" : "bg-transparent"
+      } ${hidden ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"}`}
+      style={
+        scrolled
+          ? { background: "linear-gradient(180deg, hsl(var(--pam-wine-deep) / 0.92), hsl(var(--pam-wine) / 0.85))" }
+          : undefined
+      }
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between py-3 px-4 md:px-8">
-        <div className="flex items-center gap-3">
-          <Link
-            to="/"
-            className="text-primary-foreground/70 hover:text-secondary transition-colors"
-            aria-label="Voltar ao hub"
-          >
+      <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-5 md:px-10">
+        <div className="flex items-center gap-5 md:gap-6">
+          <Link to="/" className="text-primary-foreground/80 hover:text-secondary transition-colors shrink-0" aria-label="Voltar ao hub">
             <ArrowLeft size={20} />
           </Link>
-          <a href="#inicio">
-            <img src={logoRenova} alt="Renova Turismo" className="h-10 md:h-12" />
+          <a href="#inicio" className="shrink-0">
+            <img src={logoRenova} alt="Renova Turismo" className="h-9 md:h-12" />
           </a>
         </div>
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-10">
           <ul className="flex items-center gap-8">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="font-body text-xs font-medium tracking-wide uppercase text-primary-foreground/85 hover:text-secondary transition-colors"
+                  className="font-body text-xs uppercase tracking-[0.18em] font-medium text-primary-foreground/85 hover:text-secondary transition-colors"
                 >
                   {link.label}
                 </a>
@@ -64,42 +70,41 @@ const Navbar = () => {
             ))}
           </ul>
           <a
-            href="https://api.whatsapp.com/send/?phone=5519994718930&text=Ol%C3%A1%21+Encontrei+voc%C3%AAs+pelo+Google+e+gostaria+de+receber+mais+informa%C3%A7%C3%B5es.+Aguardo+retorno&type=phone_number&app_absent=0"
+            href={WHATSAPP}
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-2 inline-block rounded-full gold-btn px-6 py-2.5 font-heading text-sm font-semibold"
+            className="inline-block rounded-full gold-btn px-6 py-2.5 font-heading text-xs uppercase tracking-[0.18em] font-semibold"
           >
-            Saiba Mais
+            Reservar
           </a>
         </div>
-        <button
-          className="md:hidden text-primary-foreground"
-          onClick={() => setOpen(!open)}
-          aria-label="Menu"
-        >
+        <button className="md:hidden text-primary-foreground" onClick={() => setOpen(!open)} aria-label="Menu">
           {open ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
       {open && (
-        <div className="md:hidden border-t border-secondary/20 pb-4" style={{ background: "hsl(var(--pam-wine-deep))" }}>
+        <div
+          className="md:hidden border-t border-secondary/20 pb-4"
+          style={{ background: "hsl(var(--pam-wine-deep))" }}
+        >
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="block px-6 py-3 font-heading text-sm tracking-wide text-primary-foreground/85 hover:text-secondary transition-colors"
+              className="block px-6 py-3 font-body text-sm uppercase tracking-widest text-primary-foreground/85 hover:text-secondary transition-colors"
             >
               {link.label}
             </a>
           ))}
           <a
-            href="https://api.whatsapp.com/send/?phone=5519994718930&text=Ol%C3%A1%21+Encontrei+voc%C3%AAs+pelo+Google+e+gostaria+de+receber+mais+informa%C3%A7%C3%B5es.+Aguardo+retorno&type=phone_number&app_absent=0"
+            href={WHATSAPP}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setOpen(false)}
-            className="block mx-6 mt-3 text-center rounded-full gold-btn px-6 py-2.5 font-heading text-sm font-semibold"
+            className="block mx-6 mt-3 text-center rounded-full gold-btn px-6 py-2.5 font-heading text-xs uppercase tracking-widest font-semibold"
           >
-            Saiba Mais
+            Reservar
           </a>
         </div>
       )}
