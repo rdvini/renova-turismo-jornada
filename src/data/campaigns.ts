@@ -23,6 +23,18 @@ import cardGrecia from "@/assets/grecia/hero-santorini.jpg";
 
 export const campaigns: Campaign[] = [
   {
+    id: "mexico-padre-antonio-maria",
+    slug: "/mexico-padre-antonio-maria",
+    title: "México — Padre Antônio Maria",
+    subtitle: "Uma peregrinação exclusiva",
+    description:
+      "Peregrinação exclusiva pelo México ao lado do Padre Antônio Maria, visitando o Santuário de Nossa Senhora de Guadalupe e os principais locais da fé católica mexicana.",
+    image: cardMexico,
+    date: "Datas sob consulta",
+    badge: "Peregrinação",
+    published: true,
+  },
+  {
     id: "mexico-padre-leudo",
     slug: "/mexico-padre-leudo",
     title: "México — Pe. Leudo Santos",
