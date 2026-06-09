@@ -28,15 +28,12 @@ const PorQueRenova = () => {
           <div className="w-16 h-px bg-secondary mx-auto mt-6" />
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
-          {reasons.map((r, i) => {
-            const isLast = i === reasons.length - 1;
-            return (
+        <div className="max-w-5xl mx-auto space-y-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {reasons.slice(0, 3).map((r) => (
               <div
                 key={r.title}
-                className={`glam-card-dark rounded-2xl p-7 hover:-translate-y-1 transition-transform ${
-                  isLast ? "sm:col-span-2 sm:max-w-md sm:mx-auto sm:w-full lg:col-span-1 lg:max-w-none" : ""
-                }`}
+                className="glam-card-dark rounded-2xl p-7 hover:-translate-y-1 transition-transform"
               >
                 <r.icon className="text-secondary mb-5" size={26} strokeWidth={1.5} />
                 <h3 className="font-heading italic font-semibold text-base text-primary-foreground mb-3 leading-tight">
@@ -46,9 +43,26 @@ const PorQueRenova = () => {
                   {r.text}
                 </p>
               </div>
-            );
-          })}
+            ))}
+          </div>
+          <div className="grid sm:grid-cols-2 gap-5 sm:max-w-2xl sm:mx-auto lg:max-w-3xl">
+            {reasons.slice(3).map((r) => (
+              <div
+                key={r.title}
+                className="glam-card-dark rounded-2xl p-7 hover:-translate-y-1 transition-transform"
+              >
+                <r.icon className="text-secondary mb-5" size={26} strokeWidth={1.5} />
+                <h3 className="font-heading italic font-semibold text-base text-primary-foreground mb-3 leading-tight">
+                  {r.title}
+                </h3>
+                <p className="font-body text-primary-foreground/75 text-sm leading-relaxed">
+                  {r.text}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
+
       </div>
     </section>
   );
