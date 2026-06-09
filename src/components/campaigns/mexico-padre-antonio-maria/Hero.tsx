@@ -78,8 +78,8 @@ const Hero = () => {
       <div className="absolute inset-0 baroque-overlay" />
 
       {/* Decorative gold corner ornaments */}
-      <div className="pointer-events-none absolute top-24 left-6 md:top-32 md:left-12 w-16 h-16 md:w-24 md:h-24 border-t border-l border-secondary/60 z-10" />
-      <div className="pointer-events-none absolute bottom-10 right-6 md:bottom-14 md:right-12 w-16 h-16 md:w-24 md:h-24 border-b border-r border-secondary/60 z-10" />
+      <div className="pointer-events-none hidden md:block absolute top-32 left-12 w-24 h-24 border-t border-l border-secondary/60 z-10" />
+      <div className="pointer-events-none hidden md:block absolute bottom-14 right-12 w-24 h-24 border-b border-r border-secondary/60 z-10" />
 
       {/* Social rail */}
       <div className="hidden md:flex absolute left-6 lg:left-10 top-1/2 -translate-y-1/2 flex-col gap-5 z-20">
@@ -95,8 +95,8 @@ const Hero = () => {
         ))}
       </div>
 
-      <div className="relative z-10 container mx-auto px-5 md:px-12 lg:px-20 pt-32 md:pt-40 pb-20">
-        <div className="grid lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-12 items-center min-w-0">
+      <div className="relative z-10 container mx-auto px-5 md:px-12 lg:px-20 pt-28 md:pt-40 pb-20">
+        <div className="grid lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-12 items-center min-w-0">
           {/* Left: headline */}
           <div className="text-primary-foreground max-w-xl min-w-0">
             <p className="font-accent italic tracking-[0.3em] uppercase text-sm md:text-base text-secondary mb-5">
@@ -146,13 +146,13 @@ const Hero = () => {
           </div>
 
           {/* Right: floating cards */}
-          <div className="-mx-5 md:mx-0 min-w-0">
-            {/* Mobile: snap scroll */}
-            <div className="sm:hidden flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-px-5 px-5 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <div className="-mx-5 lg:mx-0 min-w-0">
+            {/* Mobile + tablet: snap scroll */}
+            <div className="lg:hidden flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-px-5 px-5 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
               {floatingCards.map((c) => (
                 <article
                   key={c.title}
-                  className="glam-card rounded-2xl overflow-hidden flex flex-col shrink-0 w-[78%] snap-start"
+                  className="glam-card rounded-2xl overflow-hidden flex flex-col shrink-0 w-[78%] sm:w-[55%] md:w-[40%] snap-start"
                 >
                   <div className="aspect-[4/3] overflow-hidden">
                     <img src={c.image} alt={c.title} loading="lazy" width={400} height={300} className="w-full h-full object-cover" />
@@ -166,9 +166,9 @@ const Hero = () => {
               ))}
             </div>
 
-            {/* Desktop+: fan carousel */}
+            {/* Desktop: fan carousel */}
             <div
-              className="hidden sm:block relative mx-auto"
+              className="hidden lg:block relative mx-auto"
               style={{ height: "560px", perspective: "1400px" }}
               aria-label="Destaques da peregrinação"
             >
