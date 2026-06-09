@@ -1,4 +1,4 @@
-import heroImage from "@/assets/mexico-padre-leudo/hero-basilica-guadalupe.webp";
+import heroImage from "@/assets/mexico-padre-antonio-maria/hero-glamour.jpg";
 
 const Hero = () => {
   return (
@@ -8,30 +8,68 @@ const Hero = () => {
     >
       <img
         src={heroImage}
-        alt="Basílica de Nossa Senhora de Guadalupe — Cidade do México"
-        fetchPriority="high" decoding="async" className="absolute inset-0 w-full h-full object-cover"
+        alt="Basílica de Nossa Senhora de Guadalupe ao entardecer — Cidade do México"
+        fetchPriority="high"
+        decoding="async"
+        className="absolute inset-0 w-full h-full object-cover scale-105"
       />
-      <div className="absolute inset-0 bg-black/30" />
+      {/* Cinematic dual gradient */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(180deg, hsl(var(--pam-wine-deep) / 0.55) 0%, hsl(var(--pam-wine) / 0.35) 45%, hsl(var(--pam-wine-deep) / 0.85) 100%)",
+        }}
+      />
+      <div className="absolute inset-0 baroque-overlay" />
+
+      {/* Decorative gold corner ornaments */}
+      <div className="pointer-events-none absolute top-24 left-6 md:top-32 md:left-12 w-16 h-16 md:w-24 md:h-24 border-t border-l border-secondary/60" />
+      <div className="pointer-events-none absolute bottom-10 right-6 md:bottom-14 md:right-12 w-16 h-16 md:w-24 md:h-24 border-b border-r border-secondary/60" />
 
       <div className="relative z-10 container mx-auto px-4 pt-[6.75rem] pb-16 text-center">
-        <p className="font-accent text-lg md:text-xl italic text-primary-foreground/80 mb-4 animate-fade-in-up">
-          de Manaus para o Mundo
+        <p className="font-accent text-base md:text-lg italic tracking-[0.35em] uppercase text-secondary mb-5 animate-fade-in-up">
+          Renova Turismo apresenta
         </p>
-        <h1 className="font-heading text-5xl md:text-7xl font-extrabold text-primary-foreground leading-tight mb-6 animate-fade-in-up lg:text-8xl" style={{ animationDelay: "0.15s" }}>
-          Peregrinação para o México
+
+        <div className="gold-rule mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+          <span className="text-secondary text-xs">✦</span>
+        </div>
+
+        <h1
+          className="font-heading text-4xl md:text-6xl lg:text-7xl font-semibold text-primary-foreground leading-[1.05] mb-3 animate-fade-in-up italic"
+          style={{ animationDelay: "0.15s" }}
+        >
+          Peregrinação ao México
         </h1>
-        <p className="font-body text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-          Explore a riqueza cultural e religiosa do México com a Renova Turismo e o Pe Leudo Santos — uma experiência inesquecível.
+        <p
+          className="font-heading text-2xl md:text-4xl lg:text-5xl font-bold mb-6 gold-shimmer animate-fade-in-up"
+          style={{ animationDelay: "0.25s" }}
+        >
+          com Padre Antônio Maria
+        </p>
+
+        <div className="gold-rule mb-8 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+          <span className="text-secondary text-xs">✦</span>
+        </div>
+
+        <p
+          className="font-body text-base md:text-lg text-primary-foreground/90 max-w-2xl mx-auto mb-10 animate-fade-in-up leading-relaxed"
+          style={{ animationDelay: "0.4s" }}
+        >
+          Uma jornada exclusiva pela terra de Nossa Senhora de Guadalupe ao lado de
+          um dos mais queridos sacerdotes do Brasil. Fé, beleza e momentos
+          inesquecíveis em hotéis selecionados e roteiros cuidadosamente preparados.
         </p>
 
         <a
-          href="https://api.whatsapp.com/send/?phone=5519994718930&text=Ol%C3%A1%21+Encontrei+voc%C3%AAs+pelo+Google+e+gostaria+de+receber+mais+informa%C3%A7%C3%B5es.+Aguardo+retorno&type=phone_number&app_absent=0"
+          href="https://api.whatsapp.com/send/?phone=5519994718930&text=Ol%C3%A1%21+Tenho+interesse+na+Peregrina%C3%A7%C3%A3o+ao+M%C3%A9xico+com+Padre+Ant%C3%B4nio+Maria.+Aguardo+retorno&type=phone_number&app_absent=0"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-bold text-lg px-10 py-4 rounded-full transition-all hover:scale-105 shadow-lg animate-fade-in-up"
+          className="inline-block gold-btn font-heading font-bold text-lg px-12 py-4 rounded-full animate-fade-in-up tracking-wide"
           style={{ animationDelay: "0.6s" }}
         >
-          Saiba Mais
+          Garanta Sua Vaga
         </a>
       </div>
     </section>

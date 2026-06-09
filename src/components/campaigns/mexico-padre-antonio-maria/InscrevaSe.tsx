@@ -16,7 +16,7 @@ const InscrevaSe = () => {
       const { nome, email, telefone } = formData;
 
       const { error } = await supabase.functions.invoke("send-contact-email", {
-        body: { nome, email, telefone, campaign: "mexico-padre-leudo" },
+        body: { nome, email, telefone, campaign: "mexico-padre-antonio-maria" },
       });
       if (error) throw error;
 
@@ -30,37 +30,37 @@ const InscrevaSe = () => {
   };
 
   return (
-    <section id="contato" className="py-12 md:py-16 bg-muted">
+    <section id="contato" className="py-14 md:py-20 bg-muted baroque-overlay">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center max-w-5xl mx-auto">
           <div className="text-center md:text-left">
-            <p className="font-accent text-lg italic text-secondary mb-2">
+            <p className="font-accent text-base italic tracking-[0.3em] uppercase text-secondary mb-3">
               Mais Informações
             </p>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-6">
-              Inscreva-se Agora
+            <h2 className="font-heading italic text-4xl md:text-5xl font-semibold text-primary mb-6">
+              Garanta Seu Lugar
             </h2>
-            <p className="font-body text-muted-foreground text-lg mb-8">
-              Vagas limitadas! Entre em contato conosco e reserve seu lugar nesta viagem
-              inesquecível pelo México.
+            <p className="font-body text-muted-foreground text-lg mb-8 leading-relaxed">
+              Vagas limitadas. Reserve seu lugar nesta jornada exclusiva pelo México
+              ao lado do <span className="text-primary font-semibold">Padre Antônio Maria</span>.
             </p>
             <a
-              href="https://api.whatsapp.com/send/?phone=5519994718930&text=Ol%C3%A1%21+Encontrei+voc%C3%AAs+pelo+Google+e+gostaria+de+receber+mais+informa%C3%A7%C3%B5es.+Aguardo+retorno&type=phone_number&app_absent=0"
+              href="https://api.whatsapp.com/send/?phone=5519994718930&text=Ol%C3%A1%21+Tenho+interesse+na+Peregrina%C3%A7%C3%A3o+ao+M%C3%A9xico+com+Padre+Ant%C3%B4nio+Maria.+Aguardo+retorno&type=phone_number&app_absent=0"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-bold text-lg px-12 py-4 rounded-full transition-all hover:scale-105 shadow-lg"
+              className="inline-block gold-btn font-heading font-bold text-lg px-12 py-4 rounded-full"
             >
-              Mais Informações
+              Falar no WhatsApp
             </a>
           </div>
 
-          <div className="bg-card rounded-2xl shadow-lg p-8">
-            <h3 className="font-heading text-xl font-bold text-primary mb-6 text-center">
+          <div className="glam-card rounded-2xl p-8">
+            <h3 className="font-heading italic text-2xl font-semibold text-primary mb-6 text-center">
               Preencha seus dados
             </h3>
             {submitted ? (
               <div className="text-center py-8">
-                <p className="font-heading text-lg font-semibold text-primary mb-2">
+                <p className="font-heading italic text-xl font-semibold text-primary mb-2">
                   Obrigado pelo interesse!
                 </p>
                 <p className="text-muted-foreground">
@@ -70,9 +70,9 @@ const InscrevaSe = () => {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="space-y-2">
-                  <Label htmlFor="mx-nome" className="font-body text-foreground">Nome completo</Label>
+                  <Label htmlFor="pam-nome" className="font-body text-foreground">Nome completo</Label>
                   <Input
-                    id="mx-nome"
+                    id="pam-nome"
                     placeholder="Seu nome"
                     required
                     maxLength={100}
@@ -81,9 +81,9 @@ const InscrevaSe = () => {
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="mx-email" className="font-body text-foreground">E-mail</Label>
+                  <Label htmlFor="pam-email" className="font-body text-foreground">E-mail</Label>
                   <Input
-                    id="mx-email"
+                    id="pam-email"
                     type="email"
                     placeholder="seu@email.com"
                     required
@@ -93,9 +93,9 @@ const InscrevaSe = () => {
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="mx-telefone" className="font-body text-foreground">Telefone / WhatsApp</Label>
+                  <Label htmlFor="pam-telefone" className="font-body text-foreground">Telefone / WhatsApp</Label>
                   <Input
-                    id="mx-telefone"
+                    id="pam-telefone"
                     type="tel"
                     placeholder="(00) 00000-0000"
                     required
@@ -107,7 +107,7 @@ const InscrevaSe = () => {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-bold text-lg px-8 py-4 rounded-full transition-all hover:scale-105 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full gold-btn font-heading font-bold text-lg px-8 py-4 rounded-full disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {loading ? "Enviando..." : "Enviar"}
                 </button>

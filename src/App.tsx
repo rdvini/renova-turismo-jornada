@@ -7,6 +7,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 
 const TurquiaPadreLeudo = lazy(() => import("./pages/TurquiaPadreLeudo.tsx"));
+const MexicoPadreAntonioMaria = lazy(() => import("./pages/MexicoPadreAntonioMaria.tsx"));
 const MexicoPadreLeudo = lazy(() => import("./pages/MexicoPadreLeudo.tsx"));
 const Turquia = lazy(() => import("./pages/Turquia.tsx"));
 const CampaignTemplate = lazy(() => import("./pages/CampaignTemplate.tsx"));
@@ -37,6 +38,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/turquia-padre-leudo" element={<TurquiaPadreLeudo />} />
             <Route path="/mexico-padre-leudo" element={<MexicoPadreLeudo />} />
+            <Route path="/mexico-padre-antonio-maria" element={<MexicoPadreAntonioMaria />} />
             <Route path="/turquia" element={<Turquia />} />
             <Route path="/africa-do-sul" element={<CampaignTemplate />} />
             <Route path="/africa-do-sul-2" element={<AfricaDoSul2 />} />

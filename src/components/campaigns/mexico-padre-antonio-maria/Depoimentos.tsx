@@ -25,29 +25,30 @@ const testimonials = [
 const Stars = () => (
   <div className="flex gap-0.5 mb-3">
     {[...Array(5)].map((_, i) => (
-      <Star key={i} className="text-yellow-500 fill-yellow-500" size={16} />
+      <Star key={i} className="text-secondary fill-secondary" size={16} />
     ))}
   </div>
 );
 
 const Depoimentos = () => {
   return (
-    <section id="depoimentos" className="py-12 md:py-28 bg-muted">
+    <section id="depoimentos" className="py-14 md:py-28 bg-background baroque-overlay">
       <div className="container mx-auto px-4">
-        <p className="font-accent text-lg italic text-secondary text-center mb-2">
+        <p className="font-accent text-base italic tracking-[0.3em] uppercase text-secondary text-center mb-3">
           O que dizem nossos viajantes
         </p>
-        <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary text-center mb-14">
+        <h2 className="font-heading italic text-4xl md:text-5xl font-semibold text-primary text-center mb-4">
           Depoimentos
         </h2>
+        <div className="gold-rule mb-14"><span className="text-secondary">✦</span></div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {testimonials.map((t) => (
             <div
               key={t.name}
-              className="bg-card rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow"
+              className="glam-card rounded-xl p-8 hover:-translate-y-1 transition-transform"
             >
-              <p className="font-heading font-semibold text-primary">{t.name}</p>
+              <p className="font-heading italic text-lg font-semibold text-primary">{t.name}</p>
               <p className="font-body text-muted-foreground text-sm mb-3">{t.location}</p>
               <Stars />
               <p className="font-body text-muted-foreground text-sm leading-relaxed">
