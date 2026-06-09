@@ -430,7 +430,6 @@
 
 /* Gold-bordered glass card */
 .theme-padre-antonio .glam-card {
-  position: relative;
   background: linear-gradient(160deg, hsl(var(--pam-cream)) 0%, hsl(42 50% 92%) 100%);
   border: 1px solid hsl(var(--pam-gold) / 0.35);
   box-shadow:
@@ -438,7 +437,6 @@
     0 20px 50px -30px hsl(var(--pam-wine) / 0.45);
 }
 .theme-padre-antonio .glam-card-dark {
-  position: relative;
   background: linear-gradient(160deg, hsl(var(--pam-wine)) 0%, hsl(var(--pam-wine-deep)) 100%);
   border: 1px solid hsl(var(--pam-gold) / 0.45);
   box-shadow:
