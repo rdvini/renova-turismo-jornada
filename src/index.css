@@ -337,3 +337,129 @@
     linear-gradient(135deg, hsl(var(--jmj-gold) / 0.08) 0%, transparent 30%),
     radial-gradient(ellipse at top, hsl(var(--jmj-gold) / 0.12), transparent 60%);
 }
+
+/* ============= PADRE ANTÔNIO MARIA — glamour theme ============= */
+/* Wine, gold and cream — scoped to .theme-padre-antonio */
+.theme-padre-antonio {
+  --background: 42 38% 96%;
+  --foreground: 348 50% 14%;
+
+  --card: 42 50% 99%;
+  --card-foreground: 348 50% 14%;
+
+  --popover: 42 50% 99%;
+  --popover-foreground: 348 50% 14%;
+
+  --primary: 348 55% 18%;
+  --primary-foreground: 42 60% 96%;
+
+  --secondary: 42 72% 52%;
+  --secondary-foreground: 348 55% 14%;
+
+  --muted: 42 35% 92%;
+  --muted-foreground: 348 25% 32%;
+
+  --accent: 42 72% 52%;
+  --accent-foreground: 348 55% 14%;
+
+  --border: 42 30% 82%;
+  --input: 42 30% 82%;
+  --ring: 42 72% 52%;
+
+  --pam-wine: 348 55% 18%;
+  --pam-wine-deep: 348 60% 10%;
+  --pam-gold: 42 72% 52%;
+  --pam-gold-soft: 42 75% 72%;
+  --pam-cream: 42 60% 96%;
+
+  --font-heading: 'Cormorant Garamond', 'Times New Roman', serif;
+  --font-body: 'Inter', 'Poppins', sans-serif;
+  --font-accent: 'Cormorant Garamond', Georgia, serif;
+}
+
+.theme-padre-antonio h1,
+.theme-padre-antonio h2,
+.theme-padre-antonio h3 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.01em;
+}
+
+/* Decorative gold rule with diamond center */
+.theme-padre-antonio .gold-rule {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  color: hsl(var(--pam-gold));
+}
+.theme-padre-antonio .gold-rule::before,
+.theme-padre-antonio .gold-rule::after {
+  content: "";
+  height: 1px;
+  width: 64px;
+  background: linear-gradient(90deg, transparent, hsl(var(--pam-gold) / 0.8), transparent);
+}
+
+/* Shimmering gold text */
+.theme-padre-antonio .gold-shimmer {
+  background: linear-gradient(
+    100deg,
+    hsl(var(--pam-gold)) 0%,
+    hsl(var(--pam-gold-soft)) 35%,
+    hsl(45 95% 88%) 50%,
+    hsl(var(--pam-gold-soft)) 65%,
+    hsl(var(--pam-gold)) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: pam-shine 6s linear infinite;
+}
+
+@keyframes pam-shine {
+  to { background-position: 200% center; }
+}
+
+/* Subtle damask/baroque pattern overlay */
+.theme-padre-antonio .baroque-overlay {
+  background-image:
+    radial-gradient(circle at 20% 30%, hsl(var(--pam-gold) / 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, hsl(var(--pam-gold) / 0.08) 0%, transparent 45%);
+}
+
+/* Gold-bordered glass card */
+.theme-padre-antonio .glam-card {
+  position: relative;
+  background: linear-gradient(160deg, hsl(var(--pam-cream)) 0%, hsl(42 50% 92%) 100%);
+  border: 1px solid hsl(var(--pam-gold) / 0.35);
+  box-shadow:
+    0 1px 0 hsl(var(--pam-gold) / 0.4) inset,
+    0 20px 50px -30px hsl(var(--pam-wine) / 0.45);
+}
+.theme-padre-antonio .glam-card-dark {
+  position: relative;
+  background: linear-gradient(160deg, hsl(var(--pam-wine)) 0%, hsl(var(--pam-wine-deep)) 100%);
+  border: 1px solid hsl(var(--pam-gold) / 0.45);
+  box-shadow:
+    0 1px 0 hsl(var(--pam-gold) / 0.35) inset,
+    0 25px 60px -25px hsl(0 0% 0% / 0.55);
+}
+
+/* Gold gradient pill button */
+.theme-padre-antonio .gold-btn {
+  background: linear-gradient(135deg, hsl(45 85% 68%) 0%, hsl(var(--pam-gold)) 45%, hsl(38 78% 42%) 100%);
+  color: hsl(var(--pam-wine-deep));
+  box-shadow:
+    0 1px 0 hsl(45 100% 90% / 0.8) inset,
+    0 -1px 0 hsl(35 80% 30% / 0.3) inset,
+    0 10px 30px -10px hsl(var(--pam-gold) / 0.6);
+  transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
+}
+.theme-padre-antonio .gold-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  filter: brightness(1.05);
+  box-shadow:
+    0 1px 0 hsl(45 100% 92% / 0.9) inset,
+    0 14px 40px -10px hsl(var(--pam-gold) / 0.7);
+}
