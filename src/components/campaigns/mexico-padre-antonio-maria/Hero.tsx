@@ -95,8 +95,8 @@ const Hero = () => {
         ))}
       </div>
 
-      <div className="relative z-10 container mx-auto px-5 md:px-12 lg:px-20 pt-32 md:pt-40 pb-20">
-        <div className="grid lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-12 items-center min-w-0">
+      <div className="relative z-10 container mx-auto px-5 md:px-12 lg:px-20 pt-28 md:pt-40 pb-20">
+        <div className="grid lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-12 items-center min-w-0">
           {/* Left: headline */}
           <div className="text-primary-foreground max-w-xl min-w-0">
             <p className="font-accent italic tracking-[0.3em] uppercase text-sm md:text-base text-secondary mb-5">
