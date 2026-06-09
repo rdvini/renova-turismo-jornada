@@ -78,8 +78,8 @@ const Hero = () => {
       <div className="absolute inset-0 baroque-overlay" />
 
       {/* Decorative gold corner ornaments */}
-      <div className="pointer-events-none absolute top-24 left-6 md:top-32 md:left-12 w-16 h-16 md:w-24 md:h-24 border-t border-l border-secondary/60 z-10" />
-      <div className="pointer-events-none absolute bottom-10 right-6 md:bottom-14 md:right-12 w-16 h-16 md:w-24 md:h-24 border-b border-r border-secondary/60 z-10" />
+      <div className="pointer-events-none hidden md:block absolute top-32 left-12 w-24 h-24 border-t border-l border-secondary/60 z-10" />
+      <div className="pointer-events-none hidden md:block absolute bottom-14 right-12 w-24 h-24 border-b border-r border-secondary/60 z-10" />
 
       {/* Social rail */}
       <div className="hidden md:flex absolute left-6 lg:left-10 top-1/2 -translate-y-1/2 flex-col gap-5 z-20">
