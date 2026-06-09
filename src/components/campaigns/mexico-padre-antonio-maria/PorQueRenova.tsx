@@ -46,29 +46,21 @@ const PorQueRenova = () => {
         <div className="gold-rule mb-14"><span className="text-secondary">✦</span></div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {reasons.slice(0, 3).map((r) => (
-            <div
-              key={r.title}
-              className="glam-card-dark rounded-xl p-7 text-center hover:-translate-y-1 transition-transform"
-            >
-              <r.icon className="mx-auto mb-4 text-secondary" size={32} />
-              <h3 className="font-heading italic text-lg font-semibold text-primary-foreground mb-2">{r.title}</h3>
-              <p className="font-body text-primary-foreground/75 text-sm">{r.text}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="flex flex-col sm:flex-row gap-6 justify-center max-w-5xl mx-auto mt-6">
-          {reasons.slice(3).map((r) => (
-            <div
-              key={r.title}
-              className="glam-card-dark rounded-xl p-7 text-center hover:-translate-y-1 transition-transform sm:w-[calc(33.333%-0.5rem)]"
-            >
-              <r.icon className="mx-auto mb-4 text-secondary" size={32} />
-              <h3 className="font-heading italic text-lg font-semibold text-primary-foreground mb-2">{r.title}</h3>
-              <p className="font-body text-primary-foreground/75 text-sm">{r.text}</p>
-            </div>
-          ))}
+          {reasons.map((r, i) => {
+            const isLast = i === reasons.length - 1;
+            return (
+              <div
+                key={r.title}
+                className={`glam-card-dark rounded-xl p-7 text-center hover:-translate-y-1 transition-transform ${
+                  isLast ? "sm:col-span-2 sm:max-w-sm sm:mx-auto sm:w-full lg:col-span-1 lg:max-w-none" : ""
+                }`}
+              >
+                <r.icon className="mx-auto mb-4 text-secondary" size={32} />
+                <h3 className="font-heading italic text-lg font-semibold text-primary-foreground mb-2">{r.title}</h3>
+                <p className="font-body text-primary-foreground/75 text-sm">{r.text}</p>
+              </div>
+            );
+          })}
         </div>
 
         <div className="max-w-4xl mx-auto mt-14">
