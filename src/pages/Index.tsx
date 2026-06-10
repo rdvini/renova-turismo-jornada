@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import Seo from "@/components/seo/Seo";
 import HubNavbar from "@/components/hub/HubNavbar";
 import HubHero from "@/components/hub/HubHero";
