@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Seo from "@/components/seo/Seo";
+import MetaPixel from "@/components/tracking/MetaPixel";
 import Navbar from "@/components/campaigns/grecia/Navbar";
 import Hero from "@/components/campaigns/grecia/Hero";
 import SobreViagem from "@/components/campaigns/grecia/SobreViagem";
@@ -34,6 +35,7 @@ const Grecia = () => {
 
   return (
     <div className="theme-grecia min-h-screen bg-background">
+      <MetaPixel contentName="Grecia" contentCategory="Destino" />
       <Seo
         title="Viagem para a Grécia | Renova Turismo"
         description="Jornada cultural pela Grécia com a Renova Turismo: Atenas, Delfos, Meteora, Santorini e Mykonos, com guias em português e hospedagem selecionada."

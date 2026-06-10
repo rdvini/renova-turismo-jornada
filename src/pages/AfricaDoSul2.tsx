@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Seo from "@/components/seo/Seo";
+import MetaPixel from "@/components/tracking/MetaPixel";
 import Navbar from "@/components/campaigns/africa-do-sul-2/Navbar";
 import Hero from "@/components/campaigns/africa-do-sul-2/Hero";
 import SobreViagem from "@/components/campaigns/africa-do-sul-2/SobreViagem";
@@ -17,6 +18,7 @@ const AfricaDoSul2 = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <MetaPixel contentName="Africa do Sul" contentCategory="Destino" />
       <Seo
         title="Viagem para a África do Sul | Renova Turismo"
         description="Descubra as grandezas naturais da África do Sul com a Renova Turismo: safáris, Cidade do Cabo e roteiros culturais com guias em português."

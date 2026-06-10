@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Seo from "@/components/seo/Seo";
+import MetaPixel from "@/components/tracking/MetaPixel";
 import Hero from "@/components/lideres/Hero";
 import JornadaCards from "@/components/lideres/JornadaCards";
 import PorQueRenova from "@/components/lideres/PorQueRenova";
@@ -15,6 +16,7 @@ const Lideres = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <MetaPixel contentName="Padres" contentCategory="Lideres" />
       <Seo
         title="Padres na Terra Santa | Renova Turismo"
         description="Programa exclusivo da Renova Turismo para padres líderes na Terra Santa: roteiros, formação e suporte completo para sua peregrinação."

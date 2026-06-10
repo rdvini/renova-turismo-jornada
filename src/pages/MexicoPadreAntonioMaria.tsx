@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Seo from "@/components/seo/Seo";
+import MetaPixel from "@/components/tracking/MetaPixel";
 import Navbar from "@/components/campaigns/mexico-padre-antonio-maria/Navbar";
 import Hero from "@/components/campaigns/mexico-padre-antonio-maria/Hero";
 import SobreViagem from "@/components/campaigns/mexico-padre-antonio-maria/SobreViagem";
@@ -16,6 +17,7 @@ const MexicoPadreAntonioMaria = () => {
   }, []);
   return (
     <div className="theme-padre-antonio min-h-screen bg-background text-foreground">
+      <MetaPixel contentName="Mexico" contentCategory="Destino" />
       <Seo
         title="Peregrinação ao México com Padre Antônio Maria | Renova Turismo"
         description="Peregrinação exclusiva à Basílica de Guadalupe e roteiro cultural pelo México com o Padre Antônio Maria e a Renova Turismo. Guias em português e hospedagem selecionada."

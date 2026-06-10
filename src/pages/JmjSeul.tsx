@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Seo from "@/components/seo/Seo";
+import MetaPixel from "@/components/tracking/MetaPixel";
 import Navbar from "@/components/campaigns/jmj-seul/Navbar";
 import Hero from "@/components/campaigns/jmj-seul/Hero";
 import SobreViagem from "@/components/campaigns/jmj-seul/SobreViagem";
@@ -17,6 +18,7 @@ const JmjSeul = () => {
 
   return (
     <div className="theme-jmj min-h-screen bg-background">
+      <MetaPixel contentName="JMJ Coreia 2027" contentCategory="Evento" />
       <Seo
         title="JMJ Seul 2027 | Jornada Mundial da Juventude — Renova Turismo"
         description="Viva a JMJ Seul 2027 na Coreia do Sul com a Renova Turismo: roteiro completo, voos, hotéis, guias em português e acompanhamento espiritual."

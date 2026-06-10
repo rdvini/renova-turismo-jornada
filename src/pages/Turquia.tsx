@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Seo from "@/components/seo/Seo";
+import MetaPixel from "@/components/tracking/MetaPixel";
 import Navbar from "@/components/campaigns/turquia/Navbar";
 import Hero from "@/components/campaigns/turquia/Hero";
 import SobreViagem from "@/components/campaigns/turquia/SobreViagem";
@@ -34,6 +35,7 @@ const Turquia = () => {
   }, []);
   return (
     <div className="min-h-screen bg-background">
+      <MetaPixel contentName="Turquia" contentCategory="Destino" />
       <Seo
         title="Viagem para a Turquia | Renova Turismo"
         description="Roteiro cultural e histórico pela Turquia com a Renova Turismo: Istambul, Capadócia e mais, com guias em português e hospedagem selecionada."
