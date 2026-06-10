@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import Seo from "@/components/seo/Seo";
+import MetaPixel from "@/components/tracking/MetaPixel";
 import Navbar from "@/components/campaigns/portugal/Navbar";
 import Hero from "@/components/campaigns/portugal/Hero";
 import SobreViagem from "@/components/campaigns/portugal/SobreViagem";
@@ -20,6 +21,7 @@ const Portugal = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <MetaPixel contentName="Portugal" contentCategory="Destino" />
       <Seo
         title="Viagem para Portugal | Renova Turismo"
         description="Roteiro cultural por Portugal com a Renova Turismo: Lisboa, Porto, Fátima e mais, com guias em português e hospedagem selecionada."

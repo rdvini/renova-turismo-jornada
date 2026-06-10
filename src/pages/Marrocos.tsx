@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Seo from "@/components/seo/Seo";
+import MetaPixel from "@/components/tracking/MetaPixel";
 import Navbar from "@/components/campaigns/marrocos/Navbar";
 import Hero from "@/components/campaigns/marrocos/Hero";
 import SobreViagem from "@/components/campaigns/marrocos/SobreViagem";
@@ -17,6 +18,7 @@ const Marrocos = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <MetaPixel contentName="Marrocos" contentCategory="Destino" />
       <Seo
         title="Viagem ao Marrocos 2026 | Renova Turismo"
         description="Roteiro pelo Marrocos com a Renova Turismo: Casablanca, Fez, Marrakech e Deserto do Saara. Guias em português, hotéis selecionados e total conforto."
