@@ -12,10 +12,10 @@ import delfosImg from "@/assets/grecia/delfos.jpg";
 import meteoraImg from "@/assets/grecia/meteora.jpg";
 import santoriniImg from "@/assets/grecia/hero-santorini.jpg";
 import mykonosImg from "@/assets/grecia/mykonos.jpg";
-import partenonAsset from "@/assets/grecia/partenon.jpg.asset.json";
-import atenasMonastirakiAsset from "@/assets/grecia/atenas-monastiraki.jpg.asset.json";
-const egeuImg = partenonAsset.url;
-const atenasChegadaImg = atenasMonastirakiAsset.url;
+import atenasCidadeAsset from "@/assets/grecia/atenas-cidade.png.asset.json";
+import partenon2Asset from "@/assets/grecia/partenon-2.png.asset.json";
+const egeuImg = atenasCidadeAsset.url;
+const atenasChegadaImg = partenon2Asset.url;
 
 interface Slide {
   day: string;
