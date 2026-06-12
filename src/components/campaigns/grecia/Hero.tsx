@@ -4,7 +4,9 @@ import { Instagram, Facebook, Youtube, ChevronLeft } from "lucide-react";
 import heroImg from "@/assets/grecia/hero-santorini.jpg";
 import egeuImg from "@/assets/grecia/egeu.jpg";
 import atenasImg from "@/assets/grecia/atenas.jpg";
-import meteoraImg from "@/assets/grecia/meteora.jpg";
+import delfosNewAsset from "@/assets/grecia/delfos-new.png.asset.json";
+
+const delfosNewImg = delfosNewAsset.url;
 
 
 const floatingCards = [
@@ -15,7 +17,7 @@ const floatingCards = [
       "Da Acrópole ao Partenon, passando pela Praça Sintagma e pelo Estádio Panatenaico — o coração da civilização ocidental.",
   },
   {
-    image: meteoraImg,
+    image: delfosNewImg,
     title: "Delfos e Meteora",
     description:
       "Do antigo centro do mundo às monumentais rochas da Tessália — paisagens e história que impressionam.",
