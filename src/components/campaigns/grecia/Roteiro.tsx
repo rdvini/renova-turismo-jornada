@@ -42,8 +42,8 @@ const slides: Slide[] = [
   },
   {
     day: "2º Dia",
-    image: atenasImg,
-    imageAlt: "Vista panorâmica de Atenas",
+    image: atenasChegadaImg,
+    imageAlt: "Vista de Atenas com a Acrópole ao fundo",
     region: "Atenas",
     regionEn: "Athens",
     title: "CHEGADA EM ATENAS",
