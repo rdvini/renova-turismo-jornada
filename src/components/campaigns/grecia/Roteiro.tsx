@@ -13,7 +13,9 @@ import meteoraImg from "@/assets/grecia/meteora.jpg";
 import santoriniImg from "@/assets/grecia/hero-santorini.jpg";
 import mykonosImg from "@/assets/grecia/mykonos.jpg";
 import partenonAsset from "@/assets/grecia/partenon.jpg.asset.json";
+import atenasMonastirakiAsset from "@/assets/grecia/atenas-monastiraki.jpg.asset.json";
 const egeuImg = partenonAsset.url;
+const atenasChegadaImg = atenasMonastirakiAsset.url;
 
 interface Slide {
   day: string;
