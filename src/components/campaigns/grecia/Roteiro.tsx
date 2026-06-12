@@ -12,7 +12,8 @@ import delfosImg from "@/assets/grecia/delfos.jpg";
 import meteoraImg from "@/assets/grecia/meteora.jpg";
 import santoriniImg from "@/assets/grecia/hero-santorini.jpg";
 import mykonosImg from "@/assets/grecia/mykonos.jpg";
-import egeuImg from "@/assets/grecia/egeu.jpg";
+import partenonAsset from "@/assets/grecia/partenon.jpg.asset.json";
+const egeuImg = partenonAsset.url;
 
 interface Slide {
   day: string;
@@ -29,7 +30,7 @@ const slides: Slide[] = [
   {
     day: "1º Dia",
     image: egeuImg,
-    imageAlt: "Vista aérea do voo sobre o Mediterrâneo",
+    imageAlt: "Partenon na Acrópole de Atenas",
     region: "São Paulo → Atenas",
     regionEn: "Departure",
     title: "SÃO PAULO / ATENAS",
