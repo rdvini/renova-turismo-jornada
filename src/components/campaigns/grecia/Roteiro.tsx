@@ -15,6 +15,8 @@ import mykonosImg from "@/assets/grecia/mykonos.jpg";
 import atenasCidadeAsset from "@/assets/grecia/atenas-cidade.png.asset.json";
 import partenon2Asset from "@/assets/grecia/partenon-2.png.asset.json";
 import corintoAsset from "@/assets/grecia/corinto.png.asset.json";
+import kalambakaAsset from "@/assets/grecia/kalambaka.png.asset.json";
+const kalambakaImg = kalambakaAsset.url;
 const egeuImg = atenasCidadeAsset.url;
 const atenasChegadaImg = partenon2Asset.url;
 const corintoImg = corintoAsset.url;
@@ -77,8 +79,8 @@ const slides: Slide[] = [
   },
   {
     day: "5º Dia",
-    image: meteoraImg,
-    imageAlt: "Paisagem montanhosa de Meteora",
+    image: kalambakaImg,
+    imageAlt: "Mosteiro de Meteora em Kalambaka",
     region: "Delfos → Meteora",
     regionEn: "Delphi & Meteora",
     title: "ATENAS / DELFOS / METEORA",
