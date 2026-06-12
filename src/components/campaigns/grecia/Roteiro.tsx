@@ -30,7 +30,7 @@ const slides: Slide[] = [
   {
     day: "1º Dia",
     image: egeuImg,
-    imageAlt: "Vista aérea do voo sobre o Mediterrâneo",
+    imageAlt: "Partenon na Acrópole de Atenas",
     region: "São Paulo → Atenas",
     regionEn: "Departure",
     title: "SÃO PAULO / ATENAS",
