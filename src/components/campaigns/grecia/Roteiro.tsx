@@ -79,8 +79,8 @@ const slides: Slide[] = [
   },
   {
     day: "5º Dia",
-    image: meteoraImg,
-    imageAlt: "Paisagem montanhosa de Meteora",
+    image: kalambakaImg,
+    imageAlt: "Mosteiro de Meteora em Kalambaka",
     region: "Delfos → Meteora",
     regionEn: "Delphi & Meteora",
     title: "ATENAS / DELFOS / METEORA",
