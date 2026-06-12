@@ -14,8 +14,10 @@ import santoriniImg from "@/assets/grecia/hero-santorini.jpg";
 import mykonosImg from "@/assets/grecia/mykonos.jpg";
 import atenasCidadeAsset from "@/assets/grecia/atenas-cidade.png.asset.json";
 import partenon2Asset from "@/assets/grecia/partenon-2.png.asset.json";
+import corintoAsset from "@/assets/grecia/corinto.png.asset.json";
 const egeuImg = atenasCidadeAsset.url;
 const atenasChegadaImg = partenon2Asset.url;
+const corintoImg = corintoAsset.url;
 
 interface Slide {
   day: string;
@@ -64,8 +66,8 @@ const slides: Slide[] = [
   },
   {
     day: "4º Dia",
-    image: delfosImg,
-    imageAlt: "Ruínas arqueológicas de Corinto e Micenas",
+    image: corintoImg,
+    imageAlt: "Canal de Corinto na Grécia",
     region: "Corinto e Micenas",
     regionEn: "Corinth & Mycenae",
     title: "ATENAS / CORINTO / MICENAS / ATENAS",
