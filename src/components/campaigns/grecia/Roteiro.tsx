@@ -81,8 +81,8 @@ const slides: Slide[] = [
   },
   {
     day: "5º Dia",
-    image: kalambakaImg,
-    imageAlt: "Mosteiro de Meteora em Kalambaka",
+    image: delfosNewImg,
+    imageAlt: "Sítio arqueológico de Delfos ao pôr do sol",
     region: "Delfos → Meteora",
     regionEn: "Delphi & Meteora",
     title: "ATENAS / DELFOS / METEORA",
@@ -92,8 +92,8 @@ const slides: Slide[] = [
   },
   {
     day: "6º Dia",
-    image: meteoraImg,
-    imageAlt: "Mosteiros sobre as rochas de Meteora",
+    image: kalambakaImg,
+    imageAlt: "Mosteiro de Meteora em Kalambaka",
     region: "Meteora → Atenas",
     regionEn: "Meteora",
     title: "METEORA / ATENAS",
