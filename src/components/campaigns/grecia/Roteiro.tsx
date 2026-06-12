@@ -14,8 +14,10 @@ import santoriniImg from "@/assets/grecia/hero-santorini.jpg";
 import mykonosImg from "@/assets/grecia/mykonos.jpg";
 import atenasCidadeAsset from "@/assets/grecia/atenas-cidade.png.asset.json";
 import partenon2Asset from "@/assets/grecia/partenon-2.png.asset.json";
+import corintoAsset from "@/assets/grecia/corinto.png.asset.json";
 const egeuImg = atenasCidadeAsset.url;
 const atenasChegadaImg = partenon2Asset.url;
+const corintoImg = corintoAsset.url;
 
 interface Slide {
   day: string;
