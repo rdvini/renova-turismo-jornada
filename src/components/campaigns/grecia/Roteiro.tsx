@@ -11,14 +11,16 @@ import atenasImg from "@/assets/grecia/atenas.jpg";
 import delfosImg from "@/assets/grecia/delfos.jpg";
 import meteoraImg from "@/assets/grecia/meteora.jpg";
 import santoriniImg from "@/assets/grecia/hero-santorini.jpg";
-import mykonosImg from "@/assets/grecia/mykonos.jpg";
+
 import atenasCidadeAsset from "@/assets/grecia/atenas-cidade.png.asset.json";
 import partenon2Asset from "@/assets/grecia/partenon-2.png.asset.json";
 import corintoAsset from "@/assets/grecia/corinto.png.asset.json";
 import kalambakaAsset from "@/assets/grecia/kalambaka.png.asset.json";
 import delfosNewAsset from "@/assets/grecia/delfos-new.png.asset.json";
+import museuAthenasAsset from "@/assets/grecia/museu-athenas.png.asset.json";
 const kalambakaImg = kalambakaAsset.url;
 const delfosNewImg = delfosNewAsset.url;
+const museuAthenasImg = museuAthenasAsset.url;
 const egeuImg = atenasCidadeAsset.url;
 const atenasChegadaImg = partenon2Asset.url;
 const corintoImg = corintoAsset.url;
@@ -114,8 +116,8 @@ const slides: Slide[] = [
   },
   {
     day: "8º Dia",
-    image: mykonosImg,
-    imageAlt: "Museu e ruas de Atenas",
+    image: museuAthenasImg,
+    imageAlt: "Museu Arqueológico Nacional de Atenas",
     region: "Atenas",
     regionEn: "Athens",
     title: "ATENAS",
