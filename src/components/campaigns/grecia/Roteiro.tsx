@@ -10,7 +10,6 @@ import {
 import atenasImg from "@/assets/grecia/atenas.jpg";
 import delfosImg from "@/assets/grecia/delfos.jpg";
 import meteoraImg from "@/assets/grecia/meteora.jpg";
-import santoriniImg from "@/assets/grecia/hero-santorini.jpg";
 
 import atenasCidadeAsset from "@/assets/grecia/atenas-cidade.png.asset.json";
 import partenon2Asset from "@/assets/grecia/partenon-2.png.asset.json";
