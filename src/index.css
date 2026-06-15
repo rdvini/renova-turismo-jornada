@@ -453,6 +453,24 @@
     0 -1px 0 hsl(35 80% 30% / 0.3) inset,
     0 10px 30px -10px hsl(var(--pam-gold) / 0.6);
   transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
+  position: relative;
+  overflow: hidden;
+}
+.theme-padre-antonio .gold-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    hsl(45 100% 95% / 0.45) 50%,
+    transparent 100%
+  );
+  animation: btn-shine 3s ease-in-out infinite;
+  pointer-events: none;
 }
 .theme-padre-antonio .gold-btn:hover {
   transform: translateY(-2px) scale(1.02);
@@ -460,4 +478,8 @@
   box-shadow:
     0 1px 0 hsl(45 100% 92% / 0.9) inset,
     0 14px 40px -10px hsl(var(--pam-gold) / 0.7);
+}
+@keyframes btn-shine {
+  0% { left: -100%; }
+  100% { left: 100%; }
 }
