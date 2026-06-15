@@ -18,6 +18,7 @@ import corintoAsset from "@/assets/grecia/corinto.png.asset.json";
 import kalambakaAsset from "@/assets/grecia/kalambaka.png.asset.json";
 import delfosNewAsset from "@/assets/grecia/delfos-new.png.asset.json";
 import museuAthenasAsset from "@/assets/grecia/museu-athenas.png.asset.json";
+import santoriniNewAsset from "@/assets/grecia/santorini.png.asset.json";
 const kalambakaImg = kalambakaAsset.url;
 const delfosNewImg = delfosNewAsset.url;
 const museuAthenasImg = museuAthenasAsset.url;
