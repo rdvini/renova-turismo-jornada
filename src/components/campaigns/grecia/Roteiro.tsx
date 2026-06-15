@@ -107,8 +107,8 @@ const slides: Slide[] = [
   },
   {
     day: "7º Dia",
-    image: santoriniImg,
-    imageAlt: "Cruzeiro pelas ilhas gregas",
+    image: santoriniNewImg,
+    imageAlt: "Igreja de cúpulas azuis em Santorini ao pôr do sol",
     region: "Cruzeiro pelas Ilhas",
     regionEn: "Greek Islands",
     title: "ATENAS / CRUZEIRO ÀS ILHAS / ATENAS",
