@@ -62,7 +62,7 @@ Deno.serve(async (req) => {
     // Store submission in database (service role bypasses RLS)
     const { error: dbError } = await supabase
       .from("contact_submissions")
-      .insert({ nome, email, telefone });
+      .insert({ nome, email, telefone, lp_origem: campaign ?? null });
 
     if (dbError) {
       console.error("Database insert error:", dbError);
