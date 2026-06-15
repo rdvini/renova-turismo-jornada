@@ -1,7 +1,7 @@
 import { Plane, Building2, Bus, Utensils, MessageCircle, ShieldCheck } from "lucide-react";
 
 const WHATSAPP_URL =
-  "https://wa.me/5519989542633?text=Ol%C3%A1!%20Vim%20da%20p%C3%A1gina%20de%20L%C3%ADderes%20Evang%C3%A9licos%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20viagem%20mission%C3%A1ria.";
+  "https://wa.me/5519989542633?text=Ol%C3%A1!%20Vim%20da%20p%C3%A1gina%20de%20Pastores%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20caravana.";
 
 const items = [
   { icon: Plane, title: "Passagens Aéreas", text: "Nacionais e internacionais, com as melhores conexões." },

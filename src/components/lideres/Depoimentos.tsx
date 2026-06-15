@@ -3,7 +3,7 @@ import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 
 const WHATSAPP_URL =
-  "https://wa.me/5519989542633?text=Ol%C3%A1!%20Vim%20da%20p%C3%A1gina%20de%20L%C3%ADderes%20Cat%C3%B3licos%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20peregrina%C3%A7%C3%A3o.";
+  "https://wa.me/5519989542633?text=Ol%C3%A1!%20Vim%20da%20p%C3%A1gina%20de%20Padres%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20peregrina%C3%A7%C3%A3o.";
 
 const TESTIMONIALS = [
   {
