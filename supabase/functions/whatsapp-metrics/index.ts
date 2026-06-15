@@ -1,9 +1,15 @@
 import { createClient } from "npm:@supabase/supabase-js@2";
 import { corsHeaders } from "npm:@supabase/supabase-js@2/cors";
 
+const metricsCorsHeaders = {
+  ...corsHeaders,
+  "Access-Control-Allow-Headers":
+    "authorization, x-client-info, apikey, content-type, x-metrics-password",
+};
+
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") {
-    return new Response("ok", { headers: corsHeaders });
+    return new Response("ok", { headers: metricsCorsHeaders });
   }
 
   try {
@@ -12,7 +18,7 @@ Deno.serve(async (req) => {
     if (!expected || password !== expected) {
       return new Response(JSON.stringify({ error: "Unauthorized" }), {
         status: 401,
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
+        headers: { ...metricsCorsHeaders, "Content-Type": "application/json" },
       });
     }
 
@@ -73,14 +79,14 @@ Deno.serve(async (req) => {
 
     return new Response(
       JSON.stringify({ total, days, byDay, byPage, bySource }),
-      { headers: { ...corsHeaders, "Content-Type": "application/json" } },
+      { headers: { ...metricsCorsHeaders, "Content-Type": "application/json" } },
     );
   } catch (err) {
     return new Response(
       JSON.stringify({ error: (err as Error).message }),
       {
         status: 500,
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
+        headers: { ...metricsCorsHeaders, "Content-Type": "application/json" },
       },
     );
   }
