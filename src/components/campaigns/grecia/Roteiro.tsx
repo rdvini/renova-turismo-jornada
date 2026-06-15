@@ -116,8 +116,8 @@ const slides: Slide[] = [
   },
   {
     day: "8º Dia",
-    image: mykonosImg,
-    imageAlt: "Museu e ruas de Atenas",
+    image: museuAthenasImg,
+    imageAlt: "Museu Arqueológico Nacional de Atenas",
     region: "Atenas",
     regionEn: "Athens",
     title: "ATENAS",
