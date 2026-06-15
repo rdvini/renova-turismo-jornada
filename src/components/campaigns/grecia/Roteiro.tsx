@@ -11,7 +11,7 @@ import atenasImg from "@/assets/grecia/atenas.jpg";
 import delfosImg from "@/assets/grecia/delfos.jpg";
 import meteoraImg from "@/assets/grecia/meteora.jpg";
 import santoriniImg from "@/assets/grecia/hero-santorini.jpg";
-import mykonosImg from "@/assets/grecia/mykonos.jpg";
+
 import atenasCidadeAsset from "@/assets/grecia/atenas-cidade.png.asset.json";
 import partenon2Asset from "@/assets/grecia/partenon-2.png.asset.json";
 import corintoAsset from "@/assets/grecia/corinto.png.asset.json";
