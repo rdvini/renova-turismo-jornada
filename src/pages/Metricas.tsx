@@ -133,7 +133,7 @@ const Metricas = () => {
             variant="ghost"
             size="sm"
             onClick={() => {
-              localStorage.removeItem(STORAGE_KEY);
+              
               setPassword("");
               setAuthed(false);
               setData(null);
