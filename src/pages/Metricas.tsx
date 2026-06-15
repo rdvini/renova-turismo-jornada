@@ -51,12 +51,10 @@ const Metricas = () => {
       const json = (await res.json()) as Metrics;
       setData(json);
       setAuthed(true);
-      localStorage.setItem(STORAGE_KEY, pwd);
     } catch (e) {
       console.error("metrics error", e);
       setError("Senha incorreta ou erro ao carregar.");
       setAuthed(false);
-      localStorage.removeItem(STORAGE_KEY);
     } finally {
       setLoading(false);
     }
