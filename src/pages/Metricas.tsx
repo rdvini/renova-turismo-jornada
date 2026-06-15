@@ -23,13 +23,9 @@ type Metrics = {
   bySource: { source: string; count: number }[];
 };
 
-const STORAGE_KEY = "metrics_pwd";
-
 const Metricas = () => {
-  const [password, setPassword] = useState<string>(
-    () => localStorage.getItem(STORAGE_KEY) ?? "",
-  );
-  const [authed, setAuthed] = useState<boolean>(Boolean(password));
+  const [password, setPassword] = useState<string>("");
+  const [authed, setAuthed] = useState<boolean>(false);
   const [days, setDays] = useState<number>(30);
   const [data, setData] = useState<Metrics | null>(null);
   const [loading, setLoading] = useState(false);
