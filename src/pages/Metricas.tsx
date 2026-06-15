@@ -39,16 +39,25 @@ const Metricas = () => {
     setLoading(true);
     setError(null);
     try {
-      const { data, error } = await supabase.functions.invoke<Metrics>(
-        `whatsapp-metrics?days=${d}`,
-        { method: "GET", headers: { "x-metrics-password": pwd } },
-      );
-      if (error) throw error;
-      if (!data) throw new Error("Sem dados");
-      setData(data);
+      const url = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/whatsapp-metrics?days=${d}`;
+      const res = await fetch(url, {
+        method: "GET",
+        headers: {
+          "x-metrics-password": pwd,
+          apikey: import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
+          Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
+        },
+      });
+      if (!res.ok) {
+        const body = await res.text();
+        throw new Error(`${res.status}: ${body}`);
+      }
+      const json = (await res.json()) as Metrics;
+      setData(json);
       setAuthed(true);
       localStorage.setItem(STORAGE_KEY, pwd);
     } catch (e) {
+      console.error("metrics error", e);
       setError("Senha incorreta ou erro ao carregar.");
       setAuthed(false);
       localStorage.removeItem(STORAGE_KEY);
