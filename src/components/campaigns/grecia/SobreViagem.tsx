@@ -35,7 +35,7 @@ const SobreViagem = () => {
               {
                 icon: Calendar,
                 label: "Quando",
-                value: "Datas sob consulta",
+                value: "06/10 a 15/10/2026",
               },
               {
                 icon: MapPin,
