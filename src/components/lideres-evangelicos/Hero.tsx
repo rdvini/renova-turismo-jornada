@@ -7,7 +7,7 @@ import logoRenova from "@/assets/logo-renova.svg";
 import { useYouTubeVolume } from "@/hooks/useYouTubeVolume";
 
 const WHATSAPP_URL =
-  "https://wa.me/5519989542633?text=Ol%C3%A1!%20Vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.";
+  "https://wa.me/5519989542633?text=Ol%C3%A1!%20Vim%20da%20p%C3%A1gina%20de%20L%C3%ADderes%20Evang%C3%A9licos%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20viagem%20mission%C3%A1ria.";
 
 const SLIDES = [
   { src: heroSlide2, alt: "Muro das Lamentações em Jerusalém, Terra Santa" },
