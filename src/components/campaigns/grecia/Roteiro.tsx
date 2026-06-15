@@ -25,6 +25,7 @@ const museuAthenasImg = museuAthenasAsset.url;
 const egeuImg = atenasCidadeAsset.url;
 const atenasChegadaImg = partenon2Asset.url;
 const corintoImg = corintoAsset.url;
+const santoriniNewImg = santoriniNewAsset.url;
 
 interface Slide {
   day: string;
