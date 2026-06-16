@@ -20,6 +20,7 @@ import cardLesteEuropeu from "@/assets/leste-europeu/hero.webp";
 import cardMarrocos from "@/assets/marrocos/hero.jpg";
 import cardJmjSeul from "@/assets/jmj-seul/jmj-card-cover.jpg.asset.json";
 import cardGrecia from "@/assets/grecia/hero-santorini.jpg";
+import cardTurquiaCapadocia from "@/assets/turquia/capadocia.jpg.asset.json";
 
 export const campaigns: Campaign[] = [
   {
