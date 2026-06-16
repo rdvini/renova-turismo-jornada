@@ -20,6 +20,7 @@ import cardLesteEuropeu from "@/assets/leste-europeu/hero.webp";
 import cardMarrocos from "@/assets/marrocos/hero.jpg";
 import cardJmjSeul from "@/assets/jmj-seul/jmj-card-cover.jpg.asset.json";
 import cardGrecia from "@/assets/grecia/hero-santorini.jpg";
+import cardTurquiaCapadocia from "@/assets/turquia/capadocia.jpg.asset.json";
 
 export const campaigns: Campaign[] = [
   {
@@ -65,7 +66,7 @@ export const campaigns: Campaign[] = [
     subtitle: "Renova Turismo apresenta",
     description:
       "Uma jornada explorando alguns dos cenários mais marcantes da Turquia, com cidades históricas, paisagens icônicas e experiências culturais inesquecíveis.",
-    image: heroTurkiye,
+    image: cardTurquiaCapadocia.url,
     date: "Outubro de 2026 e 2027",
     badge: "Experiência",
     published: true,
