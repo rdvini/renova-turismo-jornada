@@ -75,7 +75,7 @@ const Navbar = () => {
             rel="noopener noreferrer"
             className="inline-block rounded-full gold-btn px-6 py-2.5 font-heading text-xs uppercase tracking-[0.18em] font-semibold"
           >
-            Reservar
+            SAIBA MAIS!
           </a>
         </div>
         <button className="md:hidden text-primary-foreground" onClick={() => setOpen(!open)} aria-label="Menu">
