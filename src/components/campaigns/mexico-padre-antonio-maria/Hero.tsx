@@ -121,7 +121,7 @@ const Hero = () => {
                 rel="noopener noreferrer"
                 className="inline-block gold-btn font-heading font-bold text-sm md:text-base px-8 py-4 rounded-full"
               >
-                Reservar Agora
+                Saiba Mais!
               </a>
               <a
                 href="#roteiro"
