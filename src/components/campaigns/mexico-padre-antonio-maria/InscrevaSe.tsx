@@ -122,7 +122,7 @@ const InscrevaSe = () => {
                   disabled={loading}
                   className="w-full gold-btn font-heading font-bold text-sm md:text-base px-8 py-4 rounded-full disabled:opacity-50 disabled:cursor-not-allowed uppercase tracking-[0.18em]"
                 >
-                  {loading ? "Enviando..." : "Saiba mais sobre o roteiro!"}
+                  {loading ? "Enviando..." : "QUERO A PROPOSTA!"}
                 </button>
               </form>
             )}
