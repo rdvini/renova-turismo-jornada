@@ -53,7 +53,10 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/15 pt-6 text-center">
+        <div className="border-t border-primary-foreground/15 pt-6 text-center space-y-2">
+          <a href="/privacidade" className="font-body text-xs text-primary-foreground/70 hover:text-primary-foreground transition-colors underline underline-offset-2">
+            Privacidade e Segurança
+          </a>
           <p className="font-body text-xs text-primary-foreground/70">
             © 2026 Renova Turismo. Todos os direitos reservados.
           </p>
