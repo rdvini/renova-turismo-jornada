@@ -21,6 +21,7 @@ const Marrocos = lazy(() => import("./pages/Marrocos.tsx"));
 const JmjSeul = lazy(() => import("./pages/JmjSeul.tsx"));
 const Grecia = lazy(() => import("./pages/Grecia.tsx"));
 const Metricas = lazy(() => import("./pages/Metricas.tsx"));
+const Privacidade = lazy(() => import("./pages/Privacidade.tsx"));
 const NotFound = lazy(() => import("./pages/NotFound.tsx"));
 
 const queryClient = new QueryClient();
