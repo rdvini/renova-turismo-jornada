@@ -8,6 +8,7 @@ const Privacidade = () => {
       <Seo
         title="Privacidade e Segurança | Renova Turismo"
         description="Como a Renova Turismo trata dados pessoais, cookies e segurança no site."
+        path="/privacidade"
       />
       <header className="bg-primary px-6 md:px-8 py-5">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
