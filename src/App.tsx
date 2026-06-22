@@ -54,6 +54,7 @@ const App = () => (
             <Route path="/jmj-seul-2027" element={<JmjSeul />} />
             <Route path="/grecia" element={<Grecia />} />
             <Route path="/admin/metricas" element={<Metricas />} />
+            <Route path="/privacidade" element={<Privacidade />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
