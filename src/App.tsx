@@ -21,6 +21,7 @@ const Marrocos = lazy(() => import("./pages/Marrocos.tsx"));
 const JmjSeul = lazy(() => import("./pages/JmjSeul.tsx"));
 const Grecia = lazy(() => import("./pages/Grecia.tsx"));
 const Metricas = lazy(() => import("./pages/Metricas.tsx"));
+const Privacidade = lazy(() => import("./pages/Privacidade.tsx"));
 const NotFound = lazy(() => import("./pages/NotFound.tsx"));
 
 const queryClient = new QueryClient();
@@ -53,6 +54,7 @@ const App = () => (
             <Route path="/jmj-seul-2027" element={<JmjSeul />} />
             <Route path="/grecia" element={<Grecia />} />
             <Route path="/admin/metricas" element={<Metricas />} />
+            <Route path="/privacidade" element={<Privacidade />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
