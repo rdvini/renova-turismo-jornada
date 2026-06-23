@@ -73,7 +73,7 @@ const Hero = () => {
           className="font-heading text-3xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-tight mb-6 animate-fade-in-up"
           style={{ animationDelay: "0.15s" }}
         >
-          Pastores:{" "}
+          Pastor:{" "}
           <span className="font-normal">
             Leve sua igreja para uma jornada bíblica em grupo
           </span>
