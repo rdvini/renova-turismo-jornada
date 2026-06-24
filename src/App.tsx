@@ -31,7 +31,9 @@ const PageFallback = () => (
   <div className="min-h-screen bg-background" aria-hidden="true" />
 );
 
-const App = () => (
+const App = () => {
+  useGoogleAnalytics();
+  return (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
