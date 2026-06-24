@@ -1,4 +1,5 @@
 import { lazy, Suspense } from "react";
+import { useGoogleAnalytics } from "@/hooks/useGoogleAnalytics";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -30,7 +31,9 @@ const PageFallback = () => (
   <div className="min-h-screen bg-background" aria-hidden="true" />
 );
 
-const App = () => (
+const App = () => {
+  useGoogleAnalytics();
+  return (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
@@ -62,6 +65,7 @@ const App = () => (
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
-);
+  );
+};
 
 export default App;
