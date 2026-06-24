@@ -31,14 +31,19 @@ const PageFallback = () => (
   <div className="min-h-screen bg-background" aria-hidden="true" />
 );
 
-const App = () => {
+const AnalyticsTracker = () => {
   useGoogleAnalytics();
+  return null;
+};
+
+const App = () => {
   return (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <AnalyticsTracker />
         <WhatsAppTracker />
         <Suspense fallback={<PageFallback />}>
           <Routes>
