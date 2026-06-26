@@ -33,7 +33,7 @@ const SobreViagem = () => {
 
           <div className="grid sm:grid-cols-3 gap-4">
             {[
-              { icon: Calendar, label: "Quando", value: "Novembro de 2027" },
+              { icon: Calendar, label: "Quando", value: "14 a 22 Novembro de 2027" },
               { icon: MapPin, label: "Destinos", value: "Cidade do México, Guadalupe, Puebla e Cancún" },
               { icon: Plane, label: "Partida", value: "São Paulo (GRU)" },
             ].map((item) => (
