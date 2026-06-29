@@ -15,13 +15,25 @@ const ROTEIROS = [
     id: "israel",
     title: "Israel",
     subtitle: "Terra Santa, raízes da fé",
-    description: "Um Experiência nos lugares centrais da história bíblica, conectando fé, geografia e espiritualidade.",
+    description: "Uma experiência nos lugares centrais da história bíblica, conectando fé, geografia e espiritualidade.",
   },
   {
     id: "egito-jordania",
     title: "Egito e Jordânia",
     subtitle: "Do Êxodo a Petra",
-    description: "Uma jornada pelos cenários que moldaram a história bíblica, revelando as raízes espirituais, culturais e geográfica do povo de Israel.",
+    description: "Uma jornada pelos cenários que moldaram a história bíblica, revelando as raízes espirituais, culturais e geográficas do povo de Israel.",
+  },
+  {
+    id: "grecia",
+    title: "Grécia",
+    subtitle: "Berço da fé cristã",
+    description: "Uma jornada por lugares ligados à expansão da fé cristã e à história do mundo bíblico.",
+  },
+  {
+    id: "europa",
+    title: "Europa",
+    subtitle: "Caminhos da história cristã",
+    description: "Roteiros históricos, culturais e religiosos que ampliam a compreensão da fé, da igreja e da história cristã.",
   },
 ];
 
