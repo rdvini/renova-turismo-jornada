@@ -34,32 +34,74 @@ Deno.serve(async (req) => {
     );
 
     const since = new Date(Date.now() - days * 24 * 60 * 60 * 1000).toISOString();
+    const prevSince = new Date(Date.now() - 2 * days * 24 * 60 * 60 * 1000).toISOString();
 
     const { data, error } = await supabase
       .from("whatsapp_clicks")
-      .select("id, page, source, created_at")
-      .gte("created_at", since)
+      .select("id, page, source, referrer, user_agent, created_at")
+      .gte("created_at", prevSince)
       .order("created_at", { ascending: false })
-      .limit(10000);
+      .limit(20000);
 
     if (error) throw error;
 
-    const rows = data ?? [];
+    const all = data ?? [];
+    const rows = all.filter((r) => (r.created_at as string) >= since);
+    const prevRows = all.filter(
+      (r) => (r.created_at as string) >= prevSince && (r.created_at as string) < since,
+    );
+
     const total = rows.length;
+    const prevTotal = prevRows.length;
+    const delta = prevTotal === 0 ? null : ((total - prevTotal) / prevTotal) * 100;
 
     const byDayMap = new Map<string, number>();
     const byPageMap = new Map<string, number>();
     const bySourceMap = new Map<string, number>();
+    const byHourMap = new Map<number, number>();
+    const byDowMap = new Map<number, number>();
+    const byReferrerMap = new Map<string, number>();
+    const byDeviceMap = new Map<string, number>();
+
+    const classifyDevice = (ua: string | null): string => {
+      if (!ua) return "Desconhecido";
+      const s = ua.toLowerCase();
+      if (/ipad|tablet/.test(s)) return "Tablet";
+      if (/mobi|iphone|android/.test(s)) return "Mobile";
+      return "Desktop";
+    };
+
+    const classifyReferrer = (ref: string | null): string => {
+      if (!ref) return "Direto";
+      try {
+        const host = new URL(ref).hostname.replace(/^www\./, "");
+        if (host.includes("google")) return "Google";
+        if (host.includes("facebook") || host.includes("fb.")) return "Facebook";
+        if (host.includes("instagram")) return "Instagram";
+        if (host.includes("bing")) return "Bing";
+        if (host.includes("whatsapp")) return "WhatsApp";
+        if (host.includes("lovable")) return "Interno";
+        return host;
+      } catch {
+        return "Outro";
+      }
+    };
 
     for (const r of rows) {
+      const created = new Date(r.created_at as string);
       const day = (r.created_at as string).slice(0, 10);
       byDayMap.set(day, (byDayMap.get(day) ?? 0) + 1);
       byPageMap.set(r.page, (byPageMap.get(r.page) ?? 0) + 1);
       const src = r.source ?? "(sem origem)";
       bySourceMap.set(src, (bySourceMap.get(src) ?? 0) + 1);
+      byHourMap.set(created.getUTCHours(), (byHourMap.get(created.getUTCHours()) ?? 0) + 1);
+      byDowMap.set(created.getUTCDay(), (byDowMap.get(created.getUTCDay()) ?? 0) + 1);
+      const refKey = classifyReferrer((r as { referrer: string | null }).referrer);
+      byReferrerMap.set(refKey, (byReferrerMap.get(refKey) ?? 0) + 1);
+      const dev = classifyDevice((r as { user_agent: string | null }).user_agent);
+      byDeviceMap.set(dev, (byDeviceMap.get(dev) ?? 0) + 1);
     }
 
-    // Preencher dias vazios
     const byDay: { date: string; count: number }[] = [];
     for (let i = days - 1; i >= 0; i--) {
       const d = new Date(Date.now() - i * 24 * 60 * 60 * 1000)
@@ -67,6 +109,12 @@ Deno.serve(async (req) => {
         .slice(0, 10);
       byDay.push({ date: d, count: byDayMap.get(d) ?? 0 });
     }
+
+    const byHour: { hour: number; count: number }[] = [];
+    for (let h = 0; h < 24; h++) byHour.push({ hour: h, count: byHourMap.get(h) ?? 0 });
+
+    const dowNames = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
+    const byDow = dowNames.map((name, i) => ({ name, count: byDowMap.get(i) ?? 0 }));
 
     const byPage = [...byPageMap.entries()]
       .map(([page, count]) => ({ page, count }))
@@ -77,8 +125,51 @@ Deno.serve(async (req) => {
       .sort((a, b) => b.count - a.count)
       .slice(0, 15);
 
+    const byReferrer = [...byReferrerMap.entries()]
+      .map(([referrer, count]) => ({ referrer, count }))
+      .sort((a, b) => b.count - a.count);
+
+    const byDevice = [...byDeviceMap.entries()]
+      .map(([device, count]) => ({ device, count }))
+      .sort((a, b) => b.count - a.count);
+
+    const avgPerDay = total / days;
+    const peakDay = byDay.reduce(
+      (acc, d) => (d.count > acc.count ? d : acc),
+      { date: "", count: 0 },
+    );
+    const peakHour = byHour.reduce(
+      (acc, h) => (h.count > acc.count ? h : acc),
+      { hour: 0, count: 0 },
+    );
+
+    const recent = rows.slice(0, 25).map((r) => ({
+      id: r.id,
+      page: r.page,
+      source: r.source,
+      referrer: classifyReferrer((r as { referrer: string | null }).referrer),
+      device: classifyDevice((r as { user_agent: string | null }).user_agent),
+      created_at: r.created_at,
+    }));
+
     return new Response(
-      JSON.stringify({ total, days, byDay, byPage, bySource }),
+      JSON.stringify({
+        total,
+        prevTotal,
+        delta,
+        days,
+        avgPerDay,
+        peakDay,
+        peakHour,
+        byDay,
+        byHour,
+        byDow,
+        byPage,
+        bySource,
+        byReferrer,
+        byDevice,
+        recent,
+      }),
       { headers: { ...metricsCorsHeaders, "Content-Type": "application/json" } },
     );
   } catch (err) {
