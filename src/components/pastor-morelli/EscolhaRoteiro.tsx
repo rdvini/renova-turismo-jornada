@@ -9,19 +9,19 @@ const ROTEIROS = [
     id: "turquia",
     title: "Turquia e 7 Igrejas",
     subtitle: "Os passos do Apóstolo Paulo",
-    description: "Éfeso, Esmirna, Pérgamo, Sárdis, Tiatira, Filadélfia e Laodicéia — uma jornada pelas cartas do Apocalipse.",
+    description: "Roteiros ligados ao Novo Testamento, às primeiras comunidades cristãs e às Sete Igrejas do Apocalipse.",
   },
   {
     id: "israel",
     title: "Israel",
     subtitle: "Terra Santa, raízes da fé",
-    description: "Jerusalém, Belém, Nazaré, Mar da Galiléia e Jordão — caminhe onde Jesus caminhou.",
+    description: "Um Experiência nos lugares centrais da história bíblica, conectando fé, geografia e espiritualidade.",
   },
   {
     id: "egito-jordania",
     title: "Egito e Jordânia",
     subtitle: "Do Êxodo a Petra",
-    description: "Pirâmides, Monte Sinai, Mar Vermelho, Monte Nebo e Petra — a história do povo de Deus.",
+    description: "Uma jornada pelos cenários que moldaram a história bíblica, revelando as raízes espirituais, culturais e geográfica do povo de Israel.",
   },
 ];
 
