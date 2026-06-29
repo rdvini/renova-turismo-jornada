@@ -98,7 +98,7 @@ const EscolhaRoteiro = () => {
           </div>
 
           {/* Segunda linha: 2 cards centralizados */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-[calc(66.666%-1rem)] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-2xl mx-auto">
             {ROTEIROS.slice(3).map((r) => {
               const isSelected = selected === r.id;
               return (
