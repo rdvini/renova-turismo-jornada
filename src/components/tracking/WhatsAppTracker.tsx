@@ -47,15 +47,20 @@ const WhatsAppTracker = () => {
         // ignora erros do pixel
       }
 
-      // Banco de dados (fire-and-forget)
+      // Banco de dados (fire-and-forget) — precisa de .then() para disparar a request
       try {
-        void supabase.from("whatsapp_clicks").insert({
-          page,
-          source,
-          url: href,
-          referrer: document.referrer || null,
-          user_agent: navigator.userAgent,
-        });
+        supabase
+          .from("whatsapp_clicks")
+          .insert({
+            page,
+            source,
+            url: href,
+            referrer: document.referrer || null,
+            user_agent: navigator.userAgent,
+          })
+          .then(({ error }) => {
+            if (error) console.warn("[WhatsAppTracker] insert error:", error);
+          });
       } catch {
         // não bloqueia o redirecionamento do usuário
       }
