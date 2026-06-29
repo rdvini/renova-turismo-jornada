@@ -32,7 +32,7 @@ const Hero = () => {
             <p className="font-accent text-lg md:text-xl italic text-secondary mb-3 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
               Com o Pastor Morelli
             </p>
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-tight mb-6 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold text-blue-400 leading-tight mb-6 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
               Conheça as Terras Bíblicas com profundidade, segurança e propósito
             </h1>
             <p className="font-body text-base md:text-lg text-primary-foreground/85 max-w-xl mx-auto lg:mx-0 mb-8 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
