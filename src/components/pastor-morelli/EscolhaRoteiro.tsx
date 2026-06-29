@@ -62,7 +62,7 @@ const EscolhaRoteiro = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto mb-10">
-          {ROTEIROS.map((r) => {
+          {ROTEIROS.map((r, i) => {
             const isSelected = selected === r.id;
             return (
               <button
@@ -71,7 +71,7 @@ const EscolhaRoteiro = () => {
                 onClick={() => setSelected(isSelected ? null : r.id)}
                 className={`group relative text-left bg-card rounded-2xl border-2 p-6 md:p-7 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${
                   isSelected ? "border-secondary ring-2 ring-secondary/30" : "border-border hover:border-secondary/50"
-                }`}
+                } ${i === 3 ? "md:col-start-2" : ""}`}
               >
                 <div className="flex items-center justify-between mb-4">
                   <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-secondary/15 transition-colors">
