@@ -61,38 +61,76 @@ const EscolhaRoteiro = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto mb-10">
-          {ROTEIROS.map((r, i) => {
-            const isSelected = selected === r.id;
-            return (
-              <button
-                key={r.id}
-                type="button"
-                onClick={() => setSelected(isSelected ? null : r.id)}
-                className={`group relative text-left bg-card rounded-2xl border-2 p-6 md:p-7 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${
-                  isSelected ? "border-secondary ring-2 ring-secondary/30" : "border-border hover:border-secondary/50"
-                } ${i === 3 ? "md:col-start-2" : ""}`}
-              >
-                <div className="flex items-center justify-between mb-4">
-                  <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-secondary/15 transition-colors">
-                    <MapPin className="text-primary group-hover:text-secondary transition-colors" size={22} />
-                  </div>
-                  {isSelected && (
-                    <div className="h-7 w-7 rounded-full bg-secondary flex items-center justify-center">
-                      <Check className="text-secondary-foreground" size={16} />
+        <div className="max-w-5xl mx-auto mb-10 space-y-6 md:space-y-8">
+          {/* Primeira linha: 3 cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            {ROTEIROS.slice(0, 3).map((r) => {
+              const isSelected = selected === r.id;
+              return (
+                <button
+                  key={r.id}
+                  type="button"
+                  onClick={() => setSelected(isSelected ? null : r.id)}
+                  className={`group relative text-left bg-card rounded-2xl border-2 p-6 md:p-7 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${
+                    isSelected ? "border-secondary ring-2 ring-secondary/30" : "border-border hover:border-secondary/50"
+                  }`}
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-secondary/15 transition-colors">
+                      <MapPin className="text-primary group-hover:text-secondary transition-colors" size={22} />
                     </div>
-                  )}
-                </div>
-                <p className="font-accent italic text-secondary text-sm mb-1">{r.subtitle}</p>
-                <h3 className="font-heading text-xl md:text-2xl font-bold text-primary mb-3 leading-tight">
-                  {r.title}
-                </h3>
-                <p className="font-body text-sm md:text-base text-muted-foreground leading-relaxed">
-                  {r.description}
-                </p>
-              </button>
-            );
-          })}
+                    {isSelected && (
+                      <div className="h-7 w-7 rounded-full bg-secondary flex items-center justify-center">
+                        <Check className="text-secondary-foreground" size={16} />
+                      </div>
+                    )}
+                  </div>
+                  <p className="font-accent italic text-secondary text-sm mb-1">{r.subtitle}</p>
+                  <h3 className="font-heading text-xl md:text-2xl font-bold text-primary mb-3 leading-tight">
+                    {r.title}
+                  </h3>
+                  <p className="font-body text-sm md:text-base text-muted-foreground leading-relaxed">
+                    {r.description}
+                  </p>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Segunda linha: 2 cards centralizados */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-2xl mx-auto">
+            {ROTEIROS.slice(3).map((r) => {
+              const isSelected = selected === r.id;
+              return (
+                <button
+                  key={r.id}
+                  type="button"
+                  onClick={() => setSelected(isSelected ? null : r.id)}
+                  className={`group relative text-left bg-card rounded-2xl border-2 p-6 md:p-7 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${
+                    isSelected ? "border-secondary ring-2 ring-secondary/30" : "border-border hover:border-secondary/50"
+                  }`}
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-secondary/15 transition-colors">
+                      <MapPin className="text-primary group-hover:text-secondary transition-colors" size={22} />
+                    </div>
+                    {isSelected && (
+                      <div className="h-7 w-7 rounded-full bg-secondary flex items-center justify-center">
+                        <Check className="text-secondary-foreground" size={16} />
+                      </div>
+                    )}
+                  </div>
+                  <p className="font-accent italic text-secondary text-sm mb-1">{r.subtitle}</p>
+                  <h3 className="font-heading text-xl md:text-2xl font-bold text-primary mb-3 leading-tight">
+                    {r.title}
+                  </h3>
+                  <p className="font-body text-sm md:text-base text-muted-foreground leading-relaxed">
+                    {r.description}
+                  </p>
+                </button>
+              );
+            })}
+          </div>
         </div>
 
         <div className="text-center">
