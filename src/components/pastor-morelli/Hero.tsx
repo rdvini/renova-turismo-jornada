@@ -33,7 +33,7 @@ const Hero = () => {
               Com o Pastor Morelli
             </p>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-              Conheça as <span className="text-blue-400">Terras Bíblicas</span> com profundidade, segurança e propósito
+              Conheça as <span className="text-secondary">Terras Bíblicas</span> com profundidade, segurança e propósito
             </h1>
             <p className="font-body text-base md:text-lg text-primary-foreground/85 max-w-xl mx-auto lg:mx-0 mb-8 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
               Viva uma jornada inesquecível pelos lugares onde a fé aconteceu — com organização, segurança e propósito da Renova Turismo.
