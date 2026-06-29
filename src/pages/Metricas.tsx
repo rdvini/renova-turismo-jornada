@@ -280,7 +280,7 @@ const Metricas = () => {
             label="Horário de pico"
             value={
               data?.peakHour
-                ? `${String(data.peakHour.hour).padStart(2, "0")}:00 UTC`
+                ? `${String(data.peakHour.hour).padStart(2, "0")}:00 BRT`
                 : "—"
             }
             icon={<Clock className="h-4 w-4" />}
@@ -336,7 +336,7 @@ const Metricas = () => {
           {/* Hourly */}
           <Card>
             <CardHeader>
-              <CardTitle>Cliques por hora (UTC)</CardTitle>
+              <CardTitle>Cliques por hora (Brasília)</CardTitle>
               <p className="text-sm text-muted-foreground">
                 Quando seu público mais converte
               </p>

@@ -87,15 +87,19 @@ Deno.serve(async (req) => {
       }
     };
 
+    // Brasil = UTC-3 (sem horário de verão desde 2019)
+    const BR_OFFSET_MS = -3 * 60 * 60 * 1000;
+    const toBR = (iso: string) => new Date(new Date(iso).getTime() + BR_OFFSET_MS);
+
     for (const r of rows) {
-      const created = new Date(r.created_at as string);
-      const day = (r.created_at as string).slice(0, 10);
+      const createdBR = toBR(r.created_at as string);
+      const day = createdBR.toISOString().slice(0, 10);
       byDayMap.set(day, (byDayMap.get(day) ?? 0) + 1);
       byPageMap.set(r.page, (byPageMap.get(r.page) ?? 0) + 1);
       const src = r.source ?? "(sem origem)";
       bySourceMap.set(src, (bySourceMap.get(src) ?? 0) + 1);
-      byHourMap.set(created.getUTCHours(), (byHourMap.get(created.getUTCHours()) ?? 0) + 1);
-      byDowMap.set(created.getUTCDay(), (byDowMap.get(created.getUTCDay()) ?? 0) + 1);
+      byHourMap.set(createdBR.getUTCHours(), (byHourMap.get(createdBR.getUTCHours()) ?? 0) + 1);
+      byDowMap.set(createdBR.getUTCDay(), (byDowMap.get(createdBR.getUTCDay()) ?? 0) + 1);
       const refKey = classifyReferrer((r as { referrer: string | null }).referrer);
       byReferrerMap.set(refKey, (byReferrerMap.get(refKey) ?? 0) + 1);
       const dev = classifyDevice((r as { user_agent: string | null }).user_agent);
@@ -104,7 +108,7 @@ Deno.serve(async (req) => {
 
     const byDay: { date: string; count: number }[] = [];
     for (let i = days - 1; i >= 0; i--) {
-      const d = new Date(Date.now() - i * 24 * 60 * 60 * 1000)
+      const d = new Date(Date.now() - i * 24 * 60 * 60 * 1000 + BR_OFFSET_MS)
         .toISOString()
         .slice(0, 10);
       byDay.push({ date: d, count: byDayMap.get(d) ?? 0 });
