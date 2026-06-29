@@ -108,7 +108,7 @@ Deno.serve(async (req) => {
 
     const byDay: { date: string; count: number }[] = [];
     for (let i = days - 1; i >= 0; i--) {
-      const d = new Date(Date.now() - i * 24 * 60 * 60 * 1000)
+      const d = new Date(Date.now() - i * 24 * 60 * 60 * 1000 + BR_OFFSET_MS)
         .toISOString()
         .slice(0, 10);
       byDay.push({ date: d, count: byDayMap.get(d) ?? 0 });
