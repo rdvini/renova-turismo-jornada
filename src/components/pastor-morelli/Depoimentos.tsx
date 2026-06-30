@@ -4,19 +4,22 @@ import GoogleReviewsCard from "@/components/shared/GoogleReviewsCard";
 // ✍️ Placeholders — substitua pelos depoimentos reais quando disponíveis.
 const TESTIMONIALS = [
   {
-    name: "Depoimento 1",
-    role: "Cliente Renova Turismo",
-    quote: "Espaço reservado para o primeiro depoimento de quem viajou com o Pastor Morelli e a Renova Turismo.",
+    name: "Dr. Felipe Silva",
+    location: "Campinas/SP",
+    quote:
+      "Excelente empresa. Excelente tratamento. Excelentes produtos. Excelente pós-venda. É o tipo de empresa que entende que uma viagem pode significar muito mais do que apenas uma viagem e se dedica para que seja um sonho inesquecível.",
   },
   {
-    name: "Depoimento 2",
-    role: "Cliente Renova Turismo",
-    quote: "Espaço reservado para o segundo depoimento de quem viajou com o Pastor Morelli e a Renova Turismo.",
+    name: "Ilda Costa",
+    location: "Itu/SP",
+    quote:
+      "Da viagem que fiz só tenho pontos positivos... Amei.... A equipe da Renova esteve presente nos dando toda assistência desde o momento em que saímos de Salto até o momento em que voltamos pra cá. Sempre estavam a disposição quando alguém do grupo precisava e acho que essa atenção para com o cliente foi o que me fez ter o desejo de fazer novas viagens com a Renova...",
   },
   {
-    name: "Depoimento 3",
-    role: "Cliente Renova Turismo",
-    quote: "Espaço reservado para o terceiro depoimento de quem viajou com o Pastor Morelli e a Renova Turismo.",
+    name: "Luciano Martins",
+    location: "São Paulo/SP",
+    quote:
+      "Uma Empresa Responsável, Dedicada a proporcionar o máximo de bem estar aos Clientes. Eu sou Cliente da Renova Turismo, e estou muito Satisfeito com o empenho e organização, que é uma Marca Registrada desta Empresa.",
   },
 ];
 
@@ -48,7 +51,7 @@ const Depoimentos = () => {
               </div>
               <div>
                 <p className="font-heading font-semibold text-primary">{t.name}</p>
-                <p className="font-body text-sm text-muted-foreground">{t.role}</p>
+                <p className="font-body text-sm text-muted-foreground">{t.location}</p>
               </div>
             </div>
           ))}
