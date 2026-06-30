@@ -51,7 +51,7 @@ const Depoimentos = () => {
               </div>
               <div>
                 <p className="font-heading font-semibold text-primary">{t.name}</p>
-                <p className="font-body text-sm text-muted-foreground">{t.role}</p>
+                <p className="font-body text-sm text-muted-foreground">{t.location}</p>
               </div>
             </div>
           ))}
