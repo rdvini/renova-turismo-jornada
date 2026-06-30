@@ -1,14 +1,16 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, ImageIcon, Play } from "lucide-react";
+import morelli1 from "@/assets/pastor-morelli/morelli-1.jpeg.asset.json";
+import morelli2 from "@/assets/pastor-morelli/morelli-2.jpeg.asset.json";
+import morelli3 from "@/assets/pastor-morelli/morelli-3.jpeg.asset.json";
 
 const WHATSAPP_URL =
   "https://wa.me/5519989542633?text=Ol%C3%A1!%20Vim%20da%20p%C3%A1gina%20do%20Pastor%20Morelli%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.";
 
-// 📸 Placeholder de fotos do líder — substitua os src abaixo pelas imagens reais.
 const PHOTOS: { src?: string; alt: string }[] = [
-  { alt: "Foto do Pastor Morelli — slide 1" },
-  { alt: "Foto do Pastor Morelli — slide 2" },
-  { alt: "Foto do Pastor Morelli — slide 3" },
+  { src: morelli1.url, alt: "Pastor Morelli ensinando nas Terras Bíblicas" },
+  { src: morelli2.url, alt: "Pastor Morelli com peregrina durante a viagem" },
+  { src: morelli3.url, alt: "Grupo Renova no Caesarea National Park, Israel" },
 ];
 
 // 🎬 Placeholder de vídeo de chamada — substitua VIDEO_ID pelo ID real do YouTube.
