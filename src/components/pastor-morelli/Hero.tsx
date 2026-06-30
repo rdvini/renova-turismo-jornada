@@ -27,7 +27,7 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           {/* Texto + CTA */}
           <div className="text-center lg:text-left">
-            <img src={logoRenova} alt="Renova Turismo" className="h-12 md:h-14 mx-auto lg:mx-0 mb-6 animate-fade-in-up" />
+            
             <p className="font-accent text-lg md:text-xl italic text-secondary mb-3 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
               Com o Pastor Morelli
             </p>
