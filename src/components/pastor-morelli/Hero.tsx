@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, ImageIcon, Play } from "lucide-react";
-import logoRenova from "@/assets/logo-renova.svg";
 
 const WHATSAPP_URL =
   "https://wa.me/5519989542633?text=Ol%C3%A1!%20Vim%20da%20p%C3%A1gina%20do%20Pastor%20Morelli%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.";
@@ -28,7 +27,7 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           {/* Texto + CTA */}
           <div className="text-center lg:text-left">
-            <img src={logoRenova} alt="Renova Turismo" className="h-12 md:h-14 mx-auto lg:mx-0 mb-6 animate-fade-in-up" />
+            
             <p className="font-accent text-lg md:text-xl italic text-secondary mb-3 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
               Com o Pastor Morelli
             </p>
