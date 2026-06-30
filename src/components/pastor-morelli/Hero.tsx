@@ -3,6 +3,9 @@ import { ChevronLeft, ChevronRight, ImageIcon, Play } from "lucide-react";
 import morelli1 from "@/assets/pastor-morelli/morelli-1.jpeg.asset.json";
 import morelli2 from "@/assets/pastor-morelli/morelli-2.jpeg.asset.json";
 import morelli3 from "@/assets/pastor-morelli/morelli-3.jpeg.asset.json";
+import morelli4 from "@/assets/pastor-morelli/morelli-4.jpeg.asset.json";
+import morelli5 from "@/assets/pastor-morelli/morelli-5.jpeg.asset.json";
+import morelli6 from "@/assets/pastor-morelli/morelli-6.jpeg.asset.json";
 
 const WHATSAPP_URL =
   "https://wa.me/5519989542633?text=Ol%C3%A1!%20Vim%20da%20p%C3%A1gina%20do%20Pastor%20Morelli%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.";
@@ -11,6 +14,9 @@ const PHOTOS: { src?: string; alt: string }[] = [
   { src: morelli1.url, alt: "Pastor Morelli ensinando nas Terras Bíblicas" },
   { src: morelli2.url, alt: "Pastor Morelli com peregrina durante a viagem" },
   { src: morelli3.url, alt: "Grupo Renova no Caesarea National Park, Israel" },
+  { src: morelli4.url, alt: "Pastor Morelli com vista panorâmica de Jerusalém ao pôr do sol" },
+  { src: morelli5.url, alt: "Grupo Renova no Monte Precipício, em Israel" },
+  { src: morelli6.url, alt: "Peregrinos com certificados de participação na caravana bíblica" },
 ];
 
 // 🎬 Placeholder de vídeo de chamada — substitua VIDEO_ID pelo ID real do YouTube.
