@@ -1,4 +1,5 @@
-import { Play } from "lucide-react";
+import { Play, Award } from "lucide-react";
+import certificadoIsrael from "@/assets/pastor-morelli/certificado-israel.jpeg.asset.json";
 
 // 🎬 Substitua VIDEO_ID pelo ID real do YouTube quando disponível.
 const VIDEO_ID = "";
@@ -18,7 +19,8 @@ const QuemSou = () => {
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto items-start">
+          {/* Vídeo de chamada */}
           <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border-2 border-border bg-card">
             {VIDEO_ID ? (
               <iframe
@@ -38,6 +40,27 @@ const QuemSou = () => {
                 <span className="font-body text-sm">Espaço reservado para o vídeo</span>
               </div>
             )}
+          </div>
+
+          {/* Certificado */}
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-secondary/30 bg-card p-2 md:p-3">
+            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-secondary to-transparent" />
+            <div className="flex items-center gap-2 mb-2 px-1">
+              <Award className="text-secondary" size={18} />
+              <span className="font-heading text-xs md:text-sm font-bold uppercase tracking-wider text-secondary">
+                Reconhecimento Oficial
+              </span>
+            </div>
+            <img
+              src={certificadoIsrael.url}
+              alt="Certificado do Estado de Israel — Ministério do Turismo nomeando João Morelli Neto como Embaixador Amigo de Israel"
+              className="w-full h-auto rounded-lg object-contain bg-white"
+              loading="lazy"
+            />
+            <p className="font-body text-xs text-muted-foreground text-center mt-3 px-2">
+              Reconhecido pelo Ministério do Turismo de Israel como{" "}
+              <strong className="text-primary">Embaixador Amigo de Israel</strong>.
+            </p>
           </div>
         </div>
       </div>
