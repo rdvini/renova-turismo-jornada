@@ -14,7 +14,7 @@ const items = [
 
 const PorQueRenova = () => {
   return (
-    <section className="py-20 md:py-28 bg-primary text-primary-foreground">
+    <section className="py-20 md:py-28 bg-gradient-to-b from-primary via-secondary/10 to-primary/90 text-primary-foreground">
       <div className="container mx-auto px-4">
         <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-6 tracking-tight">
           Por que escolher a <span className="text-secondary">Renova</span>?

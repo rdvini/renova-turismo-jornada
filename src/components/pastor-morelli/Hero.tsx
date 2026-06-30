@@ -28,7 +28,7 @@ const Hero = () => {
   const next = () => setCurrent((c) => (c === PHOTOS.length - 1 ? 0 : c + 1));
 
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary via-primary to-primary/85">
+    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary via-secondary/15 to-primary/75">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--secondary)/0.18),transparent_55%)]" />
 
       <div className="relative z-10 container mx-auto px-4 py-24 md:py-28">
