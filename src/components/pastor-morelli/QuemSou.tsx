@@ -14,8 +14,7 @@ const QuemSou = () => {
             Quem sou?
           </h2>
           <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed">
-            Pastor Morelli compartilha em vídeo sua trajetória, sua chamada e o coração por trás de cada caravana
-            organizada com a Renova Turismo.
+            Pastor João Morelli é professor, escritor e especialista em estudos bíblicos, com mais de 33 anos de ministério e 25 anos conduzindo grupos às Terras Bíblicas e Históricas. Sua formação em Teologia e Ciências da Religião, aliada à experiência em mais de 60 países, permite conectar Bíblia, história, geografia, arqueologia e espiritualidade de forma clara e acessível. Reconhecido como Embaixador Amigo de Israel, dedica sua trajetória a ensinar e conduzir pessoas a experiências que transformam o conhecimento das Escrituras em vivência.
           </p>
         </div>
 
