@@ -143,16 +143,18 @@ const PIE_COLORS = [
 const Metricas = () => {
   const [password, setPassword] = useState<string>("");
   const [authed, setAuthed] = useState<boolean>(false);
-  const [days, setDays] = useState<number>(30);
+  const [preset, setPreset] = useState<Preset>({ kind: "lastDays", days: 30 });
   const [data, setData] = useState<Metrics | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [rangeDraft, setRangeDraft] = useState<DateRange | undefined>();
+  const [rangeOpen, setRangeOpen] = useState(false);
 
-  const fetchMetrics = async (pwd: string, d: number) => {
+  const fetchMetrics = async (pwd: string, p: Preset) => {
     setLoading(true);
     setError(null);
     try {
-      const url = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/whatsapp-metrics?days=${d}`;
+      const url = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/whatsapp-metrics?${presetToQuery(p)}`;
       const res = await fetch(url, {
         method: "GET",
         headers: {
@@ -178,9 +180,10 @@ const Metricas = () => {
   };
 
   useEffect(() => {
-    if (authed && password) fetchMetrics(password, days);
+    if (authed && password) fetchMetrics(password, preset);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [days]);
+  }, [preset]);
+
 
   useEffect(() => {
     document.title = "Métricas WhatsApp | Renova Turismo";
