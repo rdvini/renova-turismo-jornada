@@ -259,25 +259,111 @@ const Metricas = () => {
               Cliques no WhatsApp
             </h1>
             <p className="text-muted-foreground">
-              Últimos {days} dias · atualizado agora
+              {data?.from && data?.to
+                ? `${format(ymdToDate(data.from), "dd MMM", { locale: ptBR })} – ${format(ymdToDate(data.to), "dd MMM yyyy", { locale: ptBR })}`
+                : `Últimos ${data?.days ?? ""} dias`}{" "}
+              · atualizado agora
             </p>
           </div>
-          <div className="flex items-center gap-2">
-            <div className="flex rounded-lg bg-muted p-1">
-              {[7, 30, 90].map((d) => (
-                <button
-                  key={d}
-                  onClick={() => setDays(d)}
-                  className={`px-3 py-1.5 text-sm rounded-md transition ${
-                    days === d
-                      ? "bg-background shadow-sm font-semibold"
-                      : "text-muted-foreground hover:text-foreground"
-                  }`}
-                >
-                  {d}d
-                </button>
-              ))}
+          <div className="flex flex-wrap items-center gap-2">
+            <div className="flex flex-wrap rounded-lg bg-muted p-1">
+              {(
+                [
+                  { key: "today", label: "Hoje", p: { kind: "today" } as Preset },
+                  { key: "yesterday", label: "Ontem", p: { kind: "yesterday" } as Preset },
+                  { key: "todayYesterday", label: "Hoje e ontem", p: { kind: "todayYesterday" } as Preset },
+                  { key: "7", label: "7d", p: { kind: "lastDays", days: 7 } as Preset },
+                  { key: "30", label: "30d", p: { kind: "lastDays", days: 30 } as Preset },
+                  { key: "90", label: "90d", p: { kind: "lastDays", days: 90 } as Preset },
+                ]
+              ).map((opt) => {
+                const active =
+                  (preset.kind === opt.p.kind &&
+                    (preset.kind !== "lastDays" ||
+                      (opt.p.kind === "lastDays" && preset.days === opt.p.days)));
+                return (
+                  <button
+                    key={opt.key}
+                    onClick={() => setPreset(opt.p)}
+                    className={`px-3 py-1.5 text-sm rounded-md transition ${
+                      active
+                        ? "bg-background shadow-sm font-semibold"
+                        : "text-muted-foreground hover:text-foreground"
+                    }`}
+                  >
+                    {opt.label}
+                  </button>
+                );
+              })}
             </div>
+            <Popover open={rangeOpen} onOpenChange={(o) => {
+              setRangeOpen(o);
+              if (o) {
+                setRangeDraft(
+                  preset.kind === "custom"
+                    ? { from: ymdToDate(preset.from), to: ymdToDate(preset.to) }
+                    : undefined,
+                );
+              }
+            }}>
+              <PopoverTrigger asChild>
+                <Button
+                  variant={preset.kind === "custom" ? "default" : "outline"}
+                  size="sm"
+                  className="gap-2"
+                >
+                  <CalendarIcon className="h-4 w-4" />
+                  {preset.kind === "custom" ? presetLabel(preset) : "Personalizado"}
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent className="w-auto p-3 space-y-3" align="end">
+                <Calendar
+                  mode="range"
+                  selected={rangeDraft}
+                  onSelect={setRangeDraft}
+                  numberOfMonths={2}
+                  locale={ptBR}
+                  disabled={{ after: new Date() }}
+                  initialFocus
+                  className={cn("p-0 pointer-events-auto")}
+                />
+                <div className="flex items-center justify-between gap-2 pt-2 border-t">
+                  <p className="text-xs text-muted-foreground">
+                    {rangeDraft?.from && rangeDraft?.to
+                      ? `${format(rangeDraft.from, "dd/MM/yy")} – ${format(rangeDraft.to, "dd/MM/yy")}`
+                      : "Selecione o intervalo"}
+                  </p>
+                  <div className="flex gap-2">
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={() => {
+                        setRangeDraft(undefined);
+                        setRangeOpen(false);
+                      }}
+                    >
+                      Cancelar
+                    </Button>
+                    <Button
+                      size="sm"
+                      disabled={!rangeDraft?.from || !rangeDraft?.to}
+                      onClick={() => {
+                        if (rangeDraft?.from && rangeDraft?.to) {
+                          setPreset({
+                            kind: "custom",
+                            from: dateToYmd(rangeDraft.from),
+                            to: dateToYmd(rangeDraft.to),
+                          });
+                          setRangeOpen(false);
+                        }
+                      }}
+                    >
+                      Aplicar
+                    </Button>
+                  </div>
+                </div>
+              </PopoverContent>
+            </Popover>
             <Button
               variant="ghost"
               size="sm"
@@ -291,6 +377,7 @@ const Metricas = () => {
             </Button>
           </div>
         </header>
+
 
         {/* KPI cards */}
         <section className="grid grid-cols-2 lg:grid-cols-4 gap-4">
