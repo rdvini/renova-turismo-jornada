@@ -19,6 +19,7 @@ import {
   Activity,
   ArrowDownRight,
   ArrowUpRight,
+  CalendarIcon,
   Clock,
   LogOut,
   MessageCircle,
@@ -29,6 +30,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Calendar } from "@/components/ui/calendar";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import {
   Table,
   TableBody,
@@ -37,13 +40,79 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { cn } from "@/lib/utils";
+import type { DateRange } from "react-day-picker";
 import { supabase } from "@/integrations/supabase/client";
+
+// YYYY-MM-DD do dia atual em Brasília (UTC-3)
+const brYmd = (d: Date) =>
+  new Date(d.getTime() - 3 * 60 * 60 * 1000).toISOString().slice(0, 10);
+
+// Converte YYYY-MM-DD (dia BR) para um Date "local" para o calendário
+const ymdToDate = (ymd: string) => {
+  const [y, m, d] = ymd.split("-").map(Number);
+  return new Date(y, m - 1, d);
+};
+const dateToYmd = (d: Date) => {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${y}-${m}-${day}`;
+};
+
+type Preset =
+  | { kind: "today" }
+  | { kind: "yesterday" }
+  | { kind: "todayYesterday" }
+  | { kind: "lastDays"; days: number }
+  | { kind: "custom"; from: string; to: string };
+
+const presetLabel = (p: Preset): string => {
+  switch (p.kind) {
+    case "today":
+      return "Hoje";
+    case "yesterday":
+      return "Ontem";
+    case "todayYesterday":
+      return "Hoje e ontem";
+    case "lastDays":
+      return `${p.days}d`;
+    case "custom":
+      return `${format(ymdToDate(p.from), "dd/MM/yy")} – ${format(ymdToDate(p.to), "dd/MM/yy")}`;
+  }
+};
+
+const presetToQuery = (p: Preset): string => {
+  const today = brYmd(new Date());
+  const shift = (ymd: string, n: number) => {
+    const t = Date.parse(`${ymd}T00:00:00.000Z`) + n * 86400000;
+    return new Date(t).toISOString().slice(0, 10);
+  };
+  switch (p.kind) {
+    case "today":
+      return `from=${today}&to=${today}`;
+    case "yesterday": {
+      const y = shift(today, -1);
+      return `from=${y}&to=${y}`;
+    }
+    case "todayYesterday": {
+      const y = shift(today, -1);
+      return `from=${y}&to=${today}`;
+    }
+    case "lastDays":
+      return `days=${p.days}`;
+    case "custom":
+      return `from=${p.from}&to=${p.to}`;
+  }
+};
 
 type Metrics = {
   total: number;
   prevTotal: number;
   delta: number | null;
   days: number;
+  from?: string;
+  to?: string;
   avgPerDay: number;
   peakDay: { date: string; count: number };
   peakHour: { hour: number; count: number };
@@ -76,16 +145,18 @@ const PIE_COLORS = [
 const Metricas = () => {
   const [password, setPassword] = useState<string>("");
   const [authed, setAuthed] = useState<boolean>(false);
-  const [days, setDays] = useState<number>(30);
+  const [preset, setPreset] = useState<Preset>({ kind: "lastDays", days: 30 });
   const [data, setData] = useState<Metrics | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [rangeDraft, setRangeDraft] = useState<DateRange | undefined>();
+  const [rangeOpen, setRangeOpen] = useState(false);
 
-  const fetchMetrics = async (pwd: string, d: number) => {
+  const fetchMetrics = async (pwd: string, p: Preset) => {
     setLoading(true);
     setError(null);
     try {
-      const url = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/whatsapp-metrics?days=${d}`;
+      const url = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/whatsapp-metrics?${presetToQuery(p)}`;
       const res = await fetch(url, {
         method: "GET",
         headers: {
@@ -111,9 +182,10 @@ const Metricas = () => {
   };
 
   useEffect(() => {
-    if (authed && password) fetchMetrics(password, days);
+    if (authed && password) fetchMetrics(password, preset);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [days]);
+  }, [preset]);
+
 
   useEffect(() => {
     document.title = "Métricas WhatsApp | Renova Turismo";
@@ -158,14 +230,14 @@ const Metricas = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               onKeyDown={(e) => {
-                if (e.key === "Enter") fetchMetrics(password, days);
+                if (e.key === "Enter") fetchMetrics(password, preset);
               }}
             />
             {error && <p className="text-sm text-destructive">{error}</p>}
             <Button
               className="w-full"
               disabled={!password || loading}
-              onClick={() => fetchMetrics(password, days)}
+              onClick={() => fetchMetrics(password, preset)}
             >
               {loading ? "Entrando..." : "Entrar"}
             </Button>
@@ -189,25 +261,111 @@ const Metricas = () => {
               Cliques no WhatsApp
             </h1>
             <p className="text-muted-foreground">
-              Últimos {days} dias · atualizado agora
+              {data?.from && data?.to
+                ? `${format(ymdToDate(data.from), "dd MMM", { locale: ptBR })} – ${format(ymdToDate(data.to), "dd MMM yyyy", { locale: ptBR })}`
+                : `Últimos ${data?.days ?? ""} dias`}{" "}
+              · atualizado agora
             </p>
           </div>
-          <div className="flex items-center gap-2">
-            <div className="flex rounded-lg bg-muted p-1">
-              {[7, 30, 90].map((d) => (
-                <button
-                  key={d}
-                  onClick={() => setDays(d)}
-                  className={`px-3 py-1.5 text-sm rounded-md transition ${
-                    days === d
-                      ? "bg-background shadow-sm font-semibold"
-                      : "text-muted-foreground hover:text-foreground"
-                  }`}
-                >
-                  {d}d
-                </button>
-              ))}
+          <div className="flex flex-wrap items-center gap-2">
+            <div className="flex flex-wrap rounded-lg bg-muted p-1">
+              {(
+                [
+                  { key: "today", label: "Hoje", p: { kind: "today" } as Preset },
+                  { key: "yesterday", label: "Ontem", p: { kind: "yesterday" } as Preset },
+                  { key: "todayYesterday", label: "Hoje e ontem", p: { kind: "todayYesterday" } as Preset },
+                  { key: "7", label: "7d", p: { kind: "lastDays", days: 7 } as Preset },
+                  { key: "30", label: "30d", p: { kind: "lastDays", days: 30 } as Preset },
+                  { key: "90", label: "90d", p: { kind: "lastDays", days: 90 } as Preset },
+                ]
+              ).map((opt) => {
+                const active =
+                  (preset.kind === opt.p.kind &&
+                    (preset.kind !== "lastDays" ||
+                      (opt.p.kind === "lastDays" && preset.days === opt.p.days)));
+                return (
+                  <button
+                    key={opt.key}
+                    onClick={() => setPreset(opt.p)}
+                    className={`px-3 py-1.5 text-sm rounded-md transition ${
+                      active
+                        ? "bg-background shadow-sm font-semibold"
+                        : "text-muted-foreground hover:text-foreground"
+                    }`}
+                  >
+                    {opt.label}
+                  </button>
+                );
+              })}
             </div>
+            <Popover open={rangeOpen} onOpenChange={(o) => {
+              setRangeOpen(o);
+              if (o) {
+                setRangeDraft(
+                  preset.kind === "custom"
+                    ? { from: ymdToDate(preset.from), to: ymdToDate(preset.to) }
+                    : undefined,
+                );
+              }
+            }}>
+              <PopoverTrigger asChild>
+                <Button
+                  variant={preset.kind === "custom" ? "default" : "outline"}
+                  size="sm"
+                  className="gap-2"
+                >
+                  <CalendarIcon className="h-4 w-4" />
+                  {preset.kind === "custom" ? presetLabel(preset) : "Personalizado"}
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent className="w-auto p-3 space-y-3" align="end">
+                <Calendar
+                  mode="range"
+                  selected={rangeDraft}
+                  onSelect={setRangeDraft}
+                  numberOfMonths={2}
+                  locale={ptBR}
+                  disabled={{ after: new Date() }}
+                  initialFocus
+                  className={cn("p-0 pointer-events-auto")}
+                />
+                <div className="flex items-center justify-between gap-2 pt-2 border-t">
+                  <p className="text-xs text-muted-foreground">
+                    {rangeDraft?.from && rangeDraft?.to
+                      ? `${format(rangeDraft.from, "dd/MM/yy")} – ${format(rangeDraft.to, "dd/MM/yy")}`
+                      : "Selecione o intervalo"}
+                  </p>
+                  <div className="flex gap-2">
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={() => {
+                        setRangeDraft(undefined);
+                        setRangeOpen(false);
+                      }}
+                    >
+                      Cancelar
+                    </Button>
+                    <Button
+                      size="sm"
+                      disabled={!rangeDraft?.from || !rangeDraft?.to}
+                      onClick={() => {
+                        if (rangeDraft?.from && rangeDraft?.to) {
+                          setPreset({
+                            kind: "custom",
+                            from: dateToYmd(rangeDraft.from),
+                            to: dateToYmd(rangeDraft.to),
+                          });
+                          setRangeOpen(false);
+                        }
+                      }}
+                    >
+                      Aplicar
+                    </Button>
+                  </div>
+                </div>
+              </PopoverContent>
+            </Popover>
             <Button
               variant="ghost"
               size="sm"
@@ -221,6 +379,7 @@ const Metricas = () => {
             </Button>
           </div>
         </header>
+
 
         {/* KPI cards */}
         <section className="grid grid-cols-2 lg:grid-cols-4 gap-4">

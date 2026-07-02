@@ -7,6 +7,29 @@ const metricsCorsHeaders = {
     "authorization, x-client-info, apikey, content-type, x-metrics-password",
 };
 
+// Brasil = UTC-3 (sem horário de verão desde 2019)
+const BR_OFFSET_MS = -3 * 60 * 60 * 1000;
+
+// Converte um instante UTC (ms) para um Date "espelhado" em horário de Brasília
+// (usar métodos getUTC* nele devolve o valor local BR).
+const toBR = (iso: string | number) => new Date(new Date(iso).getTime() + BR_OFFSET_MS);
+
+// Recebe uma data YYYY-MM-DD (interpretada como dia de Brasília) e devolve o
+// instante UTC (ms) correspondente ao início daquele dia em BR.
+const brDateToUtcMs = (ymd: string): number => {
+  // 00:00 em BR (UTC-3) = 03:00 UTC do mesmo dia
+  return Date.parse(`${ymd}T00:00:00.000Z`) - BR_OFFSET_MS;
+};
+
+// "Hoje" em BR como YYYY-MM-DD
+const brToday = (): string => toBR(Date.now()).toISOString().slice(0, 10);
+
+// Soma n dias a um YYYY-MM-DD
+const addDays = (ymd: string, n: number): string => {
+  const t = Date.parse(`${ymd}T00:00:00.000Z`) + n * 86400000;
+  return new Date(t).toISOString().slice(0, 10);
+};
+
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response("ok", { headers: metricsCorsHeaders });
@@ -28,18 +51,42 @@ Deno.serve(async (req) => {
     );
 
     const url = new URL(req.url);
-    const days = Math.min(
-      Math.max(parseInt(url.searchParams.get("days") ?? "30", 10) || 30, 1),
-      365,
-    );
+    const fromParam = url.searchParams.get("from");
+    const toParam = url.searchParams.get("to");
 
-    const since = new Date(Date.now() - days * 24 * 60 * 60 * 1000).toISOString();
-    const prevSince = new Date(Date.now() - 2 * days * 24 * 60 * 60 * 1000).toISOString();
+    // Resolve intervalo em datas BR (YYYY-MM-DD, inclusivas)
+    let fromYmd: string;
+    let toYmd: string;
+    if (fromParam && toParam && /^\d{4}-\d{2}-\d{2}$/.test(fromParam) && /^\d{4}-\d{2}-\d{2}$/.test(toParam)) {
+      fromYmd = fromParam <= toParam ? fromParam : toParam;
+      toYmd = fromParam <= toParam ? toParam : fromParam;
+    } else {
+      const days = Math.min(
+        Math.max(parseInt(url.searchParams.get("days") ?? "30", 10) || 30, 1),
+        365,
+      );
+      toYmd = brToday();
+      fromYmd = addDays(toYmd, -(days - 1));
+    }
+
+    const days = Math.round(
+      (Date.parse(`${toYmd}T00:00:00.000Z`) - Date.parse(`${fromYmd}T00:00:00.000Z`)) / 86400000,
+    ) + 1;
+    const cappedDays = Math.min(Math.max(days, 1), 365);
+
+    const sinceMs = brDateToUtcMs(fromYmd);
+    const untilMs = brDateToUtcMs(addDays(toYmd, 1)); // exclusivo
+    const prevSinceMs = sinceMs - cappedDays * 86400000;
+
+    const since = new Date(sinceMs).toISOString();
+    const until = new Date(untilMs).toISOString();
+    const prevSince = new Date(prevSinceMs).toISOString();
 
     const { data, error } = await supabase
       .from("whatsapp_clicks")
       .select("id, page, source, referrer, user_agent, created_at")
       .gte("created_at", prevSince)
+      .lt("created_at", until)
       .order("created_at", { ascending: false })
       .limit(20000);
 
@@ -87,10 +134,6 @@ Deno.serve(async (req) => {
       }
     };
 
-    // Brasil = UTC-3 (sem horário de verão desde 2019)
-    const BR_OFFSET_MS = -3 * 60 * 60 * 1000;
-    const toBR = (iso: string) => new Date(new Date(iso).getTime() + BR_OFFSET_MS);
-
     for (const r of rows) {
       const createdBR = toBR(r.created_at as string);
       const day = createdBR.toISOString().slice(0, 10);
@@ -107,10 +150,8 @@ Deno.serve(async (req) => {
     }
 
     const byDay: { date: string; count: number }[] = [];
-    for (let i = days - 1; i >= 0; i--) {
-      const d = new Date(Date.now() - i * 24 * 60 * 60 * 1000 + BR_OFFSET_MS)
-        .toISOString()
-        .slice(0, 10);
+    for (let i = 0; i < cappedDays; i++) {
+      const d = addDays(fromYmd, i);
       byDay.push({ date: d, count: byDayMap.get(d) ?? 0 });
     }
 
@@ -137,7 +178,7 @@ Deno.serve(async (req) => {
       .map(([device, count]) => ({ device, count }))
       .sort((a, b) => b.count - a.count);
 
-    const avgPerDay = total / days;
+    const avgPerDay = total / cappedDays;
     const peakDay = byDay.reduce(
       (acc, d) => (d.count > acc.count ? d : acc),
       { date: "", count: 0 },
@@ -161,7 +202,9 @@ Deno.serve(async (req) => {
         total,
         prevTotal,
         delta,
-        days,
+        days: cappedDays,
+        from: fromYmd,
+        to: toYmd,
         avgPerDay,
         peakDay,
         peakHour,
