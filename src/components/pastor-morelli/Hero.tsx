@@ -19,8 +19,7 @@ const PHOTOS: { src?: string; alt: string }[] = [
   { src: morelli6.url, alt: "Peregrinos com certificados de participação na caravana bíblica" },
 ];
 
-// 🎬 Placeholder de vídeo de chamada — substitua VIDEO_ID pelo ID real do YouTube.
-const VIDEO_ID = "";
+const VIDEO_ID = "vIotSuaudsg";
 
 const Hero = () => {
   const [current, setCurrent] = useState(0);
