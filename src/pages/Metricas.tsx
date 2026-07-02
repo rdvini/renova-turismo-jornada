@@ -228,14 +228,14 @@ const Metricas = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               onKeyDown={(e) => {
-                if (e.key === "Enter") fetchMetrics(password, days);
+                if (e.key === "Enter") fetchMetrics(password, preset);
               }}
             />
             {error && <p className="text-sm text-destructive">{error}</p>}
             <Button
               className="w-full"
               disabled={!password || loading}
-              onClick={() => fetchMetrics(password, days)}
+              onClick={() => fetchMetrics(password, preset)}
             >
               {loading ? "Entrando..." : "Entrar"}
             </Button>
