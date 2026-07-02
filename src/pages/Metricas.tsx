@@ -19,6 +19,7 @@ import {
   Activity,
   ArrowDownRight,
   ArrowUpRight,
+  CalendarIcon,
   Clock,
   LogOut,
   MessageCircle,
@@ -29,6 +30,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Calendar } from "@/components/ui/calendar";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import {
   Table,
   TableBody,
@@ -37,7 +40,71 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { cn } from "@/lib/utils";
+import type { DateRange } from "react-day-picker";
 import { supabase } from "@/integrations/supabase/client";
+
+// YYYY-MM-DD do dia atual em Brasília (UTC-3)
+const brYmd = (d: Date) =>
+  new Date(d.getTime() - 3 * 60 * 60 * 1000).toISOString().slice(0, 10);
+
+// Converte YYYY-MM-DD (dia BR) para um Date "local" para o calendário
+const ymdToDate = (ymd: string) => {
+  const [y, m, d] = ymd.split("-").map(Number);
+  return new Date(y, m - 1, d);
+};
+const dateToYmd = (d: Date) => {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${y}-${m}-${day}`;
+};
+
+type Preset =
+  | { kind: "today" }
+  | { kind: "yesterday" }
+  | { kind: "todayYesterday" }
+  | { kind: "lastDays"; days: number }
+  | { kind: "custom"; from: string; to: string };
+
+const presetLabel = (p: Preset): string => {
+  switch (p.kind) {
+    case "today":
+      return "Hoje";
+    case "yesterday":
+      return "Ontem";
+    case "todayYesterday":
+      return "Hoje e ontem";
+    case "lastDays":
+      return `${p.days}d`;
+    case "custom":
+      return `${format(ymdToDate(p.from), "dd/MM/yy")} – ${format(ymdToDate(p.to), "dd/MM/yy")}`;
+  }
+};
+
+const presetToQuery = (p: Preset): string => {
+  const today = brYmd(new Date());
+  const shift = (ymd: string, n: number) => {
+    const t = Date.parse(`${ymd}T00:00:00.000Z`) + n * 86400000;
+    return new Date(t).toISOString().slice(0, 10);
+  };
+  switch (p.kind) {
+    case "today":
+      return `from=${today}&to=${today}`;
+    case "yesterday": {
+      const y = shift(today, -1);
+      return `from=${y}&to=${y}`;
+    }
+    case "todayYesterday": {
+      const y = shift(today, -1);
+      return `from=${y}&to=${today}`;
+    }
+    case "lastDays":
+      return `days=${p.days}`;
+    case "custom":
+      return `from=${p.from}&to=${p.to}`;
+  }
+};
 
 type Metrics = {
   total: number;
