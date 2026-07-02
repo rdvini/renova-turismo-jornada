@@ -1,8 +1,10 @@
 import { Play, Award } from "lucide-react";
 import certificadoIsrael from "@/assets/pastor-morelli/certificado-israel.jpeg.asset.json";
 
-// 🎬 Substitua VIDEO_ID pelo ID real do YouTube quando disponível.
-const VIDEO_ID = "";
+const VIDEO_ID = "K6l-jyNdkxY";
+
+const WHATSAPP_URL =
+  "https://wa.me/5519989542633?text=Ol%C3%A1!%20Vim%20da%20p%C3%A1gina%20do%20Pastor%20Morelli%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.";
 
 const QuemSou = () => {
   return (
@@ -61,6 +63,18 @@ const QuemSou = () => {
               <strong className="text-primary">Embaixador Amigo de Israel</strong>.
             </p>
           </div>
+        </div>
+
+        {/* CTA WhatsApp */}
+        <div className="flex justify-center mt-10">
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-[#25D366] hover:bg-[#20bd5a] text-white font-heading font-bold uppercase tracking-wide px-10 py-4 rounded-full transition-all hover:scale-105 shadow-lg"
+          >
+            Conversar no WhatsApp
+          </a>
         </div>
       </div>
     </section>
