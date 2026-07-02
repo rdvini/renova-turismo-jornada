@@ -22,7 +22,7 @@ const QuemSou = () => {
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto items-start">
           {/* Vídeo de chamada */}
-          <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border-2 border-border bg-card">
+          <div className="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl border-2 border-border bg-card">
             {VIDEO_ID ? (
               <iframe
                 src={`https://www.youtube.com/embed/${VIDEO_ID}?rel=0&modestbranding=1`}
