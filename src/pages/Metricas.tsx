@@ -111,6 +111,8 @@ type Metrics = {
   prevTotal: number;
   delta: number | null;
   days: number;
+  from?: string;
+  to?: string;
   avgPerDay: number;
   peakDay: { date: string; count: number };
   peakHour: { hour: number; count: number };
