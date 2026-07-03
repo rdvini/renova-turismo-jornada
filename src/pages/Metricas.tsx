@@ -43,9 +43,27 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+} from "@/components/ui/command";
 import { cn } from "@/lib/utils";
 import type { DateRange } from "react-day-picker";
 import { supabase } from "@/integrations/supabase/client";
+import { campaigns } from "@/data/campaigns";
+
+const KNOWN_PAGES = Array.from(
+  new Set<string>([
+    "/",
+    ...campaigns.map((c) => c.slug),
+    "/pastor-morelli",
+    "/privacidade",
+  ]),
+).sort();
 
 // YYYY-MM-DD do dia atual em Brasília (UTC-3)
 const brYmd = (d: Date) =>
