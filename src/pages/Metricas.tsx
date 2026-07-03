@@ -172,12 +172,15 @@ const Metricas = () => {
   const [error, setError] = useState<string | null>(null);
   const [rangeDraft, setRangeDraft] = useState<DateRange | undefined>();
   const [rangeOpen, setRangeOpen] = useState(false);
+  const [selectedPage, setSelectedPage] = useState<string | null>(null);
+  const [pageOpen, setPageOpen] = useState(false);
 
-  const fetchMetrics = async (pwd: string, p: Preset) => {
+  const fetchMetrics = async (pwd: string, p: Preset, page: string | null) => {
     setLoading(true);
     setError(null);
     try {
-      const url = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/whatsapp-metrics?${presetToQuery(p)}`;
+      const pageQs = page ? `&page=${encodeURIComponent(page)}` : "";
+      const url = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/whatsapp-metrics?${presetToQuery(p)}${pageQs}`;
       const res = await fetch(url, {
         method: "GET",
         headers: {
@@ -203,9 +206,15 @@ const Metricas = () => {
   };
 
   useEffect(() => {
-    if (authed && password) fetchMetrics(password, preset);
+    if (authed && password) fetchMetrics(password, preset, selectedPage);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [preset]);
+  }, [preset, selectedPage]);
+
+  const pageOptions = useMemo(() => {
+    const set = new Set<string>(KNOWN_PAGES);
+    data?.byPage.forEach((p) => set.add(p.page));
+    return Array.from(set).sort();
+  }, [data]);
 
 
   useEffect(() => {
