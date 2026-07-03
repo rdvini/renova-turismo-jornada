@@ -396,6 +396,73 @@ const Metricas = () => {
                 </div>
               </PopoverContent>
             </Popover>
+            <Popover open={pageOpen} onOpenChange={setPageOpen}>
+              <PopoverTrigger asChild>
+                <Button
+                  variant={selectedPage ? "default" : "outline"}
+                  size="sm"
+                  className="gap-2 max-w-[240px]"
+                >
+                  <Globe className="h-4 w-4 shrink-0" />
+                  <span className="truncate">
+                    {selectedPage ? `Página: ${selectedPage}` : "Todas as páginas"}
+                  </span>
+                  {selectedPage && (
+                    <X
+                      className="h-3.5 w-3.5 shrink-0 opacity-70 hover:opacity-100"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        setSelectedPage(null);
+                      }}
+                    />
+                  )}
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent className="w-72 p-0" align="end">
+                <Command>
+                  <CommandInput placeholder="Buscar página..." />
+                  <CommandList>
+                    <CommandEmpty>Nenhuma página encontrada.</CommandEmpty>
+                    <CommandGroup>
+                      <CommandItem
+                        value="__all__"
+                        onSelect={() => {
+                          setSelectedPage(null);
+                          setPageOpen(false);
+                        }}
+                      >
+                        <Check
+                          className={cn(
+                            "mr-2 h-4 w-4",
+                            selectedPage === null ? "opacity-100" : "opacity-0",
+                          )}
+                        />
+                        Todas as páginas
+                      </CommandItem>
+                      {pageOptions.map((page) => (
+                        <CommandItem
+                          key={page}
+                          value={page}
+                          onSelect={() => {
+                            setSelectedPage(page);
+                            setPageOpen(false);
+                          }}
+                        >
+                          <Check
+                            className={cn(
+                              "mr-2 h-4 w-4",
+                              selectedPage === page ? "opacity-100" : "opacity-0",
+                            )}
+                          />
+                          <span className="font-mono text-xs truncate">{page}</span>
+                        </CommandItem>
+                      ))}
+                    </CommandGroup>
+                  </CommandList>
+                </Command>
+              </PopoverContent>
+            </Popover>
             <Button
               variant="ghost"
               size="sm"
