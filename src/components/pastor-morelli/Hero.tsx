@@ -23,7 +23,7 @@ const PHOTOS: { src?: string; alt: string }[] = [
   { src: morelli6.url, alt: "Peregrinos com certificados de participação na caravana bíblica" },
 ];
 
-const VIDEO_ID = "vIotSuaudsg";
+const VIDEO_ID = "3Hy5ZWC4cNo";
 
 const Hero = () => {
   const [current, setCurrent] = useState(0);
