@@ -45,7 +45,7 @@ const Hero = () => {
               Conheça as <span className="text-secondary">Terras Bíblicas</span> com profundidade, segurança e propósito
             </h1>
             <p className="font-body text-base md:text-lg text-primary-foreground/85 max-w-xl mx-auto lg:mx-0 mb-8 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-              Viva uma jornada inesquecível pelos lugares onde a fé aconteceu — com organização, segurança e propósito da Renova Turismo.
+              Viva uma jornada inesquecível pelos lugares onde a fé ganhou vida — conduzida com excelência, conhecimento e experiências que transformam cada passo em uma conexão mais profunda com a história bíblica.
             </p>
             <a
               href={WHATSAPP_URL}
