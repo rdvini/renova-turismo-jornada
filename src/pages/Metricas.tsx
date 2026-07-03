@@ -267,7 +267,7 @@ const Metricas = () => {
             <Button
               className="w-full"
               disabled={!password || loading}
-              onClick={() => fetchMetrics(password, preset)}
+              onClick={() => fetchMetrics(password, preset, selectedPage)}
             >
               {loading ? "Entrando..." : "Entrar"}
             </Button>
