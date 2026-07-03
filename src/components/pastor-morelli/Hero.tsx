@@ -47,7 +47,7 @@ const Hero = () => {
               Conheça as <span className="text-secondary">Terras Bíblicas</span> com profundidade, segurança e propósito
             </h1>
             <p className="font-body text-base md:text-lg text-primary-foreground/85 max-w-xl mx-auto lg:mx-0 mb-8 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-              Viva uma jornada inesquecível pelos lugares onde a fé ganhou vida — conduzida pelo Pastor Morelli.
+              Viaje por Israel, Turquia, Grécia, Egito, Jordânia e outros destinos históricos com João Morelli.
             </p>
             <a
               href={WHATSAPP_URL}
