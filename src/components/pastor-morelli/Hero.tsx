@@ -8,7 +8,7 @@ import morelli5 from "@/assets/pastor-morelli/morelli-5.jpeg.asset.json";
 import morelli6 from "@/assets/pastor-morelli/morelli-6.jpeg.asset.json";
 
 const WHATSAPP_URL =
-  "https://wa.me/5519989542633?text=Ol%C3%A1!%20Vim%20da%20p%C3%A1gina%20do%20Pastor%20Morelli%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.";
+  "https://wa.me/19991813303?text=Ol%C3%A1!%20Vim%20da%20p%C3%A1gina%20do%20Pastor%20Morelli%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.";
 
 const PHOTOS: { src?: string; alt: string }[] = [
   { src: morelli1.url, alt: "Pastor Morelli ensinando nas Terras Bíblicas" },
