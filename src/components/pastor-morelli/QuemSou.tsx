@@ -1,4 +1,5 @@
 import { Play, Award } from "lucide-react";
+import { useYouTubeVolume } from "@/hooks/useYouTubeVolume";
 import certificadoIsrael from "@/assets/pastor-morelli/certificado-israel.jpeg.asset.json";
 
 const VIDEO_ID = "K6l-jyNdkxY";
@@ -10,6 +11,7 @@ const WHATSAPP_URL =
   );
 
 const QuemSou = () => {
+  const videoRef = useYouTubeVolume(100);
   return (
     <section id="quem-sou" className="py-20 md:py-28 bg-muted">
       <div className="container mx-auto px-4">
