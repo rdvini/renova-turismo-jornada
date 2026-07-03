@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useYouTubeVolume } from "@/hooks/useYouTubeVolume";
 import { ChevronLeft, ChevronRight, ImageIcon, Play } from "lucide-react";
 import morelli1 from "@/assets/pastor-morelli/morelli-1.jpeg.asset.json";
 import morelli2 from "@/assets/pastor-morelli/morelli-2.jpeg.asset.json";
@@ -26,6 +27,7 @@ const VIDEO_ID = "vIotSuaudsg";
 
 const Hero = () => {
   const [current, setCurrent] = useState(0);
+  const videoRef = useYouTubeVolume(100);
   const prev = () => setCurrent((c) => (c === 0 ? PHOTOS.length - 1 : c - 1));
   const next = () => setCurrent((c) => (c === PHOTOS.length - 1 ? 0 : c + 1));
 
@@ -99,7 +101,8 @@ const Hero = () => {
             <div className="relative aspect-video rounded-2xl overflow-hidden border-2 border-primary-foreground/15 shadow-2xl bg-black/30">
               {VIDEO_ID ? (
                 <iframe
-                  src={`https://www.youtube.com/embed/${VIDEO_ID}?rel=0&modestbranding=1`}
+                  ref={videoRef}
+                  src={`https://www.youtube.com/embed/${VIDEO_ID}?rel=0&modestbranding=1&enablejsapi=1`}
                   title="Vídeo de chamada do Pastor Morelli"
                   loading="lazy"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

@@ -1,4 +1,5 @@
 import { Play, Award } from "lucide-react";
+import { useYouTubeVolume } from "@/hooks/useYouTubeVolume";
 import certificadoIsrael from "@/assets/pastor-morelli/certificado-israel.jpeg.asset.json";
 
 const VIDEO_ID = "K6l-jyNdkxY";
@@ -10,6 +11,7 @@ const WHATSAPP_URL =
   );
 
 const QuemSou = () => {
+  const videoRef = useYouTubeVolume(100);
   return (
     <section id="quem-sou" className="py-20 md:py-28 bg-muted">
       <div className="container mx-auto px-4">
@@ -28,7 +30,8 @@ const QuemSou = () => {
           <div className="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl border-2 border-border bg-card">
             {VIDEO_ID ? (
               <iframe
-                src={`https://www.youtube.com/embed/${VIDEO_ID}?rel=0&modestbranding=1`}
+                ref={videoRef}
+                src={`https://www.youtube.com/embed/${VIDEO_ID}?rel=0&modestbranding=1&enablejsapi=1`}
                 title="Quem é o Pastor Morelli"
                 loading="lazy"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
