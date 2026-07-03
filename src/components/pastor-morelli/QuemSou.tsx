@@ -30,7 +30,8 @@ const QuemSou = () => {
           <div className="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl border-2 border-border bg-card">
             {VIDEO_ID ? (
               <iframe
-                src={`https://www.youtube.com/embed/${VIDEO_ID}?rel=0&modestbranding=1`}
+                ref={videoRef}
+                src={`https://www.youtube.com/embed/${VIDEO_ID}?rel=0&modestbranding=1&enablejsapi=1`}
                 title="Quem é o Pastor Morelli"
                 loading="lazy"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
