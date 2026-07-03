@@ -10,7 +10,7 @@ const InscrevaSe = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const { nome, email, telefone } = formData;
-    const message = `Olá! Meu nome é ${nome}, meu e-mail é ${email} e meu telefone é ${telefone}. Vim da página do Pastor Morelli e gostaria de mais informações sobre as caravanas.`;
+    const message = `Olá, Pastor Morelli! 🙏\n\nMeu nome é ${nome} e vim pela sua página de caravanas bíblicas da Renova Turismo. Gostaria de reservar meu lugar na próxima caravana e receber mais informações (datas, valores e o que está incluso).\n\n📧 E-mail: ${email}\n📱 Telefone: ${telefone}\n\nFico no aguardo do seu retorno!`;
     window.open(
       `https://api.whatsapp.com/send/?phone=19991813303&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`,
       "_blank"
@@ -33,7 +33,7 @@ const InscrevaSe = () => {
               na próxima caravana com o Pastor Morelli.
             </p>
             <a
-              href="https://api.whatsapp.com/send/?phone=19991813303&text=Ol%C3%A1%21+Vim+da+p%C3%A1gina+do+Pastor+Morelli+e+gostaria+de+mais+informa%C3%A7%C3%B5es.&type=phone_number&app_absent=0"
+              href={`https://api.whatsapp.com/send/?phone=19991813303&text=${encodeURIComponent("Olá, Pastor Morelli! 🙏\n\nVim pela sua página de caravanas bíblicas da Renova Turismo e gostaria de receber mais informações sobre as próximas viagens (datas, valores e o que está incluso).\n\nFico no aguardo do seu retorno!")}&type=phone_number&app_absent=0`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-[#25D366] hover:bg-[#20bd5a] text-white font-heading font-bold uppercase tracking-wide px-10 py-4 rounded-full transition-all hover:scale-105 shadow-lg"

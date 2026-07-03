@@ -43,8 +43,8 @@ const EscolhaRoteiro = () => {
   const buildWhats = () => {
     const escolhido = ROTEIROS.find((r) => r.id === selected);
     const msg = escolhido
-      ? `Olá! Vim da página do Pastor Morelli e tenho interesse no roteiro: ${escolhido.title}.`
-      : "Olá! Vim da página do Pastor Morelli e gostaria de mais informações sobre os roteiros.";
+      ? `Olá, Pastor Morelli! 🙏\n\nVim pela sua página de caravanas bíblicas da Renova Turismo e tenho muito interesse no roteiro *${escolhido.title}* (${escolhido.subtitle}).\n\nPoderia me enviar mais informações sobre datas, valores e o que está incluso?\n\nFico no aguardo!`
+      : `Olá, Pastor Morelli! 🙏\n\nVim pela sua página de caravanas bíblicas da Renova Turismo e gostaria de conhecer melhor os roteiros disponíveis. Poderia me enviar mais detalhes sobre datas, valores e o que está incluso?\n\nFico no aguardo!`;
     return WHATSAPP_BASE + encodeURIComponent(msg);
   };
 
