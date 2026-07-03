@@ -82,13 +82,16 @@ Deno.serve(async (req) => {
     const until = new Date(untilMs).toISOString();
     const prevSince = new Date(prevSinceMs).toISOString();
 
-    const { data, error } = await supabase
+    const pageParam = url.searchParams.get("page");
+    let query = supabase
       .from("whatsapp_clicks")
       .select("id, page, source, referrer, user_agent, created_at")
       .gte("created_at", prevSince)
       .lt("created_at", until)
       .order("created_at", { ascending: false })
       .limit(20000);
+    if (pageParam) query = query.eq("page", pageParam);
+    const { data, error } = await query;
 
     if (error) throw error;
 

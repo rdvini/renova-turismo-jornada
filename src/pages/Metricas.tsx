@@ -20,11 +20,14 @@ import {
   ArrowDownRight,
   ArrowUpRight,
   CalendarIcon,
+  Check,
   Clock,
+  Globe,
   LogOut,
   MessageCircle,
   Smartphone,
   TrendingUp,
+  X,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -40,9 +43,27 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+} from "@/components/ui/command";
 import { cn } from "@/lib/utils";
 import type { DateRange } from "react-day-picker";
 import { supabase } from "@/integrations/supabase/client";
+import { campaigns } from "@/data/campaigns";
+
+const KNOWN_PAGES = Array.from(
+  new Set<string>([
+    "/",
+    ...campaigns.map((c) => c.slug),
+    "/pastor-morelli",
+    "/privacidade",
+  ]),
+).sort();
 
 // YYYY-MM-DD do dia atual em Brasília (UTC-3)
 const brYmd = (d: Date) =>
@@ -151,12 +172,15 @@ const Metricas = () => {
   const [error, setError] = useState<string | null>(null);
   const [rangeDraft, setRangeDraft] = useState<DateRange | undefined>();
   const [rangeOpen, setRangeOpen] = useState(false);
+  const [selectedPage, setSelectedPage] = useState<string | null>(null);
+  const [pageOpen, setPageOpen] = useState(false);
 
-  const fetchMetrics = async (pwd: string, p: Preset) => {
+  const fetchMetrics = async (pwd: string, p: Preset, page: string | null) => {
     setLoading(true);
     setError(null);
     try {
-      const url = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/whatsapp-metrics?${presetToQuery(p)}`;
+      const pageQs = page ? `&page=${encodeURIComponent(page)}` : "";
+      const url = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/whatsapp-metrics?${presetToQuery(p)}${pageQs}`;
       const res = await fetch(url, {
         method: "GET",
         headers: {
@@ -182,9 +206,15 @@ const Metricas = () => {
   };
 
   useEffect(() => {
-    if (authed && password) fetchMetrics(password, preset);
+    if (authed && password) fetchMetrics(password, preset, selectedPage);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [preset]);
+  }, [preset, selectedPage]);
+
+  const pageOptions = useMemo(() => {
+    const set = new Set<string>(KNOWN_PAGES);
+    data?.byPage.forEach((p) => set.add(p.page));
+    return Array.from(set).sort();
+  }, [data]);
 
 
   useEffect(() => {
@@ -230,14 +260,14 @@ const Metricas = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               onKeyDown={(e) => {
-                if (e.key === "Enter") fetchMetrics(password, preset);
+                if (e.key === "Enter") fetchMetrics(password, preset, selectedPage);
               }}
             />
             {error && <p className="text-sm text-destructive">{error}</p>}
             <Button
               className="w-full"
               disabled={!password || loading}
-              onClick={() => fetchMetrics(password, preset)}
+              onClick={() => fetchMetrics(password, preset, selectedPage)}
             >
               {loading ? "Entrando..." : "Entrar"}
             </Button>
@@ -364,6 +394,73 @@ const Metricas = () => {
                     </Button>
                   </div>
                 </div>
+              </PopoverContent>
+            </Popover>
+            <Popover open={pageOpen} onOpenChange={setPageOpen}>
+              <PopoverTrigger asChild>
+                <Button
+                  variant={selectedPage ? "default" : "outline"}
+                  size="sm"
+                  className="gap-2 max-w-[240px]"
+                >
+                  <Globe className="h-4 w-4 shrink-0" />
+                  <span className="truncate">
+                    {selectedPage ? `Página: ${selectedPage}` : "Todas as páginas"}
+                  </span>
+                  {selectedPage && (
+                    <X
+                      className="h-3.5 w-3.5 shrink-0 opacity-70 hover:opacity-100"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        setSelectedPage(null);
+                      }}
+                    />
+                  )}
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent className="w-72 p-0" align="end">
+                <Command>
+                  <CommandInput placeholder="Buscar página..." />
+                  <CommandList>
+                    <CommandEmpty>Nenhuma página encontrada.</CommandEmpty>
+                    <CommandGroup>
+                      <CommandItem
+                        value="__all__"
+                        onSelect={() => {
+                          setSelectedPage(null);
+                          setPageOpen(false);
+                        }}
+                      >
+                        <Check
+                          className={cn(
+                            "mr-2 h-4 w-4",
+                            selectedPage === null ? "opacity-100" : "opacity-0",
+                          )}
+                        />
+                        Todas as páginas
+                      </CommandItem>
+                      {pageOptions.map((page) => (
+                        <CommandItem
+                          key={page}
+                          value={page}
+                          onSelect={() => {
+                            setSelectedPage(page);
+                            setPageOpen(false);
+                          }}
+                        >
+                          <Check
+                            className={cn(
+                              "mr-2 h-4 w-4",
+                              selectedPage === page ? "opacity-100" : "opacity-0",
+                            )}
+                          />
+                          <span className="font-mono text-xs truncate">{page}</span>
+                        </CommandItem>
+                      ))}
+                    </CommandGroup>
+                  </CommandList>
+                </Command>
               </PopoverContent>
             </Popover>
             <Button
