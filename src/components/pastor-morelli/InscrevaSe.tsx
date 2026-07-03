@@ -10,7 +10,7 @@ const InscrevaSe = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const { nome, email, telefone } = formData;
-    const message = `Olá! Meu nome é ${nome}, meu e-mail é ${email} e meu telefone é ${telefone}. Vim da página do Pastor Morelli e gostaria de mais informações sobre as caravanas.`;
+    const message = `Olá, Pastor Morelli! 🙏\n\nMeu nome é ${nome} e vim pela sua página de caravanas bíblicas da Renova Turismo. Gostaria de reservar meu lugar na próxima caravana e receber mais informações (datas, valores e o que está incluso).\n\n📧 E-mail: ${email}\n📱 Telefone: ${telefone}\n\nFico no aguardo do seu retorno!`;
     window.open(
       `https://api.whatsapp.com/send/?phone=19991813303&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`,
       "_blank"
