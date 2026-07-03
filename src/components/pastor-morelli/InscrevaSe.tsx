@@ -33,7 +33,7 @@ const InscrevaSe = () => {
               na próxima caravana com o Pastor Morelli.
             </p>
             <a
-              href="https://api.whatsapp.com/send/?phone=19991813303&text=Ol%C3%A1%21+Vim+da+p%C3%A1gina+do+Pastor+Morelli+e+gostaria+de+mais+informa%C3%A7%C3%B5es.&type=phone_number&app_absent=0"
+              href={`https://api.whatsapp.com/send/?phone=19991813303&text=${encodeURIComponent("Olá, Pastor Morelli! 🙏\n\nVim pela sua página de caravanas bíblicas da Renova Turismo e gostaria de receber mais informações sobre as próximas viagens (datas, valores e o que está incluso).\n\nFico no aguardo do seu retorno!")}&type=phone_number&app_absent=0`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-[#25D366] hover:bg-[#20bd5a] text-white font-heading font-bold uppercase tracking-wide px-10 py-4 rounded-full transition-all hover:scale-105 shadow-lg"
