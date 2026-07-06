@@ -8,13 +8,12 @@ import {
 } from "@/components/ui/carousel";
 
 import aeroportoGru from "@/assets/mexico-padre-leudo/aeroporto-manaus.webp";
-import sanJacintoImg from "@/assets/mexico-padre-leudo/san-jacinto.webp";
 import teotihuacanImg from "@/assets/mexico-padre-leudo/teotihuacan.jpg";
 import basilicaImg from "@/assets/mexico-padre-leudo/basilica-guadalupe-aerea.webp";
 import pueblaImg from "@/assets/mexico-padre-leudo/puebla.jpg";
-import cancunImg from "@/assets/mexico-padre-leudo/cancun-aerea.webp";
-import cancunHotelImg from "@/assets/mexico-padre-leudo/cancun-zona-hoteleira.webp";
-import chichenImg from "@/assets/mexico-padre-leudo/chichen-itza.jpg";
+import guadalajaraPlaza from "@/assets/mexico-padre-antonio-maria/guadalajara-plaza.webp";
+import zapopanBasilica from "@/assets/mexico-padre-antonio-maria/zapopan-basilica.webp";
+import sahuayoSantuario from "@/assets/mexico-padre-antonio-maria/sahuayo-santuario.webp";
 
 interface Slide {
   day: string;
@@ -36,107 +35,96 @@ const slides: Slide[] = [
     regionEn: "Departure",
     title: "SÃO PAULO / CIDADE DO MÉXICO",
     description:
-      "Em horário combinado, encontro no Aeroporto de Guarulhos (GRU) para embarque em voo com destino à Cidade do México. Chegada, recepção e traslado para o hotel. Hospedagem e jantar.",
+      "Apresentação no aeroporto internacional de São Paulo – Guarulhos para embarque com destino a Cidade do México. Chegada, recepção e traslado ao hotel para jantar e hospedagem.",
     highlight: "O início de uma jornada de fé ao lado do Padre Antônio Maria.",
   },
   {
     day: "2º Dia",
-    image: sanJacintoImg,
-    imageAlt: "Igreja colonial de San Jacinto, no bairro de San Ángel",
+    image: basilicaImg,
+    imageAlt: "Vista aérea da Basílica de Nossa Senhora de Guadalupe",
     region: "Cidade do México",
     regionEn: "Mexico City",
     title: "CIDADE DO MÉXICO / GUADALUPE",
     description:
-      "Café da manhã. Saída para o sul da cidade, bairro colonial Parish Chimalistac. Continuação ao Bairro de San Angel, entre ruas de paralelepípedos, até a Igreja de San Jacinto. Seguimos a Coyoacán para admirar o templo de San Juan Batista. À tarde, visita à Basílica de Guadalupe, com Celebração da Santa Missa presidida pelo Padre Antônio Maria. Retorno ao hotel para jantar e hospedagem.",
-    highlight: "\"Não estou eu aqui, que sou tua Mãe?\" — palavras de Nossa Senhora a São Juan Diego.",
+      "IMPORTANTE: Às 2ª feiras a Igreja de Santo Domingo está fechada. Café da manhã. Começamos o dia no centro da cidade, visitaremos a Catedral Metropolitana, edifício de grande valor arquitetônico e cultural, continuação à emblemática Plaza de Santo Domingo, onde conheceremos a Igreja de Santo Domingo. Em seguida, continuaremos até a Plaza das 3 Culturas, nomeado porque nos traz 3 importantes etapas históricas na formação do México: os restos arqueológicos que nos levam de volta para o tempo antes da conquista, o tempo da conquista espanhola representada pelo templo de Santiago e finalmente o México moderno através de inúmeros edifícios multifamiliares. Finalmente chegamos à Basílica de Guadalupe, o mais importante centro mariano na América Latina, com Celebração da Santa Missa presidida pelo Padre acompanhante e tempo para atividades pessoais. Retorno ao hotel para hospedagem e jantar.",
+    highlight: "Nossa Senhora de Guadalupe, o mais importante centro mariano da América Latina.",
   },
   {
     day: "3º Dia",
     image: teotihuacanImg,
     imageAlt: "Pirâmides de Teotihuacán",
-    region: "Teotihuacán & Xochimilco",
+    region: "Teotihuacán",
     regionEn: "Teotihuacán",
-    title: "TEOTIHUACÁN / XOCHIMILCO",
+    title: "CIDADE DO MÉXICO / TEOTIHUACÁN",
     description:
-      "Café da manhã. Visita ao Museu de Antropologia e em seguida a um dos maiores sítios arqueológicos da Mesoamérica: Teotihuacán, a 'Cidade dos Deuses'. Visita ao templo de Quetzalcoatl, Calzada de los Muertos, Pirâmide do Sol e da Lua e templo Quetzal-Papalotl. Encerramos o dia com um passeio em uma trajinera tradicional em Xochimilco e tour no antigo convento de San Bernardino. Celebração da Santa Missa. Retorno ao hotel para jantar.",
-    highlight: "Diante das antigas pirâmides, contemplamos a busca humana pelo sagrado.",
+      "Café da manhã. Em seguida iremos a um dos maiores sítios arqueológicos da Mesoamérica: Teotihuacán, 'Cidade de los Dioses'. Visita ao templo de Quetzalcoatl, Calzada de los Muertos, Pirâmide do Sol e da Lua, templo Quetzal-Papalotl. Teotihuacán surgiu como um novo centro religioso mais ou menos na época de Cristo. No entanto os tempos iniciais não estão claramente entendidos. Os dados arqueológicos mostram que os anos 1–200 A.D. foram caracterizados por grandes construções, e que a cidade rapidamente se tornou o maior e mais populoso centro urbano do Novo Mundo. Retorno ao hotel para hospedagem e jantar.",
+    highlight: "Teotihuacán, a 'Cidade dos Deuses', um dos maiores centros urbanos do Novo Mundo.",
   },
   {
     day: "4º Dia",
-    image: basilicaImg,
-    imageAlt: "Vista aérea da Basílica de Nossa Senhora de Guadalupe",
-    region: "Centro Histórico & Guadalupe",
-    regionEn: "Mexico City",
-    title: "CIDADE DO MÉXICO / GUADALUPE",
-    description:
-      "Café da manhã. Visita à Catedral Metropolitana e à emblemática Plaza de Santo Domingo, onde conheceremos a Igreja de Santo Domingo. Seguimos à Plaza das 3 Culturas, que reúne os restos arqueológicos pré-conquista, o templo de Santiago da era espanhola e o México moderno. Retorno à Basílica de Guadalupe com Celebração da Santa Missa e tempo para atividades pessoais. Hospedagem e jantar.",
-    highlight: "A tilma de São Juan Diego permanece intacta há quase 500 anos.",
-  },
-  {
-    day: "5º Dia",
     image: pueblaImg,
     imageAlt: "Centro histórico de Puebla",
     region: "Tlaxcala → Puebla",
     regionEn: "Puebla",
-    title: "TLAXCALA / PUEBLA / PARIAN",
+    title: "CIDADE DO MÉXICO / PUEBLA / TLAXCALA",
     description:
-      "Café da manhã. Saída em direção a Tlaxcala para visitar a Basílica de Ocotlán, joia arquitetônica de estilo barroco. Continuação para o centro de Puebla, onde visitaremos a Catedral Metropolitana e a Capela do Rosário, com Celebração da Santa Missa. Tempo para almoço e visita à Feira de Parian. Retorno à Cidade do México para hospedagem e jantar.",
+      "Café da manhã. Sairemos em direção a Tlaxcala para visitar a Basílica de Ocotlán, bela joia arquitetônica de estilo barroco, continuação para o centro da cidade de Puebla, onde visitaremos a Catedral Metropolitana e a Capela do Rosário (Celebração da Santa Missa). Tempo livre para almoçar e visitar a famosa Feira de Parian para compras. Retorno à Cidade do México para hospedagem e jantar.",
     highlight: "A Capela do Rosário, considerada a 'Oitava Maravilha do Mundo'.",
   },
   {
-    day: "6º Dia",
-    image: cancunImg,
-    imageAlt: "Vista aérea da costa de Cancún",
-    region: "Cidade do México → Cancún",
-    regionEn: "Caribbean",
-    title: "CIDADE DO MÉXICO / CANCÚN",
+    day: "5º Dia",
+    image: guadalajaraPlaza,
+    imageAlt: "Centro histórico de Guadalajara com a Catedral e a Plaza de Armas",
+    region: "Cidade do México → Guadalajara",
+    regionEn: "Guadalajara",
+    title: "CIDADE DO MÉXICO / GUADALAJARA",
     description:
-      "Café da manhã e tempo livre. Traslado ao aeroporto para embarque com destino a Cancún. Chegada, recepção e traslado para o hotel. Hospedagem com sistema All Inclusive.",
-    highlight: "Um tempo de descanso para renovar corpo e alma.",
+      "Café da manhã. Em horário determinado, traslado ao aeroporto da Cidade do México para embarque com destino a Guadalajara. Chegada, recepção pelo guia e começaremos nossa visita em Guadalajara, conhecendo a Plaza de Armas, cercada pela Catedral de Guadalajara e pelo histórico Palácio do Governo. Percorreremos também a Praça da Libertação, com parada para fotos junto à famosa placa de Guadalajara. No Centro Histórico encontraremos praças arborizadas, belas catedrais, importantes instituições culturais e mercados movimentados. Chegada ao hotel para hospedagem e jantar.",
+    highlight: "Guadalajara, terra de mariachis, tequila e tradição mexicana.",
+  },
+  {
+    day: "6º Dia",
+    image: zapopanBasilica,
+    imageAlt: "Basílica de Nossa Senhora de Zapopan em Jalisco",
+    region: "Guadalajara / Zapopan",
+    regionEn: "Zapopan",
+    title: "GUADALAJARA / ZAPOPAN",
+    description:
+      "Café da manhã. Visita à Basílica de Nossa Senhora de Zapopan, construída no século XVII, é um dos mais importantes centros de peregrinação do México e um magnífico exemplo da arquitetura barroca colonial. O santuário contém uma estátua de madeira da Virgem Maria que é considerada uma relíquia sagrada de origem medieval que foi trazida aqui da Espanha no século XVI (Celebração da Santa Missa, a confirmar). Retorno ao hotel para hospedagem e jantar.",
+    highlight: "A Basílica de Zapopan abriga uma relíquia sagrada da Virgem Maria vinda da Espanha.",
   },
   {
     day: "7º Dia",
-    image: cancunHotelImg,
-    imageAlt: "Zona hoteleira de Cancún ao entardecer",
-    region: "Cancún & Isla Mujeres",
-    regionEn: "Caribbean",
-    title: "CANCÚN — ISLA MUJERES",
+    image: sahuayoSantuario,
+    imageAlt: "Santuário de São José Sánchez del Río em Sahuayo, Michoacán",
+    region: "Guadalajara / Sahuayo",
+    regionEn: "Sahuayo",
+    title: "GUADALAJARA / SAHUAYO",
     description:
-      "Café da manhã. Dia livre para atividades independentes em sistema All Inclusive. Celebração da Santa Missa. Sugerimos visita à Isla de las Mujeres, com suas águas cristalinas e cenários paradisíacos.",
-    highlight: "A grandeza do Criador refletida na beleza da criação.",
+      "Café da manhã. Saída em direção a Sahuayo. Dedicaremos o tempo a São José Sánchez del Río, o mais jovem dos mártires cristeros. Foi canonizado em 16 de outubro de 2016 pelo Papa Francisco. Teremos tempo para rezar diante de suas relíquias. Em seguida, visitaremos o cemitério onde São Joselito declarou com coragem sua fidelidade a Cristo. Durante sua tortura, gritou: '¡Viva Cristo Rey!'. Retorno à cidade de Guadalajara. Em Guadalajara, visitaremos a Catedral de Guadalajara, com seu ossuário, que consiste em uma vitrine onde estão expostos os ossos de 23 santos mártires da Revolução Cristera. Em seguida, passeio pelo centro da cidade, com seus edifícios históricos e palácios do governo, além do elegante Teatro Degollado. Retorno ao hotel para hospedagem e jantar.",
+    highlight: "'¡Viva Cristo Rey!' — o grito de fé do jovem mártir São José Sánchez del Río.",
   },
   {
     day: "8º Dia",
-    image: chichenImg,
-    imageAlt: "Pirâmide de Chichén Itzá",
-    region: "Cancún & Chichén Itzá",
-    regionEn: "Caribbean",
-    title: "CANCÚN — CHICHÉN ITZÁ",
-    description:
-      "Café da manhã. Dia livre para atividades independentes em sistema All Inclusive. Celebração da Santa Missa. Sugerimos visita à Pirâmide de Chichén Itzá, uma das Sete Maravilhas do Mundo Moderno.",
-    highlight: "As ruínas maias nos lembram que somente o Reino de Deus permanece.",
-  },
-  {
-    day: "9º Dia",
-    image: aeroportoGru,
-    imageAlt: "Voo de retorno",
-    region: "Cancún → São Paulo",
+    image: guadalajaraPlaza,
+    imageAlt: "Guadalajara ao entardecer — despedida da peregrinação",
+    region: "Guadalajara → São Paulo",
     regionEn: "Return",
-    title: "CANCÚN / SÃO PAULO",
+    title: "GUADALAJARA / SÃO PAULO",
     description:
-      "Café da manhã. Em horário combinado, traslado ao aeroporto de Cancún para embarque em voo com destino a São Paulo (GRU), fazendo as devidas conexões.",
+      "Café da manhã. Traslado ao aeroporto para embarque com destino a São Paulo, voos com as devidas conexões.",
     highlight: "O coração transbordando de gratidão pelas graças recebidas.",
   },
   {
-    day: "10º Dia",
+    day: "9º Dia",
     image: aeroportoGru,
     imageAlt: "Aeroporto de Guarulhos — chegada",
     region: "São Paulo (GRU)",
     regionEn: "Arrival",
     title: "SÃO PAULO",
     description:
-      "Chegada ao Aeroporto Internacional de Guarulhos. Fim de nossos serviços!",
-    highlight: "Voltamos renovados na fé, levando no coração a ternura da Mãe de Guadalupe.",
+      "Chegada ao aeroporto de Guarulhos, trâmites de desembarque e fim dos nossos serviços!",
+    highlight: "Voltamos renovados na fé, levando no coração as bênçãos do México.",
   },
 ];
 
@@ -168,8 +156,8 @@ const Roteiro = () => {
           </h2>
           <div className="w-16 h-px bg-secondary mx-auto mt-6" />
           <p className="font-body text-muted-foreground text-sm md:text-base mt-6 leading-relaxed">
-            10 dias de peregrinação ao lado do Padre Antônio Maria — Cidade do México,
-            Guadalupe, Teotihuacán, Puebla e Cancún.
+            9 dias de peregrinação ao lado do Padre Antônio Maria — Cidade do México,
+            Guadalupe, Teotihuacán, Puebla, Tlaxcala e Guadalajara.
           </p>
         </div>
 
