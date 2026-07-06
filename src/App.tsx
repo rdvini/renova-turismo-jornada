@@ -47,6 +47,7 @@ const App = () => {
       <BrowserRouter>
         <AnalyticsTracker />
         <WhatsAppTracker />
+        <WhatsAppFloatGlobal />
         <Suspense fallback={<PageFallback />}>
           <Routes>
             <Route path="/" element={<Index />} />
