@@ -10,7 +10,7 @@ import PorQueRenova from "@/components/campaigns/portugal/PorQueRenova";
 import Depoimentos from "@/components/campaigns/portugal/Depoimentos";
 import InscrevaSe from "@/components/campaigns/portugal/InscrevaSe";
 import Footer from "@/components/landing/Footer";
-import WhatsAppFloat from "@/components/campaigns/portugal/WhatsAppFloat";
+
 
 const Portugal = () => {
   const solidSectionRef = useRef<HTMLDivElement>(null);
@@ -35,7 +35,7 @@ const Portugal = () => {
         }}
       />
       <Navbar />
-      <WhatsAppFloat />
+      
       <Hero solidSectionRef={solidSectionRef} />
       {/* Sobre a Viagem floats over the hero image (no background) */}
       <div className="relative z-10">

@@ -7,6 +7,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import WhatsAppTracker from "./components/tracking/WhatsAppTracker";
+import WhatsAppFloatGlobal from "./components/shared/WhatsAppFloatGlobal";
 
 const TurquiaPadreLeudo = lazy(() => import("./pages/TurquiaPadreLeudo.tsx"));
 const MexicoPadreAntonioMaria = lazy(() => import("./pages/MexicoPadreAntonioMaria.tsx"));
@@ -46,6 +47,7 @@ const App = () => {
       <BrowserRouter>
         <AnalyticsTracker />
         <WhatsAppTracker />
+        <WhatsAppFloatGlobal />
         <Suspense fallback={<PageFallback />}>
           <Routes>
             <Route path="/" element={<Index />} />
