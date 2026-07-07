@@ -33,7 +33,7 @@ export const campaigns: Campaign[] = [
     image: cardMexico,
     date: "Datas sob consulta",
     badge: "Peregrinação",
-    published: false,
+    published: true,
   },
   {
     id: "mexico-padre-leudo",
