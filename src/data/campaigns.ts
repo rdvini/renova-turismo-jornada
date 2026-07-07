@@ -21,6 +21,7 @@ import cardMarrocos from "@/assets/marrocos/hero.jpg";
 import cardJmjSeul from "@/assets/jmj-seul/jmj-card-cover.jpg.asset.json";
 import cardGrecia from "@/assets/grecia/hero-santorini.jpg";
 import cardTurquiaCapadocia from "@/assets/turquia/capadocia.jpg.asset.json";
+import cardPastorMorelli from "@/assets/pastor-morelli/morelli-1.jpeg.asset.json";
 
 export const campaigns: Campaign[] = [
   {
@@ -175,6 +176,18 @@ export const campaigns: Campaign[] = [
     description:
       "Conduza sua igreja em uma peregrinação transformadora pela Terra Santa, com roteiro completo e suporte total para líderes evangélicos.",
     image: cardLideres,
+    date: "Datas sob consulta",
+    badge: "Líderes",
+    published: true,
+  },
+  {
+    id: "pastor-morelli",
+    slug: "/pastor-morelli",
+    title: "Pastor Morelli",
+    subtitle: "CARAVANAS BÍBLICAS",
+    description:
+      "Viaje com o Pastor Morelli para Turquia e 7 Igrejas, Israel ou Egito e Jordânia — caravanas bíblicas com a organização da Renova Turismo.",
+    image: cardPastorMorelli.url,
     date: "Datas sob consulta",
     badge: "Líderes",
     published: true,
