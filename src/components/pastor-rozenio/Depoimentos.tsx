@@ -7,7 +7,7 @@ const TESTIMONIALS = [
     name: "Valdenir Pogetti",
     location: "",
     quote:
-      "Minha experiência foi fantástica, primeira vez em Israel e superou todas as minhas expectativas. Pastor João Morelli foi maravilhoso, nosso Guia Davi sem palavras para agradecer por tudo que fez por nós, a guia que nos guiou em Belém maravilhosa e sem contar nosso motorista, vou sentir saudades da buzina e das freadas. Renova turismo parabéns pelos seus profissionais.",
+      "Fantástico!\nMeu desejo a partir de agora é voltar para Israel com meu grupo de pessoas juntamente com pastor Marcos Rozenio\nA experiência de Israel é marcado por antes e depois.",
   },
   {
     name: "Pra. Juliana Terciotti",
