@@ -16,6 +16,7 @@ export interface Campaign {
 
 import heroTurkiye from "@/assets/padre-leudo/hero-turkiye.webp";
 import cardMexico from "@/assets/mexico-padre-leudo/card-cover.webp";
+import cardMexicoAntonioMaria from "@/assets/mexico-padre-antonio-maria/card-cover.jpeg.asset.json";
 import cardLesteEuropeu from "@/assets/leste-europeu/hero.webp";
 import cardMarrocos from "@/assets/marrocos/hero.jpg";
 import cardJmjSeul from "@/assets/jmj-seul/jmj-card-cover.jpg.asset.json";
