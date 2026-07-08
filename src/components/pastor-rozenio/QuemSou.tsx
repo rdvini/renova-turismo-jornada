@@ -21,7 +21,7 @@ const QuemSou = () => {
             Quem sou?
           </h2>
           <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed">
-            Pastor João Morelli é professor, escritor e especialista em estudos bíblicos, com mais de 33 anos de ministério e 25 anos conduzindo grupos às Terras Bíblicas e Históricas. Sua formação em Teologia e Ciências da Religião, aliada à experiência em mais de 60 países, permite conectar Bíblia, história, geografia, arqueologia e espiritualidade de forma clara e acessível. Reconhecido como Embaixador Amigo de Israel, dedica sua trajetória a ensinar e conduzir pessoas a experiências que transformam o conhecimento das Escrituras em vivência.
+            Sou o Pastor Marcos Rozenio, casado com Rosângela Siqueira, pai de três filhos, avô e pastor há 25 anos, liderando a Igreja OBPCST há mais de duas décadas. Apaixonado por servir a Deus e ensinar Sua Palavra, já peregrinei a Israel 15 vezes, experiência que fortaleceu minha fé e aprofundou meu conhecimento das Escrituras. Há 12 anos caminho em parceria com a Renova Turismo, conduzindo pessoas em jornadas de transformação espiritual. Também participei de viagens missionárias e visitas a diversos países, como Egito, Turquia, Haiti e nações da África, levando a mensagem do Evangelho e ampliando minha visão do Reino de Deus.
           </p>
         </div>
 
