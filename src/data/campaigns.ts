@@ -32,7 +32,7 @@ export const campaigns: Campaign[] = [
     subtitle: "Uma peregrinação exclusiva",
     description:
       "Peregrinação exclusiva pelo México ao lado do Padre Antônio Maria, visitando o Santuário de Nossa Senhora de Guadalupe e os principais locais da fé católica mexicana.",
-    image: cardMexico,
+    image: cardMexicoAntonioMaria.url,
     date: "Datas sob consulta",
     badge: "Peregrinação",
     published: true,
