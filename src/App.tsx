@@ -19,6 +19,7 @@ const Portugal = lazy(() => import("./pages/Portugal.tsx"));
 const Lideres = lazy(() => import("./pages/Lideres.tsx"));
 const LideresEvangelicos = lazy(() => import("./pages/LideresEvangelicos.tsx"));
 const PastorMorelli = lazy(() => import("./pages/PastorMorelli.tsx"));
+const PastorRozenio = lazy(() => import("./pages/PastorRozenio.tsx"));
 const LesteEuropeu = lazy(() => import("./pages/LesteEuropeu.tsx"));
 const Marrocos = lazy(() => import("./pages/Marrocos.tsx"));
 const JmjSeul = lazy(() => import("./pages/JmjSeul.tsx"));
@@ -61,6 +62,7 @@ const App = () => {
             <Route path="/lideres-catolicos" element={<Lideres />} />
             <Route path="/lideres-evangelicos" element={<LideresEvangelicos />} />
             <Route path="/pastor-morelli" element={<PastorMorelli />} />
+            <Route path="/pastor-rozenio" element={<PastorRozenio />} />
             <Route path="/leste-europeu" element={<LesteEuropeu />} />
             <Route path="/marrocos" element={<Marrocos />} />
             <Route path="/jmj-seul-2027" element={<JmjSeul />} />
