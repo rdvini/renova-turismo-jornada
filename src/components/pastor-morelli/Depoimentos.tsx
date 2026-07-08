@@ -10,10 +10,10 @@ const TESTIMONIALS = [
       "Minha experiência foi fantástica, primeira vez em Israel e superou todas as minhas expectativas. Pastor João Morelli foi maravilhoso, nosso Guia Davi sem palavras para agradecer por tudo que fez por nós, a guia que nos guiou em Belém maravilhosa e sem contar nosso motorista, vou sentir saudades da buzina e das freadas. Renova turismo parabéns pelos seus profissionais.",
   },
   {
-    name: "Ilda Costa",
-    location: "Itu/SP",
+    name: "Pra. Juliana Terciotti",
+    location: "",
     quote:
-      "Da viagem que fiz só tenho pontos positivos... Amei.... A equipe da Renova esteve presente nos dando toda assistência desde o momento em que saímos de Salto até o momento em que voltamos pra cá. Sempre estavam a disposição quando alguém do grupo precisava e acho que essa atenção para com o cliente foi o que me fez ter o desejo de fazer novas viagens com a Renova...",
+      "Perfeita! Obrigada pelo cuidado e atenção que tiveram com o grupo o tempo todo. Amei cada momento . Gratidão aos Pastores Morelli e Rozenio, também ao Rodrigo que nos enriqueceu com a história do povo Judeu.",
   },
   {
     name: "Luciano Martins",
