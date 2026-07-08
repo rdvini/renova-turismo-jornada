@@ -41,13 +41,13 @@ const Hero = () => {
           <div className="text-center lg:text-left">
             
             <p className="font-accent text-lg md:text-xl italic text-secondary mb-3 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-              Com o Pastor Morelli
+              Com o Pastor Rozenio
             </p>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
               Conheça as <span className="text-secondary">Terras Bíblicas</span> com profundidade, segurança e propósito
             </h1>
             <p className="font-body text-base md:text-lg text-primary-foreground/85 max-w-xl mx-auto lg:mx-0 mb-8 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-              Viaje por Israel, Turquia, Grécia, Egito, Jordânia e outros destinos históricos com João Morelli.
+              Viaje por Israel, Turquia, Grécia, Egito, Jordânia e outros destinos históricos com Marco Rozenio.
             </p>
             <a
               href={WHATSAPP_URL}
