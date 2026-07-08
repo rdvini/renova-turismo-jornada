@@ -282,16 +282,16 @@ const Metricas = () => {
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-background via-background to-muted/30">
-      <div className="max-w-7xl mx-auto p-4 md:p-8 space-y-6">
-        <header className="flex flex-wrap items-center justify-between gap-4">
+      <header className="sticky top-0 z-40 border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className="max-w-7xl mx-auto p-4 md:px-8 md:py-4 flex flex-wrap items-center justify-between gap-4">
           <div>
             <div className="flex items-center gap-2 text-sm text-muted-foreground mb-1">
               <Activity className="h-4 w-4" /> Dashboard ao vivo
             </div>
-            <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
+            <h1 className="text-2xl md:text-3xl font-bold tracking-tight">
               Cliques no WhatsApp
             </h1>
-            <p className="text-muted-foreground">
+            <p className="text-sm text-muted-foreground">
               {data?.from && data?.to
                 ? `${format(ymdToDate(data.from), "dd MMM", { locale: ptBR })} – ${format(ymdToDate(data.to), "dd MMM yyyy", { locale: ptBR })}`
                 : `Últimos ${data?.days ?? ""} dias`}{" "}
@@ -485,7 +485,11 @@ const Metricas = () => {
               <LogOut className="h-4 w-4 mr-1" /> Sair
             </Button>
           </div>
-        </header>
+        </div>
+      </header>
+
+      <div className="max-w-7xl mx-auto p-4 md:p-8 space-y-6">
+
 
 
         {/* KPI cards */}
