@@ -77,7 +77,7 @@ const QuemSou = () => {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-[#25D366] hover:bg-[#20bd5a] text-white font-heading font-bold uppercase tracking-wide px-10 py-4 rounded-full transition-all hover:scale-105 shadow-lg"
+            className="inline-flex items-center justify-center text-center whitespace-nowrap max-w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-heading font-bold uppercase tracking-wide text-sm sm:text-base px-6 sm:px-10 py-3 sm:py-4 rounded-full transition-all hover:scale-105 shadow-lg"
           >
             Conversar no WhatsApp
           </a>
