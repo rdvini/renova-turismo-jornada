@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { useYouTubeVolume } from "@/hooks/useYouTubeVolume";
 import { ChevronLeft, ChevronRight, ImageIcon, Play } from "lucide-react";
-import morelli1 from "@/assets/pastor-rozenio/morelli-1.jpeg.asset.json";
-import morelli2 from "@/assets/pastor-rozenio/morelli-2.jpeg.asset.json";
-import morelli3 from "@/assets/pastor-rozenio/morelli-3.jpeg.asset.json";
-import morelli4 from "@/assets/pastor-rozenio/morelli-4.jpeg.asset.json";
-import morelli5 from "@/assets/pastor-rozenio/morelli-5.jpeg.asset.json";
-import morelli6 from "@/assets/pastor-rozenio/morelli-6.jpeg.asset.json";
+import morelli1 from "@/assets/pastor-morelli/morelli-1.jpeg.asset.json";
+import morelli2 from "@/assets/pastor-morelli/morelli-2.jpeg.asset.json";
+import morelli3 from "@/assets/pastor-morelli/morelli-3.jpeg.asset.json";
+import morelli4 from "@/assets/pastor-morelli/morelli-4.jpeg.asset.json";
+import morelli5 from "@/assets/pastor-morelli/morelli-5.jpeg.asset.json";
+import morelli6 from "@/assets/pastor-morelli/morelli-6.jpeg.asset.json";
 
 const WHATSAPP_URL =
   "https://wa.me/19991813303?text=" +

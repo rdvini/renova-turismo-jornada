@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { MapPin, ArrowRight, Check } from "lucide-react";
-import imgTurquia from "@/assets/pastor-rozenio/roteiro-turquia.jpg";
-import imgIsrael from "@/assets/pastor-rozenio/roteiro-israel.jpg";
-import imgEgitoJordaniaAsset from "@/assets/pastor-rozenio/roteiro-egito-jordania.jpeg.asset.json";
+import imgTurquia from "@/assets/pastor-morelli/roteiro-turquia.jpg";
+import imgIsrael from "@/assets/pastor-morelli/roteiro-israel.jpg";
+import imgEgitoJordaniaAsset from "@/assets/pastor-morelli/roteiro-egito-jordania.jpeg.asset.json";
 const imgEgitoJordania = imgEgitoJordaniaAsset.url;
-import imgGreciaAsset from "@/assets/pastor-rozenio/roteiro-grecia.jpeg.asset.json";
+import imgGreciaAsset from "@/assets/pastor-morelli/roteiro-grecia.jpeg.asset.json";
 const imgGrecia = imgGreciaAsset.url;
-import imgEuropaAsset from "@/assets/pastor-rozenio/roteiro-europa.jpg.asset.json";
+import imgEuropaAsset from "@/assets/pastor-morelli/roteiro-europa.jpg.asset.json";
 const imgEuropa = imgEuropaAsset.url;
 
 const WHATSAPP_BASE =

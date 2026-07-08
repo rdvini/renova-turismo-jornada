@@ -1,6 +1,6 @@
 import { Play, Award } from "lucide-react";
 import { useYouTubeVolume } from "@/hooks/useYouTubeVolume";
-import certificadoIsrael from "@/assets/pastor-rozenio/certificado-israel.jpeg.asset.json";
+import certificadoIsrael from "@/assets/pastor-morelli/certificado-israel.jpeg.asset.json";
 
 const VIDEO_ID = "K6l-jyNdkxY";
 
