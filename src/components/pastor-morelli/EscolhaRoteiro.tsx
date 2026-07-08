@@ -4,7 +4,8 @@ import imgTurquia from "@/assets/pastor-morelli/roteiro-turquia.jpg";
 import imgIsrael from "@/assets/pastor-morelli/roteiro-israel.jpg";
 import imgEgitoJordaniaAsset from "@/assets/pastor-morelli/roteiro-egito-jordania.jpeg.asset.json";
 const imgEgitoJordania = imgEgitoJordaniaAsset.url;
-import imgGrecia from "@/assets/pastor-morelli/roteiro-grecia.jpg";
+import imgGreciaAsset from "@/assets/pastor-morelli/roteiro-grecia.jpeg.asset.json";
+const imgGrecia = imgGreciaAsset.url;
 import imgEuropa from "@/assets/pastor-morelli/roteiro-europa.jpg";
 
 const WHATSAPP_BASE =
