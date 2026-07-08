@@ -23,6 +23,7 @@ import {
   Check,
   Clock,
   Globe,
+  Home,
   LogOut,
   MessageCircle,
   Smartphone,
