@@ -32,7 +32,7 @@ const QuemSou = () => {
               <iframe
                 ref={videoRef}
                 src={`https://www.youtube.com/embed/${VIDEO_ID}?rel=0&modestbranding=1&enablejsapi=1`}
-                title="Quem é o Pastor Morelli"
+                title="Quem é o Pastor Marcos Rozenio"
                 loading="lazy"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
