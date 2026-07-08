@@ -4,10 +4,10 @@ import GoogleReviewsCard from "@/components/shared/GoogleReviewsCard";
 // ✍️ Placeholders — substitua pelos depoimentos reais quando disponíveis.
 const TESTIMONIALS = [
   {
-    name: "Dr. Felipe Silva",
-    location: "Campinas/SP",
+    name: "Valdenir Pogetti",
+    location: "",
     quote:
-      "Excelente empresa. Excelente tratamento. Excelentes produtos. Excelente pós-venda. É o tipo de empresa que entende que uma viagem pode significar muito mais do que apenas uma viagem e se dedica para que seja um sonho inesquecível.",
+      "Minha experiência foi fantástica, primeira vez em Israel e superou todas as minhas expectativas. Pastor João Morelli foi maravilhoso, nosso Guia Davi sem palavras para agradecer por tudo que fez por nós, a guia que nos guiou em Belém maravilhosa e sem contar nosso motorista, vou sentir saudades da buzina e das freadas. Renova turismo parabéns pelos seus profissionais.",
   },
   {
     name: "Ilda Costa",
