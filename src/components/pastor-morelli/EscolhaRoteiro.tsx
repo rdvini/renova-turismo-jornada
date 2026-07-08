@@ -6,7 +6,8 @@ import imgEgitoJordaniaAsset from "@/assets/pastor-morelli/roteiro-egito-jordani
 const imgEgitoJordania = imgEgitoJordaniaAsset.url;
 import imgGreciaAsset from "@/assets/pastor-morelli/roteiro-grecia.jpeg.asset.json";
 const imgGrecia = imgGreciaAsset.url;
-import imgEuropa from "@/assets/pastor-morelli/roteiro-europa.jpg";
+import imgEuropaAsset from "@/assets/pastor-morelli/roteiro-europa.jpg.asset.json";
+const imgEuropa = imgEuropaAsset.url;
 
 const WHATSAPP_BASE =
   "https://wa.me/19991813303?text=";
