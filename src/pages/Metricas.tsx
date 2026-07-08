@@ -23,6 +23,7 @@ import {
   Check,
   Clock,
   Globe,
+  Home,
   LogOut,
   MessageCircle,
   Smartphone,
@@ -463,6 +464,15 @@ const Metricas = () => {
                 </Command>
               </PopoverContent>
             </Popover>
+            <Button
+              variant="ghost"
+              size="sm"
+              asChild
+            >
+              <a href="/">
+                <Home className="h-4 w-4 mr-1" /> Home
+              </a>
+            </Button>
             <Button
               variant="ghost"
               size="sm"
