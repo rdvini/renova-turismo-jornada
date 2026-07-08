@@ -57,7 +57,7 @@ const EscolhaRoteiro = () => {
             Escolha um <span className="text-secondary">roteiro</span>
           </h2>
           <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed">
-            Três jornadas bíblicas conduzidas com cuidado, propósito e a experiência do Pastor Morelli.
+            Cinco jornadas bíblicas conduzidas com cuidado, propósito e a experiência do Pastor Morelli.
           </p>
         </div>
 
