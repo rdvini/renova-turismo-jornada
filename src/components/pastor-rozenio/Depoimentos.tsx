@@ -4,7 +4,7 @@ import GoogleReviewsCard from "@/components/shared/GoogleReviewsCard";
 // ✍️ Placeholders — substitua pelos depoimentos reais quando disponíveis.
 const TESTIMONIALS = [
   {
-    name: "Valdenir Pogetti",
+    name: "Fábio Sena",
     location: "",
     quote:
       "Fantástico!\nMeu desejo a partir de agora é voltar para Israel com meu grupo de pessoas juntamente com pastor Marcos Rozenio\nA experiência de Israel é marcado por antes e depois.",
