@@ -7,7 +7,7 @@ const VIDEO_ID = "K6l-jyNdkxY";
 const WHATSAPP_URL =
   "https://wa.me/19991813303?text=" +
   encodeURIComponent(
-    "Olá, Pastor Morelli! 🙏\n\nAssisti seu vídeo na página das caravanas bíblicas da Renova Turismo e gostaria de receber mais informações sobre as próximas viagens (datas, valores e o que está incluso).\n\nFico no aguardo do seu retorno!"
+    "Olá, Pastor Marcos Rozenio! 🙏\n\nAssisti seu vídeo na página das caravanas bíblicas da Renova Turismo e gostaria de receber mais informações sobre as próximas viagens (datas, valores e o que está incluso).\n\nFico no aguardo do seu retorno!"
   );
 
 const QuemSou = () => {
