@@ -2,7 +2,8 @@ import { useState } from "react";
 import { MapPin, ArrowRight, Check } from "lucide-react";
 import imgTurquia from "@/assets/pastor-morelli/roteiro-turquia.jpg";
 import imgIsrael from "@/assets/pastor-morelli/roteiro-israel.jpg";
-import imgEgitoJordania from "@/assets/pastor-morelli/roteiro-egito-jordania.jpg";
+import imgEgitoJordaniaAsset from "@/assets/pastor-morelli/roteiro-egito-jordania.jpeg.asset.json";
+const imgEgitoJordania = imgEgitoJordaniaAsset.url;
 import imgGrecia from "@/assets/pastor-morelli/roteiro-grecia.jpg";
 import imgEuropa from "@/assets/pastor-morelli/roteiro-europa.jpg";
 
