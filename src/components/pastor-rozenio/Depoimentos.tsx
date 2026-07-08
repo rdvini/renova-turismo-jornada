@@ -16,8 +16,8 @@ const TESTIMONIALS = [
       "Perfeita! Obrigada pelo cuidado e atenção que tiveram com o grupo o tempo todo. Amei cada momento . Gratidão aos Pastores Morelli e Rozenio, também ao Rodrigo que nos enriqueceu com a história do povo Judeu.",
   },
   {
-    name: "Luciano Martins",
-    location: "São Paulo/SP",
+    name: "Ailton Satateles",
+    location: "",
     quote:
       "Estando pela primeira vez em Israel fiquei impactado e maravilhado, por contemplar a veracidade das escrituras, sobre uma terra que no meio do deserto mana leite e mel, isto é evidente no contraste com as terras ao redor, Contemplar a riqueza da Arqueologia provando a veracidade das escrituras, a cultura local, os costumes, os hoteis maravilhosos em que nos hospedamos, o zêlo pela segurança nacional, e também do estrangeiro. Retornamos com uma bagagem no coração, na alma e no espirito que não cabe em muitas malas. Gratidão ao Pr. Marcos Rozenio pelo incentivo e a Renova pela maravilhosa organização. DEUS OS ABENÇOE SEMPRE.",
   },
