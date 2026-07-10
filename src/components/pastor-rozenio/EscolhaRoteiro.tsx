@@ -56,8 +56,8 @@ const EscolhaRoteiro = () => {
   const buildWhats = () => {
     const escolhido = ROTEIROS.find((r) => r.id === selected);
     const msg = escolhido
-      ? `Olá, Pastor Morelli! 🙏\n\nVim pela sua página de caravanas bíblicas da Renova Turismo e tenho muito interesse no roteiro *${escolhido.title}* (${escolhido.subtitle}).\n\nPoderia me enviar mais informações sobre datas, valores e o que está incluso?\n\nFico no aguardo!`
-      : `Olá, Pastor Morelli! 🙏\n\nVim pela sua página de caravanas bíblicas da Renova Turismo e gostaria de conhecer melhor os roteiros disponíveis. Poderia me enviar mais detalhes sobre datas, valores e o que está incluso?\n\nFico no aguardo!`;
+      ? `Olá, Pastor Rozenio! 🙏\n\nVim pela sua página de caravanas bíblicas da Renova Turismo e tenho muito interesse no roteiro *${escolhido.title}* (${escolhido.subtitle}).\n\nPoderia me enviar mais informações sobre datas, valores e o que está incluso?\n\nFico no aguardo!`
+      : `Olá, Pastor Rozenio! 🙏\n\nVim pela sua página de caravanas bíblicas da Renova Turismo e gostaria de conhecer melhor os roteiros disponíveis. Poderia me enviar mais detalhes sobre datas, valores e o que está incluso?\n\nFico no aguardo!`;
     return WHATSAPP_BASE + encodeURIComponent(msg);
   };
 
@@ -113,7 +113,7 @@ const EscolhaRoteiro = () => {
             Escolha um <span className="text-secondary">roteiro</span>
           </h2>
           <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed">
-            Cinco jornadas bíblicas conduzidas com cuidado, propósito e a experiência do Pastor Morelli.
+            Cinco jornadas bíblicas conduzidas com cuidado, propósito e a experiência do Pastor Rozenio.
           </p>
         </div>
 
