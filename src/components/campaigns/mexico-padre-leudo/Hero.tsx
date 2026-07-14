@@ -24,15 +24,20 @@ const Hero = () => {
           Explore a riqueza cultural e religiosa do México com a Renova Turismo e o Pe Leudo Santos — uma experiência inesquecível.
         </p>
 
-        <a
-          href="https://api.whatsapp.com/send/?phone=5519994718930&text=Ol%C3%A1%21+Encontrei+voc%C3%AAs+pelo+Google+e+gostaria+de+receber+mais+informa%C3%A7%C3%B5es.+Aguardo+retorno&type=phone_number&app_absent=0"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-bold text-lg px-10 py-4 rounded-full transition-all hover:scale-105 shadow-lg animate-fade-in-up"
-          style={{ animationDelay: "0.6s" }}
-        >
-          Saiba Mais
-        </a>
+        <div className="flex flex-col items-center gap-3 animate-fade-in-up" style={{ animationDelay: "0.6s" }}>
+          <span className="inline-block bg-red-600 text-white font-heading font-bold text-xs md:text-sm uppercase tracking-wider px-4 py-1.5 rounded-full shadow-md animate-pulse">
+            Últimas Vagas
+          </span>
+          <a
+            href="https://api.whatsapp.com/send/?phone=5519994718930&text=Ol%C3%A1%21+Encontrei+voc%C3%AAs+pelo+Google+e+gostaria+de+receber+mais+informa%C3%A7%C3%B5es.+Aguardo+retorno&type=phone_number&app_absent=0"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-bold text-lg px-10 py-4 rounded-full transition-all hover:scale-105 shadow-lg"
+          >
+            Saiba Mais
+          </a>
+        </div>
+
       </div>
     </section>
   );
