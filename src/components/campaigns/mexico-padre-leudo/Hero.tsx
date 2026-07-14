@@ -25,7 +25,7 @@ const Hero = () => {
         </p>
 
         <div className="flex flex-col items-center gap-3 animate-fade-in-up" style={{ animationDelay: "0.6s" }}>
-          <span className="inline-block bg-red-600 text-white font-heading font-bold text-xs md:text-sm uppercase tracking-wider px-4 py-1.5 rounded-full shadow-md animate-pulse">
+          <span className="inline-block bg-red-600 text-white font-heading font-bold text-xs md:text-sm uppercase tracking-wider px-4 py-1.5 rounded-full shadow-md animate-bounce">
             Últimas Vagas
           </span>
           <a
