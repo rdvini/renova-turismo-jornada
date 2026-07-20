@@ -56,7 +56,7 @@ const Navbar = () => {
             ))}
           </ul>
           <a
-            href="https://api.whatsapp.com/send/?phone=5519994718930&text=Ol%C3%A1%21+Encontrei+voc%C3%AAs+pelo+Google+e+gostaria+de+receber+mais+informa%C3%A7%C3%B5es.+Aguardo+retorno&type=phone_number&app_absent=0"
+            href="https://api.whatsapp.com/send/?phone=5519994718930&text=Ol%C3%A1%21+Gostaria+de+mais+informa%C3%A7%C3%B5es+sobre+a+peregrina%C3%A7%C3%A3o+ao+M%C3%A9xico+com+o+Padre+Leudo.&type=phone_number&app_absent=0"
             target="_blank"
             rel="noopener noreferrer"
             className="ml-2 inline-block rounded-full bg-primary-foreground px-6 py-2.5 font-heading text-sm font-semibold text-primary hover:bg-primary-foreground/90 transition-colors"
@@ -85,7 +85,7 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="https://api.whatsapp.com/send/?phone=5519994718930&text=Ol%C3%A1%21+Encontrei+voc%C3%AAs+pelo+Google+e+gostaria+de+receber+mais+informa%C3%A7%C3%B5es.+Aguardo+retorno&type=phone_number&app_absent=0"
+            href="https://api.whatsapp.com/send/?phone=5519994718930&text=Ol%C3%A1%21+Gostaria+de+mais+informa%C3%A7%C3%B5es+sobre+a+peregrina%C3%A7%C3%A3o+ao+M%C3%A9xico+com+o+Padre+Leudo.&type=phone_number&app_absent=0"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setOpen(false)}
