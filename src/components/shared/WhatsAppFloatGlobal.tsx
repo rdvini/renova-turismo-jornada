@@ -17,19 +17,38 @@ const PAGE_WHATSAPP: Record<string, string> = {
   "/lideres-catolicos": "5519989542633",
   "/lideres-evangelicos": "5519989542633",
   "/pastor-morelli": "5519991813303",
+  "/pastor-rozenio": "5519991813303",
   "/leste-europeu": "5519989542633",
   "/marrocos": "5519936186395",
   "/jmj-seul-2027": "5519998974721",
   "/grecia": "5519988216863",
 };
 
-const DEFAULT_PHONE = "5519994718930";
-const DEFAULT_MESSAGE =
-  "Olá! Encontrei vocês pelo Google e gostaria de receber mais informações. Aguardo retorno";
+// Mensagem específica por rota
+const PAGE_MESSAGE: Record<string, string> = {
+  "/turquia": "Olá! Gostaria de mais informações sobre a viagem à Turquia.",
+  "/turquia-padre-leudo": "Olá! Gostaria de mais informações sobre a peregrinação à Turquia com o Padre Leudo.",
+  "/mexico-padre-leudo": "Olá! Gostaria de mais informações sobre a peregrinação ao México com o Padre Leudo.",
+  "/mexico-padre-antonio-maria": "Olá! Gostaria de mais informações sobre a peregrinação ao México com o Padre Antônio Maria.",
+  "/africa-do-sul": "Olá! Gostaria de mais informações sobre a viagem para a África do Sul.",
+  "/africa-do-sul-2": "Olá! Gostaria de mais informações sobre a viagem para a África do Sul.",
+  "/portugal": "Olá! Gostaria de mais informações sobre a peregrinação a Portugal.",
+  "/lideres-catolicos": "Olá! Sou líder católico e gostaria de saber mais sobre as caravanas da Renova Turismo.",
+  "/lideres-evangelicos": "Olá! Sou líder evangélico e gostaria de saber mais sobre as caravanas da Renova Turismo.",
+  "/pastor-morelli": "Olá, Pastor Morelli! Gostaria de mais informações sobre as caravanas às Terras Bíblicas.",
+  "/pastor-rozenio": "Olá, Pastor Rozenio! Gostaria de mais informações sobre a caravana a Israel.",
+  "/leste-europeu": "Olá! Gostaria de mais informações sobre a viagem ao Leste Europeu.",
+  "/marrocos": "Olá! Gostaria de mais informações sobre a viagem ao Marrocos.",
+  "/jmj-seul-2027": "Olá! Gostaria de mais informações sobre a peregrinação à JMJ Seul 2027.",
+  "/grecia": "Olá! Gostaria de mais informações sobre a viagem à Grécia.",
+};
 
-const buildWhatsAppUrl = (phone: string) =>
+const DEFAULT_PHONE = "5519994718930";
+const DEFAULT_MESSAGE = "Olá! Gostaria de saber mais sobre as viagens da Renova Turismo.";
+
+const buildWhatsAppUrl = (phone: string, message: string) =>
   `https://api.whatsapp.com/send/?phone=${phone}&text=${encodeURIComponent(
-    DEFAULT_MESSAGE
+    message
   )}&type=phone_number&app_absent=0`;
 
 const WhatsAppFloatGlobal = () => {
@@ -65,6 +84,7 @@ const WhatsAppFloatGlobal = () => {
   if (excluded || dismissed || !visible) return null;
 
   const phone = PAGE_WHATSAPP[pathname] ?? DEFAULT_PHONE;
+  const message = PAGE_MESSAGE[pathname] ?? DEFAULT_MESSAGE;
 
   const handleDismiss = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -88,7 +108,7 @@ const WhatsAppFloatGlobal = () => {
         <X className="w-4 h-4" />
       </button>
       <a
-        href={buildWhatsAppUrl(phone)}
+        href={buildWhatsAppUrl(phone, message)}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Fale conosco no WhatsApp"
