@@ -14,7 +14,7 @@ const WHATSAPP_URL =
   );
 
 const PHOTOS: { src?: string; alt: string; fit?: "cover" | "contain"; position?: string }[] = [
-  { src: rozenioEfeso.url, alt: "Pastor Rozenio em frente à Biblioteca de Celso, em Éfeso (Turquia)", fit: "cover", position: "50% 30%" },
+  { src: rozenioEfeso.url, alt: "Pastor Rozenio em frente à Biblioteca de Celso, em Éfeso (Turquia)", fit: "cover", position: "30% 20%" },
   { src: rozenioCafarnaum.url, alt: "Pastor Rozenio em Cafarnaum, a cidade de Jesus, em Israel", fit: "cover", position: "50% 20%" },
   { src: rozenio1.url, alt: "Pastor Rozenio com peregrina durante a viagem", fit: "cover", position: "50% 30%" },
   { src: rozenio2.url, alt: "Grupo Renova em anfiteatro histórico com Pastor Rozenio" },
