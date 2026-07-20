@@ -25,6 +25,13 @@ const Hero = () => {
   const prev = () => setCurrent((c) => (c === 0 ? PHOTOS.length - 1 : c - 1));
   const next = () => setCurrent((c) => (c === PHOTOS.length - 1 ? 0 : c + 1));
 
+  useEffect(() => {
+    const id = setInterval(() => {
+      setCurrent((c) => (c === PHOTOS.length - 1 ? 0 : c + 1));
+    }, 5000);
+    return () => clearInterval(id);
+  }, [current]);
+
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary via-primary to-primary/85">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--secondary)/0.18),transparent_55%)]" />
