@@ -70,7 +70,7 @@ const Hero = () => {
                         <img src={photo.src} alt={photo.alt} className="relative w-full h-full object-contain" />
                       </>
                     ) : (
-                      <img src={photo.src} alt={photo.alt} className="w-full h-full object-cover" />
+                      <img src={photo.src} alt={photo.alt} className="w-full h-full object-cover" style={photo.position ? { objectPosition: photo.position } : undefined} />
                     )
                   ) : (
                     <div className="w-full h-full flex flex-col items-center justify-center text-primary-foreground/40 gap-2">
