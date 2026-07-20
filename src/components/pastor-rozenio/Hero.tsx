@@ -12,7 +12,7 @@ const WHATSAPP_URL =
   );
 
 const PHOTOS: { src?: string; alt: string; fit?: "cover" | "contain" }[] = [
-  { src: rozenio1.url, alt: "Pastor Rozenio com peregrina durante a viagem", fit: "contain" },
+  { src: rozenio1.url, alt: "Pastor Rozenio com peregrina durante a viagem", fit: "cover", position: "50% 30%" },
   { src: rozenio2.url, alt: "Grupo Renova em anfiteatro histórico com Pastor Rozenio" },
   { src: rozenio3.url, alt: "Grupo Renova na chegada a Israel com Pastor Rozenio" },
 ];
