@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useYouTubeVolume } from "@/hooks/useYouTubeVolume";
 import { ChevronLeft, ChevronRight, ImageIcon, Play } from "lucide-react";
 import rozenio1 from "@/assets/pastor-rozenio/rozenio-1.jpeg.asset.json";
@@ -24,6 +24,13 @@ const Hero = () => {
   const videoRef = useYouTubeVolume(100);
   const prev = () => setCurrent((c) => (c === 0 ? PHOTOS.length - 1 : c - 1));
   const next = () => setCurrent((c) => (c === PHOTOS.length - 1 ? 0 : c + 1));
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setCurrent((c) => (c === PHOTOS.length - 1 ? 0 : c + 1));
+    }, 5000);
+    return () => clearInterval(id);
+  }, [current]);
 
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary via-primary to-primary/85">
