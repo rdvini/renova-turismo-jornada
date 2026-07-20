@@ -11,8 +11,8 @@ const WHATSAPP_URL =
     "Olá, Pastor Rozenio! 🙏\n\nVim pela sua página de caravanas bíblicas da Renova Turismo e gostaria de receber mais informações sobre as próximas viagens (datas, valores e o que está incluso).\n\nFico no aguardo do seu retorno!"
   );
 
-const PHOTOS: { src?: string; alt: string }[] = [
-  { src: rozenio1.url, alt: "Pastor Rozenio com peregrina durante a viagem" },
+const PHOTOS: { src?: string; alt: string; fit?: "cover" | "contain" }[] = [
+  { src: rozenio1.url, alt: "Pastor Rozenio com peregrina durante a viagem", fit: "contain" },
   { src: rozenio2.url, alt: "Grupo Renova em anfiteatro histórico com Pastor Rozenio" },
   { src: rozenio3.url, alt: "Grupo Renova na chegada a Israel com Pastor Rozenio" },
 ];
