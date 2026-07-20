@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useYouTubeVolume } from "@/hooks/useYouTubeVolume";
 import { ChevronLeft, ChevronRight, ImageIcon, Play } from "lucide-react";
 import rozenio1 from "@/assets/pastor-rozenio/rozenio-1.jpeg.asset.json";
