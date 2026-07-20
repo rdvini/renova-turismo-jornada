@@ -1,6 +1,6 @@
 import { Play, Award } from "lucide-react";
 import { useYouTubeVolume } from "@/hooks/useYouTubeVolume";
-import certificadoIsrael from "@/assets/pastor-morelli/certificado-israel.jpeg.asset.json";
+import certificadoPeregrino from "@/assets/pastor-rozenio/certificado-peregrino.jpeg.asset.json";
 
 const VIDEO_ID = "K6l-jyNdkxY";
 
@@ -55,18 +55,18 @@ const QuemSou = () => {
             <div className="flex items-center gap-2 mb-2 px-1">
               <Award className="text-secondary" size={18} />
               <span className="font-heading text-xs md:text-sm font-bold uppercase tracking-wider text-secondary">
-                Reconhecimento Oficial
+                Certificado de Peregrino
               </span>
             </div>
             <img
-              src={certificadoIsrael.url}
-              alt="Certificado do Estado de Israel — Ministério do Turismo nomeando João Morelli Neto como Embaixador Amigo de Israel"
+              src={certificadoPeregrino.url}
+              alt="Certificado de Peregrino emitido pelo Ministério do Turismo de Israel a Marcos Rozenio de Souza"
               className="w-full h-auto rounded-lg object-contain bg-white"
               loading="lazy"
             />
             <p className="font-body text-xs text-muted-foreground text-center mt-3 px-2">
               Reconhecido pelo Ministério do Turismo de Israel como{" "}
-              <strong className="text-primary">Embaixador Amigo de Israel</strong>.
+              <strong className="text-primary">Peregrino de Jerusalém</strong>.
             </p>
           </div>
         </div>
