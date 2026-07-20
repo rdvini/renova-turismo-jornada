@@ -1,26 +1,20 @@
 import { useState } from "react";
 import { useYouTubeVolume } from "@/hooks/useYouTubeVolume";
 import { ChevronLeft, ChevronRight, ImageIcon, Play } from "lucide-react";
-import morelli1 from "@/assets/pastor-morelli/morelli-1.jpeg.asset.json";
-import morelli2 from "@/assets/pastor-morelli/morelli-2.jpeg.asset.json";
-import morelli3 from "@/assets/pastor-morelli/morelli-3.jpeg.asset.json";
-import morelli4 from "@/assets/pastor-morelli/morelli-4.jpeg.asset.json";
-import morelli5 from "@/assets/pastor-morelli/morelli-5.jpeg.asset.json";
-import morelli6 from "@/assets/pastor-morelli/morelli-6.jpeg.asset.json";
+import rozenio1 from "@/assets/pastor-rozenio/rozenio-1.jpeg.asset.json";
+import rozenio2 from "@/assets/pastor-rozenio/rozenio-2.jpeg.asset.json";
+import rozenio3 from "@/assets/pastor-rozenio/rozenio-3.jpeg.asset.json";
 
 const WHATSAPP_URL =
   "https://wa.me/19991813303?text=" +
   encodeURIComponent(
-    "Olá, Pastor Morelli! 🙏\n\nVim pela sua página de caravanas bíblicas da Renova Turismo e gostaria de receber mais informações sobre as próximas viagens (datas, valores e o que está incluso).\n\nFico no aguardo do seu retorno!"
+    "Olá, Pastor Rozenio! 🙏\n\nVim pela sua página de caravanas bíblicas da Renova Turismo e gostaria de receber mais informações sobre as próximas viagens (datas, valores e o que está incluso).\n\nFico no aguardo do seu retorno!"
   );
 
 const PHOTOS: { src?: string; alt: string }[] = [
-  { src: morelli1.url, alt: "Pastor Morelli ensinando nas Terras Bíblicas" },
-  { src: morelli2.url, alt: "Pastor Morelli com peregrina durante a viagem" },
-  { src: morelli3.url, alt: "Grupo Renova no Caesarea National Park, Israel" },
-  { src: morelli4.url, alt: "Pastor Morelli com vista panorâmica de Jerusalém ao pôr do sol" },
-  { src: morelli5.url, alt: "Grupo Renova no Monte Precipício, em Israel" },
-  { src: morelli6.url, alt: "Peregrinos com certificados de participação na caravana bíblica" },
+  { src: rozenio1.url, alt: "Pastor Rozenio com peregrina durante a viagem" },
+  { src: rozenio2.url, alt: "Grupo Renova em anfiteatro histórico com Pastor Rozenio" },
+  { src: rozenio3.url, alt: "Grupo Renova na chegada a Israel com Pastor Rozenio" },
 ];
 
 const VIDEO_ID = "3Hy5ZWC4cNo";
