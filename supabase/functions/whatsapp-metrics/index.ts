@@ -83,17 +83,32 @@ Deno.serve(async (req) => {
     const prevSince = new Date(prevSinceMs).toISOString();
 
     const pageParam = url.searchParams.get("page");
-    let query = supabase
-      .from("whatsapp_clicks")
-      .select("id, page, source, referrer, user_agent, created_at")
-      .gte("created_at", prevSince)
-      .lt("created_at", until)
-      .order("created_at", { ascending: false })
-      .limit(20000);
-    if (pageParam) query = query.eq("page", pageParam);
-    const { data, error } = await query;
-
-    if (error) throw error;
+    const PAGE_SIZE = 1000;
+    const MAX_ROWS = 50000;
+    const collected: Array<{
+      id: string;
+      page: string;
+      source: string | null;
+      referrer: string | null;
+      user_agent: string | null;
+      created_at: string;
+    }> = [];
+    for (let offset = 0; offset < MAX_ROWS; offset += PAGE_SIZE) {
+      let query = supabase
+        .from("whatsapp_clicks")
+        .select("id, page, source, referrer, user_agent, created_at")
+        .gte("created_at", prevSince)
+        .lt("created_at", until)
+        .order("created_at", { ascending: false })
+        .range(offset, offset + PAGE_SIZE - 1);
+      if (pageParam) query = query.eq("page", pageParam);
+      const { data: chunk, error } = await query;
+      if (error) throw error;
+      if (!chunk || chunk.length === 0) break;
+      collected.push(...(chunk as typeof collected));
+      if (chunk.length < PAGE_SIZE) break;
+    }
+    const data = collected;
 
     const all = data ?? [];
     const rows = all.filter((r) => (r.created_at as string) >= since);
