@@ -563,44 +563,55 @@ const Metricas = () => {
           />
         </section>
 
-        {/* Daily trend */}
-        <Card>
-          <CardHeader>
-            <CardTitle>Tendência diária</CardTitle>
-            <p className="text-sm text-muted-foreground">
-              Evolução dos cliques ao longo do tempo
-            </p>
-          </CardHeader>
-          <CardContent className="h-72">
-            <ResponsiveContainer width="100%" height="100%">
-              <AreaChart data={dailyChart}>
-                <defs>
-                  <linearGradient id="colorClicks" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity={0.4} />
-                    <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity={0} />
-                  </linearGradient>
-                </defs>
-                <CartesianGrid strokeDasharray="3 3" opacity={0.2} />
-                <XAxis dataKey="label" fontSize={11} />
-                <YAxis allowDecimals={false} fontSize={11} />
-                <Tooltip
-                  contentStyle={{
-                    background: "hsl(var(--background))",
-                    border: "1px solid hsl(var(--border))",
-                    borderRadius: 8,
-                  }}
-                />
-                <Area
-                  type="monotone"
-                  dataKey="count"
-                  stroke="hsl(var(--primary))"
-                  strokeWidth={2}
-                  fill="url(#colorClicks)"
-                />
-              </AreaChart>
-            </ResponsiveContainer>
-          </CardContent>
-        </Card>
+        {/* Trend */}
+        {(() => {
+          const isHourly =
+            preset.kind === "today" ||
+            preset.kind === "yesterday" ||
+            preset.kind === "todayYesterday";
+          const trendData = isHourly ? hourChart : dailyChart;
+          const trendTitle = isHourly ? "Tendência por hora" : "Tendência diária";
+          const trendSubtitle = isHourly
+            ? "Distribuição dos cliques por horário (Brasília)"
+            : "Evolução dos cliques ao longo do tempo";
+          return (
+            <Card>
+              <CardHeader>
+                <CardTitle>{trendTitle}</CardTitle>
+                <p className="text-sm text-muted-foreground">{trendSubtitle}</p>
+              </CardHeader>
+              <CardContent className="h-72">
+                <ResponsiveContainer width="100%" height="100%">
+                  <AreaChart data={trendData}>
+                    <defs>
+                      <linearGradient id="colorClicks" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity={0.4} />
+                        <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity={0} />
+                      </linearGradient>
+                    </defs>
+                    <CartesianGrid strokeDasharray="3 3" opacity={0.2} />
+                    <XAxis dataKey="label" fontSize={11} interval={isHourly ? 1 : 0} />
+                    <YAxis allowDecimals={false} fontSize={11} />
+                    <Tooltip
+                      contentStyle={{
+                        background: "hsl(var(--background))",
+                        border: "1px solid hsl(var(--border))",
+                        borderRadius: 8,
+                      }}
+                    />
+                    <Area
+                      type="monotone"
+                      dataKey="count"
+                      stroke="hsl(var(--primary))"
+                      strokeWidth={2}
+                      fill="url(#colorClicks)"
+                    />
+                  </AreaChart>
+                </ResponsiveContainer>
+              </CardContent>
+            </Card>
+          );
+        })()}
 
         <div className="grid lg:grid-cols-2 gap-6">
           {/* Hourly */}
