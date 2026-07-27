@@ -12,7 +12,7 @@ const InscrevaSe = () => {
 
     const { nome, email, telefone } = formData;
 
-    const message = `Olá! Meu nome é ${nome}, meu e-mail é ${email} e meu telefone é ${telefone}. Gostaria de mais informações sobre a viagem à Turquia.`;
+    const message = `Olá! Vim pelo Google. Meu nome é ${nome}, meu e-mail é ${email} e meu telefone é ${telefone}. Gostaria de mais informações sobre a viagem à Turquia.`;
     window.open(
       `https://api.whatsapp.com/send/?phone=5519989542633&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`,
       "_blank"
@@ -38,7 +38,7 @@ const InscrevaSe = () => {
               inesquecível pela Turquia.
             </p>
             <a
-              href="https://api.whatsapp.com/send/?phone=5519989542633&text=Ol%C3%A1%21+Gostaria+de+mais+informa%C3%A7%C3%B5es+sobre+a+viagem+%C3%A0+Turquia.&type=phone_number&app_absent=0"
+              href="https://api.whatsapp.com/send/?phone=5519989542633&text=Ol%C3%A1%21+Vim+pelo+Google+e+gostaria+de+mais+informa%C3%A7%C3%B5es+sobre+a+viagem+%C3%A0+Turquia.&type=phone_number&app_absent=0"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-bold text-lg px-12 py-4 rounded-full transition-all hover:scale-105 shadow-lg"
