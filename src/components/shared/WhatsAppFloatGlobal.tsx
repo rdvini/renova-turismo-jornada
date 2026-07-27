@@ -26,7 +26,7 @@ const PAGE_WHATSAPP: Record<string, string> = {
 
 // Mensagem específica por rota
 const PAGE_MESSAGE: Record<string, string> = {
-  "/turquia": "Olá! Gostaria de mais informações sobre a viagem à Turquia.",
+  "/turquia": "Olá! Vim pelo Google e gostaria de mais informações sobre a viagem à Turquia.",
   "/turquia-padre-leudo": "Olá! Gostaria de mais informações sobre a peregrinação à Turquia com o Padre Leudo.",
   "/mexico-padre-leudo": "Olá! Gostaria de mais informações sobre a peregrinação ao México com o Padre Leudo.",
   "/mexico-padre-antonio-maria": "Olá! Gostaria de mais informações sobre a peregrinação ao México com o Padre Antônio Maria.",
