@@ -14,7 +14,9 @@ import basilicaImg from "@/assets/mexico-padre-leudo/basilica-guadalupe-aerea.we
 import pueblaAsset from "@/assets/mexico-padre-antonio-maria/puebla-capilla-rosario.png.asset.json";
 import guadalajaraCatedralAsset from "@/assets/mexico-padre-antonio-maria/guadalajara-catedral.jpg.asset.json";
 
-const pueblaImg = pueblaAsset.url;
+import dia4Asset from "@/assets/mexico-padre-antonio-maria/puebla-santo-domingo.png.asset.json";
+
+const pueblaImg = dia4Asset.url;
 const guadalajaraCatedral = guadalajaraCatedralAsset.url;
 import zapopanBasilica from "@/assets/mexico-padre-antonio-maria/zapopan-basilica.webp";
 import sahuayoSantuario from "@/assets/mexico-padre-antonio-maria/sahuayo-santuario.webp";
