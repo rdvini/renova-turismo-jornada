@@ -15,7 +15,6 @@ import guadalajaraCatedralAsset from "@/assets/mexico-padre-antonio-maria/guadal
 
 const pueblaImg = pueblaAsset.url;
 const guadalajaraCatedral = guadalajaraCatedralAsset.url;
-import guadalajaraPlaza from "@/assets/mexico-padre-antonio-maria/guadalajara-plaza.webp";
 import zapopanBasilica from "@/assets/mexico-padre-antonio-maria/zapopan-basilica.webp";
 import sahuayoSantuario from "@/assets/mexico-padre-antonio-maria/sahuayo-santuario.webp";
 
@@ -67,7 +66,7 @@ const slides: Slide[] = [
   {
     day: "4º Dia",
     image: pueblaImg,
-    imageAlt: "Centro histórico de Puebla",
+    imageAlt: "Capela do Rosário em Puebla, com talha dourada barroca",
     region: "Tlaxcala → Puebla",
     regionEn: "Puebla",
     title: "CIDADE DO MÉXICO / PUEBLA / TLAXCALA",
@@ -78,7 +77,7 @@ const slides: Slide[] = [
   {
     day: "5º Dia",
     image: guadalajaraCatedral,
-    imageAlt: "Centro histórico de Guadalajara com a Catedral e a Plaza de Armas",
+    imageAlt: "Catedral de Guadalajara ao entardecer, Jalisco",
     region: "Cidade do México → Guadalajara",
     regionEn: "Guadalajara",
     title: "CIDADE DO MÉXICO / GUADALAJARA",
@@ -111,7 +110,7 @@ const slides: Slide[] = [
   {
     day: "8º Dia",
     image: guadalajaraCatedral,
-    imageAlt: "Guadalajara ao entardecer — despedida da peregrinação",
+    imageAlt: "Catedral de Guadalajara ao entardecer — despedida da viagem",
     region: "Guadalajara → São Paulo",
     regionEn: "Return",
     title: "GUADALAJARA / SÃO PAULO",
