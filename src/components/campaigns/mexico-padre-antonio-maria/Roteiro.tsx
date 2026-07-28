@@ -77,7 +77,7 @@ const slides: Slide[] = [
   },
   {
     day: "5º Dia",
-    image: guadalajaraPlaza,
+    image: guadalajaraCatedral,
     imageAlt: "Centro histórico de Guadalajara com a Catedral e a Plaza de Armas",
     region: "Cidade do México → Guadalajara",
     regionEn: "Guadalajara",
@@ -110,7 +110,7 @@ const slides: Slide[] = [
   },
   {
     day: "8º Dia",
-    image: guadalajaraPlaza,
+    image: guadalajaraCatedral,
     imageAlt: "Guadalajara ao entardecer — despedida da peregrinação",
     region: "Guadalajara → São Paulo",
     regionEn: "Return",
