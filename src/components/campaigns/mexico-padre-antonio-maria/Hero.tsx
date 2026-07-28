@@ -4,7 +4,8 @@ import { Instagram, Facebook, Youtube, ChevronLeft } from "lucide-react";
 import heroImg from "@/assets/mexico-padre-antonio-maria/hero-glamour.jpg";
 import guadalupeImg from "@/assets/mexico-padre-leudo/basilica-guadalupe-aerea.webp";
 import teotihuacanImg from "@/assets/mexico-padre-leudo/teotihuacan.jpg";
-import guadalajaraImg from "@/assets/mexico-padre-antonio-maria/guadalajara-catedral.jpg";
+import guadalajaraAsset from "@/assets/mexico-padre-antonio-maria/guadalajara-catedral.jpg.asset.json";
+const guadalajaraImg = guadalajaraAsset.url;
 
 const floatingCards = [
   {
