@@ -167,11 +167,12 @@ const Roteiro = () => {
 
         <div className="max-w-5xl mx-auto">
           <Carousel setApi={handleApi} opts={{ loop: false }} className="w-full">
-            <CarouselContent className="items-start">
+            <CarouselContent className="items-stretch">
               {slides.map((slide, idx) => (
-                <CarouselItem key={idx}>
-                  <div className="grid md:grid-cols-2 gap-0 rounded-2xl overflow-hidden glam-card shadow-xl">
-                    <div className="relative h-64 md:h-auto md:min-h-[420px] overflow-hidden">
+                <CarouselItem key={idx} className="h-auto">
+                  <div className="grid md:grid-cols-2 gap-0 rounded-2xl overflow-hidden glam-card shadow-xl h-full md:min-h-[460px]">
+                    <div className="relative h-64 md:h-full overflow-hidden">
+
                       <img
                         src={slide.image}
                         alt={slide.imageAlt}
