@@ -182,10 +182,12 @@ const Roteiro = () => {
                       <div
                         className="absolute inset-0"
                         style={{
-                          background:
-                            "linear-gradient(to top, hsl(var(--pam-wine-deep) / 0.6), transparent)",
+                          background: `linear-gradient(to top, hsl(var(--pam-wine-deep) / ${
+                            slide.image === guadalajaraCatedral ? 0.28 : 0.6
+                          }), transparent)`,
                         }}
                       />
+
                       <div className="absolute top-4 left-4 right-4 flex items-center justify-between text-primary-foreground">
                         <span className="font-body text-xs opacity-80">
                           {String(idx + 1).padStart(2, "0")} / {String(count).padStart(2, "0")}
