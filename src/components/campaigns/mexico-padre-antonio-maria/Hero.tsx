@@ -4,7 +4,7 @@ import { Instagram, Facebook, Youtube, ChevronLeft } from "lucide-react";
 import heroImg from "@/assets/mexico-padre-antonio-maria/hero-glamour.jpg";
 import guadalupeImg from "@/assets/mexico-padre-leudo/basilica-guadalupe-aerea.webp";
 import teotihuacanImg from "@/assets/mexico-padre-leudo/teotihuacan.jpg";
-import cancunImg from "@/assets/mexico-padre-leudo/cancun-aerea.webp";
+import guadalajaraImg from "@/assets/mexico-padre-antonio-maria/guadalajara-catedral.jpg";
 
 const floatingCards = [
   {
@@ -20,10 +20,10 @@ const floatingCards = [
       "A 'Cidade dos Deuses' — Pirâmides do Sol e da Lua, um dos maiores sítios arqueológicos do mundo.",
   },
   {
-    image: cancunImg,
-    title: "Cancún & Caribe",
+    image: guadalajaraImg,
+    title: "Guadalajara & Zapopan",
     description:
-      "Águas cristalinas, resort All Inclusive e descanso merecido após dias intensos de peregrinação.",
+      "A Catedral de Guadalajara e a Basílica de Zapopan — arquitetura monumental e tradição no coração de Jalisco.",
   },
 ];
 
