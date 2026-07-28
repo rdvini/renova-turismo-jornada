@@ -10,7 +10,11 @@ import {
 import aeroportoGru from "@/assets/mexico-padre-leudo/aeroporto-manaus.webp";
 import teotihuacanImg from "@/assets/mexico-padre-leudo/teotihuacan.jpg";
 import basilicaImg from "@/assets/mexico-padre-leudo/basilica-guadalupe-aerea.webp";
-import pueblaImg from "@/assets/mexico-padre-leudo/puebla.jpg";
+import pueblaAsset from "@/assets/mexico-padre-antonio-maria/puebla-capilla-rosario.png.asset.json";
+import guadalajaraCatedralAsset from "@/assets/mexico-padre-antonio-maria/guadalajara-catedral.jpg.asset.json";
+
+const pueblaImg = pueblaAsset.url;
+const guadalajaraCatedral = guadalajaraCatedralAsset.url;
 import guadalajaraPlaza from "@/assets/mexico-padre-antonio-maria/guadalajara-plaza.webp";
 import zapopanBasilica from "@/assets/mexico-padre-antonio-maria/zapopan-basilica.webp";
 import sahuayoSantuario from "@/assets/mexico-padre-antonio-maria/sahuayo-santuario.webp";
