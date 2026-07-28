@@ -7,7 +7,8 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 
-import aeroportoGru from "@/assets/mexico-padre-leudo/aeroporto-manaus.webp";
+import aeroportoAsset from "@/assets/mexico-padre-antonio-maria/familia-aeroporto.jpeg.asset.json";
+const aeroportoGru = aeroportoAsset.url;
 import teotihuacanImg from "@/assets/mexico-padre-leudo/teotihuacan.jpg";
 import basilicaImg from "@/assets/mexico-padre-leudo/basilica-guadalupe-aerea.webp";
 import pueblaAsset from "@/assets/mexico-padre-antonio-maria/puebla-capilla-rosario.png.asset.json";
@@ -33,7 +34,7 @@ const slides: Slide[] = [
   {
     day: "1º Dia",
     image: aeroportoGru,
-    imageAlt: "Aeroporto de Guarulhos — partida da peregrinação",
+    imageAlt: "Família observando aviões no aeroporto de Guarulhos antes do embarque",
     region: "São Paulo → Cidade do México",
     regionEn: "Departure",
     title: "SÃO PAULO / CIDADE DO MÉXICO",
@@ -121,7 +122,7 @@ const slides: Slide[] = [
   {
     day: "9º Dia",
     image: aeroportoGru,
-    imageAlt: "Aeroporto de Guarulhos — chegada",
+    imageAlt: "Família no saguão do aeroporto de Guarulhos no retorno da viagem",
     region: "São Paulo (GRU)",
     regionEn: "Arrival",
     title: "SÃO PAULO",
