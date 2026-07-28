@@ -11,7 +11,7 @@ import aeroportoAsset from "@/assets/mexico-padre-antonio-maria/familia-aeroport
 const aeroportoGru = aeroportoAsset.url;
 import teotihuacanImg from "@/assets/mexico-padre-leudo/teotihuacan.jpg";
 import basilicaImg from "@/assets/mexico-padre-leudo/basilica-guadalupe-aerea.webp";
-import pueblaAsset from "@/assets/mexico-padre-antonio-maria/puebla-capilla-rosario.png.asset.json";
+
 import guadalajaraCatedralAsset from "@/assets/mexico-padre-antonio-maria/guadalajara-catedral.jpg.asset.json";
 
 import dia4Asset from "@/assets/mexico-padre-antonio-maria/puebla-santo-domingo.png.asset.json";
