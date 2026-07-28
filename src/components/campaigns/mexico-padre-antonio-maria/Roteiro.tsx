@@ -10,8 +10,11 @@ import {
 import aeroportoGru from "@/assets/mexico-padre-leudo/aeroporto-manaus.webp";
 import teotihuacanImg from "@/assets/mexico-padre-leudo/teotihuacan.jpg";
 import basilicaImg from "@/assets/mexico-padre-leudo/basilica-guadalupe-aerea.webp";
-import pueblaImg from "@/assets/mexico-padre-leudo/puebla.jpg";
-import guadalajaraPlaza from "@/assets/mexico-padre-antonio-maria/guadalajara-plaza.webp";
+import pueblaAsset from "@/assets/mexico-padre-antonio-maria/puebla-capilla-rosario.png.asset.json";
+import guadalajaraCatedralAsset from "@/assets/mexico-padre-antonio-maria/guadalajara-catedral.jpg.asset.json";
+
+const pueblaImg = pueblaAsset.url;
+const guadalajaraCatedral = guadalajaraCatedralAsset.url;
 import zapopanBasilica from "@/assets/mexico-padre-antonio-maria/zapopan-basilica.webp";
 import sahuayoSantuario from "@/assets/mexico-padre-antonio-maria/sahuayo-santuario.webp";
 
@@ -63,7 +66,7 @@ const slides: Slide[] = [
   {
     day: "4º Dia",
     image: pueblaImg,
-    imageAlt: "Centro histórico de Puebla",
+    imageAlt: "Capela do Rosário em Puebla, com talha dourada barroca",
     region: "Tlaxcala → Puebla",
     regionEn: "Puebla",
     title: "CIDADE DO MÉXICO / PUEBLA / TLAXCALA",
@@ -73,8 +76,8 @@ const slides: Slide[] = [
   },
   {
     day: "5º Dia",
-    image: guadalajaraPlaza,
-    imageAlt: "Centro histórico de Guadalajara com a Catedral e a Plaza de Armas",
+    image: guadalajaraCatedral,
+    imageAlt: "Catedral de Guadalajara ao entardecer, Jalisco",
     region: "Cidade do México → Guadalajara",
     regionEn: "Guadalajara",
     title: "CIDADE DO MÉXICO / GUADALAJARA",
@@ -106,8 +109,8 @@ const slides: Slide[] = [
   },
   {
     day: "8º Dia",
-    image: guadalajaraPlaza,
-    imageAlt: "Guadalajara ao entardecer — despedida da peregrinação",
+    image: guadalajaraCatedral,
+    imageAlt: "Catedral de Guadalajara ao entardecer — despedida da viagem",
     region: "Guadalajara → São Paulo",
     regionEn: "Return",
     title: "GUADALAJARA / SÃO PAULO",
