@@ -21,7 +21,7 @@ const PHOTOS: { src?: string; alt: string; fit?: "cover" | "contain"; position?:
   { src: rozenio3.url, alt: "Grupo Renova na chegada a Israel com Pastor Rozenio" },
 ];
 
-const VIDEO_ID = "3Hy5ZWC4cNo";
+const VIDEO_ID = "";
 
 const Hero = () => {
   const [current, setCurrent] = useState(0);

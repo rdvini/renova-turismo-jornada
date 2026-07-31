@@ -2,7 +2,7 @@ import { Play, Award } from "lucide-react";
 import { useYouTubeVolume } from "@/hooks/useYouTubeVolume";
 import certificadoPeregrino from "@/assets/pastor-rozenio/certificado-peregrino.jpeg.asset.json";
 
-const VIDEO_ID = "K6l-jyNdkxY";
+const VIDEO_ID = "";
 
 const WHATSAPP_URL =
   "https://wa.me/19991813303?text=" +
