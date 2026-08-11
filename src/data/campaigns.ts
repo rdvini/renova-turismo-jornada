@@ -21,6 +21,7 @@ import cardLesteEuropeu from "@/assets/leste-europeu/hero.webp";
 import cardMarrocos from "@/assets/marrocos/hero.jpg";
 import cardJmjSeul from "@/assets/jmj-seul/jmj-card-cover.jpg.asset.json";
 import cardGrecia from "@/assets/grecia/hero-santorini.jpg";
+import cardAurora from "@/assets/aurora-boreal/hero-aurora.jpg";
 import cardTurquiaCapadocia from "@/assets/turquia/capadocia.jpg.asset.json";
 import cardPastorMorelli from "@/assets/pastor-morelli/morelli-1.jpeg.asset.json";
 import cardPastorRozenio from "@/assets/pastor-rozenio/rozenio-cafarnaum.jpeg.asset.json";
@@ -154,6 +155,18 @@ export const campaigns: Campaign[] = [
     description:
       "Uma jornada entre deuses, ilhas e o azul mais profundo do Mediterrâneo — do esplendor de Atenas à magia das Cíclades.",
     image: cardGrecia,
+    date: "Datas sob consulta",
+    badge: "Experiência",
+    published: true,
+  },
+  {
+    id: "aurora-boreal",
+    slug: "/aurora-boreal",
+    title: "Aurora Boreal",
+    subtitle: "RENOVA TURISMO APRESENTA",
+    description:
+      "Uma jornada pelo extremo norte — geleiras, vulcões, águas termais e noites dedicadas a ver as luzes do norte dançarem no céu da Islândia.",
+    image: cardAurora,
     date: "Datas sob consulta",
     badge: "Experiência",
     published: true,

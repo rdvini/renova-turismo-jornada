@@ -140,6 +140,30 @@
   --font-accent: 'Cormorant Garamond', Georgia, serif;
 }
 
+/* Scoped overrides — Aurora Boreal (used together with .theme-grecia) */
+.theme-aurora {
+  --primary: 222 60% 14%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 160 84% 42%;
+  --secondary-foreground: 222 60% 12%;
+
+  --accent: 160 84% 42%;
+  --accent-foreground: 222 60% 12%;
+
+  --foreground: 222 60% 14%;
+  --card-foreground: 222 60% 14%;
+  --popover-foreground: 222 60% 14%;
+  --muted: 215 30% 96%;
+  --muted-foreground: 222 18% 40%;
+  --border: 222 24% 88%;
+  --input: 222 24% 88%;
+  --ring: 160 84% 42%;
+
+  --grecia-deep: 224 64% 8%;
+  --grecia-sand: 215 30% 96%;
+}
+
 .theme-grecia .display-outline {
   -webkit-text-stroke: 2px hsl(var(--primary-foreground));
   color: transparent;
