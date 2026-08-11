@@ -19,14 +19,14 @@ const SobreViagem = () => {
             </h2>
             <div className="w-16 h-px bg-secondary mb-8" />
             <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed">
-              Uma viagem turística de 9 dias pela Grécia — do esplendor de Atenas
-              e da Acrópole às ruínas de Corinto e Micenas, passando por Delfos,
-              Meteora e um cruzeiro inesquecível pelas Ilhas Gregas.
+              Uma viagem turística de 9 dias pela Islândia — de Reykjavík ao
+              Círculo Dourado, passando pela costa sul, pela lagoa glacial de
+              Jökulsárlón e por noites de caça à aurora boreal.
             </p>
             <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed mt-5">
               Pequenos grupos, guias em português, hospedagem selecionada e roteiro
-              completo: cultura milenar, paisagens deslumbrantes e o azul do
-              Mar Egeu em uma única jornada.
+              completo: geleiras, vulcões, cachoeiras, águas termais e as luzes
+              do norte em uma única jornada.
             </p>
           </div>
 
@@ -35,12 +35,12 @@ const SobreViagem = () => {
               {
                 icon: Calendar,
                 label: "Quando",
-                value: "06/10 a 15/10/2026",
+                value: "Datas sob consulta",
               },
               {
                 icon: MapPin,
                 label: "Destinos",
-                value: "Atenas, Corinto, Micenas, Delfos, Meteora e Ilhas Gregas",
+                value: "Reykjavík, Círculo Dourado, Costa Sul, Jökulsárlón e Lagoa Azul",
               },
               {
                 icon: Plane,

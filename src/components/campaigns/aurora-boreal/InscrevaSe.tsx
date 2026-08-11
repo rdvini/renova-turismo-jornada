@@ -15,11 +15,11 @@ const InscrevaSe = () => {
 
     supabase.functions
       .invoke("send-contact-email", {
-        body: { nome, email, telefone, campaign: "Viagem Grécia" },
+        body: { nome, email, telefone, campaign: "Viagem Aurora Boreal" },
       })
       .catch((err) => console.error("send-contact-email error:", err));
 
-    const message = `Olá! Meu nome é ${nome}, meu e-mail é ${email} e meu telefone é ${telefone}. Vim pela landing page da Renova Turismo e tenho interesse no roteiro da Grécia. Gostaria de receber mais informações sobre datas, valores e disponibilidade. Aguardo retorno!`;
+    const message = `Olá! Meu nome é ${nome}, meu e-mail é ${email} e meu telefone é ${telefone}. Vim pela landing page da Renova Turismo e tenho interesse no roteiro da Aurora Boreal. Gostaria de receber mais informações sobre datas, valores e disponibilidade. Aguardo retorno!`;
     window.open(
       `https://api.whatsapp.com/send/?phone=${WHATSAPP_PHONE}&text=${encodeURIComponent(
         message
@@ -46,11 +46,11 @@ const InscrevaSe = () => {
             <div className="w-16 h-px bg-secondary mb-8" />
             <p className="font-body text-muted-foreground text-base md:text-lg leading-relaxed mb-8">
               Entre em contato com nossa equipe e dê o primeiro passo rumo à sua jornada
-              pela Grécia. Atendimento personalizado, sem compromisso.
+              rumo à aurora boreal. Atendimento personalizado, sem compromisso.
             </p>
             <a
               href={`https://api.whatsapp.com/send/?phone=${WHATSAPP_PHONE}&text=${encodeURIComponent(
-                "Olá! Vim pela landing page da Renova Turismo e tenho interesse no roteiro da Grécia. Gostaria de receber mais informações sobre datas, valores e disponibilidade. Aguardo retorno!"
+                "Olá! Vim pela landing page da Renova Turismo e tenho interesse no roteiro da Aurora Boreal. Gostaria de receber mais informações sobre datas, valores e disponibilidade. Aguardo retorno!"
               )}&type=phone_number&app_absent=0`}
               target="_blank"
               rel="noopener noreferrer"
@@ -76,11 +76,11 @@ const InscrevaSe = () => {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="space-y-2">
-                  <Label htmlFor="grecia-nome" className="font-body text-foreground text-xs uppercase tracking-widest">
+                  <Label htmlFor="aurora-nome" className="font-body text-foreground text-xs uppercase tracking-widest">
                     Nome completo
                   </Label>
                   <Input
-                    id="grecia-nome"
+                    id="aurora-nome"
                     placeholder="Seu nome"
                     required
                     maxLength={100}
@@ -89,11 +89,11 @@ const InscrevaSe = () => {
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="grecia-email" className="font-body text-foreground text-xs uppercase tracking-widest">
+                  <Label htmlFor="aurora-email" className="font-body text-foreground text-xs uppercase tracking-widest">
                     E-mail
                   </Label>
                   <Input
-                    id="grecia-email"
+                    id="aurora-email"
                     type="email"
                     placeholder="seu@email.com"
                     required
@@ -103,11 +103,11 @@ const InscrevaSe = () => {
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="grecia-telefone" className="font-body text-foreground text-xs uppercase tracking-widest">
+                  <Label htmlFor="aurora-telefone" className="font-body text-foreground text-xs uppercase tracking-widest">
                     Telefone / WhatsApp
                   </Label>
                   <Input
-                    id="grecia-telefone"
+                    id="aurora-telefone"
                     type="tel"
                     placeholder="(00) 00000-0000"
                     required

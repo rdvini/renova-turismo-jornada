@@ -1,36 +1,31 @@
 import { useState, useEffect } from "react";
 import { Instagram, Facebook, Youtube, ChevronLeft } from "lucide-react";
 
-import heroImg from "@/assets/grecia/hero-santorini.jpg";
-import egeuImg from "@/assets/grecia/egeu.jpg";
-import atenasImg from "@/assets/grecia/atenas.jpg";
-import delfosNewAsset from "@/assets/grecia/delfos-new.png.asset.json";
-
-const delfosNewImg = delfosNewAsset.url;
-
+import heroImg from "@/assets/aurora-boreal/hero-aurora.jpg";
+import auroraImg from "@/assets/aurora-boreal/caca-aurora.jpg";
+import reykjavikImg from "@/assets/aurora-boreal/reykjavik.jpg";
+import lagoaGlacialImg from "@/assets/aurora-boreal/lagoa-glacial.jpg";
 
 const floatingCards = [
   {
-    image: atenasImg,
-    title: "Atenas Eterna",
+    image: reykjavikImg,
+    title: "Reykjavík Vibrante",
     description:
-      "Da Acrópole ao Partenon, passando pela Praça Sintagma e pelo Estádio Panatenaico — o coração da civilização ocidental.",
+      "A capital mais ao norte do mundo: casinhas coloridas, cultura nórdica, gastronomia e o charme de um inverno inesquecível.",
   },
   {
-    image: delfosNewImg,
-    title: "Delfos e Meteora",
+    image: auroraImg,
+    title: "Caça à Aurora Boreal",
     description:
-      "Do antigo centro do mundo às monumentais rochas da Tessália — paisagens e história que impressionam.",
+      "Noites dedicadas a perseguir as luzes do norte em céus limpos, longe da luz das cidades — o espetáculo mais raro do planeta.",
   },
-
   {
-    image: egeuImg,
-    title: "Cruzeiro pelas Ilhas",
+    image: lagoaGlacialImg,
+    title: "Geleiras e Lagoas",
     description:
-      "Um dia pelo Mar Egeu a partir do Porto de Pireus — charme insular e o azul mais profundo do Mediterrâneo.",
+      "Icebergs azuis flutuando na lagoa glacial, praias de areia negra e paisagens vulcânicas de outro mundo.",
   },
 ];
-
 
 const Hero = () => {
   const [active, setActive] = useState(1);
@@ -43,12 +38,10 @@ const Hero = () => {
 
   const getOffset = (i: number) => {
     const diff = i - active;
-    // wrap so |offset| <= floor(total/2)
     if (diff > total / 2) return diff - total;
     if (diff < -total / 2) return diff + total;
     return diff;
   };
-
 
   return (
     <section
@@ -57,7 +50,7 @@ const Hero = () => {
     >
       <img
         src={heroImg}
-        alt="Vista aérea de Santorini com mar Egeu turquesa"
+        alt="Aurora boreal verde e violeta sobre paisagem nevada da Islândia"
         fetchPriority="high" decoding="async" className="absolute inset-0 w-full h-full object-cover opacity-90"
         width={1920}
         height={1080}
@@ -67,8 +60,7 @@ const Hero = () => {
 
       {/* Ambient aurora blobs */}
       <div className="aurora-blob w-[420px] h-[420px] bg-secondary/50 -top-20 -left-20" aria-hidden="true" />
-      <div className="aurora-blob w-[520px] h-[520px] bg-[hsl(199_90%_60%)]/30 bottom-[-160px] right-[-120px]" style={{ animationDelay: "-6s" }} aria-hidden="true" />
-
+      <div className="aurora-blob w-[520px] h-[520px] bg-[hsl(160_85%_55%)]/30 bottom-[-160px] right-[-120px]" style={{ animationDelay: "-6s" }} aria-hidden="true" />
 
       {/* Social rail */}
       <div className="hidden md:flex absolute left-6 lg:left-10 top-1/2 -translate-y-1/2 flex-col gap-5 z-20">
@@ -99,12 +91,12 @@ const Hero = () => {
             </p>
             <h1 className="font-heading uppercase leading-[0.92] tracking-tight text-[3.2rem] sm:text-6xl md:text-7xl lg:text-[5.5rem]">
               <span className="block">Explore</span>
-              <span className="block">a Grécia</span>
-              <span className="block display-outline">Eterna</span>
+              <span className="block">a Aurora</span>
+              <span className="block display-outline">Boreal</span>
             </h1>
             <p className="font-body text-base md:text-lg text-primary-foreground/80 max-w-md mt-6 md:mt-8 leading-relaxed">
-              Uma jornada entre deuses, ilhas e o azul mais profundo do Mediterrâneo —
-              do esplendor de Atenas à magia das Cíclades.
+              Uma jornada pelo extremo norte — entre geleiras, vulcões, águas termais
+              e as luzes que dançam no céu do inverno islandês.
             </p>
 
             <div className="flex items-center gap-5 mt-8 md:mt-10">
@@ -168,7 +160,7 @@ const Hero = () => {
                 const offset = getOffset(i);
                 const isActive = offset === 0;
                 const abs = Math.abs(offset);
-                const translateX = offset * 38; // % of card width
+                const translateX = offset * 38;
                 const rotate = offset * 9;
                 const scale = isActive ? 1 : 0.78;
                 const blur = isActive ? 0 : 3;
@@ -244,4 +236,3 @@ const Hero = () => {
 };
 
 export default Hero;
-

@@ -7,24 +7,13 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 
-import atenasImg from "@/assets/grecia/atenas.jpg";
-import delfosImg from "@/assets/grecia/delfos.jpg";
-import meteoraImg from "@/assets/grecia/meteora.jpg";
-
-import atenasCidadeAsset from "@/assets/grecia/atenas-cidade.png.asset.json";
-import partenon2Asset from "@/assets/grecia/partenon-2.png.asset.json";
-import corintoAsset from "@/assets/grecia/corinto.png.asset.json";
-import kalambakaAsset from "@/assets/grecia/kalambaka.png.asset.json";
-import delfosNewAsset from "@/assets/grecia/delfos-new.png.asset.json";
-import museuAthenasAsset from "@/assets/grecia/museu-athenas.png.asset.json";
-import santoriniNewAsset from "@/assets/grecia/santorini.png.asset.json";
-const kalambakaImg = kalambakaAsset.url;
-const delfosNewImg = delfosNewAsset.url;
-const museuAthenasImg = museuAthenasAsset.url;
-const egeuImg = atenasCidadeAsset.url;
-const atenasChegadaImg = partenon2Asset.url;
-const corintoImg = corintoAsset.url;
-const santoriniNewImg = santoriniNewAsset.url;
+import heroAuroraImg from "@/assets/aurora-boreal/hero-aurora.jpg";
+import reykjavikImg from "@/assets/aurora-boreal/reykjavik.jpg";
+import lagoaGlacialImg from "@/assets/aurora-boreal/lagoa-glacial.jpg";
+import cachoeiraImg from "@/assets/aurora-boreal/cachoeira.jpg";
+import lagoaAzulImg from "@/assets/aurora-boreal/lagoa-azul.jpg";
+import circuloDouradoImg from "@/assets/aurora-boreal/circulo-dourado.jpg";
+import cacaAuroraImg from "@/assets/aurora-boreal/caca-aurora.jpg";
 
 interface Slide {
   day: string;
@@ -40,107 +29,111 @@ interface Slide {
 const slides: Slide[] = [
   {
     day: "1º Dia",
-    image: egeuImg,
-    imageAlt: "Partenon na Acrópole de Atenas",
-    region: "São Paulo → Atenas",
+    image: heroAuroraImg,
+    imageAlt: "Aurora boreal sobre paisagem nevada",
+    region: "São Paulo → Reykjavík",
     regionEn: "Departure",
-    title: "SÃO PAULO / ATENAS",
+    title: "SÃO PAULO / REYKJAVÍK",
     description:
-      "Em horário combinado, encontro no Aeroporto de Guarulhos (GRU) para embarque com destino a Atenas, fazendo as devidas conexões.",
-    highlight: "O início de uma jornada inesquecível pela Grécia.",
+      "Em horário combinado, encontro no Aeroporto de Guarulhos (GRU) para embarque com destino à Islândia, fazendo as devidas conexões.",
+    highlight: "O início de uma jornada rumo às luzes do norte.",
   },
   {
     day: "2º Dia",
-    image: atenasChegadaImg,
-    imageAlt: "Vista de Atenas com a Acrópole ao fundo",
-    region: "Atenas",
-    regionEn: "Athens",
-    title: "CHEGADA EM ATENAS",
+    image: reykjavikImg,
+    imageAlt: "Reykjavík no inverno com montanhas nevadas ao fundo",
+    region: "Reykjavík",
+    regionEn: "Arrival",
+    title: "CHEGADA EM REYKJAVÍK",
     description:
-      "Chegada à capital grega, encontro com assistência especializada e traslado ao hotel. Jantar e hospedagem.",
-    highlight: "Bem-vindos ao berço da civilização ocidental.",
+      "Chegada à capital islandesa, recepção com assistência especializada e traslado ao hotel. Restante do dia livre para o primeiro contato com a cidade. Jantar e hospedagem.",
+    highlight: "Bem-vindos à capital mais ao norte do mundo.",
   },
   {
     day: "3º Dia",
-    image: atenasImg,
-    imageAlt: "Acrópole de Atenas com o Partenon",
-    region: "Atenas",
-    regionEn: "Athens",
-    title: "CITY TOUR EM ATENAS",
+    image: reykjavikImg,
+    imageAlt: "Casas coloridas e igreja Hallgrímskirkja em Reykjavík",
+    region: "Reykjavík",
+    regionEn: "City Tour",
+    title: "CITY TOUR EM REYKJAVÍK",
     description:
-      "Após o café da manhã, city tour panorâmico por Atenas: Universidade, Academia e Biblioteca Nacional. Parada na Praça da Constituição (Sintagma), onde está o Túmulo do Soldado Desconhecido. Passagem pelo Templo de Zeus, Arco de Adriano e pelo Estádio Panatenaico, palco dos primeiros Jogos Olímpicos da era moderna em 1896. Passagem pela Casa da Moeda e Catedral, e visita à famosa Acrópole, ao Partenon e a todos os templos da Rocha Sagrada. Retorno ao hotel para jantar e hospedagem.",
-    highlight: "Acrópole e Partenon — ícones da Grécia Antiga.",
+      "Após o café da manhã, city tour panorâmico pela capital: a icônica igreja Hallgrímskirkja, o centro cultural Harpa, a orla com a escultura Sun Voyager, a Perlan e o charmoso centro histórico com suas casas coloridas. Tarde livre para compras e gastronomia local. Jantar e hospedagem.",
+    highlight: "Cultura nórdica, design e gastronomia em um só dia.",
   },
   {
     day: "4º Dia",
-    image: corintoImg,
-    imageAlt: "Canal de Corinto na Grécia",
-    region: "Corinto e Micenas",
-    regionEn: "Corinth & Mycenae",
-    title: "ATENAS / CORINTO / MICENAS / ATENAS",
+    image: circuloDouradoImg,
+    imageAlt: "Gêiser em erupção no Círculo Dourado da Islândia",
+    region: "Círculo Dourado",
+    regionEn: "Golden Circle",
+    title: "REYKJAVÍK / CÍRCULO DOURADO / REYKJAVÍK",
     description:
-      "Após o café da manhã, seguiremos para Corinto. Conheceremos o Canal de Corinto, que liga o Mar Egeu ao Mar Jônico, Argólida, Epidauro e o Teatro. Continuação para Micenas, onde visitaremos o sítio arqueológico. Retorno ao hotel para jantar e hospedagem.",
-    highlight: "Do Canal de Corinto às ruínas milenares de Micenas.",
+      "Dia dedicado ao famoso Círculo Dourado: o Parque Nacional Thingvellir, onde as placas tectônicas se encontram, a área geotérmica de Geysir com seus gêiseres em erupção e a imponente cachoeira Gullfoss. Retorno ao hotel para jantar e hospedagem.",
+    highlight: "Gêiseres, falhas tectônicas e cachoeiras monumentais.",
   },
   {
     day: "5º Dia",
-    image: delfosNewImg,
-    imageAlt: "Sítio arqueológico de Delfos ao pôr do sol",
-    region: "Delfos → Meteora",
-    regionEn: "Delphi & Meteora",
-    title: "ATENAS / DELFOS / METEORA",
+    image: cachoeiraImg,
+    imageAlt: "Cachoeira islandesa cercada de neve",
+    region: "Costa Sul",
+    regionEn: "South Coast",
+    title: "COSTA SUL E PRAIAS NEGRAS",
     description:
-      "Após o café da manhã, seguiremos para o interior da Grécia. Visita à cidade de Delfos (conhecida na antiguidade como o centro do mundo), seus sítios arqueológicos e o Museu, com a famosa estátua \"A Auriga de Bronze\". Estátua de Leônidas das Termópilas. Partida para Kalambaka, pequena cidade localizada junto às rochas gigantescas que compõem o conjunto de Meteora. Jantar e pernoite.",
-    highlight: "Delfos, o centro do mundo antigo, e as rochas de Meteora.",
+      "Saída pela deslumbrante costa sul: as cachoeiras Seljalandsfoss e Skógafoss, a praia de areia negra de Reynisfjara com suas colunas de basalto e o vilarejo de Vík. Jantar e pernoite na região.",
+    highlight: "Cachoeiras congeladas e praias de areia vulcânica.",
   },
   {
     day: "6º Dia",
-    image: kalambakaImg,
-    imageAlt: "Mosteiro de Meteora em Kalambaka",
-    region: "Meteora → Atenas",
-    regionEn: "Meteora",
-    title: "METEORA / ATENAS",
+    image: lagoaGlacialImg,
+    imageAlt: "Icebergs azuis na lagoa glacial de Jökulsárlón",
+    region: "Jökulsárlón",
+    regionEn: "Glacier Lagoon",
+    title: "LAGOA GLACIAL E DIAMOND BEACH",
     description:
-      "Após o café da manhã, visita a Meteora (no centro do vale na Tessália), onde se combina a beleza única da paisagem com construções do século XIV erguidas sobre as rochas. Visita a dois pontos da região, observando a história e a cultura destes importantes locais. Saída em direção a Atenas, passando por Termópilas, onde se encontra a estátua do Rei Espartano Leônidas. Jantar e pernoite em Atenas.",
-    highlight: "Paisagens suspensas entre rochas e história milenar.",
+      "Visita à lagoa glacial de Jökulsárlón, com seus icebergs azuis flutuando, e à Diamond Beach, onde blocos de gelo repousam sobre a areia negra. Caminhada panorâmica pelo Parque Nacional Vatnajökull. Jantar e pernoite.",
+    highlight: "O azul das geleiras contra a areia negra.",
   },
   {
     day: "7º Dia",
-    image: santoriniNewImg,
-    imageAlt: "Igreja de cúpulas azuis em Santorini ao pôr do sol",
-    region: "Cruzeiro pelas Ilhas",
-    regionEn: "Greek Islands",
-    title: "ATENAS / CRUZEIRO ÀS ILHAS / ATENAS",
+    image: cacaAuroraImg,
+    imageAlt: "Grupo observando a aurora boreal no céu noturno",
+    region: "Caça à Aurora",
+    regionEn: "Northern Lights",
+    title: "EXPEDIÇÃO À AURORA BOREAL",
     description:
-      "Após o café da manhã, seguiremos ao Porto de Pireus para passeio de barco pelas Ilhas Gregas, com almoço a bordo. Retorno ao hotel para jantar e hospedagem.",
-    highlight: "Um dia inesquecível pelo azul do Egeu.",
+      "Dia com atividades livres e, à noite, expedição exclusiva de caça à aurora boreal com guia especializado, em busca dos melhores céus limpos e escuros para observar as luzes do norte. Retorno ao hotel.",
+    highlight: "A noite mais esperada da viagem.",
   },
   {
     day: "8º Dia",
-    image: museuAthenasImg,
-    imageAlt: "Museu Arqueológico Nacional de Atenas",
-    region: "Atenas",
-    regionEn: "Athens",
-    title: "ATENAS",
+    image: lagoaAzulImg,
+    imageAlt: "Águas termais azul-leitosas entre rochas vulcânicas",
+    region: "Águas Termais",
+    regionEn: "Blue Lagoon",
+    title: "LAGOA AZUL E TERMAS GEOTÉRMICAS",
     description:
-      "Café da manhã. Pela manhã, visita ao Museu Arqueológico de Atenas. À tarde, tempo livre para compras e atividades pessoais. Jantar e pernoite.",
-    highlight: "Tesouros do Museu Arqueológico e tarde livre na capital.",
+      "Manhã dedicada ao relaxamento nas famosas águas termais geotérmicas de tom azul-leitoso, cercadas por campos de lava. Tarde livre em Reykjavík para últimas compras. Jantar de despedida.",
+    highlight: "Relaxamento em águas termais a 39 °C.",
   },
   {
     day: "9º Dia",
-    image: egeuImg,
-    imageAlt: "Voo de retorno sobre o Mediterrâneo",
-    region: "Atenas → São Paulo",
+    image: heroAuroraImg,
+    imageAlt: "Céu noturno com aurora boreal na Islândia",
+    region: "Reykjavík → São Paulo",
     regionEn: "Return",
-    title: "ATENAS / GUARULHOS",
+    title: "REYKJAVÍK / GUARULHOS",
     description:
-      "Após o café da manhã, saída para o aeroporto de Atenas para embarque em voo com destino a São Paulo, fazendo as devidas conexões. Chegada em São Paulo. Fim dos nossos serviços!",
-    highlight: "Memórias eternas da Grécia.",
+      "Após o café da manhã, traslado ao aeroporto para embarque em voo com destino a São Paulo, fazendo as devidas conexões. Chegada em São Paulo. Fim dos nossos serviços!",
+    highlight: "Memórias eternas sob as luzes do norte.",
   },
 ];
 
 const WHATSAPP =
-  "https://api.whatsapp.com/send/?phone=5519988216863&text=Ol%C3%A1!%20Vim%20pela%20landing%20page%20da%20Renova%20Turismo%20e%20tenho%20interesse%20no%20roteiro%20da%20Gr%C3%A9cia.%20Gostaria%20de%20receber%20mais%20informa%C3%A7%C3%B5es%20sobre%20datas%2C%20valores%20e%20disponibilidade.%20Aguardo%20retorno!&type=phone_number&app_absent=0";
+  "https://api.whatsapp.com/send/?phone=5519988216863&text=" +
+  encodeURIComponent(
+    "Olá! Vim pela landing page da Renova Turismo e tenho interesse no roteiro da Aurora Boreal. Gostaria de receber mais informações sobre datas, valores e disponibilidade. Aguardo retorno!"
+  ) +
+  "&type=phone_number&app_absent=0";
 
 const Roteiro = () => {
   const [api, setApi] = useState<CarouselApi>();
@@ -163,11 +156,11 @@ const Roteiro = () => {
             Sua jornada, dia a dia
           </p>
           <h2 className="font-heading uppercase text-3xl md:text-5xl text-primary leading-tight">
-            Roteiro <span className="display-outline-dark">Grécia</span>
+            Roteiro <span className="display-outline-dark">Aurora Boreal</span>
           </h2>
           <div className="w-16 h-px bg-secondary mx-auto mt-6" />
           <p className="font-body text-muted-foreground text-sm md:text-base mt-6 leading-relaxed">
-            9 dias pelos cenários mais marcantes da Grécia: Atenas, Corinto, Micenas, Delfos, Meteora e cruzeiro pelas ilhas gregas.
+            9 dias pelos cenários mais impressionantes da Islândia: Reykjavík, Círculo Dourado, costa sul, lagoa glacial, águas termais e expedição à aurora boreal.
           </p>
         </div>
 
