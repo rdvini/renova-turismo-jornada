@@ -23,7 +23,7 @@ import cardJmjSeul from "@/assets/jmj-seul/jmj-card-cover.jpg.asset.json";
 import cardGrecia from "@/assets/grecia/hero-santorini.jpg";
 import cardTurquiaCapadocia from "@/assets/turquia/capadocia.jpg.asset.json";
 import cardPastorMorelli from "@/assets/pastor-morelli/morelli-1.jpeg.asset.json";
-import cardPastorRozenio from "@/assets/pastor-rozenio/rozenio-1.jpeg.asset.json";
+import cardPastorRozenio from "@/assets/pastor-rozenio/rozenio-cafarnaum.jpeg.asset.json";
 
 export const campaigns: Campaign[] = [
   {
