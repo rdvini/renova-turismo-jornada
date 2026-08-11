@@ -193,4 +193,16 @@ export const campaigns: Campaign[] = [
     badge: "Líderes",
     published: true,
   },
+  {
+    id: "pastor-rozenio",
+    slug: "/pastor-rozenio",
+    title: "Pastor Rozenio",
+    subtitle: "CARAVANAS BÍBLICAS",
+    description:
+      "Viaje com o Pastor Rozenio para Turquia e 7 Igrejas, Israel ou Egito e Jordânia — caravanas bíblicas com a organização da Renova Turismo.",
+    image: cardPastorRozenio.url,
+    date: "Datas sob consulta",
+    badge: "Líderes",
+    published: true,
+  },
 ];
