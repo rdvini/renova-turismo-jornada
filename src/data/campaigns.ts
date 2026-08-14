@@ -25,7 +25,7 @@ import cardGrecia from "@/assets/grecia/hero-santorini.jpg";
 import cardAurora from "@/assets/aurora-boreal/hero-aurora.jpg";
 import cardTurquiaCapadocia from "@/assets/turquia/capadocia.jpg.asset.json";
 import cardPastorMorelli from "@/assets/pastor-morelli/morelli-1.jpeg.asset.json";
-import cardPastorRozenio from "@/assets/pastor-rozenio/rozenio-1.jpeg.asset.json";
+import cardPastorRozenio from "@/assets/pastor-rozenio/rozenio-efeso.jpeg.asset.json";
 
 export const campaigns: Campaign[] = [
   {
