@@ -12,6 +12,7 @@ export interface Campaign {
   date: string;
   badge?: string;
   published?: boolean;
+  imagePosition?: string;
 }
 
 import heroTurkiye from "@/assets/padre-leudo/hero-turkiye.webp";
@@ -24,7 +25,7 @@ import cardGrecia from "@/assets/grecia/hero-santorini.jpg";
 import cardAurora from "@/assets/aurora-boreal/hero-aurora.jpg";
 import cardTurquiaCapadocia from "@/assets/turquia/capadocia.jpg.asset.json";
 import cardPastorMorelli from "@/assets/pastor-morelli/morelli-1.jpeg.asset.json";
-import cardPastorRozenio from "@/assets/pastor-rozenio/rozenio-cafarnaum.jpeg.asset.json";
+import cardPastorRozenio from "@/assets/pastor-rozenio/rozenio-efeso.jpeg.asset.json";
 
 export const campaigns: Campaign[] = [
   {
@@ -169,7 +170,7 @@ export const campaigns: Campaign[] = [
     image: cardAurora,
     date: "Datas sob consulta",
     badge: "Experiência",
-    published: true,
+    published: false,
   },
   {
     id: "lideres",
@@ -215,6 +216,7 @@ export const campaigns: Campaign[] = [
     description:
       "Viaje com o Pastor Rozenio para Turquia e 7 Igrejas, Israel ou Egito e Jordânia — caravanas bíblicas com a organização da Renova Turismo.",
     image: cardPastorRozenio.url,
+    imagePosition: "center 50%",
     date: "Datas sob consulta",
     badge: "Líderes",
     published: true,
