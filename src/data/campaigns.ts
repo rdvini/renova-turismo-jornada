@@ -216,7 +216,7 @@ export const campaigns: Campaign[] = [
     description:
       "Viaje com o Pastor Rozenio para Turquia e 7 Igrejas, Israel ou Egito e Jordânia — caravanas bíblicas com a organização da Renova Turismo.",
     image: cardPastorRozenio.url,
-    imagePosition: "center 30%",
+    imagePosition: "center 50%",
     date: "Datas sob consulta",
     badge: "Líderes",
     published: true,
