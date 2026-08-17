@@ -21,7 +21,7 @@ const QuemSou = () => {
             Quem sou?
           </h2>
           <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed">
-            Sou o Pastor Marcos Rozenio, casado com Rosângela Siqueira, pai de três filhos, avô e pastor há 25 anos, liderando a Igreja OBPCST há mais de duas décadas. Apaixonado por servir a Deus e ensinar Sua Palavra, já peregrinei a Israel 15 vezes, experiência que fortaleceu minha fé e aprofundou meu conhecimento das Escrituras. Há 12 anos caminho em parceria com a Renova Turismo, conduzindo pessoas em jornadas de transformação espiritual. Também participei de viagens missionárias e visitas a diversos países, como Egito, Turquia, Haiti e nações da África, levando a mensagem do Evangelho e ampliando minha visão do Reino de Deus.
+            Sou o Pastor Marcos Rozenio, casado com Rosângela Siqueira, pai de três filhos, avô e pastor há 25 anos, liderando a Igreja OBPCST há mais de duas décadas. Apaixonado por servir a Deus e ensinar Sua Palavra, já estive em Israel 15 vezes, experiência que fortaleceu minha fé e aprofundou meu conhecimento das Escrituras. Há 12 anos caminho em parceria com a Renova Turismo, conduzindo grupos evangélicos em viagens de estudo bíblico e edificação. Também participei de viagens missionárias e visitas a diversos países, como Egito, Turquia, Haiti e nações da África, levando a mensagem do Evangelho e ampliando minha visão do Reino de Deus.
           </p>
         </div>
 
