@@ -98,7 +98,7 @@ const presetLabel = (p: Preset): string => {
     case "todayYesterday":
       return "Hoje e ontem";
     case "lastDays":
-      return `${p.days}d`;
+      return p.days >= 365 ? "Tudo" : `${p.days}d`;
     case "custom":
       return `${format(ymdToDate(p.from), "dd/MM/yy")} – ${format(ymdToDate(p.to), "dd/MM/yy")}`;
   }
