@@ -6,7 +6,7 @@ import logoRenova from "@/assets/logo-renova.svg";
 const WHATSAPP_URL =
   "https://wa.me/19991813303?text=" +
   encodeURIComponent(
-    "Olá, Pastor Morelli! 🙏\n\nVim pela sua página de caravanas bíblicas da Renova Turismo e gostaria de receber mais informações sobre as próximas viagens (datas, valores e o que está incluso).\n\nFico no aguardo do seu retorno!"
+    "Olá, Pastor Rozenio! 🙏\n\nVim pela sua página de caravanas evangélicas da Renova Turismo e gostaria de receber mais informações sobre as próximas viagens (datas, valores e o que está incluso).\n\nFico no aguardo do seu retorno!"
   );
 
 const navLinks = [

@@ -7,7 +7,7 @@ const VIDEO_ID = "9pKBcsy7DXY";
 const WHATSAPP_URL =
   "https://wa.me/19991813303?text=" +
   encodeURIComponent(
-    "Olá, Pastor Marcos Rozenio! 🙏\n\nAssisti seu vídeo na página das caravanas bíblicas da Renova Turismo e gostaria de receber mais informações sobre as próximas viagens (datas, valores e o que está incluso).\n\nFico no aguardo do seu retorno!"
+    "Olá, Pastor Marcos Rozenio! 🙏\n\nAssisti seu vídeo na página das caravanas evangélicas da Renova Turismo e gostaria de receber mais informações sobre as próximas viagens (datas, valores e o que está incluso).\n\nFico no aguardo do seu retorno!"
   );
 
 const QuemSou = () => {
@@ -21,7 +21,7 @@ const QuemSou = () => {
             Quem sou?
           </h2>
           <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed">
-            Sou o Pastor Marcos Rozenio, casado com Rosângela Siqueira, pai de três filhos, avô e pastor há 25 anos, liderando a Igreja OBPCST há mais de duas décadas. Apaixonado por servir a Deus e ensinar Sua Palavra, já peregrinei a Israel 15 vezes, experiência que fortaleceu minha fé e aprofundou meu conhecimento das Escrituras. Há 12 anos caminho em parceria com a Renova Turismo, conduzindo pessoas em jornadas de transformação espiritual. Também participei de viagens missionárias e visitas a diversos países, como Egito, Turquia, Haiti e nações da África, levando a mensagem do Evangelho e ampliando minha visão do Reino de Deus.
+            Sou o Pastor Marcos Rozenio, casado com Rosângela Siqueira, pai de três filhos, avô e pastor há 25 anos, liderando a Igreja OBPCST há mais de duas décadas. Apaixonado por servir a Deus e ensinar Sua Palavra, já estive em Israel 15 vezes, experiência que fortaleceu minha fé e aprofundou meu conhecimento das Escrituras. Há 12 anos caminho em parceria com a Renova Turismo, conduzindo grupos evangélicos em viagens de estudo bíblico e edificação. Também participei de viagens missionárias e visitas a diversos países, como Egito, Turquia, Haiti e nações da África, levando a mensagem do Evangelho e ampliando minha visão do Reino de Deus.
           </p>
         </div>
 
@@ -55,18 +55,18 @@ const QuemSou = () => {
             <div className="flex items-center gap-2 mb-2 px-1">
               <Award className="text-secondary" size={18} />
               <span className="font-heading text-xs md:text-sm font-bold uppercase tracking-wider text-secondary">
-                Certificado de Peregrino
+                Reconhecimento Oficial
               </span>
             </div>
             <img
               src={certificadoPeregrino.url}
-              alt="Certificado de Peregrino emitido pelo Ministério do Turismo de Israel a Marcos Rozenio de Souza"
+              alt="Certificado emitido pelo Ministério do Turismo de Israel a Marcos Rozenio de Souza"
               className="w-full h-auto rounded-lg object-contain bg-white"
               loading="lazy"
             />
             <p className="font-body text-xs text-muted-foreground text-center mt-3 px-2">
-              Reconhecido pelo Ministério do Turismo de Israel como{" "}
-              <strong className="text-primary">Peregrino de Jerusalém</strong>.
+              Certificado oficial emitido pelo{" "}
+              <strong className="text-primary">Ministério do Turismo de Israel</strong>.
             </p>
           </div>
         </div>

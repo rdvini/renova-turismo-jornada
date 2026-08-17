@@ -19,8 +19,8 @@ const PastorRozenio = () => {
     <div className="min-h-screen bg-background">
       <MetaPixel contentName="Pastor Rozenio" contentCategory="Lideres" />
       <Seo
-        title="Pastor Rozenio | Caravanas Bíblicas | Renova Turismo"
-        description="Viaje com o Pastor Rozenio para Turquia e 7 Igrejas, Israel ou Egito e Jordânia — caravanas bíblicas com a organização da Renova Turismo."
+        title="Pastor Rozenio | Caravanas Evangélicas | Renova Turismo"
+        description="Viaje com o Pastor Rozenio para Turquia e 7 Igrejas, Israel ou Egito e Jordânia — caravanas evangélicas com a organização da Renova Turismo."
         path="/pastor-rozenio"
       />
       <Navbar />

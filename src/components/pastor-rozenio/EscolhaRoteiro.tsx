@@ -17,35 +17,35 @@ const ROTEIROS = [
     id: "turquia",
     title: "Turquia e 7 Igrejas",
     subtitle: "Os passos do Apóstolo Paulo",
-    description: "Roteiros ligados ao Novo Testamento, às primeiras comunidades cristãs e às Sete Igrejas do Apocalipse.",
+    description: "Roteiros ligados ao Novo Testamento, às primeiras igrejas evangélicas e às Sete Igrejas do Apocalipse.",
     image: imgTurquia,
   },
   {
     id: "israel",
     title: "Israel",
-    subtitle: "Terra Santa, raízes da fé",
-    description: "Uma experiência nos lugares centrais da história bíblica, conectando fé, geografia e espiritualidade.",
+    subtitle: "Terra da Bíblia, raízes da fé",
+    description: "Uma experiência nos lugares centrais da história bíblica, conectando a Palavra, a geografia e o ensino evangélico.",
     image: imgIsrael,
   },
   {
     id: "egito-jordania",
     title: "Egito e Jordânia",
     subtitle: "Do Êxodo a Petra",
-    description: "Uma jornada pelos cenários que moldaram a história bíblica, revelando as raízes espirituais, culturais e geográficas do povo de Israel.",
+    description: "Uma jornada pelos cenários que moldaram a história bíblica, revelando as raízes culturais e geográficas do povo de Israel.",
     image: imgEgitoJordania,
   },
   {
     id: "grecia",
     title: "Grécia",
-    subtitle: "Berço da fé cristã",
-    description: "Uma jornada por lugares ligados à expansão da fé cristã e à história do mundo bíblico.",
+    subtitle: "Onde o Evangelho se expandiu",
+    description: "Uma jornada por lugares ligados à expansão do Evangelho e à história das primeiras igrejas.",
     image: imgGrecia,
   },
   {
     id: "europa",
     title: "Europa",
-    subtitle: "Caminhos da história cristã",
-    description: "Roteiros históricos, culturais e religiosos que ampliam a compreensão da fé, da igreja e da história cristã.",
+    subtitle: "Caminhos da Reforma",
+    description: "Roteiros históricos e culturais que ampliam a compreensão da Bíblia, da igreja evangélica e da Reforma Protestante.",
     image: imgEuropa,
   },
 ];
@@ -56,8 +56,8 @@ const EscolhaRoteiro = () => {
   const buildWhats = () => {
     const escolhido = ROTEIROS.find((r) => r.id === selected);
     const msg = escolhido
-      ? `Olá, Pastor Rozenio! 🙏\n\nVim pela sua página de caravanas bíblicas da Renova Turismo e tenho muito interesse no roteiro *${escolhido.title}* (${escolhido.subtitle}).\n\nPoderia me enviar mais informações sobre datas, valores e o que está incluso?\n\nFico no aguardo!`
-      : `Olá, Pastor Rozenio! 🙏\n\nVim pela sua página de caravanas bíblicas da Renova Turismo e gostaria de conhecer melhor os roteiros disponíveis. Poderia me enviar mais detalhes sobre datas, valores e o que está incluso?\n\nFico no aguardo!`;
+      ? `Olá, Pastor Rozenio! 🙏\n\nVim pela sua página de caravanas evangélicas da Renova Turismo e tenho muito interesse no roteiro *${escolhido.title}* (${escolhido.subtitle}).\n\nPoderia me enviar mais informações sobre datas, valores e o que está incluso?\n\nFico no aguardo!`
+      : `Olá, Pastor Rozenio! 🙏\n\nVim pela sua página de caravanas evangélicas da Renova Turismo e gostaria de conhecer melhor os roteiros disponíveis. Poderia me enviar mais detalhes sobre datas, valores e o que está incluso?\n\nFico no aguardo!`;
     return WHATSAPP_BASE + encodeURIComponent(msg);
   };
 
