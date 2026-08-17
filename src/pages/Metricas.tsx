@@ -98,7 +98,7 @@ const presetLabel = (p: Preset): string => {
     case "todayYesterday":
       return "Hoje e ontem";
     case "lastDays":
-      return `${p.days}d`;
+      return p.days >= 365 ? "Tudo" : `${p.days}d`;
     case "custom":
       return `${format(ymdToDate(p.from), "dd/MM/yy")} – ${format(ymdToDate(p.to), "dd/MM/yy")}`;
   }
@@ -308,6 +308,7 @@ const Metricas = () => {
                   { key: "7", label: "7d", p: { kind: "lastDays", days: 7 } as Preset },
                   { key: "30", label: "30d", p: { kind: "lastDays", days: 30 } as Preset },
                   { key: "90", label: "90d", p: { kind: "lastDays", days: 90 } as Preset },
+                  { key: "365", label: "Tudo", p: { kind: "lastDays", days: 365 } as Preset },
                 ]
               ).map((opt) => {
                 const active =
