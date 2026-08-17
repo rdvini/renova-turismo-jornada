@@ -35,7 +35,7 @@ const SobreViagem = () => {
               {
                 icon: Calendar,
                 label: "Quando",
-                value: "Datas sob consulta",
+                value: "22 de Fevereiro a 05 de Março de 2027",
               },
               {
                 icon: MapPin,
