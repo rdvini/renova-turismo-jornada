@@ -17,13 +17,13 @@ const ROTEIROS = [
     id: "turquia",
     title: "Turquia e 7 Igrejas",
     subtitle: "Os passos do Apóstolo Paulo",
-    description: "Roteiros ligados ao Novo Testamento, às primeiras comunidades cristãs e às Sete Igrejas do Apocalipse.",
+    description: "Roteiros ligados ao Novo Testamento, às primeiras igrejas do Evangelho e às Sete Igrejas do Apocalipse.",
     image: imgTurquia,
   },
   {
     id: "israel",
     title: "Israel",
-    subtitle: "Terra Santa, raízes da fé",
+    subtitle: "Terra da Bíblia, raízes da fé",
     description: "Uma experiência nos lugares centrais da história bíblica, conectando fé, geografia e espiritualidade.",
     image: imgIsrael,
   },
@@ -37,15 +37,16 @@ const ROTEIROS = [
   {
     id: "grecia",
     title: "Grécia",
-    subtitle: "Berço da fé cristã",
-    description: "Uma jornada por lugares ligados à expansão da fé cristã e à história do mundo bíblico.",
+    subtitle: "Caminhos do Evangelho",
+    description: "Uma jornada por lugares ligados à expansão do Evangelho e à história do mundo bíblico.",
     image: imgGrecia,
   },
   {
     id: "europa",
     title: "Europa",
-    subtitle: "Caminhos da história cristã",
-    description: "Roteiros históricos, culturais e religiosos que ampliam a compreensão da fé, da igreja e da história cristã.",
+    subtitle: "Caminhos da Reforma",
+    description: "Roteiros históricos, culturais e bíblicos que ampliam a compreensão da fé, da igreja e da história da Reforma.",
+
     image: imgEuropa,
   },
 ];
@@ -56,8 +57,8 @@ const EscolhaRoteiro = () => {
   const buildWhats = () => {
     const escolhido = ROTEIROS.find((r) => r.id === selected);
     const msg = escolhido
-      ? `Olá, Pastor Morelli! 🙏\n\nVim pela sua página de caravanas bíblicas da Renova Turismo e tenho muito interesse no roteiro *${escolhido.title}* (${escolhido.subtitle}).\n\nPoderia me enviar mais informações sobre datas, valores e o que está incluso?\n\nFico no aguardo!`
-      : `Olá, Pastor Morelli! 🙏\n\nVim pela sua página de caravanas bíblicas da Renova Turismo e gostaria de conhecer melhor os roteiros disponíveis. Poderia me enviar mais detalhes sobre datas, valores e o que está incluso?\n\nFico no aguardo!`;
+      ? `Olá, Pastor Morelli! 🙏\n\nVim pela sua página de caravanas evangélicas da Renova Turismo e tenho muito interesse no roteiro *${escolhido.title}* (${escolhido.subtitle}).\n\nPoderia me enviar mais informações sobre datas, valores e o que está incluso?\n\nFico no aguardo!`
+      : `Olá, Pastor Morelli! 🙏\n\nVim pela sua página de caravanas evangélicas da Renova Turismo e gostaria de conhecer melhor os roteiros disponíveis. Poderia me enviar mais detalhes sobre datas, valores e o que está incluso?\n\nFico no aguardo!`;
     return WHATSAPP_BASE + encodeURIComponent(msg);
   };
 

@@ -36,7 +36,7 @@ const PAGE_MESSAGE: Record<string, string> = {
   "/portugal": "Olá! Gostaria de mais informações sobre a peregrinação a Portugal.",
   "/lideres-catolicos": "Olá! Sou líder católico e gostaria de saber mais sobre as caravanas da Renova Turismo.",
   "/lideres-evangelicos": "Olá! Sou líder evangélico e gostaria de saber mais sobre as caravanas da Renova Turismo.",
-  "/pastor-morelli": "Olá, Pastor Morelli! Gostaria de mais informações sobre as caravanas às Terras Bíblicas.",
+  "/pastor-morelli": "Olá, Pastor Morelli! Gostaria de mais informações sobre as caravanas evangélicas às Terras Bíblicas.",
   "/pastor-rozenio": "Olá, Pastor Rozenio! Gostaria de mais informações sobre as caravanas evangélicas (Israel, Turquia, Grécia e outros destinos).",
   "/leste-europeu": "Olá! Gostaria de mais informações sobre a viagem ao Leste Europeu.",
   "/marrocos": "Olá! Gostaria de mais informações sobre a viagem ao Marrocos.",

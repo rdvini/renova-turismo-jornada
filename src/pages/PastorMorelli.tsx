@@ -19,8 +19,9 @@ const PastorMorelli = () => {
     <div className="min-h-screen bg-background">
       <MetaPixel contentName="Pastor Morelli" contentCategory="Lideres" />
       <Seo
-        title="Pastor Morelli | Caravanas Bíblicas | Renova Turismo"
-        description="Viaje com o Pastor Morelli para Turquia e 7 Igrejas, Israel ou Egito e Jordânia — caravanas bíblicas com a organização da Renova Turismo."
+        title="Pastor Morelli | Caravanas Evangélicas | Renova Turismo"
+        description="Viaje com o Pastor Morelli para Turquia e 7 Igrejas, Israel ou Egito e Jordânia — caravanas evangélicas com a organização da Renova Turismo."
+
         path="/pastor-morelli"
       />
       <Navbar />
