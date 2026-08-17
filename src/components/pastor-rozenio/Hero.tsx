@@ -52,7 +52,7 @@ const Hero = () => {
               Conheça as <span className="text-secondary">Terras Bíblicas</span> com profundidade, segurança e propósito
             </h1>
             <p className="font-body text-base md:text-lg text-primary-foreground/85 max-w-xl mx-auto lg:mx-0 mb-8 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-              Viaje por Israel, Turquia, Grécia, Egito, Jordânia e outros destinos históricos com Marco Rozenio.
+              Viaje por Israel, Turquia, Grécia, Egito, Jordânia e outros destinos históricos com Pastor Marcos Rozenio.
             </p>
             <a
               href={WHATSAPP_URL}
