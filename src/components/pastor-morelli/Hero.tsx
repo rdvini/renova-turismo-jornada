@@ -16,11 +16,12 @@ const WHATSAPP_URL =
 
 const PHOTOS: { src?: string; alt: string }[] = [
   { src: morelli1.url, alt: "Pastor Morelli ensinando nas Terras Bíblicas" },
-  { src: morelli2.url, alt: "Pastor Morelli com peregrina durante a viagem" },
+  { src: morelli2.url, alt: "Pastor Morelli com participante durante a viagem" },
   { src: morelli3.url, alt: "Grupo Renova no Caesarea National Park, Israel" },
   { src: morelli4.url, alt: "Pastor Morelli com vista panorâmica de Jerusalém ao pôr do sol" },
   { src: morelli5.url, alt: "Grupo Renova no Monte Precipício, em Israel" },
-  { src: morelli6.url, alt: "Peregrinos com certificados de participação na caravana bíblica" },
+  { src: morelli6.url, alt: "Participantes com certificados da caravana bíblica" },
+
 ];
 
 const VIDEO_ID = "3Hy5ZWC4cNo";
