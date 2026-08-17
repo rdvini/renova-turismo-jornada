@@ -17,13 +17,13 @@ const ROTEIROS = [
     id: "turquia",
     title: "Turquia e 7 Igrejas",
     subtitle: "Os passos do Apóstolo Paulo",
-    description: "Roteiros ligados ao Novo Testamento, às primeiras comunidades cristãs e às Sete Igrejas do Apocalipse.",
+    description: "Roteiros ligados ao Novo Testamento, às primeiras igrejas do Evangelho e às Sete Igrejas do Apocalipse.",
     image: imgTurquia,
   },
   {
     id: "israel",
     title: "Israel",
-    subtitle: "Terra Santa, raízes da fé",
+    subtitle: "Terra da Bíblia, raízes da fé",
     description: "Uma experiência nos lugares centrais da história bíblica, conectando fé, geografia e espiritualidade.",
     image: imgIsrael,
   },
@@ -37,15 +37,16 @@ const ROTEIROS = [
   {
     id: "grecia",
     title: "Grécia",
-    subtitle: "Berço da fé cristã",
-    description: "Uma jornada por lugares ligados à expansão da fé cristã e à história do mundo bíblico.",
+    subtitle: "Caminhos do Evangelho",
+    description: "Uma jornada por lugares ligados à expansão do Evangelho e à história do mundo bíblico.",
     image: imgGrecia,
   },
   {
     id: "europa",
     title: "Europa",
-    subtitle: "Caminhos da história cristã",
-    description: "Roteiros históricos, culturais e religiosos que ampliam a compreensão da fé, da igreja e da história cristã.",
+    subtitle: "Caminhos da Reforma",
+    description: "Roteiros históricos, culturais e bíblicos que ampliam a compreensão da fé, da igreja e da história da Reforma.",
+
     image: imgEuropa,
   },
 ];
