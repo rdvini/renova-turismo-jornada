@@ -308,6 +308,7 @@ const Metricas = () => {
                   { key: "7", label: "7d", p: { kind: "lastDays", days: 7 } as Preset },
                   { key: "30", label: "30d", p: { kind: "lastDays", days: 30 } as Preset },
                   { key: "90", label: "90d", p: { kind: "lastDays", days: 90 } as Preset },
+                  { key: "365", label: "Tudo", p: { kind: "lastDays", days: 365 } as Preset },
                 ]
               ).map((opt) => {
                 const active =
