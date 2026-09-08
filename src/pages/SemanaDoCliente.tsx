@@ -24,7 +24,7 @@ const highlights = [
   {
     icon: CalendarDays,
     title: "Bônus e brindes na compra",
-    description: "Durante estes dois dias, ganhará além de descontos, brindes exclusivos",
+    description: "Quem fechar um pacote, durante estes dois dias, ganhará além de descontos, brindes exclusivos",
   },
 ];
 
