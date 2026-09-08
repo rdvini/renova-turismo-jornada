@@ -129,7 +129,7 @@ const Hero = () => {
           <span className="block text-white">na Renova Turismo</span>
         </h1>
 
-        <p className="font-body text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+        <p className="font-body text-lg md:text-xl lg:text-2xl font-medium text-primary-foreground max-w-2xl mx-auto mb-10 animate-fade-in-up bg-black/35 backdrop-blur-sm px-6 py-5 rounded-2xl shadow-xl" style={{ animationDelay: "0.2s", textShadow: "0 2px 12px rgba(0,0,0,0.5)" }}>
           Nos dias 15 e 16 de setembro, a Renova Turismo vai abrir as portas para receber você em dois dias muito especiais.
         </p>
 
