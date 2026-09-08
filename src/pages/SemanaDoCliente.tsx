@@ -231,7 +231,7 @@ const Highlights = () => {
   );
 };
 
-const GiftHighlight = () => {
+const GiftHighlight = ({ onRsvp }: { onRsvp: () => void }) => {
   return (
     <section className="py-20 md:py-28 bg-primary relative overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" aria-hidden="true" />
@@ -248,22 +248,22 @@ const GiftHighlight = () => {
           <p className="font-body text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-10">
             Quem já fez parte de alguma das nossas viagens terá uma surpresa exclusiva esperando por aqui. É a nossa forma de agradecer pela confiança.
           </p>
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            type="button"
+            onClick={onRsvp}
             className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-bold text-base px-8 py-4 rounded-full transition-all hover:scale-105 shadow-lg"
           >
             Quero participar
             <ArrowRight size={18} />
-          </a>
+          </button>
+
         </div>
       </div>
     </section>
   );
 };
 
-const Location = () => {
+const Location = ({ onRsvp }: { onRsvp: () => void }) => {
   return (
     <section id="localizacao" className="py-20 md:py-28 bg-background">
       <div className="container mx-auto px-4">
@@ -305,20 +305,31 @@ const Location = () => {
                   </div>
                   <div>
                     <h3 className="font-heading text-base font-bold text-foreground mb-1">Confirme sua presença</h3>
-                    <p className="font-body text-sm text-muted-foreground">Envie uma mensagem pelo WhatsApp e avise que vai passar por aqui.</p>
+                    <p className="font-body text-sm text-muted-foreground">Responda em 10 segundos aqui na página e já entra na nossa lista.</p>
                   </div>
                 </div>
               </div>
 
-              <a
-                href={MAPS_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-bold text-base px-8 py-4 rounded-full transition-all hover:scale-105 shadow-lg"
-              >
-                <MapPin size={20} />
-                Saiba como chegar
-              </a>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href={MAPS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-bold text-base px-8 py-4 rounded-full transition-all hover:scale-105 shadow-lg"
+                >
+                  <MapPin size={20} />
+                  Saiba como chegar
+                </a>
+                <button
+                  type="button"
+                  onClick={onRsvp}
+                  className="inline-flex items-center justify-center gap-2 border-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground font-heading font-bold text-base px-8 py-4 rounded-full transition-all hover:scale-105"
+                >
+                  <Phone size={20} />
+                  Confirmar presença
+                </button>
+              </div>
+
             </div>
 
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-border aspect-[4/3] lg:aspect-auto lg:h-[520px]">
