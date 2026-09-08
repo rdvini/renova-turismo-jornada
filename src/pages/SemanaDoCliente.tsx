@@ -350,9 +350,13 @@ const Location = ({ onRsvp }: { onRsvp: () => void }) => {
 };
 
 const SemanaDoCliente = () => {
+  const [rsvpOpen, setRsvpOpen] = useState(false);
+  const openRsvp = () => setRsvpOpen(true);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
 
   return (
     <div className="min-h-screen bg-background">
