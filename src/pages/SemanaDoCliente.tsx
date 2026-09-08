@@ -28,8 +28,9 @@ const highlights = [
   },
 ];
 
-const Navbar = () => {
+const Navbar = ({ onRsvp }: { onRsvp: () => void }) => {
   const [open, setOpen] = useState(false);
+
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-primary/90 backdrop-blur-md border-b border-primary-foreground/10">
@@ -52,14 +53,14 @@ const Navbar = () => {
               {item.label}
             </a>
           ))}
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            type="button"
+            onClick={onRsvp}
             className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-semibold text-sm px-5 py-2.5 rounded-full transition-all hover:scale-105 shadow-md"
           >
             Confirmar presença
-          </a>
+          </button>
+
         </nav>
 
         <button
@@ -89,15 +90,17 @@ const Navbar = () => {
                 {item.label}
               </a>
             ))}
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setOpen(false)}
+            <button
+              type="button"
+              onClick={() => {
+                setOpen(false);
+                onRsvp();
+              }}
               className="inline-flex items-center justify-center gap-2 bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-semibold text-sm px-5 py-3 rounded-full transition-all mt-2"
             >
               Confirmar presença
-            </a>
+            </button>
+
           </nav>
         </div>
       )}
