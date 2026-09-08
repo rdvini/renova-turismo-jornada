@@ -23,6 +23,7 @@ const PAGE_WHATSAPP: Record<string, string> = {
   "/jmj-seul-2027": "5519998974721",
   "/grecia": "5519988216863",
   "/aurora-boreal": "5519988216863",
+  "/semana-do-cliente": "5519994718930",
 };
 
 // Mensagem específica por rota
@@ -43,6 +44,7 @@ const PAGE_MESSAGE: Record<string, string> = {
   "/jmj-seul-2027": "Olá! Gostaria de mais informações sobre a peregrinação à JMJ Seul 2027.",
   "/grecia": "Olá! Gostaria de mais informações sobre a viagem à Grécia.",
   "/aurora-boreal": "Olá! Gostaria de mais informações sobre a viagem para ver a Aurora Boreal.",
+  "/semana-do-cliente": "Olá! Gostaria de confirmar minha presença na Semana do Cliente da Renova Turismo.",
 };
 
 const DEFAULT_PHONE = "5519994718930";
