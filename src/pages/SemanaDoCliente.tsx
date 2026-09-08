@@ -268,7 +268,7 @@ const GiftHighlight = () => {
   );
 };
 
-const Location = ({ onRsvp }: { onRsvp: () => void }) => {
+const Location = () => {
   return (
     <section id="localizacao" className="py-20 md:py-28 bg-background">
       <div className="container mx-auto px-4">
@@ -310,7 +310,7 @@ const Location = ({ onRsvp }: { onRsvp: () => void }) => {
                   </div>
                   <div>
                     <h3 className="font-heading text-base font-bold text-foreground mb-1">Confirme sua presença</h3>
-                    <p className="font-body text-sm text-muted-foreground">Responda em 10 segundos aqui na página e já entra na nossa lista.</p>
+                    <p className="font-body text-sm text-muted-foreground">Clique no botão e confirme sua presença pelo WhatsApp da Fabiola.</p>
                   </div>
                 </div>
               </div>
@@ -325,14 +325,15 @@ const Location = ({ onRsvp }: { onRsvp: () => void }) => {
                   <MapPin size={20} />
                   Saiba como chegar
                 </a>
-                <button
-                  type="button"
-                  onClick={onRsvp}
+                <a
+                  href={RSVP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 border-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground font-heading font-bold text-base px-8 py-4 rounded-full transition-all hover:scale-105"
                 >
                   <Phone size={20} />
                   Confirmar presença
-                </button>
+                </a>
               </div>
 
             </div>
