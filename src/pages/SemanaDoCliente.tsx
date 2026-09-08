@@ -31,7 +31,7 @@ const highlights = [
   },
 ];
 
-const Navbar = ({ onRsvp }: { onRsvp: () => void }) => {
+const Navbar = () => {
   const [open, setOpen] = useState(false);
 
 
@@ -56,13 +56,14 @@ const Navbar = ({ onRsvp }: { onRsvp: () => void }) => {
               {item.label}
             </a>
           ))}
-          <button
-            type="button"
-            onClick={onRsvp}
+          <a
+            href={RSVP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-semibold text-sm px-5 py-2.5 rounded-full transition-all hover:scale-105 shadow-md"
           >
             Confirmar presença
-          </button>
+          </a>
 
         </nav>
 
@@ -93,16 +94,15 @@ const Navbar = ({ onRsvp }: { onRsvp: () => void }) => {
                 {item.label}
               </a>
             ))}
-            <button
-              type="button"
-              onClick={() => {
-                setOpen(false);
-                onRsvp();
-              }}
+            <a
+              href={RSVP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setOpen(false)}
               className="inline-flex items-center justify-center gap-2 bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-semibold text-sm px-5 py-3 rounded-full transition-all mt-2"
             >
               Confirmar presença
-            </button>
+            </a>
 
           </nav>
         </div>
