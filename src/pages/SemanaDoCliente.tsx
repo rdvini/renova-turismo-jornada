@@ -19,12 +19,12 @@ const highlights = [
   {
     icon: Gift,
     title: "Presente para quem é cliente",
-    description: "Quem já viajou com a Renova Turismo levará um brinde exclusivo de agradecimento.",
+    description: "Quem já é cliente receberá um presente.",
   },
   {
     icon: CalendarDays,
     title: "Bônus e brindes na compra",
-    description: "Quem fechar um pacote durante a Semana do Cliente ganha benefícios extras e surpresas.",
+    description: "Durante estes dois dias, ganhará além de descontos, brindes exclusivos",
   },
 ];
 
