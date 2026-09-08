@@ -23,6 +23,7 @@ const PAGE_WHATSAPP: Record<string, string> = {
   "/jmj-seul-2027": "5519998974721",
   "/grecia": "5519988216863",
   "/aurora-boreal": "5519988216863",
+  "/semana-do-cliente": "5519994718930",
 };
 
 // Mensagem específica por rota
