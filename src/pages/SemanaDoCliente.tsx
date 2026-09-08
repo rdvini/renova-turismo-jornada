@@ -109,8 +109,8 @@ const Hero = () => {
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <img
-        src={heroImage}
-        alt="Ambiente acolhedor da agência Renova Turismo preparado para receber os clientes"
+        src={heroImageAsset.url}
+        alt="Fachada da agência Renova Turismo em Campinas"
         fetchPriority="high"
         decoding="async"
         width={1920}
