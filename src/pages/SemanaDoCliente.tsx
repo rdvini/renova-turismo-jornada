@@ -111,7 +111,7 @@ const Navbar = () => {
   );
 };
 
-const Hero = ({ onRsvp }: { onRsvp: () => void }) => {
+const Hero = () => {
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <img
@@ -123,7 +123,7 @@ const Hero = ({ onRsvp }: { onRsvp: () => void }) => {
         height={1080}
         className="absolute inset-0 w-full h-full object-cover"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/50 to-primary/80" />
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/85 via-primary/65 to-primary/90" />
 
       <div className="relative z-10 container mx-auto px-4 pt-24 md:pt-32 pb-16 text-center">
         <span className="inline-flex items-center gap-2 bg-secondary/20 backdrop-blur-sm border border-secondary/30 text-white font-heading font-bold text-xs md:text-sm uppercase tracking-widest px-4 py-2 rounded-full mb-6 animate-fade-in-up">
@@ -136,7 +136,7 @@ const Hero = ({ onRsvp }: { onRsvp: () => void }) => {
           <span className="block text-white">na Renova Turismo</span>
         </h1>
 
-        <p className="font-body text-lg md:text-xl lg:text-2xl font-medium text-primary-foreground max-w-2xl mx-auto mb-10 animate-fade-in-up bg-black/35 backdrop-blur-sm px-6 py-5 rounded-2xl shadow-xl" style={{ animationDelay: "0.2s", textShadow: "0 2px 12px rgba(0,0,0,0.5)" }}>
+        <p className="font-body text-lg md:text-xl lg:text-2xl font-medium text-primary-foreground max-w-2xl mx-auto mb-10 animate-fade-in-up bg-black/40 backdrop-blur-sm px-6 py-5 rounded-2xl shadow-xl" style={{ animationDelay: "0.2s", textShadow: "0 2px 12px rgba(0,0,0,0.5)" }}>
           Nos dias 15 e 16 de setembro, a Renova Turismo vai abrir as portas para receber você em dois dias muito especiais.
         </p>
 
@@ -148,14 +148,15 @@ const Hero = ({ onRsvp }: { onRsvp: () => void }) => {
             <MapPin size={20} />
             Saiba como chegar
           </a>
-          <button
-            type="button"
-            onClick={onRsvp}
+          <a
+            href={RSVP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-primary-foreground text-primary font-heading font-bold text-base px-8 py-4 rounded-full transition-all hover:scale-105 shadow-lg hover:bg-primary-foreground/90"
           >
             <Phone size={20} />
             Confirmar presença
-          </button>
+          </a>
 
         </div>
       </div>
