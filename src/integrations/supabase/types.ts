@@ -41,6 +41,33 @@ export type Database = {
         }
         Relationships: []
       }
+      event_rsvps: {
+        Row: {
+          created_at: string
+          evento: string
+          id: string
+          nome: string
+          resposta: string
+          telefone: string
+        }
+        Insert: {
+          created_at?: string
+          evento?: string
+          id?: string
+          nome: string
+          resposta: string
+          telefone: string
+        }
+        Update: {
+          created_at?: string
+          evento?: string
+          id?: string
+          nome?: string
+          resposta?: string
+          telefone?: string
+        }
+        Relationships: []
+      }
       whatsapp_clicks: {
         Row: {
           created_at: string
