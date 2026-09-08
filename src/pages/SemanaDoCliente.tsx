@@ -388,13 +388,15 @@ const SemanaDoCliente = () => {
         description="Nos dias 15 e 16 de setembro a Renova Turismo abre as portas para um evento especial com descontos, presentes e brindes exclusivos para clientes."
         path="/semana-do-cliente"
       />
-      <Navbar />
-      <Hero />
+      <Navbar onRsvp={openRsvp} />
+      <Hero onRsvp={openRsvp} />
       <Intro />
       <Highlights />
-      <GiftHighlight />
-      <Location />
+      <GiftHighlight onRsvp={openRsvp} />
+      <Location onRsvp={openRsvp} />
       <Footer />
+      <RsvpDialog open={rsvpOpen} onOpenChange={setRsvpOpen} />
+
     </div>
   );
 };
