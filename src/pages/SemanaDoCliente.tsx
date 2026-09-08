@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { MapPin, Gift, Percent, CalendarDays, ArrowRight, Phone, Clock, X, Menu } from "lucide-react";
 import Seo from "@/components/seo/Seo";
 import Footer from "@/components/landing/Footer";
-import heroImage from "@/assets/semana-do-cliente/hero.jpg";
+import heroImageAsset from "@/assets/semana-do-cliente/hero.png.asset.json";
 import logoRenova from "@/assets/logo-renova.svg";
 
 const ADDRESS_QUERY = "Renova Turismo Campinas SP";
@@ -109,8 +109,8 @@ const Hero = () => {
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <img
-        src={heroImage}
-        alt="Ambiente acolhedor da agência Renova Turismo preparado para receber os clientes"
+        src={heroImageAsset.url}
+        alt="Fachada da agência Renova Turismo em Campinas"
         fetchPriority="high"
         decoding="async"
         width={1920}
