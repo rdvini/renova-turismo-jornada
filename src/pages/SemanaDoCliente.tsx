@@ -3,11 +3,14 @@ import { Helmet } from "react-helmet-async";
 import { MapPin, Gift, Percent, CalendarDays, ArrowRight, Phone, Clock, X, Menu } from "lucide-react";
 import Seo from "@/components/seo/Seo";
 import Footer from "@/components/landing/Footer";
-import RsvpDialog from "@/components/semana-do-cliente/RsvpDialog";
 import heroImageAsset from "@/assets/semana-do-cliente/hero.png.asset.json";
 import logoRenova from "@/assets/logo-renova.svg";
 
 const MAPS_URL = "https://www.google.com/maps/place/Renova+Turismo/data=!4m2!3m1!1s0x0:0x11b1a0b81404195?sa=X&ved=1t:2428&ictx=111";
+
+const FABIOLA_WHATSAPP = "5519998974721";
+const RSVP_MESSAGE = "Olá Fabiola! Gostaria de confirmar minha presença na Semana do Cliente da Renova Turismo nos dias 15 e 16 de setembro. Pode me passar mais informações?";
+const RSVP_URL = `https://api.whatsapp.com/send/?phone=${FABIOLA_WHATSAPP}&text=${encodeURIComponent(RSVP_MESSAGE)}&type=phone_number&app_absent=0`;
 
 
 const highlights = [
@@ -28,7 +31,7 @@ const highlights = [
   },
 ];
 
-const Navbar = ({ onRsvp }: { onRsvp: () => void }) => {
+const Navbar = () => {
   const [open, setOpen] = useState(false);
 
 
@@ -53,13 +56,14 @@ const Navbar = ({ onRsvp }: { onRsvp: () => void }) => {
               {item.label}
             </a>
           ))}
-          <button
-            type="button"
-            onClick={onRsvp}
+          <a
+            href={RSVP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-semibold text-sm px-5 py-2.5 rounded-full transition-all hover:scale-105 shadow-md"
           >
             Confirmar presença
-          </button>
+          </a>
 
         </nav>
 
@@ -90,16 +94,15 @@ const Navbar = ({ onRsvp }: { onRsvp: () => void }) => {
                 {item.label}
               </a>
             ))}
-            <button
-              type="button"
-              onClick={() => {
-                setOpen(false);
-                onRsvp();
-              }}
+            <a
+              href={RSVP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setOpen(false)}
               className="inline-flex items-center justify-center gap-2 bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-semibold text-sm px-5 py-3 rounded-full transition-all mt-2"
             >
               Confirmar presença
-            </button>
+            </a>
 
           </nav>
         </div>
@@ -108,7 +111,7 @@ const Navbar = ({ onRsvp }: { onRsvp: () => void }) => {
   );
 };
 
-const Hero = ({ onRsvp }: { onRsvp: () => void }) => {
+const Hero = () => {
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <img
@@ -120,7 +123,7 @@ const Hero = ({ onRsvp }: { onRsvp: () => void }) => {
         height={1080}
         className="absolute inset-0 w-full h-full object-cover"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/50 to-primary/80" />
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/85 via-primary/65 to-primary/90" />
 
       <div className="relative z-10 container mx-auto px-4 pt-24 md:pt-32 pb-16 text-center">
         <span className="inline-flex items-center gap-2 bg-secondary/20 backdrop-blur-sm border border-secondary/30 text-white font-heading font-bold text-xs md:text-sm uppercase tracking-widest px-4 py-2 rounded-full mb-6 animate-fade-in-up">
@@ -133,7 +136,7 @@ const Hero = ({ onRsvp }: { onRsvp: () => void }) => {
           <span className="block text-white">na Renova Turismo</span>
         </h1>
 
-        <p className="font-body text-lg md:text-xl lg:text-2xl font-medium text-primary-foreground max-w-2xl mx-auto mb-10 animate-fade-in-up bg-black/35 backdrop-blur-sm px-6 py-5 rounded-2xl shadow-xl" style={{ animationDelay: "0.2s", textShadow: "0 2px 12px rgba(0,0,0,0.5)" }}>
+        <p className="font-body text-lg md:text-xl lg:text-2xl font-medium text-primary-foreground max-w-2xl mx-auto mb-10 animate-fade-in-up bg-black/40 backdrop-blur-sm px-6 py-5 rounded-2xl shadow-xl" style={{ animationDelay: "0.2s", textShadow: "0 2px 12px rgba(0,0,0,0.5)" }}>
           Nos dias 15 e 16 de setembro, a Renova Turismo vai abrir as portas para receber você em dois dias muito especiais.
         </p>
 
@@ -145,14 +148,15 @@ const Hero = ({ onRsvp }: { onRsvp: () => void }) => {
             <MapPin size={20} />
             Saiba como chegar
           </a>
-          <button
-            type="button"
-            onClick={onRsvp}
+          <a
+            href={RSVP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-primary-foreground text-primary font-heading font-bold text-base px-8 py-4 rounded-full transition-all hover:scale-105 shadow-lg hover:bg-primary-foreground/90"
           >
             <Phone size={20} />
             Confirmar presença
-          </button>
+          </a>
 
         </div>
       </div>
@@ -231,7 +235,7 @@ const Highlights = () => {
   );
 };
 
-const GiftHighlight = ({ onRsvp }: { onRsvp: () => void }) => {
+const GiftHighlight = () => {
   return (
     <section className="py-20 md:py-28 bg-primary relative overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" aria-hidden="true" />
@@ -248,14 +252,15 @@ const GiftHighlight = ({ onRsvp }: { onRsvp: () => void }) => {
           <p className="font-body text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-10">
             Quem já fez parte de alguma das nossas viagens terá uma surpresa exclusiva esperando por aqui. É a nossa forma de agradecer pela confiança.
           </p>
-          <button
-            type="button"
-            onClick={onRsvp}
+          <a
+            href={RSVP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-bold text-base px-8 py-4 rounded-full transition-all hover:scale-105 shadow-lg"
           >
             Quero participar
             <ArrowRight size={18} />
-          </button>
+          </a>
 
         </div>
       </div>
@@ -263,7 +268,7 @@ const GiftHighlight = ({ onRsvp }: { onRsvp: () => void }) => {
   );
 };
 
-const Location = ({ onRsvp }: { onRsvp: () => void }) => {
+const Location = () => {
   return (
     <section id="localizacao" className="py-20 md:py-28 bg-background">
       <div className="container mx-auto px-4">
@@ -305,7 +310,7 @@ const Location = ({ onRsvp }: { onRsvp: () => void }) => {
                   </div>
                   <div>
                     <h3 className="font-heading text-base font-bold text-foreground mb-1">Confirme sua presença</h3>
-                    <p className="font-body text-sm text-muted-foreground">Responda em 10 segundos aqui na página e já entra na nossa lista.</p>
+                    <p className="font-body text-sm text-muted-foreground">Clique no botão e confirme sua presença pelo WhatsApp da Fabiola.</p>
                   </div>
                 </div>
               </div>
@@ -320,14 +325,15 @@ const Location = ({ onRsvp }: { onRsvp: () => void }) => {
                   <MapPin size={20} />
                   Saiba como chegar
                 </a>
-                <button
-                  type="button"
-                  onClick={onRsvp}
+                <a
+                  href={RSVP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 border-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground font-heading font-bold text-base px-8 py-4 rounded-full transition-all hover:scale-105"
                 >
                   <Phone size={20} />
                   Confirmar presença
-                </button>
+                </a>
               </div>
 
             </div>
@@ -350,9 +356,6 @@ const Location = ({ onRsvp }: { onRsvp: () => void }) => {
 };
 
 const SemanaDoCliente = () => {
-  const [rsvpOpen, setRsvpOpen] = useState(false);
-  const openRsvp = () => setRsvpOpen(true);
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -388,14 +391,13 @@ const SemanaDoCliente = () => {
         description="Nos dias 15 e 16 de setembro a Renova Turismo abre as portas para um evento especial com descontos, presentes e brindes exclusivos para clientes."
         path="/semana-do-cliente"
       />
-      <Navbar onRsvp={openRsvp} />
-      <Hero onRsvp={openRsvp} />
+      <Navbar />
+      <Hero />
       <Intro />
       <Highlights />
-      <GiftHighlight onRsvp={openRsvp} />
-      <Location onRsvp={openRsvp} />
+      <GiftHighlight />
+      <Location />
       <Footer />
-      <RsvpDialog open={rsvpOpen} onOpenChange={setRsvpOpen} />
 
     </div>
   );
