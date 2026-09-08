@@ -28,6 +28,7 @@ const Grecia = lazy(() => import("./pages/Grecia.tsx"));
 const AuroraBoreal = lazy(() => import("./pages/AuroraBoreal.tsx"));
 const Metricas = lazy(() => import("./pages/Metricas.tsx"));
 const Privacidade = lazy(() => import("./pages/Privacidade.tsx"));
+const SemanaDoCliente = lazy(() => import("./pages/SemanaDoCliente.tsx"));
 const NotFound = lazy(() => import("./pages/NotFound.tsx"));
 
 const queryClient = new QueryClient();
