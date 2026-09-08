@@ -1,55 +1,31 @@
-## Objetivo
+# Confirmação de presença como check-in (Semana do Cliente)
 
-Adicionar um novo filtro na página `/admin/metricas` que permite selecionar uma página específica do site (ex: `/portugal`) e recalcular todos os gráficos, KPIs e a tabela de cliques recentes considerando apenas essa página.
+Hoje os botões "Confirmar presença" apenas abrem o WhatsApp — nada é registrado. A ideia é transformá-los em um check-in real: a pessoa responde se vai ou não, informa nome e WhatsApp, e você vê tudo no painel.
 
-## Comportamento (UX)
+## Como vai funcionar para o visitante
 
-- Um botão ao lado dos filtros de data (topo do dashboard) mostra a página selecionada, ex: **"Página: Todas"** ou **"Página: /portugal"**.
-- Ao clicar, abre um popover com uma lista pesquisável (Command) contendo:
-  - Opção **"Todas as páginas"** (padrão).
-  - Todas as páginas do site (`/`, `/portugal`, `/turquia`, `/grecia`, `/marrocos`, `/leste-europeu`, `/africa-do-sul`, `/africa-do-sul-2`, `/jmj-seul-2027`, `/mexico-padre-leudo`, `/mexico-padre-antonio-maria`, `/turquia-padre-leudo`, `/lideres-catolicos`, `/lideres-evangelicos`, `/pastor-morelli`, `/privacidade`), derivadas dinamicamente de `src/data/campaigns.ts` + rotas fixas.
-  - Além disso, incluir qualquer página adicional que apareça nos dados retornados (`data.byPage`) e ainda não esteja na lista, para não perder páginas legadas.
-- Selecionar uma página aplica o filtro imediatamente e o botão passa a variante `default` (destacado) quando um filtro está ativo.
-- Um "X" no botão limpa o filtro (volta para "Todas").
+1. Ao clicar em "Confirmar presença" (no menu, na hero, no "Quero participar" e na seção de localização), abre uma janelinha sobre a página.
+2. A janela pergunta: "Você vai participar da Semana do Cliente?" com duas opções: **Sim, vou estar lá** e **Não vou conseguir ir**.
+3. Em seguida, dois campos curtos: **Nome** e **WhatsApp**.
+4. Ao enviar, aparece uma mensagem de agradecimento na própria página (nada de redirecionamento).
+5. Quem responde "não" também é registrado, para você ter a leitura completa da enquete.
 
-## Como o filtro atua nos dados
+Validações: nome obrigatório (até 100 caracteres), WhatsApp com formatação/checagem de número brasileiro, proteção contra envio duplicado por clique repetido.
 
-Filtragem feita **no frontend**, sem alterar a edge function `whatsapp-metrics`. Vantagens: zero mudança no backend, mesma chamada já traz todas as páginas.
+## Como você vai acompanhar
 
-- Quando `selectedPage === null` (Todas), usa `data` como hoje.
-- Quando `selectedPage` está definido, deriva um objeto `Metrics` filtrado a partir de `data`:
-  - `byPage`: apenas a entrada da página selecionada.
-  - `total`: `count` da página selecionada dentro do período atual.
-  - `recent`: filtra `data.recent` por `page === selectedPage`.
-  - Demais séries (`byDay`, `byHour`, `byDow`, `bySource`, `byReferrer`, `byDevice`, `prevTotal`, `delta`, `peakDay`, `peakHour`, `avgPerDay`) **não podem** ser recalculadas só com o payload atual, porque a edge function agrega tudo antes de enviar.
+No painel `/admin/metricas` (mesma senha de hoje) entra uma nova aba **Semana do Cliente** com:
 
-Para permitir filtragem completa, a edge function precisa devolver também as linhas brutas por página **OU** o frontend precisa que o backend aceite um parâmetro `page`.
+- Total de confirmações, total de "sim" e total de "não", com percentual de presença.
+- Gráfico simples comparando sim x não.
+- Lista das respostas mais recentes: nome, WhatsApp, resposta e data/hora (fuso de Brasília).
+- Botão para exportar a lista em CSV.
 
-## Abordagem escolhida: adicionar parâmetro `page` na edge function
+## Detalhes técnicos
 
-Menor payload, filtragem correta em todas as métricas.
-
-### Backend (`supabase/functions/whatsapp-metrics/index.ts`)
-1. Ler `url.searchParams.get("page")`.
-2. Se presente, aplicar `.eq("page", page)` na query do Supabase (afeta tanto o período atual quanto o anterior para o cálculo de `delta`).
-3. Manter `byPage` no retorno (com apenas a página filtrada quando aplicável — útil para a UI mostrar o total).
-
-### Frontend (`src/pages/Metricas.tsx`)
-1. Novo estado: `const [selectedPage, setSelectedPage] = useState<string | null>(null)`.
-2. Novo estado: `const [pageOpen, setPageOpen] = useState(false)`.
-3. `fetchMetrics` recebe `page` opcional e adiciona `&page=${encodeURIComponent(page)}` na URL.
-4. `useEffect` que dispara em mudanças de `preset` passa a depender também de `selectedPage`.
-5. Lista de páginas conhecidas: derivada de `campaigns` (importar de `@/data/campaigns`) + rotas extras hardcoded (`/`, `/pastor-morelli`, `/privacidade`) + união com páginas presentes em `data.byPage` (para não perder páginas removidas do menu mas ainda com cliques históricos).
-6. Novo componente inline **PageFilter** (usa `Popover` + `Command`/`CommandInput`/`CommandList`/`CommandItem` já disponíveis em `src/components/ui/`), botão com ícone `Globe` (lucide-react).
-7. Botão fica ao lado do botão "Personalizado" no header.
-
-## Arquivos alterados
-
-- `src/pages/Metricas.tsx` — novo estado, novo botão/popover de filtro por página, integração no fetch.
-- `supabase/functions/whatsapp-metrics/index.ts` — aceita `?page=` e filtra na query.
-
-## Fora do escopo
-
-- Alterar o formato dos gráficos ou KPIs.
-- Persistir o filtro na URL/localStorage.
-- Multi-seleção de páginas (apenas uma por vez).
+- Nova tabela `event_rsvps`: `id`, `nome`, `telefone`, `resposta` ('sim' | 'nao'), `evento` (texto, default `semana-do-cliente`), `created_at`. GRANT de `INSERT` para `anon`/`authenticated` com política de check de tamanho dos campos; leitura apenas via `service_role`. Sem SELECT público — os dados de contato não ficam expostos.
+- Novo componente `src/components/semana-do-cliente/RsvpDialog.tsx` usando Dialog do shadcn, validação com zod, estados de carregando/sucesso/erro e toast.
+- `src/pages/SemanaDoCliente.tsx`: os quatro CTAs de "Confirmar presença"/"Quero participar" passam a abrir o diálogo em vez de abrir link externo; o CTA "Saiba como chegar" permanece como está.
+- Evento de Meta Pixel `Lead` disparado no envio bem-sucedido, e um registro em `whatsapp_clicks` não é criado (fluxo separado).
+- Edge Function `whatsapp-metrics` ganha um bloco adicional (ou nova função `event-rsvps`) protegida pela mesma senha `METRICS_PASSWORD`, retornando agregados e as últimas respostas com paginação de 1000 em 1000.
+- `src/pages/Metricas.tsx`: nova aba/seção consumindo esse endpoint, com KPI cards, gráfico de barras (recharts, já usado) e tabela.
