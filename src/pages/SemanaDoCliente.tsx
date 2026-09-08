@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { MapPin, Gift, Percent, CalendarDays, ArrowRight, Phone, Clock, X, Menu } from "lucide-react";
 import Seo from "@/components/seo/Seo";
 import Footer from "@/components/landing/Footer";
-import heroImage from "@/assets/semana-do-cliente/hero.jpg";
+import heroImageAsset from "@/assets/semana-do-cliente/hero.png.asset.json";
 import logoRenova from "@/assets/logo-renova.svg";
 
 const ADDRESS_QUERY = "Renova Turismo Campinas SP";
