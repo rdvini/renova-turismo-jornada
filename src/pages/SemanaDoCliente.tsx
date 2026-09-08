@@ -13,7 +13,7 @@ const highlights = [
   {
     icon: Percent,
     title: "Descontos exclusivos",
-    description: "Condições especiais e preços imperdíveis para quem estiver presente nos dois dias de evento.",
+    description: "Condições especiais e preços imperdíveis para quem fechar uma viagem nestes dois dias.",
   },
   {
     icon: Gift,
