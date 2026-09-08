@@ -108,7 +108,7 @@ const Navbar = ({ onRsvp }: { onRsvp: () => void }) => {
   );
 };
 
-const Hero = () => {
+const Hero = ({ onRsvp }: { onRsvp: () => void }) => {
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <img
@@ -145,15 +145,15 @@ const Hero = () => {
             <MapPin size={20} />
             Saiba como chegar
           </a>
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            type="button"
+            onClick={onRsvp}
             className="inline-flex items-center gap-2 bg-primary-foreground text-primary font-heading font-bold text-base px-8 py-4 rounded-full transition-all hover:scale-105 shadow-lg hover:bg-primary-foreground/90"
           >
             <Phone size={20} />
             Confirmar presença
-          </a>
+          </button>
+
         </div>
       </div>
 
