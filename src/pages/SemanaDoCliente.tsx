@@ -3,11 +3,12 @@ import { Helmet } from "react-helmet-async";
 import { MapPin, Gift, Percent, CalendarDays, ArrowRight, Phone, Clock, X, Menu } from "lucide-react";
 import Seo from "@/components/seo/Seo";
 import Footer from "@/components/landing/Footer";
+import RsvpDialog from "@/components/semana-do-cliente/RsvpDialog";
 import heroImageAsset from "@/assets/semana-do-cliente/hero.png.asset.json";
 import logoRenova from "@/assets/logo-renova.svg";
 
 const MAPS_URL = "https://www.google.com/maps/place/Renova+Turismo/data=!4m2!3m1!1s0x0:0x11b1a0b81404195?sa=X&ved=1t:2428&ictx=111";
-const WHATSAPP_URL = "https://api.whatsapp.com/send/?phone=5519994718930&text=Ol%C3%A1%21+Gostaria+de+confirmar+minha+presen%C3%A7a+na+Semana+do+Cliente+da+Renova+Turismo.&type=phone_number&app_absent=0";
+
 
 const highlights = [
   {
