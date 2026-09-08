@@ -6,8 +6,7 @@ import Footer from "@/components/landing/Footer";
 import heroImageAsset from "@/assets/semana-do-cliente/hero.png.asset.json";
 import logoRenova from "@/assets/logo-renova.svg";
 
-const ADDRESS_QUERY = "Renova Turismo Campinas SP";
-const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(ADDRESS_QUERY)}`;
+const MAPS_URL = "https://www.google.com/maps/place/Renova+Turismo/data=!4m2!3m1!1s0x0:0x11b1a0b81404195?sa=X&ved=1t:2428&ictx=111";
 const WHATSAPP_URL = "https://api.whatsapp.com/send/?phone=5519994718930&text=Ol%C3%A1%21+Gostaria+de+confirmar+minha+presen%C3%A7a+na+Semana+do+Cliente+da+Renova+Turismo.&type=phone_number&app_absent=0";
 
 const highlights = [
@@ -320,7 +319,7 @@ const Location = () => {
 
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-border aspect-[4/3] lg:aspect-auto lg:h-[520px]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.296!2d-47.0626!3d-22.9074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDU0JzI3LjAiUyA0N8KwMDMnNDUuNCJX!5e0!3m2!1spt-BR!2sbr!4v1699999999999!5m2!1spt-BR!2sbr"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.296!2d-47.0626!3d-22.9074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x11b1a0b81404195!2sRenova%20Turismo!5e0!3m2!1spt-BR!2sbr!4v1699999999999!5m2!1spt-BR!2sbr"
                 title="Mapa com a localização da Renova Turismo"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
