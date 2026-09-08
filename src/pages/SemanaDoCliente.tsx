@@ -235,7 +235,7 @@ const Highlights = () => {
   );
 };
 
-const GiftHighlight = ({ onRsvp }: { onRsvp: () => void }) => {
+const GiftHighlight = () => {
   return (
     <section className="py-20 md:py-28 bg-primary relative overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" aria-hidden="true" />
@@ -252,14 +252,15 @@ const GiftHighlight = ({ onRsvp }: { onRsvp: () => void }) => {
           <p className="font-body text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-10">
             Quem já fez parte de alguma das nossas viagens terá uma surpresa exclusiva esperando por aqui. É a nossa forma de agradecer pela confiança.
           </p>
-          <button
-            type="button"
-            onClick={onRsvp}
+          <a
+            href={RSVP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-bold text-base px-8 py-4 rounded-full transition-all hover:scale-105 shadow-lg"
           >
             Quero participar
             <ArrowRight size={18} />
-          </button>
+          </a>
 
         </div>
       </div>
