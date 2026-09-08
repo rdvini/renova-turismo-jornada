@@ -283,7 +283,7 @@ const Location = () => {
                   </div>
                   <div>
                     <h3 className="font-heading text-base font-bold text-foreground mb-1">Data e horário</h3>
-                    <p className="font-body text-sm text-muted-foreground">15 e 16 de setembro — atendimento especial para clientes e visitantes.</p>
+                    <p className="font-body text-sm text-muted-foreground">15 e 16 de setembro, das 10h as 17h — atendimento especial para clientes e visitantes.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
