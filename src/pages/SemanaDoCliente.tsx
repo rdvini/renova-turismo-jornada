@@ -128,7 +128,7 @@ const Hero = ({ onRsvp }: { onRsvp: () => void }) => {
           15 e 16 de setembro
         </span>
 
-        <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-extrabold text-primary-foreground leading-tight mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+        <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-extrabold text-primary-foreground leading-tight mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s", textShadow: "0 4px 24px rgba(0,0,0,0.55)" }}>
           Semana do Cliente
           <span className="block text-white">na Renova Turismo</span>
         </h1>
