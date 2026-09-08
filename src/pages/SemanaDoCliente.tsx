@@ -1,13 +1,16 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { MapPin, Gift, Percent, CalendarDays, ArrowRight, Phone, Clock, X, Menu } from "lucide-react";
 import Seo from "@/components/seo/Seo";
 import Footer from "@/components/landing/Footer";
-import RsvpDialog from "@/components/semana-do-cliente/RsvpDialog";
 import heroImageAsset from "@/assets/semana-do-cliente/hero.png.asset.json";
 import logoRenova from "@/assets/logo-renova.svg";
 
 const MAPS_URL = "https://www.google.com/maps/place/Renova+Turismo/data=!4m2!3m1!1s0x0:0x11b1a0b81404195?sa=X&ved=1t:2428&ictx=111";
+
+const FABIOLA_WHATSAPP = "5519998974721";
+const RSVP_MESSAGE = "Olá Fabiola! Gostaria de confirmar minha presença na Semana do Cliente da Renova Turismo nos dias 15 e 16 de setembro. Pode me passar mais informações?";
+const RSVP_URL = `https://api.whatsapp.com/send/?phone=${FABIOLA_WHATSAPP}&text=${encodeURIComponent(RSVP_MESSAGE)}&type=phone_number&app_absent=0`;
 
 
 const highlights = [
