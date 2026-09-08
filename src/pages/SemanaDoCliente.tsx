@@ -120,14 +120,14 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/50 to-primary/80" />
 
       <div className="relative z-10 container mx-auto px-4 pt-24 md:pt-32 pb-16 text-center">
-        <span className="inline-flex items-center gap-2 bg-secondary/20 backdrop-blur-sm border border-secondary/30 text-secondary font-heading font-bold text-xs md:text-sm uppercase tracking-widest px-4 py-2 rounded-full mb-6 animate-fade-in-up">
+        <span className="inline-flex items-center gap-2 bg-secondary/20 backdrop-blur-sm border border-secondary/30 text-white font-heading font-bold text-xs md:text-sm uppercase tracking-widest px-4 py-2 rounded-full mb-6 animate-fade-in-up">
           <CalendarDays size={16} />
           15 e 16 de setembro
         </span>
 
         <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-extrabold text-primary-foreground leading-tight mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
           Semana do Cliente
-          <span className="block text-secondary">na Renova Turismo</span>
+          <span className="block text-white">na Renova Turismo</span>
         </h1>
 
         <p className="font-body text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
