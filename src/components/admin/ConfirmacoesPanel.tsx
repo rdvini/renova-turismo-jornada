@@ -138,7 +138,7 @@ const ConfirmacoesPanel = ({
             <Card>
               <CardHeader className="pb-2">
                 <CardTitle className="text-sm font-medium text-muted-foreground">
-                  Total de cliques (12 meses)
+                  Total de cliques · {periodLabel}
                 </CardTitle>
               </CardHeader>
               <CardContent>
