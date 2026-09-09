@@ -37,7 +37,15 @@ const brDateTime = (iso: string) =>
     minute: "2-digit",
   });
 
-const ConfirmacoesPanel = ({ password }: { password: string }) => {
+const ConfirmacoesPanel = ({
+  password,
+  query = "days=365",
+  periodLabel = "período selecionado",
+}: {
+  password: string;
+  query?: string;
+  periodLabel?: string;
+}) => {
   const [data, setData] = useState<Data | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -49,7 +57,7 @@ const ConfirmacoesPanel = ({ password }: { password: string }) => {
       setLoading(true);
       setError(null);
       try {
-        const url = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/whatsapp-metrics?days=365&page=${encodeURIComponent("/semana-do-cliente")}`;
+        const url = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/whatsapp-metrics?${query}&page=${encodeURIComponent("/semana-do-cliente")}`;
         const res = await fetch(url, {
           headers: {
             "x-metrics-password": password,
@@ -71,7 +79,7 @@ const ConfirmacoesPanel = ({ password }: { password: string }) => {
     return () => {
       cancelled = true;
     };
-  }, [password]);
+  }, [password, query]);
 
   const exportCsv = () => {
     if (!data) return;
