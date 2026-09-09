@@ -68,6 +68,39 @@ export type Database = {
         }
         Relationships: []
       }
+      maps_clicks: {
+        Row: {
+          created_at: string
+          id: string
+          kind: string
+          page: string
+          referrer: string | null
+          source: string | null
+          url: string | null
+          user_agent: string | null
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          kind?: string
+          page: string
+          referrer?: string | null
+          source?: string | null
+          url?: string | null
+          user_agent?: string | null
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          kind?: string
+          page?: string
+          referrer?: string | null
+          source?: string | null
+          url?: string | null
+          user_agent?: string | null
+        }
+        Relationships: []
+      }
       whatsapp_clicks: {
         Row: {
           created_at: string
