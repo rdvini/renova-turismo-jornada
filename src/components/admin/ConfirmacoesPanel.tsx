@@ -91,17 +91,36 @@ const ConfirmacoesPanel = ({ password }: { password: string }) => {
 
   return (
     <section className="space-y-4">
-      <div className="flex flex-wrap items-center justify-between gap-3">
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        className="flex w-full flex-wrap items-center justify-between gap-3 rounded-lg border bg-card p-4 text-left transition-colors hover:bg-muted/40"
+      >
         <div className="flex items-center gap-2">
           <CalendarCheck className="h-5 w-5 text-primary" />
           <h2 className="text-xl font-bold tracking-tight">
             Semana do Cliente · cliques em "Confirmar presença"
           </h2>
         </div>
-        <Button variant="outline" size="sm" onClick={exportCsv} disabled={!data?.total}>
-          <Download className="h-4 w-4 mr-1" /> Exportar CSV
-        </Button>
-      </div>
+        <div className="flex items-center gap-2">
+          {open && (
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={(e) => {
+                e.stopPropagation();
+                exportCsv();
+              }}
+              disabled={!data?.total}
+            >
+              <Download className="h-4 w-4 mr-1" /> Exportar CSV
+            </Button>
+          )}
+          <ChevronDown
+            className={`h-5 w-5 text-muted-foreground transition-transform ${open ? "rotate-180" : ""}`}
+          />
+        </div>
+      </button>
 
       {error && <p className="text-sm text-destructive">{error}</p>}
 
