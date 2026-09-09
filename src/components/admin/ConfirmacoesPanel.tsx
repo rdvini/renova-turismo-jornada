@@ -41,6 +41,7 @@ const ConfirmacoesPanel = ({ password }: { password: string }) => {
   const [data, setData] = useState<Data | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [open, setOpen] = useState(true);
 
   useEffect(() => {
     let cancelled = false;
