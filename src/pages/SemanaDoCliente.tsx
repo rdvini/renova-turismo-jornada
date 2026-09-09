@@ -143,6 +143,8 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
           <a
             href="#localizacao"
+            data-track-maps="true"
+            data-maps-source="Hero — Saiba como chegar"
             className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-bold text-base px-8 py-4 rounded-full transition-all hover:scale-105 shadow-lg"
           >
             <MapPin size={20} />
@@ -320,6 +322,7 @@ const Location = () => {
                   href={MAPS_URL}
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-maps-source="Localização — Saiba como chegar"
                   className="inline-flex items-center justify-center gap-2 bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-bold text-base px-8 py-4 rounded-full transition-all hover:scale-105 shadow-lg"
                 >
                   <MapPin size={20} />
