@@ -124,93 +124,97 @@ const ConfirmacoesPanel = ({ password }: { password: string }) => {
 
       {error && <p className="text-sm text-destructive">{error}</p>}
 
-      <div className="grid gap-4 lg:grid-cols-3">
-        <Card>
-          <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-muted-foreground">
-              Total de cliques (12 meses)
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-3xl font-bold">{loading ? "..." : (data?.total ?? 0)}</p>
-          </CardContent>
-        </Card>
+      {open && (
+        <>
+          <div className="grid gap-4 lg:grid-cols-3">
+            <Card>
+              <CardHeader className="pb-2">
+                <CardTitle className="text-sm font-medium text-muted-foreground">
+                  Total de cliques (12 meses)
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-3xl font-bold">{loading ? "..." : (data?.total ?? 0)}</p>
+              </CardContent>
+            </Card>
 
-        <Card className="lg:col-span-2">
-          <CardHeader>
-            <CardTitle className="text-base">Cliques por dia</CardTitle>
-          </CardHeader>
-          <CardContent className="h-[220px]">
-            {chartData.length > 0 ? (
-              <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={chartData}>
-                  <CartesianGrid strokeDasharray="3 3" vertical={false} />
-                  <XAxis dataKey="date" tickFormatter={(d: string) => d.slice(5)} fontSize={11} />
-                  <YAxis allowDecimals={false} width={30} fontSize={11} />
-                  <Tooltip />
-                  <Bar dataKey="count" fill="hsl(var(--primary))" radius={[6, 6, 0, 0]} />
-                </BarChart>
-              </ResponsiveContainer>
-            ) : (
-              <p className="text-sm text-muted-foreground">Nenhum clique registrado ainda.</p>
-            )}
-          </CardContent>
-        </Card>
-      </div>
-
-      <div className="grid gap-4 lg:grid-cols-3">
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-base">Por botão</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-2">
-            {(data?.bySource ?? []).length === 0 && (
-              <p className="text-sm text-muted-foreground">Sem dados.</p>
-            )}
-            {(data?.bySource ?? []).map((s) => (
-              <div key={s.source} className="flex items-center justify-between text-sm">
-                <span className="truncate pr-2">{s.source || "-"}</span>
-                <span className="font-semibold">{s.count}</span>
-              </div>
-            ))}
-          </CardContent>
-        </Card>
-
-        <Card className="lg:col-span-2">
-          <CardHeader>
-            <CardTitle className="text-base">Últimos cliques</CardTitle>
-          </CardHeader>
-          <CardContent className="max-h-[320px] overflow-auto">
-            <Table>
-              <TableHeader>
-                <TableRow>
-                  <TableHead>Quando</TableHead>
-                  <TableHead>Origem</TableHead>
-                  <TableHead>Dispositivo</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                {(data?.recent ?? []).map((r) => (
-                  <TableRow key={r.id}>
-                    <TableCell className="whitespace-nowrap text-xs text-muted-foreground">
-                      {brDateTime(r.created_at)}
-                    </TableCell>
-                    <TableCell className="max-w-[240px] truncate">{r.source ?? "-"}</TableCell>
-                    <TableCell className="text-xs">{r.device ?? "-"}</TableCell>
-                  </TableRow>
-                ))}
-                {!loading && (data?.recent.length ?? 0) === 0 && (
-                  <TableRow>
-                    <TableCell colSpan={3} className="text-center text-sm text-muted-foreground">
-                      Nenhum clique registrado ainda.
-                    </TableCell>
-                  </TableRow>
+            <Card className="lg:col-span-2">
+              <CardHeader>
+                <CardTitle className="text-base">Cliques por dia</CardTitle>
+              </CardHeader>
+              <CardContent className="h-[220px]">
+                {chartData.length > 0 ? (
+                  <ResponsiveContainer width="100%" height="100%">
+                    <BarChart data={chartData}>
+                      <CartesianGrid strokeDasharray="3 3" vertical={false} />
+                      <XAxis dataKey="date" tickFormatter={(d: string) => d.slice(5)} fontSize={11} />
+                      <YAxis allowDecimals={false} width={30} fontSize={11} />
+                      <Tooltip />
+                      <Bar dataKey="count" fill="hsl(var(--primary))" radius={[6, 6, 0, 0]} />
+                    </BarChart>
+                  </ResponsiveContainer>
+                ) : (
+                  <p className="text-sm text-muted-foreground">Nenhum clique registrado ainda.</p>
                 )}
-              </TableBody>
-            </Table>
-          </CardContent>
-        </Card>
-      </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="grid gap-4 lg:grid-cols-3">
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-base">Por botão</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-2">
+                {(data?.bySource ?? []).length === 0 && (
+                  <p className="text-sm text-muted-foreground">Sem dados.</p>
+                )}
+                {(data?.bySource ?? []).map((s) => (
+                  <div key={s.source} className="flex items-center justify-between text-sm">
+                    <span className="truncate pr-2">{s.source || "-"}</span>
+                    <span className="font-semibold">{s.count}</span>
+                  </div>
+                ))}
+              </CardContent>
+            </Card>
+
+            <Card className="lg:col-span-2">
+              <CardHeader>
+                <CardTitle className="text-base">Últimos cliques</CardTitle>
+              </CardHeader>
+              <CardContent className="max-h-[320px] overflow-auto">
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>Quando</TableHead>
+                      <TableHead>Origem</TableHead>
+                      <TableHead>Dispositivo</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    {(data?.recent ?? []).map((r) => (
+                      <TableRow key={r.id}>
+                        <TableCell className="whitespace-nowrap text-xs text-muted-foreground">
+                          {brDateTime(r.created_at)}
+                        </TableCell>
+                        <TableCell className="max-w-[240px] truncate">{r.source ?? "-"}</TableCell>
+                        <TableCell className="text-xs">{r.device ?? "-"}</TableCell>
+                      </TableRow>
+                    ))}
+                    {!loading && (data?.recent.length ?? 0) === 0 && (
+                      <TableRow>
+                        <TableCell colSpan={3} className="text-center text-sm text-muted-foreground">
+                          Nenhum clique registrado ainda.
+                        </TableCell>
+                      </TableRow>
+                    )}
+                  </TableBody>
+                </Table>
+              </CardContent>
+            </Card>
+          </div>
+        </>
+      )}
     </section>
   );
 };
