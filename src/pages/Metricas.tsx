@@ -55,7 +55,7 @@ import {
 import { cn } from "@/lib/utils";
 import type { DateRange } from "react-day-picker";
 import { supabase } from "@/integrations/supabase/client";
-import RsvpPanel from "@/components/admin/RsvpPanel";
+import ConfirmacoesPanel from "@/components/admin/ConfirmacoesPanel";
 import MapsPanel from "@/components/admin/MapsPanel";
 import { campaigns } from "@/data/campaigns";
 
@@ -494,7 +494,7 @@ const Metricas = () => {
 
       <div className="max-w-7xl mx-auto p-4 md:p-8 space-y-6">
 
-        <RsvpPanel password={password} />
+        <ConfirmacoesPanel password={password} />
 
         <MapsPanel password={password} />
 
