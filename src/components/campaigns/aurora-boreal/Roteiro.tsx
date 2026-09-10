@@ -17,6 +17,8 @@ import tromsoFjellheisenImg from "@/assets/aurora-boreal/tromso-fjellheisen.jpg"
 import tromsoAuroraImg from "@/assets/aurora-boreal/tromso-aurora.jpg";
 import reindeerImg from "@/assets/aurora-boreal/tromso-catedral-arctica.jpg.asset.json";
 import estocolmoImg from "@/assets/aurora-boreal/estocolmo-gamla-stan.jpg";
+import estocolmoCityHallImg from "@/assets/aurora-boreal/estocolmo-city-hall.jpg.asset.json";
+import estocolmoDrottningholmImg from "@/assets/aurora-boreal/estocolmo-drottningholm.jpg.asset.json";
 
 interface Slide {
   day: string;
