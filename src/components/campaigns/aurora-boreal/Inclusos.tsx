@@ -18,7 +18,7 @@ const items = [
   },
   {
     icon: Hotel,
-    title: "Hotéis Turística Superior",
+    title: "HOTÉIS CATEGORIA TURÍSTICA SUPERIOR",
     text: "Hospedagem selecionada pelo conforto e localização privilegiada — descanso e praticidade após cada dia.",
   },
   {
