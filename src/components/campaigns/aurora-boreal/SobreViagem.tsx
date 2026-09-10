@@ -19,14 +19,14 @@ const SobreViagem = () => {
             </h2>
             <div className="w-16 h-px bg-secondary mb-8" />
             <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed">
-              Uma viagem turística de 9 dias pela Islândia — de Reykjavík ao
-              Círculo Dourado, passando pela costa sul, pela lagoa glacial de
-              Jökulsárlón e por noites de caça à aurora boreal.
+              Uma viagem turística de 13 dias pelo norte da Europa — de Copenhague
+              a Oslo, passando pelo cruzeiro noturno DFDS, pela capital viking e
+              pelo Ártico de Tromsø, até a elegância de Estocolmo.
             </p>
             <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed mt-5">
-              Pequenos grupos, guias em português, hospedagem selecionada e roteiro
-              completo: geleiras, vulcões, cachoeiras, águas termais e as luzes
-              do norte em uma única jornada.
+              Roteiro completo com guias em português, hospedagem selecionada e
+              noites dedicadas à Aurora Boreal em uma jornada entre Dinamarca,
+              Noruega e Suécia.
             </p>
           </div>
 
@@ -40,7 +40,7 @@ const SobreViagem = () => {
               {
                 icon: MapPin,
                 label: "Destinos",
-                value: "Reykjavík, Círculo Dourado, Costa Sul, Jökulsárlón e Lagoa Azul",
+                value: "Copenhague, Oslo, Tromsø e Estocolmo",
               },
               {
                 icon: Plane,
