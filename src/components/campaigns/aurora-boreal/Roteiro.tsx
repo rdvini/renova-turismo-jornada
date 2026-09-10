@@ -133,8 +133,8 @@ const slides: Slide[] = [
   },
   {
     day: "10º Dia",
-    image: estocolmoImg,
-    imageAlt: "Trem de alta velocidade entre Oslo e Estocolmo",
+    image: estocolmoCityHallImg.url,
+    imageAlt: "Prefeitura de Estocolmo à beira do mar",
     region: "Oslo → Estocolmo",
     regionEn: "Scenic Train",
     title: "OSLO / ESTOCOLMO",
@@ -144,8 +144,8 @@ const slides: Slide[] = [
   },
   {
     day: "11º Dia",
-    image: estocolmoImg,
-    imageAlt: "Casas coloridas do bairro antigo Gamla Stan em Estocolmo",
+    image: estocolmoDrottningholmImg.url,
+    imageAlt: "Palácio de Drottningholm, residência real sueca",
     region: "Estocolmo",
     regionEn: "City Tour",
     title: "CITY TOUR EM ESTOCOLMO",
