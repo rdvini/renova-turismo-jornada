@@ -4,6 +4,7 @@ import MetaPixel from "@/components/tracking/MetaPixel";
 import Navbar from "@/components/campaigns/aurora-boreal/Navbar";
 import Hero from "@/components/campaigns/aurora-boreal/Hero";
 import SobreViagem from "@/components/campaigns/aurora-boreal/SobreViagem";
+import VideoSection from "@/components/campaigns/aurora-boreal/VideoSection";
 import Inclusos from "@/components/campaigns/aurora-boreal/Inclusos";
 import Roteiro from "@/components/campaigns/aurora-boreal/Roteiro";
 import PorQueRenova from "@/components/campaigns/aurora-boreal/PorQueRenova";
