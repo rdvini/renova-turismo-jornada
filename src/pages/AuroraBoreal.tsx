@@ -56,6 +56,7 @@ const AuroraBoreal = () => {
       <Navbar />
       <Hero />
       <SobreViagem />
+      <VideoSection />
       <Inclusos />
       <Roteiro />
       <PorQueRenova />
