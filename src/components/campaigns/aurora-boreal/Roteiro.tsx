@@ -17,6 +17,8 @@ import tromsoFjellheisenImg from "@/assets/aurora-boreal/tromso-fjellheisen.jpg"
 import tromsoAuroraImg from "@/assets/aurora-boreal/tromso-aurora.jpg";
 import reindeerImg from "@/assets/aurora-boreal/tromso-catedral-arctica.jpg.asset.json";
 import estocolmoImg from "@/assets/aurora-boreal/estocolmo-gamla-stan.jpg";
+import estocolmoCityHallImg from "@/assets/aurora-boreal/estocolmo-city-hall.jpg.asset.json";
+import estocolmoDrottningholmImg from "@/assets/aurora-boreal/estocolmo-drottningholm.jpg.asset.json";
 
 interface Slide {
   day: string;
@@ -131,8 +133,8 @@ const slides: Slide[] = [
   },
   {
     day: "10º Dia",
-    image: estocolmoImg,
-    imageAlt: "Trem de alta velocidade entre Oslo e Estocolmo",
+    image: estocolmoCityHallImg.url,
+    imageAlt: "Prefeitura de Estocolmo à beira do mar",
     region: "Oslo → Estocolmo",
     regionEn: "Scenic Train",
     title: "OSLO / ESTOCOLMO",
@@ -142,8 +144,8 @@ const slides: Slide[] = [
   },
   {
     day: "11º Dia",
-    image: estocolmoImg,
-    imageAlt: "Casas coloridas do bairro antigo Gamla Stan em Estocolmo",
+    image: estocolmoDrottningholmImg.url,
+    imageAlt: "Palácio de Drottningholm, residência real sueca",
     region: "Estocolmo",
     regionEn: "City Tour",
     title: "CITY TOUR EM ESTOCOLMO",
