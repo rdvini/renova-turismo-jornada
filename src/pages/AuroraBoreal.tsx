@@ -38,7 +38,7 @@ const AuroraBoreal = () => {
       <MetaPixel contentName="Aurora Boreal" contentCategory="Destino" />
       <Seo
         title="Viagem para ver a Aurora Boreal | Renova Turismo"
-        description="Viagem de 9 dias para ver a aurora boreal na Islândia com a Renova Turismo: Reykjavík, Círculo Dourado, lagoa glacial, águas termais e expedição noturna."
+        description="Viagem de 13 dias para ver a aurora boreal na Noruega com a Renova Turismo: Copenhague, Oslo, Tromsø, cultura Sami e Estocolmo."
         path="/aurora-boreal"
         jsonLd={{
           "@context": "https://schema.org",
@@ -48,7 +48,7 @@ const AuroraBoreal = () => {
           provider: { "@type": "TravelAgency", name: "Renova Turismo" },
           itinerary: {
             "@type": "ItemList",
-            name: "Reykjavík, Círculo Dourado, Costa Sul, Jökulsárlón e Lagoa Azul",
+            name: "Copenhague, Oslo, Tromsø e Estocolmo",
           },
         }}
       />

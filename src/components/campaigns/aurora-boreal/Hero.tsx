@@ -1,29 +1,29 @@
 import { useState, useEffect } from "react";
 import { Instagram, Facebook, Youtube, ChevronLeft } from "lucide-react";
 
-import heroImg from "@/assets/aurora-boreal/hero-aurora.jpg";
-import auroraImg from "@/assets/aurora-boreal/caca-aurora.jpg";
-import reykjavikImg from "@/assets/aurora-boreal/reykjavik.jpg";
-import lagoaGlacialImg from "@/assets/aurora-boreal/lagoa-glacial.jpg";
+import heroImg from "@/assets/aurora-boreal/hero-aurora-nordica.jpg";
+import copenhagueImg from "@/assets/aurora-boreal/copenhague-nyhavn.jpg";
+import tromsoAuroraImg from "@/assets/aurora-boreal/tromso-aurora.jpg";
+import estocolmoImg from "@/assets/aurora-boreal/estocolmo-gamla-stan.jpg";
 
 const floatingCards = [
   {
-    image: reykjavikImg,
-    title: "Reykjavík Vibrante",
+    image: copenhagueImg,
+    title: "Copenhague & Oslo",
     description:
-      "A capital mais ao norte do mundo: casinhas coloridas, cultura nórdica, gastronomia e o charme de um inverno inesquecível.",
+      "Da charmosa Dinamarca à capital viking da Noruega, com cruzeiro noturno pelo Mar do Norte e história nórdica a cada parada.",
   },
   {
-    image: auroraImg,
+    image: tromsoAuroraImg,
     title: "Caça à Aurora Boreal",
     description:
-      "Noites dedicadas a perseguir as luzes do norte em céus limpos, longe da luz das cidades — o espetáculo mais raro do planeta.",
+      "Noites dedicadas a perseguir as luzes do norte em Tromsø, com acampamento Sami, fogueira e céus limpos do Ártico.",
   },
   {
-    image: lagoaGlacialImg,
-    title: "Geleiras e Lagoas",
+    image: estocolmoImg,
+    title: "Estocolmo Encantada",
     description:
-      "Icebergs azuis flutuando na lagoa glacial, praias de areia negra e paisagens vulcânicas de outro mundo.",
+      "A elegância sueca entre ilhas, Gamla Stan, o Museu Nobel e vistas espetaculares que fecham a jornada com requinte.",
   },
 ];
 
@@ -50,7 +50,7 @@ const Hero = () => {
     >
       <img
         src={heroImg}
-        alt="Aurora boreal verde e violeta sobre paisagem nevada da Islândia"
+        alt="Aurora boreal dançando sobre os fiordes de Tromsø, na Noruega"
         fetchPriority="high" decoding="async" className="absolute inset-0 w-full h-full object-cover opacity-90"
         width={1920}
         height={1080}
@@ -95,8 +95,8 @@ const Hero = () => {
               <span className="block display-outline">Boreal</span>
             </h1>
             <p className="font-body text-base md:text-lg text-primary-foreground/80 max-w-md mt-6 md:mt-8 leading-relaxed">
-              Uma jornada pelo extremo norte — entre geleiras, vulcões, águas termais
-              e as luzes que dançam no céu do inverno islandês.
+              Uma jornada pelo extremo norte — entre canais de Copenhague, o cruzeiro
+              DFDS, a capital viking de Oslo e as luzes que dançam no céu ártico de Tromsø.
             </p>
 
             <div className="flex items-center gap-5 mt-8 md:mt-10">

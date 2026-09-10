@@ -7,13 +7,15 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 
-import heroAuroraImg from "@/assets/aurora-boreal/hero-aurora.jpg";
-import reykjavikImg from "@/assets/aurora-boreal/reykjavik.jpg";
-import lagoaGlacialImg from "@/assets/aurora-boreal/lagoa-glacial.jpg";
-import cachoeiraImg from "@/assets/aurora-boreal/cachoeira.jpg";
-import lagoaAzulImg from "@/assets/aurora-boreal/lagoa-azul.jpg";
-import circuloDouradoImg from "@/assets/aurora-boreal/circulo-dourado.jpg";
-import cacaAuroraImg from "@/assets/aurora-boreal/caca-aurora.jpg";
+import embarqueImg from "@/assets/aurora-boreal/embarque-guarulhos.jpg";
+import copenhagueImg from "@/assets/aurora-boreal/copenhague-nyhavn.jpg";
+import sereiaImg from "@/assets/aurora-boreal/copenhague-sereia.jpg";
+import ferryImg from "@/assets/aurora-boreal/ferry-dfds.jpg";
+import osloImg from "@/assets/aurora-boreal/oslo-vigeland.jpg";
+import tromsoFjellheisenImg from "@/assets/aurora-boreal/tromso-fjellheisen.jpg";
+import tromsoAuroraImg from "@/assets/aurora-boreal/tromso-aurora.jpg";
+import reindeerImg from "@/assets/aurora-boreal/reindeer-tromso.jpg";
+import estocolmoImg from "@/assets/aurora-boreal/estocolmo-gamla-stan.jpg";
 
 interface Slide {
   day: string;
@@ -29,101 +31,145 @@ interface Slide {
 const slides: Slide[] = [
   {
     day: "1º Dia",
-    image: heroAuroraImg,
-    imageAlt: "Aurora boreal sobre paisagem nevada",
-    region: "São Paulo → Reykjavík",
+    image: embarqueImg,
+    imageAlt: "Embarque no Aeroporto Internacional de Guarulhos",
+    region: "São Paulo → Copenhague",
     regionEn: "Departure",
-    title: "SÃO PAULO / REYKJAVÍK",
+    title: "SÃO PAULO / COPENHAGUE",
     description:
-      "Em horário combinado, encontro no Aeroporto de Guarulhos (GRU) para embarque com destino à Islândia, fazendo as devidas conexões.",
-    highlight: "O início de uma jornada rumo às luzes do norte.",
+      "Em horário combinado, encontro no Aeroporto Internacional de Guarulhos para embarque com destino a Copenhague, fazendo as devidas conexões.",
+    highlight: "O início da jornada rumo ao norte da Europa.",
   },
   {
     day: "2º Dia",
-    image: reykjavikImg,
-    imageAlt: "Reykjavík no inverno com montanhas nevadas ao fundo",
-    region: "Reykjavík",
+    image: copenhagueImg,
+    imageAlt: "Canais coloridos de Nyhavn em Copenhague",
+    region: "Copenhague",
     regionEn: "Arrival",
-    title: "CHEGADA EM REYKJAVÍK",
+    title: "CHEGADA EM COPENHAGUE",
     description:
-      "Chegada à capital islandesa, recepção com assistência especializada e traslado ao hotel. Restante do dia livre para o primeiro contato com a cidade. Jantar e hospedagem.",
-    highlight: "Bem-vindos à capital mais ao norte do mundo.",
+      "Chegada ao aeroporto de Copenhague e traslado ao hotel. Hospedagem. O guia estará disponível no hotel a partir das 18h30.",
+    highlight: "Primeiro contato com a capital dinamarquesa.",
   },
   {
     day: "3º Dia",
-    image: reykjavikImg,
-    imageAlt: "Casas coloridas e igreja Hallgrímskirkja em Reykjavík",
-    region: "Reykjavík",
+    image: sereiaImg,
+    imageAlt: "A Pequena Sereia, símbolo de Copenhague",
+    region: "Copenhague",
     regionEn: "City Tour",
-    title: "CITY TOUR EM REYKJAVÍK",
+    title: "CITY TOUR EM COPENHAGUE",
     description:
-      "Após o café da manhã, city tour panorâmico pela capital: a icônica igreja Hallgrímskirkja, o centro cultural Harpa, a orla com a escultura Sun Voyager, a Perlan e o charmoso centro histórico com suas casas coloridas. Tarde livre para compras e gastronomia local. Jantar e hospedagem.",
-    highlight: "Cultura nórdica, design e gastronomia em um só dia.",
+      "Após o café da manhã, visita panorâmica pela cidade, conhecendo seus principais monumentos e locais históricos, como a Praça da Prefeitura, o Palácio de Christiansborg (atual sede do Parlamento), a Fonte da Deusa Gefion, o porto de Nyhavn com suas pitorescas e coloridas casas do século XVII e, é claro, o símbolo da cidade, a famosa Pequena Sereia. Opcionalmente, poderemos visitar o majestoso Castelo Real de Frederiksborg, no norte da Zelândia. Tarde livre e hospedagem.",
+    highlight: "Cores, história e charme nórdico em um só dia.",
   },
   {
     day: "4º Dia",
-    image: circuloDouradoImg,
-    imageAlt: "Gêiser em erupção no Círculo Dourado da Islândia",
-    region: "Círculo Dourado",
-    regionEn: "Golden Circle",
-    title: "REYKJAVÍK / CÍRCULO DOURADO / REYKJAVÍK",
+    image: ferryImg,
+    imageAlt: "Ferry noturno DFDS navegando pelo Mar do Norte",
+    region: "Copenhague → Oslo",
+    regionEn: "DFDS Cruise",
+    title: "COPENHAGUE / CRUZEIRO DFDS / OSLO",
     description:
-      "Dia dedicado ao famoso Círculo Dourado: o Parque Nacional Thingvellir, onde as placas tectônicas se encontram, a área geotérmica de Geysir com seus gêiseres em erupção e a imponente cachoeira Gullfoss. Retorno ao hotel para jantar e hospedagem.",
-    highlight: "Gêiseres, falhas tectônicas e cachoeiras monumentais.",
+      "Café da manhã e tempo livre até as 15h00. Traslado ao porto para embarque no ferry noturno DFDS (balsa de passageiros com conforto de navio de cruzeiro) com destino a Oslo, atravessando o Mar do Norte. O navio conta com diversos tipos de restaurantes, bar, lojas, discoteca e Wi-Fi. Hospedagem em cabine externa com janela. Jantar buffet a bordo.",
+    highlight: "Uma noite de navegação entre a Dinamarca e a Noruega.",
   },
   {
     day: "5º Dia",
-    image: cachoeiraImg,
-    imageAlt: "Cachoeira islandesa cercada de neve",
-    region: "Costa Sul",
-    regionEn: "South Coast",
-    title: "COSTA SUL E PRAIAS NEGRAS",
+    image: osloImg,
+    imageAlt: "Parque Vigeland em Oslo sob neve",
+    region: "Oslo",
+    regionEn: "Viking Capital",
+    title: "A CAPITAL VIKINGA",
     description:
-      "Saída pela deslumbrante costa sul: as cachoeiras Seljalandsfoss e Skógafoss, a praia de areia negra de Reynisfjara com suas colunas de basalto e o vilarejo de Vík. Jantar e pernoite na região.",
-    highlight: "Cachoeiras congeladas e praias de areia vulcânica.",
+      "Café da manhã a bordo e chegada a Oslo às 09h30. Desembarque e visita à 'Capital Vikinga', situada no fim do fiorde homônimo. Passaremos pela Prefeitura, Castelo Akershus, Palácio Real, Parlamento e o Parque Vigeland, com as famosas esculturas de bronze de Gustav Vigeland que simbolizam o ciclo da vida humana, incluindo o grande monólito com 121 corpos entrelaçados. Tarde livre para passear pelo animado bairro de Aker Brygge, área portuária revitalizada com restaurantes, bares, discotecas e lojas. Hospedagem.",
+    highlight: "Esculturas monumentais e o fiorde de Oslo.",
   },
   {
     day: "6º Dia",
-    image: lagoaGlacialImg,
-    imageAlt: "Icebergs azuis na lagoa glacial de Jökulsárlón",
-    region: "Jökulsárlón",
-    regionEn: "Glacier Lagoon",
-    title: "LAGOA GLACIAL E DIAMOND BEACH",
+    image: tromsoFjellheisenImg,
+    imageAlt: "Vista panorâmica de Tromsø do teleférico Fjellheisen",
+    region: "Oslo → Tromsø",
+    regionEn: "Flight North",
+    title: "OSLO / TROMSØ",
     description:
-      "Visita à lagoa glacial de Jökulsárlón, com seus icebergs azuis flutuando, e à Diamond Beach, onde blocos de gelo repousam sobre a areia negra. Caminhada panorâmica pelo Parque Nacional Vatnajökull. Jantar e pernoite.",
-    highlight: "O azul das geleiras contra a areia negra.",
+      "Café da manhã e traslado ao aeroporto para embarque com destino a Tromsø. Chegada e hospedagem.",
+    highlight: "Rumo ao círculo polar ártico.",
   },
   {
     day: "7º Dia",
-    image: cacaAuroraImg,
-    imageAlt: "Grupo observando a aurora boreal no céu noturno",
-    region: "Caça à Aurora",
-    regionEn: "Northern Lights",
-    title: "EXPEDIÇÃO À AURORA BOREAL",
+    image: tromsoAuroraImg,
+    imageAlt: "Aurora boreal sobre acampamento Sami em Tromsø",
+    region: "Tromsø",
+    regionEn: "Arctic Adventure",
+    title: "TROMSØ E CAÇA À AURORA BOREAL",
     description:
-      "Dia com atividades livres e, à noite, expedição exclusiva de caça à aurora boreal com guia especializado, em busca dos melhores céus limpos e escuros para observar as luzes do norte. Retorno ao hotel.",
+      "Café da manhã e visita panorâmica pela cidade, incluindo visita ao interior da Catedral do Ártico. Em seguida, subida de teleférico Fjellheisen ao Monte Fløya para apreciar uma vista panorâmica da cidade, das ilhas e dos fiordes ao redor. Retorno ao hotel e tarde livre. À noite, saída para um acampamento Sami, a cerca de 75 minutos da cidade. A região apresenta clima seco e estável, com muitos dias de céu limpo — o que aumenta as chances de observar os delicados raios da Aurora Boreal. Durante a visita, será servida uma refeição quente, e haverá um agradável momento social em torno da fogueira na grande Lavvu (tenda tradicional dos pastores Sami). Hospedagem.",
     highlight: "A noite mais esperada da viagem.",
   },
   {
     day: "8º Dia",
-    image: lagoaAzulImg,
-    imageAlt: "Águas termais azul-leitosas entre rochas vulcânicas",
-    region: "Águas Termais",
-    regionEn: "Blue Lagoon",
-    title: "LAGOA AZUL E TERMAS GEOTÉRMICAS",
+    image: reindeerImg,
+    imageAlt: "Passeio de trenó puxado por renas em Tromsø",
+    region: "Tromsø",
+    regionEn: "Sami Experience",
+    title: "TRILHA DE RENAS E CULTURA SAMI",
     description:
-      "Manhã dedicada ao relaxamento nas famosas águas termais geotérmicas de tom azul-leitoso, cercadas por campos de lava. Tarde livre em Reykjavík para últimas compras. Jantar de despedida.",
-    highlight: "Relaxamento em águas termais a 39 °C.",
+      "Após o café da manhã, visitaremos outro campo Sami. Seguindo as tradições dessa cultura, faremos um passeio em trenó puxado por renas através de paisagens congeladas e deslumbrantes. A atividade é adequada para todas as idades, pois o trajeto é tranquilo e os trenós são conduzidos em duplas, cada um com uma rena. Em seguida, haverá a oportunidade de tentar laçar uma rena, como fazem os Samis em suas práticas tradicionais. A excursão termina com uma refeição quente. Retorno ao hotel e hospedagem em Tromsø.",
+    highlight: "Uma experiência tradicional no coração do Ártico.",
   },
   {
     day: "9º Dia",
-    image: heroAuroraImg,
-    imageAlt: "Céu noturno com aurora boreal na Islândia",
-    region: "Reykjavík → São Paulo",
-    regionEn: "Return",
-    title: "REYKJAVÍK / GUARULHOS",
+    image: tromsoFjellheisenImg,
+    imageAlt: "Paisagem ártica de Tromsø com montanhas nevadas",
+    region: "Tromsø → Oslo",
+    regionEn: "Return South",
+    title: "TROMSØ / OSLO",
     description:
-      "Após o café da manhã, traslado ao aeroporto para embarque em voo com destino a São Paulo, fazendo as devidas conexões. Chegada em São Paulo. Fim dos nossos serviços!",
+      "Café da manhã e traslado ao aeroporto no horário previsto para embarque com destino a Oslo. Chegada e hospedagem.",
+    highlight: "Retorno à capital norueguesa.",
+  },
+  {
+    day: "10º Dia",
+    image: estocolmoImg,
+    imageAlt: "Trem de alta velocidade entre Oslo e Estocolmo",
+    region: "Oslo → Estocolmo",
+    regionEn: "Scenic Train",
+    title: "OSLO / ESTOCOLMO",
+    description:
+      "Café da manhã e traslado à estação ferroviária para embarque no trem rápido com destino a Estocolmo. Chegada, traslado ao hotel e hospedagem.",
+    highlight: "Uma viagem panorâmica entre duas capitais nórdicas.",
+  },
+  {
+    day: "11º Dia",
+    image: estocolmoImg,
+    imageAlt: "Casas coloridas do bairro antigo Gamla Stan em Estocolmo",
+    region: "Estocolmo",
+    regionEn: "City Tour",
+    title: "CITY TOUR EM ESTOCOLMO",
+    description:
+      "Café da manhã e visita pela cidade, passando pela cidade antiga (Gamla Stan), onde se encontram importantes edifícios históricos, como o Palácio Real, a Casa da Nobreza e o Museu Nobel. Seguiremos até a ilha de Södermalm, situada sobre várias colinas, de onde se tem uma vista espetacular da parte norte de Estocolmo. Hospedagem.",
+    highlight: "O encanto das ilhas e da história sueca.",
+  },
+  {
+    day: "12º Dia",
+    image: estocolmoImg,
+    imageAlt: "Estocolmo sob luz invernal",
+    region: "Estocolmo → São Paulo",
+    regionEn: "Departure",
+    title: "ESTOCOLMO / SÃO PAULO",
+    description:
+      "Café da manhã e traslado ao aeroporto para embarque com destino a São Paulo.",
+    highlight: "Despedida do norte da Europa.",
+  },
+  {
+    day: "13º Dia",
+    image: embarqueImg,
+    imageAlt: "Chegada ao Aeroporto Internacional de Guarulhos",
+    region: "São Paulo",
+    regionEn: "Arrival",
+    title: "CHEGADA EM GUARULHOS",
+    description:
+      "Chegada ao Aeroporto Internacional de Guarulhos. Fim de nossos serviços!",
     highlight: "Memórias eternas sob as luzes do norte.",
   },
 ];
@@ -160,7 +206,7 @@ const Roteiro = () => {
           </h2>
           <div className="w-16 h-px bg-secondary mx-auto mt-6" />
           <p className="font-body text-muted-foreground text-sm md:text-base mt-6 leading-relaxed">
-            9 dias pelos cenários mais impressionantes da Islândia: Reykjavík, Círculo Dourado, costa sul, lagoa glacial, águas termais e expedição à aurora boreal.
+            13 dias pelo norte da Europa: Copenhague, cruzeiro DFDS, Oslo, Tromsø com caça à aurora e cultura Sami, e Estocolmo.
           </p>
         </div>
 
