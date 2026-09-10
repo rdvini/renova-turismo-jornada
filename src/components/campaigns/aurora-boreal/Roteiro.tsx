@@ -7,7 +7,8 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 
-import embarqueImg from "@/assets/aurora-boreal/embarque-guarulhos.jpg";
+import embarqueImgAsset from "@/assets/aurora-boreal/embarque-familia-aeroporto.jpg.asset.json";
+const embarqueImg = embarqueImgAsset.url;
 import copenhagueImg from "@/assets/aurora-boreal/copenhague-nyhavn.jpg";
 import sereiaImg from "@/assets/aurora-boreal/copenhague-sereia.jpg";
 import ferryImg from "@/assets/aurora-boreal/ferry-dfds.jpg";
