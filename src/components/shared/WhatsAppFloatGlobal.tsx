@@ -22,7 +22,7 @@ const PAGE_WHATSAPP: Record<string, string> = {
   "/marrocos": "5519936186395",
   "/jmj-seul-2027": "5519998974721",
   "/grecia": "5519988216863",
-  "/aurora-boreal": "5519988216863",
+  "/aurora-boreal": "5519992016125",
   "/semana-do-cliente": "5519994718930",
 };
 

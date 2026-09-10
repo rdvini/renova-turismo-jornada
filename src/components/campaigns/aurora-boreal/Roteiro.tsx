@@ -178,7 +178,7 @@ const slides: Slide[] = [
 ];
 
 const WHATSAPP =
-  "https://api.whatsapp.com/send/?phone=5519988216863&text=" +
+  "https://api.whatsapp.com/send/?phone=5519992016125&text=" +
   encodeURIComponent(
     "Olá! Vim pela landing page da Renova Turismo e tenho interesse no roteiro da Aurora Boreal. Gostaria de receber mais informações sobre datas, valores e disponibilidade. Aguardo retorno!"
   ) +
