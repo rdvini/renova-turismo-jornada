@@ -12,7 +12,7 @@ const embarqueImg = embarqueImgAsset.url;
 import copenhagueImg from "@/assets/aurora-boreal/copenhague-nyhavn.jpg";
 import sereiaImg from "@/assets/aurora-boreal/copenhague-sereia.jpg";
 import ferryImg from "@/assets/aurora-boreal/ferry-dfds.jpg";
-import osloImg from "@/assets/aurora-boreal/oslo-vigeland.jpg";
+import osloImg from "@/assets/aurora-boreal/oslo-grand-hotel.jpg.asset.json";
 import tromsoFjellheisenImg from "@/assets/aurora-boreal/tromso-fjellheisen.jpg";
 import tromsoAuroraImg from "@/assets/aurora-boreal/tromso-aurora.jpg";
 import reindeerImg from "@/assets/aurora-boreal/reindeer-tromso.jpg";
@@ -76,8 +76,8 @@ const slides: Slide[] = [
   },
   {
     day: "5º Dia",
-    image: osloImg,
-    imageAlt: "Parque Vigeland em Oslo sob neve",
+    image: osloImg.url,
+    imageAlt: "Fachada histórica do Grand Hotel em Oslo",
     region: "Oslo",
     regionEn: "Viking Capital",
     title: "A CAPITAL VIKINGA",
