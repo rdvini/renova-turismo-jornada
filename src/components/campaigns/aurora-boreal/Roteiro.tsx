@@ -15,7 +15,7 @@ import ferryImg from "@/assets/aurora-boreal/ferry-dfds.jpg";
 import osloImg from "@/assets/aurora-boreal/oslo-grand-hotel.jpg.asset.json";
 import tromsoFjellheisenImg from "@/assets/aurora-boreal/tromso-fjellheisen.jpg";
 import tromsoAuroraImg from "@/assets/aurora-boreal/tromso-aurora.jpg";
-import reindeerImg from "@/assets/aurora-boreal/reindeer-tromso.jpg";
+import reindeerImg from "@/assets/aurora-boreal/tromso-catedral-arctica.jpg.asset.json";
 import estocolmoImg from "@/assets/aurora-boreal/estocolmo-gamla-stan.jpg";
 
 interface Slide {
@@ -109,8 +109,8 @@ const slides: Slide[] = [
   },
   {
     day: "8º Dia",
-    image: reindeerImg,
-    imageAlt: "Passeio de trenó puxado por renas em Tromsø",
+    image: reindeerImg.url,
+    imageAlt: "Catedral do Ártico em Tromsø com montanhas nevadas ao fundo",
     region: "Tromsø",
     regionEn: "Sami Experience",
     title: "TRILHA DE RENAS E CULTURA SAMI",
