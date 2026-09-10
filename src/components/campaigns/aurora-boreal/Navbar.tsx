@@ -11,7 +11,7 @@ const navLinks = [
 ];
 
 const WHATSAPP =
-  "https://api.whatsapp.com/send/?phone=5519988216863&text=Ol%C3%A1!%20Vim%20pela%20landing%20page%20da%20Renova%20Turismo%20e%20tenho%20interesse%20no%20roteiro%20da%20Aurora%20Boreal.%20Gostaria%20de%20receber%20mais%20informa%C3%A7%C3%B5es%20sobre%20datas%2C%20valores%20e%20disponibilidade.%20Aguardo%20retorno!&type=phone_number&app_absent=0";
+  "https://api.whatsapp.com/send/?phone=5519992016125&text=Ol%C3%A1!%20Vim%20pela%20landing%20page%20da%20Renova%20Turismo%20e%20tenho%20interesse%20no%20roteiro%20da%20Aurora%20Boreal.%20Gostaria%20de%20receber%20mais%20informa%C3%A7%C3%B5es%20sobre%20datas%2C%20valores%20e%20disponibilidade.%20Aguardo%20retorno!&type=phone_number&app_absent=0";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
