@@ -1,35 +1,90 @@
-import { Users, Coffee, Plane, Hotel, ShieldCheck, Headphones } from "lucide-react";
+import {
+  Plane,
+  Hotel,
+  Coffee,
+  Ship,
+  Users,
+  Sparkles,
+  Snowflake,
+  Train,
+  Bus,
+  Briefcase,
+  Headphones,
+  HandCoins,
+  ShieldCheck,
+  Ticket,
+} from "lucide-react";
 
 const items = [
   {
-    icon: Users,
-    title: "Guias Especializados",
-    text: "Guias locais falando português, com profundo conhecimento cultural e histórico, para enriquecer cada momento da viagem.",
-  },
-  {
-    icon: Coffee,
-    title: "Refeições Incluídas",
-    text: "Café da manhã e jantar todos os dias, para que você se preocupe apenas com a experiência da viagem.",
-  },
-  {
     icon: Plane,
-    title: "Voos e Transfers",
-    text: "Toda a logística incluída — dos voos internacionais aos transfers entre cidades e hotéis, sem preocupações.",
+    title: "Voo internacional",
+    text: "Passagens aéreas de ida e volta inclusas no pacote.",
   },
   {
     icon: Hotel,
-    title: "HOTÉIS CATEGORIA TURÍSTICA SUPERIOR",
-    text: "Hospedagem selecionada pelo conforto e localização privilegiada — descanso e praticidade após cada dia.",
+    title: "Parte terrestre",
+    text: "Hotéis categoria Superior selecionados para seu conforto.",
   },
   {
-    icon: ShieldCheck,
-    title: "Seguro Viagem Completo",
-    text: "Cobertura total para que você viaje com a tranquilidade de estar protegido em todos os momentos.",
+    icon: Coffee,
+    title: "Acomodação em quarto duplo",
+    text: "Café da manhã e demais refeições conforme mencionado no roteiro.",
+  },
+  {
+    icon: Ship,
+    title: "Cruzeiro DFDS",
+    text: "Acomodação em cabine externa com janela entre Copenhague e Oslo.",
+  },
+  {
+    icon: Users,
+    title: "Visitas guiadas",
+    text: "Passeios conforme o itinerário com guia local em português ou espanhol.",
+  },
+  {
+    icon: Sparkles,
+    title: "Experiência Sami",
+    text: "Cultura indígena e observação da Aurora Boreal em noite especial.",
+  },
+  {
+    icon: Snowflake,
+    title: "Passeio em trenó com renas",
+    text: "Aventura inesquecível pelas paisagens congeladas da região de Tromsø.",
+  },
+  {
+    icon: Train,
+    title: "Bilhetes de trem",
+    text: "Passagem Oslo–Estocolmo para continuar a jornada pela Escandinávia.",
+  },
+  {
+    icon: Bus,
+    title: "Transporte em ônibus de luxo",
+    text: "Ônibus com ar-condicionado para os trajatos e visitas programadas.",
+  },
+  {
+    icon: Briefcase,
+    title: "Kit de viagem Renova Turismo",
+    text: "Materiais exclusivos da agência para acompanhar você durante toda a viagem.",
   },
   {
     icon: Headphones,
-    title: "Assistência 24 Horas",
-    text: "Acompanhamento de um profissional da Renova Turismo durante toda a viagem, pronto para atender você.",
+    title: "Acompanhante da agência",
+    text: "Profissional da Renova Turismo presente durante toda a viagem.",
+  },
+  {
+    icon: HandCoins,
+    title: "Gorjetas incluídas",
+    text: "Todas as gorjetas previstas já estão inclusas no valor do pacote.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Seguro viagem/saúde",
+    text: "Cobertura completa para você viajar com tranquilidade e segurança.",
+  },
+  {
+    icon: Ticket,
+    title: "Taxas de embarque",
+    text: "Todas as taxas de embarque incluídas, sem surpresas na hora da viagem.",
   },
 ];
 
