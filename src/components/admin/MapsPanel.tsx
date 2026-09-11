@@ -81,7 +81,7 @@ const MapsPanel = ({
     return () => {
       cancelled = true;
     };
-  }, [password]);
+  }, [password, query, page]);
 
   const exportCsv = () => {
     if (!data) return;

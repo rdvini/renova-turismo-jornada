@@ -65,6 +65,7 @@ const KNOWN_PAGES = Array.from(
     "/",
     ...campaigns.map((c) => c.slug),
     "/pastor-morelli",
+    "/semana-do-cliente",
     "/privacidade",
   ]),
 ).sort();
