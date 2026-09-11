@@ -170,7 +170,7 @@ export const campaigns: Campaign[] = [
     image: cardAurora,
     date: "Datas sob consulta",
     badge: "Experiência",
-    published: false,
+    published: true,
   },
   {
     id: "lideres",
