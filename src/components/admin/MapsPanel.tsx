@@ -77,7 +77,7 @@ const MapsPanel = ({
         if (!cancelled) setLoading(false);
       }
     };
-    void load();
+    if (password) void load();
     return () => {
       cancelled = true;
     };
