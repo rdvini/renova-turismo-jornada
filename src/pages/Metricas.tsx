@@ -181,6 +181,7 @@ const Metricas = () => {
   const [rangeOpen, setRangeOpen] = useState(false);
   const [selectedPage, setSelectedPage] = useState<string | null>(null);
   const [pageOpen, setPageOpen] = useState(false);
+  const [pageSummaryOpen, setPageSummaryOpen] = useState(true);
 
   const fetchMetrics = async (pwd: string, p: Preset, page: string | null) => {
     setLoading(true);
