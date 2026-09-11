@@ -86,7 +86,7 @@ const Hero = () => {
         <div className="grid lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-12 items-center min-w-0">
           {/* Left: headline */}
           <div className="text-primary-foreground max-w-xl min-w-0">
-            <p className="font-accent italic text-lg md:text-xl text-secondary mb-4 md:mb-6">
+            <p className="font-accent italic text-xl md:text-2xl text-secondary mb-4 md:mb-6">
               Os encantos da Escandinávia
             </p>
             <h1 className="font-heading uppercase leading-[0.92] tracking-tight text-[3.2rem] sm:text-6xl md:text-7xl lg:text-[5.5rem]">
