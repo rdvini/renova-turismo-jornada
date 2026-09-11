@@ -24,7 +24,7 @@ const items = [
   {
     icon: Hotel,
     title: "Parte terrestre",
-    text: "Hotéis categoria Superior selecionados para seu conforto.",
+    text: "Hotéis categoria Turística Superior selecionados para seu conforto.",
   },
   {
     icon: Coffee,
