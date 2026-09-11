@@ -87,7 +87,7 @@ const Hero = () => {
           {/* Left: headline */}
           <div className="text-primary-foreground max-w-xl min-w-0">
             <p className="font-accent italic text-lg md:text-xl text-secondary mb-4 md:mb-6">
-              Renova Turismo apresenta
+              Os encantos da Escandinávia
             </p>
             <h1 className="font-heading uppercase leading-[0.92] tracking-tight text-[3.2rem] sm:text-6xl md:text-7xl lg:text-[5.5rem]">
               <span className="block">Explore</span>
