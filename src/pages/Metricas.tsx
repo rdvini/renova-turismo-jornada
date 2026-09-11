@@ -906,6 +906,14 @@ const Metricas = () => {
             </div>
           </CardContent>
         </Card>
+
+        {selectedPage === "/semana-do-cliente" && (
+          <MapsPanel
+            password={password}
+            query={presetToQuery(preset)}
+            page={selectedPage}
+          />
+        )}
       </div>
     </main>
   );
