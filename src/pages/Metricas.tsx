@@ -499,14 +499,6 @@ const Metricas = () => {
 
       <div className="max-w-7xl mx-auto p-4 md:p-8 space-y-6">
 
-        <AcessosPanel
-          password={password}
-          query={presetToQuery(preset)}
-          periodLabel={presetLabel(preset)}
-          page={selectedPage}
-          hourly={preset.kind === "today" || preset.kind === "yesterday"}
-        />
-
         {selectedPage === "/semana-do-cliente" && (
           <Collapsible open={pageSummaryOpen} onOpenChange={setPageSummaryOpen}>
             <Card>
@@ -516,7 +508,7 @@ const Metricas = () => {
                     <div>
                       <CardTitle>Resumo da página</CardTitle>
                       <p className="text-sm text-muted-foreground mt-1">
-                        Cliques em "Confirmar presença", "Saiba como chegar" e mapa
+                        Acessos à página e cliques em "Confirmar presença", "Saiba como chegar" e mapa
                       </p>
                     </div>
                     <ChevronDown
@@ -529,6 +521,14 @@ const Metricas = () => {
               </CardHeader>
               <CollapsibleContent>
                 <CardContent className="space-y-6 pt-0">
+                  <AcessosPanel
+                    password={password}
+                    query={presetToQuery(preset)}
+                    periodLabel={presetLabel(preset)}
+                    page={selectedPage}
+                    hourly={preset.kind === "today" || preset.kind === "yesterday"}
+                  />
+
                   <ConfirmacoesPanel
                     password={password}
                     query={presetToQuery(preset)}
