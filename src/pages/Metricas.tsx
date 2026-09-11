@@ -498,52 +498,23 @@ const Metricas = () => {
       <div className="max-w-7xl mx-auto p-4 md:p-8 space-y-6">
 
         {selectedPage === "/semana-do-cliente" && (
-          <Collapsible open={pageSummaryOpen} onOpenChange={setPageSummaryOpen}>
-            <Card>
-              <CardHeader className="pb-3">
-                <CollapsibleTrigger asChild>
-                  <button className="w-full flex items-center justify-between text-left">
-                    <div>
-                      <CardTitle>Resumo da página</CardTitle>
-                      <p className="text-sm text-muted-foreground mt-1">
-                        Acessos à página e cliques em "Confirmar presença", "Saiba como chegar" e mapa
-                      </p>
-                    </div>
-                    <ChevronDown
-                      className={`h-5 w-5 text-muted-foreground transition-transform duration-300 ${
-                        pageSummaryOpen ? "rotate-180" : ""
-                      }`}
-                    />
-                  </button>
-                </CollapsibleTrigger>
-              </CardHeader>
-              <CollapsibleContent>
-                <CardContent className="space-y-6 pt-0">
-                  <AcessosPanel
-                    password={password}
-                    query={presetToQuery(preset)}
-                    periodLabel={presetLabel(preset)}
-                    page={selectedPage}
-                    hourly={preset.kind === "today" || preset.kind === "yesterday"}
-                  />
-
-                  <ConfirmacoesPanel
-                    password={password}
-                    query={presetToQuery(preset)}
-                    periodLabel={presetLabel(preset)}
-                    page={selectedPage}
-                    hourly={preset.kind === "today" || preset.kind === "yesterday"}
-                  />
-
-                  <MapsPanel
-                    password={password}
-                    query={presetToQuery(preset)}
-                    page={selectedPage}
-                  />
-                </CardContent>
-              </CollapsibleContent>
-            </Card>
-          </Collapsible>
+          <Card>
+            <CardHeader>
+              <CardTitle>Resumo da página</CardTitle>
+              <p className="text-sm text-muted-foreground mt-1">
+                Cliques em "Confirmar presença"
+              </p>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <ConfirmacoesPanel
+                password={password}
+                query={presetToQuery(preset)}
+                periodLabel={presetLabel(preset)}
+                page={selectedPage}
+                hourly={preset.kind === "today" || preset.kind === "yesterday"}
+              />
+            </CardContent>
+          </Card>
         )}
 
 
