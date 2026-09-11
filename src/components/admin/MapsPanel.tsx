@@ -40,7 +40,15 @@ const brDateTime = (iso: string) =>
     minute: "2-digit",
   });
 
-const MapsPanel = ({ password }: { password: string }) => {
+const MapsPanel = ({
+  password,
+  query = "days=365",
+  page,
+}: {
+  password: string;
+  query?: string;
+  page?: string | null;
+}) => {
   const [data, setData] = useState<MapsData | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -51,7 +59,8 @@ const MapsPanel = ({ password }: { password: string }) => {
       setLoading(true);
       setError(null);
       try {
-        const url = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/maps-metrics?days=365`;
+        const pageQs = page ? `&page=${encodeURIComponent(page)}` : "";
+        const url = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/maps-metrics?${query}${pageQs}`;
         const res = await fetch(url, {
           headers: {
             "x-metrics-password": password,
