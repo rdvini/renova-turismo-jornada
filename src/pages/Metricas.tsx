@@ -545,6 +545,7 @@ const Metricas = () => {
                 </CardContent>
               </CollapsibleContent>
             </Card>
+          </Collapsible>
         )}
 
 
