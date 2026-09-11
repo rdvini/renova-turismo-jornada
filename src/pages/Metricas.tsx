@@ -56,7 +56,6 @@ import {
 import { cn } from "@/lib/utils";
 import type { DateRange } from "react-day-picker";
 import { supabase } from "@/integrations/supabase/client";
-import ConfirmacoesPanel from "@/components/admin/ConfirmacoesPanel";
 import MapsPanel from "@/components/admin/MapsPanel";
 import { campaigns } from "@/data/campaigns";
 
@@ -496,25 +495,6 @@ const Metricas = () => {
 
       <div className="max-w-7xl mx-auto p-4 md:p-8 space-y-6">
 
-        {selectedPage === "/semana-do-cliente" && (
-          <Card>
-            <CardHeader>
-              <CardTitle>Resumo da página</CardTitle>
-              <p className="text-sm text-muted-foreground mt-1">
-                Cliques em "Confirmar presença"
-              </p>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <ConfirmacoesPanel
-                password={password}
-                query={presetToQuery(preset)}
-                periodLabel={presetLabel(preset)}
-                page={selectedPage}
-                hourly={preset.kind === "today" || preset.kind === "yesterday"}
-              />
-            </CardContent>
-          </Card>
-        )}
 
 
         {/* KPI cards */}
