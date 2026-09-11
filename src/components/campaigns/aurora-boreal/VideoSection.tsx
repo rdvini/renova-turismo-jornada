@@ -1,4 +1,4 @@
-const VIDEO_ID = "dQw4w9WgXcQ"; // TODO: substituir pelo ID do vídeo da Aurora Boreal
+const VIDEO_ID = "-XOHOyloF9Q";
 
 const VideoSection = () => {
   return (
