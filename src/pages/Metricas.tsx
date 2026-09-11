@@ -21,7 +21,6 @@ import {
   ArrowUpRight,
   CalendarIcon,
   Check,
-  ChevronDown,
   Clock,
   Globe,
   Home,
@@ -37,7 +36,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar } from "@/components/ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+
 import {
   Table,
   TableBody,
@@ -58,7 +57,6 @@ import { cn } from "@/lib/utils";
 import type { DateRange } from "react-day-picker";
 import { supabase } from "@/integrations/supabase/client";
 import ConfirmacoesPanel from "@/components/admin/ConfirmacoesPanel";
-import AcessosPanel from "@/components/admin/AcessosPanel";
 import MapsPanel from "@/components/admin/MapsPanel";
 import { campaigns } from "@/data/campaigns";
 
@@ -182,7 +180,6 @@ const Metricas = () => {
   const [rangeOpen, setRangeOpen] = useState(false);
   const [selectedPage, setSelectedPage] = useState<string | null>(null);
   const [pageOpen, setPageOpen] = useState(false);
-  const [pageSummaryOpen, setPageSummaryOpen] = useState(true);
 
   const fetchMetrics = async (pwd: string, p: Preset, page: string | null) => {
     setLoading(true);
@@ -500,52 +497,23 @@ const Metricas = () => {
       <div className="max-w-7xl mx-auto p-4 md:p-8 space-y-6">
 
         {selectedPage === "/semana-do-cliente" && (
-          <Collapsible open={pageSummaryOpen} onOpenChange={setPageSummaryOpen}>
-            <Card>
-              <CardHeader className="pb-3">
-                <CollapsibleTrigger asChild>
-                  <button className="w-full flex items-center justify-between text-left">
-                    <div>
-                      <CardTitle>Resumo da página</CardTitle>
-                      <p className="text-sm text-muted-foreground mt-1">
-                        Acessos à página e cliques em "Confirmar presença", "Saiba como chegar" e mapa
-                      </p>
-                    </div>
-                    <ChevronDown
-                      className={`h-5 w-5 text-muted-foreground transition-transform duration-300 ${
-                        pageSummaryOpen ? "rotate-180" : ""
-                      }`}
-                    />
-                  </button>
-                </CollapsibleTrigger>
-              </CardHeader>
-              <CollapsibleContent>
-                <CardContent className="space-y-6 pt-0">
-                  <AcessosPanel
-                    password={password}
-                    query={presetToQuery(preset)}
-                    periodLabel={presetLabel(preset)}
-                    page={selectedPage}
-                    hourly={preset.kind === "today" || preset.kind === "yesterday"}
-                  />
-
-                  <ConfirmacoesPanel
-                    password={password}
-                    query={presetToQuery(preset)}
-                    periodLabel={presetLabel(preset)}
-                    page={selectedPage}
-                    hourly={preset.kind === "today" || preset.kind === "yesterday"}
-                  />
-
-                  <MapsPanel
-                    password={password}
-                    query={presetToQuery(preset)}
-                    page={selectedPage}
-                  />
-                </CardContent>
-              </CollapsibleContent>
-            </Card>
-          </Collapsible>
+          <Card>
+            <CardHeader>
+              <CardTitle>Resumo da página</CardTitle>
+              <p className="text-sm text-muted-foreground mt-1">
+                Cliques em "Confirmar presença"
+              </p>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <ConfirmacoesPanel
+                password={password}
+                query={presetToQuery(preset)}
+                periodLabel={presetLabel(preset)}
+                page={selectedPage}
+                hourly={preset.kind === "today" || preset.kind === "yesterday"}
+              />
+            </CardContent>
+          </Card>
         )}
 
 
@@ -937,6 +905,14 @@ const Metricas = () => {
             </div>
           </CardContent>
         </Card>
+
+        {selectedPage === "/semana-do-cliente" && (
+          <MapsPanel
+            password={password}
+            query={presetToQuery(preset)}
+            page={selectedPage}
+          />
+        )}
       </div>
     </main>
   );
