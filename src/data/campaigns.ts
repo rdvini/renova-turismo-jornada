@@ -168,7 +168,7 @@ export const campaigns: Campaign[] = [
     description:
       "Uma jornada pelo extremo norte — geleiras, vulcões, águas termais e noites dedicadas a ver as luzes do norte dançarem no céu da Islândia.",
     image: cardAurora,
-    date: "Datas sob consulta",
+    date: "22 de Fevereiro a 05 de Março de 2027",
     badge: "Experiência",
     published: true,
   },
