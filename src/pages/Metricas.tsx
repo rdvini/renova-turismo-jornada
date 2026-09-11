@@ -58,6 +58,7 @@ import { cn } from "@/lib/utils";
 import type { DateRange } from "react-day-picker";
 import { supabase } from "@/integrations/supabase/client";
 import ConfirmacoesPanel from "@/components/admin/ConfirmacoesPanel";
+import AcessosPanel from "@/components/admin/AcessosPanel";
 import MapsPanel from "@/components/admin/MapsPanel";
 import { campaigns } from "@/data/campaigns";
 

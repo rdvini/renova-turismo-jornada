@@ -7,6 +7,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import WhatsAppTracker from "./components/tracking/WhatsAppTracker";
 import MapsTracker from "./components/tracking/MapsTracker";
+import PageViewTracker from "./components/tracking/PageViewTracker";
 import WhatsAppFloatGlobal from "./components/shared/WhatsAppFloatGlobal";
 
 const Index = lazy(() => import("./pages/Index.tsx"));
@@ -53,6 +54,7 @@ const App = () => {
         <AnalyticsTracker />
         <WhatsAppTracker />
         <MapsTracker />
+        <PageViewTracker />
         <WhatsAppFloatGlobal />
         <Suspense fallback={<PageFallback />}>
           <Routes>
