@@ -495,15 +495,24 @@ const Metricas = () => {
 
       <div className="max-w-7xl mx-auto p-4 md:p-8 space-y-6">
 
-        <ConfirmacoesPanel
-          password={password}
-          query={presetToQuery(preset)}
-          periodLabel={presetLabel(preset)}
-          page={selectedPage}
-          hourly={preset.kind === "today" || preset.kind === "yesterday"}
-        />
+        {selectedPage === "/semana-do-cliente" && (
+          <div className="space-y-6">
+            <ConfirmacoesPanel
+              password={password}
+              query={presetToQuery(preset)}
+              periodLabel={presetLabel(preset)}
+              page={selectedPage}
+              hourly={preset.kind === "today" || preset.kind === "yesterday"}
+            />
 
-        <MapsPanel password={password} query={presetToQuery(preset)} page={selectedPage} />
+            <MapsPanel
+              password={password}
+              query={presetToQuery(preset)}
+              page={selectedPage}
+            />
+          </div>
+        )}
+
 
         {/* KPI cards */}
 
