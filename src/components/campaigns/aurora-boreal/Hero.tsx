@@ -90,9 +90,7 @@ const Hero = () => {
               Os encantos da Escandinávia
             </p>
             <h1 className="font-heading uppercase leading-[0.92] tracking-tight text-[3.2rem] sm:text-6xl md:text-7xl lg:text-[5.5rem]">
-              <span className="block">Explore</span>
-              <span className="block">a Aurora</span>
-              <span className="block display-outline">Boreal</span>
+              <span className="block display-outline">Aurora Boreal</span>
             </h1>
             <p className="font-body text-base md:text-lg text-primary-foreground/80 max-w-md mt-6 md:mt-8 leading-relaxed">
               Uma jornada pelo extremo norte — entre canais de Copenhague, o cruzeiro
