@@ -93,8 +93,7 @@ const Hero = () => {
               <span className="block display-outline">Aurora Boreal</span>
             </h1>
             <p className="font-body text-base md:text-lg text-primary-foreground/80 max-w-md mt-6 md:mt-8 leading-relaxed">
-              Uma jornada pelo extremo norte — entre canais de Copenhague, o cruzeiro
-              DFDS, a capital viking de Oslo e as luzes que dançam no céu ártico de Tromsø.
+              Dos canais de Copenhague ao espetáculo da aurora boreal em Tromsø — uma jornada extraordinária pelo extremo norte da Europa, onde fiordes, noites navegando e paisagens árticas transformam cada etapa da viagem em uma experiência inesquecível.
             </p>
 
             <div className="flex items-center gap-5 mt-8 md:mt-10">
