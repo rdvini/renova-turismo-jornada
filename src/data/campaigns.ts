@@ -166,7 +166,7 @@ export const campaigns: Campaign[] = [
     title: "Aurora Boreal",
     subtitle: "RENOVA TURISMO APRESENTA",
     description:
-      "Uma jornada pelo extremo norte — geleiras, vulcões, águas termais e noites dedicadas a ver as luzes do norte dançarem no céu da Islândia.",
+      "Dos canais de Copenhague ao espetáculo da aurora boreal em Tromsø — uma jornada extraordinária pelo extremo norte da Europa, com Oslo, cultura Sami e Estocolmo.",
     image: cardAurora,
     date: "22 de Fevereiro a 05 de Março de 2027",
     badge: "Experiência",
