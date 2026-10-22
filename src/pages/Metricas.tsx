@@ -1,279 +1,82 @@
 import { useEffect, useMemo, useState } from "react";
-import { format, parseISO } from "date-fns";
-import { ptBR } from "date-fns/locale";
-import {
-  Area,
-  AreaChart,
-  Bar,
-  BarChart,
-  Cell,
-  CartesianGrid,
-  Pie,
-  PieChart,
-  ResponsiveContainer,
-  Tooltip,
-  XAxis,
-  YAxis,
-} from "recharts";
-import {
-  Activity,
-  ArrowDownRight,
-  ArrowUpRight,
-  CalendarIcon,
-  Check,
-  Clock,
-  Globe,
-  Home,
-  LogOut,
-  MessageCircle,
-  Smartphone,
-  TrendingUp,
-  X,
-} from "lucide-react";
+import { BarChart3, LogOut, RefreshCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Calendar } from "@/components/ui/calendar";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import FilterBar, { presetPeriod, type Period } from "@/components/admin/metrics/FilterBar";
+import { ButtonsCard, CampaignsCard, KpiCards, PagesTable, RecentLogs, SourcesCard, TrendChart } from "@/components/admin/metrics/Sections";
+import { aggregate, type MetricsPayload } from "@/lib/metrics";
 
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
-import {
-  Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList,
-} from "@/components/ui/command";
-import { cn } from "@/lib/utils";
-import type { DateRange } from "react-day-picker";
-import { supabase } from "@/integrations/supabase/client";
-import MapsPanel from "@/components/admin/MapsPanel";
-import { campaigns } from "@/data/campaigns";
-
-
-const KNOWN_PAGES = Array.from(
-  new Set<string>([
-    "/",
-    ...campaigns.map((c) => c.slug),
-    "/pastor-morelli",
-    "/semana-do-cliente",
-    "/privacidade",
-  ]),
-).sort();
-
-// YYYY-MM-DD do dia atual em Brasília (UTC-3)
-const brYmd = (d: Date) =>
-  new Date(d.getTime() - 3 * 60 * 60 * 1000).toISOString().slice(0, 10);
-
-// Converte YYYY-MM-DD (dia BR) para um Date "local" para o calendário
-const ymdToDate = (ymd: string) => {
-  const [y, m, d] = ymd.split("-").map(Number);
-  return new Date(y, m - 1, d);
-};
-const dateToYmd = (d: Date) => {
-  const y = d.getFullYear();
-  const m = String(d.getMonth() + 1).padStart(2, "0");
-  const day = String(d.getDate()).padStart(2, "0");
-  return `${y}-${m}-${day}`;
-};
-
-type Preset =
-  | { kind: "today" }
-  | { kind: "yesterday" }
-  | { kind: "todayYesterday" }
-  | { kind: "lastDays"; days: number }
-  | { kind: "custom"; from: string; to: string };
-
-const presetLabel = (p: Preset): string => {
-  switch (p.kind) {
-    case "today":
-      return "Hoje";
-    case "yesterday":
-      return "Ontem";
-    case "todayYesterday":
-      return "Hoje e ontem";
-    case "lastDays":
-      return p.days >= 365 ? "Tudo" : `${p.days}d`;
-    case "custom":
-      return `${format(ymdToDate(p.from), "dd/MM/yy")} – ${format(ymdToDate(p.to), "dd/MM/yy")}`;
-  }
-};
-
-const presetToQuery = (p: Preset): string => {
-  const today = brYmd(new Date());
-  const shift = (ymd: string, n: number) => {
-    const t = Date.parse(`${ymd}T00:00:00.000Z`) + n * 86400000;
-    return new Date(t).toISOString().slice(0, 10);
-  };
-  switch (p.kind) {
-    case "today":
-      return `from=${today}&to=${today}`;
-    case "yesterday": {
-      const y = shift(today, -1);
-      return `from=${y}&to=${y}`;
-    }
-    case "todayYesterday": {
-      const y = shift(today, -1);
-      return `from=${y}&to=${today}`;
-    }
-    case "lastDays":
-      return `days=${p.days}`;
-    case "custom":
-      return `from=${p.from}&to=${p.to}`;
-  }
-};
-
-type Metrics = {
-  total: number;
-  prevTotal: number;
-  delta: number | null;
-  days: number;
-  from?: string;
-  to?: string;
-  avgPerDay: number;
-  peakDay: { date: string; count: number };
-  peakHour: { hour: number; count: number };
-  byDay: { date: string; count: number }[];
-  byHour: { hour: number; count: number }[];
-  byDow: { name: string; count: number }[];
-  byPage: { page: string; count: number }[];
-  bySource: { source: string; count: number }[];
-  byReferrer: { referrer: string; count: number }[];
-  byDevice: { device: string; count: number }[];
-  recent: {
-    id: string;
-    page: string;
-    source: string | null;
-    referrer: string;
-    device: string;
-    created_at: string;
-  }[];
-};
-
-const PIE_COLORS = [
-  "hsl(var(--primary))",
-  "hsl(var(--secondary))",
-  "hsl(142 70% 45%)",
-  "hsl(280 65% 60%)",
-  "hsl(30 90% 55%)",
-  "hsl(340 75% 55%)",
-];
+const PWD_KEY = "renova_metrics_pwd";
 
 const Metricas = () => {
-  const [password, setPassword] = useState<string>("");
-  const [authed, setAuthed] = useState<boolean>(false);
-  const [preset, setPreset] = useState<Preset>({ kind: "lastDays", days: 30 });
-  const [data, setData] = useState<Metrics | null>(null);
+  const [password, setPassword] = useState(() => sessionStorage.getItem(PWD_KEY) ?? "");
+  const [authed, setAuthed] = useState(false);
+  const [period, setPeriod] = useState<Period>(() => presetPeriod("30"));
+  const [page, setPage] = useState<string | null>(null);
+  const [campaign, setCampaign] = useState<string | null>(null);
+  const [payload, setPayload] = useState<MetricsPayload | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [rangeDraft, setRangeDraft] = useState<DateRange | undefined>();
-  const [rangeOpen, setRangeOpen] = useState(false);
-  const [selectedPage, setSelectedPage] = useState<string | null>(null);
-  const [pageOpen, setPageOpen] = useState(false);
 
-  const fetchMetrics = async (pwd: string, p: Preset, page: string | null) => {
+  const load = async (pwd: string, p: Period) => {
     setLoading(true);
     setError(null);
     try {
-      const pageQs = page ? `&page=${encodeURIComponent(page)}` : "";
-      const url = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/whatsapp-metrics?${presetToQuery(p)}${pageQs}`;
-      const res = await fetch(url, {
-        method: "GET",
-        headers: {
-          "x-metrics-password": pwd,
-          apikey: import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
-          Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
+      const res = await fetch(
+        `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/metrics-overview?from=${p.from}&to=${p.to}`,
+        {
+          headers: {
+            "x-metrics-password": pwd,
+            apikey: import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
+            Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
+          },
         },
-      });
-      if (!res.ok) {
-        const body = await res.text();
-        throw new Error(`${res.status}: ${body}`);
-      }
-      const json = (await res.json()) as Metrics;
-      setData(json);
+      );
+      if (res.status === 401) throw new Error("auth");
+      if (!res.ok) throw new Error("load");
+      setPayload(await res.json());
       setAuthed(true);
+      sessionStorage.setItem(PWD_KEY, pwd);
     } catch (e) {
-      console.error("metrics error", e);
-      setError("Senha incorreta ou erro ao carregar.");
-      setAuthed(false);
+      const auth = (e as Error).message === "auth";
+      setError(auth ? "Senha incorreta." : "Erro ao carregar os dados. Tente novamente.");
+      if (auth) { setAuthed(false); sessionStorage.removeItem(PWD_KEY); }
     } finally {
       setLoading(false);
     }
   };
 
   useEffect(() => {
-    if (authed && password) fetchMetrics(password, preset, selectedPage);
+    document.title = "Métricas | Renova Turismo";
+    if (password) void load(password, period);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [preset, selectedPage]);
-
-  const pageOptions = useMemo(() => {
-    const set = new Set<string>(KNOWN_PAGES);
-    data?.byPage.forEach((p) => set.add(p.page));
-    return Array.from(set).sort();
-  }, [data]);
-
-
-  useEffect(() => {
-    document.title = "Métricas WhatsApp | Renova Turismo";
   }, []);
 
-  const dailyChart = useMemo(
-    () =>
-      data?.byDay.map((d) => ({
-        ...d,
-        label: format(parseISO(d.date), "dd/MM", { locale: ptBR }),
-      })) ?? [],
-    [data],
-  );
+  useEffect(() => {
+    if (authed) void load(password, period);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [period]);
 
-  const hourChart = useMemo(
-    () =>
-      data?.byHour.map((h) => ({
-        ...h,
-        label: `${String(h.hour).padStart(2, "0")}h`,
-      })) ?? [],
-    [data],
-  );
-
-  const maxPage = data?.byPage[0]?.count ?? 0;
-  const maxSource = data?.bySource[0]?.count ?? 0;
+  const agg = useMemo(() => (payload ? aggregate(payload, { page, campaign }) : null), [payload, page, campaign]);
 
   if (!authed) {
     return (
-      <main className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-primary/10 p-4">
-        <Card className="w-full max-w-sm shadow-xl border-primary/20">
+      <main className="min-h-screen flex items-center justify-center bg-muted/30 p-4">
+        <Card className="w-full max-w-sm">
           <CardHeader className="text-center space-y-3">
             <div className="mx-auto h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center">
-              <MessageCircle className="h-6 w-6 text-primary" />
+              <BarChart3 className="h-6 w-6 text-primary" />
             </div>
             <CardTitle>Painel de Métricas</CardTitle>
             <p className="text-sm text-muted-foreground">Acesso restrito</p>
           </CardHeader>
           <CardContent className="space-y-4">
-            <Input
-              type="password"
-              placeholder="Senha"
-              value={password}
+            <Input type="password" placeholder="Senha" value={password}
               onChange={(e) => setPassword(e.target.value)}
-              onKeyDown={(e) => {
-                if (e.key === "Enter") fetchMetrics(password, preset, selectedPage);
-              }}
-            />
+              onKeyDown={(e) => e.key === "Enter" && password && load(password, period)} />
             {error && <p className="text-sm text-destructive">{error}</p>}
-            <Button
-              className="w-full"
-              disabled={!password || loading}
-              onClick={() => fetchMetrics(password, preset, selectedPage)}
-            >
+            <Button className="w-full" disabled={!password || loading} onClick={() => load(password, period)}>
               {loading ? "Entrando..." : "Entrar"}
             </Button>
           </CardContent>
@@ -282,650 +85,52 @@ const Metricas = () => {
     );
   }
 
-  const deltaPositive = (data?.delta ?? 0) >= 0;
-
   return (
-    <main className="min-h-screen bg-gradient-to-br from-background via-background to-muted/30">
-      <header className="sticky top-0 z-40 border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="max-w-7xl mx-auto p-4 md:px-8 md:py-4 flex flex-wrap items-center justify-between gap-4">
-          <div>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground mb-1">
-              <Activity className="h-4 w-4" /> Dashboard ao vivo
-            </div>
-            <h1 className="text-2xl md:text-3xl font-bold tracking-tight">
-              Cliques no WhatsApp
-            </h1>
-            <p className="text-sm text-muted-foreground">
-              {data?.from && data?.to
-                ? `${format(ymdToDate(data.from), "dd MMM", { locale: ptBR })} – ${format(ymdToDate(data.to), "dd MMM yyyy", { locale: ptBR })}`
-                : `Últimos ${data?.days ?? ""} dias`}{" "}
-              · atualizado agora
-            </p>
+    <main className="min-h-screen bg-muted/30">
+      <header className="sticky top-0 z-40 border-b bg-background/90 backdrop-blur">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 py-3 flex flex-wrap items-start justify-between gap-3">
+          <div className="flex items-center gap-2 pt-2">
+            <BarChart3 className="h-5 w-5 text-primary" />
+            <h1 className="text-lg font-bold">Métricas</h1>
           </div>
-          <div className="flex flex-wrap items-center gap-2">
-            <div className="flex flex-wrap rounded-lg bg-muted p-1">
-              {(
-                [
-                  { key: "today", label: "Hoje", p: { kind: "today" } as Preset },
-                  { key: "yesterday", label: "Ontem", p: { kind: "yesterday" } as Preset },
-                  { key: "todayYesterday", label: "Hoje e ontem", p: { kind: "todayYesterday" } as Preset },
-                  { key: "7", label: "7d", p: { kind: "lastDays", days: 7 } as Preset },
-                  { key: "30", label: "30d", p: { kind: "lastDays", days: 30 } as Preset },
-                  { key: "90", label: "90d", p: { kind: "lastDays", days: 90 } as Preset },
-                  { key: "365", label: "Tudo", p: { kind: "lastDays", days: 365 } as Preset },
-                ]
-              ).map((opt) => {
-                const active =
-                  (preset.kind === opt.p.kind &&
-                    (preset.kind !== "lastDays" ||
-                      (opt.p.kind === "lastDays" && preset.days === opt.p.days)));
-                return (
-                  <button
-                    key={opt.key}
-                    onClick={() => setPreset(opt.p)}
-                    className={`px-3 py-1.5 text-sm rounded-md transition ${
-                      active
-                        ? "bg-background shadow-sm font-semibold"
-                        : "text-muted-foreground hover:text-foreground"
-                    }`}
-                  >
-                    {opt.label}
-                  </button>
-                );
-              })}
-            </div>
-            <Popover open={rangeOpen} onOpenChange={(o) => {
-              setRangeOpen(o);
-              if (o) {
-                setRangeDraft(
-                  preset.kind === "custom"
-                    ? { from: ymdToDate(preset.from), to: ymdToDate(preset.to) }
-                    : undefined,
-                );
-              }
-            }}>
-              <PopoverTrigger asChild>
-                <Button
-                  variant={preset.kind === "custom" ? "default" : "outline"}
-                  size="sm"
-                  className="gap-2"
-                >
-                  <CalendarIcon className="h-4 w-4" />
-                  {preset.kind === "custom" ? presetLabel(preset) : "Personalizado"}
-                </Button>
-              </PopoverTrigger>
-              <PopoverContent className="w-auto p-3 space-y-3" align="end">
-                <Calendar
-                  mode="range"
-                  selected={rangeDraft}
-                  onSelect={setRangeDraft}
-                  numberOfMonths={2}
-                  locale={ptBR}
-                  disabled={{ after: new Date() }}
-                  initialFocus
-                  className={cn("p-0 pointer-events-auto")}
-                />
-                <div className="flex items-center justify-between gap-2 pt-2 border-t">
-                  <p className="text-xs text-muted-foreground">
-                    {rangeDraft?.from && rangeDraft?.to
-                      ? `${format(rangeDraft.from, "dd/MM/yy")} – ${format(rangeDraft.to, "dd/MM/yy")}`
-                      : "Selecione o intervalo"}
-                  </p>
-                  <div className="flex gap-2">
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={() => {
-                        setRangeDraft(undefined);
-                        setRangeOpen(false);
-                      }}
-                    >
-                      Cancelar
-                    </Button>
-                    <Button
-                      size="sm"
-                      disabled={!rangeDraft?.from || !rangeDraft?.to}
-                      onClick={() => {
-                        if (rangeDraft?.from && rangeDraft?.to) {
-                          setPreset({
-                            kind: "custom",
-                            from: dateToYmd(rangeDraft.from),
-                            to: dateToYmd(rangeDraft.to),
-                          });
-                          setRangeOpen(false);
-                        }
-                      }}
-                    >
-                      Aplicar
-                    </Button>
-                  </div>
-                </div>
-              </PopoverContent>
-            </Popover>
-            <Popover open={pageOpen} onOpenChange={setPageOpen}>
-              <PopoverTrigger asChild>
-                <Button
-                  variant={selectedPage ? "default" : "outline"}
-                  size="sm"
-                  className="gap-2 max-w-[240px]"
-                >
-                  <Globe className="h-4 w-4 shrink-0" />
-                  <span className="truncate">
-                    {selectedPage ? `Página: ${selectedPage}` : "Todas as páginas"}
-                  </span>
-                  {selectedPage && (
-                    <X
-                      className="h-3.5 w-3.5 shrink-0 opacity-70 hover:opacity-100"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        setSelectedPage(null);
-                      }}
-                    />
-                  )}
-                </Button>
-              </PopoverTrigger>
-              <PopoverContent className="w-72 p-0" align="end">
-                <Command>
-                  <CommandInput placeholder="Buscar página..." />
-                  <CommandList>
-                    <CommandEmpty>Nenhuma página encontrada.</CommandEmpty>
-                    <CommandGroup>
-                      <CommandItem
-                        value="__all__"
-                        onSelect={() => {
-                          setSelectedPage(null);
-                          setPageOpen(false);
-                        }}
-                      >
-                        <Check
-                          className={cn(
-                            "mr-2 h-4 w-4",
-                            selectedPage === null ? "opacity-100" : "opacity-0",
-                          )}
-                        />
-                        Todas as páginas
-                      </CommandItem>
-                      {pageOptions.map((page) => (
-                        <CommandItem
-                          key={page}
-                          value={page}
-                          onSelect={() => {
-                            setSelectedPage(page);
-                            setPageOpen(false);
-                          }}
-                        >
-                          <Check
-                            className={cn(
-                              "mr-2 h-4 w-4",
-                              selectedPage === page ? "opacity-100" : "opacity-0",
-                            )}
-                          />
-                          <span className="font-mono text-xs truncate">{page}</span>
-                        </CommandItem>
-                      ))}
-                    </CommandGroup>
-                  </CommandList>
-                </Command>
-              </PopoverContent>
-            </Popover>
-            <Button
-              variant="ghost"
-              size="sm"
-              asChild
-            >
-              <a href="/">
-                <Home className="h-4 w-4 mr-1" /> Home
-              </a>
+          <div className="flex-1 min-w-[280px]">
+            <FilterBar period={period} onPeriod={setPeriod}
+              page={page} pages={agg?.allPages ?? []} onPage={setPage}
+              campaign={campaign} campaigns={agg?.allCampaigns ?? []} onCampaign={setCampaign} />
+          </div>
+          <div className="flex gap-1">
+            <Button variant="ghost" size="icon" aria-label="Atualizar" onClick={() => load(password, period)} disabled={loading}>
+              <RefreshCw className={loading ? "h-4 w-4 animate-spin" : "h-4 w-4"} />
             </Button>
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => {
-                setPassword("");
-                setAuthed(false);
-                setData(null);
-              }}
-            >
-              <LogOut className="h-4 w-4 mr-1" /> Sair
+            <Button variant="ghost" size="icon" aria-label="Sair"
+              onClick={() => { sessionStorage.removeItem(PWD_KEY); setPassword(""); setAuthed(false); }}>
+              <LogOut className="h-4 w-4" />
             </Button>
           </div>
         </div>
       </header>
 
-      <div className="max-w-7xl mx-auto p-4 md:p-8 space-y-6">
-
-
-
-        {/* KPI cards */}
-
-        <section className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-          <KpiCard
-            label="Total de cliques"
-            value={loading ? "..." : String(data?.total ?? 0)}
-            icon={<MessageCircle className="h-4 w-4" />}
-            footer={
-              data?.delta !== null && data?.delta !== undefined ? (
-                <span
-                  className={`inline-flex items-center gap-1 text-xs font-medium ${
-                    deltaPositive ? "text-emerald-600" : "text-destructive"
-                  }`}
-                >
-                  {deltaPositive ? (
-                    <ArrowUpRight className="h-3 w-3" />
-                  ) : (
-                    <ArrowDownRight className="h-3 w-3" />
-                  )}
-                  {Math.abs(data.delta).toFixed(1)}% vs período anterior
-                </span>
-              ) : (
-                <span className="text-xs text-muted-foreground">
-                  sem dados anteriores
-                </span>
-              )
-            }
-            accent="from-primary/20 to-primary/5"
-          />
-          <KpiCard
-            label="Média diária"
-            value={loading ? "..." : (data?.avgPerDay ?? 0).toFixed(1)}
-            icon={<TrendingUp className="h-4 w-4" />}
-            footer={
-              <span className="text-xs text-muted-foreground">
-                cliques por dia no período
-              </span>
-            }
-            accent="from-emerald-500/20 to-emerald-500/5"
-          />
-          <KpiCard
-            label="Dia de pico"
-            value={
-              data?.peakDay?.date
-                ? format(parseISO(data.peakDay.date), "dd MMM", { locale: ptBR })
-                : "—"
-            }
-            icon={<Activity className="h-4 w-4" />}
-            footer={
-              <span className="text-xs text-muted-foreground">
-                {data?.peakDay?.count ?? 0} cliques
-              </span>
-            }
-            accent="from-amber-500/20 to-amber-500/5"
-          />
-          <KpiCard
-            label="Horário de pico"
-            value={
-              data?.peakHour
-                ? `${String(data.peakHour.hour).padStart(2, "0")}:00 BRT`
-                : "—"
-            }
-            icon={<Clock className="h-4 w-4" />}
-            footer={
-              <span className="text-xs text-muted-foreground">
-                {data?.peakHour?.count ?? 0} cliques nessa hora
-              </span>
-            }
-            accent="from-violet-500/20 to-violet-500/5"
-          />
-        </section>
-
-        {/* Trend */}
-        {(() => {
-          const isHourly =
-            preset.kind === "today" ||
-            preset.kind === "yesterday" ||
-            preset.kind === "todayYesterday";
-          const trendData = isHourly ? hourChart : dailyChart;
-          const trendTitle = isHourly ? "Tendência por hora" : "Tendência diária";
-          const trendSubtitle = isHourly
-            ? "Distribuição dos cliques por horário (Brasília)"
-            : "Evolução dos cliques ao longo do tempo";
-          return (
-            <Card>
-              <CardHeader>
-                <CardTitle>{trendTitle}</CardTitle>
-                <p className="text-sm text-muted-foreground">{trendSubtitle}</p>
-              </CardHeader>
-              <CardContent className="h-72">
-                <ResponsiveContainer width="100%" height="100%">
-                  <AreaChart data={trendData}>
-                    <defs>
-                      <linearGradient id="colorClicks" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity={0.4} />
-                        <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity={0} />
-                      </linearGradient>
-                    </defs>
-                    <CartesianGrid strokeDasharray="3 3" opacity={0.2} />
-                    <XAxis dataKey="label" fontSize={11} interval={isHourly ? 1 : 0} />
-                    <YAxis allowDecimals={false} fontSize={11} />
-                    <Tooltip
-                      contentStyle={{
-                        background: "hsl(var(--background))",
-                        border: "1px solid hsl(var(--border))",
-                        borderRadius: 8,
-                      }}
-                    />
-                    <Area
-                      type="monotone"
-                      dataKey="count"
-                      stroke="hsl(var(--primary))"
-                      strokeWidth={2}
-                      fill="url(#colorClicks)"
-                    />
-                  </AreaChart>
-                </ResponsiveContainer>
-              </CardContent>
-            </Card>
-          );
-        })()}
-
-        <div className="grid lg:grid-cols-2 gap-6">
-          {/* Hourly */}
-          <Card>
-            <CardHeader>
-              <CardTitle>Cliques por hora (Brasília)</CardTitle>
-              <p className="text-sm text-muted-foreground">
-                Quando seu público mais converte
-              </p>
-            </CardHeader>
-            <CardContent className="h-64">
-              <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={hourChart}>
-                  <CartesianGrid strokeDasharray="3 3" opacity={0.2} />
-                  <XAxis dataKey="label" fontSize={10} interval={2} />
-                  <YAxis allowDecimals={false} fontSize={11} />
-                  <Tooltip
-                    contentStyle={{
-                      background: "hsl(var(--background))",
-                      border: "1px solid hsl(var(--border))",
-                      borderRadius: 8,
-                    }}
-                  />
-                  <Bar dataKey="count" fill="hsl(var(--primary))" radius={[4, 4, 0, 0]} />
-                </BarChart>
-              </ResponsiveContainer>
-            </CardContent>
-          </Card>
-
-          {/* Day of week */}
-          <Card>
-            <CardHeader>
-              <CardTitle>Cliques por dia da semana</CardTitle>
-              <p className="text-sm text-muted-foreground">
-                Padrão semanal de interesse
-              </p>
-            </CardHeader>
-            <CardContent className="h-64">
-              <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={data?.byDow ?? []}>
-                  <CartesianGrid strokeDasharray="3 3" opacity={0.2} />
-                  <XAxis dataKey="name" fontSize={11} />
-                  <YAxis allowDecimals={false} fontSize={11} />
-                  <Tooltip
-                    contentStyle={{
-                      background: "hsl(var(--background))",
-                      border: "1px solid hsl(var(--border))",
-                      borderRadius: 8,
-                    }}
-                  />
-                  <Bar dataKey="count" fill="hsl(var(--secondary))" radius={[4, 4, 0, 0]} />
-                </BarChart>
-              </ResponsiveContainer>
-            </CardContent>
-          </Card>
-        </div>
-
-        <div className="grid lg:grid-cols-3 gap-6">
-          {/* Pages */}
-          <Card className="lg:col-span-2">
-            <CardHeader>
-              <CardTitle>Top páginas</CardTitle>
-              <p className="text-sm text-muted-foreground">
-                Quais landing pages mais convertem em WhatsApp
-              </p>
-            </CardHeader>
-            <CardContent>
-              <ul className="space-y-3">
-                {data?.byPage.length ? (
-                  data.byPage.slice(0, 10).map((p) => {
-                    const pct = maxPage > 0 ? (p.count / maxPage) * 100 : 0;
-                    return (
-                      <li key={p.page} className="space-y-1">
-                        <div className="flex justify-between text-sm">
-                          <span className="font-mono truncate pr-2">{p.page}</span>
-                          <span className="font-semibold">{p.count}</span>
-                        </div>
-                        <div className="h-2 bg-muted rounded-full overflow-hidden">
-                          <div
-                            className="h-full bg-gradient-to-r from-primary to-primary/60 rounded-full transition-all"
-                            style={{ width: `${pct}%` }}
-                          />
-                        </div>
-                      </li>
-                    );
-                  })
-                ) : (
-                  <li className="text-muted-foreground text-sm">Sem dados.</li>
-                )}
-              </ul>
-            </CardContent>
-          </Card>
-
-          {/* Devices */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Smartphone className="h-4 w-4" /> Dispositivos
-              </CardTitle>
-              <p className="text-sm text-muted-foreground">
-                De onde vêm os cliques
-              </p>
-            </CardHeader>
-            <CardContent className="h-56">
-              {data?.byDevice.length ? (
-                <ResponsiveContainer width="100%" height="100%">
-                  <PieChart>
-                    <Pie
-                      data={data.byDevice}
-                      dataKey="count"
-                      nameKey="device"
-                      cx="50%"
-                      cy="50%"
-                      innerRadius={45}
-                      outerRadius={75}
-                      paddingAngle={2}
-                    >
-                      {data.byDevice.map((_, i) => (
-                        <Cell key={i} fill={PIE_COLORS[i % PIE_COLORS.length]} />
-                      ))}
-                    </Pie>
-                    <Tooltip
-                      contentStyle={{
-                        background: "hsl(var(--background))",
-                        border: "1px solid hsl(var(--border))",
-                        borderRadius: 8,
-                      }}
-                    />
-                  </PieChart>
-                </ResponsiveContainer>
-              ) : (
-                <p className="text-sm text-muted-foreground">Sem dados.</p>
-              )}
-              <div className="mt-2 flex flex-wrap gap-2 justify-center">
-                {data?.byDevice.map((d, i) => (
-                  <div key={d.device} className="flex items-center gap-1 text-xs">
-                    <span
-                      className="inline-block h-2 w-2 rounded-full"
-                      style={{ background: PIE_COLORS[i % PIE_COLORS.length] }}
-                    />
-                    {d.device} ({d.count})
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-
-        <div className="grid lg:grid-cols-2 gap-6">
-          {/* Sources */}
-          <Card>
-            <CardHeader>
-              <CardTitle>Botão de origem</CardTitle>
-              <p className="text-sm text-muted-foreground">
-                Qual CTA gerou o clique
-              </p>
-            </CardHeader>
-            <CardContent>
-              <ul className="space-y-3">
-                {data?.bySource.length ? (
-                  data.bySource.map((s) => {
-                    const pct = maxSource > 0 ? (s.count / maxSource) * 100 : 0;
-                    return (
-                      <li key={s.source} className="space-y-1">
-                        <div className="flex justify-between text-sm">
-                          <span className="truncate pr-2">{s.source}</span>
-                          <span className="font-semibold">{s.count}</span>
-                        </div>
-                        <div className="h-1.5 bg-muted rounded-full overflow-hidden">
-                          <div
-                            className="h-full bg-gradient-to-r from-secondary to-secondary/60 rounded-full"
-                            style={{ width: `${pct}%` }}
-                          />
-                        </div>
-                      </li>
-                    );
-                  })
-                ) : (
-                  <li className="text-muted-foreground text-sm">Sem dados.</li>
-                )}
-              </ul>
-            </CardContent>
-          </Card>
-
-          {/* Referrers */}
-          <Card>
-            <CardHeader>
-              <CardTitle>Origem do tráfego</CardTitle>
-              <p className="text-sm text-muted-foreground">
-                De onde o visitante chegou antes do clique
-              </p>
-            </CardHeader>
-            <CardContent>
-              <ul className="divide-y">
-                {data?.byReferrer.length ? (
-                  data.byReferrer.map((r) => (
-                    <li
-                      key={r.referrer}
-                      className="flex justify-between py-2.5 text-sm"
-                    >
-                      <Badge variant="outline" className="font-normal">
-                        {r.referrer}
-                      </Badge>
-                      <span className="font-semibold">{r.count}</span>
-                    </li>
-                  ))
-                ) : (
-                  <li className="text-muted-foreground text-sm py-2">Sem dados.</li>
-                )}
-              </ul>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* Recent activity */}
-        <Card>
-          <CardHeader>
-            <CardTitle>Atividade recente</CardTitle>
-            <p className="text-sm text-muted-foreground">
-              Últimos {data?.recent.length ?? 0} cliques registrados
-            </p>
-          </CardHeader>
-          <CardContent>
-            <div className="rounded-md border overflow-hidden">
-              <Table>
-                <TableHeader>
-                  <TableRow>
-                    <TableHead>Quando</TableHead>
-                    <TableHead>Página</TableHead>
-                    <TableHead>Botão</TableHead>
-                    <TableHead>Origem</TableHead>
-                    <TableHead>Device</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {data?.recent.length ? (
-                    data.recent.map((r) => (
-                      <TableRow key={r.id}>
-                        <TableCell className="text-xs text-muted-foreground whitespace-nowrap">
-                          {format(parseISO(r.created_at), "dd/MM HH:mm", {
-                            locale: ptBR,
-                          })}
-                        </TableCell>
-                        <TableCell className="font-mono text-xs">{r.page}</TableCell>
-                        <TableCell className="text-xs max-w-xs truncate">
-                          {r.source ?? "—"}
-                        </TableCell>
-                        <TableCell>
-                          <Badge variant="secondary" className="font-normal text-xs">
-                            {r.referrer}
-                          </Badge>
-                        </TableCell>
-                        <TableCell className="text-xs">{r.device}</TableCell>
-                      </TableRow>
-                    ))
-                  ) : (
-                    <TableRow>
-                      <TableCell colSpan={5} className="text-center text-muted-foreground py-6">
-                        Sem cliques ainda.
-                      </TableCell>
-                    </TableRow>
-                  )}
-                </TableBody>
-              </Table>
+      <div className="max-w-7xl mx-auto p-4 md:p-8 space-y-4">
+        {error && <p className="text-sm text-destructive">{error}</p>}
+        {agg && (
+          <>
+            <KpiCards k={agg.kpis} />
+            <TrendChart data={agg.series} hourly={agg.hourly} />
+            <div className="grid md:grid-cols-2 gap-4">
+              <SourcesCard items={agg.sources} />
+              <ButtonsCard items={agg.buttons} />
             </div>
-          </CardContent>
-        </Card>
-
-        {selectedPage === "/semana-do-cliente" && (
-          <MapsPanel
-            password={password}
-            query={presetToQuery(preset)}
-            page={selectedPage}
-          />
+            <CampaignsCard rows={agg.campaigns} onPick={setCampaign} />
+            {!page && <PagesTable rows={agg.pages} onPick={(p) => { setPage(p); window.scrollTo({ top: 0, behavior: "smooth" }); }} />}
+            <RecentLogs rows={agg.recent} />
+            <p className="text-xs text-muted-foreground text-center">
+              Horários de Brasília. Acessos são contados desde a ativação do rastreamento; campanhas UTM a partir de hoje.
+            </p>
+          </>
         )}
       </div>
     </main>
   );
 };
-
-const KpiCard = ({
-  label,
-  value,
-  icon,
-  footer,
-  accent,
-}: {
-  label: string;
-  value: string;
-  icon: React.ReactNode;
-  footer: React.ReactNode;
-  accent: string;
-}) => (
-  <Card className="relative overflow-hidden">
-    <div
-      className={`absolute inset-0 bg-gradient-to-br ${accent} pointer-events-none`}
-    />
-    <CardContent className="relative p-5 space-y-2">
-      <div className="flex items-center justify-between text-muted-foreground">
-        <span className="text-xs font-medium uppercase tracking-wide">{label}</span>
-        <span className="h-7 w-7 rounded-full bg-background/80 backdrop-blur flex items-center justify-center">
-          {icon}
-        </span>
-      </div>
-      <div className="text-3xl font-bold tracking-tight">{value}</div>
-      <div>{footer}</div>
-    </CardContent>
-  </Card>
-);
 
 export default Metricas;
