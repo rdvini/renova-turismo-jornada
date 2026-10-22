@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
+import { utmColumns } from "@/lib/utm";
 
 declare global {
   interface Window {
@@ -57,6 +58,7 @@ const WhatsAppTracker = () => {
             url: href,
             referrer: document.referrer || null,
             user_agent: navigator.userAgent,
+            ...utmColumns(),
           })
           .then(({ error }) => {
             if (error) console.warn("[WhatsAppTracker] insert error:", error);

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
+import { utmColumns } from "@/lib/utm";
 
 /**
  * Registra cliques em links do Google Maps ("Saiba como chegar") e
@@ -29,6 +30,7 @@ const record = async (
       url,
       referrer: document.referrer || null,
       user_agent: navigator.userAgent,
+      ...utmColumns(),
     });
     if (error) console.warn("[MapsTracker] insert error:", error);
   } catch {
