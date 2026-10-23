@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { utmColumns } from "@/lib/utm";
+import { shouldTrack } from "@/lib/bots";
 
 /**
  * Registra cliques em links do Google Maps ("Saiba como chegar") e
@@ -14,6 +15,7 @@ const record = async (
   source: string | null,
   url: string | null,
 ) => {
+  if (!shouldTrack()) return;
   const page = typeof window !== "undefined" ? window.location.pathname : "unknown";
 
   try {

@@ -10,7 +10,7 @@ import imgEuropaAsset from "@/assets/pastor-morelli/roteiro-europa.jpg.asset.jso
 const imgEuropa = imgEuropaAsset.url;
 
 const WHATSAPP_BASE =
-  "https://wa.me/19991813303?text=";
+  "https://wa.me/5519991813303?text=";
 
 const ROTEIROS = [
   {

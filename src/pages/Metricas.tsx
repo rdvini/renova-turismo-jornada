@@ -124,7 +124,7 @@ const Metricas = () => {
             {!page && <PagesTable rows={agg.pages} onPick={(p) => { setPage(p); window.scrollTo({ top: 0, behavior: "smooth" }); }} />}
             <RecentLogs rows={agg.recent} />
             <p className="text-xs text-muted-foreground text-center">
-              Horários de Brasília. Acessos são contados desde a ativação do rastreamento; campanhas UTM a partir de hoje.
+              Horários de Brasília. Dados a partir de 11/09/2026 (início do registro de acessos). Robôs, testes e toques repetidos no mesmo botão não são contados.
             </p>
           </>
         )}

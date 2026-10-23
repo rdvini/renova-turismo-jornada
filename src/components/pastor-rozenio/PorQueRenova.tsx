@@ -1,7 +1,7 @@
 import { Plane, Building2, Bus, Utensils, MessageCircle, ShieldCheck } from "lucide-react";
 
 const WHATSAPP_URL =
-  "https://wa.me/19991813303?text=" +
+  "https://wa.me/5519991813303?text=" +
   encodeURIComponent(
     "Olá, Pastor Rozenio! 🙏\n\nVim pela sua página de caravanas evangélicas da Renova Turismo e gostaria de receber mais informações sobre as próximas viagens (datas, valores e o que está incluso).\n\nFico no aguardo do seu retorno!"
   );
