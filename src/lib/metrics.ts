@@ -32,7 +32,6 @@ export const TRACKING_START_YMD = "2026-09-11";
 
 /** Remove robôs, acessos internos (editor/prévia/testes), o próprio painel e dados anteriores ao rastreamento. */
 export const isValidRow = (r: ViewRow) =>
-  r.created_at >= TRACKING_START.replace("Z", "") &&
   Date.parse(r.created_at) >= Date.parse(TRACKING_START) &&
   !r.page.startsWith("/admin") &&
   !isBot(r.user_agent) &&
@@ -106,13 +105,16 @@ export type Filters = { page: string | null; campaign: string | null };
 export const applyFilters = <T extends ViewRow>(rows: T[], f: Filters) =>
   rows.filter((r) => (!f.page || r.page === f.page) && (!f.campaign || campaignLabel(r) === f.campaign));
 
-export const aggregate = (p: MetricsPayload, f: Filters) => {
+export const aggregate = (raw: MetricsPayload, f: Filters) => {
+  const p = cleanPayload(raw);
   const inRange = (from: string, to: string) => <T extends ViewRow>(r: T) => {
     const d = brParts(r.created_at).ymd;
     return d >= from && d <= to;
   };
   const cur = inRange(p.from, p.to);
-  const prev = inRange(p.prevFrom, p.prevTo);
+  // Período anterior só é comparável se começar depois do início do rastreamento
+  const prevComparable = p.prevFrom >= TRACKING_START_YMD;
+  const prev = prevComparable ? inRange(p.prevFrom, p.prevTo) : () => false;
 
   const views = applyFilters(p.views, f);
   const wa = applyFilters(p.whatsapp, f);
