@@ -1,10 +1,17 @@
+import { isBot, isInternal } from "@/lib/bots";
+
 export type UtmFields = {
   utm_source: string | null;
   utm_medium: string | null;
   utm_campaign: string | null;
   utm_content: string | null;
 };
-export type ViewRow = UtmFields & { created_at: string; page: string; referrer: string | null };
+export type ViewRow = UtmFields & {
+  created_at: string;
+  page: string;
+  referrer: string | null;
+  user_agent?: string | null;
+};
 export type ClickRow = ViewRow & { source: string | null; kind?: string };
 
 export type MetricsPayload = {
@@ -18,6 +25,40 @@ export type MetricsPayload = {
 };
 
 export const NO_CAMPAIGN = "Sem campanha";
+
+/** Início do registro de acessos. Cliques anteriores não têm acessos para comparar. */
+export const TRACKING_START = "2026-09-11T20:45:00Z";
+export const TRACKING_START_YMD = "2026-09-11";
+
+/** Remove robôs, acessos internos (editor/prévia/testes), o próprio painel e dados anteriores ao rastreamento. */
+export const isValidRow = (r: ViewRow) =>
+  r.created_at >= TRACKING_START.replace("Z", "") &&
+  Date.parse(r.created_at) >= Date.parse(TRACKING_START) &&
+  !r.page.startsWith("/admin") &&
+  !isBot(r.user_agent) &&
+  !isInternal(r.referrer) &&
+  !/^teste_lovable$/i.test(r.utm_source ?? "");
+
+/** Ignora toques repetidos no mesmo botão (mesmo aparelho, página e botão em até 3 segundos). */
+export const dedupeClicks = <T extends ClickRow>(rows: T[]): T[] => {
+  const last = new Map<string, number>();
+  return [...rows]
+    .sort((a, b) => Date.parse(a.created_at) - Date.parse(b.created_at))
+    .filter((r) => {
+      const key = [r.user_agent ?? "", r.page, r.source ?? "", r.kind ?? ""].join("|");
+      const t = Date.parse(r.created_at);
+      const prev = last.get(key);
+      last.set(key, t);
+      return prev === undefined || t - prev > 3000;
+    });
+};
+
+export const cleanPayload = (p: MetricsPayload): MetricsPayload => ({
+  ...p,
+  views: p.views.filter(isValidRow),
+  whatsapp: dedupeClicks(p.whatsapp.filter(isValidRow)),
+  maps: dedupeClicks(p.maps.filter(isValidRow)),
+});
 
 /** Dia (YYYY-MM-DD) e hora no fuso de Brasília (UTC-3). */
 export const brParts = (iso: string) => {
