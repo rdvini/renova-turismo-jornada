@@ -14,7 +14,8 @@ const brStartUtc = (ymd: string) => new Date(Date.parse(`${ymd}T00:00:00.000Z`) 
 const addDays = (ymd: string, n: number) =>
   new Date(Date.parse(`${ymd}T00:00:00.000Z`) + n * 86400000).toISOString().slice(0, 10);
 
-const UTM = "utm_source,utm_medium,utm_campaign,utm_content";
+// user_agent é enviado para que src/lib/metrics.ts descarte robôs e toques repetidos
+const UTM = "utm_source,utm_medium,utm_campaign,utm_content,user_agent";
 const COLS: Record<string, string> = {
   page_views: `created_at,page,referrer,${UTM}`,
   whatsapp_clicks: `created_at,page,source,referrer,${UTM}`,

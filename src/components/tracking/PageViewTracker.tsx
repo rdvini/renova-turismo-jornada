@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { captureUtm, utmColumns } from "@/lib/utm";
+import { shouldTrack } from "@/lib/bots";
 
 /**
  * Registra cada acesso de página na tabela `page_views`, incluindo UTMs
@@ -16,7 +17,7 @@ const PageViewTracker = () => {
     const utm = captureUtm(location.search);
     if (lastPath.current === page) return;
     lastPath.current = page;
-    if (page.startsWith("/admin")) return;
+    if (page.startsWith("/admin") || !shouldTrack()) return;
 
     const record = async () => {
       try {

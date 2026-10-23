@@ -133,7 +133,8 @@ export const aggregate = (raw: MetricsPayload, f: Filters) => {
   const keys: string[] = [];
   if (hourly) for (let h = 0; h < 24; h++) keys.push(String(h).padStart(2, "0") + "h");
   else {
-    for (let t = Date.parse(p.from); t <= Date.parse(p.to); t += 86400000)
+    const start = p.from < TRACKING_START_YMD ? TRACKING_START_YMD : p.from;
+    for (let t = Date.parse(start); t <= Date.parse(p.to); t += 86400000)
       keys.push(new Date(t).toISOString().slice(0, 10));
   }
   const keyOf = (r: ViewRow) => {
