@@ -46,7 +46,7 @@ const Ticket = ({ r, i }: { r: BfRoteiro; i: number }) => (
   <article className="bf-ticket relative flex h-full flex-col overflow-hidden rounded-xl bg-[hsl(var(--bf-paper))] shadow-[0_18px_40px_-20px_hsl(var(--bf-ink)/.5)]">
     <div className="relative h-56 overflow-hidden">
       <img src={r.img} alt={r.nome} loading="lazy" width={768} height={1024} className="bf-xerox h-full w-full object-cover" />
-      <div className={`absolute inset-0 ${toneBg[r.tone]} mix-blend-multiply opacity-60`} />
+      <div className={`absolute inset-0 ${toneBg[r.tone]} mix-blend-soft-light opacity-50`} />
       <span className="bf-mono absolute left-4 top-4 rounded-sm bg-[hsl(var(--bf-paper))] px-2 py-1 text-[10px] uppercase tracking-[.2em]">
         Black Friday · Nº {String(i + 1).padStart(3, "0")}
       </span>
@@ -147,7 +147,7 @@ const BlackFriday = () => {
           style={{ transform: `translateY(${y * 0.3}px) rotate(3deg)` }}
         >
           <img src={heroImg} alt="Santorini" width={1200} height={1600} className="bf-xerox h-full w-full object-cover" />
-          <div className="absolute inset-0 bg-[hsl(var(--bf-blue))] opacity-50 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-[hsl(var(--bf-blue))] opacity-30 mix-blend-soft-light" />
         </div>
         <div className="absolute left-[6%] top-[18%] h-40 w-40 rounded-full bg-[hsl(var(--bf-rose))] opacity-80 md:h-64 md:w-64" style={{ transform: `translateY(${y * -0.2}px)` }} />
 
