@@ -178,9 +178,9 @@ const BlackFriday = () => {
 
       {/* Faixa */}
       <div className="relative z-20 -my-6 -rotate-2 overflow-hidden border-y-2 border-[hsl(var(--bf-ink))] bg-[hsl(var(--bf-accent))] py-3 text-[hsl(var(--bf-paper))]">
-        <div className="bf-marquee flex w-max gap-8 whitespace-nowrap">
+        <div className="bf-marquee flex w-max whitespace-nowrap">
           {[...marquee, ...marquee].map((n, i) => (
-            <span key={i} className="bf-display text-2xl md:text-3xl">{n} <span className="mx-4">✦</span></span>
+            <span key={i} className="bf-display shrink-0 pr-8 text-2xl md:text-3xl">{n} <span className="mx-4">✦</span></span>
           ))}
         </div>
       </div>
