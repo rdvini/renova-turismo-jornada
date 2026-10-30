@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState, useCallback } from "react";
-import useEmblaCarousel from "embla-carousel-react";
 import { ArrowLeft, ArrowRight, MessageCircle, Plane } from "lucide-react";
 import Seo from "@/components/seo/Seo";
 import MetaPixel from "@/components/tracking/MetaPixel";
@@ -88,27 +87,100 @@ const Ticket = ({ r, i }: { r: BfRoteiro; i: number }) => (
   </article>
 );
 
+/** Carrossel em pilha: um ticket aberto no centro, os demais "guardados" nas laterais. */
 const Carousel = () => {
-  const [ref, api] = useEmblaCarousel({ align: "start", loop: true, dragFree: true });
-  const prev = useCallback(() => api?.scrollPrev(), [api]);
-  const next = useCallback(() => api?.scrollNext(), [api]);
+  const n = roteiros.length;
+  const [active, setActive] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const [w, setW] = useState(typeof window !== "undefined" ? window.innerWidth : 1280);
+  const startX = useRef<number | null>(null);
+
+  const go = useCallback((dir: number) => setActive((a) => (a + dir + n) % n), [n]);
+  const prev = useCallback(() => go(-1), [go]);
+  const next = useCallback(() => go(1), [go]);
+
+  useEffect(() => {
+    const on = () => setW(window.innerWidth);
+    window.addEventListener("resize", on);
+    return () => window.removeEventListener("resize", on);
+  }, []);
+
+  useEffect(() => {
+    if (paused) return;
+    const t = setInterval(next, 4000);
+    return () => clearInterval(t);
+  }, [paused, next, active]);
+
+  const mobile = w < 768;
+  const step = mobile ? 34 : 70; // distância entre tickets guardados
+  const gap = mobile ? 150 : 250; // afastamento do ticket central
+  const visible = mobile ? 2 : 4;
+
   return (
-    <div>
-      <div className="overflow-hidden px-4 py-6 md:px-10" ref={ref}>
-        <div className="flex gap-6">
-          {roteiros.map((r, i) => (
-            <div key={r.nome} className="min-w-0 shrink-0 basis-[85%] sm:basis-[46%] lg:basis-[31%] xl:basis-[24%]" style={{ transform: `rotate(${i % 2 ? 0.8 : -0.8}deg)` }}>
-              <Ticket r={r} i={i} />
+    <div
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+      onPointerDown={(e) => { startX.current = e.clientX; }}
+      onPointerUp={(e) => {
+        if (startX.current === null) return;
+        const dx = e.clientX - startX.current;
+        if (Math.abs(dx) > 40) go(dx < 0 ? 1 : -1);
+        startX.current = null;
+      }}
+      onKeyDown={(e) => { if (e.key === "ArrowLeft") prev(); if (e.key === "ArrowRight") next(); }}
+      tabIndex={0}
+      aria-roledescription="carrossel"
+      className="outline-none"
+    >
+      <div className="relative mx-auto h-[600px] overflow-hidden" style={{ perspective: "1400px" }}>
+        {roteiros.map((r, i) => {
+          let off = i - active;
+          if (off > n / 2) off -= n;
+          if (off < -n / 2) off += n;
+          const abs = Math.abs(off);
+          const sign = Math.sign(off);
+          const isActive = off === 0;
+          const x = isActive ? 0 : sign * (gap + (abs - 1) * step);
+          const transform = isActive
+            ? "translateX(-50%) translateZ(0) rotateY(0deg) scale(1)"
+            : `translateX(calc(-50% + ${x}px)) translateZ(${-120 - abs * 40}px) rotateY(${sign * -62}deg) scale(.86)`;
+          return (
+            <div
+              key={r.nome}
+              onClick={() => !isActive && setActive(i)}
+              aria-hidden={!isActive}
+              className={`absolute left-1/2 top-6 w-[290px] transition-all duration-700 ease-[cubic-bezier(.22,.8,.24,1)] md:w-[340px] ${isActive ? "" : "cursor-pointer"}`}
+              style={{
+                transform,
+                zIndex: 100 - abs,
+                opacity: abs > visible ? 0 : 1,
+                pointerEvents: abs > visible ? "none" : "auto",
+                transformStyle: "preserve-3d",
+              }}
+            >
+              <div className="relative">
+                <Ticket r={r} i={i} />
+                {/* capa do ticket "guardado" */}
+                <div
+                  className={`pointer-events-none absolute inset-0 flex items-center justify-center rounded-xl border border-[hsl(var(--bf-ink)/.15)] bg-[hsl(var(--bf-paper))] transition-opacity duration-700 ${isActive ? "opacity-0" : "opacity-90"}`}
+                >
+                  <span className="bf-display rotate-90 whitespace-nowrap text-5xl tracking-wider text-[hsl(var(--bf-accent))]">{r.code}</span>
+                </div>
+              </div>
             </div>
-          ))}
-        </div>
+          );
+        })}
       </div>
-      <div className="mt-4 flex justify-center gap-3">
-        {[{ f: prev, I: ArrowLeft, l: "Anterior" }, { f: next, I: ArrowRight, l: "Próximo" }].map(({ f, I, l }) => (
-          <button key={l} onClick={f} aria-label={l} className="rounded-full border-2 border-[hsl(var(--bf-ink))] p-3 transition-colors hover:bg-[hsl(var(--bf-ink))] hover:text-[hsl(var(--bf-paper))]">
-            <I className="h-5 w-5" />
-          </button>
-        ))}
+      <div className="mt-2 flex items-center justify-center gap-4">
+        <button onClick={prev} aria-label="Anterior" className="rounded-full border-2 border-[hsl(var(--bf-ink))] p-3 transition-colors hover:bg-[hsl(var(--bf-ink))] hover:text-[hsl(var(--bf-paper))]">
+          <ArrowLeft className="h-5 w-5" />
+        </button>
+        <span className="bf-mono min-w-[4.5rem] text-center text-xs tracking-[.2em] text-[hsl(var(--bf-ink-soft))]">
+          {String(active + 1).padStart(2, "0")} / {String(n).padStart(2, "0")}
+        </span>
+        <button onClick={next} aria-label="Próximo" className="rounded-full border-2 border-[hsl(var(--bf-ink))] p-3 transition-colors hover:bg-[hsl(var(--bf-ink))] hover:text-[hsl(var(--bf-paper))]">
+          <ArrowRight className="h-5 w-5" />
+        </button>
       </div>
     </div>
   );
@@ -194,7 +266,7 @@ const BlackFriday = () => {
             <span className="bf-serif font-normal italic">passagem</span>
           </h2>
           <p className="bf-serif mt-4 max-w-xl text-lg text-[hsl(var(--bf-ink-soft))]">
-            Arraste para ver todos os destinos. Toque em “Quero esse roteiro” e receba as condições no WhatsApp.
+            Deslize para abrir cada passagem. Toque em “Quero esse roteiro” e receba as condições no WhatsApp.
           </p>
         </div>
         <div className="mt-8">
