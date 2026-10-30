@@ -42,39 +42,39 @@ const CtaButton = ({ label = "Chamar no WhatsApp", roteiro, className = "" }: { 
 );
 
 const Ticket = ({ r, i }: { r: BfRoteiro; i: number }) => (
-  <article className="bf-ticket relative flex h-full flex-col overflow-hidden rounded-xl bg-[hsl(var(--bf-paper))] shadow-[0_18px_40px_-20px_hsl(var(--bf-ink)/.5)]">
+  <article className="bf-ticket relative flex h-full flex-col overflow-hidden rounded-xl bg-[hsl(var(--bf-ink))] text-[hsl(var(--bf-paper))] shadow-[0_18px_40px_-20px_hsl(var(--bf-ink)/.5)]">
     <div className="relative h-56 overflow-hidden">
       <img src={r.img} alt={r.nome} loading="lazy" width={768} height={1024} className="bf-xerox h-full w-full object-cover" />
       <div className={`absolute inset-0 ${toneBg[r.tone]} mix-blend-soft-light opacity-50`} />
-      <span className="bf-mono absolute left-4 top-4 rounded-sm bg-[hsl(var(--bf-paper))] px-2 py-1 text-[10px] uppercase tracking-[.2em]">
+      <span className="bf-mono absolute left-4 top-4 rounded-sm bg-[hsl(var(--bf-paper))] px-2 py-1 text-[10px] text-[hsl(var(--bf-ink))] uppercase tracking-[.2em]">
         Black Friday · Nº {String(i + 1).padStart(3, "0")}
       </span>
-      <span className="bf-display absolute bottom-2 right-4 text-6xl text-[hsl(var(--bf-paper))] opacity-90">{r.code}</span>
+      <span className="bf-display absolute bottom-2 right-4 text-6xl text-[hsl(var(--bf-ink))] opacity-90">{r.code}</span>
     </div>
     <div className="flex flex-1 flex-col gap-3 p-5">
-      <div className="bf-mono flex items-center justify-between text-[10px] uppercase tracking-[.2em] text-[hsl(var(--bf-ink-soft))]">
+      <div className="bf-mono flex items-center justify-between text-[10px] uppercase tracking-[.2em] text-[hsl(var(--bf-paper)/.6)]">
         <span>GRU</span>
-        <span className="mx-2 flex-1 border-t border-dashed border-[hsl(var(--bf-ink-soft))]" />
+        <span className="mx-2 flex-1 border-t border-dashed border-[hsl(var(--bf-paper)/.4)]" />
         <Plane className="h-3.5 w-3.5" />
-        <span className="mx-2 flex-1 border-t border-dashed border-[hsl(var(--bf-ink-soft))]" />
+        <span className="mx-2 flex-1 border-t border-dashed border-[hsl(var(--bf-paper)/.4)]" />
         <span>{r.code}</span>
       </div>
       <h3 className="bf-display text-3xl">{r.nome}</h3>
       <div className="bf-mono grid grid-cols-2 gap-2 text-[11px] uppercase">
         <div>
-          <p className="text-[hsl(var(--bf-ink-soft))]">Países</p>
+          <p className="text-[hsl(var(--bf-paper)/.6)]">Países</p>
           <p className="font-medium normal-case">{r.paises.join(" · ")}</p>
         </div>
         <div>
-          <p className="text-[hsl(var(--bf-ink-soft))]">Duração</p>
+          <p className="text-[hsl(var(--bf-paper)/.6)]">Duração</p>
           <p className="font-medium normal-case">{r.duracao ?? "Sob consulta"}</p>
         </div>
       </div>
     </div>
     {/* canhoto picotado */}
-    <div className="mx-5 border-t-2 border-dashed border-[hsl(var(--bf-ink)/.35)]" />
+    <div className="mx-5 border-t-2 border-dashed border-[hsl(var(--bf-paper)/.3)]" />
     <div className="flex items-center justify-between gap-3 p-5">
-      <p className="bf-serif text-sm italic leading-tight text-[hsl(var(--bf-ink-soft))]">Consulte condições<br />Black Friday</p>
+      <p className="bf-serif text-sm italic leading-tight text-[hsl(var(--bf-paper)/.6)]">Consulte condições<br />Black Friday</p>
       <a
         href={bfWhatsApp(r.nome)}
         target="_blank"
@@ -162,7 +162,7 @@ const Carousel = () => {
                 <Ticket r={r} i={i} />
                 {/* capa do ticket "guardado" */}
                 <div
-                  className={`pointer-events-none absolute inset-0 flex items-center justify-center rounded-xl border border-[hsl(var(--bf-ink)/.15)] bg-[hsl(var(--bf-paper))] transition-opacity duration-700 ${isActive ? "opacity-0" : "opacity-95"}`}
+                  className={`pointer-events-none absolute inset-0 flex items-center justify-center rounded-xl border border-[hsl(var(--bf-paper)/.15)] bg-[hsl(var(--bf-ink))] transition-opacity duration-700 ${isActive ? "opacity-0" : "opacity-95"}`}
                 >
                   <span className="bf-display rotate-90 whitespace-nowrap text-5xl tracking-wider text-[hsl(var(--bf-accent))]">{r.code}</span>
                 </div>
