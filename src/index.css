@@ -541,5 +541,6 @@
                 radial-gradient(circle var(--notch) at 100% 68%, transparent 98%, #000) right / 51% 100% no-repeat;
 }
 @keyframes bf-marquee { to { transform: translateX(-50%); } }
-.bf-marquee { animation: bf-marquee 40s linear infinite; }
-@media (prefers-reduced-motion: reduce) { .bf-marquee { animation: none; } }
+.bf-marquee { animation: bf-marquee 35s linear infinite; will-change: transform; }
+.bf-marquee:hover { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) { .bf-marquee { animation-duration: 90s; } }
