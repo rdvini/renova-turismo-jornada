@@ -135,7 +135,7 @@ const BlackFriday = () => {
 
       {/* Topo */}
       <header className="absolute inset-x-0 top-0 z-40 flex items-center justify-between px-5 py-5 md:px-10">
-        <img src={logo} alt="Renova Turismo" className="h-10 w-auto opacity-90" />
+        <img src={logo} alt="Renova Turismo" className="h-10 w-auto brightness-0 opacity-75" />
         <CtaButton label={BF_PHONE_LABEL} className="hidden sm:inline-flex" />
       </header>
 
@@ -143,7 +143,7 @@ const BlackFriday = () => {
       <section className="relative flex min-h-[100svh] items-center overflow-hidden pt-24">
         <div className="bf-halftone absolute inset-0 opacity-60" style={{ transform: `translateY(${y * 0.15}px)` }} />
         <div
-          className="absolute right-[-10%] top-[12%] h-[70vh] w-[70vw] max-w-[720px] rotate-3 overflow-hidden rounded-2xl md:right-[4%] md:w-[40vw]"
+          className="absolute right-[-18%] top-[8%] h-[38vh] w-[62vw] max-w-[720px] overflow-hidden rounded-2xl opacity-80 md:right-[4%] md:top-[12%] md:h-[70vh] md:w-[40vw] md:opacity-100"
           style={{ transform: `translateY(${y * 0.3}px) rotate(3deg)` }}
         >
           <img src={heroImg} alt="Santorini" width={1200} height={1600} className="bf-xerox h-full w-full object-cover" />
@@ -151,8 +151,8 @@ const BlackFriday = () => {
         </div>
         <div className="absolute left-[6%] top-[18%] h-40 w-40 rounded-full bg-[hsl(var(--bf-rose))] opacity-80 md:h-64 md:w-64" style={{ transform: `translateY(${y * -0.2}px)` }} />
 
-        <div className="relative z-10 w-full px-5 md:px-10">
-          <span className="bf-mono inline-block -rotate-2 border-2 border-[hsl(var(--bf-ink))] bg-[hsl(var(--bf-sand))] px-3 py-1 text-xs uppercase tracking-[.3em]">
+        <div className="relative z-10 w-full px-5 pt-[22vh] md:px-10 md:pt-0">
+          <span className="bf-mono inline-block -rotate-2 border-2 border-[hsl(var(--bf-ink))] bg-[hsl(var(--bf-sand))] px-3 py-1 text-[10px] uppercase tracking-[.25em] md:text-xs">
             Edição limitada · Renova Turismo
           </span>
           <h1 className="bf-display mt-6 text-[22vw] md:text-[15vw]" style={{ transform: `translateX(${y * -0.25}px)` }}>
