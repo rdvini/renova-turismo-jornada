@@ -27,6 +27,7 @@ const LesteEuropeu = lazy(() => import("./pages/LesteEuropeu.tsx"));
 const Marrocos = lazy(() => import("./pages/Marrocos.tsx"));
 const JmjSeul = lazy(() => import("./pages/JmjSeul.tsx"));
 const Grecia = lazy(() => import("./pages/Grecia.tsx"));
+const BlackFriday = lazy(() => import("./pages/BlackFriday.tsx"));
 const AuroraBoreal = lazy(() => import("./pages/AuroraBoreal.tsx"));
 const Metricas = lazy(() => import("./pages/Metricas.tsx"));
 const Privacidade = lazy(() => import("./pages/Privacidade.tsx"));
@@ -74,6 +75,7 @@ const App = () => {
             <Route path="/marrocos" element={<Marrocos />} />
             <Route path="/jmj-seul-2027" element={<JmjSeul />} />
             <Route path="/grecia" element={<Grecia />} />
+            <Route path="/black-friday" element={<BlackFriday />} />
             <Route path="/aurora-boreal" element={<AuroraBoreal />} />
             <Route path="/semana-do-cliente" element={<SemanaDoCliente />} />
             <Route path="/admin/metricas" element={<Metricas />} />

@@ -24,6 +24,7 @@ const PAGE_WHATSAPP: Record<string, string> = {
   "/grecia": "5519988216863",
   "/aurora-boreal": "5519992016125",
   "/semana-do-cliente": "5519994718930",
+  "/black-friday": "551932412424",
 };
 
 // Mensagem específica por rota
@@ -45,6 +46,7 @@ const PAGE_MESSAGE: Record<string, string> = {
   "/grecia": "Olá! Gostaria de mais informações sobre a viagem à Grécia.",
   "/aurora-boreal": "Olá! Gostaria de mais informações sobre a viagem para ver a Aurora Boreal.",
   "/semana-do-cliente": "Olá! Gostaria de confirmar minha presença na Semana do Cliente da Renova Turismo.",
+  "/black-friday": "Olá! Gostaria de conhecer as ofertas de Black Friday da Renova Turismo.",
 };
 
 const DEFAULT_PHONE = "5519994718930";
