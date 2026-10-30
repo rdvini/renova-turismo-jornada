@@ -132,7 +132,7 @@ const Carousel = () => {
       aria-roledescription="carrossel"
       className="outline-none"
     >
-      <div className="relative mx-auto h-[600px] overflow-hidden" style={{ perspective: "1400px" }}>
+      <div className="relative mx-auto h-[530px] overflow-hidden" style={{ perspective: "1400px" }}>
         {roteiros.map((r, i) => {
           let off = i - active;
           if (off > n / 2) off -= n;
@@ -162,7 +162,7 @@ const Carousel = () => {
                 <Ticket r={r} i={i} />
                 {/* capa do ticket "guardado" */}
                 <div
-                  className={`pointer-events-none absolute inset-0 flex items-center justify-center rounded-xl border border-[hsl(var(--bf-ink)/.15)] bg-[hsl(var(--bf-paper))] transition-opacity duration-700 ${isActive ? "opacity-0" : "opacity-90"}`}
+                  className={`pointer-events-none absolute inset-0 flex items-center justify-center rounded-xl border border-[hsl(var(--bf-ink)/.15)] bg-[hsl(var(--bf-paper))] transition-opacity duration-700 ${isActive ? "opacity-0" : "opacity-95"}`}
                 >
                   <span className="bf-display rotate-90 whitespace-nowrap text-5xl tracking-wider text-[hsl(var(--bf-accent))]">{r.code}</span>
                 </div>
