@@ -510,15 +510,16 @@
 
 /* ===== Black Friday — estética impressa/xerox ===== */
 .theme-bf {
-  --bf-paper: 40 33% 92%;
-  --bf-paper-2: 36 28% 86%;
-  --bf-ink: 220 9% 24%;
-  --bf-ink-soft: 220 6% 42%;
-  --bf-blue: 208 32% 72%;
-  --bf-rose: 8 52% 80%;
-  --bf-sand: 38 52% 78%;
-  --bf-sage: 140 18% 74%;
-  --bf-accent: 10 58% 62%;
+  /* Tema escuro — azuis Renova Turismo */
+  --bf-paper: 218 62% 9%;
+  --bf-paper-2: 216 55% 13%;
+  --bf-ink: 210 40% 94%;
+  --bf-ink-soft: 212 25% 72%;
+  --bf-blue: 210 70% 30%;
+  --bf-rose: 222 55% 24%;
+  --bf-sand: 213 90% 20%;
+  --bf-sage: 200 55% 26%;
+  --bf-accent: 199 90% 48%;
   background-color: hsl(var(--bf-paper));
   color: hsl(var(--bf-ink));
 }
@@ -527,10 +528,10 @@
 .bf-mono { font-family: "DM Mono", ui-monospace, monospace; }
 .bf-grain { position: relative; isolation: isolate; }
 .bf-grain::after {
-  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 50; opacity: .35; mix-blend-mode: multiply;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .3  0 0 0 0 .3  0 0 0 0 .32  0 0 0 .55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 50; opacity: .18; mix-blend-mode: screen;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .8  0 0 0 0 .85  0 0 0 0 .95  0 0 0 .55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
 }
-.bf-xerox { filter: grayscale(.35) contrast(1.15) sepia(.12) saturate(.9); mix-blend-mode: multiply; }
+.bf-xerox { filter: grayscale(.2) contrast(1.1) saturate(.95); }
 .bf-halftone { background-image: radial-gradient(hsl(var(--bf-ink) / .18) 1px, transparent 1.2px); background-size: 6px 6px; }
 .bf-ticket {
   --notch: 14px;
