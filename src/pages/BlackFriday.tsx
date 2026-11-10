@@ -49,7 +49,7 @@ const Ticket = ({ r, i }: { r: BfRoteiro; i: number }) => (
       <span className="bf-mono absolute left-4 top-4 rounded-sm bg-[hsl(var(--bf-paper))] px-2 py-1 text-[10px] text-[hsl(var(--bf-ink))] uppercase tracking-[.2em]">
         Black Friday · Nº {String(i + 1).padStart(3, "0")}
       </span>
-      <span className="bf-display absolute bottom-2 right-4 text-6xl text-[hsl(var(--bf-ink))] opacity-90">{r.code}</span>
+      <span className={`bf-display absolute bottom-2 right-4 text-[hsl(var(--bf-ink))] opacity-90 ${r.code.length > 7 ? "text-3xl" : r.code.length > 3 ? "text-4xl" : "text-6xl"}`}>{r.code}</span>
     </div>
     <div className="flex flex-1 flex-col gap-3 p-5">
       <div className="bf-mono flex items-center justify-between text-[10px] uppercase tracking-[.2em] text-[hsl(var(--bf-paper)/.6)]">
@@ -170,7 +170,7 @@ const Carousel = () => {
                 <div
                   className={`pointer-events-none absolute inset-0 flex items-center justify-center rounded-xl border border-[hsl(var(--bf-paper)/.15)] bg-[hsl(var(--bf-ink))] transition-opacity duration-700 ${isActive ? "opacity-0" : "opacity-95"}`}
                 >
-                  <span className="bf-display rotate-90 whitespace-nowrap text-5xl tracking-wider text-[hsl(var(--bf-accent))]">{r.code}</span>
+                  <span className={`bf-display rotate-90 whitespace-nowrap ${r.code.length > 7 ? "text-3xl" : "text-5xl"} tracking-wider text-[hsl(var(--bf-accent))]`}>{r.code}</span>
                 </div>
               </div>
             </div>
