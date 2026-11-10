@@ -37,7 +37,7 @@ export type BfRoteiro = {
 
 export const roteiros: BfRoteiro[] = [
   {
-    code: "CPT",
+    code: "ZAF",
     nome: "África do Sul",
     duracao: "09 dias / 07 noites",
     paises: ["África do Sul"],
@@ -46,7 +46,7 @@ export const roteiros: BfRoteiro[] = [
     tone: "sand",
   },
   {
-    code: "DXB",
+    code: "ARE",
     nome: "Dubai e Abu Dhabi",
     duracao: "08 dias / 06 noites",
     paises: ["Emirados Árabes"],
@@ -55,7 +55,7 @@ export const roteiros: BfRoteiro[] = [
     tone: "rose",
   },
   {
-    code: "CAI",
+    code: "EGY",
     nome: "Egito com Cruzeiro no Nilo e Hurghada",
     duracao: "11 dias / 08 noites",
     paises: ["Egito"],
@@ -64,7 +64,7 @@ export const roteiros: BfRoteiro[] = [
     tone: "sand",
   },
   {
-    code: "NAP",
+    code: "ITA",
     nome: "Costa Amalfitana",
     paises: ["Itália"],
     saida: ["20 a 30 de setembro de 2027"],
@@ -72,7 +72,7 @@ export const roteiros: BfRoteiro[] = [
     tone: "blue",
   },
   {
-    code: "BKK",
+    code: "THA",
     nome: "Tailândia e Phuket",
     paises: ["Tailândia"],
     saida: ["25 de outubro a 07 de novembro de 2027"],
@@ -80,7 +80,7 @@ export const roteiros: BfRoteiro[] = [
     tone: "sage",
   },
   {
-    code: "TOS",
+    code: "DNK·NOR·SWE",
     nome: "Aurora Boreal",
     paises: ["Dinamarca", "Noruega", "Suécia"],
     saida: ["21 de fevereiro a 05 de março de 2027", "20 de fevereiro a 04 de março de 2028"],
@@ -88,7 +88,7 @@ export const roteiros: BfRoteiro[] = [
     tone: "blue",
   },
   {
-    code: "VCE",
+    code: "ITA",
     nome: "Itália de Veneza a Roma",
     duracao: "10 dias / 07 noites",
     paises: ["Itália"],
@@ -97,7 +97,7 @@ export const roteiros: BfRoteiro[] = [
     tone: "rose",
   },
   {
-    code: "IST",
+    code: "TUR·GRC",
     nome: "Turquia e Grécia Experiências",
     paises: ["Turquia", "Grécia"],
     saida: ["17 a 31 de outubro de 2027"],
@@ -105,7 +105,7 @@ export const roteiros: BfRoteiro[] = [
     tone: "sand",
   },
   {
-    code: "PRG",
+    code: "CZE·AUT·HUN",
     nome: "Leste Europeu",
     duracao: "11 dias / 08 noites",
     paises: ["República Tcheca", "Áustria", "Hungria"],
@@ -114,7 +114,7 @@ export const roteiros: BfRoteiro[] = [
     tone: "rose",
   },
   {
-    code: "RAK",
+    code: "MAR",
     nome: "Marrocos",
     duracao: "12 dias / 09 noites",
     paises: ["Marrocos"],
@@ -123,7 +123,7 @@ export const roteiros: BfRoteiro[] = [
     tone: "sand",
   },
   {
-    code: "NAV",
+    code: "TUR",
     nome: "Turquia Experiências",
     paises: ["Turquia"],
     saida: ["19 a 30 de outubro de 2027"],
@@ -131,7 +131,7 @@ export const roteiros: BfRoteiro[] = [
     tone: "rose",
   },
   {
-    code: "LIS",
+    code: "PRT",
     nome: "Portugal Maravilhoso",
     paises: ["Portugal"],
     saida: ["15 a 25 de abril de 2028"],
@@ -139,7 +139,7 @@ export const roteiros: BfRoteiro[] = [
     tone: "sage",
   },
   {
-    code: "AMM",
+    code: "ISR·JOR",
     nome: "Israel e Jordânia",
     paises: ["Israel", "Jordânia"],
     saida: ["15 a 25 de maio de 2028"],
@@ -147,7 +147,7 @@ export const roteiros: BfRoteiro[] = [
     tone: "sand",
   },
   {
-    code: "ATH",
+    code: "GRC",
     nome: "Grécia",
     paises: ["Grécia"],
     saida: ["23 a 31 de outubro de 2027"],
@@ -155,7 +155,7 @@ export const roteiros: BfRoteiro[] = [
     tone: "blue",
   },
   {
-    code: "XMS",
+    code: "CZE·AUT·HUN",
     nome: "Leste Europeu – Luzes de Natal",
     paises: ["República Tcheca", "Áustria", "Hungria"],
     saida: ["23 de novembro a 04 de dezembro de 2027"],
