@@ -138,7 +138,7 @@ const Carousel = () => {
       aria-roledescription="carrossel"
       className="outline-none"
     >
-      <div className="relative mx-auto h-[530px] overflow-hidden" style={{ perspective: "1400px" }}>
+      <div className="relative mx-auto h-[585px] overflow-hidden" style={{ perspective: "1400px" }}>
         {roteiros.map((r, i) => {
           let off = i - active;
           if (off > n / 2) off -= n;
