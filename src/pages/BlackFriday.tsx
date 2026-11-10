@@ -70,6 +70,12 @@ const Ticket = ({ r, i }: { r: BfRoteiro; i: number }) => (
           <p className="font-medium normal-case">{r.duracao ?? "Sob consulta"}</p>
         </div>
       </div>
+      <div className="bf-mono text-[11px] uppercase">
+        <p className="text-[hsl(var(--bf-paper)/.6)]">{r.saida.length > 1 ? "Datas de saída" : "Data de saída"}</p>
+        {r.saida.map((s) => (
+          <p key={s} className="font-medium normal-case leading-snug">{s}</p>
+        ))}
+      </div>
     </div>
     {/* canhoto picotado */}
     <div className="mx-5 border-t-2 border-dashed border-[hsl(var(--bf-paper)/.3)]" />
@@ -132,7 +138,7 @@ const Carousel = () => {
       aria-roledescription="carrossel"
       className="outline-none"
     >
-      <div className="relative mx-auto h-[530px] overflow-hidden" style={{ perspective: "1400px" }}>
+      <div className="relative mx-auto h-[585px] overflow-hidden" style={{ perspective: "1400px" }}>
         {roteiros.map((r, i) => {
           let off = i - active;
           if (off > n / 2) off -= n;
@@ -238,7 +244,7 @@ const BlackFriday = () => {
           </h1>
           <div className="mt-6 max-w-md">
             <p className="bf-serif text-xl md:text-2xl">
-              <strong>17 roteiros</strong> pelo mundo com condições que só aparecem uma vez por ano.
+              <strong>{roteiros.length} roteiros</strong> pelo mundo com condições que só aparecem uma vez por ano.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-4">
               <CtaButton label="Quero as ofertas" />
