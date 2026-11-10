@@ -213,7 +213,7 @@ const BlackFriday = () => {
 
       {/* Topo */}
       <header className="absolute inset-x-0 top-0 z-40 flex items-center justify-between px-5 py-5 md:px-10">
-        <img src={logo} alt="Renova Turismo" className="h-14 w-auto brightness-0 invert md:h-20" />
+        <img src={logo} alt="Renova Turismo" className="h-20 w-auto brightness-0 invert md:h-32" />
         <CtaButton label={BF_PHONE_LABEL} className="hidden sm:inline-flex" />
       </header>
 
