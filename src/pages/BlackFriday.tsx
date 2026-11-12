@@ -1,9 +1,10 @@
-import { useEffect, useRef, useState, useCallback } from "react";
+import { memo, useEffect, useRef, useState, useCallback } from "react";
 import { ArrowLeft, ArrowRight, MessageCircle, Plane } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import Seo from "@/components/seo/Seo";
 import MetaPixel from "@/components/tracking/MetaPixel";
 import Footer from "@/components/landing/Footer";
-import logo from "@/assets/logo-renova.png";
+import logo from "@/assets/logo-renova.svg";
 import heroImg from "@/assets/black-friday/amalfi.jpg";
 import { roteiros, bfWhatsApp, BF_PHONE_LABEL, type BfRoteiro } from "@/components/campaigns/black-friday/roteiros";
 
@@ -14,20 +15,28 @@ const toneBg: Record<BfRoteiro["tone"], string> = {
   sage: "bg-[hsl(var(--bf-sage))]",
 };
 
-/** Retorna o scrollY para criar paralaxe (desativado com reduced-motion). */
-const useScrollY = () => {
-  const [y, setY] = useState(0);
+/** Desktop-only parallax updates CSS, never the React tree on scroll. */
+const useParallax = () => {
+  const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const media = window.matchMedia("(min-width: 768px) and (prefers-reduced-motion: no-preference)");
     let raf = 0;
-    const on = () => {
-      cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(() => setY(window.scrollY));
+    const update = () => {
+      raf = 0;
+      ref.current?.style.setProperty("--bf-scroll", `${media.matches ? Math.min(window.scrollY, window.innerHeight) : 0}px`);
     };
+    const on = () => {
+      if (!raf && media.matches) raf = requestAnimationFrame(update);
+    };
+    media.addEventListener("change", update);
     window.addEventListener("scroll", on, { passive: true });
-    return () => window.removeEventListener("scroll", on);
+    return () => {
+      cancelAnimationFrame(raf);
+      media.removeEventListener("change", update);
+      window.removeEventListener("scroll", on);
+    };
   }, []);
-  return y;
+  return ref;
 };
 
 const CtaButton = ({ label = "Chamar no WhatsApp", roteiro, className = "" }: { label?: string; roteiro?: string; className?: string }) => (
@@ -41,10 +50,10 @@ const CtaButton = ({ label = "Chamar no WhatsApp", roteiro, className = "" }: { 
   </a>
 );
 
-const Ticket = ({ r, i }: { r: BfRoteiro; i: number }) => (
+const Ticket = memo(({ r, i, active }: { r: BfRoteiro; i: number; active: boolean }) => (
   <article className="bf-ticket relative flex h-full flex-col overflow-hidden rounded-xl bg-[hsl(var(--bf-ink))] text-[hsl(var(--bf-paper))] shadow-[0_18px_40px_-20px_hsl(var(--bf-ink)/.5)]">
-    <div className="relative h-56 overflow-hidden">
-      <img src={r.img} alt={r.nome} loading="lazy" width={768} height={1024} className="bf-xerox h-full w-full object-cover" />
+    <div className="relative h-44 shrink-0 overflow-hidden md:h-52">
+      <img src={r.img} alt={r.nome} loading="lazy" decoding="async" width={768} height={1024} className="h-full w-full object-cover" />
       <div className={`absolute inset-0 ${toneBg[r.tone]} mix-blend-soft-light opacity-50`} />
       <span className="bf-mono absolute left-4 top-4 rounded-sm bg-[hsl(var(--bf-paper))] px-2 py-1 text-[10px] text-[hsl(var(--bf-ink))] uppercase tracking-[.2em]">
         Black Friday · Nº {String(i + 1).padStart(3, "0")}
@@ -59,15 +68,11 @@ const Ticket = ({ r, i }: { r: BfRoteiro; i: number }) => (
         <span className="mx-2 flex-1 border-t border-dashed border-[hsl(var(--bf-paper)/.4)]" />
         <span>{r.code}</span>
       </div>
-      <h3 className="bf-display text-3xl">{r.nome}</h3>
-      <div className="bf-mono grid grid-cols-2 gap-2 text-[11px] uppercase">
+      <h3 className="bf-display text-2xl leading-tight md:text-3xl">{r.nome}</h3>
+      <div className="bf-mono text-[11px] uppercase">
         <div>
           <p className="text-[hsl(var(--bf-paper)/.6)]">Países</p>
           <p className="font-medium normal-case">{r.paises.join(" · ")}</p>
-        </div>
-        <div>
-          <p className="text-[hsl(var(--bf-paper)/.6)]">Duração</p>
-          <p className="font-medium normal-case">{r.duracao ?? "Sob consulta"}</p>
         </div>
       </div>
       <div className="bf-mono text-[11px] uppercase">
@@ -79,26 +84,30 @@ const Ticket = ({ r, i }: { r: BfRoteiro; i: number }) => (
     </div>
     {/* canhoto picotado */}
     <div className="mx-5 border-t-2 border-dashed border-[hsl(var(--bf-paper)/.3)]" />
-    <div className="flex items-center justify-between gap-3 p-5">
-      <p className="bf-serif text-sm italic leading-tight text-[hsl(var(--bf-paper)/.6)]">Consulte condições<br />Black Friday</p>
+    <div className="flex shrink-0 flex-col items-stretch gap-3 p-5 md:flex-row md:items-center md:justify-between">
+      <p className="bf-serif text-sm italic leading-tight text-[hsl(var(--bf-paper)/.6)]">Consulte condições Black Friday</p>
       <a
         href={bfWhatsApp(r.nome)}
         target="_blank"
         rel="noopener noreferrer"
-        className="bf-mono whitespace-nowrap rounded-full bg-[hsl(var(--bf-accent))] px-4 py-2 text-xs font-medium uppercase tracking-wider text-[hsl(var(--bf-paper))] transition-transform hover:-translate-y-0.5"
+        tabIndex={active ? 0 : -1}
+        className="bf-mono shrink-0 rounded-full bg-[hsl(var(--bf-accent))] px-4 py-3 text-center text-xs font-medium uppercase text-[hsl(var(--bf-paper))] transition-transform hover:-translate-y-0.5"
       >
         Quero esse roteiro
       </a>
     </div>
   </article>
-);
+));
 
 /** Carrossel em pilha: um ticket aberto no centro, os demais "guardados" nas laterais. */
 const Carousel = () => {
   const n = roteiros.length;
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
-  const [w, setW] = useState(typeof window !== "undefined" ? window.innerWidth : 1280);
+  const [mobile, setMobile] = useState(() => window.matchMedia("(max-width: 767px)").matches);
+  const [inView, setInView] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(() => window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+  const carouselRef = useRef<HTMLDivElement>(null);
   const startX = useRef<number | null>(null);
 
   const go = useCallback((dir: number) => setActive((a) => (a + dir + n) % n), [n]);
@@ -106,26 +115,38 @@ const Carousel = () => {
   const next = useCallback(() => go(1), [go]);
 
   useEffect(() => {
-    const on = () => setW(window.innerWidth);
-    window.addEventListener("resize", on);
-    return () => window.removeEventListener("resize", on);
+    const size = window.matchMedia("(max-width: 767px)");
+    const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const onSize = () => setMobile(size.matches);
+    const onMotion = () => setReducedMotion(motion.matches);
+    const observer = new IntersectionObserver(([entry]) => setInView(entry.isIntersecting), { threshold: 0.15 });
+    if (carouselRef.current) observer.observe(carouselRef.current);
+    size.addEventListener("change", onSize);
+    motion.addEventListener("change", onMotion);
+    return () => {
+      observer.disconnect();
+      size.removeEventListener("change", onSize);
+      motion.removeEventListener("change", onMotion);
+    };
   }, []);
 
   useEffect(() => {
-    if (paused) return;
-    const t = setInterval(next, 4000);
+    if (paused || !inView || reducedMotion) return;
+    const t = setInterval(() => { if (!document.hidden) next(); }, 4000);
     return () => clearInterval(t);
-  }, [paused, next, active]);
+  }, [paused, inView, reducedMotion, next, active]);
 
-  const mobile = w < 768;
   const step = mobile ? 34 : 70; // distância entre tickets guardados
   const gap = mobile ? 150 : 250; // afastamento do ticket central
   const visible = mobile ? 2 : 4;
 
   return (
     <div
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
+      ref={carouselRef}
+      onPointerEnter={(e) => { if (e.pointerType === "mouse") setPaused(true); }}
+      onPointerLeave={(e) => { if (e.pointerType === "mouse") setPaused(false); }}
+      onFocusCapture={() => setPaused(true)}
+      onBlurCapture={(e) => { if (!e.currentTarget.contains(e.relatedTarget)) setPaused(false); }}
       onPointerDown={(e) => { startX.current = e.clientX; }}
       onPointerUp={(e) => {
         if (startX.current === null) return;
@@ -133,17 +154,20 @@ const Carousel = () => {
         if (Math.abs(dx) > 40) go(dx < 0 ? 1 : -1);
         startX.current = null;
       }}
+      onPointerCancel={() => { startX.current = null; }}
       onKeyDown={(e) => { if (e.key === "ArrowLeft") prev(); if (e.key === "ArrowRight") next(); }}
       tabIndex={0}
       aria-roledescription="carrossel"
-      className="outline-none"
+      aria-label="Roteiros Black Friday"
+      className="min-w-0 outline-none"
     >
-      <div className="relative mx-auto h-[585px] overflow-hidden" style={{ perspective: "1400px" }}>
+      <div className="bf-carousel-stage relative mx-auto h-[608px]" style={{ perspective: "1400px" }}>
         {roteiros.map((r, i) => {
           let off = i - active;
           if (off > n / 2) off -= n;
           if (off < -n / 2) off += n;
           const abs = Math.abs(off);
+          if (abs > visible + 1) return null;
           const sign = Math.sign(off);
           const isActive = off === 0;
           const x = isActive ? 0 : sign * (gap + (abs - 1) * step);
@@ -155,7 +179,7 @@ const Carousel = () => {
               key={r.nome}
               onClick={() => !isActive && setActive(i)}
               aria-hidden={!isActive}
-              className={`absolute left-1/2 top-6 w-[290px] transition-all duration-700 ease-[cubic-bezier(.22,.8,.24,1)] md:w-[340px] ${isActive ? "" : "cursor-pointer"}`}
+              className={`bf-carousel-ticket absolute left-1/2 top-6 h-[560px] w-[calc(100%-48px)] max-w-[340px] transition-[transform,opacity] duration-700 ease-[cubic-bezier(.22,.8,.24,1)] motion-reduce:transition-none md:w-[340px] ${isActive ? "" : "cursor-pointer"}`}
               style={{
                 transform,
                 zIndex: 100 - abs,
@@ -164,11 +188,11 @@ const Carousel = () => {
                 transformStyle: "preserve-3d",
               }}
             >
-              <div className="relative">
-                <Ticket r={r} i={i} />
+              <div className="relative h-full">
+                <Ticket r={r} i={i} active={isActive} />
                 {/* capa do ticket "guardado" */}
                 <div
-                  className={`pointer-events-none absolute inset-0 flex items-center justify-center rounded-xl border border-[hsl(var(--bf-paper)/.15)] bg-[hsl(var(--bf-ink))] transition-opacity duration-700 ${isActive ? "opacity-0" : "opacity-95"}`}
+                  className={`pointer-events-none absolute inset-0 flex items-center justify-center rounded-xl border border-[hsl(var(--bf-paper)/.15)] bg-[hsl(var(--bf-ink))] transition-opacity duration-700 motion-reduce:transition-none ${isActive ? "opacity-0" : "opacity-100"}`}
                 >
                   <span className={`bf-display rotate-90 whitespace-nowrap ${r.code.length > 7 ? "text-3xl" : "text-5xl"} tracking-wider text-[hsl(var(--bf-accent))]`}>{r.code}</span>
                 </div>
@@ -178,32 +202,29 @@ const Carousel = () => {
         })}
       </div>
       <div className="mt-2 flex items-center justify-center gap-4">
-        <button onClick={prev} aria-label="Anterior" className="rounded-full border-2 border-[hsl(var(--bf-ink))] p-3 transition-colors hover:bg-[hsl(var(--bf-ink))] hover:text-[hsl(var(--bf-paper))]">
+        <Button variant="outline" size="icon" onClick={prev} aria-label="Anterior" className="h-12 w-12 rounded-full border-2 border-[hsl(var(--bf-ink))] bg-transparent text-[hsl(var(--bf-ink))] hover:bg-[hsl(var(--bf-ink))] hover:text-[hsl(var(--bf-paper))]">
           <ArrowLeft className="h-5 w-5" />
-        </button>
+        </Button>
         <span className="bf-mono min-w-[4.5rem] text-center text-xs tracking-[.2em] text-[hsl(var(--bf-ink-soft))]">
           {String(active + 1).padStart(2, "0")} / {String(n).padStart(2, "0")}
         </span>
-        <button onClick={next} aria-label="Próximo" className="rounded-full border-2 border-[hsl(var(--bf-ink))] p-3 transition-colors hover:bg-[hsl(var(--bf-ink))] hover:text-[hsl(var(--bf-paper))]">
+        <Button variant="outline" size="icon" onClick={next} aria-label="Próximo" className="h-12 w-12 rounded-full border-2 border-[hsl(var(--bf-ink))] bg-transparent text-[hsl(var(--bf-ink))] hover:bg-[hsl(var(--bf-ink))] hover:text-[hsl(var(--bf-paper))]">
           <ArrowRight className="h-5 w-5" />
-        </button>
+        </Button>
       </div>
     </div>
   );
 };
 
 const BlackFriday = () => {
-  const y = useScrollY();
-  const diffRef = useRef<HTMLElement>(null);
-  const diffTop = diffRef.current?.offsetTop ?? 2000;
-  const d = y - diffTop;
+  const pageRef = useParallax();
 
   useEffect(() => window.scrollTo(0, 0), []);
 
   const marquee = roteiros.map((r) => r.nome);
 
   return (
-    <div className="theme-bf bf-grain min-h-screen overflow-x-hidden">
+    <div ref={pageRef} className="theme-bf bf-grain min-h-screen overflow-x-clip">
       <MetaPixel contentName="Black Friday" contentCategory="Campanha" />
       <Seo
         title="Black Friday de Viagens | Renova Turismo"
@@ -218,27 +239,23 @@ const BlackFriday = () => {
       </header>
 
       {/* Hero */}
-      <section className="relative flex min-h-[100svh] items-center overflow-hidden pb-16 pt-32 md:pt-44">
-        <div className="bf-halftone absolute inset-0 opacity-60" style={{ transform: `translateY(${y * 0.15}px)` }} />
+      <section className="relative flex flex-col gap-6 overflow-hidden px-5 pb-16 pt-32 md:min-h-[90svh] md:justify-center md:px-0 md:pt-44">
+        <div className="bf-halftone absolute inset-0 opacity-60" />
         <div
-          className="absolute right-[-18%] top-[8%] h-[38vh] w-[62vw] max-w-[720px] overflow-hidden rounded-2xl opacity-80 md:right-[4%] md:top-[12%] md:h-[70vh] md:w-[40vw] md:opacity-100"
-          style={{ transform: `translateY(${y * 0.3}px) rotate(3deg)` }}
+          className="bf-hero-image relative aspect-[3/2] w-full overflow-hidden rounded-lg md:absolute md:right-[4%] md:top-[12%] md:h-[65vh] md:w-[40vw] md:max-w-[720px]"
         >
           <img src={heroImg} alt="Positano, na Costa Amalfitana, Itália" width={768} height={1024} fetchPriority="high" className="bf-xerox h-full w-full object-cover" />
           <div className="absolute inset-0 bg-[hsl(var(--bf-blue))] opacity-30 mix-blend-soft-light" />
         </div>
-        <div className="absolute left-[6%] top-[18%] h-40 w-40 rounded-full bg-[hsl(var(--bf-rose))] opacity-80 md:h-64 md:w-64" style={{ transform: `translateY(${y * -0.2}px)` }} />
-
-        <div className="relative z-10 w-full px-5 pt-[22vh] md:px-10 md:pt-0">
+        <div className="relative z-10 w-full min-w-0 md:px-10">
           <span className="bf-mono inline-block -rotate-2 border-2 border-[hsl(var(--bf-ink))] bg-[hsl(var(--bf-sand))] px-3 py-1 text-[10px] uppercase tracking-[.25em] md:text-xs">
             De 16/11 a 27/11/2026
           </span>
-          <h1 className="bf-display mt-6 text-[22vw] md:text-[15vw]" style={{ transform: `translateX(${y * -0.25}px)` }}>
+          <h1 className="bf-display mt-6 text-7xl sm:text-8xl md:text-[160px] lg:text-[200px]">
             Black
           </h1>
           <h1
-            className="bf-display -mt-[4vw] text-[22vw] text-transparent md:pl-[12vw] md:text-[15vw]"
-            style={{ WebkitTextStroke: "2px hsl(var(--bf-ink))", transform: `translateX(${y * 0.25}px)` }}
+            className="bf-display bf-outline-title text-7xl text-transparent sm:text-8xl md:pl-24 md:text-[160px] lg:text-[200px]"
           >
             Friday
           </h1>
@@ -284,11 +301,11 @@ const BlackFriday = () => {
       </section>
 
       {/* Por que a Renova */}
-      <section ref={diffRef} className="relative overflow-hidden px-5 py-28 md:px-10">
-        <h2 className="bf-display relative z-10 text-[16vw] leading-none opacity-10 md:text-[11vw]" style={{ transform: `translateX(${d * 0.15}px)` }}>
+      <section className="relative overflow-hidden px-5 py-16 md:px-10 md:py-28">
+        <h2 className="bf-display relative z-10 text-5xl leading-none opacity-10 md:text-8xl">
           Viaje com a Renova
         </h2>
-        <div className="relative z-20 -mt-[8vw] grid gap-6 md:grid-cols-4">
+        <div className="relative z-20 mt-6 grid gap-6 md:-mt-8 md:grid-cols-2 lg:grid-cols-4">
           {[
             { t: "Grupos acompanhados", p: "Guia brasileiro do embarque ao retorno.", c: "bg-[hsl(var(--bf-blue))]", s: 0.08 },
             { t: "Saída de Guarulhos", p: "Aéreo, hotéis e passeios organizados.", c: "bg-[hsl(var(--bf-rose))]", s: -0.06 },
@@ -298,7 +315,6 @@ const BlackFriday = () => {
             <div
               key={b.t}
               className={`${b.c} rounded-xl border-2 border-[hsl(var(--bf-ink))] p-6 shadow-[6px_6px_0_hsl(var(--bf-ink))]`}
-              style={{ transform: `translateY(${d * b.s}px) rotate(${i % 2 ? 1.5 : -1.5}deg)` }}
             >
               <p className="bf-mono text-xs">0{i + 1}</p>
               <h3 className="bf-display mt-3 text-3xl">{b.t}</h3>
@@ -315,12 +331,12 @@ const BlackFriday = () => {
           <div className="absolute -bottom-16 -right-10 h-64 w-64 rounded-full bg-[hsl(var(--bf-blue))] opacity-70" />
           <div className="relative">
             <p className="bf-mono text-xs uppercase tracking-[.3em]">Vagas limitadas</p>
-            <h2 className="mt-4 text-5xl md:text-8xl">
+            <h2 className="mt-4 text-4xl sm:text-5xl md:text-7xl">
               <span className="bf-display">Sua próxima viagem</span>
               <br />
               <span className="bf-serif italic">começa aqui</span>
             </h2>
-            <p className="bf-display mt-6 text-4xl md:text-6xl">{BF_PHONE_LABEL}</p>
+            <p className="bf-display mt-6 text-3xl sm:text-4xl md:text-6xl">{BF_PHONE_LABEL}</p>
             <div className="mt-8 flex justify-center">
               <CtaButton label="Falar com a Renova" />
             </div>
