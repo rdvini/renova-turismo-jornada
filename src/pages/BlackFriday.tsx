@@ -268,7 +268,7 @@ const BlackFriday = () => {
             Black
           </h1>
           <h1
-            className="bf-title-friday bf-display bf-outline-title w-fit text-7xl text-transparent sm:text-8xl md:pl-24 md:text-[160px] lg:text-[200px]"
+            className="bf-title-friday bf-display bf-outline-title relative z-10 -mt-4 w-fit text-7xl text-transparent sm:-mt-6 sm:text-8xl md:-mt-10 md:pl-24 md:text-[160px] lg:-mt-12 lg:text-[200px]"
           >
             Friday
           </h1>
