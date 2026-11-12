@@ -4,7 +4,7 @@ import Seo from "@/components/seo/Seo";
 import MetaPixel from "@/components/tracking/MetaPixel";
 import Footer from "@/components/landing/Footer";
 import logo from "@/assets/logo-renova.png";
-import heroImg from "@/assets/grecia/hero-santorini.jpg";
+import heroImg from "@/assets/black-friday/amalfi.jpg";
 import { roteiros, bfWhatsApp, BF_PHONE_LABEL, type BfRoteiro } from "@/components/campaigns/black-friday/roteiros";
 
 const toneBg: Record<BfRoteiro["tone"], string> = {
@@ -218,20 +218,23 @@ const BlackFriday = () => {
       </header>
 
       {/* Hero */}
-      <section className="relative flex min-h-[100svh] items-center overflow-hidden pt-24">
+      <section className="relative flex min-h-[100svh] items-center overflow-hidden pb-16 pt-32 md:pt-44">
         <div className="bf-halftone absolute inset-0 opacity-60" style={{ transform: `translateY(${y * 0.15}px)` }} />
         <div
           className="absolute right-[-18%] top-[8%] h-[38vh] w-[62vw] max-w-[720px] overflow-hidden rounded-2xl opacity-80 md:right-[4%] md:top-[12%] md:h-[70vh] md:w-[40vw] md:opacity-100"
           style={{ transform: `translateY(${y * 0.3}px) rotate(3deg)` }}
         >
-          <img src={heroImg} alt="Santorini" width={1200} height={1600} className="bf-xerox h-full w-full object-cover" />
+          <img src={heroImg} alt="Positano, na Costa Amalfitana, Itália" width={768} height={1024} fetchPriority="high" className="bf-xerox h-full w-full object-cover" />
           <div className="absolute inset-0 bg-[hsl(var(--bf-blue))] opacity-30 mix-blend-soft-light" />
+          <p className="bf-mono absolute bottom-4 right-4 hidden bg-[hsl(var(--bf-paper))] px-3 py-2 text-xs text-[hsl(var(--bf-ink))] md:block">
+            Costa Amalfitana · O pacote mais vendido
+          </p>
         </div>
         <div className="absolute left-[6%] top-[18%] h-40 w-40 rounded-full bg-[hsl(var(--bf-rose))] opacity-80 md:h-64 md:w-64" style={{ transform: `translateY(${y * -0.2}px)` }} />
 
         <div className="relative z-10 w-full px-5 pt-[22vh] md:px-10 md:pt-0">
           <span className="bf-mono inline-block -rotate-2 border-2 border-[hsl(var(--bf-ink))] bg-[hsl(var(--bf-sand))] px-3 py-1 text-[10px] uppercase tracking-[.25em] md:text-xs">
-            Edição limitada · Renova Turismo
+            De 16/11 a 27/11/2026
           </span>
           <h1 className="bf-display mt-6 text-[22vw] md:text-[15vw]" style={{ transform: `translateX(${y * -0.25}px)` }}>
             Black
@@ -243,6 +246,9 @@ const BlackFriday = () => {
             Friday
           </h1>
           <div className="mt-6 max-w-md">
+            <p className="bf-serif mb-4 text-2xl font-bold leading-tight md:text-3xl">
+              A Maior Black Friday da história da Renova Turismo
+            </p>
             <p className="bf-serif text-xl md:text-2xl">
               <strong>{roteiros.length} roteiros</strong> pelo mundo com condições que só aparecem uma vez por ano.
             </p>
@@ -321,6 +327,28 @@ const BlackFriday = () => {
             <div className="mt-8 flex justify-center">
               <CtaButton label="Falar com a Renova" />
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="depoimentos-title" className="bg-[hsl(var(--bf-paper-2))] px-5 py-16 md:px-10 md:py-24">
+        <div className="mx-auto max-w-6xl">
+          <p className="bf-mono text-xs uppercase tracking-[.2em] text-[hsl(var(--bf-ink-soft))]">Quem viaja com a Renova</p>
+          <h2 id="depoimentos-title" className="bf-display mt-3 text-4xl md:text-6xl">Histórias de quem embarcou</h2>
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            {["rNnvgZQ0sUM", "0BC9FU0-iHE"].map((id, index) => (
+              <div key={id} className="aspect-video overflow-hidden rounded-lg border border-[hsl(var(--bf-ink)/.25)]">
+                <iframe
+                  src={`https://www.youtube-nocookie.com/embed/${id}?rel=0`}
+                  title={`Depoimento de cliente da Renova Turismo ${index + 1}`}
+                  loading="lazy"
+                  className="h-full w-full border-0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
