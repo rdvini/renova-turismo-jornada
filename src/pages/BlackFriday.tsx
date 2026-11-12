@@ -272,10 +272,10 @@ const BlackFriday = () => {
           <p className="bf-mono text-xs uppercase tracking-[.3em] text-[hsl(var(--bf-ink-soft))]">Embarque · Guarulhos (GRU)</p>
           <h2 className="mt-2 text-5xl md:text-7xl">
             <span className="bf-display">Escolha sua</span>{" "}
-            <span className="bf-serif font-normal italic">passagem</span>
+            <span className="bf-serif font-normal italic">viagem</span>
           </h2>
           <p className="bf-serif mt-4 max-w-xl text-lg text-[hsl(var(--bf-ink-soft))]">
-            Deslize para abrir cada passagem. Toque em “Quero esse roteiro” e receba as condições no WhatsApp.
+            Deslize para abrir cada destino. Toque em “Quero esse roteiro” e receba as condições no WhatsApp.
           </p>
         </div>
         <div className="mt-8">
