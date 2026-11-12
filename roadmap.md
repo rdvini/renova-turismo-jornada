@@ -1,6 +1,6 @@
 - [x] Atualizar a capa da Black Friday com Costa Amalfitana, período e frase solicitada.
 - [x] Adicionar os dois vídeos de depoimento ao final da página.
 - [x] Conferir a página no computador e no celular.
-- [ ] Remover duração dos tickets da Black Friday.
-- [ ] Reduzir trabalho das animações e carregamento da página.
-- [ ] Corrigir cortes no celular e verificar capa, tickets e navegação em vários tamanhos.
+- [x] Remover duração dos tickets da Black Friday.
+- [x] Reduzir trabalho das animações e carregamento da página.
+- [x] Corrigir cortes no celular e verificar capa, tickets e navegação em vários tamanhos.
