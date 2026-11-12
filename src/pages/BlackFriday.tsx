@@ -226,7 +226,7 @@ const BlackFriday = () => {
         >
           <img src={heroImg} alt="Positano, na Costa Amalfitana, Itália" width={768} height={1024} fetchPriority="high" className="bf-xerox h-full w-full object-cover" />
           <div className="absolute inset-0 bg-[hsl(var(--bf-blue))] opacity-30 mix-blend-soft-light" />
-          <p className="bf-mono absolute bottom-4 right-4 bg-[hsl(var(--bf-paper))] px-3 py-2 text-xs text-[hsl(var(--bf-ink))]">
+          <p className="bf-mono absolute bottom-4 right-4 hidden bg-[hsl(var(--bf-paper))] px-3 py-2 text-xs text-[hsl(var(--bf-ink))] md:block">
             Costa Amalfitana · O pacote mais vendido
           </p>
         </div>

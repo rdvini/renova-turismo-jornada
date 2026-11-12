@@ -1,3 +1,3 @@
-- [ ] Atualizar a capa da Black Friday com Costa Amalfitana, período e frase solicitada.
-- [ ] Adicionar os dois vídeos de depoimento ao final da página.
-- [ ] Conferir a página no computador e no celular.
+- [x] Atualizar a capa da Black Friday com Costa Amalfitana, período e frase solicitada.
+- [x] Adicionar os dois vídeos de depoimento ao final da página.
+- [x] Conferir a página no computador e no celular.
