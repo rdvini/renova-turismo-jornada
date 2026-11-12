@@ -15,25 +15,38 @@ const toneBg: Record<BfRoteiro["tone"], string> = {
   sage: "bg-[hsl(var(--bf-sage))]",
 };
 
-/** Desktop-only parallax updates CSS, never the React tree on scroll. */
+/** Bounded parallax updates CSS only; mobile keeps smaller, safe offsets. */
 const useParallax = () => {
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    const media = window.matchMedia("(min-width: 768px) and (prefers-reduced-motion: no-preference)");
+    const media = window.matchMedia("(prefers-reduced-motion: no-preference)");
+    const cards = Array.from(ref.current?.querySelectorAll<HTMLElement>("[data-bf-drift]") ?? []);
     let raf = 0;
     const update = () => {
       raf = 0;
-      ref.current?.style.setProperty("--bf-scroll", `${media.matches ? Math.min(window.scrollY, window.innerHeight) : 0}px`);
+      const mobile = window.innerWidth < 768;
+      const scroll = media.matches ? Math.min(window.scrollY, window.innerHeight) : 0;
+      ref.current?.style.setProperty("--bf-scroll", `${scroll}px`);
+      const offsets = cards.map((card) => {
+        const rect = card.getBoundingClientRect();
+        const speed = Number(card.dataset.bfDrift) || 0;
+        const limit = mobile ? 12 : 32;
+        return media.matches ? Math.max(-limit, Math.min(limit, (window.innerHeight / 2 - rect.top - rect.height / 2) * speed)) : 0;
+      });
+      cards.forEach((card, index) => card.style.setProperty("--bf-drift", `${offsets[index]}px`));
     };
     const on = () => {
       if (!raf && media.matches) raf = requestAnimationFrame(update);
     };
     media.addEventListener("change", update);
     window.addEventListener("scroll", on, { passive: true });
+    window.addEventListener("resize", on, { passive: true });
+    update();
     return () => {
       cancelAnimationFrame(raf);
       media.removeEventListener("change", update);
       window.removeEventListener("scroll", on);
+      window.removeEventListener("resize", on);
     };
   }, []);
   return ref;
@@ -234,7 +247,7 @@ const BlackFriday = () => {
 
       {/* Topo */}
       <header className="absolute inset-x-0 top-0 z-40 flex items-center justify-between px-5 py-5 md:px-10">
-        <img src={logo} alt="Renova Turismo" className="h-20 w-auto brightness-0 invert md:h-32" />
+        <img src={logo} alt="Renova Turismo" className="h-14 w-auto brightness-0 invert md:h-20" />
         <CtaButton label={BF_PHONE_LABEL} className="hidden sm:inline-flex" />
       </header>
 
@@ -244,18 +257,18 @@ const BlackFriday = () => {
         <div
           className="bf-hero-image relative aspect-[3/2] w-full overflow-hidden rounded-lg md:absolute md:right-[4%] md:top-[12%] md:h-[65vh] md:w-[40vw] md:max-w-[720px]"
         >
-          <img src={heroImg} alt="Positano, na Costa Amalfitana, Itália" width={768} height={1024} fetchPriority="high" className="bf-xerox h-full w-full object-cover" />
+          <img src={heroImg} alt="Positano, na Costa Amalfitana, Itália" width={768} height={1024} fetchPriority="high" className="bf-hero-photo bf-xerox h-full w-full object-cover" />
           <div className="absolute inset-0 bg-[hsl(var(--bf-blue))] opacity-30 mix-blend-soft-light" />
         </div>
         <div className="relative z-10 w-full min-w-0 md:px-10">
           <span className="bf-mono inline-block -rotate-2 border-2 border-[hsl(var(--bf-ink))] bg-[hsl(var(--bf-sand))] px-3 py-1 text-[10px] uppercase tracking-[.25em] md:text-xs">
             De 16/11 a 27/11/2026
           </span>
-          <h1 className="bf-display mt-6 text-7xl sm:text-8xl md:text-[160px] lg:text-[200px]">
+          <h1 className="bf-title-black bf-display mt-6 w-fit text-7xl sm:text-8xl md:text-[160px] lg:text-[200px]">
             Black
           </h1>
           <h1
-            className="bf-display bf-outline-title text-7xl text-transparent sm:text-8xl md:pl-24 md:text-[160px] lg:text-[200px]"
+            className="bf-title-friday bf-display bf-outline-title w-fit text-7xl text-transparent sm:text-8xl md:pl-24 md:text-[160px] lg:text-[200px]"
           >
             Friday
           </h1>
@@ -314,7 +327,8 @@ const BlackFriday = () => {
           ].map((b, i) => (
             <div
               key={b.t}
-              className={`${b.c} rounded-xl border-2 border-[hsl(var(--bf-ink))] p-6 shadow-[6px_6px_0_hsl(var(--bf-ink))]`}
+              data-bf-drift={b.s}
+              className={`bf-benefit ${b.c} rounded-xl border-2 border-[hsl(var(--bf-ink))] p-6 shadow-[6px_6px_0_hsl(var(--bf-ink))]`}
             >
               <p className="bf-mono text-xs">0{i + 1}</p>
               <h3 className="bf-display mt-3 text-3xl">{b.t}</h3>
