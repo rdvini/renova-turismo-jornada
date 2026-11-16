@@ -26,8 +26,21 @@ import cardAurora from "@/assets/aurora-boreal/hero-aurora.jpg";
 import cardTurquiaCapadocia from "@/assets/turquia/capadocia.jpg.asset.json";
 import cardPastorMorelli from "@/assets/pastor-morelli/morelli-1.jpeg.asset.json";
 import cardPastorRozenio from "@/assets/pastor-rozenio/rozenio-efeso.jpeg.asset.json";
+import cardBlackFriday from "@/assets/black-friday/amalfi.jpg";
 
 export const campaigns: Campaign[] = [
+  {
+    id: "black-friday",
+    slug: "/black-friday",
+    title: "Black Friday",
+    subtitle: "RENOVA TURISMO APRESENTA",
+    description:
+      "A Maior Black Friday da história da Renova Turismo: 15 roteiros com condições exclusivas para você planejar sua próxima viagem.",
+    image: cardBlackFriday,
+    date: "16 a 27 de Novembro de 2026",
+    badge: "Black Friday",
+    published: true,
+  },
   {
     id: "mexico-padre-antonio-maria",
     slug: "/mexico-padre-antonio-maria",
