@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { MessageCircle, X } from "lucide-react";
+import { X } from "lucide-react";
+import WhatsAppIcon from "./WhatsAppIcon";
 
 // Rotas onde o botão NÃO deve aparecer (homepage e páginas administrativas/legais)
 const EXCLUDED_ROUTES = new Set<string>(["/", "/admin/metricas", "/privacidade"]);
@@ -120,7 +121,7 @@ const WhatsAppFloatGlobal = () => {
         aria-label="Fale conosco no WhatsApp"
         className="flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#25D366] hover:bg-[#1ebe57] text-white shadow-lg hover:scale-110 transition-all"
       >
-        <MessageCircle className="w-7 h-7 md:w-8 md:h-8" fill="currentColor" />
+        <WhatsAppIcon className="w-7 h-7 md:w-8 md:h-8" />
       </a>
     </div>
   );
